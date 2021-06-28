@@ -1,7 +1,8 @@
-This branch adds music from NDS Pokémon games to the Pokeemerald decompilations. It is recommended that your repository is up to date as long as this branch is too. Feel free to use the voice groups to make your own music.
+This branch adds music from Pokémon HeartGold and SoulSilver to the Pokeemerald decompilations. It is recommended that your repository is up to date as long as this branch is too. Feel free to use the voice groups to make your own music.
 
 This master branch is a WIP. See my other branches for music from select soundtracks:
 * [**DPPt Music**](https://github.com/CyanSMP64/pokeemerald/tree/dppt_music). (Requires 1687104 bytes (~1.61 MB) of free space.)
+* **HGSS Music**. (Requires 1449080 (~1.38 MB) bytes of free space.)
 * [**DPPt and HGSS Music**](https://github.com/CyanSMP64/pokeemerald/tree/dppt_hgss_music). (Requires 2902492 bytes (~2.77 MB) of free space.)
 
 If you have space concerns and/or only wish to use select music from this branch, feel free to contact me on Discord at *@Furret#7777*.
