@@ -1,4 +1,4 @@
-This branch adds music from Pokémon Diamond, Pearl and Platinum to the Pokeemerald decompilations. It is recommended that your repository is up to date as long as this branch is too. Feel free to use the [voice groups](sound\voicegroups\voicegroup191.inc) to make your own music.
+This branch adds music from Pokémon Diamond, Pearl and Platinum to the Pokeemerald decompilations. It is recommended that your repository is up to date as long as this branch is too. Feel free to use the [voice groups](sound/voicegroups/voicegroup191.inc) to make your own music.
 
 If you have space concerns and/or only wish to use select music from this repo, feel free to contact me on Discord at *@Furret#7777*.
 
