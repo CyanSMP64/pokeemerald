@@ -6311,10 +6311,6 @@ u16 GetBattleBGM(void)
         case SPECIES_CELEBI:
         case SPECIES_JIRACHI:
             return MUS_VS_MEW;
-        case SPECIES_LUGIA:
-            return HG_SEQ_GS_VS_LUGIA;
-        case SPECIES_HO_OH:
-            return HG_SEQ_GS_VS_HOUOU;
         case SPECIES_REGIROCK:
         case SPECIES_REGICE:
         case SPECIES_REGISTEEL:
