@@ -2,7 +2,7 @@ This branch adds music from Pokémon Diamond, Pearl and Platinum to the Pokeemer
 
 Check out my other branches for other music from select soundtracks:
 * **DPPt Music**. (Requires 1687104 bytes (~1.61 MB) of free space.)
-* [**HGSS Music**](https://github.com/CyanSMP64/pokeemerald/tree/hgss_music). (Requires 1442128 bytes (~1.38 MB) of free space.)
+* [**HGSS Music**](https://github.com/CyanSMP64/pokeemerald/tree/hgss_music). (Requires 1439184 bytes (~1.37 MB) of free space.)
 * [**DPPt and HGSS Music**](https://github.com/CyanSMP64/pokeemerald/tree/dppt_hgss_music). (Requires 2895540 bytes (~2.76 MB) of free space.)
 
 If you have space concerns and/or only wish to use select music from this branch, feel free to contact me on Discord at *@Furret#7777*.
