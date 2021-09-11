@@ -6318,18 +6318,6 @@ u16 GetBattleBGM(void)
             return MUS_RG_VS_MEWTWO;
         case SPECIES_MEW:
             return MUS_VS_MEW;
-        case SPECIES_RAIKOU:
-            return HG_SEQ_GS_VS_RAIKOU;
-        case SPECIES_ENTEI:
-            return HG_SEQ_GS_VS_ENTEI;
-        case SPECIES_SUICUNE:
-            return HG_SEQ_GS_VS_SUICUNE;
-        case SPECIES_LUGIA:
-            return HG_SEQ_GS_VS_LUGIA;
-        case SPECIES_HO_OH:
-            return HG_SEQ_GS_VS_HOUOU;
-        case SPECIES_CELEBI:
-            return HG_SEQ_GS_VS_NORAPOKE;
         case SPECIES_REGIROCK:
         case SPECIES_REGICE:
         case SPECIES_REGISTEEL:
@@ -6365,50 +6353,6 @@ u16 GetBattleBGM(void)
         #endif
             return MUS_RG_VS_DEOXYS;
         #ifdef POKEMON_EXPANSION
-        case SPECIES_UXIE:
-        case SPECIES_MESPRIT:
-        case SPECIES_AZELF:
-            return DP_SEQ_BA_DPOKE1;
-        case SPECIES_DIALGA:
-        case SPECIES_PALKIA:
-            return DP_SEQ_BA_DPOKE2;
-        case SPECIES_ROTOM:
-        case SPECIES_ROTOM_HEAT:
-        case SPECIES_ROTOM_WASH:
-        case SPECIES_ROTOM_FROST:
-        case SPECIES_ROTOM_FAN:
-        case SPECIES_ROTOM_MOW:
-        case SPECIES_HEATRAN:
-        case SPECIES_MANAPHY:
-        case SPECIES_DARKRAI:
-            return DP_SEQ_BA_SECRET2;
-        case SPECIES_GIRATINA:
-        case SPECIES_GIRATINA_ORIGIN:
-            return PL_SEQ_PL_BA_GIRA;
-        case SPECIES_CRESSELIA:
-        case SPECIES_PHIONE:
-        case SPECIES_SHAYMIN:
-        case SPECIES_SHAYMIN_SKY:
-            return DP_SEQ_BA_POKE;
-        case SPECIES_ARCEUS:
-        case SPECIES_ARCEUS_FIGHTING:
-        case SPECIES_ARCEUS_FLYING:
-        case SPECIES_ARCEUS_POISON:
-        case SPECIES_ARCEUS_GROUND:
-        case SPECIES_ARCEUS_ROCK:
-        case SPECIES_ARCEUS_BUG:
-        case SPECIES_ARCEUS_GHOST:
-        case SPECIES_ARCEUS_STEEL:
-        case SPECIES_ARCEUS_FIRE:
-        case SPECIES_ARCEUS_WATER:
-        case SPECIES_ARCEUS_GRASS:
-        case SPECIES_ARCEUS_ELECTRIC:
-        case SPECIES_ARCEUS_PSYCHIC:
-        case SPECIES_ARCEUS_ICE:
-        case SPECIES_ARCEUS_DRAGON:
-        case SPECIES_ARCEUS_DARK:
-        case SPECIES_ARCEUS_FAIRY:
-            return DP_SEQ_BA_SECRET1;
         case SPECIES_VICTINI:
         case SPECIES_COBALION:
         case SPECIES_TERRAKION:
