@@ -1109,6 +1109,8 @@
 #define BW_SEQ_ME_KINOMI              1084 // Obtained a Berry! (Unused)
 
 // Black 2 & White 2 Music
+#define B2_SEQ_BGM_TITLE01            1085 // Opening                                   (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_SW_DEMO_OPENING    1086 // An Adventure is Beginning
 
 
 

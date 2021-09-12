@@ -2900,3 +2900,9 @@ $(MID_SUBDIR)/bw_seq_bgm_vs_wcs.s: %.s: %.mid
 
 $(MID_SUBDIR)/bw_seq_me_kinomi.s: %.s: %.mid
 	$(MID) $< $@ -E -R5 -G274 -V091 -p5
+
+$(MID_SUBDIR)/b2_seq_bgm_title01.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G333 -V127
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_demo_opening.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G334 -V090

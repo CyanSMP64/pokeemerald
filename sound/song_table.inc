@@ -1086,6 +1086,8 @@ gSongTable::
 	song bw_seq_bgm_e_inishie, 0, 0
 	song bw_seq_bgm_vs_wcs, 0, 0
 	song bw_seq_me_kinomi, 2, 2
+	song b2_seq_bgm_title01, 0, 0
+	song b2_seq_bgm_sw_demo_opening, 0, 0
 
 	.align 2
 dummy_song_header:

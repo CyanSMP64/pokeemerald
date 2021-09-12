@@ -1772,6 +1772,8 @@ SECTIONS {
         sound/songs/midi/bw_seq_bgm_e_inishie.o(.rodata);
         sound/songs/midi/bw_seq_bgm_vs_wcs.o(.rodata);
         sound/songs/midi/bw_seq_me_kinomi.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_title01.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_sw_demo_opening.o(.rodata);
     } =0
 
     lib_rodata :
