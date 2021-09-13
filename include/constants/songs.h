@@ -1111,7 +1111,8 @@
 // Black 2 & White 2 Music
 #define B2_SEQ_BGM_TITLE01            1085 // Opening                                   (TODO: PORTAMENTO!!)
 #define B2_SEQ_BGM_SW_DEMO_OPENING    1086 // An Adventure is Beginning
-
+#define B2_SEQ_BGM_SW_C_12            1087 // Aspertia City                             (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_E_BERU             1088 // Bianca's Theme
 
 
  

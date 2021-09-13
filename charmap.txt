@@ -1544,6 +1544,8 @@ BW_SEQ_BGM_VS_WCS             = 3B 04
 BW_SEQ_ME_KINOMI              = 3C 04
 B2_SEQ_BGM_TITLE01            = 3D 04
 B2_SEQ_BGM_SW_DEMO_OPENING    = 3E 04
+B2_SEQ_BGM_SW_C_12            = 3F 04
+B2_SEQ_BGM_E_BERU             = 40 04
 
 A_BUTTON = F8 00
 B_BUTTON = F8 01

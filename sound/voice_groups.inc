@@ -332,7 +332,8 @@
 .include "sound/voicegroups/voicegroup330.inc"
 .include "sound/voicegroups/voicegroup331.inc"
 .include "sound/voicegroups/voicegroup332.inc"
-.include "sound/voicegroups/voicegroup333.inc"
-.include "sound/voicegroups/voicegroup334.inc"
-.include "sound/voicegroups/voicegroup335.inc"
+.include "sound/voicegroups/voicegroup333.inc" @ B2W2 Ichinose
+.include "sound/voicegroups/voicegroup334.inc" @ B2W2 Sato
+.include "sound/voicegroups/voicegroup335.inc" @ B2W2 Misc.
 .include "sound/voicegroups/voicegroup336.inc"
+.include "sound/voicegroups/voicegroup337.inc"

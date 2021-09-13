@@ -14432,7 +14432,7 @@
 	.byte 1 @ 126
 	.byte 1 @ 127
 
-.set KeySplitTable114, . - 0    @ | 44 | 53 | 58 | 65 | 70 | 77
+.set KeySplitTable114, . - 0    @ | 44 || 53 | 58 | 65 | 70 | 77
 	.byte 0 @  0
 	.byte 0 @  1
 	.byte 0 @  2

@@ -2906,3 +2906,9 @@ $(MID_SUBDIR)/b2_seq_bgm_title01.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_sw_demo_opening.s: %.s: %.mid
 	$(MID) $< $@ -E -R5 -G334 -V090
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_c_12.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G333 -V112
+
+$(MID_SUBDIR)/b2_seq_bgm_e_beru.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G334 -V115
