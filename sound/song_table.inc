@@ -1090,6 +1090,10 @@ gSongTable::
 	song b2_seq_bgm_sw_demo_opening, 0, 0
 	song b2_seq_bgm_sw_c_12, 0, 0
 	song b2_seq_bgm_e_beru, 0, 0
+	song b2_seq_bgm_sw_r_19_sp, 0, 0
+	song b2_seq_bgm_sw_r_19_su, 0, 0
+	song b2_seq_bgm_sw_r_19_au, 0, 0
+	song b2_seq_bgm_sw_r_19_wi, 0, 0
 
 	.align 2
 dummy_song_header:

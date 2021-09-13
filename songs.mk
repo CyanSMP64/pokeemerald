@@ -2912,3 +2912,15 @@ $(MID_SUBDIR)/b2_seq_bgm_sw_c_12.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_e_beru.s: %.s: %.mid
 	$(MID) $< $@ -E -R5 -G334 -V115
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_r_19_sp.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G334 -V092
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_r_19_su.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G334 -V092
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_r_19_au.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G334 -V092
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_r_19_wi.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G334 -V092

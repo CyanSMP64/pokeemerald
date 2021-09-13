@@ -1113,6 +1113,10 @@
 #define B2_SEQ_BGM_SW_DEMO_OPENING    1086 // An Adventure is Beginning
 #define B2_SEQ_BGM_SW_C_12            1087 // Aspertia City                             (TODO: PORTAMENTO!!)
 #define B2_SEQ_BGM_E_BERU             1088 // Bianca's Theme
+#define B2_SEQ_BGM_SW_R_19_SP         1089 // Route 19 (Spring)
+#define B2_SEQ_BGM_SW_R_19_SU         1090 // Route 19 (Summer)
+#define B2_SEQ_BGM_SW_R_19_AU         1091 // Route 19 (Autumn)
+#define B2_SEQ_BGM_SW_R_19_WI         1092 // Route 19 (Winter)
 
 
  
