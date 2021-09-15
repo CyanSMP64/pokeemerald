@@ -4669,3 +4669,123 @@ DirectSoundWaveData_bw_nylonb3_relic::
 	.align 2
 DirectSoundWaveData_bw_nylone4_relic::
 	.incbin "sound/direct_sound_samples/bw_nylone4_relic.bin"
+
+	.align 2
+DirectSoundWaveData_b2_woodblockhi::
+	.incbin "sound/direct_sound_samples/b2_woodblockhi.bin"
+
+	.align 2
+DirectSoundWaveData_b2_woodblocklo::
+	.incbin "sound/direct_sound_samples/b2_woodblocklo.bin"
+
+	.align 2
+DirectSoundWaveData_b2_panflutec4::
+	.incbin "sound/direct_sound_samples/b2_panflutec4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_panflutea4::
+	.incbin "sound/direct_sound_samples/b2_panflutea4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_panfluteg5::
+	.incbin "sound/direct_sound_samples/b2_panfluteg5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_panflutec6::
+	.incbin "sound/direct_sound_samples/b2_panflutec6.bin"
+
+	.align 2
+DirectSoundWaveData_b2_bassdrum_ranch::
+	.incbin "sound/direct_sound_samples/b2_bassdrum_ranch.bin"
+
+	.align 2
+DirectSoundWaveData_b2_cowbells::
+	.incbin "sound/direct_sound_samples/b2_cowbells.bin"
+
+	.align 2
+DirectSoundWaveData_b2_cowbellsloop::
+	.incbin "sound/direct_sound_samples/b2_cowbellsloop.bin"
+
+	.align 2
+DirectSoundWaveData_b2_addictivekick::
+	.incbin "sound/direct_sound_samples/b2_addictivekick.bin"
+
+	.align 2
+DirectSoundWaveData_b2_addictivesnare::
+	.incbin "sound/direct_sound_samples/b2_addictivesnare.bin"
+
+	.align 2
+DirectSoundWaveData_b2_addictivechh::
+	.incbin "sound/direct_sound_samples/b2_addictivechh.bin"
+
+	.align 2
+DirectSoundWaveData_b2_addictiveohh::
+	.incbin "sound/direct_sound_samples/b2_addictiveohh.bin"
+
+	.align 2
+DirectSoundWaveData_b2_addictivetomlow::
+	.incbin "sound/direct_sound_samples/b2_addictivetomlow.bin"
+
+	.align 2
+DirectSoundWaveData_b2_addictivetom::
+	.incbin "sound/direct_sound_samples/b2_addictivetom.bin"
+
+	.align 2
+DirectSoundWaveData_b2_addictiveridebell::
+	.incbin "sound/direct_sound_samples/b2_addictiveridebell.bin"
+
+	.align 2
+DirectSoundWaveData_b2_addictiveride::
+	.incbin "sound/direct_sound_samples/b2_addictiveride.bin"
+
+	.align 2
+DirectSoundWaveData_b2_synthkick::
+	.incbin "sound/direct_sound_samples/b2_synthkick.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pinkstrate2::
+	.incbin "sound/direct_sound_samples/b2_pinkstrate2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pinkstrate3::
+	.incbin "sound/direct_sound_samples/b2_pinkstrate3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pinkstrate4::
+	.incbin "sound/direct_sound_samples/b2_pinkstrate4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pinkstrata4::
+	.incbin "sound/direct_sound_samples/b2_pinkstrata4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pinkstrata5::
+	.incbin "sound/direct_sound_samples/b2_pinkstrata5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_recorderg5::
+	.incbin "sound/direct_sound_samples/b2_recorderg5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pianof1::
+	.incbin "sound/direct_sound_samples/b2_pianof1.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pianof2::
+	.incbin "sound/direct_sound_samples/b2_pianof2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pianof3::
+	.incbin "sound/direct_sound_samples/b2_pianof3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pianof4::
+	.incbin "sound/direct_sound_samples/b2_pianof4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pianof5::
+	.incbin "sound/direct_sound_samples/b2_pianof5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_snare_rival::
+	.incbin "sound/direct_sound_samples/b2_snare_rival.bin"

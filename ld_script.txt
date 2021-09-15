@@ -1780,6 +1780,11 @@ SECTIONS {
         sound/songs/midi/b2_seq_bgm_sw_r_19_su.o(.rodata);
         sound/songs/midi/b2_seq_bgm_sw_r_19_au.o(.rodata);
         sound/songs/midi/b2_seq_bgm_sw_r_19_wi.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_vs_norapoke.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_sw_t_06.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_sw_d_22.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_e_hue.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_vs_hue.o(.rodata);
     } =0
 
     lib_rodata :

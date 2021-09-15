@@ -389,7 +389,7 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
             if (gTasks[taskId].tBgmIndex > 0)
                 gTasks[taskId].tBgmIndex--;
             else
-                gTasks[taskId].tBgmIndex = (B2_SEQ_BGM_SW_R_19_WI - (MUS_LITTLEROOT_TEST - 1));
+                gTasks[taskId].tBgmIndex = (B2_SEQ_BGM_VS_HUE - (MUS_LITTLEROOT_TEST - 1));
         }
         return TRUE;
     }
@@ -404,7 +404,7 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
         }
         else
         {
-            if (gTasks[taskId].tBgmIndex < (B2_SEQ_BGM_SW_R_19_WI - (MUS_LITTLEROOT_TEST - 1)))
+            if (gTasks[taskId].tBgmIndex < (B2_SEQ_BGM_VS_HUE - (MUS_LITTLEROOT_TEST - 1)))
                 gTasks[taskId].tBgmIndex++;
             else
                 gTasks[taskId].tBgmIndex = 0;
@@ -1790,6 +1790,11 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(B2_SEQ_BGM_SW_R_19_SU        , "B2-SEQ-BGM-SW-R-19-SU") \
     X(B2_SEQ_BGM_SW_R_19_AU        , "B2-SEQ-BGM-SW-R-19-AU") \
     X(B2_SEQ_BGM_SW_R_19_WI        , "B2-SEQ-BGM-SW-R-19-WI") \
+    X(B2_SEQ_BGM_VS_NORAPOKE       , "B2-SEQ-BGM-VS-NORAPOKE") \
+    X(B2_SEQ_BGM_SW_T_06           , "B2-SEQ-BGM-SW-T-06") \
+    X(B2_SEQ_BGM_SW_D_22           , "B2-SEQ-BGM-SW-D-22") \
+    X(B2_SEQ_BGM_E_HUE             , "B2-SEQ-BGM-E-HUE") \
+    X(B2_SEQ_BGM_VS_HUE            , "B2-SEQ-BGM-VS-HUE") \
 
 #define SOUND_LIST_SE \
     X(SE_STOP, "STOP") \

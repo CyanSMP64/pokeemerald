@@ -337,3 +337,7 @@
 .include "sound/voicegroups/voicegroup335.inc" @ B2W2 Misc.
 .include "sound/voicegroups/voicegroup336.inc"
 .include "sound/voicegroups/voicegroup337.inc"
+.include "sound/voicegroups/voicegroup338.inc"
+.include "sound/voicegroups/voicegroup339.inc"
+.include "sound/voicegroups/voicegroup340.inc"
+.include "sound/voicegroups/voicegroup341.inc"

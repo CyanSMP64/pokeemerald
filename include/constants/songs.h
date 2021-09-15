@@ -1117,7 +1117,11 @@
 #define B2_SEQ_BGM_SW_R_19_SU         1090 // Route 19 (Summer)
 #define B2_SEQ_BGM_SW_R_19_AU         1091 // Route 19 (Autumn)
 #define B2_SEQ_BGM_SW_R_19_WI         1092 // Route 19 (Winter)
-
+#define B2_SEQ_BGM_VS_NORAPOKE        1093 // Battle! (Wild Pokémon)                    (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_SW_T_06            1094 // Floccesy Town                             (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_SW_D_22            1095 // Floccesy Ranch
+#define B2_SEQ_BGM_E_HUE              1096 // Rival's Theme                             (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_VS_HUE             1097 // Battle! (Rival)                           (TODO: PORTAMENTO!!)
 
  
 

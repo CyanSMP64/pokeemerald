@@ -1094,6 +1094,11 @@ gSongTable::
 	song b2_seq_bgm_sw_r_19_su, 0, 0
 	song b2_seq_bgm_sw_r_19_au, 0, 0
 	song b2_seq_bgm_sw_r_19_wi, 0, 0
+	song b2_seq_bgm_vs_norapoke, 0, 0
+	song b2_seq_bgm_sw_t_06, 0, 0
+	song b2_seq_bgm_sw_d_22, 0, 0
+	song b2_seq_bgm_e_hue, 0, 0
+	song b2_seq_bgm_vs_hue, 0, 0
 
 	.align 2
 dummy_song_header:
