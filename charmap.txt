@@ -1555,6 +1555,7 @@ B2_SEQ_BGM_SW_T_06            = 46 04
 B2_SEQ_BGM_SW_D_22            = 47 04
 B2_SEQ_BGM_E_HUE              = 48 04
 B2_SEQ_BGM_VS_HUE             = 49 04
+MUS_TEST                      = 4A 04
 
 A_BUTTON = F8 00
 B_BUTTON = F8 01

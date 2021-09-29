@@ -1124,6 +1124,7 @@
 #define B2_SEQ_BGM_VS_HUE             1097 // Battle! (Rival)                           (TODO: PORTAMENTO!!)
 
  
+#define MUS_TEST             1098
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

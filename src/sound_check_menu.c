@@ -1795,6 +1795,7 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(B2_SEQ_BGM_SW_D_22           , "B2-SEQ-BGM-SW-D-22") \
     X(B2_SEQ_BGM_E_HUE             , "B2-SEQ-BGM-E-HUE") \
     X(B2_SEQ_BGM_VS_HUE            , "B2-SEQ-BGM-VS-HUE") \
+    X(MUS_TEST            , "MUS-TEST") \
 
 #define SOUND_LIST_SE \
     X(SE_STOP, "STOP") \

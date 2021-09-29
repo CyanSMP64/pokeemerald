@@ -2939,3 +2939,6 @@ $(MID_SUBDIR)/b2_seq_bgm_e_hue.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_vs_hue.s: %.s: %.mid
 	$(MID) $< $@ -E -R5 -G333 -V115
+
+$(MID_SUBDIR)/mus_test.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G274 -V100
