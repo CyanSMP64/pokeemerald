@@ -1099,7 +1099,12 @@ gSongTable::
 	song b2_seq_bgm_sw_d_22, 0, 0
 	song b2_seq_bgm_e_hue, 0, 0
 	song b2_seq_bgm_vs_hue, 0, 0
-	song mus_test, 0, 0
+	song b2_seq_bgm_sw_c_13, 0, 0
+	song b2_seq_bgm_poisone_gym_01, 0, 0
+	song b2_seq_bgm_poisone_gym_01_jp, 0, 0
+	song b2_seq_bgm_e_plasma, 0, 0
+	song b2_seq_bgm_pw_land, 0, 0
+	song b2_seq_bgm_pw_filming, 0, 0
 
 	.align 2
 dummy_song_header:

@@ -1122,9 +1122,14 @@
 #define B2_SEQ_BGM_SW_D_22            1095 // Floccesy Ranch
 #define B2_SEQ_BGM_E_HUE              1096 // Rival's Theme                             (TODO: PORTAMENTO!!)
 #define B2_SEQ_BGM_VS_HUE             1097 // Battle! (Rival)                           (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_SW_C_13            1098 // Virbank City
+#define B2_SEQ_BGM_POISONE_GYM_01     1099 // Virbank City Gym (POKEMON)                (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_POISONE_GYM_01_JP  1100 // Virbank City Gym (DOGARS)                 (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_E_PLASMA           1101 // Team Plasma Returns                       (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_PW_LAND            1102 // Pokéstar Studios                          (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_PW_FILMING         1103 // Filming Underway at Pokéstar Studios!
 
- 
-#define MUS_TEST             1098
+
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

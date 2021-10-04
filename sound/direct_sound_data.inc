@@ -4789,3 +4789,191 @@ DirectSoundWaveData_b2_pianof5::
 	.align 2
 DirectSoundWaveData_b2_snare_rival::
 	.incbin "sound/direct_sound_samples/b2_snare_rival.bin"
+
+	.align 2
+DirectSoundWaveData_b2_cleangtrg2::
+	.incbin "sound/direct_sound_samples/b2_cleangtrg2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_cleangtrg3::
+	.incbin "sound/direct_sound_samples/b2_cleangtrg3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_cleangtre4::
+	.incbin "sound/direct_sound_samples/b2_cleangtre4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_cleangtrc5::
+	.incbin "sound/direct_sound_samples/b2_cleangtrc5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_hardbasse2::
+	.incbin "sound/direct_sound_samples/b2_hardbasse2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_hardbasse3::
+	.incbin "sound/direct_sound_samples/b2_hardbasse3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_powerguitar1::
+	.incbin "sound/direct_sound_samples/b2_powerguitar1.bin"
+
+	.align 2
+DirectSoundWaveData_b2_powerguitar2::
+	.incbin "sound/direct_sound_samples/b2_powerguitar2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_powerguitar3::
+	.incbin "sound/direct_sound_samples/b2_powerguitar3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_male_p::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_male_p.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_male_o::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_male_o.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_male_k::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_male_k.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_male_e::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_male_e.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_male_m::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_male_m.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_male_on::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_male_on.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_male_pokemon::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_male_pokemon.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_male_yeah::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_male_yeah.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_female1_p::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_female1_p.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_female1_o::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_female1_o.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_female1_k::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_female1_k.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_female1_e::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_female1_e.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_female1_m::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_female1_m.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_female1_on::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_female1_on.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_female1_pokemon::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_female1_pokemon.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_female1_sing::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_female1_sing.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_female2_p::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_female2_p.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_female2_o::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_female2_o.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_female2_k::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_female2_k.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_female2_e::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_female2_e.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_female2_m::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_female2_m.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_female2_on::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_female2_on.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_female2_pokemon::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_female2_pokemon.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_malejp_d::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_malejp_d.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_malejp_o::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_malejp_o.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_malejp_g::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_malejp_g.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_malejp_a::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_malejp_a.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_malejp_r::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_malejp_r.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_malejp_s::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_malejp_s.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_malejp_dogars::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_malejp_dogars.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_femalejp_1234::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_femalejp_1234.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_femalejp_d::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_femalejp_d.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_femalejp_o::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_femalejp_o.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_femalejp_g::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_femalejp_g.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_femalejp_a::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_femalejp_a.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_femalejp_r::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_femalejp_r.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_femalejp_s::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_femalejp_s.bin"
+
+	.align 2
+DirectSoundWaveData_b2_virbankgym_femalejp_dogars::
+	.incbin "sound/direct_sound_samples/b2_virbankgym_femalejp_dogars.bin"

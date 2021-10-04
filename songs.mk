@@ -2940,5 +2940,20 @@ $(MID_SUBDIR)/b2_seq_bgm_e_hue.s: %.s: %.mid
 $(MID_SUBDIR)/b2_seq_bgm_vs_hue.s: %.s: %.mid
 	$(MID) $< $@ -E -R5 -G333 -V115
 
-$(MID_SUBDIR)/mus_test.s: %.s: %.mid
-	$(MID) $< $@ -E -R5 -G274 -V100
+$(MID_SUBDIR)/b2_seq_bgm_sw_c_13.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G334 -V100
+
+$(MID_SUBDIR)/b2_seq_bgm_poisone_gym_01.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G333 -V104
+
+$(MID_SUBDIR)/b2_seq_bgm_poisone_gym_01_jp.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G333 -V104
+
+$(MID_SUBDIR)/b2_seq_bgm_e_plasma.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G333 -V115
+
+$(MID_SUBDIR)/b2_seq_bgm_pw_land.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G333 -V095
+
+$(MID_SUBDIR)/b2_seq_bgm_pw_filming.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G333 -V115

@@ -1785,7 +1785,12 @@ SECTIONS {
         sound/songs/midi/b2_seq_bgm_sw_d_22.o(.rodata);
         sound/songs/midi/b2_seq_bgm_e_hue.o(.rodata);
         sound/songs/midi/b2_seq_bgm_vs_hue.o(.rodata);
-        sound/songs/midi/mus_test.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_sw_c_13.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_poisone_gym_01.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_poisone_gym_01_jp.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_e_plasma.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_pw_land.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_pw_filming.o(.rodata);
     } =0
 
     lib_rodata :

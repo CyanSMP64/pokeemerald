@@ -70,3 +70,4 @@ voicegroup336:: @ B2W2 Drum Set 1
 	voice_directsound 60, 100, DirectSoundWaveData_hg_022china, 255, 248, 0, 224				@ 127/ 80/  0/110/100	
 	voice_directsound 63, 84, DirectSoundWaveData_hg_032crash, 255, 246, 0, 214					@ 127/ 90/  0/114/ 84	+ 3
 	voice_directsound 64, 44, DirectSoundWaveData_hg_032crash, 255, 246, 0, 214					@ 127/ 90/  0/114/ 44	+ 4
+	voice_directsound 63, 64, DirectSoundWaveData_hg_032crash, 255, 246, 0, 214					@ 127/ 90/  0/114/ 64	+ 3

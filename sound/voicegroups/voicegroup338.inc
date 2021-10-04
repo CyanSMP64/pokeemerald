@@ -14,12 +14,12 @@ voicegroup338:: @ B2W2 Drum Set 3 (ADDICTIVE DRUMS)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 50, 40, DirectSoundWaveData_b2_addictivetom, 255, 0, 255, 205				@ 127/127/127/116/ 40	- 10
+	voice_directsound 51, 40, DirectSoundWaveData_b2_addictivetom, 255, 0, 255, 205				@ 127/127/127/116/ 40	- 9
+	voice_directsound 53, 40, DirectSoundWaveData_b2_addictivetom, 255, 0, 255, 205				@ 127/127/127/116/ 40	- 7
+	voice_directsound 54, 40, DirectSoundWaveData_b2_addictivetom, 255, 0, 255, 205				@ 127/127/127/116/ 40	- 6
+	voice_directsound 55, 40, DirectSoundWaveData_b2_addictivetom, 255, 0, 255, 205				@ 127/127/127/116/ 40	- 5
+	voice_directsound 56, 40, DirectSoundWaveData_b2_addictivetom, 255, 0, 255, 205				@ 127/127/127/116/ 40	- 4
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0

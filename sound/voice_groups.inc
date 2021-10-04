@@ -341,3 +341,5 @@
 .include "sound/voicegroups/voicegroup339.inc"
 .include "sound/voicegroups/voicegroup340.inc"
 .include "sound/voicegroups/voicegroup341.inc"
+.include "sound/voicegroups/voicegroup342.inc"
+.include "sound/voicegroups/voicegroup343.inc"
