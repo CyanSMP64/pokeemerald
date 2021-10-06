@@ -1105,6 +1105,21 @@ gSongTable::
 	song b2_seq_bgm_e_plasma, 0, 0
 	song b2_seq_bgm_pw_land, 0, 0
 	song b2_seq_bgm_pw_filming, 0, 0
+	song b2_seq_bgm_pw_scenario_01_f, 0, 0
+	song b2_seq_bgm_pw_scenario_01_l, 0, 0
+	song b2_seq_bgm_pw_scenario_02_f, 0, 0
+	song b2_seq_bgm_pw_scenario_02_l, 0, 0
+	song b2_seq_bgm_pw_scenario_03_f, 0, 0
+	song b2_seq_bgm_pw_scenario_03_l, 0, 0
+	song b2_seq_bgm_pw_scenario_04_f, 0, 0
+	song b2_seq_bgm_pw_scenario_04_l, 0, 0
+	song b2_seq_bgm_pw_scenario_05_f, 0, 0
+	song b2_seq_bgm_pw_scenario_05_l, 0, 0
+	song b2_seq_bgm_pw_scenario_06_f, 0, 0
+	song b2_seq_bgm_pw_scenario_06_l, 0, 0
+	song b2_seq_bgm_pw_scenario_07_f, 0, 0
+	song b2_seq_bgm_pw_scenario_07_l, 0, 0
+	song b2_seq_bgm_pw_scenario_08_f, 0, 0
 
 	.align 2
 dummy_song_header:

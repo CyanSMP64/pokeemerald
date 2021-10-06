@@ -4977,3 +4977,23 @@ DirectSoundWaveData_b2_virbankgym_femalejp_s::
 	.align 2
 DirectSoundWaveData_b2_virbankgym_femalejp_dogars::
 	.incbin "sound/direct_sound_samples/b2_virbankgym_femalejp_dogars.bin"
+
+	.align 2
+DirectSoundWaveData_b2_metalclanke2::
+	.incbin "sound/direct_sound_samples/b2_metalclanke2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_synthvoxas2::
+	.incbin "sound/direct_sound_samples/b2_synthvoxas2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_synthvoxf3::
+	.incbin "sound/direct_sound_samples/b2_synthvoxf3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_synthvoxas3::
+	.incbin "sound/direct_sound_samples/b2_synthvoxas3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_synthvoxf4::
+	.incbin "sound/direct_sound_samples/b2_synthvoxf4.bin"

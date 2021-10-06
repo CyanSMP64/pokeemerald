@@ -17,14 +17,14 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup241, KeySplitTable25    @ tubular bell
 	voice_directsound 60, 0, DirectSoundWaveData_bw_074glocknc5, 255, 249, 0, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_keysplit voicegroup244, KeySplitTable71    @ drawbar organ
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroup292, KeySplitTable72    @ nylon str. guitar
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_pinkstrate3, 255, 253, 0, 171
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_keysplit voicegroup316, KeySplitTable41    @ clean guitar
 	voice_directsound 60, 0, DirectSoundWaveData_hg_001uprigc3, 255, 251, 0, 192
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroup311, KeySplitTable101   @ fretless bass | 34
@@ -59,7 +59,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup289, KeySplitTable39    @ trumpets (short start)
 	voice_directsound 60, 0, DirectSoundWaveData_hg_059harpc4, 255, 246, 0, 205
 	voice_directsound 60, 0, DirectSoundWaveData_hg_098pizza4, 255, 248, 0, 205
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_keysplit voicegroup312, KeySplitTable87    @ timpani (ghetsis)
 	voice_keysplit voicegroup327, KeySplitTable68    @ french horns ||| 69
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -71,10 +71,10 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_metalclanke2, 255, 250, 0, 220
 	voice_directsound 60, 0, DirectSoundWaveData_b2_hardbasse2, 255, 0, 252, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_hardbasse3, 255, 0, 252, 192
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_recorderg5, 255, 1, 227, 129
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar1, 255, 197, 159, 192

@@ -1791,6 +1791,21 @@ SECTIONS {
         sound/songs/midi/b2_seq_bgm_e_plasma.o(.rodata);
         sound/songs/midi/b2_seq_bgm_pw_land.o(.rodata);
         sound/songs/midi/b2_seq_bgm_pw_filming.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_pw_scenario_01_f.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_pw_scenario_01_l.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_pw_scenario_02_f.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_pw_scenario_02_l.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_pw_scenario_03_f.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_pw_scenario_03_l.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_pw_scenario_04_f.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_pw_scenario_04_l.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_pw_scenario_05_f.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_pw_scenario_05_l.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_pw_scenario_06_f.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_pw_scenario_06_l.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_pw_scenario_07_f.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_pw_scenario_07_l.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_pw_scenario_08_f.o(.rodata);
     } =0
 
     lib_rodata :

@@ -35,12 +35,12 @@ voicegroup337:: @ B2W2 Drum Set 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 64, DirectSoundWaveData_bw_011kick, 255, 0, 227, 205    				@ 127/127/120/116/ 64
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 64, DirectSoundWaveData_bw_110kick, 255, 0, 227, 205					@ 127/127/120/116/ 64
 	voice_directsound 60, 64, DirectSoundWaveData_bw_109kick, 255, 0, 227, 205    				@ 127/127/120/116/ 64
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 62, 64, DirectSoundWaveData_bw_110kick, 255, 0, 227, 205					@ 127/127/120/116/ 64	+ 2
 	voice_directsound 60, 64, DirectSoundWaveData_bw_176snare, 255, 0, 227, 205					@ 127/127/120/116/ 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 64, DirectSoundWaveData_dp_093snare, 255, 226, 127, 205    			@ 127/114/ 90/116/ 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 80, DirectSoundWaveData_hg_062chh, 255, 78, 0, 205					@ 127/124/  0/116/ 80
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -53,7 +53,7 @@ voicegroup337:: @ B2W2 Drum Set 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 30, DirectSoundWaveData_dp_ridecap, 255, 251, 0, 210					@ 127/ 60/  0/115/ 30
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -83,7 +83,7 @@ voicegroup337:: @ B2W2 Drum Set 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 30, DirectSoundWaveData_bw_201tamb, 255, 224, 227, 205    			@ 127/115/120/116/ 30	
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 40, DirectSoundWaveData_bw_windchime, 255, 234, 191, 205    			@ 127/110/110/116/ 40
 	voice_directsound 60, 32, DirectSoundWaveData_bw_213tri_closed, 255, 234, 191, 205    		@ 127/110/110/116/ 32
 	voice_directsound 60, 32, DirectSoundWaveData_bw_214tri_open, 255, 234, 191, 205    		@ 127/110/110/116/ 32
 	voice_directsound 60, 30, DirectSoundWaveData_b2_woodblockhi, 255, 0, 255, 0    			@ 127/127/127/127/ 30

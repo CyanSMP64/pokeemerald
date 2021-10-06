@@ -24,8 +24,8 @@ voicegroup336:: @ B2W2 Drum Set 1
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 29, 64, DirectSoundWaveData_bw_reversecymbale2, 255, 0, 255, 0			@ 127/127/127/126/ 64	-11
+	voice_directsound 30, 64, DirectSoundWaveData_bw_reversecymbale2, 255, 0, 255, 0			@ 127/127/127/126/ 64	-10
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -71,3 +71,18 @@ voicegroup336:: @ B2W2 Drum Set 1
 	voice_directsound 63, 84, DirectSoundWaveData_hg_032crash, 255, 246, 0, 214					@ 127/ 90/  0/114/ 84	+ 3
 	voice_directsound 64, 44, DirectSoundWaveData_hg_032crash, 255, 246, 0, 214					@ 127/ 90/  0/114/ 44	+ 4
 	voice_directsound 63, 64, DirectSoundWaveData_hg_032crash, 255, 246, 0, 214					@ 127/ 90/  0/114/ 64	+ 3
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 32, DirectSoundWaveData_bw_213tri_closed, 255, 234, 191, 205    		@ 127/110/110/116/ 32
+	voice_directsound 60, 32, DirectSoundWaveData_bw_214tri_open, 255, 234, 191, 205    		@ 127/110/110/116/ 32

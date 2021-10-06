@@ -1109,26 +1109,40 @@
 #define BW_SEQ_ME_KINOMI              1084 // Obtained a Berry! (Unused)
 
 // Black 2 & White 2 Music
-#define B2_SEQ_BGM_TITLE01            1085 // Opening                                   (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_TITLE01            1085 // Opening
 #define B2_SEQ_BGM_SW_DEMO_OPENING    1086 // An Adventure is Beginning
-#define B2_SEQ_BGM_SW_C_12            1087 // Aspertia City                             (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_SW_C_12            1087 // Aspertia City
 #define B2_SEQ_BGM_E_BERU             1088 // Bianca's Theme
 #define B2_SEQ_BGM_SW_R_19_SP         1089 // Route 19 (Spring)
 #define B2_SEQ_BGM_SW_R_19_SU         1090 // Route 19 (Summer)
 #define B2_SEQ_BGM_SW_R_19_AU         1091 // Route 19 (Autumn)
 #define B2_SEQ_BGM_SW_R_19_WI         1092 // Route 19 (Winter)
 #define B2_SEQ_BGM_VS_NORAPOKE        1093 // Battle! (Wild Pokémon)                    (TODO: PORTAMENTO!!)
-#define B2_SEQ_BGM_SW_T_06            1094 // Floccesy Town                             (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_SW_T_06            1094 // Floccesy Town
 #define B2_SEQ_BGM_SW_D_22            1095 // Floccesy Ranch
 #define B2_SEQ_BGM_E_HUE              1096 // Rival's Theme                             (TODO: PORTAMENTO!!)
-#define B2_SEQ_BGM_VS_HUE             1097 // Battle! (Rival)                           (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_VS_HUE             1097 // Battle! (Rival)
 #define B2_SEQ_BGM_SW_C_13            1098 // Virbank City
-#define B2_SEQ_BGM_POISONE_GYM_01     1099 // Virbank City Gym (POKEMON)                (TODO: PORTAMENTO!!)
-#define B2_SEQ_BGM_POISONE_GYM_01_JP  1100 // Virbank City Gym (DOGARS)                 (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_POISONE_GYM_01     1099 // Virbank City Gym (POKEMON)
+#define B2_SEQ_BGM_POISONE_GYM_01_JP  1100 // Virbank City Gym (DOGARS)
 #define B2_SEQ_BGM_E_PLASMA           1101 // Team Plasma Returns                       (TODO: PORTAMENTO!!)
-#define B2_SEQ_BGM_PW_LAND            1102 // Pokéstar Studios                          (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_PW_LAND            1102 // Pokéstar Studios
 #define B2_SEQ_BGM_PW_FILMING         1103 // Filming Underway at Pokéstar Studios!
-
+#define B2_SEQ_BGM_PW_SCENARIO_01_F   1104 // Pokéstar Studios: Battle
+#define B2_SEQ_BGM_PW_SCENARIO_01_L   1105 // Pokéstar Studios: Glory                   (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_PW_SCENARIO_02_F   1106 // Pokéstar Studios: Defeat
+#define B2_SEQ_BGM_PW_SCENARIO_02_L   1107 // Pokéstar Studios: Invasion
+#define B2_SEQ_BGM_PW_SCENARIO_03_F   1108 // Pokéstar Studios: Success
+#define B2_SEQ_BGM_PW_SCENARIO_03_L   1109 // Pokéstar Studios: Retreat                 (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_PW_SCENARIO_04_F   1110 // Pokéstar Studios: Weird
+#define B2_SEQ_BGM_PW_SCENARIO_04_L   1111 // Pokéstar Studios: Love
+#define B2_SEQ_BGM_PW_SCENARIO_05_F   1112 // Pokéstar Studios: Sorrow
+#define B2_SEQ_BGM_PW_SCENARIO_05_L   1113 // Pokéstar Studios: Horror
+#define B2_SEQ_BGM_PW_SCENARIO_06_F   1114 // Pokéstar Studios: Purified
+#define B2_SEQ_BGM_PW_SCENARIO_06_L   1115 // Pokéstar Studios: Fear
+#define B2_SEQ_BGM_PW_SCENARIO_07_F   1116 // Pokéstar Studios: Humor
+#define B2_SEQ_BGM_PW_SCENARIO_07_L   1117 // Pokéstar Studios: Despair
+#define B2_SEQ_BGM_PW_SCENARIO_08_F   1118 // Pokéstar Studios: Shock
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().

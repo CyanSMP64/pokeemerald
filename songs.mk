@@ -2957,3 +2957,48 @@ $(MID_SUBDIR)/b2_seq_bgm_pw_land.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_pw_filming.s: %.s: %.mid
 	$(MID) $< $@ -E -R5 -G333 -V115
+
+$(MID_SUBDIR)/b2_seq_bgm_pw_scenario_01_f.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G333 -V092
+
+$(MID_SUBDIR)/b2_seq_bgm_pw_scenario_01_l.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G333 -V116
+
+$(MID_SUBDIR)/b2_seq_bgm_pw_scenario_02_f.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G333 -V114
+
+$(MID_SUBDIR)/b2_seq_bgm_pw_scenario_02_l.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G333 -V125
+
+$(MID_SUBDIR)/b2_seq_bgm_pw_scenario_03_f.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G334 -V100
+
+$(MID_SUBDIR)/b2_seq_bgm_pw_scenario_03_l.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G333 -V100
+
+$(MID_SUBDIR)/b2_seq_bgm_pw_scenario_04_f.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G334 -V080
+
+$(MID_SUBDIR)/b2_seq_bgm_pw_scenario_04_l.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G334 -V080
+
+$(MID_SUBDIR)/b2_seq_bgm_pw_scenario_05_f.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G334 -V080
+
+$(MID_SUBDIR)/b2_seq_bgm_pw_scenario_05_l.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G333 -V125
+
+$(MID_SUBDIR)/b2_seq_bgm_pw_scenario_06_f.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G334 -V080
+
+$(MID_SUBDIR)/b2_seq_bgm_pw_scenario_06_l.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G334 -V095
+
+$(MID_SUBDIR)/b2_seq_bgm_pw_scenario_07_f.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G334 -V080
+
+$(MID_SUBDIR)/b2_seq_bgm_pw_scenario_07_l.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G334 -V090
+
+$(MID_SUBDIR)/b2_seq_bgm_pw_scenario_08_f.s: %.s: %.mid
+	$(MID) $< $@ -E -R5 -G334 -V080

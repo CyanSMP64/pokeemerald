@@ -389,7 +389,7 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
             if (gTasks[taskId].tBgmIndex > 0)
                 gTasks[taskId].tBgmIndex--;
             else
-                gTasks[taskId].tBgmIndex = (B2_SEQ_BGM_PW_FILMING - (MUS_LITTLEROOT_TEST - 1));
+                gTasks[taskId].tBgmIndex = (B2_SEQ_BGM_PW_SCENARIO_08_F - (MUS_LITTLEROOT_TEST - 1));
         }
         return TRUE;
     }
@@ -404,7 +404,7 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
         }
         else
         {
-            if (gTasks[taskId].tBgmIndex < (B2_SEQ_BGM_PW_FILMING - (MUS_LITTLEROOT_TEST - 1)))
+            if (gTasks[taskId].tBgmIndex < (B2_SEQ_BGM_PW_SCENARIO_08_F - (MUS_LITTLEROOT_TEST - 1)))
                 gTasks[taskId].tBgmIndex++;
             else
                 gTasks[taskId].tBgmIndex = 0;
@@ -1801,6 +1801,21 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(B2_SEQ_BGM_E_PLASMA          , "B2-SEQ-BGM-E-PLASMA") \
     X(B2_SEQ_BGM_PW_LAND           , "B2-SEQ-BGM-PW-LAND") \
     X(B2_SEQ_BGM_PW_FILMING        , "B2-SEQ-BGM-PW-FILMING") \
+    X(B2_SEQ_BGM_PW_SCENARIO_01_F  , "B2-SEQ-BGM-PW-SCENARIO-01-F") \
+    X(B2_SEQ_BGM_PW_SCENARIO_01_L  , "B2-SEQ-BGM-PW-SCENARIO-01-L") \
+    X(B2_SEQ_BGM_PW_SCENARIO_02_F  , "B2-SEQ-BGM-PW-SCENARIO-02-F") \
+    X(B2_SEQ_BGM_PW_SCENARIO_02_L  , "B2-SEQ-BGM-PW-SCENARIO-02-L") \
+    X(B2_SEQ_BGM_PW_SCENARIO_03_F  , "B2-SEQ-BGM-PW-SCENARIO-03-F") \
+    X(B2_SEQ_BGM_PW_SCENARIO_03_L  , "B2-SEQ-BGM-PW-SCENARIO-03-L") \
+    X(B2_SEQ_BGM_PW_SCENARIO_04_F  , "B2-SEQ-BGM-PW-SCENARIO-04-F") \
+    X(B2_SEQ_BGM_PW_SCENARIO_04_L  , "B2-SEQ-BGM-PW-SCENARIO-04-L") \
+    X(B2_SEQ_BGM_PW_SCENARIO_05_F  , "B2-SEQ-BGM-PW-SCENARIO-05-F") \
+    X(B2_SEQ_BGM_PW_SCENARIO_05_L  , "B2-SEQ-BGM-PW-SCENARIO-05-L") \
+    X(B2_SEQ_BGM_PW_SCENARIO_06_F  , "B2-SEQ-BGM-PW-SCENARIO-06-F") \
+    X(B2_SEQ_BGM_PW_SCENARIO_06_L  , "B2-SEQ-BGM-PW-SCENARIO-06-L") \
+    X(B2_SEQ_BGM_PW_SCENARIO_07_F  , "B2-SEQ-BGM-PW-SCENARIO-07-F") \
+    X(B2_SEQ_BGM_PW_SCENARIO_07_L  , "B2-SEQ-BGM-PW-SCENARIO-07-L") \
+    X(B2_SEQ_BGM_PW_SCENARIO_08_F  , "B2-SEQ-BGM-PW-SCENARIO-08-F") \
 
 #define SOUND_LIST_SE \
     X(SE_STOP, "STOP") \
