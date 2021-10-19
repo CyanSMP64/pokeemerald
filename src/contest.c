@@ -3122,12 +3122,12 @@ static u8 CreateContestantSprite(u16 species, u32 otId, u32 personality, u32 ind
     species = SanitizeSpecies(species);
 
     if (index == gContestPlayerMonIndex)
-        HandleLoadSpecialPokePic_2(&gMonBackPicTable[species], gMonSpritesGfxPtr->sprites.ptr[0], species, personality);
+        HandleLoadSpecialPokePic_2(&gMonBackPicTable[species], gMonSpritesGfxPtr->sprites.ptr[B_POSITION_PLAYER_LEFT], species, personality);
     else
-        HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonBackPicTable[species], gMonSpritesGfxPtr->sprites.ptr[0], species, personality);
+        HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonBackPicTable[species], gMonSpritesGfxPtr->sprites.ptr[B_POSITION_PLAYER_LEFT], species, personality);
 
     LoadCompressedPalette(GetMonSpritePalFromSpeciesAndPersonality(species, otId, personality), 0x120, 0x20);
-    SetMultiuseSpriteTemplateToPokemon(species, 0);
+    SetMultiuseSpriteTemplateToPokemon(species, B_POSITION_PLAYER_LEFT);
 
     spriteId = CreateSprite(&gMultiuseSpriteTemplate, 0x70, GetBattlerSpriteFinal_Y(2, species, FALSE), 30);
     gSprites[spriteId].oam.paletteNum = 2;
@@ -3820,7 +3820,7 @@ static void Task_UpdateAppealHearts(u8 taskId)
         {
             PlaySE(SE_CONTEST_HEART);
             m4aMPlayImmInit(&gMPlayInfo_SE1);
-            m4aMPlayPitchControl(&gMPlayInfo_SE1, 0xFFFF, pitchMod * 256);
+            m4aMPlayPitchControl(&gMPlayInfo_SE1, TRACKS_ALL, pitchMod * 256);
         }
         else
         {

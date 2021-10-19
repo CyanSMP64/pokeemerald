@@ -517,21 +517,21 @@ static const u8 sDodrioNeighborMap[MAX_RFU_PLAYERS][MAX_RFU_PLAYERS][3] =
     },
 };
 
-#define __ 9 // No player at this column. This may go out of bounds if this is returned
+#define x 9 // No player at this column. This may go out of bounds if this is returned
 
 // Takes the number of players and a column and returns the player id at that column.
 // Note that the assignment is somewhat arbitrary as players share neighboring columns.
 ALIGNED(4)
 static const u8 sPlayerIdAtColumn[MAX_RFU_PLAYERS][NUM_BERRY_COLUMNS] =
 {
-    {__, __, __, __,  1,  1,  1, __, __, __, __}, // 1 player
-    {__, __, __,  0,  0,  1,  1,  0, __, __, __}, // 2 players
-    {__, __,  2,  2,  0,  0,  1,  1,  1, __, __}, // 3 players
-    {__,  3,  3,  0,  0,  1,  1,  2,  2,  3, __}, // 4 players
-    { 3,  3,  4,  4,  0,  0,  1,  1,  2,  2,  3}, // 5 players
+    {x, x, x, x, 1, 1, 1, x, x, x, x}, // 1 player
+    {x, x, x, 0, 0, 1, 1, 0, x, x, x}, // 2 players
+    {x, x, 2, 2, 0, 0, 1, 1, 1, x, x}, // 3 players
+    {x, 3, 3, 0, 0, 1, 1, 2, 2, 3, x}, // 4 players
+    {3, 3, 4, 4, 0, 0, 1, 1, 2, 2, 3}, // 5 players
 };
 
-#undef __
+#undef x
 
 // Each array contains the columns that belong solely to one player, dependent on the number of players
 // When determing how difficult the berries in a column should be, the highest
@@ -3106,7 +3106,7 @@ static u32 RecvPacket_ReadyToStart(u32 playerId)
 {
     struct ReadyToStartPacket *packet;
 
-    if ((gRecvCmds[0][0] & 0xFF00) != RFUCMD_SEND_PACKET)
+    if ((gRecvCmds[0][0] & RFUCMD_MASK) != RFUCMD_SEND_PACKET)
         return FALSE;
 
     packet = (void *)&gRecvCmds[playerId][1];
@@ -3233,7 +3233,7 @@ static bool32 RecvPacket_GameState(u32 playerId,
     struct GameStatePacket *packet;
     struct DodrioGame_Berries *berries = &player->berries;
 
-    if ((gRecvCmds[0][0] & 0xFF00) != RFUCMD_SEND_PACKET)
+    if ((gRecvCmds[0][0] & RFUCMD_MASK) != RFUCMD_SEND_PACKET)
         return FALSE;
 
     packet = (void *)&gRecvCmds[0][1];
@@ -3310,7 +3310,7 @@ static bool32 RecvPacket_PickState(u32 playerId, u8 *pickState)
 {
     struct PickStatePacket *packet;
 
-    if ((gRecvCmds[0][0] & 0xFF00) != RFUCMD_SEND_PACKET)
+    if ((gRecvCmds[0][0] & RFUCMD_MASK) != RFUCMD_SEND_PACKET)
         return FALSE;
 
     packet = (void *)&gRecvCmds[playerId][1];
@@ -3341,7 +3341,7 @@ static bool32 RecvPacket_ReadyToEnd(u32 playerId)
 {
     struct ReadyToEndPacket *packet;
 
-    if ((gRecvCmds[0][0] & 0xFF00) != RFUCMD_SEND_PACKET)
+    if ((gRecvCmds[0][0] & RFUCMD_MASK) != RFUCMD_SEND_PACKET)
         return FALSE;
 
     packet = (void *)&gRecvCmds[playerId][1];

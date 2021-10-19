@@ -731,7 +731,7 @@ static bool8 LoadMonAndSceneGfx(struct Pokemon *mon)
         // Load mon gfx
         species = GetMonData(mon, MON_DATA_SPECIES2);
         personality = GetMonData(mon, MON_DATA_PERSONALITY);
-        HandleLoadSpecialPokePic_2(&gMonFrontPicTable[species], gMonSpritesGfxPtr->sprites.ptr[1], species, personality);
+        HandleLoadSpecialPokePic_2(&gMonFrontPicTable[species], gMonSpritesGfxPtr->sprites.ptr[B_POSITION_OPPONENT_LEFT], species, personality);
         sPokeblockFeed->loadGfxState++;
         break;
     case 1:
@@ -742,7 +742,7 @@ static bool8 LoadMonAndSceneGfx(struct Pokemon *mon)
         palette = GetMonSpritePalStructFromOtIdPersonality(species, trainerId, personality);
 
         LoadCompressedSpritePalette(palette);
-        SetMultiuseSpriteTemplateToPokemon(palette->tag, 1);
+        SetMultiuseSpriteTemplateToPokemon(palette->tag, B_POSITION_OPPONENT_LEFT);
         sPokeblockFeed->loadGfxState++;
         break;
     case 2:
@@ -886,7 +886,7 @@ static void Task_ExitPokeblockFeed(u8 taskId)
     {
         ResetSpriteData();
         FreeAllSpritePalettes();
-        m4aMPlayVolumeControl(&gMPlayInfo_BGM, -1, 0x100);
+        m4aMPlayVolumeControl(&gMPlayInfo_BGM, TRACKS_ALL, 0x100);
         SetMainCallback2(gMain.savedCallback);
         DestroyTask(taskId);
         FreeAllWindowBuffers();
