@@ -1120,6 +1120,8 @@ gSongTable::
 	song b2_seq_bgm_pw_scenario_07_f, 0, 0
 	song b2_seq_bgm_pw_scenario_07_l, 0, 0
 	song b2_seq_bgm_pw_scenario_08_f, 0, 0
+	song b2_seq_me_pokewood, 0, 0
+	song b2_seq_bgm_sw_d_23, 0, 0
 
 	.align 2
 dummy_song_header:

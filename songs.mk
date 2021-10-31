@@ -3002,3 +3002,9 @@ $(MID_SUBDIR)/b2_seq_bgm_pw_scenario_07_l.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_pw_scenario_08_f.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V080
+
+$(MID_SUBDIR)/b2_seq_me_pokewood.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V076 -p5
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_d_23.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V080

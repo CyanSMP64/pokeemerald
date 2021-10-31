@@ -1143,6 +1143,8 @@
 #define B2_SEQ_BGM_PW_SCENARIO_07_F   1116 // Pokéstar Studios: Humor
 #define B2_SEQ_BGM_PW_SCENARIO_07_L   1117 // Pokéstar Studios: Despair
 #define B2_SEQ_BGM_PW_SCENARIO_08_F   1118 // Pokéstar Studios: Shock
+#define B2_SEQ_ME_POKEWOOD            1119 // Immortalized in Pokéstar Studios!
+#define B2_SEQ_BGM_SW_D_23            1120 // Castelia Sewers
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().

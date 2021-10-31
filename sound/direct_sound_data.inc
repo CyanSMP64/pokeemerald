@@ -4671,6 +4671,42 @@ DirectSoundWaveData_bw_nylone4_relic::
 	.incbin "sound/direct_sound_samples/bw_nylone4_relic.bin"
 
 	.align 2
+DirectSoundWaveData_b2_tani_tubad2::
+	.incbin "sound/direct_sound_samples/b2_tani_tubad2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_tani_stringsc3attack::
+	.incbin "sound/direct_sound_samples/b2_tani_stringsc3attack.bin"
+
+	.align 2
+DirectSoundWaveData_b2_tani_stringsc3sustain::
+	.incbin "sound/direct_sound_samples/b2_tani_stringsc3sustain.bin"
+
+	.align 2
+DirectSoundWaveData_b2_tani_timpanid2::
+	.incbin "sound/direct_sound_samples/b2_tani_timpanid2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_tani_crash::
+	.incbin "sound/direct_sound_samples/b2_tani_crash.bin"
+
+	.align 2
+DirectSoundWaveData_b2_tani_crashrev::
+	.incbin "sound/direct_sound_samples/b2_tani_crashrev.bin"
+
+	.align 2
+DirectSoundWaveData_b2_tani_celloc2::
+	.incbin "sound/direct_sound_samples/b2_tani_celloc2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_tani_stringsc3marcato::
+	.incbin "sound/direct_sound_samples/b2_tani_stringsc3marcato.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_sewers::
+	.incbin "sound/direct_sound_samples/b2_drumloop_sewers.bin"
+
+	.align 2
 DirectSoundWaveData_b2_woodblockhi::
 	.incbin "sound/direct_sound_samples/b2_woodblockhi.bin"
 
@@ -4997,3 +5033,15 @@ DirectSoundWaveData_b2_synthvoxas3::
 	.align 2
 DirectSoundWaveData_b2_synthvoxf4::
 	.incbin "sound/direct_sound_samples/b2_synthvoxf4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_squareleadd2::
+	.incbin "sound/direct_sound_samples/b2_squareleadd2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_squareleadd4::
+	.incbin "sound/direct_sound_samples/b2_squareleadd4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_squareleadd6::
+	.incbin "sound/direct_sound_samples/b2_squareleadd6.bin"
