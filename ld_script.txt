@@ -1808,6 +1808,15 @@ SECTIONS {
         sound/songs/midi/b2_seq_bgm_pw_scenario_08_f.o(.rodata);
         sound/songs/midi/b2_seq_me_pokewood.o(.rodata);
         sound/songs/midi/b2_seq_bgm_sw_d_23.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_insect_gym_01.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_eye_clown.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_fes.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_e_achroma.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_vs_trainer.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_rezo_rizo.o(.rodata);
+        sound/songs/midi/b2_seq_me_avenue_01.o(.rodata);
+        sound/songs/midi/b2_seq_me_avenue_02.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_japarade.o(.rodata);
     } =0
 
     lib_rodata :

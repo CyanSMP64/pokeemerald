@@ -3008,3 +3008,30 @@ $(MID_SUBDIR)/b2_seq_me_pokewood.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_sw_d_23.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V080
+
+$(MID_SUBDIR)/b2_seq_bgm_insect_gym_01.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V100
+
+$(MID_SUBDIR)/b2_seq_bgm_eye_clown.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V080
+
+$(MID_SUBDIR)/b2_seq_bgm_fes.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V115
+
+$(MID_SUBDIR)/b2_seq_bgm_e_achroma.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V068
+
+$(MID_SUBDIR)/b2_seq_bgm_vs_trainer.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V090
+
+$(MID_SUBDIR)/b2_seq_bgm_rezo_rizo.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V080
+
+$(MID_SUBDIR)/b2_seq_me_avenue_01.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V120 -p5
+
+$(MID_SUBDIR)/b2_seq_me_avenue_02.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V120 -p5
+
+$(MID_SUBDIR)/b2_seq_bgm_japarade.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V110

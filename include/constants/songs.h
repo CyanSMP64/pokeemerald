@@ -1145,6 +1145,15 @@
 #define B2_SEQ_BGM_PW_SCENARIO_08_F   1118 // Pokéstar Studios: Shock
 #define B2_SEQ_ME_POKEWOOD            1119 // Immortalized in Pokéstar Studios!
 #define B2_SEQ_BGM_SW_D_23            1120 // Castelia Sewers
+#define B2_SEQ_BGM_INSECT_GYM_01      1121 // Castelia City Gym
+#define B2_SEQ_BGM_EYE_CLOWN          1122 // Trainers' Eyes Meet (Harlequin)
+#define B2_SEQ_BGM_FES                1123 // Funfest Mission Start!
+#define B2_SEQ_BGM_E_ACHROMA          1124 // Colress's Theme
+#define B2_SEQ_BGM_VS_TRAINER         1125 // Battle! (Trainer Battle)
+#define B2_SEQ_BGM_REZO_RIZO          1126 // Join Avenue
+#define B2_SEQ_ME_AVENUE_01           1127 // Join Avenue Level Up 1
+#define B2_SEQ_ME_AVENUE_02           1128 // Join Avenue Level Up 2
+#define B2_SEQ_BGM_JAPARADE           1129 // Join Avenue Meet and Greet!
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().

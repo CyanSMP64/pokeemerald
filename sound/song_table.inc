@@ -1120,8 +1120,17 @@ gSongTable::
 	song b2_seq_bgm_pw_scenario_07_f, 0, 0
 	song b2_seq_bgm_pw_scenario_07_l, 0, 0
 	song b2_seq_bgm_pw_scenario_08_f, 0, 0
-	song b2_seq_me_pokewood, 0, 0
+	song b2_seq_me_pokewood, 2, 2
 	song b2_seq_bgm_sw_d_23, 0, 0
+	song b2_seq_bgm_insect_gym_01, 0, 0
+	song b2_seq_bgm_eye_clown, 0, 0
+	song b2_seq_bgm_fes, 0, 0
+	song b2_seq_bgm_e_achroma, 0, 0
+	song b2_seq_bgm_vs_trainer, 0, 0
+	song b2_seq_bgm_rezo_rizo, 0, 0
+	song b2_seq_me_avenue_01, 2, 2
+	song b2_seq_me_avenue_02, 2, 2
+	song b2_seq_bgm_japarade, 0, 0
 
 	.align 2
 dummy_song_header:

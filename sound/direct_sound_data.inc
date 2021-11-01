@@ -4707,6 +4707,22 @@ DirectSoundWaveData_b2_drumloop_sewers::
 	.incbin "sound/direct_sound_samples/b2_drumloop_sewers.bin"
 
 	.align 2
+DirectSoundWaveData_b2_drumloop_casteliagyml::
+	.incbin "sound/direct_sound_samples/b2_drumloop_casteliagyml.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_casteliagymr::
+	.incbin "sound/direct_sound_samples/b2_drumloop_casteliagymr.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_colress::
+	.incbin "sound/direct_sound_samples/b2_drumloop_colress.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_joinavenue::
+	.incbin "sound/direct_sound_samples/b2_drumloop_joinavenue.bin"
+
+	.align 2
 DirectSoundWaveData_b2_woodblockhi::
 	.incbin "sound/direct_sound_samples/b2_woodblockhi.bin"
 
@@ -5045,3 +5061,19 @@ DirectSoundWaveData_b2_squareleadd4::
 	.align 2
 DirectSoundWaveData_b2_squareleadd6::
 	.incbin "sound/direct_sound_samples/b2_squareleadd6.bin"
+
+	.align 2
+DirectSoundWaveData_b2_casteliagymvox1::
+	.incbin "sound/direct_sound_samples/b2_casteliagymvox1.bin"
+
+	.align 2
+DirectSoundWaveData_b2_casteliagymvox2::
+	.incbin "sound/direct_sound_samples/b2_casteliagymvox2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_chh_colress::
+	.incbin "sound/direct_sound_samples/b2_chh_colress.bin"
+
+	.align 2
+DirectSoundWaveData_b2_ohh_colress::
+	.incbin "sound/direct_sound_samples/b2_ohh_colress.bin"

@@ -133,6 +133,8 @@ static const struct Fanfare sFanfares[] = {
     [FANFARE_BW_MISSION_FAILED]       = { BW_SEQ_ME_MISSION_FAILED,  180 },
     [FANFARE_BW_OBTAIN_BERRY]         = { BW_SEQ_ME_KINOMI,          120 },
     [FANFARE_B2_IMMORTALIZED]         = { B2_SEQ_ME_POKEWOOD,        445 },
+    [FANFARE_B2_JOIN_AVENUE_1]        = { B2_SEQ_ME_AVENUE_01,       205 },
+    [FANFARE_B2_JOIN_AVENUE_2]        = { B2_SEQ_ME_AVENUE_02,       310 },
 };
 
 #define CRY_VOLUME  120 // was 125 in R/S
