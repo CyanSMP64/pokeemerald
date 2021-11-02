@@ -1,15 +1,15 @@
 	.align 2
 voicegroup338:: @ B2W2 Drum Set 3 (ADDICTIVE DRUMS)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 64, DirectSoundWaveData_b2_kick_nimbasagym, 255, 0, 255, 0			@ 127/127/127/126/ 64	
+	voice_directsound 61, 64, DirectSoundWaveData_b2_kick_nimbasagym, 255, 0, 255, 0			@ 127/127/127/126/ 64	+ 1
+	voice_directsound 62, 64, DirectSoundWaveData_b2_kick_nimbasagym, 255, 0, 255, 0			@ 127/127/127/126/ 64	+ 2
+	voice_directsound 63, 64, DirectSoundWaveData_b2_kick_nimbasagym, 255, 0, 255, 0			@ 127/127/127/126/ 64	+ 3
+	voice_directsound 60, 46, DirectSoundWaveData_b2_snare1_nimbasagym, 255, 0, 255, 0			@ 127/127/127/126/ 46	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_snare2_nimbasagym, 255, 0, 255, 0			@ 127/127/127/126/ 64	
+	voice_directsound 61, 100, DirectSoundWaveData_b2_chh_nimbasagym, 255, 0, 255, 0			@ 127/127/127/126/100	+ 1
+	voice_directsound 61, 100, DirectSoundWaveData_b2_chh_nimbasagym, 255, 0, 255, 0			@ 127/127/127/126/100	+ 1
+	voice_directsound 60, 80, DirectSoundWaveData_b2_ohh_nimbasagym, 255, 0, 255, 0				@ 127/127/127/126/ 80	
+	voice_directsound 84, 64, DirectSoundWaveData_b2_snare1_nimbasagym, 255, 0, 255, 0			@ 127/127/127/126/ 64	+24
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0

@@ -389,7 +389,7 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
             if (gTasks[taskId].tBgmIndex > 0)
                 gTasks[taskId].tBgmIndex--;
             else
-                gTasks[taskId].tBgmIndex = (B2_SEQ_BGM_JAPARADE - (MUS_LITTLEROOT_TEST - 1));
+                gTasks[taskId].tBgmIndex = (B2_SEQ_BGM_ERECTRIC_GYM_02 - (MUS_LITTLEROOT_TEST - 1));
         }
         return TRUE;
     }
@@ -404,7 +404,7 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
         }
         else
         {
-            if (gTasks[taskId].tBgmIndex < (B2_SEQ_BGM_JAPARADE - (MUS_LITTLEROOT_TEST - 1)))
+            if (gTasks[taskId].tBgmIndex < (B2_SEQ_BGM_ERECTRIC_GYM_02 - (MUS_LITTLEROOT_TEST - 1)))
                 gTasks[taskId].tBgmIndex++;
             else
                 gTasks[taskId].tBgmIndex = 0;
@@ -1827,6 +1827,9 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(B2_SEQ_ME_AVENUE_01          , "B2-SEQ-ME-AVENUE-01") \
     X(B2_SEQ_ME_AVENUE_02          , "B2-SEQ-ME-AVENUE-02") \
     X(B2_SEQ_BGM_JAPARADE          , "B2-SEQ-BGM-JAPARADE") \
+    X(B2_SEQ_BGM_ERECTRIC_GYM_01   , "B2-SEQ-BGM-ERECTRIC-GYM-01") \
+    X(B2_SEQ_BGM_EYE_DANCER        , "B2-SEQ-BGM-EYE-DANCER") \
+    X(B2_SEQ_BGM_ERECTRIC_GYM_02   , "B2-SEQ-BGM-ERECTRIC-GYM-02") \
 
 #define SOUND_LIST_SE \
     X(SE_STOP, "STOP") \

@@ -28,9 +28,9 @@ voicegroup337:: @ B2W2 Drum Set 2
 	voice_directsound 61, 64, DirectSoundWaveData_b2_synthkick, 255, 0, 227, 205    			@ 127/127/120/116/ 64	+ 1
 	voice_directsound 48, 64, DirectSoundWaveData_dp_reverscyn_16, 2, 0, 227, 171			    @   3/127/120/120/ 64
 	voice_directsound 60, 64, DirectSoundWaveData_dp_053clap, 255, 197, 227, 205				@ 127/120/120/116/ 64
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 61, 64, DirectSoundWaveData_dp_053clap, 255, 197, 227, 205				@ 127/120/120/116/ 64	+ 1
 	voice_directsound 60, 64, DirectSoundWaveData_bw_159rim, 255, 0, 227, 205    				@ 127/127/120/116/ 64	
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 62, 64, DirectSoundWaveData_dp_053clap, 255, 197, 227, 205				@ 127/120/120/116/ 64	+ 2
 	voice_directsound 60, 64, DirectSoundWaveData_dp_sne2_loop, 255, 0, 227, 205    			@ 127/127/120/116/ 64
 	voice_directsound 60, 64, DirectSoundWaveData_bw_175snare, 255, 0, 227, 205    				@ 127/127/120/116/ 64	
 	voice_directsound 60, 64, DirectSoundWaveData_bw_010kick, 255, 0, 227, 205    				@ 127/127/120/116/ 64

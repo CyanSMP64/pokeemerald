@@ -70,12 +70,12 @@ voicegroup334:: @ B2W2 Sato
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_areyouready, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_areyouready_high, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_ahh, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_casteliagymvox1, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_casteliagymvox2, 255, 0, 255, 1
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_directsound 60, 0, DirectSoundWaveData_bw_steeldrumg4_undella, 255, 251, 0, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_bassdrum_ranch, 255, 239, 0, 232
 	voice_directsound 60, 0, DirectSoundWaveData_b2_cowbells, 255, 0, 255, 0
@@ -111,7 +111,8 @@ voicegroup334:: @ B2W2 Sato
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_sewers, 255, 0, 255, 0
-	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_casteliagyml, 255, 0, 255, 0
-	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_casteliagymr, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_casteliagym, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_beautyintro, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_colress, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_joinavenue, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_beauty, 255, 0, 255, 0

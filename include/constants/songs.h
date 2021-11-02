@@ -1154,6 +1154,9 @@
 #define B2_SEQ_ME_AVENUE_01           1127 // Join Avenue Level Up 1
 #define B2_SEQ_ME_AVENUE_02           1128 // Join Avenue Level Up 2
 #define B2_SEQ_BGM_JAPARADE           1129 // Join Avenue Meet and Greet!
+#define B2_SEQ_BGM_ERECTRIC_GYM_01    1130 // Nimbasa City Gym: Runway
+#define B2_SEQ_BGM_EYE_DANCER         1131 // Trainers' Eyes Meet (Beauty)
+#define B2_SEQ_BGM_ERECTRIC_GYM_02    1132 // Nimbasa City Gym: Stage                   (TODO: PORTAMENTO!!)
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().

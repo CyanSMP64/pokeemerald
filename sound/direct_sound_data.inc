@@ -4707,12 +4707,8 @@ DirectSoundWaveData_b2_drumloop_sewers::
 	.incbin "sound/direct_sound_samples/b2_drumloop_sewers.bin"
 
 	.align 2
-DirectSoundWaveData_b2_drumloop_casteliagyml::
-	.incbin "sound/direct_sound_samples/b2_drumloop_casteliagyml.bin"
-
-	.align 2
-DirectSoundWaveData_b2_drumloop_casteliagymr::
-	.incbin "sound/direct_sound_samples/b2_drumloop_casteliagymr.bin"
+DirectSoundWaveData_b2_drumloop_casteliagym::
+	.incbin "sound/direct_sound_samples/b2_drumloop_casteliagym.bin"
 
 	.align 2
 DirectSoundWaveData_b2_drumloop_colress::
@@ -4721,6 +4717,18 @@ DirectSoundWaveData_b2_drumloop_colress::
 	.align 2
 DirectSoundWaveData_b2_drumloop_joinavenue::
 	.incbin "sound/direct_sound_samples/b2_drumloop_joinavenue.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_nimbasagym::
+	.incbin "sound/direct_sound_samples/b2_drumloop_nimbasagym.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_beautyintro::
+	.incbin "sound/direct_sound_samples/b2_drumloop_beautyintro.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_beauty::
+	.incbin "sound/direct_sound_samples/b2_drumloop_beauty.bin"
 
 	.align 2
 DirectSoundWaveData_b2_woodblockhi::
@@ -5077,3 +5085,103 @@ DirectSoundWaveData_b2_chh_colress::
 	.align 2
 DirectSoundWaveData_b2_ohh_colress::
 	.incbin "sound/direct_sound_samples/b2_ohh_colress.bin"
+
+	.align 2
+DirectSoundWaveData_b2_nimbasagymsynthe1::
+	.incbin "sound/direct_sound_samples/b2_nimbasagymsynthe1.bin"
+
+	.align 2
+DirectSoundWaveData_b2_nimbasagymsynthe4::
+	.incbin "sound/direct_sound_samples/b2_nimbasagymsynthe4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_nimbasagymsynthe6::
+	.incbin "sound/direct_sound_samples/b2_nimbasagymsynthe6.bin"
+
+	.align 2
+DirectSoundWaveData_b2_kick_nimbasagym::
+	.incbin "sound/direct_sound_samples/b2_kick_nimbasagym.bin"
+
+	.align 2
+DirectSoundWaveData_b2_snare1_nimbasagym::
+	.incbin "sound/direct_sound_samples/b2_snare1_nimbasagym.bin"
+
+	.align 2
+DirectSoundWaveData_b2_snare2_nimbasagym::
+	.incbin "sound/direct_sound_samples/b2_snare2_nimbasagym.bin"
+
+	.align 2
+DirectSoundWaveData_b2_chh_nimbasagym::
+	.incbin "sound/direct_sound_samples/b2_chh_nimbasagym.bin"
+
+	.align 2
+DirectSoundWaveData_b2_ohh_nimbasagym::
+	.incbin "sound/direct_sound_samples/b2_ohh_nimbasagym.bin"
+
+	.align 2
+DirectSoundWaveData_b2_nimbasagymvox1a::
+	.incbin "sound/direct_sound_samples/b2_nimbasagymvox1a.bin"
+
+	.align 2
+DirectSoundWaveData_b2_nimbasagymvox1b::
+	.incbin "sound/direct_sound_samples/b2_nimbasagymvox1b.bin"
+
+	.align 2
+DirectSoundWaveData_b2_nimbasagymvox1c::
+	.incbin "sound/direct_sound_samples/b2_nimbasagymvox1c.bin"
+
+	.align 2
+DirectSoundWaveData_b2_nimbasagymvox1d::
+	.incbin "sound/direct_sound_samples/b2_nimbasagymvox1d.bin"
+
+	.align 2
+DirectSoundWaveData_b2_nimbasagymvox1e::
+	.incbin "sound/direct_sound_samples/b2_nimbasagymvox1e.bin"
+
+	.align 2
+DirectSoundWaveData_b2_nimbasagymvox1f::
+	.incbin "sound/direct_sound_samples/b2_nimbasagymvox1f.bin"
+
+	.align 2
+DirectSoundWaveData_b2_nimbasagymvox2::
+	.incbin "sound/direct_sound_samples/b2_nimbasagymvox2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_nimbasagymvox3::
+	.incbin "sound/direct_sound_samples/b2_nimbasagymvox3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_nimbasagymvox4::
+	.incbin "sound/direct_sound_samples/b2_nimbasagymvox4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_nimbasagymvox5::
+	.incbin "sound/direct_sound_samples/b2_nimbasagymvox5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_nimbasagymvox6::
+	.incbin "sound/direct_sound_samples/b2_nimbasagymvox6.bin"
+
+	.align 2
+DirectSoundWaveData_b2_givemewhatineed::
+	.incbin "sound/direct_sound_samples/b2_givemewhatineed.bin"
+
+	.align 2
+DirectSoundWaveData_b2_givemewhatineee::
+	.incbin "sound/direct_sound_samples/b2_givemewhatineee.bin"
+
+	.align 2
+DirectSoundWaveData_b2_areyouready::
+	.incbin "sound/direct_sound_samples/b2_areyouready.bin"
+
+	.align 2
+DirectSoundWaveData_b2_areyouready_high::
+	.incbin "sound/direct_sound_samples/b2_areyouready_high.bin"
+
+	.align 2
+DirectSoundWaveData_b2_ahh::
+	.incbin "sound/direct_sound_samples/b2_ahh.bin"
+
+	.align 2
+DirectSoundWaveData_b2_electricityspark::
+	.incbin "sound/direct_sound_samples/b2_electricityspark.bin"

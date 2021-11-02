@@ -1131,6 +1131,9 @@ gSongTable::
 	song b2_seq_me_avenue_01, 2, 2
 	song b2_seq_me_avenue_02, 2, 2
 	song b2_seq_bgm_japarade, 0, 0
+	song b2_seq_bgm_erectric_gym_01, 0, 0
+	song b2_seq_bgm_eye_dancer, 0, 0
+	song b2_seq_bgm_erectric_gym_02, 0, 0
 
 	.align 2
 dummy_song_header:
