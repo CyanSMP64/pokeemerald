@@ -1820,6 +1820,8 @@ SECTIONS {
         sound/songs/midi/b2_seq_bgm_erectric_gym_01.o(.rodata);
         sound/songs/midi/b2_seq_bgm_eye_dancer.o(.rodata);
         sound/songs/midi/b2_seq_bgm_erectric_gym_02.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_vs_gymleader.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_battlesuperior.o(.rodata);
     } =0
 
     lib_rodata :

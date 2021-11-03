@@ -3044,3 +3044,9 @@ $(MID_SUBDIR)/b2_seq_bgm_eye_dancer.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_erectric_gym_02.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V080
+
+$(MID_SUBDIR)/b2_seq_bgm_vs_gymleader.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V106
+
+$(MID_SUBDIR)/b2_seq_bgm_battlesuperior.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V090

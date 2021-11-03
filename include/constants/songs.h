@@ -1157,6 +1157,8 @@
 #define B2_SEQ_BGM_ERECTRIC_GYM_01    1130 // Nimbasa City Gym: Runway
 #define B2_SEQ_BGM_EYE_DANCER         1131 // Trainers' Eyes Meet (Beauty)
 #define B2_SEQ_BGM_ERECTRIC_GYM_02    1132 // Nimbasa City Gym: Stage                   (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_VS_GYMLEADER       1133 // Battle! (Gym Leader)                      (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_BATTLESUPERIOR     1134 // Victory Lies Before You!
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
