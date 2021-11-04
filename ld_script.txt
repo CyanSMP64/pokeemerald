@@ -1822,6 +1822,10 @@ SECTIONS {
         sound/songs/midi/b2_seq_bgm_erectric_gym_02.o(.rodata);
         sound/songs/midi/b2_seq_bgm_vs_gymleader.o(.rodata);
         sound/songs/midi/b2_seq_bgm_battlesuperior.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_ground_gym_01.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_wbt_lobby.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_wbt_ground.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_vs_rg_leader.o(.rodata);
     } =0
 
     lib_rodata :

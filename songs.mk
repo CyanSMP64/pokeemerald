@@ -3050,3 +3050,15 @@ $(MID_SUBDIR)/b2_seq_bgm_vs_gymleader.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_battlesuperior.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V090
+
+$(MID_SUBDIR)/b2_seq_bgm_ground_gym_01.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V115
+
+$(MID_SUBDIR)/b2_seq_bgm_wbt_lobby.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V110
+
+$(MID_SUBDIR)/b2_seq_bgm_wbt_ground.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V073
+
+$(MID_SUBDIR)/b2_seq_bgm_vs_rg_leader.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V127

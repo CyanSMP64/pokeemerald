@@ -48,8 +48,8 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup266, KeySplitTable52    @ clarinet
 	voice_directsound 60, 0, DirectSoundWaveData_dp_timpany_as_16, 255, 248, 0, 205
 	voice_directsound 60, 0, DirectSoundWaveData_bw_064flt2a5, 255, 246, 159, 205
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup328, KeySplitTable65    @ flute 1
+	voice_directsound 60, 0, DirectSoundWaveData_hg_096flt1c6, 255, 246, 159, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
@@ -85,9 +85,9 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit_all voicegroup338				 @ drum set 3 (addictive drums)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_directsound 60, 0, DirectSoundWaveData_bw_solotrumpetc5, 255, 0, 255, 171
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_bw_trombonesstaccatocs2, 255, 1, 227, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_spiccatostringse2, 255, 0, 255, 171
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_trumpetsstaccatogs4_loop, 255, 0, 255, 224
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
@@ -109,7 +109,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_square_1 60, 0, 0, 1, 0, 3, 10, 3
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_keysplit_all voicegroup343				 @ various vocal chops
+	voice_keysplit_all voicegroup343				 @ various vocal chops and other samples
 	voice_directsound 60, 0, DirectSoundWaveData_b2_nimbasagymsynthe1, 255, 242, 227, 214
 	voice_directsound 60, 0, DirectSoundWaveData_b2_nimbasagymsynthe4, 255, 242, 227, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_nimbasagymsynthe6, 255, 242, 227, 205

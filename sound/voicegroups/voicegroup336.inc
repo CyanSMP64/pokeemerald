@@ -26,9 +26,9 @@ voicegroup336:: @ B2W2 Drum Set 1
 	voice_directsound 67, 64, DirectSoundWaveData_b2_synthkick, 255, 0, 255, 2					@ 127/127/127/124/ 64	+ 7
 	voice_directsound 29, 64, DirectSoundWaveData_bw_reversecymbale2, 255, 0, 255, 0			@ 127/127/127/126/ 64	-11
 	voice_directsound 30, 64, DirectSoundWaveData_bw_reversecymbale2, 255, 0, 255, 0			@ 127/127/127/126/ 64	-10
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 64, DirectSoundWaveData_b2_synthsnare_pwt, 255, 0, 227, 192			@ 127/127/120/118/ 64
+	voice_directsound 60, 100, DirectSoundWaveData_b2_chh_pwt, 255, 0, 255, 192					@ 127/127/127/118/100	
+	voice_directsound 60, 100, DirectSoundWaveData_b2_ohh_pwt, 255, 0, 255, 171					@ 127/127/127/120/100	
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 64, DirectSoundWaveData_b2_snare_rival, 255, 226, 127, 205    		@ 127/114/ 90/116/ 64
 	voice_directsound 60, 64, DirectSoundWaveData_dp_bassdr2_16, 255, 0, 255, 171				@ 127/127/127/120/ 64	

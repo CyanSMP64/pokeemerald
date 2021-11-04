@@ -54,3 +54,20 @@ voicegroup343:: @ virbank gym vocals
 	voice_directsound 34, 64, DirectSoundWaveData_b2_nimbasagymvox6, 255, 0, 255, 0				@ 127/127/127/127/ 64	- 2
 	voice_directsound 49, 64, DirectSoundWaveData_b2_givemewhatineed, 255, 0, 255, 0			@ 127/127/127/127/ 64	+ 1
 	voice_directsound 49, 64, DirectSoundWaveData_b2_givemewhatineee, 255, 0, 255, 0			@ 127/127/127/127/ 64	+ 1
+	voice_directsound 60, 5, DirectSoundWaveData_b2_pwtdrumsl1, 255, 0, 255, 0					@ 127/127/127/126/  5	
+	voice_directsound 60, 5, DirectSoundWaveData_b2_pwtdrumsl2, 255, 0, 255, 0					@ 127/127/127/126/  5	
+	voice_directsound 60, 5, DirectSoundWaveData_b2_pwtdrumsl3, 255, 0, 255, 0					@ 127/127/127/126/  5	
+	voice_directsound 60, 5, DirectSoundWaveData_b2_pwtdrumsl4, 255, 0, 255, 0					@ 127/127/127/126/  5	
+	voice_directsound 60, 5, DirectSoundWaveData_b2_pwtdrumsl5, 255, 0, 255, 0					@ 127/127/127/126/  5	
+	voice_directsound 60, 5, DirectSoundWaveData_b2_pwtdrumsl6, 255, 0, 255, 0					@ 127/127/127/126/  5	
+	voice_directsound 60, 5, DirectSoundWaveData_b2_pwtdrumsl7, 255, 0, 255, 0					@ 127/127/127/126/  5	
+	voice_directsound 60, 5, DirectSoundWaveData_b2_pwtdrumsl8, 255, 0, 255, 0					@ 127/127/127/126/  5	
+	voice_directsound 60, 5, DirectSoundWaveData_b2_pwtdrumsl9, 255, 0, 255, 0					@ 127/127/127/126/  5	
+	voice_directsound 60, 122, DirectSoundWaveData_b2_pwtdrumsr1, 255, 0, 255, 0				@ 127/127/127/126/122	
+	voice_directsound 60, 122, DirectSoundWaveData_b2_pwtdrumsr2, 255, 0, 255, 0				@ 127/127/127/126/122	
+	voice_directsound 60, 122, DirectSoundWaveData_b2_pwtdrumsr3, 255, 0, 255, 0				@ 127/127/127/126/122	
+	voice_directsound 60, 122, DirectSoundWaveData_b2_pwtdrumsr4, 255, 0, 255, 0				@ 127/127/127/126/122	
+	voice_directsound 60, 122, DirectSoundWaveData_b2_pwtdrumsr5, 255, 0, 255, 0				@ 127/127/127/126/122	
+	voice_directsound 60, 122, DirectSoundWaveData_b2_pwtdrumsr6, 255, 0, 255, 0				@ 127/127/127/126/122	
+	voice_directsound 60, 122, DirectSoundWaveData_b2_pwtdrumsr7, 255, 0, 255, 0				@ 127/127/127/126/122	
+	voice_directsound 60, 122, DirectSoundWaveData_b2_pwtdrumsr8, 255, 0, 255, 0				@ 127/127/127/126/122	

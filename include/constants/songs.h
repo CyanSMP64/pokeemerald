@@ -1159,6 +1159,10 @@
 #define B2_SEQ_BGM_ERECTRIC_GYM_02    1132 // Nimbasa City Gym: Stage                   (TODO: PORTAMENTO!!)
 #define B2_SEQ_BGM_VS_GYMLEADER       1133 // Battle! (Gym Leader)                      (TODO: PORTAMENTO!!)
 #define B2_SEQ_BGM_BATTLESUPERIOR     1134 // Victory Lies Before You!
+#define B2_SEQ_BGM_GROUND_GYM_01      1135 // Driftveil City Gym
+#define B2_SEQ_BGM_WBT_LOBBY          1136 // Pokémon World Tournament (PWT)
+#define B2_SEQ_BGM_WBT_GROUND         1137 // The PWT
+#define B2_SEQ_BGM_VS_RG_LEADER       1138 // Battle! (Gym Leader - Kanto Version)
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().

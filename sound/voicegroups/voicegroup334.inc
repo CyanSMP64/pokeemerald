@@ -108,7 +108,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup348, KeySplitTable126   @ over run
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_sewers, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_casteliagym, 255, 0, 255, 0
@@ -116,3 +116,4 @@ voicegroup334:: @ B2W2 Sato
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_colress, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_joinavenue, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_beauty, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_driftveilgym, 255, 0, 255, 0

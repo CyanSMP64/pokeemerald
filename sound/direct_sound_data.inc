@@ -4731,6 +4731,78 @@ DirectSoundWaveData_b2_drumloop_beauty::
 	.incbin "sound/direct_sound_samples/b2_drumloop_beauty.bin"
 
 	.align 2
+DirectSoundWaveData_b2_drumloop_driftveilgym::
+	.incbin "sound/direct_sound_samples/b2_drumloop_driftveilgym.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pwtdrumsl1::
+	.incbin "sound/direct_sound_samples/b2_pwtdrumsl1.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pwtdrumsl2::
+	.incbin "sound/direct_sound_samples/b2_pwtdrumsl2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pwtdrumsl3::
+	.incbin "sound/direct_sound_samples/b2_pwtdrumsl3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pwtdrumsl4::
+	.incbin "sound/direct_sound_samples/b2_pwtdrumsl4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pwtdrumsl5::
+	.incbin "sound/direct_sound_samples/b2_pwtdrumsl5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pwtdrumsl6::
+	.incbin "sound/direct_sound_samples/b2_pwtdrumsl6.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pwtdrumsl7::
+	.incbin "sound/direct_sound_samples/b2_pwtdrumsl7.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pwtdrumsl8::
+	.incbin "sound/direct_sound_samples/b2_pwtdrumsl8.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pwtdrumsl9::
+	.incbin "sound/direct_sound_samples/b2_pwtdrumsl9.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pwtdrumsr1::
+	.incbin "sound/direct_sound_samples/b2_pwtdrumsr1.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pwtdrumsr2::
+	.incbin "sound/direct_sound_samples/b2_pwtdrumsr2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pwtdrumsr3::
+	.incbin "sound/direct_sound_samples/b2_pwtdrumsr3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pwtdrumsr4::
+	.incbin "sound/direct_sound_samples/b2_pwtdrumsr4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pwtdrumsr5::
+	.incbin "sound/direct_sound_samples/b2_pwtdrumsr5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pwtdrumsr6::
+	.incbin "sound/direct_sound_samples/b2_pwtdrumsr6.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pwtdrumsr7::
+	.incbin "sound/direct_sound_samples/b2_pwtdrumsr7.bin"
+
+	.align 2
+DirectSoundWaveData_b2_pwtdrumsr8::
+	.incbin "sound/direct_sound_samples/b2_pwtdrumsr8.bin"
+
+	.align 2
 DirectSoundWaveData_b2_woodblockhi::
 	.incbin "sound/direct_sound_samples/b2_woodblockhi.bin"
 
@@ -5185,3 +5257,39 @@ DirectSoundWaveData_b2_ahh::
 	.align 2
 DirectSoundWaveData_b2_electricityspark::
 	.incbin "sound/direct_sound_samples/b2_electricityspark.bin"
+
+	.align 2
+DirectSoundWaveData_b2_overrung2::
+	.incbin "sound/direct_sound_samples/b2_overrung2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_overrung3::
+	.incbin "sound/direct_sound_samples/b2_overrung3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_overrung4::
+	.incbin "sound/direct_sound_samples/b2_overrung4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_overrung5::
+	.incbin "sound/direct_sound_samples/b2_overrung5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_trumpetsstaccatogs4_loop::
+	.incbin "sound/direct_sound_samples/b2_trumpetsstaccatogs4_loop.bin"
+
+	.align 2
+DirectSoundWaveData_b2_synthbassd2::
+	.incbin "sound/direct_sound_samples/b2_synthbassd2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_chh_pwt::
+	.incbin "sound/direct_sound_samples/b2_chh_pwt.bin"
+
+	.align 2
+DirectSoundWaveData_b2_ohh_pwt::
+	.incbin "sound/direct_sound_samples/b2_ohh_pwt.bin"
+
+	.align 2
+DirectSoundWaveData_b2_synthsnare_pwt::
+	.incbin "sound/direct_sound_samples/b2_synthsnare_pwt.bin"

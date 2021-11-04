@@ -1136,6 +1136,10 @@ gSongTable::
 	song b2_seq_bgm_erectric_gym_02, 0, 0
 	song b2_seq_bgm_vs_gymleader, 0, 0
 	song b2_seq_bgm_battlesuperior, 0, 0
+	song b2_seq_bgm_ground_gym_01, 0, 0
+	song b2_seq_bgm_wbt_lobby, 0, 0
+	song b2_seq_bgm_wbt_ground, 0, 0
+	song b2_seq_bgm_vs_rg_leader, 0, 0
 
 	.align 2
 dummy_song_header:
