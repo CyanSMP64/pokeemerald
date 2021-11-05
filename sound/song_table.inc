@@ -1140,6 +1140,7 @@ gSongTable::
 	song b2_seq_bgm_wbt_lobby, 0, 0
 	song b2_seq_bgm_wbt_ground, 0, 0
 	song b2_seq_bgm_vs_rg_leader, 0, 0
+	song b2_seq_bgm_vs_rg_champ, 0, 0
 
 	.align 2
 dummy_song_header:

@@ -89,7 +89,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_directsound 60, 0, DirectSoundWaveData_bw_spiccatostringse2, 255, 0, 255, 171
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_directsound 60, 0, DirectSoundWaveData_hg_021cellog2, 254, 242, 255, 205
-	voice_keysplit voicegroup339, KeySplitTable65    @ pan flute
+	voice_keysplit voicegroup343, KeySplitTable65    @ pan flute
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup340, KeySplitTable118   @ pink strat
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder

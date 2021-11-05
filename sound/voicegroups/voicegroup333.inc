@@ -26,7 +26,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup316, KeySplitTable41    @ clean guitar
 	voice_directsound 60, 0, DirectSoundWaveData_hg_001uprigc3, 255, 251, 0, 192
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_synthbassd2, 255, 251, 0, 205
 	voice_keysplit voicegroup311, KeySplitTable101   @ fretless bass | 34
 	voice_keysplit voicegroup309, KeySplitTable117   @ slap bass | 47 |
 	voice_keysplit voicegroup254, KeySplitTable73    @ synth bass
@@ -67,16 +67,16 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_bw_sawleadc4_vsleader, 255, 242, 191, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_directsound 60, 0, DirectSoundWaveData_bw_synthbassf1_leader, 255, 251, 14, 171
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup324, KeySplitTable62    @ choir male
+	voice_directsound 60, 0, DirectSoundWaveData_bw_choirmaleg2, 255, 242, 191, 205
+	voice_directsound 60, 0, DirectSoundWaveData_bw_choirmalee3, 255, 242, 191, 205
+	voice_directsound 60, 0, DirectSoundWaveData_bw_choirmalec4, 255, 242, 191, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_metalclanke2, 255, 250, 0, 220
 	voice_directsound 60, 0, DirectSoundWaveData_b2_hardbasse2, 255, 0, 252, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_hardbasse3, 255, 0, 252, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_recorderg5, 255, 1, 227, 129
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_bw_guitarbendc5_plasma, 255, 197, 255, 2
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar1, 255, 197, 159, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar2, 255, 197, 159, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar3, 255, 197, 159, 192
@@ -109,7 +109,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_square_1 60, 0, 0, 1, 0, 3, 10, 3
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_keysplit_all voicegroup343				 @ various vocal chops and other samples
+	voice_keysplit_all voicegroup339				 @ various vocal chops and other samples
 	voice_directsound 60, 0, DirectSoundWaveData_b2_nimbasagymsynthe1, 255, 242, 227, 214
 	voice_directsound 60, 0, DirectSoundWaveData_b2_nimbasagymsynthe4, 255, 242, 227, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_nimbasagymsynthe6, 255, 242, 227, 205

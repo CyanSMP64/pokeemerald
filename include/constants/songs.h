@@ -1163,6 +1163,7 @@
 #define B2_SEQ_BGM_WBT_LOBBY          1136 // Pokémon World Tournament (PWT)
 #define B2_SEQ_BGM_WBT_GROUND         1137 // The PWT
 #define B2_SEQ_BGM_VS_RG_LEADER       1138 // Battle! (Gym Leader - Kanto Version)
+#define B2_SEQ_BGM_VS_RG_CHAMP        1139 // Battle! (Champion - Kanto Version)        (TODO: PORTAMENTO!!)
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().

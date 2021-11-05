@@ -103,3 +103,28 @@ voicegroup338:: @ B2W2 Drum Set 3 (ADDICTIVE DRUMS)
 	voice_directsound 70, 110, DirectSoundWaveData_b2_addictiveridebell, 255, 248, 0, 224		@ 127/ 80/  0/110/110	+10
 	voice_directsound 71, 110, DirectSoundWaveData_b2_addictiveridebell, 255, 248, 0, 224		@ 127/ 80/  0/110/110	+11
 	voice_directsound 60, 100, DirectSoundWaveData_b2_addictiveride, 255, 248, 0, 192			@ 127/ 80/  0/118/100
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60,  10, DirectSoundWaveData_hg_135tom, 255, 0, 255, 205    				@ 127/127/127/116/ 10	
+	voice_directsound 60,  30, DirectSoundWaveData_hg_135tom, 255, 0, 255, 205    				@ 127/127/127/116/ 30	
+	voice_directsound 60,  40, DirectSoundWaveData_hg_135tom, 255, 0, 255, 205    				@ 127/127/127/116/ 40	
+	voice_directsound 60,  50, DirectSoundWaveData_hg_135tom, 255, 0, 255, 205    				@ 127/127/127/116/ 50	
+	voice_directsound 60,  30, DirectSoundWaveData_hg_137tom, 255, 0, 255, 205    				@ 127/127/127/116/ 30	
+	voice_directsound 60,  40, DirectSoundWaveData_hg_137tom, 255, 0, 255, 205    				@ 127/127/127/116/ 40	
+	voice_directsound 60, 100, DirectSoundWaveData_hg_137tom, 255, 0, 255, 205    				@ 127/127/127/116/100	
+	voice_directsound 60, 110, DirectSoundWaveData_hg_137tom, 255, 0, 255, 205    				@ 127/127/127/116/110	
+	voice_directsound 60,  90, DirectSoundWaveData_hg_138tom, 255, 0, 255, 205    				@ 127/127/127/116/ 90	
+	voice_directsound 60, 100, DirectSoundWaveData_hg_138tom, 255, 0, 255, 205    				@ 127/127/127/116/100	
+	voice_directsound 60, 110, DirectSoundWaveData_hg_138tom, 255, 0, 255, 205    				@ 127/127/127/116/110	
+	voice_directsound 60, 118, DirectSoundWaveData_hg_138tom, 255, 0, 255, 205    				@ 127/127/127/116/118	
+	voice_directsound 60, 104, DirectSoundWaveData_hg_136tom, 255, 0, 255, 205    				@ 127/127/127/116/104	
+	voice_directsound 60, 112, DirectSoundWaveData_hg_136tom, 255, 0, 255, 205    				@ 127/127/127/116/112	
+	voice_directsound 60, 120, DirectSoundWaveData_hg_136tom, 255, 0, 255, 205    				@ 127/127/127/116/120	
