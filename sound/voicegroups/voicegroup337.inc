@@ -2,7 +2,7 @@
 voicegroup337:: @ B2W2 Drum Set 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 64, DirectSoundWaveData_bw_171snare909, 255, 0, 227, 205    			@ 127/127/120/116/ 64	
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -48,11 +48,11 @@ voicegroup337:: @ B2W2 Drum Set 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 80, DirectSoundWaveData_hg_063ohh, 255, 241, 0, 205					@ 127/102/  0/116/ 80
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 64, DirectSoundWaveData_hg_033orccym, 255, 250, 0, 214				@ 127/ 70/  0/114/ 64
 	voice_directsound 60, 64, DirectSoundWaveData_hg_032crash, 255, 246, 0, 214					@ 127/ 90/  0/114/ 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 62, 64, DirectSoundWaveData_hg_032crash, 255, 246, 0, 214					@ 127/ 90/  0/114/ 64	+ 2
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 20, DirectSoundWaveData_hg_022china, 255, 248, 0, 224					@ 127/ 80/  0/110/ 20	
 	voice_directsound 60, 30, DirectSoundWaveData_dp_ridecap, 255, 251, 0, 210					@ 127/ 60/  0/115/ 30
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 84, DirectSoundWaveData_bw_179splash, 255, 250, 0, 205    			@ 127/ 70/  0/116/ 84
@@ -60,7 +60,7 @@ voicegroup337:: @ B2W2 Drum Set 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 80, DirectSoundWaveData_hg_032crash, 255, 246, 0, 214					@ 127/ 90/  0/114/ 80
 	voice_directsound 60, 64, DirectSoundWaveData_bw_118conga, 255, 0, 255, 205    				@ 127/127/127/116/ 64
 	voice_directsound 60, 20, DirectSoundWaveData_bw_118conga, 255, 0, 255, 205    				@ 127/127/127/116/ 20
 	voice_directsound 60, 64, DirectSoundWaveData_dp_060conga, 255, 0, 227, 205    				@ 127/127/120/116/ 64

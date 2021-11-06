@@ -1164,6 +1164,8 @@
 #define B2_SEQ_BGM_WBT_GROUND         1137 // The PWT
 #define B2_SEQ_BGM_VS_RG_LEADER       1138 // Battle! (Gym Leader - Kanto Version)
 #define B2_SEQ_BGM_VS_RG_CHAMP        1139 // Battle! (Champion - Kanto Version)        (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_VS_GS_LEADER       1140 // Battle! (Gym Leader - Johto Version)
+#define B2_SEQ_BGM_VS_GS_CHAMP        1141 // Battle! (Champion - Johto Version)
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().

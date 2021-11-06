@@ -117,3 +117,6 @@ voicegroup334:: @ B2W2 Sato
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_joinavenue, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_beauty, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_driftveilgym, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_pwtjohtoleader, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_pwtjohtochamp, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_pwtjohtochamp_phaser, 255, 0, 255, 0

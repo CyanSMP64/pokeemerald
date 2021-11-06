@@ -4735,6 +4735,18 @@ DirectSoundWaveData_b2_drumloop_driftveilgym::
 	.incbin "sound/direct_sound_samples/b2_drumloop_driftveilgym.bin"
 
 	.align 2
+DirectSoundWaveData_b2_drumloop_pwtjohtoleader::
+	.incbin "sound/direct_sound_samples/b2_drumloop_pwtjohtoleader.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_pwtjohtochamp::
+	.incbin "sound/direct_sound_samples/b2_drumloop_pwtjohtochamp.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_pwtjohtochamp_phaser::
+	.incbin "sound/direct_sound_samples/b2_drumloop_pwtjohtochamp_phaser.bin"
+
+	.align 2
 DirectSoundWaveData_b2_pwtdrumsl1::
 	.incbin "sound/direct_sound_samples/b2_pwtdrumsl1.bin"
 

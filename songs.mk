@@ -3065,3 +3065,9 @@ $(MID_SUBDIR)/b2_seq_bgm_vs_rg_leader.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_vs_rg_champ.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V111
+
+$(MID_SUBDIR)/b2_seq_bgm_vs_gs_leader.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V113
+
+$(MID_SUBDIR)/b2_seq_bgm_vs_gs_champ.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V110

@@ -1827,6 +1827,8 @@ SECTIONS {
         sound/songs/midi/b2_seq_bgm_wbt_ground.o(.rodata);
         sound/songs/midi/b2_seq_bgm_vs_rg_leader.o(.rodata);
         sound/songs/midi/b2_seq_bgm_vs_rg_champ.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_vs_gs_leader.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_vs_gs_champ.o(.rodata);
     } =0
 
     lib_rodata :
