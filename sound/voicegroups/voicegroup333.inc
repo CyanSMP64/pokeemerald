@@ -2,7 +2,7 @@
 voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup323, KeySplitTable116   @ piano
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup237, KeySplitTable83    @ rhodes 2 (hgss)
 	voice_directsound 60, 0, DirectSoundWaveData_bw_063rhodc5, 255, 250, 0, 210
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup234, KeySplitTable36    @ piano 2
@@ -51,7 +51,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup328, KeySplitTable65    @ flute 1
 	voice_directsound 60, 0, DirectSoundWaveData_hg_096flt1c6, 255, 246, 159, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup349, KeySplitTable76    @ synth lead (humilau)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder

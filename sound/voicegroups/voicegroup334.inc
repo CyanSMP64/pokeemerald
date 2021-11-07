@@ -1,7 +1,7 @@
 	.align 2
 voicegroup334:: @ B2W2 Sato
 	voice_keysplit voicegroup323, KeySplitTable116   @ piano (missing C4)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup237, KeySplitTable9     @ rhodes 2 (hgss)
 	voice_keysplit voicegroup235, KeySplitTable91    @ piano octave
 	voice_keysplit voicegroup294, KeySplitTable36    @ rhodes
 	voice_keysplit voicegroup345, KeySplitTable36    @ rhodes (short release)
@@ -21,7 +21,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit voicegroup245, KeySplitTable71    @ jazz organ
 	voice_keysplit voicegroup291, KeySplitTable71    @ accordion
 	voice_keysplit voicegroup292, KeySplitTable72    @ nylon str. guitar
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup250, KeySplitTable32    @ distortion guitar 2 (hgss)
 	voice_directsound 60, 0, DirectSoundWaveData_bw_168slapbc2, 255, 197, 227, 171
 	voice_keysplit voicegroup342, KeySplitTable41    @ jazz guitar
 	voice_keysplit voicegroup316, KeySplitTable41    @ clean guitar
@@ -41,17 +41,17 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit voicegroup260, KeySplitTable61    @ timpani
 	voice_keysplit voicegroup261, KeySplitTable39    @ trumpets
 	voice_keysplit voicegroup262, KeySplitTable47    @ trombones
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup264, KeySplitTable50    @ french horns (hgss)
 	voice_keysplit voicegroup327, KeySplitTable41    @ french horns
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup266, KeySplitTable52    @ clarinet
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup267, KeySplitTable53    @ flute 1 (hgss)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup328, KeySplitTable65    @ flute 1
 	voice_keysplit voicegroup268, KeySplitTable54    @ bassoon
 	voice_keysplit voicegroup314, KeySplitTable71    @ alto sax
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_wind, 67, 243, 155, 224
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
@@ -82,7 +82,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_directsound 60, 0, DirectSoundWaveData_b2_cowbellsloop, 255, 0, 255, 0
 	voice_keysplit_all voicegroup337				 @ drum set 2
 	voice_keysplit_all voicegroup336				 @ drum set 1
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit_all voicegroup338				 @ drum set 3 (addictive drums)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
@@ -96,7 +96,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup347, KeySplitTable123   @ square lead
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sawtoothlead60, 255, 197, 255, 171
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_doublsawc5, 255, 197, 255, 171
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 242, 25, 0

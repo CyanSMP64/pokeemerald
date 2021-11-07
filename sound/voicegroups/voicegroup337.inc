@@ -3,13 +3,13 @@ voicegroup337:: @ B2W2 Drum Set 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 64, DirectSoundWaveData_bw_171snare909, 255, 0, 227, 205    			@ 127/127/120/116/ 64	
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 59, 64, DirectSoundWaveData_hg_032crash, 255, 242, 0, 214					@ 127/100/  0/114/ 64	- 1
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 90, DirectSoundWaveData_b2_chh_colress, 255, 78, 0, 205				@ 127/124/  0/116/ 90
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_pwthoennleader1, 255, 0, 255, 0	@ 127/127/127/127/ 64
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_pwthoennleader2, 255, 0, 255, 0	@ 127/127/127/127/ 64
+	voice_directsound 60, 36, DirectSoundWaveData_hg_032crash, 255, 248, 0, 214					@ 127/ 80/  0/114/ 36
 	voice_directsound 60, 90, DirectSoundWaveData_b2_ohh_colress, 255, 241, 227, 205			@ 127/102/  0/116/ 90
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -18,7 +18,7 @@ voicegroup337:: @ B2W2 Drum Set 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 80, DirectSoundWaveData_hg_062chh, 255, 242, 0, 171					@ 127/100/  0/120/ 80
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0

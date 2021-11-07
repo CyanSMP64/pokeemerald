@@ -4747,6 +4747,14 @@ DirectSoundWaveData_b2_drumloop_pwtjohtochamp_phaser::
 	.incbin "sound/direct_sound_samples/b2_drumloop_pwtjohtochamp_phaser.bin"
 
 	.align 2
+DirectSoundWaveData_b2_drumloop_pwthoennleader1::
+	.incbin "sound/direct_sound_samples/b2_drumloop_pwthoennleader1.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_pwthoennleader2::
+	.incbin "sound/direct_sound_samples/b2_drumloop_pwthoennleader2.bin"
+
+	.align 2
 DirectSoundWaveData_b2_pwtdrumsl1::
 	.incbin "sound/direct_sound_samples/b2_pwtdrumsl1.bin"
 
@@ -5305,3 +5313,19 @@ DirectSoundWaveData_b2_ohh_pwt::
 	.align 2
 DirectSoundWaveData_b2_synthsnare_pwt::
 	.incbin "sound/direct_sound_samples/b2_synthsnare_pwt.bin"
+
+	.align 2
+DirectSoundWaveData_b2_synthleadd4_humilau::
+	.incbin "sound/direct_sound_samples/b2_synthleadd4_humilau.bin"
+
+	.align 2
+DirectSoundWaveData_b2_synthleadd5_humilau::
+	.incbin "sound/direct_sound_samples/b2_synthleadd5_humilau.bin"
+
+	.align 2
+DirectSoundWaveData_b2_synthleadd6_humilau::
+	.incbin "sound/direct_sound_samples/b2_synthleadd6_humilau.bin"
+
+	.align 2
+DirectSoundWaveData_b2_doublsawc5::
+	.incbin "sound/direct_sound_samples/b2_doublsawc5.bin"
