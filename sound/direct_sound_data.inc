@@ -4823,6 +4823,38 @@ DirectSoundWaveData_b2_pwtdrumsr8::
 	.incbin "sound/direct_sound_samples/b2_pwtdrumsr8.bin"
 
 	.align 2
+DirectSoundWaveData_b2_drumloop_pwthoennchamp1::
+	.incbin "sound/direct_sound_samples/b2_drumloop_pwthoennchamp1.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_pwthoennchamp2::
+	.incbin "sound/direct_sound_samples/b2_drumloop_pwthoennchamp2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_pwthoennchamp3::
+	.incbin "sound/direct_sound_samples/b2_drumloop_pwthoennchamp3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_pwthoennchamp4::
+	.incbin "sound/direct_sound_samples/b2_drumloop_pwthoennchamp4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_pwthoennchamp5::
+	.incbin "sound/direct_sound_samples/b2_drumloop_pwthoennchamp5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_pwthoennchamp6::
+	.incbin "sound/direct_sound_samples/b2_drumloop_pwthoennchamp6.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_pwthoennchamp7::
+	.incbin "sound/direct_sound_samples/b2_drumloop_pwthoennchamp7.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_pwthoennchamp8::
+	.incbin "sound/direct_sound_samples/b2_drumloop_pwthoennchamp8.bin"
+
+	.align 2
 DirectSoundWaveData_b2_woodblockhi::
 	.incbin "sound/direct_sound_samples/b2_woodblockhi.bin"
 
@@ -5329,3 +5361,7 @@ DirectSoundWaveData_b2_synthleadd6_humilau::
 	.align 2
 DirectSoundWaveData_b2_doublsawc5::
 	.incbin "sound/direct_sound_samples/b2_doublsawc5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_guitarfeedbackcs5::
+	.incbin "sound/direct_sound_samples/b2_guitarfeedbackcs5.bin"

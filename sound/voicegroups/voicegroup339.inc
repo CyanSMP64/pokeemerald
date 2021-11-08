@@ -71,3 +71,11 @@ voicegroup339:: @ virbank gym vocals
 	voice_directsound 60, 122, DirectSoundWaveData_b2_pwtdrumsr6, 255, 0, 255, 0				@ 127/127/127/126/122	
 	voice_directsound 60, 122, DirectSoundWaveData_b2_pwtdrumsr7, 255, 0, 255, 0				@ 127/127/127/126/122	
 	voice_directsound 60, 122, DirectSoundWaveData_b2_pwtdrumsr8, 255, 0, 255, 0				@ 127/127/127/126/122	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_pwthoennchamp1, 255, 0, 255, 0	@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_pwthoennchamp2, 255, 0, 255, 0	@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_pwthoennchamp3, 255, 0, 255, 0	@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_pwthoennchamp4, 255, 0, 255, 0	@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_pwthoennchamp5, 255, 0, 255, 0	@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_pwthoennchamp6, 255, 0, 255, 0	@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_pwthoennchamp7, 255, 0, 255, 0	@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_pwthoennchamp8, 255, 0, 255, 0	@ 127/127/127/127/ 64	

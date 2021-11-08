@@ -94,7 +94,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup340, KeySplitTable118   @ pink strat
 	voice_keysplit voicegroup340, KeySplitTable119   @ pink strat | 42 | 54 | 68
 	voice_keysplit voicegroup340, KeySplitTable125   @ pink strat | 42 | 54
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_guitarfeedbackcs5, 255, 197, 255, 2
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sawtoothlead60, 255, 197, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_reversecymbale2, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_bw_reversecymbale2, 255, 0, 255, 236
