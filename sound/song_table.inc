@@ -1145,6 +1145,8 @@ gSongTable::
 	song b2_seq_bgm_vs_gs_champ, 0, 0
 	song b2_seq_bgm_vs_rs_leader, 0, 0
 	song b2_seq_bgm_vs_rs_champ, 0, 0
+	song b2_seq_bgm_vs_dp_leader, 0, 0
+	song b2_seq_bgm_vs_dp_champ, 0, 0
 
 	.align 2
 dummy_song_header:

@@ -4,12 +4,12 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup237, KeySplitTable83    @ rhodes 2 (hgss)
 	voice_directsound 60, 0, DirectSoundWaveData_bw_063rhodc5, 255, 250, 0, 210
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_bw_063rhodc5, 255, 250, 0, 1
 	voice_keysplit voicegroup234, KeySplitTable36    @ piano 2
 	voice_keysplit voicegroup341, KeySplitTable120   @ piano 3
 	voice_keysplit voicegroup332, KeySplitTable114   @ piano (longer decay)
 	voice_keysplit voicegroup323, KeySplitTable93    @ piano | 41 | 46 | 53 | 58 | 65
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_dp_el_pia2_c4_22, 255, 248, 0, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup240, KeySplitTable115   @ xylophone || 74
@@ -18,7 +18,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_bw_074glocknc5, 255, 249, 0, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup244, KeySplitTable71    @ drawbar organ
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup206, KeySplitTable17    @ straight organ
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup292, KeySplitTable72    @ nylon str. guitar
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
@@ -50,11 +50,11 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_bw_064flt2a5, 255, 246, 159, 205
 	voice_keysplit voicegroup328, KeySplitTable65    @ flute 1
 	voice_directsound 60, 0, DirectSoundWaveData_hg_096flt1c6, 255, 246, 159, 205
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup223, KeySplitTable9     @ french horns
 	voice_keysplit voicegroup349, KeySplitTable76    @ synth lead (humilau)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass1_c2_16, 255, 1, 255, 192
+	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass2_c1_16, 255, 0, 255, 220
+	voice_keysplit voicegroup220, KeySplitTable30    @ trombone
 	voice_directsound 60, 0, DirectSoundWaveData_bw_orchhitas2_leader, 255, 248, 0, 205
 	voice_keysplit voicegroup289, KeySplitTable39    @ trumpets (short start)
 	voice_directsound 60, 0, DirectSoundWaveData_hg_059harpc4, 255, 246, 0, 205
@@ -62,7 +62,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup312, KeySplitTable87    @ timpani (ghetsis)
 	voice_keysplit voicegroup327, KeySplitTable68    @ french horns ||| 69
 	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitmajor60, 255, 0, 255, 205
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitminor60, 255, 0, 255, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_directsound 60, 0, DirectSoundWaveData_bw_sawleadc4_vsleader, 255, 242, 191, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
@@ -81,15 +81,15 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar2, 255, 197, 159, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar3, 255, 197, 159, 192
 	voice_keysplit_all voicegroup336				 @ drum set 1
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit_all voicegroup337				 @ drum set 2
 	voice_keysplit_all voicegroup338				 @ drum set 3 (addictive drums)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_directsound 60, 0, DirectSoundWaveData_bw_solotrumpetc5, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_trombonesstaccatocs2, 255, 1, 227, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_spiccatostringse2, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_b2_trumpetsstaccatogs4_loop, 255, 0, 255, 224
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup216, KeySplitTable27    @ timpani 1
+	voice_keysplit voicegroup218, KeySplitTable27    @ timpani 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup340, KeySplitTable118   @ pink strat
 	voice_keysplit voicegroup340, KeySplitTable119   @ pink strat | 42 | 54 | 68
@@ -118,3 +118,6 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_directsound 60, 0, DirectSoundWaveData_b2_virbankgym_female1_sing, 255, 0, 252, 1
+	voice_directsound 60, 0, DirectSoundWaveData_dp_tenorchoir48, 255, 200, 255, 171
+	voice_directsound 60, 0, DirectSoundWaveData_dp_sopranochoir60, 255, 200, 255, 171
+	voice_directsound 60, 0, DirectSoundWaveData_dp_whistle_c5_16, 255, 247, 78, 196

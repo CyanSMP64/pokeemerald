@@ -1,11 +1,11 @@
 	.align 2
 voicegroup337:: @ B2W2 Drum Set 2
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 64, DirectSoundWaveData_b2_synthkick, 255, 0, 227, 171    			@ 127/127/120/120/ 64	
+	voice_directsound 61, 64, DirectSoundWaveData_b2_synthkick, 255, 0, 227, 171    			@ 127/127/120/120/ 64	+ 1
 	voice_directsound 60, 64, DirectSoundWaveData_bw_171snare909, 255, 0, 227, 205    			@ 127/127/120/116/ 64	
 	voice_directsound 59, 64, DirectSoundWaveData_hg_032crash, 255, 242, 0, 214					@ 127/100/  0/114/ 64	- 1
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 110, DirectSoundWaveData_dp_closed_hihat_16, 255, 0, 227, 1			@ 127/127/120/125/110
+	voice_directsound 60, 110, DirectSoundWaveData_dp_open_hihat_16, 255, 241, 0, 0				@ 127/102/  0/127/110
 	voice_directsound 60, 90, DirectSoundWaveData_b2_chh_colress, 255, 78, 0, 205				@ 127/124/  0/116/ 90
 	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_pwthoennleader1, 255, 0, 255, 0	@ 127/127/127/127/ 64
 	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_pwthoennleader2, 255, 0, 255, 0	@ 127/127/127/127/ 64
@@ -13,16 +13,16 @@ voicegroup337:: @ B2W2 Drum Set 2
 	voice_directsound 60, 90, DirectSoundWaveData_b2_ohh_colress, 255, 241, 227, 205			@ 127/102/  0/116/ 90
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 57, 64, DirectSoundWaveData_dp_cymbal1_16, 255, 246, 0, 214				@ 127/ 90/  0/114/ 64	- 3
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 59, 20, DirectSoundWaveData_dp_china_cynbal, 255, 250, 0, 226				@ 127/ 70/  0/110/ 20	- 1
+	voice_directsound 60, 64, DirectSoundWaveData_dp_synthsnare, 255, 0, 255, 0					@ 127/127/127/127/ 64
 	voice_directsound 60, 80, DirectSoundWaveData_hg_062chh, 255, 242, 0, 171					@ 127/100/  0/120/ 80
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 62, 20, DirectSoundWaveData_dp_china_cynbal, 255, 250, 0, 226				@ 127/ 70/  0/110/ 20	+ 2
+	voice_directsound 63, 20, DirectSoundWaveData_dp_china_cynbal, 255, 250, 0, 226				@ 127/ 70/  0/110/ 20	+ 3
+	voice_directsound 60, 36, DirectSoundWaveData_dp_cymbal1_16, 255, 250, 0, 216				@ 127/ 70/  0/114/ 36
+	voice_directsound 61, 102, DirectSoundWaveData_dp_cymbal1_16, 255, 250, 0, 216				@ 127/ 70/  0/114/102	+ 1
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 64, DirectSoundWaveData_b2_synthkick, 255, 0, 227, 205    			@ 127/127/120/116/ 64	
 	voice_directsound 61, 64, DirectSoundWaveData_b2_synthkick, 255, 0, 227, 205    			@ 127/127/120/116/ 64	+ 1
@@ -43,7 +43,7 @@ voicegroup337:: @ B2W2 Drum Set 2
 	voice_directsound 60, 64, DirectSoundWaveData_dp_093snare, 255, 226, 127, 205    			@ 127/114/ 90/116/ 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 80, DirectSoundWaveData_hg_062chh, 255, 78, 0, 205					@ 127/124/  0/116/ 80
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 61, 64, DirectSoundWaveData_dp_093snare, 255, 226, 127, 205    			@ 127/114/ 90/116/ 64	+ 1
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 80, DirectSoundWaveData_hg_063ohh, 255, 241, 0, 205					@ 127/102/  0/116/ 80

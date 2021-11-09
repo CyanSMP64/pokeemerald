@@ -8,7 +8,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit voicegroup234, KeySplitTable36    @ piano 2
 	voice_keysplit voicegroup290, KeySplitTable70    @ harpsichord
 	voice_keysplit voicegroup323, KeySplitTable59    @ piano (all splits)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_dp_glocken_c6_16, 255, 247, 0, 208
 	voice_keysplit voicegroup297, KeySplitTable124   @ vibraphone || 80
 	voice_keysplit voicegroup297, KeySplitTable76    @ vibraphone
 	voice_keysplit voicegroup295, KeySplitTable74    @ marimba
@@ -75,7 +75,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_directsound 60, 0, DirectSoundWaveData_b2_ahh, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_casteliagymvox1, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_casteliagymvox2, 255, 0, 255, 1
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup330, KeySplitTable108   @ sitar
 	voice_directsound 60, 0, DirectSoundWaveData_bw_steeldrumg4_undella, 255, 251, 0, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_bassdrum_ranch, 255, 239, 0, 232
 	voice_directsound 60, 0, DirectSoundWaveData_b2_cowbells, 255, 0, 255, 0
@@ -85,9 +85,9 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit_all voicegroup338				 @ drum set 3 (addictive drums)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_bw_trombonesstaccatocs2, 255, 1, 227, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_spiccatostringse2, 255, 0, 255, 171
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_trumpetsstaccatogs4_loop, 255, 0, 255, 224
 	voice_directsound 60, 0, DirectSoundWaveData_hg_021cellog2, 254, 242, 255, 205
 	voice_keysplit voicegroup343, KeySplitTable65    @ pan flute
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
@@ -97,7 +97,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit voicegroup347, KeySplitTable123   @ square lead
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sawtoothlead60, 255, 197, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_b2_doublsawc5, 255, 197, 255, 171
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup350, KeySplitTable123   @ dj handy
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 242, 25, 0
 	voice_square_2 60, 0, 2, 0, 7, 2, 0
@@ -120,3 +120,4 @@ voicegroup334:: @ B2W2 Sato
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_pwtjohtoleader, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_pwtjohtochamp, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_pwtjohtochamp_phaser, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_pwtsinnohleader, 255, 0, 255, 0

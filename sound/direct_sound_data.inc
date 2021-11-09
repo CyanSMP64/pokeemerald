@@ -4755,6 +4755,10 @@ DirectSoundWaveData_b2_drumloop_pwthoennleader2::
 	.incbin "sound/direct_sound_samples/b2_drumloop_pwthoennleader2.bin"
 
 	.align 2
+DirectSoundWaveData_b2_drumloop_pwtsinnohleader::
+	.incbin "sound/direct_sound_samples/b2_drumloop_pwtsinnohleader.bin"
+
+	.align 2
 DirectSoundWaveData_b2_pwtdrumsl1::
 	.incbin "sound/direct_sound_samples/b2_pwtdrumsl1.bin"
 
@@ -5365,3 +5369,27 @@ DirectSoundWaveData_b2_doublsawc5::
 	.align 2
 DirectSoundWaveData_b2_guitarfeedbackcs5::
 	.incbin "sound/direct_sound_samples/b2_guitarfeedbackcs5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_synthkick_pwtsinnohleader::
+	.incbin "sound/direct_sound_samples/b2_synthkick_pwtsinnohleader.bin"
+
+	.align 2
+DirectSoundWaveData_b2_djhandyd2::
+	.incbin "sound/direct_sound_samples/b2_djhandyd2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_djhandyd3::
+	.incbin "sound/direct_sound_samples/b2_djhandyd3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_djhandyd4::
+	.incbin "sound/direct_sound_samples/b2_djhandyd4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_djhandyd5::
+	.incbin "sound/direct_sound_samples/b2_djhandyd5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_djhandyd6::
+	.incbin "sound/direct_sound_samples/b2_djhandyd6.bin"
