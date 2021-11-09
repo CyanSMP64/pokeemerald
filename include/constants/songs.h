@@ -1170,6 +1170,7 @@
 #define B2_SEQ_BGM_VS_RS_CHAMP        1143 // Battle! (Champion - Hoenn Version)        (TODO: PORTAMENTO!!)
 #define B2_SEQ_BGM_VS_DP_LEADER       1144 // Battle! (Gym Leader - Sinnoh Version)
 #define B2_SEQ_BGM_VS_DP_CHAMP        1145 // Battle! (Champion - Sinnoh Version)
+#define B2_SEQ_BGM_VS_WBT             1146 // PWT Final Round!
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
