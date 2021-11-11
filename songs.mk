@@ -3086,3 +3086,15 @@ $(MID_SUBDIR)/b2_seq_bgm_vs_dp_champ.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_vs_wbt.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V090
+
+$(MID_SUBDIR)/b2_seq_bgm_win_wbt.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V127
+
+$(MID_SUBDIR)/b2_seq_bgm_wbt_fanfare.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V094
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_d_regi.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V080
+
+$(MID_SUBDIR)/b2_seq_bgm_vs_regi.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V100

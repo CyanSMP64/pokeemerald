@@ -18,7 +18,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_bw_074glocknc5, 255, 249, 0, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup244, KeySplitTable71    @ drawbar organ
-	voice_keysplit voicegroup206, KeySplitTable17    @ straight organ
+	voice_keysplit voicegroup206, KeySplitTable17    @ straight organ (DPPt)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup292, KeySplitTable72    @ nylon str. guitar
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
@@ -50,11 +50,11 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_bw_064flt2a5, 255, 246, 159, 205
 	voice_keysplit voicegroup328, KeySplitTable65    @ flute 1
 	voice_directsound 60, 0, DirectSoundWaveData_hg_096flt1c6, 255, 246, 159, 205
-	voice_keysplit voicegroup223, KeySplitTable9     @ french horns
+	voice_keysplit voicegroup223, KeySplitTable9     @ french horns (DPPt)
 	voice_keysplit voicegroup349, KeySplitTable76    @ synth lead (humilau)
 	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass1_c2_16, 255, 1, 255, 192
 	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass2_c1_16, 255, 0, 255, 220
-	voice_keysplit voicegroup220, KeySplitTable30    @ trombone
+	voice_keysplit voicegroup220, KeySplitTable30    @ trombone (DPPt)
 	voice_directsound 60, 0, DirectSoundWaveData_bw_orchhitas2_leader, 255, 248, 0, 205
 	voice_keysplit voicegroup289, KeySplitTable39    @ trumpets (short start)
 	voice_directsound 60, 0, DirectSoundWaveData_hg_059harpc4, 255, 246, 0, 205
@@ -88,8 +88,8 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_bw_trombonesstaccatocs2, 255, 1, 227, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_spiccatostringse2, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_b2_trumpetsstaccatogs4_loop, 255, 0, 255, 224
-	voice_keysplit voicegroup216, KeySplitTable27    @ timpani 1
-	voice_keysplit voicegroup218, KeySplitTable27    @ timpani 2
+	voice_keysplit voicegroup216, KeySplitTable27    @ timpani 1 (DPPt)
+	voice_keysplit voicegroup218, KeySplitTable27    @ timpani 2 (DPPt)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup340, KeySplitTable118   @ pink strat
 	voice_keysplit voicegroup340, KeySplitTable119   @ pink strat | 42 | 54 | 68
@@ -100,15 +100,15 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_bw_reversecymbale2, 255, 0, 255, 236
 	voice_directsound 60, 0, DirectSoundWaveData_b2_electricityspark, 255, 0, 255, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_2 60, 0, 2, 0, 7, 2, 0
+	voice_square_1 60, 0, 0, 2, 0, 7, 2, 0
 	voice_square_2 60, 0, 1, 0, 3, 10, 3
 	voice_programmable_wave 60, 0, ProgrammableWaveData_sq50half, 0, 3, 10, 3 
 	voice_square_2 60, 0, 2, 0, 3, 10, 3
 	voice_square_1 60, 0, 0, 2, 0, 3, 10, 3
 	voice_square_1 60, 0, 0, 1, 0, 3, 10, 3
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_2 60, 0, 0, 0, 7, 2, 0
+	voice_square_1 60, 0, 0, 0, 0, 7, 2, 0
 	voice_keysplit_all voicegroup339				 @ various vocal chops and other samples
 	voice_directsound 60, 0, DirectSoundWaveData_b2_nimbasagymsynthe1, 255, 242, 227, 214
 	voice_directsound 60, 0, DirectSoundWaveData_b2_nimbasagymsynthe4, 255, 242, 227, 205
@@ -121,3 +121,10 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_dp_tenorchoir48, 255, 200, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sopranochoir60, 255, 200, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_dp_whistle_c5_16, 255, 247, 78, 196
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder

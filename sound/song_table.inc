@@ -271,6 +271,7 @@ gSongTable::
 	song se_pike_curtain_close, 1, 1
 	song se_pike_curtain_open, 1, 1
 	song se_sudowoodo_shake, 1, 1
+	song mus_dummy, 0, 0		@ supposed placeholder for relic song in rhh expansion
 	song ph_trap_blend, 2, 2
 	song ph_trap_held, 2, 2
 	song ph_trap_solo, 2, 2
@@ -1148,6 +1149,10 @@ gSongTable::
 	song b2_seq_bgm_vs_dp_leader, 0, 0
 	song b2_seq_bgm_vs_dp_champ, 0, 0
 	song b2_seq_bgm_vs_wbt, 0, 0
+	song b2_seq_bgm_win_wbt, 0, 0
+	song b2_seq_bgm_wbt_fanfare, 0, 0
+	song b2_seq_bgm_sw_d_regi, 0, 0
+	song b2_seq_bgm_vs_regi, 0, 0
 
 	.align 2
 dummy_song_header:
