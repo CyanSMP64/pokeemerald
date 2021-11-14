@@ -9,7 +9,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup341, KeySplitTable120   @ piano 3
 	voice_keysplit voicegroup332, KeySplitTable114   @ piano (longer decay)
 	voice_keysplit voicegroup323, KeySplitTable93    @ piano | 41 | 46 | 53 | 58 | 65
-	voice_directsound 60, 0, DirectSoundWaveData_dp_el_pia2_c4_22, 255, 248, 0, 205
+	voice_keysplit voicegroup198, KeySplitTable9     @ mellow ep (DPPt)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup240, KeySplitTable115   @ xylophone || 74
@@ -25,7 +25,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_b2_pinkstrate3, 255, 253, 0, 171
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup316, KeySplitTable41    @ clean guitar
-	voice_directsound 60, 0, DirectSoundWaveData_hg_001uprigc3, 255, 251, 0, 192
+	voice_keysplit voicegroup252, KeySplitTable42    @ upright bass
 	voice_directsound 60, 0, DirectSoundWaveData_b2_synthbassd2, 255, 251, 0, 205
 	voice_keysplit voicegroup311, KeySplitTable101   @ fretless bass | 34
 	voice_keysplit voicegroup309, KeySplitTable117   @ slap bass | 47 |
@@ -46,10 +46,10 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup305, KeySplitTable44    @ tuba
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup266, KeySplitTable52    @ clarinet
-	voice_directsound 60, 0, DirectSoundWaveData_dp_timpany_as_16, 255, 248, 0, 205
+	voice_keysplit voicegroup216, KeySplitTable27    @ timpani 1 (DPPt)
 	voice_directsound 60, 0, DirectSoundWaveData_bw_064flt2a5, 255, 246, 159, 205
 	voice_keysplit voicegroup328, KeySplitTable65    @ flute 1
-	voice_directsound 60, 0, DirectSoundWaveData_hg_096flt1c6, 255, 246, 159, 205
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup223, KeySplitTable9     @ french horns (DPPt)
 	voice_keysplit voicegroup349, KeySplitTable76    @ synth lead (humilau)
 	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass1_c2_16, 255, 1, 255, 192
@@ -88,8 +88,8 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_bw_trombonesstaccatocs2, 255, 1, 227, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_spiccatostringse2, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_b2_trumpetsstaccatogs4_loop, 255, 0, 255, 224
-	voice_keysplit voicegroup216, KeySplitTable27    @ timpani 1 (DPPt)
-	voice_keysplit voicegroup218, KeySplitTable27    @ timpani 2 (DPPt)
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup340, KeySplitTable118   @ pink strat
 	voice_keysplit voicegroup340, KeySplitTable119   @ pink strat | 42 | 54 | 68
@@ -128,3 +128,40 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+
+
+
+@ instruments still needed
+
+@ vibraphone (strange house)
+@ squeak wood (strange house)
+@ grandfather clock (strange house)
+@ torture chamber (strange house)
+@ heartbeat creak (strange house)
+@ tombstone (strange house)
+@ dppt strings (sinnoh legendary, cave of being, lake trio)
+@ dppt trumpets (sinnoh legendary, cave of being, lake trio)
+@ slap bass g2 (team neo plasma encounter)
+@ hard sync solo (team neo plasma encounter)
+@ "yee" (team neo plasma encounter, vs team neo plasma)
+@ about to sneeze (vs team neo plasma)
+@ 27a-bse01b synth bass (vs team neo plasma)
+@ full organ slow c4 (vs team neo plasma)
+@ synth pad (marine tube)
+@ choir (marine tube, vs n)
+@ slap bass (marine tube)
+@ chimes metal china (marine tube)
+@ adrian's filter bank (marine tube)
+@ orch chimes (humilau)
+@ oboe (infiltrating the plasma frigate, vs kyurem)
+@ french horn rips (infiltrating the plasma frigate, vs kyurem)
+@ aggresitronic beamz (vs colress)
+@ asian supremacy (vs colress)
+@ drum loop (vs colress)
+@ 54321 count down (vs colress)
+@ strings big chord (vs kyurem)
+@ gong (vs kyurem)
+@ power chord (vs n)
+@ low guitar chug (vs n)
+@ accordion (cave of being)
+@ soprano sax (cave of being)
