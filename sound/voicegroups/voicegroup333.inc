@@ -9,7 +9,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup341, KeySplitTable120   @ piano 3
 	voice_keysplit voicegroup332, KeySplitTable114   @ piano (longer decay)
 	voice_keysplit voicegroup323, KeySplitTable93    @ piano | 41 | 46 | 53 | 58 | 65
-	voice_keysplit voicegroup198, KeySplitTable9     @ mellow ep (DPPt)
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup240, KeySplitTable115   @ xylophone || 74
@@ -18,7 +18,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_bw_074glocknc5, 255, 249, 0, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup244, KeySplitTable71    @ drawbar organ
-	voice_keysplit voicegroup206, KeySplitTable17    @ straight organ (DPPt)
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup292, KeySplitTable72    @ nylon str. guitar
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
@@ -46,14 +46,14 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup305, KeySplitTable44    @ tuba
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup266, KeySplitTable52    @ clarinet
-	voice_keysplit voicegroup216, KeySplitTable27    @ timpani 1 (DPPt)
+	voice_directsound 60, 0, DirectSoundWaveData_dp_timpany_as_16, 255, 248, 0, 205
 	voice_directsound 60, 0, DirectSoundWaveData_bw_064flt2a5, 255, 246, 159, 205
 	voice_keysplit voicegroup328, KeySplitTable65    @ flute 1
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_keysplit voicegroup223, KeySplitTable9     @ french horns (DPPt)
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup349, KeySplitTable76    @ synth lead (humilau)
-	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass1_c2_16, 255, 1, 255, 192
-	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass2_c1_16, 255, 0, 255, 220
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup220, KeySplitTable30    @ trombone (DPPt)
 	voice_directsound 60, 0, DirectSoundWaveData_bw_orchhitas2_leader, 255, 248, 0, 205
 	voice_keysplit voicegroup289, KeySplitTable39    @ trumpets (short start)
@@ -118,9 +118,9 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_directsound 60, 0, DirectSoundWaveData_b2_virbankgym_female1_sing, 255, 0, 252, 1
-	voice_directsound 60, 0, DirectSoundWaveData_dp_tenorchoir48, 255, 200, 255, 171
-	voice_directsound 60, 0, DirectSoundWaveData_dp_sopranochoir60, 255, 200, 255, 171
-	voice_directsound 60, 0, DirectSoundWaveData_dp_whistle_c5_16, 255, 247, 78, 196
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
@@ -139,8 +139,6 @@ voicegroup333:: @ B2W2 Ichinose
 @ torture chamber (strange house)
 @ heartbeat creak (strange house)
 @ tombstone (strange house)
-@ dppt strings (sinnoh legendary, cave of being, lake trio)
-@ dppt trumpets (sinnoh legendary, cave of being, lake trio)
 @ slap bass g2 (team neo plasma encounter)
 @ hard sync solo (team neo plasma encounter)
 @ "yee" (team neo plasma encounter, vs team neo plasma)
@@ -163,5 +161,3 @@ voicegroup333:: @ B2W2 Ichinose
 @ gong (vs kyurem)
 @ power chord (vs n)
 @ low guitar chug (vs n)
-@ accordion (cave of being)
-@ soprano sax (cave of being)

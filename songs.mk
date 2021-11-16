@@ -2676,6 +2676,9 @@ $(MID_SUBDIR)/bw_seq_bgm_e_g_cis.s: %.s: %.mid
 $(MID_SUBDIR)/bw_seq_bgm_vs_g_cis.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G276 -V126
 
+$(MID_SUBDIR)/bw_seq_bgm_win4.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G277 -V083
+
 $(MID_SUBDIR)/bw_seq_bgm_e_last.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G274 -V111 -X
 
@@ -3082,7 +3085,7 @@ $(MID_SUBDIR)/b2_seq_bgm_vs_dp_leader.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V127
 
 $(MID_SUBDIR)/b2_seq_bgm_vs_dp_champ.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V090
+	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V090
 
 $(MID_SUBDIR)/b2_seq_bgm_vs_wbt.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V090
@@ -3098,3 +3101,18 @@ $(MID_SUBDIR)/b2_seq_bgm_sw_d_regi.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_vs_regi.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V100
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_d_27_f_ajito.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V092
+
+$(MID_SUBDIR)/b2_seq_bgm_e_7_sage.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V090
+
+$(MID_SUBDIR)/b2_seq_bgm_e_cheren.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V095
+
+$(MID_SUBDIR)/b2_seq_bgm_kemonomichi.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V127
+
+$(MID_SUBDIR)/b2_seq_bgm_flight_gym_01.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V122

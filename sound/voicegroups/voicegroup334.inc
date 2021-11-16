@@ -26,7 +26,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit voicegroup342, KeySplitTable41    @ jazz guitar
 	voice_keysplit voicegroup316, KeySplitTable41    @ clean guitar
 	voice_keysplit voicegroup252, KeySplitTable42    @ upright bass
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup253, KeySplitTable43    @ fingered bass
 	voice_keysplit voicegroup311, KeySplitTable86    @ fretless bass
 	voice_keysplit voicegroup309, KeySplitTable92    @ slap bass
 	voice_keysplit voicegroup254, KeySplitTable73    @ synth bass
@@ -69,7 +69,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_wind_grotto, 255, 197, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_areyouready, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_areyouready_high, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_ahh, 255, 0, 255, 0
@@ -121,3 +121,4 @@ voicegroup334:: @ B2W2 Sato
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_pwtjohtochamp, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_pwtjohtochamp_phaser, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_pwtsinnohleader, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_cheren, 255, 0, 255, 0

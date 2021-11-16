@@ -1012,6 +1012,7 @@ gSongTable::
 	song bw_seq_bgm_vs_n_2, 0, 0
 	song bw_seq_bgm_e_g_cis, 0, 0
 	song bw_seq_bgm_vs_g_cis, 0, 0
+	song bw_seq_bgm_win4, 0, 0
 	song bw_seq_bgm_e_last, 0, 0
 	song bw_seq_bgm_ending, 0, 0
 	song bw_seq_bgm_e_handsome, 0, 0
@@ -1153,6 +1154,11 @@ gSongTable::
 	song b2_seq_bgm_wbt_fanfare, 0, 0
 	song b2_seq_bgm_sw_d_regi, 0, 0
 	song b2_seq_bgm_vs_regi, 0, 0
+	song b2_seq_bgm_sw_d_27_f_ajito, 0, 0
+	song b2_seq_bgm_e_7_sage, 0, 0
+	song b2_seq_bgm_e_cheren, 0, 0
+	song b2_seq_bgm_kemonomichi, 0, 0
+	song b2_seq_bgm_flight_gym_01, 0, 0
 
 	.align 2
 dummy_song_header:

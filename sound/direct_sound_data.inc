@@ -4759,6 +4759,10 @@ DirectSoundWaveData_b2_drumloop_pwtsinnohleader::
 	.incbin "sound/direct_sound_samples/b2_drumloop_pwtsinnohleader.bin"
 
 	.align 2
+DirectSoundWaveData_b2_drumloop_cheren::
+	.incbin "sound/direct_sound_samples/b2_drumloop_cheren.bin"
+
+	.align 2
 DirectSoundWaveData_b2_pwtdrumsl1::
 	.incbin "sound/direct_sound_samples/b2_pwtdrumsl1.bin"
 
@@ -5393,3 +5397,7 @@ DirectSoundWaveData_b2_djhandyd5::
 	.align 2
 DirectSoundWaveData_b2_djhandyd6::
 	.incbin "sound/direct_sound_samples/b2_djhandyd6.bin"
+
+	.align 2
+DirectSoundWaveData_b2_wind_grotto::
+	.incbin "sound/direct_sound_samples/b2_wind_grotto.bin"
