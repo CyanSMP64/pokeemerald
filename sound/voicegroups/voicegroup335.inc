@@ -108,3 +108,15 @@ voicegroup335:: @ B2W2 Misc.
 	voice_keysplit voicegroup346, KeySplitTable122   @ cymbals
 	voice_directsound 60, 0, DirectSoundWaveData_b2_tani_celloc2, 255, 0, 255, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_tani_stringsc3marcato, 255, 0, 255, 205
+	voice_directsound 60, 0, DirectSoundWaveData_hg_021cellog2, 254, 242, 255, 205
+	voice_directsound 60, 0, DirectSoundWaveData_dp_timpany_e_16, 255, 251, 0, 205
+	voice_keysplit voicegroup261, KeySplitTable115   @ trumpets || 74
+	voice_directsound 60, 0, DirectSoundWaveData_hg_141tbne3, 255, 242, 210, 205
+	voice_keysplit voicegroup327, KeySplitTable68    @ french horns ||| 69
+	voice_directsound 60, 0, DirectSoundWaveData_hg_096flt1c6, 255, 246, 159, 205
+	voice_keysplit_all voicegroup336				 @ drum set 1
+	voice_directsound 60, 0, DirectSoundWaveData_bw_114marimc5, 255, 248, 0, 205
+	voice_directsound 60, 0, DirectSoundWaveData_hg_144tptc4, 255, 246, 210, 205
+	voice_directsound 60, 0, DirectSoundWaveData_hg_123elastkc2, 255, 1, 227, 171
+	voice_keysplit voicegroup294, KeySplitTable36    @ rhodes
+	voice_directsound 60, 0, DirectSoundWaveData_dp_org1_c3_16, 255, 0, 255, 192

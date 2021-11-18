@@ -389,7 +389,7 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
             if (gTasks[taskId].tBgmIndex > 0)
                 gTasks[taskId].tBgmIndex--;
             else
-                gTasks[taskId].tBgmIndex = (B2_SEQ_BGM_FLIGHT_GYM_01 - (MUS_LITTLEROOT_TEST - 1));
+                gTasks[taskId].tBgmIndex = (B2_SEQ_BGM_SW_D_24_W - (MUS_LITTLEROOT_TEST - 1));
         }
         return TRUE;
     }
@@ -404,7 +404,7 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
         }
         else
         {
-            if (gTasks[taskId].tBgmIndex < (B2_SEQ_BGM_FLIGHT_GYM_01 - (MUS_LITTLEROOT_TEST - 1)))
+            if (gTasks[taskId].tBgmIndex < (B2_SEQ_BGM_SW_D_24_W - (MUS_LITTLEROOT_TEST - 1)))
                 gTasks[taskId].tBgmIndex++;
             else
                 gTasks[taskId].tBgmIndex = 0;
@@ -1854,6 +1854,12 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(B2_SEQ_BGM_E_CHEREN          , "B2-SEQ-BGM-E-CHEREN") \
     X(B2_SEQ_BGM_KEMONOMICHI       , "B2-SEQ-BGM-KEMONOMICHI") \
     X(B2_SEQ_BGM_FLIGHT_GYM_01     , "B2-SEQ-BGM-FLIGHT-GYM-01") \
+    X(B2_SEQ_ME_MD_FAN03           , "B2-SEQ-ME-MD-FAN03") \
+    X(B2_SEQ_ME_MD_FAN01           , "B2-SEQ-ME-MD-FAN01") \
+    X(B2_SEQ_BGM_SW_T_07           , "B2-SEQ-BGM-SW-T-07") \
+    X(B2_SEQ_BGM_SW_KAZAN          , "B2-SEQ-BGM-SW-KAZAN") \
+    X(B2_SEQ_BGM_SW_D_24_B         , "B2-SEQ-BGM-SW-D-24-B") \
+    X(B2_SEQ_BGM_SW_D_24_W         , "B2-SEQ-BGM-SW-D-24-W") \
 
 #define SOUND_LIST_SE \
     X(SE_STOP, "STOP") \

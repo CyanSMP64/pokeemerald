@@ -51,7 +51,7 @@ static const struct Fanfare sFanfares[] = {
     [FANFARE_RG_DEX_RATING]           = { MUS_RG_DEX_RATING,         196 },
     [FANFARE_RG_OBTAIN_KEY_ITEM]      = { MUS_RG_OBTAIN_KEY_ITEM,    170 },
     [FANFARE_RG_CAUGHT_INTRO]         = { MUS_RG_CAUGHT_INTRO,       231 },
-    [FANFARE_RG_PHOTO]                = { MUS_RG_PHOTO,               75 },
+    [FANFARE_RG_PHOTO]                = { MUS_RG_PHOTO,               90 },
     [FANFARE_RG_POKE_FLUTE]           = { MUS_RG_POKE_FLUTE,         450 },
     [FANFARE_OBTAIN_B_POINTS]         = { MUS_OBTAIN_B_POINTS,       313 },
     [FANFARE_REGISTER_MATCH_CALL]     = { MUS_REGISTER_MATCH_CALL,   135 },
@@ -135,6 +135,8 @@ static const struct Fanfare sFanfares[] = {
     [FANFARE_B2_IMMORTALIZED]         = { B2_SEQ_ME_POKEWOOD,        445 },
     [FANFARE_B2_JOIN_AVENUE_1]        = { B2_SEQ_ME_AVENUE_01,       205 },
     [FANFARE_B2_JOIN_AVENUE_2]        = { B2_SEQ_ME_AVENUE_02,       310 },
+    [FANFARE_B2_EARN_MEDAL]           = { B2_SEQ_ME_MD_FAN03,        230 },
+    [FANFARE_B2_MEDAL_BOX]            = { B2_SEQ_ME_MD_FAN01,        210 },
 };
 
 void InitMapMusic(void)

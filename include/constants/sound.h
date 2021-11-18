@@ -102,6 +102,8 @@
 #define FANFARE_B2_IMMORTALIZED         98
 #define FANFARE_B2_JOIN_AVENUE_1        99
 #define FANFARE_B2_JOIN_AVENUE_2        100
+#define FANFARE_B2_EARN_MEDAL           101
+#define FANFARE_B2_MEDAL_BOX            102
 
 #define CRY_MODE_NORMAL        0 // Default
 #define CRY_MODE_DOUBLES       1 // Shortened cry for double battles

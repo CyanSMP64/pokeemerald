@@ -1159,6 +1159,12 @@ gSongTable::
 	song b2_seq_bgm_e_cheren, 0, 0
 	song b2_seq_bgm_kemonomichi, 0, 0
 	song b2_seq_bgm_flight_gym_01, 0, 0
+	song b2_seq_me_md_fan03, 0, 0
+	song b2_seq_me_md_fan01, 0, 0
+	song b2_seq_bgm_sw_t_07, 0, 0
+	song b2_seq_bgm_sw_kazan, 0, 0
+	song b2_seq_bgm_sw_d_24_b, 0, 0
+	song b2_seq_bgm_sw_d_24_w, 0, 0
 
 	.align 2
 dummy_song_header:

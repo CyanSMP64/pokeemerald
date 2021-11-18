@@ -3747,10 +3747,6 @@ DirectSoundWaveData_bw_fingerbassa2_pc::
 	.incbin "sound/direct_sound_samples/bw_fingerbassa2_pc.bin"
 
 	.align 2
-DirectSoundWaveData_bw_fingerbassa3_pc::
-	.incbin "sound/direct_sound_samples/bw_fingerbassa3_pc.bin"
-
-	.align 2
 DirectSoundWaveData_bw_claric4_pc::
 	.incbin "sound/direct_sound_samples/bw_claric4_pc.bin"
 
@@ -4003,20 +3999,12 @@ DirectSoundWaveData_bw_057fretlg2::
 	.incbin "sound/direct_sound_samples/bw_057fretlg2.bin"
 
 	.align 2
-DirectSoundWaveData_bw_055fretlc3::
-	.incbin "sound/direct_sound_samples/bw_055fretlc3.bin"
-
-	.align 2
 DirectSoundWaveData_bw_synthbassf1_leader::
 	.incbin "sound/direct_sound_samples/bw_synthbassf1_leader.bin"
 
 	.align 2
 DirectSoundWaveData_bw_timpanics2_ghetsis::
 	.incbin "sound/direct_sound_samples/bw_timpanics2_ghetsis.bin"
-
-	.align 2
-DirectSoundWaveData_bw_timpanics3_ghetsis::
-	.incbin "sound/direct_sound_samples/bw_timpanics3_ghetsis.bin"
 
 	.align 2
 DirectSoundWaveData_bw_timpanics4_ghetsis::
@@ -4487,10 +4475,6 @@ DirectSoundWaveData_bw_sitarc3::
 	.incbin "sound/direct_sound_samples/bw_sitarc3.bin"
 
 	.align 2
-DirectSoundWaveData_bw_sitara3::
-	.incbin "sound/direct_sound_samples/bw_sitara3.bin"
-
-	.align 2
 DirectSoundWaveData_bw_sitarf4::
 	.incbin "sound/direct_sound_samples/bw_sitarf4.bin"
 
@@ -4703,6 +4687,22 @@ DirectSoundWaveData_b2_tani_stringsc3marcato::
 	.incbin "sound/direct_sound_samples/b2_tani_stringsc3marcato.bin"
 
 	.align 2
+DirectSoundWaveData_b2_tani_snare::
+	.incbin "sound/direct_sound_samples/b2_tani_snare.bin"
+
+	.align 2
+DirectSoundWaveData_b2_tani_tom1::
+	.incbin "sound/direct_sound_samples/b2_tani_tom1.bin"
+
+	.align 2
+DirectSoundWaveData_b2_tani_tom2::
+	.incbin "sound/direct_sound_samples/b2_tani_tom2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_tani_splash::
+	.incbin "sound/direct_sound_samples/b2_tani_splash.bin"
+
+	.align 2
 DirectSoundWaveData_b2_drumloop_sewers::
 	.incbin "sound/direct_sound_samples/b2_drumloop_sewers.bin"
 
@@ -4761,6 +4761,10 @@ DirectSoundWaveData_b2_drumloop_pwtsinnohleader::
 	.align 2
 DirectSoundWaveData_b2_drumloop_cheren::
 	.incbin "sound/direct_sound_samples/b2_drumloop_cheren.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_reversalmountain::
+	.incbin "sound/direct_sound_samples/b2_drumloop_reversalmountain.bin"
 
 	.align 2
 DirectSoundWaveData_b2_pwtdrumsl1::
@@ -5401,3 +5405,43 @@ DirectSoundWaveData_b2_djhandyd6::
 	.align 2
 DirectSoundWaveData_b2_wind_grotto::
 	.incbin "sound/direct_sound_samples/b2_wind_grotto.bin"
+
+	.align 2
+DirectSoundWaveData_b2_guirochop1::
+	.incbin "sound/direct_sound_samples/b2_guirochop1.bin"
+
+	.align 2
+DirectSoundWaveData_b2_guirochop2::
+	.incbin "sound/direct_sound_samples/b2_guirochop2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_guitarspanishcs4::
+	.incbin "sound/direct_sound_samples/b2_guitarspanishcs4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_guitarspanishfs4::
+	.incbin "sound/direct_sound_samples/b2_guitarspanishfs4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_guitarspanishcs5::
+	.incbin "sound/direct_sound_samples/b2_guitarspanishcs5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_guitarspanishfs5::
+	.incbin "sound/direct_sound_samples/b2_guitarspanishfs5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_gamelanc3::
+	.incbin "sound/direct_sound_samples/b2_gamelanc3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_gamelanc4::
+	.incbin "sound/direct_sound_samples/b2_gamelanc4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_gamelang4::
+	.incbin "sound/direct_sound_samples/b2_gamelang4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_gamelanc5::
+	.incbin "sound/direct_sound_samples/b2_gamelanc5.bin"

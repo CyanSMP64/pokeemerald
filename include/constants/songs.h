@@ -1181,6 +1181,12 @@
 #define B2_SEQ_BGM_E_CHEREN           1155 // Cheren's Theme
 #define B2_SEQ_BGM_KEMONOMICHI        1156 // Hidden Grotto
 #define B2_SEQ_BGM_FLIGHT_GYM_01      1157 // Mistralton City Gym
+#define B2_SEQ_ME_MD_FAN03            1158 // Earned a Participation Prize Medal!
+#define B2_SEQ_ME_MD_FAN01            1159 // Medal Box: Medal Box Upgraded!
+#define B2_SEQ_BGM_SW_T_07            1160 // Lentimas Town
+#define B2_SEQ_BGM_SW_KAZAN           1161 // The Road to Reversal Mountain             (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_SW_D_24_B          1162 // Reversal Mountain (Pokémon Black)
+#define B2_SEQ_BGM_SW_D_24_W          1163 // Reversal Mountain (Pokémon White)
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().

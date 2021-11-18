@@ -1622,6 +1622,12 @@ B2_SEQ_BGM_E_7_SAGE           = 82 04
 B2_SEQ_BGM_E_CHEREN           = 83 04
 B2_SEQ_BGM_KEMONOMICHI        = 84 04
 B2_SEQ_BGM_FLIGHT_GYM_01      = 85 04
+B2_SEQ_ME_MD_FAN03            = 86 04
+B2_SEQ_ME_MD_FAN01            = 87 04
+B2_SEQ_BGM_SW_T_07            = 88 04
+B2_SEQ_BGM_SW_KAZAN           = 89 04
+B2_SEQ_BGM_SW_D_24_B          = 8A 04
+B2_SEQ_BGM_SW_D_24_W          = 8B 04
 
 A_BUTTON = F8 00
 B_BUTTON = F8 01
