@@ -43,22 +43,22 @@ voicegroup229:: @ HGSS main
 	voice_keysplit_all voicegroup231				 @ taiko drums
 	voice_directsound 60, 0, DirectSoundWaveData_dp_woodbass_d3_16, 255, 251, 0, 171
 	voice_keysplit voicegroup271, KeySplitTable56    @ koto
-	voice_square_2_alt 60, 0, 2, 0, 2, 2, 1
+	voice_square_2 60, 0, 2, 0, 2, 2, 1
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_wind, 67, 243, 155, 224
 	voice_directsound 60, 0, DirectSoundWaveData_dp_explosion, 67, 255, 0, 245
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_square_wave, 255, 250, 0, 171 @ 1 octave too low
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_bubbles, 255, 0, 255, 0
-	voice_square_2_alt 60, 0, 2, 0, 2, 2, 0 @  duplicated in BATTLE4 and DUNGEON4 as program 66
-	voice_square_2_alt 60, 0, 2, 0, 7, 0, 0
-	voice_square_2_alt 60, 0, 2, 0, 5, 0, 2
-	voice_square_2_alt 60, 0, 2, 0, 2, 6, 2
-	voice_square_2_alt 60, 0, 2, 0, 2, 6, 1
-	voice_noise_alt 60, 0, 0, 1, 0, 3, 1
-	voice_noise_alt 60, 0, 0, 0, 3, 0, 1
+	voice_square_2 60, 0, 2, 0, 2, 2, 0 @  duplicated in BATTLE4 and DUNGEON4 as program 66
+	voice_square_2 60, 0, 2, 0, 7, 0, 0
+	voice_square_2 60, 0, 2, 0, 5, 0, 2
+	voice_square_2 60, 0, 2, 0, 2, 6, 2
+	voice_square_2 60, 0, 2, 0, 2, 6, 1
+	voice_noise 60, 0, 0, 1, 0, 3, 1
+	voice_noise 60, 0, 0, 0, 3, 0, 1
 	voice_directsound 60, 0, DirectSoundWaveData_dp_whistle_c5_16, 255, 246, 78, 192
 	voice_directsound 60, 0, DirectSoundWaveData_dp_reverscyn_16, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_dp_org5_c3_16, 255, 167, 235, 171
-	voice_programmable_wave_alt 60, 0, ProgrammableWaveData_sq37half, 0, 2, 11, 1
-	voice_square_2_alt 60, 0, 0, 0, 2, 11, 1 @ END OF BASIC BANK
+	voice_programmable_wave 60, 0, ProgrammableWaveData_sq37half, 0, 2, 11, 1
+	voice_square_2 60, 0, 0, 0, 2, 11, 1 @ END OF BASIC BANK
 	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitmajor60, 255, 197, 255, 171
 
