@@ -3134,3 +3134,6 @@ $(MID_SUBDIR)/b2_seq_bgm_sw_d_24_b.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_sw_d_24_w.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V095
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_d_25.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V084

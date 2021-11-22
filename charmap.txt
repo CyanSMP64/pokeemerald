@@ -1628,6 +1628,7 @@ B2_SEQ_BGM_SW_T_07            = 88 04
 B2_SEQ_BGM_SW_KAZAN           = 89 04
 B2_SEQ_BGM_SW_D_24_B          = 8A 04
 B2_SEQ_BGM_SW_D_24_W          = 8B 04
+B2_SEQ_BGM_SW_D_25            = 8C 04
 
 A_BUTTON = F8 00
 B_BUTTON = F8 01

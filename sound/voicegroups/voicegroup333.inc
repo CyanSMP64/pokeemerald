@@ -10,7 +10,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup332, KeySplitTable114   @ piano (longer decay)
 	voice_keysplit voicegroup323, KeySplitTable93    @ piano | 41 | 46 | 53 | 58 | 65
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup297, KeySplitTable76    @ vibraphone
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup240, KeySplitTable115   @ xylophone || 74
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
@@ -123,11 +123,11 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_strangehouse1, 255, 0, 255, 1
+	voice_directsound 60, 0, DirectSoundWaveData_b2_strangehouse2, 255, 251, 0, 214
+	voice_directsound 60, 0, DirectSoundWaveData_b2_strangehouse3, 255, 0, 255, 1
+	voice_directsound 60, 0, DirectSoundWaveData_b2_strangehouse4, 255, 0, 255, 1
+	voice_directsound 60, 0, DirectSoundWaveData_b2_strangehouse5, 255, 0, 255, 1
 
 
 

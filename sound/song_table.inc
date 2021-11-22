@@ -1165,6 +1165,7 @@ gSongTable::
 	song b2_seq_bgm_sw_kazan, 0, 0
 	song b2_seq_bgm_sw_d_24_b, 0, 0
 	song b2_seq_bgm_sw_d_24_w, 0, 0
+	song b2_seq_bgm_sw_d_25, 0, 0
 
 	.align 2
 dummy_song_header:

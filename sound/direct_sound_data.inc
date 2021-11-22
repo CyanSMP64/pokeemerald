@@ -5445,3 +5445,23 @@ DirectSoundWaveData_b2_gamelang4::
 	.align 2
 DirectSoundWaveData_b2_gamelanc5::
 	.incbin "sound/direct_sound_samples/b2_gamelanc5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_strangehouse1::
+	.incbin "sound/direct_sound_samples/b2_strangehouse1.bin"
+
+	.align 2
+DirectSoundWaveData_b2_strangehouse2::
+	.incbin "sound/direct_sound_samples/b2_strangehouse2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_strangehouse3::
+	.incbin "sound/direct_sound_samples/b2_strangehouse3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_strangehouse4::
+	.incbin "sound/direct_sound_samples/b2_strangehouse4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_strangehouse5::
+	.incbin "sound/direct_sound_samples/b2_strangehouse5.bin"

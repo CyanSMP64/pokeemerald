@@ -1187,6 +1187,7 @@
 #define B2_SEQ_BGM_SW_KAZAN           1161 // The Road to Reversal Mountain             (TODO: PORTAMENTO!!)
 #define B2_SEQ_BGM_SW_D_24_B          1162 // Reversal Mountain (Pokémon Black)
 #define B2_SEQ_BGM_SW_D_24_W          1163 // Reversal Mountain (Pokémon White)
+#define B2_SEQ_BGM_SW_D_25            1164 // Strange House
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
