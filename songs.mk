@@ -3155,3 +3155,6 @@ $(MID_SUBDIR)/b2_seq_bgm_eye_neo_plasma.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_vs_neo_plasma.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V080
+
+$(MID_SUBDIR)/b2_seq_bgm_dark_trinity.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V090

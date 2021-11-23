@@ -4767,6 +4767,10 @@ DirectSoundWaveData_b2_drumloop_reversalmountain::
 	.incbin "sound/direct_sound_samples/b2_drumloop_reversalmountain.bin"
 
 	.align 2
+DirectSoundWaveData_b2_drumloop_shadowtriad::
+	.incbin "sound/direct_sound_samples/b2_drumloop_shadowtriad.bin"
+
+	.align 2
 DirectSoundWaveData_b2_pwtdrumsl1::
 	.incbin "sound/direct_sound_samples/b2_pwtdrumsl1.bin"
 
@@ -5481,3 +5485,11 @@ DirectSoundWaveData_b2_yee::
 	.align 2
 DirectSoundWaveData_b2_synthkick_plasma::
 	.incbin "sound/direct_sound_samples/b2_synthkick_plasma.bin"
+
+	.align 2
+DirectSoundWaveData_b2_synthsnare_shadowtriad::
+	.incbin "sound/direct_sound_samples/b2_synthsnare_shadowtriad.bin"
+
+	.align 2
+DirectSoundWaveData_b2_ohh_shadowtriad::
+	.incbin "sound/direct_sound_samples/b2_ohh_shadowtriad.bin"

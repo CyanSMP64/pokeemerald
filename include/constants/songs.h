@@ -1194,6 +1194,7 @@
 #define B2_SEQ_BGM_E_C08_ICE          1168 // The Frozen City
 #define B2_SEQ_BGM_EYE_NEO_PLASMA     1169 // Trainers' Eyes Meet (Team Plasma)         (TODO: PORTAMENTO!!)
 #define B2_SEQ_BGM_VS_NEO_PLASMA      1170 // Battle! (Team Plasma)                     (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_DARK_TRINITY       1171 // Shadow Triad's Theme
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
