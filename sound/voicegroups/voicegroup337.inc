@@ -1,7 +1,7 @@
 	.align 2
 voicegroup337:: @ B2W2 Drum Set 2
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 64, DirectSoundWaveData_dp_bassdr1_16, 255, 0, 255, 171				@ 127/127/127/120/ 64
+	voice_directsound 60, 64, DirectSoundWaveData_dp_oct_snare_16, 255, 0, 255, 0				@ 127/127/127/127/ 64
 	voice_directsound 60, 64, DirectSoundWaveData_bw_171snare909, 255, 0, 227, 205    			@ 127/127/120/116/ 64	
 	voice_directsound 59, 64, DirectSoundWaveData_hg_032crash, 255, 242, 0, 214					@ 127/100/  0/114/ 64	- 1
 	voice_directsound 60, 110, DirectSoundWaveData_dp_closed_hihat_16, 255, 0, 227, 1			@ 127/127/120/125/110
@@ -14,8 +14,8 @@ voicegroup337:: @ B2W2 Drum Set 2
 	voice_directsound 60, 100, DirectSoundWaveData_b2_chh_colress, 255, 0, 255, 192				@ 127/127/127/118/100
 	voice_directsound 60, 100, DirectSoundWaveData_b2_ohh_colress, 255, 0, 255, 171				@ 127/127/127/120/100
 	voice_directsound 57, 64, DirectSoundWaveData_dp_cymbal1_16, 255, 246, 0, 214				@ 127/ 90/  0/114/ 64	- 3
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 29, 30, DirectSoundWaveData_dp_tom1_16, 255, 0, 255, 1					@ 127/127/127/125/ 30	-12
+	voice_directsound 34, 40, DirectSoundWaveData_dp_tom1_16, 255, 0, 255, 1					@ 127/127/127/125/ 40	- 7
 	voice_directsound 59, 20, DirectSoundWaveData_dp_china_cynbal, 255, 250, 0, 226				@ 127/ 70/  0/110/ 20	- 1
 	voice_directsound 60, 64, DirectSoundWaveData_dp_synthsnare, 255, 0, 255, 0					@ 127/127/127/127/ 64
 	voice_directsound 60, 80, DirectSoundWaveData_hg_062chh, 255, 242, 0, 171					@ 127/100/  0/120/ 80
@@ -88,3 +88,5 @@ voicegroup337:: @ B2W2 Drum Set 2
 	voice_directsound 60, 32, DirectSoundWaveData_bw_214tri_open, 255, 234, 191, 205    		@ 127/110/110/116/ 32
 	voice_directsound 60, 30, DirectSoundWaveData_b2_woodblockhi, 255, 0, 255, 0    			@ 127/127/127/127/ 30
 	voice_directsound 60, 100, DirectSoundWaveData_b2_woodblocklo, 255, 0, 255, 0    			@ 127/127/127/127/100
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 64, DirectSoundWaveData_bw_gongp, 255, 0, 255, 0    					@ 127/127/127/127/ 64

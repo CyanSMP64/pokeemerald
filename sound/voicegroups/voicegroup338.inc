@@ -10,27 +10,27 @@ voicegroup338:: @ B2W2 Drum Set 3 (ADDICTIVE DRUMS)
 	voice_directsound 61, 100, DirectSoundWaveData_b2_chh_nimbasagym, 255, 0, 255, 0			@ 127/127/127/126/100	+ 1
 	voice_directsound 60, 80, DirectSoundWaveData_b2_ohh_nimbasagym, 255, 0, 255, 0				@ 127/127/127/126/ 80	
 	voice_directsound 84, 64, DirectSoundWaveData_b2_snare1_nimbasagym, 255, 0, 255, 0			@ 127/127/127/126/ 64	+24
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 64, DirectSoundWaveData_dp_093snare, 255, 226, 127, 205    			@ 127/114/ 90/116/ 64
+	voice_directsound 61, 64, DirectSoundWaveData_dp_093snare, 255, 226, 127, 205    			@ 127/114/ 90/116/ 64	+ 1
+	voice_directsound 66, 64, DirectSoundWaveData_b2_synthkick, 255, 0, 255, 2					@ 127/127/127/124/ 64	+ 6
+	voice_directsound 67, 64, DirectSoundWaveData_b2_synthkick, 255, 0, 255, 2					@ 127/127/127/124/ 64	+ 7
 	voice_directsound 50, 40, DirectSoundWaveData_b2_addictivetom, 255, 0, 255, 205				@ 127/127/127/116/ 40	- 10
 	voice_directsound 51, 40, DirectSoundWaveData_b2_addictivetom, 255, 0, 255, 205				@ 127/127/127/116/ 40	- 9
 	voice_directsound 53, 40, DirectSoundWaveData_b2_addictivetom, 255, 0, 255, 205				@ 127/127/127/116/ 40	- 7
 	voice_directsound 54, 40, DirectSoundWaveData_b2_addictivetom, 255, 0, 255, 205				@ 127/127/127/116/ 40	- 6
 	voice_directsound 55, 40, DirectSoundWaveData_b2_addictivetom, 255, 0, 255, 205				@ 127/127/127/116/ 40	- 5
 	voice_directsound 56, 40, DirectSoundWaveData_b2_addictivetom, 255, 0, 255, 205				@ 127/127/127/116/ 40	- 4
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 48, 64, DirectSoundWaveData_bw_synthclap_plasma, 255, 197, 227, 2    		@ 127/120/120/124/ 64	-12
+	voice_directsound 60, 64, DirectSoundWaveData_bw_synthclap_plasma, 255, 197, 227, 2    		@ 127/120/120/124/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_bw_synthsnare_plasma, 255, 0, 227, 2    		@ 127/127/120/124/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_synthkick_plasma, 255, 0, 227, 205			@ 127/127/120/116/ 64	
+	voice_directsound 62, 64, DirectSoundWaveData_b2_synthkick_plasma, 255, 0, 227, 205			@ 127/127/120/116/ 64	+ 2
+	voice_directsound 60, 64, DirectSoundWaveData_bw_synthsnare_eyeplasma, 255, 0, 255, 2		@ 127/127/127/124/ 64
+	voice_directsound 64, 64, DirectSoundWaveData_bw_synthsnare_eyeplasma, 255, 0, 255, 2		@ 127/127/127/124/ 64	+ 4
+	voice_directsound 67, 64, DirectSoundWaveData_bw_synthsnare_eyeplasma, 255, 0, 255, 2		@ 127/127/127/124/ 64	+ 7
 	voice_directsound 60, 64, DirectSoundWaveData_bw_kickcymbal, 255, 0, 227, 205				@ 127/127/120/116/ 64	
-	voice_directsound 61, 64, DirectSoundWaveData_bw_kickcymbal, 255, 0, 227, 205				@ 127/127/120/116/ 64	+ 1
-	voice_directsound 62, 64, DirectSoundWaveData_bw_kickcymbal, 255, 0, 227, 205				@ 127/127/120/116/ 64	+ 2
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 64, DirectSoundWaveData_bw_808snarereverb, 255, 0, 227, 2    			@ 127/127/120/124/ 64	
 	voice_directsound 60, 64, DirectSoundWaveData_b2_synthkick, 255, 0, 255, 2					@ 127/127/127/124/ 64	
 	voice_directsound 61, 64, DirectSoundWaveData_b2_synthkick, 255, 0, 255, 2					@ 127/127/127/124/ 64	+ 1
 	voice_directsound 62, 64, DirectSoundWaveData_b2_synthkick, 255, 0, 255, 2					@ 127/127/127/124/ 64	+ 2
@@ -96,23 +96,23 @@ voicegroup338:: @ B2W2 Drum Set 3 (ADDICTIVE DRUMS)
 	voice_directsound 63, 110, DirectSoundWaveData_b2_addictiveridebell, 255, 248, 0, 224		@ 127/ 80/  0/110/110	+ 3
 	voice_directsound 64, 110, DirectSoundWaveData_b2_addictiveridebell, 255, 248, 0, 224		@ 127/ 80/  0/110/110	+ 4
 	voice_directsound 65, 110, DirectSoundWaveData_b2_addictiveridebell, 255, 248, 0, 224		@ 127/ 80/  0/110/110	+ 5
-	voice_directsound 66, 110, DirectSoundWaveData_b2_addictiveridebell, 255, 248, 0, 224		@ 127/ 80/  0/110/110	+ 6
-	voice_directsound 67, 110, DirectSoundWaveData_b2_addictiveridebell, 255, 248, 0, 224		@ 127/ 80/  0/110/110	+ 7
-	voice_directsound 68, 110, DirectSoundWaveData_b2_addictiveridebell, 255, 248, 0, 224		@ 127/ 80/  0/110/110	+ 8
-	voice_directsound 69, 110, DirectSoundWaveData_b2_addictiveridebell, 255, 248, 0, 224		@ 127/ 80/  0/110/110	+ 9
-	voice_directsound 70, 110, DirectSoundWaveData_b2_addictiveridebell, 255, 248, 0, 224		@ 127/ 80/  0/110/110	+10
-	voice_directsound 71, 110, DirectSoundWaveData_b2_addictiveridebell, 255, 248, 0, 224		@ 127/ 80/  0/110/110	+11
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 61, 117, DirectSoundWaveData_hg_022china, 255, 248, 0, 224				@ 127/ 80/  0/110/117	+ 1
+	voice_directsound 62, 117, DirectSoundWaveData_hg_022china, 255, 248, 0, 224				@ 127/ 80/  0/110/117	+ 2
 	voice_directsound 60, 100, DirectSoundWaveData_b2_addictiveride, 255, 248, 0, 192			@ 127/ 80/  0/118/100
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 64, 117, DirectSoundWaveData_hg_022china, 255, 248, 0, 224				@ 127/ 80/  0/110/117	+ 4
+	voice_directsound 60, 120, DirectSoundWaveData_bw_synthchh_vsrival, 255, 0, 255, 2    		@ 127/127/127/124/120
+	voice_directsound 60, 120, DirectSoundWaveData_bw_synthohh_vsrival, 255, 0, 255, 2    		@ 127/127/127/124/120	
+	voice_directsound 61, 120, DirectSoundWaveData_bw_synthohh_vsrival, 255, 0, 255, 2    		@ 127/127/127/124/120	+ 1
+	voice_directsound 60, 64, DirectSoundWaveData_bw_synthchh_vsrival, 255, 0, 255, 2    		@ 127/127/127/124/ 64
+	voice_directsound 61, 64, DirectSoundWaveData_bw_synthchh_vsrival, 255, 0, 255, 2    		@ 127/127/127/124/ 64	+ 1
+	voice_directsound 60, 64, DirectSoundWaveData_bw_synthohh_vsrival, 255, 0, 255, 2    		@ 127/127/127/124/ 64
+	voice_directsound 60, 7, DirectSoundWaveData_bw_synthchh_vsrival, 255, 0, 255, 2    		@ 127/127/127/124/  7
+	voice_directsound 60, 7, DirectSoundWaveData_bw_synthohh_vsrival, 255, 0, 255, 2    		@ 127/127/127/124/  7	
+	voice_directsound 61, 7, DirectSoundWaveData_bw_synthohh_vsrival, 255, 0, 255, 2    		@ 127/127/127/124/  7	+ 1
 	voice_directsound 60,  10, DirectSoundWaveData_hg_135tom, 255, 0, 255, 205    				@ 127/127/127/116/ 10	
 	voice_directsound 60,  30, DirectSoundWaveData_hg_135tom, 255, 0, 255, 205    				@ 127/127/127/116/ 30	
 	voice_directsound 60,  40, DirectSoundWaveData_hg_135tom, 255, 0, 255, 205    				@ 127/127/127/116/ 40	

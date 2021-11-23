@@ -3137,3 +3137,21 @@ $(MID_SUBDIR)/b2_seq_bgm_sw_d_24_w.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_sw_d_25.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V084
+
+$(MID_SUBDIR)/b2_seq_bgm_vs_dplegend.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V090
+
+$(MID_SUBDIR)/b2_seq_bgm_dragon_gym_01.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V100
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_demo_ajito_ship.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V116
+
+$(MID_SUBDIR)/b2_seq_bgm_e_c08_ice.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V120
+
+$(MID_SUBDIR)/b2_seq_bgm_eye_neo_plasma.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V080
+
+$(MID_SUBDIR)/b2_seq_bgm_vs_neo_plasma.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V080

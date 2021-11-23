@@ -37,7 +37,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit voicegroup293, KeySplitTable48    @ pizzicato
 	voice_keysplit voicegroup299, KeySplitTable78    @ harp 2
 	voice_keysplit voicegroup302, KeySplitTable80    @ harp 1
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup319, KeySplitTable97    @ pipe organ
 	voice_keysplit voicegroup260, KeySplitTable61    @ timpani
 	voice_keysplit voicegroup261, KeySplitTable39    @ trumpets
 	voice_keysplit voicegroup262, KeySplitTable47    @ trombones
@@ -63,7 +63,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup303, KeySplitTable81    @ choir full
 	voice_keysplit voicegroup344, KeySplitTable121   @ synth vox
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
@@ -92,7 +92,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit voicegroup343, KeySplitTable65    @ pan flute
 	voice_keysplit voicegroup352, KeySplitTable128   @ gamelan
 	voice_keysplit voicegroup340, KeySplitTable118   @ pink strat
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_12oclock, 255, 251, 14, 171
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup347, KeySplitTable123   @ square lead
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sawtoothlead60, 255, 197, 255, 171

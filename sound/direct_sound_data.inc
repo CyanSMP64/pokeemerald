@@ -5465,3 +5465,19 @@ DirectSoundWaveData_b2_strangehouse4::
 	.align 2
 DirectSoundWaveData_b2_strangehouse5::
 	.incbin "sound/direct_sound_samples/b2_strangehouse5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_12oclock::
+	.incbin "sound/direct_sound_samples/b2_12oclock.bin"
+
+	.align 2
+DirectSoundWaveData_b2_sneeze::
+	.incbin "sound/direct_sound_samples/b2_sneeze.bin"
+
+	.align 2
+DirectSoundWaveData_b2_yee::
+	.incbin "sound/direct_sound_samples/b2_yee.bin"
+
+	.align 2
+DirectSoundWaveData_b2_synthkick_plasma::
+	.incbin "sound/direct_sound_samples/b2_synthkick_plasma.bin"

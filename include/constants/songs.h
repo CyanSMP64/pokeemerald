@@ -1188,6 +1188,12 @@
 #define B2_SEQ_BGM_SW_D_24_B          1162 // Reversal Mountain (Pokémon Black)
 #define B2_SEQ_BGM_SW_D_24_W          1163 // Reversal Mountain (Pokémon White)
 #define B2_SEQ_BGM_SW_D_25            1164 // Strange House
+#define B2_SEQ_BGM_VS_DPLEGEND        1165 // Battle! (Legendary Pokémon - Sinnoh Version)
+#define B2_SEQ_BGM_DRAGON_GYM_01      1166 // Opelucid City Gym
+#define B2_SEQ_BGM_SW_DEMO_AJITO_SHIP 1167 // Opelucid City Attacked!
+#define B2_SEQ_BGM_E_C08_ICE          1168 // The Frozen City
+#define B2_SEQ_BGM_EYE_NEO_PLASMA     1169 // Trainers' Eyes Meet (Team Plasma)         (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_VS_NEO_PLASMA      1170 // Battle! (Team Plasma)                     (TODO: PORTAMENTO!!)
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().

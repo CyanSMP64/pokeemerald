@@ -1855,6 +1855,12 @@ SECTIONS {
         sound/songs/midi/b2_seq_bgm_sw_d_24_b.o(.rodata);
         sound/songs/midi/b2_seq_bgm_sw_d_24_w.o(.rodata);
         sound/songs/midi/b2_seq_bgm_sw_d_25.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_vs_dplegend.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_dragon_gym_01.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_sw_demo_ajito_ship.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_e_c08_ice.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_eye_neo_plasma.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_vs_neo_plasma.o(.rodata);
     } =0
 
     lib_rodata :

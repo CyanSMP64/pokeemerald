@@ -1166,6 +1166,12 @@ gSongTable::
 	song b2_seq_bgm_sw_d_24_b, 0, 0
 	song b2_seq_bgm_sw_d_24_w, 0, 0
 	song b2_seq_bgm_sw_d_25, 0, 0
+	song b2_seq_bgm_vs_dplegend, 0, 0
+	song b2_seq_bgm_dragon_gym_01, 0, 0
+	song b2_seq_bgm_sw_demo_ajito_ship, 0, 0
+	song b2_seq_bgm_e_c08_ice, 0, 0
+	song b2_seq_bgm_eye_neo_plasma, 0, 0
+	song b2_seq_bgm_vs_neo_plasma, 0, 0
 
 	.align 2
 dummy_song_header:
