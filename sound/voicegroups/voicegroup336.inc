@@ -124,7 +124,7 @@ voicegroup336:: @ B2W2 Drum Set 1
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 62, 5, DirectSoundWaveData_b2_woodblocklo_humilau, 255, 0, 255, 171    	@ 127/127/127/120/   5	+ 2
+	voice_directsound 60, 122, DirectSoundWaveData_b2_woodblockhi_humilau, 255, 0, 255, 171    	@ 127/127/127/120/ 122	
 	voice_directsound 75, 84, DirectSoundWaveData_hg_032crash, 255, 246, 0, 214					@ 127/ 90/  0/114/ 84	+15
 	voice_directsound 76, 44, DirectSoundWaveData_hg_032crash, 255, 246, 0, 214					@ 127/ 90/  0/114/ 44	+16

@@ -1195,6 +1195,8 @@
 #define B2_SEQ_BGM_EYE_NEO_PLASMA     1169 // Trainers' Eyes Meet (Team Plasma)         (TODO: PORTAMENTO!!)
 #define B2_SEQ_BGM_VS_NEO_PLASMA      1170 // Battle! (Team Plasma)                     (TODO: PORTAMENTO!!)
 #define B2_SEQ_BGM_DARK_TRINITY       1171 // Shadow Triad's Theme
+#define B2_SEQ_BGM_SW_H_06            1172 // Marine Tube                               (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_SW_C_14            1173 // Humilau City                              (TODO: PORTAMENTO!!)
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().

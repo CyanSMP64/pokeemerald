@@ -4871,6 +4871,46 @@ DirectSoundWaveData_b2_drumloop_pwthoennchamp8::
 	.incbin "sound/direct_sound_samples/b2_drumloop_pwthoennchamp8.bin"
 
 	.align 2
+DirectSoundWaveData_b2_drums_marinetube1::
+	.incbin "sound/direct_sound_samples/b2_drums_marinetube1.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drums_marinetube2::
+	.incbin "sound/direct_sound_samples/b2_drums_marinetube2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drums_marinetube3::
+	.incbin "sound/direct_sound_samples/b2_drums_marinetube3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drums_marinetube4::
+	.incbin "sound/direct_sound_samples/b2_drums_marinetube4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drums_marinetube5::
+	.incbin "sound/direct_sound_samples/b2_drums_marinetube5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drums_marinetube6::
+	.incbin "sound/direct_sound_samples/b2_drums_marinetube6.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drums_marinetube7::
+	.incbin "sound/direct_sound_samples/b2_drums_marinetube7.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drums_marinetube8::
+	.incbin "sound/direct_sound_samples/b2_drums_marinetube8.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drums_marinetube9::
+	.incbin "sound/direct_sound_samples/b2_drums_marinetube9.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drums_marinetube10::
+	.incbin "sound/direct_sound_samples/b2_drums_marinetube10.bin"
+
+	.align 2
 DirectSoundWaveData_b2_woodblockhi::
 	.incbin "sound/direct_sound_samples/b2_woodblockhi.bin"
 
@@ -5493,3 +5533,43 @@ DirectSoundWaveData_b2_synthsnare_shadowtriad::
 	.align 2
 DirectSoundWaveData_b2_ohh_shadowtriad::
 	.incbin "sound/direct_sound_samples/b2_ohh_shadowtriad.bin"
+
+	.align 2
+DirectSoundWaveData_b2_synthpadc4_marinetube::
+	.incbin "sound/direct_sound_samples/b2_synthpadc4_marinetube.bin"
+
+	.align 2
+DirectSoundWaveData_b2_choird4_marinetube::
+	.incbin "sound/direct_sound_samples/b2_choird4_marinetube.bin"
+
+	.align 2
+DirectSoundWaveData_b2_choira4_marinetube::
+	.incbin "sound/direct_sound_samples/b2_choira4_marinetube.bin"
+
+	.align 2
+DirectSoundWaveData_b2_choirf5_marinetube::
+	.incbin "sound/direct_sound_samples/b2_choirf5_marinetube.bin"
+
+	.align 2
+DirectSoundWaveData_b2_slapbassc2_marinetube::
+	.incbin "sound/direct_sound_samples/b2_slapbassc2_marinetube.bin"
+
+	.align 2
+DirectSoundWaveData_b2_chimesmetalchina::
+	.incbin "sound/direct_sound_samples/b2_chimesmetalchina.bin"
+
+	.align 2
+DirectSoundWaveData_b2_adriansfilterbankc3::
+	.incbin "sound/direct_sound_samples/b2_adriansfilterbankc3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_orchchimesg2::
+	.incbin "sound/direct_sound_samples/b2_orchchimesg2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_woodblocklo_humilau::
+	.incbin "sound/direct_sound_samples/b2_woodblocklo_humilau.bin"
+
+	.align 2
+DirectSoundWaveData_b2_woodblockhi_humilau::
+	.incbin "sound/direct_sound_samples/b2_woodblockhi_humilau.bin"

@@ -1173,6 +1173,8 @@ gSongTable::
 	song b2_seq_bgm_eye_neo_plasma, 0, 0
 	song b2_seq_bgm_vs_neo_plasma, 0, 0
 	song b2_seq_bgm_dark_trinity, 0, 0
+	song b2_seq_bgm_sw_h_06, 0, 0
+	song b2_seq_bgm_sw_c_14, 0, 0
 
 	.align 2
 dummy_song_header:

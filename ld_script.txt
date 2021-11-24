@@ -1862,6 +1862,8 @@ SECTIONS {
         sound/songs/midi/b2_seq_bgm_eye_neo_plasma.o(.rodata);
         sound/songs/midi/b2_seq_bgm_vs_neo_plasma.o(.rodata);
         sound/songs/midi/b2_seq_bgm_dark_trinity.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_sw_h_06.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_sw_c_14.o(.rodata);
     } =0
 
     lib_rodata :

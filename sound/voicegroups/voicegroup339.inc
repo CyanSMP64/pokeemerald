@@ -79,3 +79,14 @@ voicegroup339:: @ virbank gym vocals
 	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_pwthoennchamp6, 255, 0, 255, 0	@ 127/127/127/127/ 64	
 	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_pwthoennchamp7, 255, 0, 255, 0	@ 127/127/127/127/ 64	
 	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_pwthoennchamp8, 255, 0, 255, 0	@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_bw_windchime, 255, 234, 191, 205    			@ 127/110/110/116/ 64
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drums_marinetube1, 255, 0, 255, 0			@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drums_marinetube2, 255, 0, 255, 0			@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drums_marinetube3, 255, 0, 255, 0			@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drums_marinetube4, 255, 0, 255, 0			@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drums_marinetube5, 255, 0, 255, 0			@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drums_marinetube6, 255, 0, 255, 0			@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drums_marinetube7, 255, 0, 255, 0			@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drums_marinetube8, 255, 0, 255, 0			@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drums_marinetube9, 255, 0, 255, 0			@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drums_marinetube10, 255, 0, 255, 0			@ 127/127/127/127/ 64	

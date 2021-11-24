@@ -11,14 +11,14 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup323, KeySplitTable93    @ piano | 41 | 46 | 53 | 58 | 65
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup297, KeySplitTable76    @ vibraphone
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_synthpadc4_marinetube, 255, 251, 0, 205
 	voice_keysplit voicegroup240, KeySplitTable115   @ xylophone || 74
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup353, KeySplitTable129   @ choir (marine tube)
 	voice_keysplit voicegroup241, KeySplitTable25    @ tubular bell
 	voice_directsound 60, 0, DirectSoundWaveData_bw_074glocknc5, 255, 249, 0, 205
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_orchchimesg2, 255, 253, 0, 214
 	voice_keysplit voicegroup244, KeySplitTable71    @ drawbar organ
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup244, KeySplitTable102   @ drawbar organ | 56
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup292, KeySplitTable72    @ nylon str. guitar
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
@@ -75,7 +75,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_b2_hardbasse2, 255, 0, 252, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_hardbasse3, 255, 0, 252, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_recorderg5, 255, 1, 227, 129
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_slapbassc2_marinetube, 255, 1, 227, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_guitarbendc5_plasma, 255, 197, 255, 2
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar1, 255, 197, 159, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar2, 255, 197, 159, 192
@@ -118,8 +118,8 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_directsound 60, 0, DirectSoundWaveData_b2_virbankgym_female1_sing, 255, 0, 252, 1
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_chimesmetalchina, 255, 251, 0, 129
+	voice_directsound 60, 0, DirectSoundWaveData_b2_adriansfilterbankc3, 255, 234, 191, 129
 	voice_directsound 60, 0, DirectSoundWaveData_bw_sfxlasergun_plasma, 255, 0, 255, 2
 	voice_directsound 60, 0, DirectSoundWaveData_b2_sneeze, 255, 0, 255, 2
 	voice_directsound 60, 0, DirectSoundWaveData_b2_yee, 255, 0, 255, 2
@@ -133,16 +133,6 @@ voicegroup333:: @ B2W2 Ichinose
 
 @ instruments still needed
 
-@ slap bass g2 (team neo plasma encounter)
-@ hard sync solo (team neo plasma encounter)
-@ "yee" (team neo plasma encounter, vs team neo plasma)
-@ about to sneeze (vs team neo plasma)
-@ 27a-bse01b synth bass (vs team neo plasma)
-@ full organ slow c4 (vs team neo plasma)
-@ synth pad (marine tube)
-@ choir (marine tube, vs n)
-@ slap bass (marine tube)
-@ chimes metal china (marine tube)
 @ adrian's filter bank (marine tube)
 @ orch chimes (humilau)
 @ oboe (infiltrating the plasma frigate, vs kyurem)
