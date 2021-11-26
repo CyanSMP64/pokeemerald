@@ -3164,3 +3164,21 @@ $(MID_SUBDIR)/b2_seq_bgm_sw_h_06.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_sw_c_14.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V078
+
+$(MID_SUBDIR)/b2_seq_bgm_water_gym_01.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V122
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_r_22_sp.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V127
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_r_22_su.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V127
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_r_22_au.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V127
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_r_22_wi.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V127
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_demo_frigate.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V127

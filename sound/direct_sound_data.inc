@@ -4771,6 +4771,10 @@ DirectSoundWaveData_b2_drumloop_shadowtriad::
 	.incbin "sound/direct_sound_samples/b2_drumloop_shadowtriad.bin"
 
 	.align 2
+DirectSoundWaveData_b2_drumloop_humilaugym::
+	.incbin "sound/direct_sound_samples/b2_drumloop_humilaugym.bin"
+
+	.align 2
 DirectSoundWaveData_b2_pwtdrumsl1::
 	.incbin "sound/direct_sound_samples/b2_pwtdrumsl1.bin"
 

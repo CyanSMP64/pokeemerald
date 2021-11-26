@@ -1192,11 +1192,17 @@
 #define B2_SEQ_BGM_DRAGON_GYM_01      1166 // Opelucid City Gym
 #define B2_SEQ_BGM_SW_DEMO_AJITO_SHIP 1167 // Opelucid City Attacked!
 #define B2_SEQ_BGM_E_C08_ICE          1168 // The Frozen City
-#define B2_SEQ_BGM_EYE_NEO_PLASMA     1169 // Trainers' Eyes Meet (Team Plasma)         (TODO: PORTAMENTO!!)
-#define B2_SEQ_BGM_VS_NEO_PLASMA      1170 // Battle! (Team Plasma)                     (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_EYE_NEO_PLASMA     1169 // Trainers' Eyes Meet (Team Neo Plasma)     (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_VS_NEO_PLASMA      1170 // Battle! (Team Neo Plasma)                 (TODO: PORTAMENTO!!)
 #define B2_SEQ_BGM_DARK_TRINITY       1171 // Shadow Triad's Theme
 #define B2_SEQ_BGM_SW_H_06            1172 // Marine Tube                               (TODO: PORTAMENTO!!)
 #define B2_SEQ_BGM_SW_C_14            1173 // Humilau City                              (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_WATER_GYM_01       1174 // Humilau City Gym
+#define B2_SEQ_BGM_SW_R_22_SP         1175 // Route 22 (Spring)
+#define B2_SEQ_BGM_SW_R_22_SU         1176 // Route 22 (Summer)
+#define B2_SEQ_BGM_SW_R_22_AU         1177 // Route 22 (Autumn)
+#define B2_SEQ_BGM_SW_R_22_WI         1178 // Route 22 (Winter)
+#define B2_SEQ_BGM_SW_DEMO_FRIGATE    1179 // Plasma Frigate Sortie
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().

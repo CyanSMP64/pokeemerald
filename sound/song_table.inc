@@ -1175,6 +1175,12 @@ gSongTable::
 	song b2_seq_bgm_dark_trinity, 0, 0
 	song b2_seq_bgm_sw_h_06, 0, 0
 	song b2_seq_bgm_sw_c_14, 0, 0
+	song b2_seq_bgm_water_gym_01, 0, 0
+	song b2_seq_bgm_sw_r_22_sp, 0, 0
+	song b2_seq_bgm_sw_r_22_su, 0, 0
+	song b2_seq_bgm_sw_r_22_au, 0, 0
+	song b2_seq_bgm_sw_r_22_wi, 0, 0
+	song b2_seq_bgm_sw_demo_frigate, 0, 0
 
 	.align 2
 dummy_song_header:

@@ -124,3 +124,4 @@ voicegroup334:: @ B2W2 Sato
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_cheren, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_reversalmountain, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_shadowtriad, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_humilaugym, 255, 0, 255, 0

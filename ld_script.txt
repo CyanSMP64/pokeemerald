@@ -1864,6 +1864,12 @@ SECTIONS {
         sound/songs/midi/b2_seq_bgm_dark_trinity.o(.rodata);
         sound/songs/midi/b2_seq_bgm_sw_h_06.o(.rodata);
         sound/songs/midi/b2_seq_bgm_sw_c_14.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_water_gym_01.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_sw_r_22_sp.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_sw_r_22_su.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_sw_r_22_au.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_sw_r_22_wi.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_sw_demo_frigate.o(.rodata);
     } =0
 
     lib_rodata :
