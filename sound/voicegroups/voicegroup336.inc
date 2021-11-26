@@ -86,7 +86,7 @@ voicegroup336:: @ B2W2 Drum Set 1
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 32, DirectSoundWaveData_bw_213tri_closed, 255, 234, 191, 205    		@ 127/110/110/116/ 32
 	voice_directsound 60, 32, DirectSoundWaveData_bw_214tri_open, 255, 234, 191, 205    		@ 127/110/110/116/ 32
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 57, 64, DirectSoundWaveData_b2_snare_colress, 255, 0, 255, 0    			@ 127/127/127/127/ 64	- 3
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0

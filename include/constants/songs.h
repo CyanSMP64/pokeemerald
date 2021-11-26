@@ -1203,6 +1203,8 @@
 #define B2_SEQ_BGM_SW_R_22_AU         1177 // Route 22 (Autumn)
 #define B2_SEQ_BGM_SW_R_22_WI         1178 // Route 22 (Winter)
 #define B2_SEQ_BGM_SW_DEMO_FRIGATE    1179 // Plasma Frigate Sortie
+#define B2_SEQ_BGM_SW_D_27_L_AJITO    1180 // Infiltrating the Plasma Frigate!          (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_VS_ACHROMA         1181 // Battle! (Colress)                         (TODO: PORTAMENTO!!)
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().

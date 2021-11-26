@@ -44,7 +44,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup327, KeySplitTable72    @ french horns | 52 | 60
 	voice_keysplit voicegroup327, KeySplitTable41    @ french horns
 	voice_keysplit voicegroup305, KeySplitTable44    @ tuba
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup265, KeySplitTable51    @ oboe
 	voice_keysplit voicegroup266, KeySplitTable52    @ clarinet
 	voice_directsound 60, 0, DirectSoundWaveData_dp_timpany_as_16, 255, 248, 0, 205
 	voice_directsound 60, 0, DirectSoundWaveData_bw_064flt2a5, 255, 246, 159, 205
@@ -52,7 +52,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_bw_synthbassfs1_plasma, 255, 249, 0, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup349, KeySplitTable76    @ synth lead (humilau)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_bw_fhornsripc3, 255, 248, 0, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup220, KeySplitTable30    @ trombone (DPPt)
 	voice_directsound 60, 0, DirectSoundWaveData_bw_orchhitas2_leader, 255, 248, 0, 205
@@ -89,8 +89,8 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_bw_spiccatostringse2, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_b2_trumpetsstaccatogs4_loop, 255, 0, 255, 224
 	voice_directsound 60, 0, DirectSoundWaveData_hg_039drawbc4, 255, 0, 255, 171
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_aggresitronicbeamzc4, 255, 197, 255, 129
+	voice_directsound 60, 0, DirectSoundWaveData_b2_asiansupremacyg4, 255, 248, 0, 205
 	voice_keysplit voicegroup340, KeySplitTable118   @ pink strat
 	voice_keysplit voicegroup340, KeySplitTable119   @ pink strat | 42 | 54 | 68
 	voice_keysplit voicegroup340, KeySplitTable125   @ pink strat | 42 | 54
@@ -99,7 +99,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_bw_reversecymbale2, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_bw_reversecymbale2, 255, 0, 255, 236
 	voice_directsound 60, 0, DirectSoundWaveData_b2_electricityspark, 255, 0, 255, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_dp_sawtoothlead60, 255, 197, 255, 0
 	voice_square_2 60, 0, 2, 0, 7, 2, 0
 	voice_square_1 60, 0, 0, 2, 0, 7, 2, 0
 	voice_square_2 60, 0, 1, 0, 3, 10, 3
@@ -114,8 +114,8 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_b2_nimbasagymsynthe4, 255, 242, 227, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_nimbasagymsynthe6, 255, 242, 227, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_nimbasagym, 255, 0, 255, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_vscolress, 255, 0, 255, 0
+	voice_keysplit voicegroup354, KeySplitTable130   @ 1 2 3 4 5 (colress)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_directsound 60, 0, DirectSoundWaveData_b2_virbankgym_female1_sing, 255, 0, 252, 1
 	voice_directsound 60, 0, DirectSoundWaveData_b2_chimesmetalchina, 255, 251, 0, 129
@@ -133,10 +133,6 @@ voicegroup333:: @ B2W2 Ichinose
 
 @ instruments still needed
 
-@ adrian's filter bank (marine tube)
-@ orch chimes (humilau)
-@ oboe (infiltrating the plasma frigate, vs kyurem)
-@ french horn rips (infiltrating the plasma frigate, vs kyurem)
 @ aggresitronic beamz (vs colress)
 @ asian supremacy (vs colress)
 @ drum loop (vs colress)

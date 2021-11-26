@@ -4775,6 +4775,10 @@ DirectSoundWaveData_b2_drumloop_humilaugym::
 	.incbin "sound/direct_sound_samples/b2_drumloop_humilaugym.bin"
 
 	.align 2
+DirectSoundWaveData_b2_drumloop_vscolress::
+	.incbin "sound/direct_sound_samples/b2_drumloop_vscolress.bin"
+
+	.align 2
 DirectSoundWaveData_b2_pwtdrumsl1::
 	.incbin "sound/direct_sound_samples/b2_pwtdrumsl1.bin"
 
@@ -5577,3 +5581,35 @@ DirectSoundWaveData_b2_woodblocklo_humilau::
 	.align 2
 DirectSoundWaveData_b2_woodblockhi_humilau::
 	.incbin "sound/direct_sound_samples/b2_woodblockhi_humilau.bin"
+
+	.align 2
+DirectSoundWaveData_b2_aggresitronicbeamzc4::
+	.incbin "sound/direct_sound_samples/b2_aggresitronicbeamzc4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_asiansupremacyg4::
+	.incbin "sound/direct_sound_samples/b2_asiansupremacyg4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_snare_colress::
+	.incbin "sound/direct_sound_samples/b2_snare_colress.bin"
+
+	.align 2
+DirectSoundWaveData_b2_colressvocal1::
+	.incbin "sound/direct_sound_samples/b2_colressvocal1.bin"
+
+	.align 2
+DirectSoundWaveData_b2_colressvocal2::
+	.incbin "sound/direct_sound_samples/b2_colressvocal2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_colressvocal3::
+	.incbin "sound/direct_sound_samples/b2_colressvocal3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_colressvocal4::
+	.incbin "sound/direct_sound_samples/b2_colressvocal4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_colressvocal5::
+	.incbin "sound/direct_sound_samples/b2_colressvocal5.bin"

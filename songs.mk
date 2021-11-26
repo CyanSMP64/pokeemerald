@@ -3182,3 +3182,9 @@ $(MID_SUBDIR)/b2_seq_bgm_sw_r_22_wi.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_sw_demo_frigate.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V127
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_d_27_l_ajito.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V070
+
+$(MID_SUBDIR)/b2_seq_bgm_vs_achroma.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V125

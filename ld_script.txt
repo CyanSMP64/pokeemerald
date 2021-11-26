@@ -1870,6 +1870,8 @@ SECTIONS {
         sound/songs/midi/b2_seq_bgm_sw_r_22_au.o(.rodata);
         sound/songs/midi/b2_seq_bgm_sw_r_22_wi.o(.rodata);
         sound/songs/midi/b2_seq_bgm_sw_demo_frigate.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_sw_d_27_l_ajito.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_vs_achroma.o(.rodata);
     } =0
 
     lib_rodata :
