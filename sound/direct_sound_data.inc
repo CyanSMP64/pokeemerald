@@ -5613,3 +5613,19 @@ DirectSoundWaveData_b2_colressvocal4::
 	.align 2
 DirectSoundWaveData_b2_colressvocal5::
 	.incbin "sound/direct_sound_samples/b2_colressvocal5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_unknown_screech::
+	.incbin "sound/direct_sound_samples/b2_unknown_screech.bin"
+
+	.align 2
+DirectSoundWaveData_b2_unknown_metalimpact::
+	.incbin "sound/direct_sound_samples/b2_unknown_metalimpact.bin"
+
+	.align 2
+DirectSoundWaveData_b2_timpani_high::
+	.incbin "sound/direct_sound_samples/b2_timpani_high.bin"
+
+	.align 2
+DirectSoundWaveData_b2_trombonesflutterb2::
+	.incbin "sound/direct_sound_samples/b2_trombonesflutterb2.bin"

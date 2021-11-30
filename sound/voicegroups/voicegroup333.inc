@@ -133,10 +133,6 @@ voicegroup333:: @ B2W2 Ichinose
 
 @ instruments still needed
 
-@ aggresitronic beamz (vs colress)
-@ asian supremacy (vs colress)
-@ drum loop (vs colress)
-@ 54321 count down (vs colress)
 @ strings big chord (vs kyurem)
 @ gong (vs kyurem)
 @ power chord (vs n)

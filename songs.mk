@@ -2665,7 +2665,7 @@ $(MID_SUBDIR)/bw_seq_bgm_e_legend_born.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G274 -V118
 
 $(MID_SUBDIR)/bw_seq_bgm_vs_shin.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G276 -V091 -X
+	$(MID) $< $@ -E -R$(STD_REVERB) -G276 -V091
 
 $(MID_SUBDIR)/bw_seq_bgm_vs_n_2.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G276 -V105
@@ -3188,3 +3188,6 @@ $(MID_SUBDIR)/b2_seq_bgm_sw_d_27_l_ajito.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_vs_achroma.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V125
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_demo_union_00.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V127
