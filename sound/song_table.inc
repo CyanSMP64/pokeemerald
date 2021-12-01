@@ -1184,6 +1184,10 @@ gSongTable::
 	song b2_seq_bgm_sw_d_27_l_ajito, 0, 0
 	song b2_seq_bgm_vs_achroma, 0, 0
 	song b2_seq_bgm_sw_demo_union_00, 0, 0
+	song b2_seq_bgm_sw_demo_union_01, 0, 0
+	song b2_seq_bgm_sw_demo_union_02, 0, 0
+	song b2_seq_bgm_sw_demo_union_03, 0, 0
+	song b2_seq_bgm_vs_kyuramu, 0, 0
 
 	.align 2
 dummy_song_header:

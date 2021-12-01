@@ -1206,6 +1206,10 @@
 #define B2_SEQ_BGM_SW_D_27_L_AJITO    1180 // Infiltrating the Plasma Frigate!          (TODO: PORTAMENTO!!)
 #define B2_SEQ_BGM_VS_ACHROMA         1181 // Battle! (Colress)                         (TODO: PORTAMENTO!!)
 #define B2_SEQ_BGM_SW_DEMO_UNION_00   1182 // Awakening
+#define B2_SEQ_BGM_SW_DEMO_UNION_01   1183 // Confrontation
+#define B2_SEQ_BGM_SW_DEMO_UNION_02   1184 // Absorption
+#define B2_SEQ_BGM_SW_DEMO_UNION_03   1185 // Fusion
+#define B2_SEQ_BGM_VS_KYURAMU         1186 // Battle! (Black Kyurem/White Kyurem)
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().

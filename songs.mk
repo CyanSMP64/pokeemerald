@@ -3191,3 +3191,15 @@ $(MID_SUBDIR)/b2_seq_bgm_vs_achroma.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_sw_demo_union_00.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V127
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_demo_union_01.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V127
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_demo_union_02.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V127
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_demo_union_03.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V127
+
+$(MID_SUBDIR)/b2_seq_bgm_vs_kyuramu.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V125

@@ -21,7 +21,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup244, KeySplitTable102   @ drawbar organ | 56
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup292, KeySplitTable72    @ nylon str. guitar
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_suspensestringsc4, 255, 242, 191, 129
 	voice_directsound 60, 0, DirectSoundWaveData_b2_pinkstrate3, 255, 253, 0, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_170slapbg2, 255, 1, 227, 171
 	voice_keysplit voicegroup316, KeySplitTable41    @ clean guitar
@@ -53,7 +53,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup349, KeySplitTable76    @ synth lead (humilau)
 	voice_directsound 60, 0, DirectSoundWaveData_bw_fhornsripc3, 255, 248, 0, 205
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_gongf, 255, 251, 0, 205
 	voice_keysplit voicegroup220, KeySplitTable30    @ trombone (DPPt)
 	voice_directsound 60, 0, DirectSoundWaveData_bw_orchhitas2_leader, 255, 248, 0, 205
 	voice_keysplit voicegroup289, KeySplitTable39    @ trumpets (short start)

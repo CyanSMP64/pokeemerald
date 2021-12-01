@@ -1,10 +1,10 @@
 	.align 2
 voicegroup335:: @ B2W2 Misc.
 	voice_directsound 60, 0, DirectSoundWaveData_b2_unknown_screech, 255, 0, 255, 0
-	voice_directsound 60, 0, DirectSoundWaveData_b2_unknown_metalimpact, 255, 0, 255, 1
+	voice_directsound 60, 0, DirectSoundWaveData_b2_unknown_metalimpact, 255, 0, 227, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_timpani_high, 255, 248, 0, 205
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_brasshit_high, 255, 0, 227, 205
+	voice_directsound 60, 0, DirectSoundWaveData_b2_brasshit_low, 255, 251, 0, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -24,7 +24,7 @@ voicegroup335:: @ B2W2 Misc.
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_synthbassd2, 255, 251, 0, 205
 	voice_keysplit voicegroup255, KeySplitTable79    @ strings | 66
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_suspensestringsc4, 255, 242, 191, 129
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -35,7 +35,7 @@ voicegroup335:: @ B2W2 Misc.
 	voice_keysplit voicegroup256, KeySplitTable46    @ violin
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_bw_064flt2a5, 255, 246, 159, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_hg_133timpg3, 255, 251, 0, 205
@@ -66,8 +66,8 @@ voicegroup335:: @ B2W2 Misc.
 	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitminor60, 255, 0, 255, 205
 	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass_c1_16, 255, 1, 255, 216
 	voice_directsound 60, 0, DirectSoundWaveData_bw_spiccatostringse2, 255, 0, 255, 171
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_binaryleadc3, 255, 0, 255, 171
+	voice_keysplit voicegroup303, KeySplitTable81    @ choir full
 	voice_directsound 60, 0, DirectSoundWaveData_dp_tenorchoir48, 255, 200, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sopranochoir60, 255, 200, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_dp_whistle_c5_16, 255, 247, 78, 196
@@ -90,7 +90,7 @@ voicegroup335:: @ B2W2 Misc.
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_gongf, 255, 251, 0, 205
 	voice_keysplit voicegroup340, KeySplitTable118   @ pink strat
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_bw_guitarbendc5_plasma, 255, 197, 255, 2

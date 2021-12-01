@@ -5629,3 +5629,27 @@ DirectSoundWaveData_b2_timpani_high::
 	.align 2
 DirectSoundWaveData_b2_trombonesflutterb2::
 	.incbin "sound/direct_sound_samples/b2_trombonesflutterb2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_brasshit_high::
+	.incbin "sound/direct_sound_samples/b2_brasshit_high.bin"
+
+	.align 2
+DirectSoundWaveData_b2_brasshit_low::
+	.incbin "sound/direct_sound_samples/b2_brasshit_low.bin"
+
+	.align 2
+DirectSoundWaveData_b2_gongf::
+	.incbin "sound/direct_sound_samples/b2_gongf.bin"
+
+	.align 2
+DirectSoundWaveData_b2_suspensestringsc4::
+	.incbin "sound/direct_sound_samples/b2_suspensestringsc4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_binaryleadc3::
+	.incbin "sound/direct_sound_samples/b2_binaryleadc3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_snare_kyurem::
+	.incbin "sound/direct_sound_samples/b2_snare_kyurem.bin"

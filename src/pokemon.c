@@ -6484,9 +6484,10 @@ u16 GetBattleBGM(void)
         case SPECIES_ZEKROM:
             return BW_SEQ_BGM_VS_SHIN;
         case SPECIES_KYUREM:
+            return BW_SEQ_BGM_VS_RAI;
         case SPECIES_KYUREM_WHITE:
         case SPECIES_KYUREM_BLACK:
-            return BW_SEQ_BGM_VS_RAI;
+            return B2_SEQ_BGM_VS_KYURAMU;
         #endif
         default:
             return MUS_VS_WILD;
