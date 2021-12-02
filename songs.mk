@@ -3206,3 +3206,6 @@ $(MID_SUBDIR)/b2_seq_bgm_vs_kyuramu.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_vs_new_g_cis.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V090
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_r_23.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V105

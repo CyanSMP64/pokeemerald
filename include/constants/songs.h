@@ -1211,6 +1211,7 @@
 #define B2_SEQ_BGM_SW_DEMO_UNION_03   1185 // Fusion
 #define B2_SEQ_BGM_VS_KYURAMU         1186 // Battle! (Black Kyurem/White Kyurem)
 #define B2_SEQ_BGM_VS_NEW_G_CIS       1187 // Battle! (Ghetsis)                         (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_SW_R_23            1188 // Route 23
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
