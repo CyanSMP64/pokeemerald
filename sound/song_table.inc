@@ -1188,6 +1188,7 @@ gSongTable::
 	song b2_seq_bgm_sw_demo_union_02, 0, 0
 	song b2_seq_bgm_sw_demo_union_03, 0, 0
 	song b2_seq_bgm_vs_kyuramu, 0, 0
+	song b2_seq_bgm_vs_new_g_cis, 0, 0
 
 	.align 2
 dummy_song_header:

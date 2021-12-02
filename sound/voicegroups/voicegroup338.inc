@@ -29,7 +29,7 @@ voicegroup338:: @ B2W2 Drum Set 3 (ADDICTIVE DRUMS)
 	voice_directsound 64, 64, DirectSoundWaveData_bw_synthsnare_eyeplasma, 255, 0, 255, 2		@ 127/127/127/124/ 64	+ 4
 	voice_directsound 67, 64, DirectSoundWaveData_bw_synthsnare_eyeplasma, 255, 0, 255, 2		@ 127/127/127/124/ 64	+ 7
 	voice_directsound 60, 64, DirectSoundWaveData_bw_kickcymbal, 255, 0, 227, 205				@ 127/127/120/116/ 64	
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 58, 40, DirectSoundWaveData_b2_addictivetom, 255, 0, 255, 205				@ 127/127/127/116/ 40	- 2
 	voice_directsound 60, 64, DirectSoundWaveData_bw_808snarereverb, 255, 0, 227, 2    			@ 127/127/120/124/ 64	
 	voice_directsound 60, 64, DirectSoundWaveData_b2_synthkick, 255, 0, 255, 2					@ 127/127/127/124/ 64	
 	voice_directsound 61, 64, DirectSoundWaveData_b2_synthkick, 255, 0, 255, 2					@ 127/127/127/124/ 64	+ 1

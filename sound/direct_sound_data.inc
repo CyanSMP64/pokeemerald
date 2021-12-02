@@ -5653,3 +5653,7 @@ DirectSoundWaveData_b2_binaryleadc3::
 	.align 2
 DirectSoundWaveData_b2_snare_kyurem::
 	.incbin "sound/direct_sound_samples/b2_snare_kyurem.bin"
+
+	.align 2
+DirectSoundWaveData_b2_snaredark_ghetsis::
+	.incbin "sound/direct_sound_samples/b2_snaredark_ghetsis.bin"
