@@ -38,3 +38,4 @@ porymap.project.cfg
 log.txt
 *.diff
 *.sym
+*.js
