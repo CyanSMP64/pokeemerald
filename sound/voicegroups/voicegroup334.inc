@@ -13,7 +13,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit voicegroup297, KeySplitTable76    @ vibraphone
 	voice_keysplit voicegroup295, KeySplitTable74    @ marimba
 	voice_keysplit voicegroup240, KeySplitTable39    @ xylophone
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_bw_228vibrc6, 255, 248, 0, 205
 	voice_keysplit voicegroup241, KeySplitTable25    @ tubular bell
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup243, KeySplitTable76    @ music box
@@ -83,7 +83,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit_all voicegroup337				 @ drum set 2
 	voice_keysplit_all voicegroup336				 @ drum set 1
 	voice_keysplit_all voicegroup338				 @ drum set 3 (addictive drums)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_pinkstrate2, 255, 253, 0, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_solotrumpetc5, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_trombonesstaccatocs2, 255, 1, 227, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_spiccatostringse2, 255, 0, 255, 171
@@ -93,7 +93,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit voicegroup352, KeySplitTable128   @ gamelan
 	voice_keysplit voicegroup340, KeySplitTable118   @ pink strat
 	voice_directsound 60, 0, DirectSoundWaveData_b2_12oclock, 255, 251, 14, 171
-	voice_directsound 60, 0, DirectSoundWaveData_b2_vinylsfx, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_iris, 255, 0, 255, 0
 	voice_keysplit voicegroup347, KeySplitTable123   @ square lead
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sawtoothlead60, 255, 197, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_b2_doublsawc5, 255, 197, 255, 171
@@ -109,7 +109,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup348, KeySplitTable126   @ over run
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_vinylsfx, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_sewers, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_casteliagym, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_beautyintro, 255, 0, 255, 0

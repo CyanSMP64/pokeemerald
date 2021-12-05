@@ -4807,6 +4807,10 @@ DirectSoundWaveData_b2_drumloop_vscolress::
 	.incbin "sound/direct_sound_samples/b2_drumloop_vscolress.bin"
 
 	.align 2
+DirectSoundWaveData_b2_drumloop_iris::
+	.incbin "sound/direct_sound_samples/b2_drumloop_iris.bin"
+
+	.align 2
 DirectSoundWaveData_b2_pwtdrumsl1::
 	.incbin "sound/direct_sound_samples/b2_pwtdrumsl1.bin"
 
@@ -5709,3 +5713,7 @@ DirectSoundWaveData_b2_snare_n::
 	.align 2
 DirectSoundWaveData_b2_kick_n::
 	.incbin "sound/direct_sound_samples/b2_kick_n.bin"
+
+	.align 2
+DirectSoundWaveData_b2_snare_credits:
+	.incbin "sound/direct_sound_samples/b2_snare_credits.bin"

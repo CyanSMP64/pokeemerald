@@ -1670,6 +1670,9 @@ B2_SEQ_BGM_MUGEN_D_W          = B2 04
 B2_SEQ_ME_OTAMARO             = B3 04
 B2_SEQ_ME_ZUKAN_01            = B4 04
 B2_SEQ_ME_MD_FAN04            = B5 04
+B2_SEQ_BGM_VS_IRIS            = B6 04
+B2_SEQ_BGM_ENDING             = B7 04
+B2_SEQ_BGM_THEEND             = B8 04
 
 A_BUTTON = F8 00
 B_BUTTON = F8 01

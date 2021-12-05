@@ -3260,3 +3260,12 @@ $(MID_SUBDIR)/b2_seq_me_zukan_01.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_me_md_fan04.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V076 -p5
+
+$(MID_SUBDIR)/b2_seq_bgm_vs_iris.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V127
+
+$(MID_SUBDIR)/b2_seq_bgm_ending.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V127
+
+$(MID_SUBDIR)/b2_seq_bgm_theend.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V115

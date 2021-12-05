@@ -1207,6 +1207,9 @@ gSongTable::
 	song b2_seq_me_otamaro, 2, 2
 	song b2_seq_me_zukan_01, 2, 2
 	song b2_seq_me_md_fan04, 2, 2
+	song b2_seq_bgm_vs_iris, 0, 0
+	song b2_seq_bgm_ending, 0, 0
+	song b2_seq_bgm_theend, 0, 0
 
 	.align 2
 dummy_song_header:

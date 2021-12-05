@@ -1896,6 +1896,9 @@ SECTIONS {
         sound/songs/midi/b2_seq_me_otamaro.o(.rodata);
         sound/songs/midi/b2_seq_me_zukan_01.o(.rodata);
         sound/songs/midi/b2_seq_me_md_fan04.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_vs_iris.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_ending.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_theend.o(.rodata);
     } =0
 
     lib_rodata :

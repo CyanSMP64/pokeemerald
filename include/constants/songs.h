@@ -1229,6 +1229,9 @@
 #define B2_SEQ_ME_OTAMARO             1203 // Tympole Choir                             (TODO: PORTAMENTO!!)
 #define B2_SEQ_ME_ZUKAN_01            1204 // Pokédex Habitat List Complete!
 #define B2_SEQ_ME_MD_FAN04            1205 // Medal Rally Complete!
+#define B2_SEQ_BGM_VS_IRIS            1206 // Battle! (Champion Iris)
+#define B2_SEQ_BGM_ENDING             1207 // Staff Credits
+#define B2_SEQ_BGM_THEEND             1208 // The End
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
