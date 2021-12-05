@@ -1659,6 +1659,17 @@ B2_SEQ_BGM_E_N_SWAN           = A7 04
 B2_SEQ_BGM_VS_SWAN_N          = A8 04
 B2_SEQ_BGM_DATA_CONV          = A9 04
 B2_SEQ_BGM_LCG_01             = AA 04
+B2_SEQ_ME_LCG_01              = AB 04
+B2_SEQ_ME_LCG_02              = AC 04
+B2_SEQ_BGM_SW_D_UMA           = AD 04
+B2_SEQ_BGM_VS_UMA             = AE 04
+B2_SEQ_BGM_MUGEN_LOBBY_B      = AF 04
+B2_SEQ_BGM_MUGEN_D_B          = B0 04
+B2_SEQ_BGM_MUGEN_LOBBY_W      = B1 04
+B2_SEQ_BGM_MUGEN_D_W          = B2 04
+B2_SEQ_ME_OTAMARO             = B3 04
+B2_SEQ_ME_ZUKAN_01            = B4 04
+B2_SEQ_ME_MD_FAN04            = B5 04
 
 A_BUTTON = F8 00
 B_BUTTON = F8 01

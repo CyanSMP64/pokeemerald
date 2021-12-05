@@ -53,7 +53,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit voicegroup314, KeySplitTable71    @ alto sax
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_wind, 67, 243, 155, 224
 	voice_keysplit voicegroup260, KeySplitTable131   @ timpani || 64
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup327, KeySplitTable72    @ french horns | 52 | 60
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
@@ -125,3 +125,6 @@ voicegroup334:: @ B2W2 Sato
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_reversalmountain, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_shadowtriad, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_humilaugym, 255, 0, 255, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_cry_tympole, 255, 0, 255, 0

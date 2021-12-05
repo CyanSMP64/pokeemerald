@@ -81,8 +81,8 @@ voicegroup336:: @ B2W2 Drum Set 1
 	voice_directsound 60, 84, DirectSoundWaveData_b2_tani_tom2, 255, 250, 0, 214				@ 127/ 70/  0/114/ 84
 	voice_directsound 61, 64, DirectSoundWaveData_b2_tani_tom2, 255, 250, 0, 214				@ 127/ 70/  0/114/ 64	+ 1
 	voice_directsound 60, 64, DirectSoundWaveData_b2_tani_splash, 255, 250, 0, 205				@ 127/ 70/  0/116/ 64
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 84, DirectSoundWaveData_b2_tani_splash, 255, 250, 0, 205				@ 127/ 70/  0/116/ 84
+	voice_directsound 60, 64, DirectSoundWaveData_b2_tani_kick, 255, 0, 227, 205				@ 127/127/120/116/ 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 32, DirectSoundWaveData_bw_213tri_closed, 255, 234, 191, 205    		@ 127/110/110/116/ 32
 	voice_directsound 60, 32, DirectSoundWaveData_bw_214tri_open, 255, 234, 191, 205    		@ 127/110/110/116/ 32

@@ -1218,6 +1218,17 @@
 #define B2_SEQ_BGM_VS_SWAN_N          1192 // Battle! (N)                               (TODO: PORTAMENTO!!)
 #define B2_SEQ_BGM_DATA_CONV          1193 // Unova Link
 #define B2_SEQ_BGM_LCG_01             1194 // Xtransceiver Minigames
+#define B2_SEQ_ME_LCG_01              1195 // Xtransceiver - Game Start!
+#define B2_SEQ_ME_LCG_02              1196 // Xtransceiver - Game Won!
+#define B2_SEQ_BGM_SW_D_UMA           1197 // Cave of Being
+#define B2_SEQ_BGM_VS_UMA             1198 // Battle! (Azelf/Mesprit/Uxie)
+#define B2_SEQ_BGM_MUGEN_LOBBY_B      1199 // Black Tower: Entrance
+#define B2_SEQ_BGM_MUGEN_D_B          1200 // Black Tower
+#define B2_SEQ_BGM_MUGEN_LOBBY_W      1201 // White Treehollow: Entrance
+#define B2_SEQ_BGM_MUGEN_D_W          1202 // White Treehollow
+#define B2_SEQ_ME_OTAMARO             1203 // Tympole Choir                             (TODO: PORTAMENTO!!)
+#define B2_SEQ_ME_ZUKAN_01            1204 // Pokédex Habitat List Complete!
+#define B2_SEQ_ME_MD_FAN04            1205 // Medal Rally Complete!
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().

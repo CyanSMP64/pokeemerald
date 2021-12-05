@@ -1885,6 +1885,17 @@ SECTIONS {
         sound/songs/midi/b2_seq_bgm_vs_swan_n.o(.rodata);
         sound/songs/midi/b2_seq_bgm_data_conv.o(.rodata);
         sound/songs/midi/b2_seq_bgm_lcg_01.o(.rodata);
+        sound/songs/midi/b2_seq_me_lcg_01.o(.rodata);
+        sound/songs/midi/b2_seq_me_lcg_02.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_sw_d_uma.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_vs_uma.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_mugen_lobby_b.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_mugen_d_b.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_mugen_lobby_w.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_mugen_d_w.o(.rodata);
+        sound/songs/midi/b2_seq_me_otamaro.o(.rodata);
+        sound/songs/midi/b2_seq_me_zukan_01.o(.rodata);
+        sound/songs/midi/b2_seq_me_md_fan04.o(.rodata);
     } =0
 
     lib_rodata :

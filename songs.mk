@@ -3227,3 +3227,36 @@ $(MID_SUBDIR)/b2_seq_bgm_data_conv.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_lcg_01.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V120
+
+$(MID_SUBDIR)/b2_seq_me_lcg_01.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V063 -p5
+
+$(MID_SUBDIR)/b2_seq_me_lcg_02.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V082 -p5
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_d_uma.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V080
+
+$(MID_SUBDIR)/b2_seq_bgm_vs_uma.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V090
+
+$(MID_SUBDIR)/b2_seq_bgm_mugen_lobby_b.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V080
+
+$(MID_SUBDIR)/b2_seq_bgm_mugen_d_b.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V090
+
+$(MID_SUBDIR)/b2_seq_bgm_mugen_lobby_w.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V072
+
+$(MID_SUBDIR)/b2_seq_bgm_mugen_d_w.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V078
+
+$(MID_SUBDIR)/b2_seq_me_otamaro.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V100 -p5
+
+$(MID_SUBDIR)/b2_seq_me_zukan_01.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V110 -p5
+
+$(MID_SUBDIR)/b2_seq_me_md_fan04.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V076 -p5

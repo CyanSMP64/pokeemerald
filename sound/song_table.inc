@@ -1159,8 +1159,8 @@ gSongTable::
 	song b2_seq_bgm_e_cheren, 0, 0
 	song b2_seq_bgm_kemonomichi, 0, 0
 	song b2_seq_bgm_flight_gym_01, 0, 0
-	song b2_seq_me_md_fan03, 0, 0
-	song b2_seq_me_md_fan01, 0, 0
+	song b2_seq_me_md_fan03, 2, 2
+	song b2_seq_me_md_fan01, 2, 2
 	song b2_seq_bgm_sw_t_07, 0, 0
 	song b2_seq_bgm_sw_kazan, 0, 0
 	song b2_seq_bgm_sw_d_24_b, 0, 0
@@ -1196,6 +1196,17 @@ gSongTable::
 	song b2_seq_bgm_vs_swan_n, 0, 0
 	song b2_seq_bgm_data_conv, 0, 0
 	song b2_seq_bgm_lcg_01, 0, 0
+	song b2_seq_me_lcg_01, 2, 2
+	song b2_seq_me_lcg_02, 2, 2
+	song b2_seq_bgm_sw_d_uma, 0, 0
+	song b2_seq_bgm_vs_uma, 0, 0
+	song b2_seq_bgm_mugen_lobby_b, 0, 0
+	song b2_seq_bgm_mugen_d_b, 0, 0
+	song b2_seq_bgm_mugen_lobby_w, 0, 0
+	song b2_seq_bgm_mugen_d_w, 0, 0
+	song b2_seq_me_otamaro, 2, 2
+	song b2_seq_me_zukan_01, 2, 2
+	song b2_seq_me_md_fan04, 2, 2
 
 	.align 2
 dummy_song_header:

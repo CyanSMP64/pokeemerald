@@ -4691,6 +4691,30 @@ DirectSoundWaveData_b2_tani_stringsc3marcato::
 	.incbin "sound/direct_sound_samples/b2_tani_stringsc3marcato.bin"
 
 	.align 2
+DirectSoundWaveData_b2_tani_synthbassd2::
+	.incbin "sound/direct_sound_samples/b2_tani_synthbassd2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_tani_rhodesdmaj7::
+	.incbin "sound/direct_sound_samples/b2_tani_rhodesdmaj7.bin"
+
+	.align 2
+DirectSoundWaveData_b2_tani_sawdmaj7::
+	.incbin "sound/direct_sound_samples/b2_tani_sawdmaj7.bin"
+
+	.align 2
+DirectSoundWaveData_b2_tani_chiff::
+	.incbin "sound/direct_sound_samples/b2_tani_chiff.bin"
+
+	.align 2
+DirectSoundWaveData_b2_tani_falling::
+	.incbin "sound/direct_sound_samples/b2_tani_falling.bin"
+
+	.align 2
+DirectSoundWaveData_b2_tani_kick::
+	.incbin "sound/direct_sound_samples/b2_tani_kick.bin"
+
+	.align 2
 DirectSoundWaveData_b2_tani_snare::
 	.incbin "sound/direct_sound_samples/b2_tani_snare.bin"
 
@@ -4921,6 +4945,10 @@ DirectSoundWaveData_b2_drums_marinetube9::
 	.align 2
 DirectSoundWaveData_b2_drums_marinetube10::
 	.incbin "sound/direct_sound_samples/b2_drums_marinetube10.bin"
+
+	.align 2
+DirectSoundWaveData_b2_cry_tympole::
+	.incbin "sound/direct_sound_samples/b2_cry_tympole.bin"
 
 	.align 2
 DirectSoundWaveData_b2_woodblockhi::

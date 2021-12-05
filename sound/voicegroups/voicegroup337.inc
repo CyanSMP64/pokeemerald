@@ -39,7 +39,7 @@ voicegroup337:: @ B2W2 Drum Set 2
 	voice_directsound 60, 64, DirectSoundWaveData_bw_109kick, 255, 0, 227, 205    					@ 127/127/120/116/ 64
 	voice_directsound 62, 64, DirectSoundWaveData_bw_110kick, 255, 0, 227, 205						@ 127/127/120/116/ 64	+ 2
 	voice_directsound 60, 64, DirectSoundWaveData_bw_176snare, 255, 0, 227, 205						@ 127/127/120/116/ 64
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 61, 64, DirectSoundWaveData_bw_172snare909, 255, 0, 227, 205    				@ 127/127/120/116/ 64	+ 1
 	voice_directsound 60, 64, DirectSoundWaveData_dp_093snare, 255, 226, 127, 205    				@ 127/114/ 90/116/ 64
 	voice_directsound 60, 30, DirectSoundWaveData_hg_135tom, 255, 0, 255, 205    					@ 127/127/127/116/ 30	
 	voice_directsound 60, 80, DirectSoundWaveData_hg_062chh, 255, 78, 0, 205						@ 127/124/  0/116/ 80
@@ -97,12 +97,12 @@ voicegroup337:: @ B2W2 Drum Set 2
 	voice_directsound 60, 58, DirectSoundWaveData_dp_tambourine_16, 255, 0, 255, 205				@ 127/127/127/116/ 58
 	voice_directsound 60, 46, DirectSoundWaveData_bw_synthchh_vsrival, 255, 0, 255, 0    			@ 127/127/127/127/ 46
 	voice_directsound 60, 46, DirectSoundWaveData_bw_synthohh_vsrival, 255, 246, 0, 0    			@ 127/ 90/  0/127/ 46
+	voice_directsound 60, 64, DirectSoundWaveData_dp_bassdr2_16, 255, 0, 255, 0						@ 127/127/127/127/ 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 64, DirectSoundWaveData_dp_093snare, 255, 226, 127, 255    				@ 127/114/ 90/127/ 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 62, 64, DirectSoundWaveData_dp_093snare, 255, 226, 127, 255    				@ 127/114/ 90/127/ 64	+ 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
