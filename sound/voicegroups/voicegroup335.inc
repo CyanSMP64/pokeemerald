@@ -12,12 +12,12 @@ voicegroup335:: @ B2W2 Misc.
 	voice_keysplit voicegroup198, KeySplitTable9     @ fm ep (dppt)
 	voice_directsound 60, 0, DirectSoundWaveData_bw_074glocknc5, 255, 249, 0, 205
 	voice_keysplit voicegroup244, KeySplitTable40    @ drawbar organ
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_keysplit voicegroup237, KeySplitTable83    @ rhodes 2 (hgss)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_bw_choirfemale1_ghetsis, 255, 0, 227, 205
 	voice_directsound 60, 0, DirectSoundWaveData_bw_choirfemale2_ghetsis, 255, 0, 227, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_keysplit voicegroup355, KeySplitTable40    @ drawbar organ with attack
 	voice_keysplit voicegroup206, KeySplitTable17    @ drawbar organ (dppt)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -57,9 +57,9 @@ voicegroup335:: @ B2W2 Misc.
 	voice_keysplit voicegroup220, KeySplitTable30    @ trombone (dppt)
 	voice_keysplit voicegroup289, KeySplitTable39    @ trumpets (short start)
 	voice_keysplit voicegroup219, KeySplitTable29    @ trumpets 1 (dppt)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_puresquare_25, 28, 255, 127, 192
+	voice_square_2 60, 0, 3, 1, 0, 15, 2
+	voice_square_1 60, 0, 0, 3, 1, 0, 15, 2
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar1, 255, 197, 159, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar2, 255, 197, 159, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar3, 255, 197, 159, 192
@@ -71,7 +71,7 @@ voicegroup335:: @ B2W2 Misc.
 	voice_directsound 60, 0, DirectSoundWaveData_dp_tenorchoir48, 255, 200, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sopranochoir60, 255, 200, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_dp_whistle_c5_16, 255, 247, 78, 196
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_programmable_wave 60, 0, ProgrammableWaveData_sq12halfoct, 0, 3, 11, 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0

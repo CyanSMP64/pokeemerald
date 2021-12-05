@@ -2171,6 +2171,10 @@ DirectSoundWaveData_sd90_enhanced_delay_shaku::
 	.incbin "sound/direct_sound_samples/sd90_enhanced_delay_shaku.bin"
 
 	.align 2
+DirectSoundWaveData_puresquare_25::
+	.incbin "sound/direct_sound_samples/puresquare_25.bin"
+
+	.align 2
 DirectSoundWaveData_puresquare_37::
 	.incbin "sound/direct_sound_samples/puresquare_37.bin"
 
@@ -5657,3 +5661,23 @@ DirectSoundWaveData_b2_snare_kyurem::
 	.align 2
 DirectSoundWaveData_b2_snaredark_ghetsis::
 	.incbin "sound/direct_sound_samples/b2_snaredark_ghetsis.bin"
+
+	.align 2
+DirectSoundWaveData_b2_vinylsfx::
+	.incbin "sound/direct_sound_samples/b2_vinylsfx.bin"
+
+	.align 2
+DirectSoundWaveData_b2_powerchord_n::
+	.incbin "sound/direct_sound_samples/b2_powerchord_n.bin"
+
+	.align 2
+DirectSoundWaveData_b2_guitarchug_n::
+	.incbin "sound/direct_sound_samples/b2_guitarchug_n.bin"
+
+	.align 2
+DirectSoundWaveData_b2_snare_n::
+	.incbin "sound/direct_sound_samples/b2_snare_n.bin"
+
+	.align 2
+DirectSoundWaveData_b2_kick_n::
+	.incbin "sound/direct_sound_samples/b2_kick_n.bin"

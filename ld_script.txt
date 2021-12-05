@@ -1879,6 +1879,12 @@ SECTIONS {
         sound/songs/midi/b2_seq_bgm_vs_kyuramu.o(.rodata);
         sound/songs/midi/b2_seq_bgm_vs_new_g_cis.o(.rodata);
         sound/songs/midi/b2_seq_bgm_sw_r_23.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_sw_d_n_castle.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_sw_d_n_room.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_e_n_swan.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_vs_swan_n.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_data_conv.o(.rodata);
+        sound/songs/midi/b2_seq_bgm_lcg_01.o(.rodata);
     } =0
 
     lib_rodata :

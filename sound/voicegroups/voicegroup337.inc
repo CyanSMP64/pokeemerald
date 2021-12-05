@@ -23,7 +23,7 @@ voicegroup337:: @ B2W2 Drum Set 2
 	voice_directsound 63, 20, DirectSoundWaveData_dp_china_cynbal, 255, 250, 0, 226					@ 127/ 70/  0/110/ 20	+ 3
 	voice_directsound 60, 36, DirectSoundWaveData_dp_cymbal1_16, 255, 250, 0, 216					@ 127/ 70/  0/114/ 36
 	voice_directsound 61, 102, DirectSoundWaveData_dp_cymbal1_16, 255, 250, 0, 216					@ 127/ 70/  0/114/102	+ 1
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 64, DirectSoundWaveData_bw_108kick909, 255, 0, 227, 205    				@ 127/127/120/116/ 64
 	voice_directsound 60, 64, DirectSoundWaveData_b2_synthkick, 255, 0, 227, 171    				@ 127/127/120/120/ 64	
 	voice_directsound 61, 64, DirectSoundWaveData_b2_synthkick, 255, 0, 227, 171    				@ 127/127/120/120/ 64	+ 1
 	voice_directsound 48, 64, DirectSoundWaveData_dp_reverscyn_16, 2, 0, 227, 171			    	@   3/127/120/120/ 64
@@ -92,3 +92,39 @@ voicegroup337:: @ B2W2 Drum Set 2
 	voice_directsound 60, 64, DirectSoundWaveData_bw_gongp, 255, 0, 255, 0    						@ 127/127/127/127/ 64
 	voice_directsound 60, 64, DirectSoundWaveData_b2_synthsnare_shadowtriad, 255, 0, 227, 205    	@ 127/127/120/116/ 64	
 	voice_directsound 60, 30, DirectSoundWaveData_b2_ohh_shadowtriad, 255, 251, 0, 210    			@ 127/ 60/  0/115/ 30	
+	voice_directsound 63, 80, DirectSoundWaveData_bw_101chh909, 255, 239, 0, 205    				@ 127/105/  0/116/ 80	+ 3
+	voice_directsound 61, 80, DirectSoundWaveData_bw_104ohh909, 255, 241, 0, 205    				@ 127/102/  0/116/ 80	+ 1
+	voice_directsound 60, 58, DirectSoundWaveData_dp_tambourine_16, 255, 0, 255, 205				@ 127/127/127/116/ 58
+	voice_directsound 60, 46, DirectSoundWaveData_bw_synthchh_vsrival, 255, 0, 255, 0    			@ 127/127/127/127/ 46
+	voice_directsound 60, 46, DirectSoundWaveData_bw_synthohh_vsrival, 255, 246, 0, 0    			@ 127/ 90/  0/127/ 46
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0

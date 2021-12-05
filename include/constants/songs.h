@@ -1212,6 +1212,12 @@
 #define B2_SEQ_BGM_VS_KYURAMU         1186 // Battle! (Black Kyurem/White Kyurem)
 #define B2_SEQ_BGM_VS_NEW_G_CIS       1187 // Battle! (Ghetsis)                         (TODO: PORTAMENTO!!)
 #define B2_SEQ_BGM_SW_R_23            1188 // Route 23
+#define B2_SEQ_BGM_SW_D_N_CASTLE      1189 // N's Castle
+#define B2_SEQ_BGM_SW_D_N_ROOM        1190 // N's Room
+#define B2_SEQ_BGM_E_N_SWAN           1191 // N's Theme
+#define B2_SEQ_BGM_VS_SWAN_N          1192 // Battle! (N)                               (TODO: PORTAMENTO!!)
+#define B2_SEQ_BGM_DATA_CONV          1193 // Unova Link
+#define B2_SEQ_BGM_LCG_01             1194 // Xtransceiver Minigames
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().

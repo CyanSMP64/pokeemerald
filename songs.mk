@@ -3209,3 +3209,21 @@ $(MID_SUBDIR)/b2_seq_bgm_vs_new_g_cis.s: %.s: %.mid
 
 $(MID_SUBDIR)/b2_seq_bgm_sw_r_23.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V105
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_d_n_castle.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V120
+
+$(MID_SUBDIR)/b2_seq_bgm_sw_d_n_room.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V093
+
+$(MID_SUBDIR)/b2_seq_bgm_e_n_swan.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V095
+
+$(MID_SUBDIR)/b2_seq_bgm_vs_swan_n.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G333 -V127
+
+$(MID_SUBDIR)/b2_seq_bgm_data_conv.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G334 -V072
+
+$(MID_SUBDIR)/b2_seq_bgm_lcg_01.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G335 -V120

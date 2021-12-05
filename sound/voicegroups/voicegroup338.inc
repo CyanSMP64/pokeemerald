@@ -96,7 +96,7 @@ voicegroup338:: @ B2W2 Drum Set 3 (ADDICTIVE DRUMS)
 	voice_directsound 63, 110, DirectSoundWaveData_b2_addictiveridebell, 255, 248, 0, 224		@ 127/ 80/  0/110/110	+ 3
 	voice_directsound 64, 110, DirectSoundWaveData_b2_addictiveridebell, 255, 248, 0, 224		@ 127/ 80/  0/110/110	+ 4
 	voice_directsound 65, 110, DirectSoundWaveData_b2_addictiveridebell, 255, 248, 0, 224		@ 127/ 80/  0/110/110	+ 5
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 32, 117, DirectSoundWaveData_hg_032crash, 255, 246, 0, 214				@ 127/ 90/  0/114/117	-28
 	voice_directsound 61, 7, DirectSoundWaveData_bw_synthchh_vsrival, 255, 0, 255, 2    		@ 127/127/127/124/  7	+ 1
 	voice_directsound 62, 7, DirectSoundWaveData_bw_synthohh_vsrival, 255, 0, 255, 2    		@ 127/127/127/124/  7	+ 2
 	voice_directsound 62, 14, DirectSoundWaveData_hg_032crash, 255, 248, 0, 214					@ 127/ 80/  0/114/ 14	+ 2

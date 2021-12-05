@@ -47,12 +47,12 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit voicegroup288, KeySplitTable46    @ oboe
 	voice_keysplit voicegroup266, KeySplitTable52    @ clarinet
 	voice_keysplit voicegroup267, KeySplitTable53    @ flute 1 (hgss)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup266, KeySplitTable113   @ clarinet | 60
 	voice_keysplit voicegroup328, KeySplitTable65    @ flute 1
 	voice_keysplit voicegroup268, KeySplitTable54    @ bassoon
 	voice_keysplit voicegroup314, KeySplitTable71    @ alto sax
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_wind, 67, 243, 155, 224
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_keysplit voicegroup260, KeySplitTable131   @ timpani || 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
@@ -93,7 +93,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit voicegroup352, KeySplitTable128   @ gamelan
 	voice_keysplit voicegroup340, KeySplitTable118   @ pink strat
 	voice_directsound 60, 0, DirectSoundWaveData_b2_12oclock, 255, 251, 14, 171
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_vinylsfx, 255, 0, 255, 0
 	voice_keysplit voicegroup347, KeySplitTable123   @ square lead
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sawtoothlead60, 255, 197, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_b2_doublsawc5, 255, 197, 255, 171

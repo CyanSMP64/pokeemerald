@@ -9,7 +9,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup341, KeySplitTable120   @ piano 3
 	voice_keysplit voicegroup332, KeySplitTable114   @ piano (longer decay)
 	voice_keysplit voicegroup323, KeySplitTable93    @ piano | 41 | 46 | 53 | 58 | 65
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_powerchord_n, 255, 253, 0, 171
 	voice_keysplit voicegroup297, KeySplitTable76    @ vibraphone
 	voice_directsound 60, 0, DirectSoundWaveData_b2_synthpadc4_marinetube, 255, 251, 0, 205
 	voice_keysplit voicegroup240, KeySplitTable115   @ xylophone || 74
@@ -19,7 +19,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_b2_orchchimesg2, 255, 253, 0, 214
 	voice_keysplit voicegroup244, KeySplitTable71    @ drawbar organ
 	voice_keysplit voicegroup244, KeySplitTable102   @ drawbar organ | 56
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_b2_guitarchug_n, 255, 253, 0, 171
 	voice_keysplit voicegroup292, KeySplitTable72    @ nylon str. guitar
 	voice_directsound 60, 0, DirectSoundWaveData_b2_suspensestringsc4, 255, 242, 191, 129
 	voice_directsound 60, 0, DirectSoundWaveData_b2_pinkstrate3, 255, 253, 0, 171
