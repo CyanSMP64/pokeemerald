@@ -1,4 +1,5 @@
 	.align 2
 voicegroup345:: @ 
-	voice_directsound 60, 0, DirectSoundWaveData_bw_062rhodc4, 255, 250, 0, 1
-	voice_directsound 60, 0, DirectSoundWaveData_bw_063rhodc5, 255, 250, 0, 1
+	voice_directsound 60, 0, DirectSoundWaveData_hg_038drawbc3, 42, 197, 227, 205
+	voice_directsound 60, 0, DirectSoundWaveData_hg_039drawbc4, 42, 0, 255, 205
+	voice_directsound 60, 0, DirectSoundWaveData_hg_040drawbc5, 42, 0, 255, 205

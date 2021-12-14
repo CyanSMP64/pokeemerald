@@ -8,7 +8,7 @@ voicegroup275:: @ BW Sato
 	voice_keysplit voicegroup234, KeySplitTable36    @ piano 2
 	voice_keysplit voicegroup326, KeySplitTable36    @ tack piano
 	voice_keysplit voicegroup290, KeySplitTable70    @ harpsichord
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_keysplit voicegroup300, KeySplitTable36    @ rhodes (short release)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
 	voice_keysplit voicegroup297, KeySplitTable76    @ vibraphone
 	voice_keysplit voicegroup295, KeySplitTable74    @ marimba

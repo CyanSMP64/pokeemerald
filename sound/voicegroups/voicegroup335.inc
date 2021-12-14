@@ -17,7 +17,7 @@ voicegroup335:: @ B2W2 Misc.
 	voice_directsound 60, 0, DirectSoundWaveData_bw_choirfemale1_ghetsis, 255, 0, 227, 205
 	voice_directsound 60, 0, DirectSoundWaveData_bw_choirfemale2_ghetsis, 255, 0, 227, 205
 	voice_keysplit voicegroup291, KeySplitTable71    @ accordion
-	voice_keysplit voicegroup355, KeySplitTable40    @ drawbar organ with attack
+	voice_keysplit voicegroup345, KeySplitTable40    @ drawbar organ with attack
 	voice_keysplit voicegroup206, KeySplitTable17    @ drawbar organ (dppt)
 	voice_directsound 60, 0, DirectSoundWaveData_dp_altosax_c3_16, 255, 219, 252, 196
 	voice_directsound 60, 0, DirectSoundWaveData_dp_reverscyn_16, 255, 0, 255, 0

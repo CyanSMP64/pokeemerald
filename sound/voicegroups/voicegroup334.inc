@@ -4,7 +4,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit voicegroup237, KeySplitTable9     @ rhodes 2 (hgss)
 	voice_keysplit voicegroup235, KeySplitTable91    @ piano octave
 	voice_keysplit voicegroup294, KeySplitTable36    @ rhodes
-	voice_keysplit voicegroup345, KeySplitTable36    @ rhodes (short release)
+	voice_keysplit voicegroup300, KeySplitTable36    @ rhodes (short release)
 	voice_keysplit voicegroup234, KeySplitTable36    @ piano 2
 	voice_keysplit voicegroup290, KeySplitTable70    @ harpsichord
 	voice_keysplit voicegroup323, KeySplitTable59    @ piano (all splits)

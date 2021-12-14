@@ -23,7 +23,7 @@ voicegroup274:: @ BW Kageyama
 	voice_keysplit voicegroup292, KeySplitTable72    @ nylon str. guitar
 	voice_keysplit voicegroup252, KeySplitTable42    @ upright bass
 	voice_keysplit voicegroup247, KeySplitTable72    @ nylon guitar (HGSS)
-	voice_keysplit voicegroup300, KeySplitTable8     @ fingered bass (pokecenter, icirrus)
+	voice_directsound 60, 0, DirectSoundWaveData_bw_fingerbassa2_pc, 255, 234, 191, 192
 	voice_keysplit voicegroup298, KeySplitTable77    @ strings 2
 	voice_keysplit voicegroup311, KeySplitTable86    @ fretless bass
 	voice_keysplit voicegroup293, KeySplitTable48    @ pizzicato

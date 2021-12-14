@@ -141,7 +141,7 @@ static const struct Fanfare sFanfares[] = {
     [FANFARE_B2_WON_MINIGAME]          = { B2_SEQ_ME_LCG_02,          156 },
     [FANFARE_B2_TYMPOLE_CHOIR]         = { B2_SEQ_ME_OTAMARO,         307 },
     [FANFARE_B2_HABITAT_LIST_COMPLETE] = { B2_SEQ_ME_ZUKAN_01,        152 },
-    [FANFARE_B2_MEDAL_RALLY_COMPLETE]  = { B2_SEQ_ME_MD_FAN04,        152 },
+    [FANFARE_B2_MEDAL_RALLY_COMPLETE]  = { B2_SEQ_ME_MD_FAN04,        240 },
 };
 
 void InitMapMusic(void)

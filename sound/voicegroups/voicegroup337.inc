@@ -100,9 +100,9 @@ voicegroup337:: @ B2W2 Drum Set 2
 	voice_directsound 60, 64, DirectSoundWaveData_dp_bassdr2_16, 255, 0, 255, 0						@ 127/127/127/127/ 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 64, DirectSoundWaveData_dp_093snare, 255, 226, 127, 255    				@ 127/114/ 90/127/ 64
+	voice_directsound 60, 64, DirectSoundWaveData_dp_093snare, 255, 226, 127, 0    					@ 127/114/ 90/127/ 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 62, 64, DirectSoundWaveData_dp_093snare, 255, 226, 127, 255    				@ 127/114/ 90/127/ 64	+ 2
+	voice_directsound 62, 64, DirectSoundWaveData_dp_093snare, 255, 226, 127, 0    					@ 127/114/ 90/127/ 64	+ 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
