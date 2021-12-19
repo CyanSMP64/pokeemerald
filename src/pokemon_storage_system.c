@@ -71,6 +71,8 @@ enum {
     MSG_WAS_DEPOSITED,
     MSG_BOX_IS_FULL,
     MSG_RELEASE_POKE,
+    MSG_RELEASE_POKE2,
+    MSG_RELEASE_POKE3,
     MSG_WAS_RELEASED,
     MSG_BYE_BYE,
     MSG_MARK_POKE,
@@ -1085,6 +1087,8 @@ static const struct StorageMessage sMessages[] =
     [MSG_WAS_DEPOSITED]        = {gText_PkmnWasDeposited,        MSG_VAR_MON_NAME_1},
     [MSG_BOX_IS_FULL]          = {gText_BoxIsFull2,              MSG_VAR_NONE},
     [MSG_RELEASE_POKE]         = {gText_ReleaseThisPokemon,      MSG_VAR_NONE},
+    [MSG_RELEASE_POKE2]        = {gText_ReleaseThisPokemon2,     MSG_VAR_NONE},
+    [MSG_RELEASE_POKE3]        = {gText_ReleaseThisPokemon3,     MSG_VAR_NONE},
     [MSG_WAS_RELEASED]         = {gText_PkmnWasReleased,         MSG_VAR_RELEASE_MON_1},
     [MSG_BYE_BYE]              = {gText_ByeByePkmn,              MSG_VAR_RELEASE_MON_3},
     [MSG_MARK_POKE]            = {gText_MarkYourPkmn,            MSG_VAR_NONE},
@@ -2941,9 +2945,9 @@ static void Task_ReleaseMon(u8 taskId)
             break;
         case  0: // Yes
             ClearBottomWindow();
-            InitCanReleaseMonVars();
-            InitReleaseMon();
-            sStorage->state++;
+//            InitCanReleaseMonVars();
+//            InitReleaseMon();
+            sStorage->state = 14;
             break;
         }
         break;
@@ -3048,6 +3052,46 @@ static void Task_ReleaseMon(u8 taskId)
         {
             ClearBottomWindow();
             SetPokeStorageTask(Task_PokeStorageMain);
+        }
+        break;
+    case 14:
+        PrintMessage(MSG_RELEASE_POKE2);
+        ShowYesNoWindow(1);
+        sStorage->state++;
+    case 15:
+        switch (Menu_ProcessInputNoWrapClearOnChoose())
+        {
+        case MENU_B_PRESSED:
+        case  1: // No
+            ClearBottomWindow();
+            SetPokeStorageTask(Task_PokeStorageMain);
+            break;
+        case  0: // Yes
+            ClearBottomWindow();
+//            InitCanReleaseMonVars();
+//            InitReleaseMon();
+            sStorage->state++;
+            break;
+        }
+        break;
+    case 16:
+        PrintMessage(MSG_RELEASE_POKE3);
+        ShowYesNoWindow(1);
+        sStorage->state++;
+    case 17:
+        switch (Menu_ProcessInputNoWrapClearOnChoose())
+        {
+        case MENU_B_PRESSED:
+        case  1: // No
+            ClearBottomWindow();
+            SetPokeStorageTask(Task_PokeStorageMain);
+            break;
+        case  0: // Yes
+            ClearBottomWindow();
+            InitCanReleaseMonVars();
+            InitReleaseMon();
+            sStorage->state = 2;
+            break;
         }
         break;
     }

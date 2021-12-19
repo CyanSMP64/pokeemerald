@@ -68,8 +68,10 @@ enum {
 
 // Message IDs for Item Storage
 enum {
-    MSG_SWITCH_WHICH_ITEM = 0xFFF7,
+    MSG_SWITCH_WHICH_ITEM = 0xFFF5,
     MSG_OKAY_TO_THROW_AWAY,
+    MSG_OKAY_TO_THROW_AWAY2,
+    MSG_OKAY_TO_THROW_AWAY3,
     MSG_TOO_IMPORTANT,
     MSG_NO_MORE_ROOM,
     MSG_THREW_AWAY_ITEM,
@@ -138,6 +140,8 @@ static void ItemStorage_Deposit(u8 taskId);
 static void ItemStorage_Toss(u8 taskId);
 static void ItemStorage_Exit(u8 taskId);
 static void ItemStorage_TossItemYes(u8 taskId);
+static void ItemStorage_TossItemYes2(u8 taskId);
+static void ItemStorage_TossItemYes3(u8 taskId);
 static void ItemStorage_TossItemNo(u8 taskId);
 
 static void ItemStorageMenuPrint(const u8 *);
@@ -270,6 +274,18 @@ static const struct WindowTemplate sWindowTemplates_MainMenus[] =
 static const struct YesNoFuncTable ItemTossYesNoFuncs =
 {
     ItemStorage_TossItemYes,
+    ItemStorage_TossItemNo
+};
+
+static const struct YesNoFuncTable ItemTossYesNoFuncs2 =
+{
+    ItemStorage_TossItemYes2,
+    ItemStorage_TossItemNo
+};
+
+static const struct YesNoFuncTable ItemTossYesNoFuncs3 =
+{
+    ItemStorage_TossItemYes3,
     ItemStorage_TossItemNo
 };
 
@@ -1184,6 +1200,12 @@ static const u8* ItemStorage_GetMessage(u16 itemId)
     case MSG_OKAY_TO_THROW_AWAY:
         string = gText_ConfirmTossItems;
         break;
+    case MSG_OKAY_TO_THROW_AWAY2:
+        string = gText_ConfirmTossItems2;
+        break;
+    case MSG_OKAY_TO_THROW_AWAY3:
+        string = gText_ConfirmTossItems3;
+        break;
     case MSG_SWITCH_WHICH_ITEM:
         string = gText_MoveVar1Where;
         break;
@@ -1458,6 +1480,18 @@ static void ItemStorage_DoItemToss(u8 taskId)
 }
 
 static void ItemStorage_TossItemYes(u8 taskId)
+{
+    ItemStorage_PrintMessage(ItemStorage_GetMessage(MSG_OKAY_TO_THROW_AWAY2));
+    CreateYesNoMenuWithCallbacks(taskId, &sWindowTemplates_ItemStorage[ITEMPC_WIN_YESNO], 1, 0, 1, 0x214, 0xE, &ItemTossYesNoFuncs2);
+}
+
+static void ItemStorage_TossItemYes2(u8 taskId)
+{
+    ItemStorage_PrintMessage(ItemStorage_GetMessage(MSG_OKAY_TO_THROW_AWAY3));
+    CreateYesNoMenuWithCallbacks(taskId, &sWindowTemplates_ItemStorage[ITEMPC_WIN_YESNO], 1, 0, 1, 0x214, 0xE, &ItemTossYesNoFuncs3);
+}
+
+static void ItemStorage_TossItemYes3(u8 taskId)
 {
     ItemStorage_PrintMessage(ItemStorage_GetMessage(MSG_THREW_AWAY_ITEM));
     gTasks[taskId].func = ItemStorage_HandleRemoveItem;

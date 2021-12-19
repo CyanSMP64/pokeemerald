@@ -207,6 +207,8 @@ static void Task_ItemContext_Sell(u8);
 static void Task_ItemContext_Deposit(u8);
 static void Task_ItemContext_GiveToPC(u8);
 static void ConfirmToss(u8);
+static void ConfirmToss2(u8);
+static void ConfirmToss3(u8);
 static void CancelToss(u8);
 static void ConfirmSell(u8);
 static void CancelSell(u8);
@@ -355,6 +357,10 @@ static const TaskFunc sContextMenuFuncs[] = {
 };
 
 static const struct YesNoFuncTable sYesNoTossFunctions = {ConfirmToss, CancelToss};
+
+static const struct YesNoFuncTable sYesNoTossFunctions2 = {ConfirmToss2, CancelToss};
+
+static const struct YesNoFuncTable sYesNoTossFunctions3 = {ConfirmToss3, CancelToss};
 
 static const struct YesNoFuncTable sYesNoSellItemFunctions = {ConfirmSell, CancelSell};
 
@@ -1869,6 +1875,30 @@ static void Task_ChooseHowManyToToss(u8 taskId)
 }
 
 static void ConfirmToss(u8 taskId)
+{
+    s16* data = gTasks[taskId].data;
+
+    CopyItemName(gSpecialVar_ItemId, gStringVar1);
+    ConvertIntToDecimalStringN(gStringVar2, tItemCount, STR_CONV_MODE_LEFT_ALIGN, MAX_ITEM_DIGITS);
+    StringExpandPlaceholders(gStringVar4, gText_ConfirmTossItems2);
+    FillWindowPixelBuffer(WIN_DESCRIPTION, PIXEL_FILL(0));
+    BagMenu_Print(WIN_DESCRIPTION, FONT_NORMAL, gStringVar4, 3, 1, 0, 0, 0, COLORID_NORMAL);
+    BagMenu_YesNo(taskId, ITEMWIN_YESNO_LOW, &sYesNoTossFunctions2);
+}
+
+static void ConfirmToss2(u8 taskId)
+{
+    s16* data = gTasks[taskId].data;
+
+    CopyItemName(gSpecialVar_ItemId, gStringVar1);
+    ConvertIntToDecimalStringN(gStringVar2, tItemCount, STR_CONV_MODE_LEFT_ALIGN, MAX_ITEM_DIGITS);
+    StringExpandPlaceholders(gStringVar4, gText_ConfirmTossItems3);
+    FillWindowPixelBuffer(WIN_DESCRIPTION, PIXEL_FILL(0));
+    BagMenu_Print(WIN_DESCRIPTION, FONT_NORMAL, gStringVar4, 3, 1, 0, 0, 0, COLORID_NORMAL);
+    BagMenu_YesNo(taskId, ITEMWIN_YESNO_LOW, &sYesNoTossFunctions3);
+}
+
+static void ConfirmToss3(u8 taskId)
 {
     s16* data = gTasks[taskId].data;
 
