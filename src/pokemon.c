@@ -6370,17 +6370,17 @@ u16 GetBattleBGM(void)
         case SPECIES_MEW:
             return MUS_VS_MEW;
         case SPECIES_RAIKOU:
-            return HG_SEQ_GS_VS_RAIKOU;
+            return MUS_HG_GS_VS_RAIKOU;
         case SPECIES_ENTEI:
-            return HG_SEQ_GS_VS_ENTEI;
+            return MUS_HG_GS_VS_ENTEI;
         case SPECIES_SUICUNE:
-            return HG_SEQ_GS_VS_SUICUNE;
+            return MUS_HG_GS_VS_SUICUNE;
         case SPECIES_LUGIA:
-            return HG_SEQ_GS_VS_LUGIA;
+            return MUS_HG_GS_VS_LUGIA;
         case SPECIES_HO_OH:
-            return HG_SEQ_GS_VS_HOUOU;
+            return MUS_HG_GS_VS_HOUOU;
         case SPECIES_CELEBI:
-            return HG_SEQ_GS_VS_NORAPOKE;
+            return MUS_HG_GS_VS_NORAPOKE;
         case SPECIES_REGIROCK:
         case SPECIES_REGICE:
         case SPECIES_REGISTEEL:
@@ -6419,10 +6419,10 @@ u16 GetBattleBGM(void)
         case SPECIES_UXIE:
         case SPECIES_MESPRIT:
         case SPECIES_AZELF:
-            return DP_SEQ_BA_DPOKE1;
+            return MUS_DP_BA_DPOKE1;
         case SPECIES_DIALGA:
         case SPECIES_PALKIA:
-            return DP_SEQ_BA_DPOKE2;
+            return MUS_DP_BA_DPOKE2;
         case SPECIES_ROTOM:
         case SPECIES_ROTOM_HEAT:
         case SPECIES_ROTOM_WASH:
@@ -6432,15 +6432,15 @@ u16 GetBattleBGM(void)
         case SPECIES_HEATRAN:
         case SPECIES_MANAPHY:
         case SPECIES_DARKRAI:
-            return DP_SEQ_BA_SECRET2;
+            return MUS_DP_BA_SECRET2;
         case SPECIES_GIRATINA:
         case SPECIES_GIRATINA_ORIGIN:
-            return PL_SEQ_PL_BA_GIRA;
+            return MUS_PL_PL_BA_GIRA;
         case SPECIES_CRESSELIA:
         case SPECIES_PHIONE:
         case SPECIES_SHAYMIN:
         case SPECIES_SHAYMIN_SKY:
-            return DP_SEQ_BA_POKE;
+            return MUS_DP_BA_POKE;
         case SPECIES_ARCEUS:
         case SPECIES_ARCEUS_FIGHTING:
         case SPECIES_ARCEUS_FLYING:
@@ -6459,7 +6459,7 @@ u16 GetBattleBGM(void)
         case SPECIES_ARCEUS_DRAGON:
         case SPECIES_ARCEUS_DARK:
         case SPECIES_ARCEUS_FAIRY:
-            return DP_SEQ_BA_SECRET1;
+            return MUS_DP_BA_SECRET1;
         case SPECIES_VICTINI:
         case SPECIES_COBALION:
         case SPECIES_TERRAKION:
@@ -6479,15 +6479,15 @@ u16 GetBattleBGM(void)
         case SPECIES_GENESECT_SHOCK_DRIVE:
         case SPECIES_GENESECT_BURN_DRIVE:
         case SPECIES_GENESECT_CHILL_DRIVE:
-            return BW_SEQ_BGM_VS_MOVEPOKE;
+            return MUS_BW_BGM_VS_MOVEPOKE;
         case SPECIES_RESHIRAM:
         case SPECIES_ZEKROM:
-            return BW_SEQ_BGM_VS_SHIN;
+            return MUS_BW_BGM_VS_SHIN;
         case SPECIES_KYUREM:
-            return BW_SEQ_BGM_VS_RAI;
+            return MUS_BW_BGM_VS_RAI;
         case SPECIES_KYUREM_WHITE:
         case SPECIES_KYUREM_BLACK:
-            return B2_SEQ_BGM_VS_KYURAMU;
+            return MUS_B2_BGM_VS_KYURAMU;
         #endif
         default:
             return MUS_VS_WILD;

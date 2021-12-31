@@ -239,6 +239,9 @@ clean-audio: tidynonmodern tidymodern
 	rm -f $(CRY_SUBDIR)/*.bin
 	rm -f $(MID_SUBDIR)/*.s
 
+clean-midi: tidynonmodern tidymodern
+	rm -f $(MID_SUBDIR)/*.s
+
 mostlyclean: tidynonmodern tidymodern
 	rm -f $(SAMPLE_SUBDIR)/*.bin
 	rm -f $(CRY_SUBDIR)/*.bin
