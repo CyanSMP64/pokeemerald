@@ -56,7 +56,7 @@ voicegroup229:: @ HGSS main
 	voice_noise 60, 0, 0, 1, 0, 3, 1
 	voice_noise 60, 0, 0, 0, 3, 0, 1
 	voice_directsound 60, 0, DirectSoundWaveData_dp_whistle_c5_16, 255, 246, 78, 192
-	voice_directsound 60, 0, DirectSoundWaveData_dp_reverscyn_16, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_dp_reverscyn_16, 255, 0, 255, 16
 	voice_directsound 60, 0, DirectSoundWaveData_dp_org5_c3_16, 255, 167, 235, 171
 	voice_programmable_wave 60, 0, ProgrammableWaveData_sq37half, 0, 2, 11, 1
 	voice_square_2 60, 0, 0, 0, 2, 11, 1 @ END OF BASIC BANK

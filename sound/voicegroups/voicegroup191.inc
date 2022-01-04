@@ -1,6 +1,6 @@
 	.align 2
 voicegroup191:: @ DPPt main
-	voice_directsound 60, 0, DirectSoundWaveData_dp_reverscyn_16, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_dp_reverscyn_16, 255, 0, 255, 16
 	voice_keysplit_all voicegroup192				 @ drums 1
 	voice_keysplit voicegroup195, KeySplitTable6     @ piano
 	voice_keysplit voicegroup196, KeySplitTable7     @ piano low
@@ -23,12 +23,12 @@ voicegroup191:: @ DPPt main
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sawtoothlead60, 255, 200, 255, 171
 	voice_keysplit voicegroup207, KeySplitTable18    @ accordion
 	voice_directsound 60, 0, DirectSoundWaveData_dp_harmonica_c3_16, 67, 247, 191, 171
-	voice_directsound 60, 0, DirectSoundWaveData_dp_fretnoise60, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_dp_fretnoise60, 255, 0, 255, 16
 	voice_keysplit voicegroup208, KeySplitTable19    @ acoustic guitar
 	voice_directsound 60, 0, DirectSoundWaveData_dp_bluesgt_a2_16, 255, 255, 227, 208
 	voice_directsound 60, 0, DirectSoundWaveData_dp_eternaguitar36, 255, 253, 159, 208
 	voice_keysplit voicegroup209, KeySplitTable20    @ clean guitar
-	voice_directsound 60, 0, DirectSoundWaveData_dp_spearpillarwind60, 255, 0, 255, 1
+	voice_directsound 60, 0, DirectSoundWaveData_dp_spearpillarwind60, 255, 0, 255, 32
 	voice_keysplit voicegroup210, KeySplitTable21    @ distortion guitar 1
 	voice_keysplit voicegroup211, KeySplitTable22    @ power guitar
 	voice_square_2 60, 0, 2, 0, 7, 2, 0
@@ -38,7 +38,7 @@ voicegroup191:: @ DPPt main
 	voice_directsound 60, 0, DirectSoundWaveData_dp_fretlessbass_d1_16, 255, 0, 255, 196
 	voice_directsound 60, 0, DirectSoundWaveData_dp_slapbass_g1_16, 255, 0, 255, 222
 	voice_directsound 60, 0, DirectSoundWaveData_dp_slapbass_c1_16, 255, 0, 255, 216
-	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass1_c2_16, 255, 1, 255, 196
+	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass1_c2_16, 255, 42, 255, 196
 	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass2_c1_16, 255, 0, 255, 222
 	voice_keysplit voicegroup213, KeySplitTable24    @ violin
 	voice_directsound 60, 0, DirectSoundWaveData_dp_oct_g3_16, 255, 235, 255, 212
@@ -64,7 +64,7 @@ voicegroup191:: @ DPPt main
 	voice_keysplit voicegroup224, KeySplitTable32    @ distortion guitar 2
 	voice_square_2 60, 0, 1, 0, 6, 6, 2
 	voice_square_2 60, 0, 0, 0, 6, 6, 2
-	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass_c1_16, 255, 1, 255, 216
+	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass_c1_16, 255, 42, 255, 216
 	voice_directsound 60, 0, DirectSoundWaveData_dp_altosax_c3_16, 255, 219, 252, 196
 	voice_keysplit voicegroup225, KeySplitTable23    @ upright bass 2
 	voice_square_2 60, 0, 2, 0, 6, 6, 2

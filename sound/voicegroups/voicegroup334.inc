@@ -74,7 +74,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_directsound 60, 0, DirectSoundWaveData_b2_areyouready_high, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_ahh, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_casteliagymvox1, 255, 0, 255, 0
-	voice_directsound 60, 0, DirectSoundWaveData_b2_casteliagymvox2, 255, 0, 255, 1
+	voice_directsound 60, 0, DirectSoundWaveData_b2_casteliagymvox2, 255, 0, 255, 32
 	voice_keysplit voicegroup330, KeySplitTable108   @ sitar
 	voice_directsound 60, 0, DirectSoundWaveData_bw_steeldrumg4_undella, 255, 251, 0, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_bassdrum_ranch, 255, 239, 0, 232
@@ -85,7 +85,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit_all voicegroup338				 @ drum set 3 (addictive drums)
 	voice_directsound 60, 0, DirectSoundWaveData_b2_pinkstrate2, 255, 253, 0, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_solotrumpetc5, 255, 0, 255, 171
-	voice_directsound 60, 0, DirectSoundWaveData_bw_trombonesstaccatocs2, 255, 1, 227, 171
+	voice_directsound 60, 0, DirectSoundWaveData_bw_trombonesstaccatocs2, 255, 42, 227, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_spiccatostringse2, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_b2_trumpetsstaccatogs4_loop, 255, 0, 255, 224
 	voice_directsound 60, 0, DirectSoundWaveData_hg_021cellog2, 254, 242, 255, 205

@@ -38,12 +38,12 @@ voicegroup283:: @ drums 3 (ichinose)
 	voice_directsound 70, 120, DirectSoundWaveData_hg_136tom, 255, 0, 255, 171    				@ 127/127/127/120/120	+10		35
 	voice_directsound 71, 120, DirectSoundWaveData_hg_136tom, 255, 0, 255, 171    				@ 127/127/127/120/120	+11		36
 	voice_directsound 72, 120, DirectSoundWaveData_hg_136tom, 255, 0, 255, 171    				@ 127/127/127/120/120	+12		37
-	voice_directsound 45, 64, DirectSoundWaveData_bw_synthclap_plasma, 255, 197, 227, 2    		@ 127/120/120/124/ 64	-15		38
-	voice_directsound 46, 64, DirectSoundWaveData_bw_synthclap_plasma, 255, 197, 227, 2    		@ 127/120/120/124/ 64	-14		39
-	voice_directsound 48, 64, DirectSoundWaveData_bw_synthclap_plasma, 255, 197, 227, 2    		@ 127/120/120/124/ 64	-12		40
-	voice_directsound 60, 64, DirectSoundWaveData_bw_synthclap_plasma, 255, 197, 227, 2    		@ 127/120/120/124/ 64			41
+	voice_directsound 45, 64, DirectSoundWaveData_bw_synthclap_plasma, 255, 197, 227, 64   		@ 127/120/120/124/ 64	-15		38
+	voice_directsound 46, 64, DirectSoundWaveData_bw_synthclap_plasma, 255, 197, 227, 64   		@ 127/120/120/124/ 64	-14		39
+	voice_directsound 48, 64, DirectSoundWaveData_bw_synthclap_plasma, 255, 197, 227, 64   		@ 127/120/120/124/ 64	-12		40
+	voice_directsound 60, 64, DirectSoundWaveData_bw_synthclap_plasma, 255, 197, 227, 64   		@ 127/120/120/124/ 64			41
 	voice_directsound 60, 64, DirectSoundWaveData_bw_handclap_vsrival, 255, 0, 255, 205    		@ 127/127/127/116/ 64			42
-	voice_directsound 61, 64, DirectSoundWaveData_bw_snareroll, 255, 0, 227, 2      			@ 127/127/120/124/ 64	+ 1		43
+	voice_directsound 61, 64, DirectSoundWaveData_bw_snareroll, 255, 0, 227, 64     			@ 127/127/120/124/ 64	+ 1		43
 	voice_directsound 60, 64, DirectSoundWaveData_bw_175snare, 255, 0, 227, 205    				@ 127/127/120/116/ 64			44
 	voice_directsound 60, 64, DirectSoundWaveData_bw_178snare, 255, 0, 227, 205    				@ 127/127/120/116/ 64			45
 	voice_directsound 61, 64, DirectSoundWaveData_bw_178snare, 255, 0, 227, 205    				@ 127/127/120/116/ 64	+ 1		46
@@ -57,9 +57,9 @@ voicegroup283:: @ drums 3 (ichinose)
 	voice_directsound 62, 64, DirectSoundWaveData_bw_176snare, 255, 0, 227, 205    				@ 127/127/120/116/ 64	+ 2		54
 	voice_directsound 60, 64, DirectSoundWaveData_dp_sne2_loop, 255, 255, 191, 171    			@ 127/  0/110/120/ 64			55
 	voice_directsound 60, 64, DirectSoundWaveData_bw_synthsnare_eyeplasma, 255, 0, 255, 0    	@ 127/127/127/127/ 64			56
-	voice_directsound 60, 64, DirectSoundWaveData_bw_synthsnare_plasma, 255, 0, 227, 2    		@ 127/127/120/124/ 64			57
-	voice_directsound 61, 64, DirectSoundWaveData_bw_synthsnare_plasma, 255, 0, 227, 2    		@ 127/127/120/124/ 64	+ 1		58
-	voice_directsound 62, 64, DirectSoundWaveData_bw_synthsnare_plasma, 255, 0, 227, 2    		@ 127/127/120/124/ 64	+ 2		59
+	voice_directsound 60, 64, DirectSoundWaveData_bw_synthsnare_plasma, 255, 0, 227, 64   		@ 127/127/120/124/ 64			57
+	voice_directsound 61, 64, DirectSoundWaveData_bw_synthsnare_plasma, 255, 0, 227, 64   		@ 127/127/120/124/ 64	+ 1		58
+	voice_directsound 62, 64, DirectSoundWaveData_bw_synthsnare_plasma, 255, 0, 227, 64   		@ 127/127/120/124/ 64	+ 2		59
 	voice_directsound 60, 64, DirectSoundWaveData_bw_171snare909, 255, 0, 227, 205    			@ 127/127/120/116/ 64			60
 	voice_directsound 60, 64, DirectSoundWaveData_bw_172snare909, 255, 226, 127, 205    		@ 127/114/ 90/116/ 64			61
 	voice_directsound 60, 58, DirectSoundWaveData_bw_158rim, 255, 0, 227, 205    				@ 127/127/120/116/ 58			62
@@ -102,7 +102,7 @@ voicegroup283:: @ drums 3 (ichinose)
 	voice_directsound 60, 64, DirectSoundWaveData_bw_042crash909, 255, 242, 0, 205    			@ 127/100/  0/116/ 64			99
 	voice_directsound 62, 64, DirectSoundWaveData_bw_042crash909, 255, 242, 0, 205    			@ 127/100/  0/116/ 64	+ 2		100
 	voice_directsound 60, 84, DirectSoundWaveData_bw_179splash, 255, 250, 0, 205    			@ 127/ 70/  0/116/ 84			101
-	voice_directsound 60, 80, DirectSoundWaveData_hg_062chh, 255, 78, 0, 205    				@ 127/124/  0/116/ 80			102
+	voice_directsound 60, 80, DirectSoundWaveData_hg_062chh, 255, 84, 0, 205    				@ 127/124/  0/116/ 80			102
 	voice_directsound 60, 80, DirectSoundWaveData_hg_062chh, 255, 242, 0, 171    				@ 127/100/  0/120/ 80			103
 	voice_directsound 61, 80, DirectSoundWaveData_hg_062chh, 255, 242, 0, 171    				@ 127/100/  0/120/ 80	+ 1		104
 	voice_directsound 60, 104, DirectSoundWaveData_hg_062chh, 255, 242, 0, 171    				@ 127/100/  0/120/104			105

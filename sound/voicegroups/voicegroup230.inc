@@ -3,7 +3,7 @@ voicegroup230:: @
 	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitminor60, 255, 197, 255, 171
 	voice_keysplit_all voicegroup232				 @ synth kick+snare
 	voice_keysplit voicegroup216, KeySplitTable27    @ DPPt timpani
-	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass1_c2_16, 255, 1, 255, 192
+	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass1_c2_16, 255, 42, 255, 192
 	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass2_c1_16, 255, 0, 255, 220
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sawtoothlead60, 255, 197, 255, 171
 	voice_keysplit voicegroup272, KeySplitTable57    @ shamisen
@@ -16,11 +16,11 @@ voicegroup230:: @
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sopranochoir60, 255, 197, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_hg_choirc5, 255, 197, 255, 171 @ 1 octave too low
 	voice_directsound 60, 0, DirectSoundWaveData_dp_reverscyn_16, 255, 197, 255, 171 @ 1 octave too high
-	voice_directsound 60, 0, DirectSoundWaveData_dp_spearpillarwind60, 255, 0, 255, 1
+	voice_directsound 60, 0, DirectSoundWaveData_dp_spearpillarwind60, 255, 0, 255, 32
 	voice_directsound 60, 0, DirectSoundWaveData_dp_altosax_c3_16, 255, 216, 252, 192
 	voice_directsound 60, 0, DirectSoundWaveData_dp_synthsnare, 255, 0, 255, 171
 	voice_keysplit voicegroup273, KeySplitTable58    @ piano (national park)
-	voice_directsound 60, 0, DirectSoundWaveData_dp_tom1_16, 255, 0, 255, 1
+	voice_directsound 60, 0, DirectSoundWaveData_dp_tom1_16, 255, 0, 255, 32
 	voice_keysplit voicegroup219, KeySplitTable29    @ dp trumpets (arceus)
 	voice_keysplit voicegroup220, KeySplitTable30    @ dp trombone (arceus)
 	voice_square_1 60, 0, 0, 2, 0, 2, 6, 2									 @ double up of 051

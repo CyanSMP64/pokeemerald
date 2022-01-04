@@ -7,7 +7,7 @@ voicegroup335:: @ B2W2 Misc.
 	voice_directsound 60, 0, DirectSoundWaveData_b2_brasshit_low, 255, 251, 0, 205
 	voice_directsound 60, 0, DirectSoundWaveData_bw_choirmale1_ghetsis, 255, 0, 227, 205
 	voice_directsound 60, 0, DirectSoundWaveData_bw_taikohardg4_ghetsis, 255, 248, 0, 205
-	voice_directsound 60, 0, DirectSoundWaveData_bw_choirmale3_ghetsis, 255, 0, 255, 1
+	voice_directsound 60, 0, DirectSoundWaveData_bw_choirmale3_ghetsis, 255, 0, 255, 32
 	voice_keysplit voicegroup241, KeySplitTable25    @ tubular bell
 	voice_keysplit voicegroup198, KeySplitTable9     @ fm ep (dppt)
 	voice_directsound 60, 0, DirectSoundWaveData_bw_074glocknc5, 255, 249, 0, 205
@@ -51,7 +51,7 @@ voicegroup335:: @ B2W2 Misc.
 	voice_keysplit voicegroup217, KeySplitTable28    @ strings (dppt)
 	voice_directsound 60, 0, DirectSoundWaveData_b2_trombonesflutterb2, 255, 234, 210, 205
 	voice_keysplit voicegroup223, KeySplitTable9     @ french horns (dppt)
-	voice_directsound 60, 0, DirectSoundWaveData_bw_trombonesstaccatocs2, 255, 1, 227, 171
+	voice_directsound 60, 0, DirectSoundWaveData_bw_trombonesstaccatocs2, 255, 42, 227, 171
 	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass1_c2_16, 255, 1, 255, 192
 	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass2_c1_16, 255, 0, 255, 220
 	voice_keysplit voicegroup220, KeySplitTable30    @ trombone (dppt)
@@ -64,7 +64,7 @@ voicegroup335:: @ B2W2 Misc.
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar2, 255, 197, 159, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar3, 255, 197, 159, 192
 	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitminor60, 255, 0, 255, 205
-	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass_c1_16, 255, 1, 255, 216
+	voice_directsound 60, 0, DirectSoundWaveData_dp_synbass_c1_16, 255, 42, 255, 216
 	voice_directsound 60, 0, DirectSoundWaveData_bw_spiccatostringse2, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_b2_binaryleadc3, 255, 0, 255, 171
 	voice_keysplit voicegroup303, KeySplitTable81    @ choir full
@@ -93,7 +93,7 @@ voicegroup335:: @ B2W2 Misc.
 	voice_directsound 60, 0, DirectSoundWaveData_b2_gongf, 255, 251, 0, 205
 	voice_keysplit voicegroup340, KeySplitTable118   @ pink strat
 	voice_keysplit voicegroup340, KeySplitTable125   @ pink strat | 42 | 54
-	voice_directsound 60, 0, DirectSoundWaveData_bw_guitarbendc5_plasma, 255, 197, 255, 2
+	voice_directsound 60, 0, DirectSoundWaveData_bw_guitarbendc5_plasma, 255, 197, 255, 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sawtoothlead60, 255, 197, 255, 171
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -117,7 +117,7 @@ voicegroup335:: @ B2W2 Misc.
 	voice_directsound 60, 0, DirectSoundWaveData_b2_tani_rhodesdmaj7, 255, 242, 191, 205
 	voice_directsound 60, 0, DirectSoundWaveData_bw_114marimc5, 255, 248, 0, 205
 	voice_directsound 60, 0, DirectSoundWaveData_hg_144tptc4, 255, 246, 210, 205
-	voice_directsound 60, 0, DirectSoundWaveData_hg_123elastkc2, 255, 1, 227, 171
+	voice_directsound 60, 0, DirectSoundWaveData_hg_123elastkc2, 255, 42, 227, 171
 	voice_keysplit voicegroup294, KeySplitTable36    @ rhodes
 	voice_directsound 60, 0, DirectSoundWaveData_dp_org1_c3_16, 255, 0, 255, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_tani_sawdmaj7, 255, 242, 191, 205

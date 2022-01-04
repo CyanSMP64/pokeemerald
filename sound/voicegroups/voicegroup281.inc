@@ -14,7 +14,7 @@ voicegroup281:: @ drums 1 (kageyama)
 	voice_directsound 60, 64, DirectSoundWaveData_dp_bassdr2_16, 255, 0, 227, 205				@ 127/127/120/116/ 64
 	voice_directsound 60, 64, DirectSoundWaveData_dp_093snare, 255, 226, 127, 205    			@ 127/114/ 90/116/ 64
 	voice_directsound 60, 30, DirectSoundWaveData_hg_135tom, 255, 0, 255, 205    				@ 127/127/127/116/ 30
-	voice_directsound 60, 80, DirectSoundWaveData_hg_062chh, 255, 78, 0, 205    				@ 127/124/  0/116/ 80
+	voice_directsound 60, 80, DirectSoundWaveData_hg_062chh, 255, 84, 0, 205    				@ 127/124/  0/116/ 80
 	voice_directsound 60, 40, DirectSoundWaveData_hg_137tom, 255, 0, 255, 205    				@ 127/127/127/116/ 40
 	voice_directsound 61, 40, DirectSoundWaveData_hg_137tom, 255, 0, 255, 205    				@ 127/127/127/116/ 40	+ 1
 	voice_directsound 60, 50, DirectSoundWaveData_hg_138tom, 255, 0, 255, 205    				@ 127/127/127/116/ 50
@@ -61,7 +61,7 @@ voicegroup281:: @ drums 1 (kageyama)
 	voice_directsound 60, 64, DirectSoundWaveData_bw_108kick909, 255, 0, 227, 205    			@ 127/127/120/116/ 64
 	voice_directsound 60, 80, DirectSoundWaveData_bw_101chh909, 255, 239, 0, 205    			@ 127/105/  0/116/ 80
 	voice_directsound 60, 56, DirectSoundWaveData_bw_175snare, 255, 0, 227, 205    				@ 127/127/120/116/ 56	
-	voice_directsound 60, 40, DirectSoundWaveData_hg_062chh, 255, 78, 0, 205    				@ 127/124/  0/116/ 40
+	voice_directsound 60, 40, DirectSoundWaveData_hg_062chh, 255, 84, 0, 205    				@ 127/124/  0/116/ 40
 	voice_directsound 60, 40, DirectSoundWaveData_hg_063ohh, 255, 241, 0, 205    				@ 127/102/  0/116/ 40
 	voice_directsound 48, 64, DirectSoundWaveData_dp_reverscyn_16, 3, 0, 227, 171    			@   4/127/120/120/ 64
 	voice_directsound 60, 64, DirectSoundWaveData_bw_159rim, 255, 0, 227, 205    				@ 127/127/120/116/ 64	

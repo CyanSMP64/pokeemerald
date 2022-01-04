@@ -4,7 +4,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup237, KeySplitTable83    @ rhodes 2 (hgss)
 	voice_directsound 60, 0, DirectSoundWaveData_bw_063rhodc5, 255, 250, 0, 210
-	voice_directsound 60, 0, DirectSoundWaveData_bw_063rhodc5, 255, 250, 0, 1
+	voice_directsound 60, 0, DirectSoundWaveData_bw_063rhodc5, 255, 250, 0, 32
 	voice_keysplit voicegroup234, KeySplitTable36    @ piano 2
 	voice_keysplit voicegroup341, KeySplitTable120   @ piano 3
 	voice_keysplit voicegroup332, KeySplitTable114   @ piano (longer decay)
@@ -23,7 +23,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup292, KeySplitTable72    @ nylon str. guitar
 	voice_directsound 60, 0, DirectSoundWaveData_b2_suspensestringsc4, 255, 242, 191, 129
 	voice_directsound 60, 0, DirectSoundWaveData_b2_pinkstrate3, 255, 253, 0, 171
-	voice_directsound 60, 0, DirectSoundWaveData_bw_170slapbg2, 255, 1, 227, 171
+	voice_directsound 60, 0, DirectSoundWaveData_bw_170slapbg2, 255, 42, 227, 171
 	voice_keysplit voicegroup316, KeySplitTable41    @ clean guitar
 	voice_keysplit voicegroup252, KeySplitTable42    @ upright bass
 	voice_directsound 60, 0, DirectSoundWaveData_b2_synthbassd2, 255, 251, 0, 205
@@ -65,7 +65,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitminor60, 255, 0, 255, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_directsound 60, 0, DirectSoundWaveData_bw_sawleadc4_vsleader, 255, 242, 191, 0
-	voice_directsound 60, 0, DirectSoundWaveData_bw_acidbassb1short, 255, 1, 227, 0
+	voice_directsound 60, 0, DirectSoundWaveData_bw_acidbassb1short, 255, 42, 227, 0
 	voice_directsound 60, 0, DirectSoundWaveData_bw_synthbassf1_leader, 255, 251, 14, 171
 	voice_keysplit voicegroup324, KeySplitTable62    @ choir male
 	voice_directsound 60, 0, DirectSoundWaveData_bw_choirmaleg2, 255, 242, 191, 205
@@ -74,9 +74,9 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_b2_metalclanke2, 255, 250, 0, 220
 	voice_directsound 60, 0, DirectSoundWaveData_b2_hardbasse2, 255, 0, 252, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_hardbasse3, 255, 0, 252, 192
-	voice_directsound 60, 0, DirectSoundWaveData_b2_recorderg5, 255, 1, 227, 129
-	voice_directsound 60, 0, DirectSoundWaveData_b2_slapbassc2_marinetube, 255, 1, 227, 171
-	voice_directsound 60, 0, DirectSoundWaveData_bw_guitarbendc5_plasma, 255, 197, 255, 2
+	voice_directsound 60, 0, DirectSoundWaveData_b2_recorderg5, 255, 42, 227, 129
+	voice_directsound 60, 0, DirectSoundWaveData_b2_slapbassc2_marinetube, 255, 42, 227, 171
+	voice_directsound 60, 0, DirectSoundWaveData_bw_guitarbendc5_plasma, 255, 197, 255, 64
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar1, 255, 197, 159, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar2, 255, 197, 159, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar3, 255, 197, 159, 192
@@ -85,7 +85,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit_all voicegroup338				 @ drum set 3 (addictive drums)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_directsound 60, 0, DirectSoundWaveData_bw_solotrumpetc5, 255, 0, 255, 171
-	voice_directsound 60, 0, DirectSoundWaveData_bw_trombonesstaccatocs2, 255, 1, 227, 171
+	voice_directsound 60, 0, DirectSoundWaveData_bw_trombonesstaccatocs2, 255, 42, 227, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_spiccatostringse2, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_b2_trumpetsstaccatogs4_loop, 255, 0, 255, 224
 	voice_directsound 60, 0, DirectSoundWaveData_hg_039drawbc4, 255, 0, 255, 171
@@ -94,7 +94,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup340, KeySplitTable118   @ pink strat
 	voice_keysplit voicegroup340, KeySplitTable119   @ pink strat | 42 | 54 | 68
 	voice_keysplit voicegroup340, KeySplitTable125   @ pink strat | 42 | 54
-	voice_directsound 60, 0, DirectSoundWaveData_b2_guitarfeedbackcs5, 255, 197, 255, 2
+	voice_directsound 60, 0, DirectSoundWaveData_b2_guitarfeedbackcs5, 255, 197, 255, 64
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sawtoothlead60, 255, 197, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_reversecymbale2, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_bw_reversecymbale2, 255, 0, 255, 236
@@ -117,17 +117,17 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_vscolress, 255, 0, 255, 0
 	voice_keysplit voicegroup354, KeySplitTable130   @ 1 2 3 4 5 (colress)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_directsound 60, 0, DirectSoundWaveData_b2_virbankgym_female1_sing, 255, 0, 252, 1
+	voice_directsound 60, 0, DirectSoundWaveData_b2_virbankgym_female1_sing, 255, 0, 252, 32
 	voice_directsound 60, 0, DirectSoundWaveData_b2_chimesmetalchina, 255, 251, 0, 129
 	voice_directsound 60, 0, DirectSoundWaveData_b2_adriansfilterbankc3, 255, 234, 191, 129
-	voice_directsound 60, 0, DirectSoundWaveData_bw_sfxlasergun_plasma, 255, 0, 255, 2
-	voice_directsound 60, 0, DirectSoundWaveData_b2_sneeze, 255, 0, 255, 2
-	voice_directsound 60, 0, DirectSoundWaveData_b2_yee, 255, 0, 255, 2
-	voice_directsound 60, 0, DirectSoundWaveData_b2_strangehouse1, 255, 0, 255, 1
+	voice_directsound 60, 0, DirectSoundWaveData_bw_sfxlasergun_plasma, 255, 0, 255, 64
+	voice_directsound 60, 0, DirectSoundWaveData_b2_sneeze, 255, 0, 255, 64
+	voice_directsound 60, 0, DirectSoundWaveData_b2_yee, 255, 0, 255, 64
+	voice_directsound 60, 0, DirectSoundWaveData_b2_strangehouse1, 255, 0, 255, 32
 	voice_directsound 60, 0, DirectSoundWaveData_b2_strangehouse2, 255, 251, 0, 214
-	voice_directsound 60, 0, DirectSoundWaveData_b2_strangehouse3, 255, 0, 255, 1
-	voice_directsound 60, 0, DirectSoundWaveData_b2_strangehouse4, 255, 0, 255, 1
-	voice_directsound 60, 0, DirectSoundWaveData_b2_strangehouse5, 255, 0, 255, 1
+	voice_directsound 60, 0, DirectSoundWaveData_b2_strangehouse3, 255, 0, 255, 32
+	voice_directsound 60, 0, DirectSoundWaveData_b2_strangehouse4, 255, 0, 255, 32
+	voice_directsound 60, 0, DirectSoundWaveData_b2_strangehouse5, 255, 0, 255, 32
 
 
 

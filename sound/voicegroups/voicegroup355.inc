@@ -71,21 +71,21 @@ voicegroup355:: @
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar1, 255, 197, 159, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar2, 255, 197, 159, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerguitar3, 255, 197, 159, 192
-	voice_directsound 60, 0, DirectSoundWaveData_bw_guitarbendc5_plasma, 255, 197, 255, 2
-	voice_directsound 60, 0, DirectSoundWaveData_b2_guitarfeedbackcs5, 255, 197, 255, 2
-	voice_directsound 60, 0, DirectSoundWaveData_bw_acidbassb1short, 255, 1, 227, 0
+	voice_directsound 60, 0, DirectSoundWaveData_bw_guitarbendc5_plasma, 255, 197, 255, 64
+	voice_directsound 60, 0, DirectSoundWaveData_b2_guitarfeedbackcs5, 255, 197, 255, 64
+	voice_directsound 60, 0, DirectSoundWaveData_bw_acidbassb1short, 255, 42, 227, 0
 	voice_directsound 60, 0, DirectSoundWaveData_bw_fhornsripc3, 255, 248, 0, 205
 	voice_keysplit voicegroup330, KeySplitTable108   @ sitar
 	voice_directsound 60, 0, DirectSoundWaveData_bw_steeldrumg4_undella, 255, 251, 0, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_hardbasse2, 255, 0, 252, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_hardbasse3, 255, 0, 252, 192
-	voice_directsound 60, 0, DirectSoundWaveData_b2_recorderg5, 255, 1, 227, 129
+	voice_directsound 60, 0, DirectSoundWaveData_b2_recorderg5, 255, 42, 227, 129
 	voice_keysplit_all voicegroup337				 @ drum set 2
 	voice_keysplit_all voicegroup336				 @ drum set 1
 	voice_keysplit_all voicegroup338				 @ drum set 3 (addictive drums)
 	voice_keysplit voicegroup244, KeySplitTable102   @ drawbar organ alt
 	voice_directsound 60, 0, DirectSoundWaveData_bw_solotrumpetc5, 255, 0, 255, 171
-	voice_directsound 60, 0, DirectSoundWaveData_bw_trombonesstaccatocs2, 255, 1, 227, 171
+	voice_directsound 60, 0, DirectSoundWaveData_bw_trombonesstaccatocs2, 255, 42, 227, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_spiccatostringse2, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_b2_trumpetsstaccatogs4_loop, 255, 0, 255, 224
 	voice_directsound 60, 0, DirectSoundWaveData_hg_021cellog2, 254, 242, 255, 205
@@ -105,7 +105,7 @@ voicegroup355:: @
 	voice_keysplit voicegroup220, KeySplitTable30    @ trombone (DPPt)
 	voice_directsound 60, 0, DirectSoundWaveData_bw_sawleadc4_vsleader, 255, 242, 191, 0
 	voice_directsound 60, 0, DirectSoundWaveData_bw_synthbassf1_leader, 255, 251, 14, 171
-	voice_directsound 60, 0, DirectSoundWaveData_b2_slapbassc2_marinetube, 255, 1, 227, 171
+	voice_directsound 60, 0, DirectSoundWaveData_b2_slapbassc2_marinetube, 255, 42, 227, 171
 	voice_directsound 60, 0, DirectSoundWaveData_b2_suspensestringsc4, 255, 242, 191, 129
 	voice_directsound 60, 0, DirectSoundWaveData_b2_wind_grotto, 255, 197, 255, 0
 	voice_keysplit voicegroup348, KeySplitTable126   @ over run

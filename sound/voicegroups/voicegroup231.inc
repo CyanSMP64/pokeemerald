@@ -10,7 +10,7 @@ voicegroup231:: @
 	voice_directsound 61, 20, DirectSoundWaveData_dp_sheiker, 255, 242, 127, 171
 	voice_directsound 60, 105, DirectSoundWaveData_dp_sheiker, 255, 242, 127, 171
 	voice_directsound 61, 105, DirectSoundWaveData_dp_sheiker, 255, 242, 127, 171
-	voice_directsound 60, 44, DirectSoundWaveData_dp_triangle_16, 255, 197, 0, 1
+	voice_directsound 60, 44, DirectSoundWaveData_dp_triangle_16, 255, 197, 0, 32
 	voice_directsound 60, 44, DirectSoundWaveData_dp_triangle_16, 255, 248, 0, 192
 	voice_directsound 24, 40, DirectSoundWaveData_hg_128jdruml, 255, 0, 227, 171
 	voice_directsound 25, 40, DirectSoundWaveData_hg_128jdruml, 255, 0, 227, 171

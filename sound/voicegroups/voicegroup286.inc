@@ -25,7 +25,7 @@ voicegroup286::
 	voice_directsound 70, 26, DirectSoundWaveData_dp_cabassa_16, 255, 242, 127, 171
 	voice_directsound 71, 26, DirectSoundWaveData_dp_cabassa_16, 255, 242, 127, 171
 	voice_directsound 72, 26, DirectSoundWaveData_dp_cabassa_16, 255, 242, 127, 171
-	voice_directsound 60, 44, DirectSoundWaveData_dp_triangle_16, 255, 197, 0, 1
+	voice_directsound 60, 44, DirectSoundWaveData_dp_triangle_16, 255, 197, 0, 32
 	voice_directsound 60, 44, DirectSoundWaveData_dp_triangle_16, 255, 248, 0, 192
 	voice_directsound 60, 64, DirectSoundWaveData_dp_handclup1, 255, 0, 227, 171
 	voice_directsound 61, 64, DirectSoundWaveData_dp_handclup1, 255, 0, 227, 171
