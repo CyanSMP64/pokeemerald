@@ -1,7 +1,7 @@
 - Converting instruments and volumes
     HGSS french horn velocity should be reduced 80%
-    HGSS vibraphone velocity should be reduced 90%
-    HGSS harp velocity should be reduced 90%
+    HGSS vibraphone velocity should be reduced 95%
+    HGSS harp velocity should be reduced 95%
     HGSS trumpet velocity should be reduced 95%
     Volume of any PSG should be multiplied by 125% or 200% depending on panning
     
