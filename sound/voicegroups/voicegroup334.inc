@@ -76,7 +76,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_directsound 60, 0, DirectSoundWaveData_b2_casteliagymvox1, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_casteliagymvox2, 255, 0, 255, 32
 	voice_keysplit voicegroup330, KeySplitTable108   @ sitar
-	voice_directsound 60, 0, DirectSoundWaveData_bw_steeldrumg4_undella, 255, 251, 0, 205
+	voice_directsound 60, 0, DirectSoundWaveData_bw_steeldrumc4_undella, 255, 251, 0, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_bassdrum_ranch, 255, 239, 0, 232
 	voice_directsound 60, 0, DirectSoundWaveData_b2_cowbells, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_cowbellsloop, 255, 0, 255, 0

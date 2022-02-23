@@ -76,7 +76,7 @@ voicegroup355:: @
 	voice_directsound 60, 0, DirectSoundWaveData_bw_acidbassb1short, 255, 42, 227, 0
 	voice_directsound 60, 0, DirectSoundWaveData_bw_fhornsripc3, 255, 248, 0, 205
 	voice_keysplit voicegroup330, KeySplitTable108   @ sitar
-	voice_directsound 60, 0, DirectSoundWaveData_bw_steeldrumg4_undella, 255, 251, 0, 205
+	voice_directsound 60, 0, DirectSoundWaveData_bw_steeldrumc4_undella, 255, 251, 0, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_hardbasse2, 255, 0, 252, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_hardbasse3, 255, 0, 252, 192
 	voice_directsound 60, 0, DirectSoundWaveData_b2_recorderg5, 255, 42, 227, 129

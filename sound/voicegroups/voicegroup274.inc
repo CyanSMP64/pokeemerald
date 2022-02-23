@@ -76,7 +76,7 @@ voicegroup274:: @ BW Kageyama
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
 	voice_keysplit voicegroup319, KeySplitTable97    @ pipe organ
-	voice_directsound 60, 0, DirectSoundWaveData_bw_steeldrumg4_undella, 255, 251, 0, 205
+	voice_directsound 60, 0, DirectSoundWaveData_bw_steeldrumc4_undella, 255, 251, 0, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
