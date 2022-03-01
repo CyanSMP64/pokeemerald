@@ -1,0 +1,38 @@
+Rock Piano (PlugSound Pro)
+100%/100%
+
+Acoustic Grand Piano in octaves (PlugSound Pro)
+C2, C3, C4 splits: 72%/138% (2.8 dB)
+C5 split: 100%/100%
+
+Vibraphone 1 (PlugSound Pro)
+63%/160% (4.0 dB)
+
+Xylophone (Kontakt Factory Library)
+C4 split: 65%/155% (3.8 dB)
+A4 split: Starts at 65%/155% (3.8 dB) and decays to 180%/56% (-5.1 dB)
+F5 split: Starts at 100%/100% and decays to 180%/56% (-5.1 dB)
+
+Orch Chimes (EW Symphonic Orchestra)
+74%/135% (2.6 dB)
+
+Music Box (PlugSound Pro)
+C4 split: 65%/153% (3.7 dB)
+C5 split: Starts at 82%/122% (1.7 dB) and decays to 63%/158% (4.0 dB)
+C6 split: 91%/110% (0.8 dB)
+
+Full Organ slow (PlugSound Pro)
+100%/100%
+
+Jazz Organ (PlugSound Pro)
+C3, C4 splits: 63%/160% (4.0 dB)
+C5 split: 68%/148% (3.4 dB)
+
+Martin Soft 2 (PlugSound Pro)
+G2 split: 68%/148% (3.4 dB)
+G3 split: 74%/135% (2.6 dB)
+E4, C5 splits: 65%/153% (3.7 dB)
+
+Strat D.I Med. Tremolo (PlugSound Pro)
+G2, E4, C5 splits: 61%/165% (4.3 dB)
+G3 split: 63%/160% (4.0 dB)
