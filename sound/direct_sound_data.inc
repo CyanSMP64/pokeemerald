@@ -3275,6 +3275,10 @@ DirectSoundWaveData_hg_123elastkc2::
 	.incbin "sound/direct_sound_samples/hg_123elastkc2.bin"
 
 	.align 2
+DirectSoundWaveData_hg_124elastkc3::
+	.incbin "sound/direct_sound_samples/hg_124elastkc3.bin"
+
+	.align 2
 DirectSoundWaveData_hg_125squarc4::
 	.incbin "sound/direct_sound_samples/hg_125squarc4.bin"
 

@@ -36,3 +36,103 @@ E4, C5 splits: 65%/153% (3.7 dB)
 Strat D.I Med. Tremolo (PlugSound Pro)
 G2, E4, C5 splits: 61%/165% (4.3 dB)
 G3 split: 63%/160% (4.0 dB)
+
+Jazz Double Bass Hard (PlugSound Pro)
+these are different samplings and they do not align but estimated 3.6 dB
+
+Ampeg Ac. Bass -Full (PlugSound Pro)
+100%/100%
+
+Elastik (PlugSound Pro)
+69%/145% (3.2 dB)
+
+String Orchestra (SampleTank 2.5 XL)
+100%/100%
+
+Violin Sus (PlugSound Pro)
+81%/124% (1.9 dB)
+
+Cello Sus (PlugSound Pro)
+100%/100%
+
+Violin/Cello Ensemble Pizzicato (Kontakt Factory Library)
+61%/164% (4.1 dB)
+
+Harp (Kontakt Factory Library)
+C3, C5 splits: 63%/158% (4.0 dB)
+C4 split: 56%/177% (5.0 dB)
+
+48-Timpani (PlugSound Pro)
+G3, C4 splits: 50%/200% (6.0 dB)
+G4 split: 54%/186% (5.4 dB)
+
+Trumpet Ensemble (Kontakt Factory Library)
+C4 split: 75%/133% (2.5 dB) (estimation)
+A4 split: 82%/122% (1.7 dB)
+G5 split: 100%/100%
+
+Trombone Ensemble (Kontakt Factory Library)
+G2 split: 61%/165% (4.3 dB)
+E3 split: 74%/136% (2.7 dB)
+C4 split: 77%/130% (2.3 dB)
+
+French Horn (Kontakt Factory Library)
+83%/120% (1.6 dB) (estimation)
+
+French Horn Ensemble (Kontakt Factory Library)
+C3 split: 64%/156% (3.9 dB)
+F3 split: 60%/167% (4.4 dB)
+D4 split: 63%/158% (4.0 dB)
+B4 split: 71%/141% (3.0 dB) (estimated)
+
+Oboe (Kontakt Factory Library)
+91%/110% (0.8 dB) (estimated)
+
+Clarinet (SampleTank 2.5 XL)
+87%/115% (1.2 dB) (estimated)
+
+Flute sus (PlugSound Pro)
+C4 split: 87%/115% (1.2 dB)
+A4 split: 80%/125% (1.9 dB)
+F5 split: 91%/110% (0.8 dB)
+C6 split: 85%/117% (1.4 dB)
+
+Bassoon sus (PlugSound Pro)
+71%/140% (2.9 dB) (estimation)
+
+Taiko (Ethno Instrument 2)
+100%/100%
+
+Snare 16_18_02 (Zero-G Drum & Percussion Tools)
+Already accounted for in BW/B2W2 music expansion
+Apparently different samplings. Estimated 200%/50% (-6.0 dB)
+
+Snare 017 Power Set 2 D2 (Studio Canvas SD-90)
+Starts at 80%/125% (1.9 dB) and decays to 182%/55% (-5.2 dB) (estimation)
+
+Cymbals a due (Kontakt Factory Library)
+Already accounted for in BW/B2W2 music expansion
+Some volume warping. Estimated 80%/125% (1.9 dB)
+
+Crash Cymbal 2 (Battery 3 Rock Kit)
+100%/100%
+
+Chinese (Battery 3 GM Kit)
+69%/145% (3.2 dB) (estimation)
+
+Ride Bell 15E-CYM11 (ProSamples 15 (Dance Drums))
+Already accounted for in BW/B2W2 music expansion
+290%/34% (-9.2 dB) (estimation)
+
+Cowbell (Battery 3 GM Kit)
+100%/100%
+
+Ride Cymbal 15E-CYM36 (ProSamples 15 (Dance Drums))
+Already accounted for in BW/B2W2 music expansion
+175%/57% (-4.9 dB) (estimation)
+
+Bongo 001 StandardSet2 C4 (Studio Canvas SD-90)
+145%/69% (-3.2 dB) (estimation)
+
+Conga 001 StandardSet2 D#4 (Studio Canvas SD-90)
+53%/190% (5.6 dB) (estimation)
