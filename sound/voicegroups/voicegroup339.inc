@@ -90,3 +90,9 @@ voicegroup339:: @ virbank gym vocals
 	voice_directsound 60, 64, DirectSoundWaveData_b2_drums_marinetube8, 255, 0, 255, 0				@ 127/127/127/127/ 64	
 	voice_directsound 60, 64, DirectSoundWaveData_b2_drums_marinetube9, 255, 0, 255, 0				@ 127/127/127/127/ 64	
 	voice_directsound 60, 64, DirectSoundWaveData_b2_drums_marinetube10, 255, 0, 255, 0				@ 127/127/127/127/ 64	
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_joinavenue1, 255, 0, 255, 0
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_joinavenue2, 255, 0, 255, 0
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_joinavenue3, 255, 0, 255, 0
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_joinavenue4, 255, 0, 255, 0
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_joinavenue5, 255, 0, 255, 0
+	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_joinavenue6, 255, 0, 255, 0

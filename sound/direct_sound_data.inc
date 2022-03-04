@@ -4743,8 +4743,28 @@ DirectSoundWaveData_b2_drumloop_colress::
 	.incbin "sound/direct_sound_samples/b2_drumloop_colress.bin"
 
 	.align 2
-DirectSoundWaveData_b2_drumloop_joinavenue::
-	.incbin "sound/direct_sound_samples/b2_drumloop_joinavenue.bin"
+DirectSoundWaveData_b2_drumloop_joinavenue1::
+	.incbin "sound/direct_sound_samples/b2_drumloop_joinavenue1.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_joinavenue2::
+	.incbin "sound/direct_sound_samples/b2_drumloop_joinavenue2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_joinavenue3::
+	.incbin "sound/direct_sound_samples/b2_drumloop_joinavenue3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_joinavenue4::
+	.incbin "sound/direct_sound_samples/b2_drumloop_joinavenue4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_joinavenue5::
+	.incbin "sound/direct_sound_samples/b2_drumloop_joinavenue5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_drumloop_joinavenue6::
+	.incbin "sound/direct_sound_samples/b2_drumloop_joinavenue6.bin"
 
 	.align 2
 DirectSoundWaveData_b2_drumloop_nimbasagym::

@@ -114,7 +114,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_casteliagym, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_beautyintro, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_colress, 255, 0, 255, 0
-	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_joinavenue, 255, 0, 255, 0
+	voice_keysplit_all voicegroup339				 @ contains join avenue drum loop chops
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_beauty, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_driftveilgym, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_pwtjohtoleader, 255, 0, 255, 0
