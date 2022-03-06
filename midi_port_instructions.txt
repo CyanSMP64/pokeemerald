@@ -1,22 +1,23 @@
 - Converting instruments and volumes
-    HGSS french horn velocity should be reduced 80%
-    HGSS vibraphone velocity should be reduced 95%
-    HGSS harp velocity should be reduced 95%
-    HGSS trumpet velocity should be reduced 95%
-    Volume of any PSG should be multiplied by 125% or 200% depending on panning
-    
-    DP and HGSS square leads should be transposed up one octave
+    Volume of any PSG should be multiplied by 130% or 200% depending on panning
+    DP and HGSS square leads should be transposed up one octave (12 semitones)
+
+- Delete all CC 20 events
 
 - Executing midfix4agb
 
 - Check pitch bends
     Multiply every negative pitch bend by 99%
     Half the pitch bend range if it stays within -4096 and 4095
+    Delete pitch bend events from channels that do not use pitch bends.
+    Delete CC 6 and CC 20 events from channels that do not use pitch bends.
 
 - Check for modulation (CC 1) and show channels that use it
+    Delete all CC 1, CC 21, CC 22 and CC 26 events for channels that do not use modulation.
     Show CC 22 showing the CC 1 channels.
     Are values blank or equal to zero?
     Yes:
+        Delete CC 22 events in channels that do not use CC 22.
         Show CC 23 showing the blank or zero CC 22 channels.
         Multiply CC 1 by the value of CC 23 divided by 6 rounded up to the nearest hundredth.
         If CC 23 is blank, assume it is 3 and multiply CC 1 by 50%
