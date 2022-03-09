@@ -1,5 +1,5 @@
 - Converting instruments and volumes
-    Volume of any PSG should be multiplied by 130% or 200% depending on panning
+    Volume of any PSG should be multiplied by 130% or 175% depending on panning
     DP and HGSS square leads should be transposed up one octave (12 semitones)
 
 - Delete all CC 20 events
