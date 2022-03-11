@@ -1,6 +1,6 @@
 	.align 2
 voicegroup334:: @ B2W2 Sato
-	voice_keysplit voicegroup323, KeySplitTable116   @ piano (missing C4)
+	voice_keysplit voicegroup323, KeySplitTable133   @ piano (missing C4)
 	voice_keysplit voicegroup237, KeySplitTable9     @ rhodes 2 (hgss)
 	voice_keysplit voicegroup235, KeySplitTable91    @ piano octave
 	voice_keysplit voicegroup294, KeySplitTable36    @ rhodes
@@ -54,7 +54,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_wind, 67, 243, 155, 224
 	voice_keysplit voicegroup260, KeySplitTable131   @ timpani || 64
 	voice_keysplit voicegroup327, KeySplitTable72    @ french horns | 52 | 60
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_hg_096flt1c6, 255, 246, 159, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder

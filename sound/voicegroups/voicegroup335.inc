@@ -13,7 +13,7 @@ voicegroup335:: @ B2W2 Misc.
 	voice_directsound 60, 0, DirectSoundWaveData_bw_074glocknc5, 255, 249, 0, 205
 	voice_keysplit voicegroup244, KeySplitTable40    @ drawbar organ
 	voice_keysplit voicegroup237, KeySplitTable83    @ rhodes 2 (hgss)
-	voice_keysplit voicegroup323, KeySplitTable116   @ piano
+	voice_keysplit voicegroup323, KeySplitTable133   @ piano
 	voice_directsound 60, 0, DirectSoundWaveData_bw_choirfemale1_ghetsis, 255, 0, 227, 205
 	voice_directsound 60, 0, DirectSoundWaveData_bw_choirfemale2_ghetsis, 255, 0, 227, 205
 	voice_keysplit voicegroup291, KeySplitTable71    @ accordion
@@ -110,7 +110,7 @@ voicegroup335:: @ B2W2 Misc.
 	voice_directsound 60, 0, DirectSoundWaveData_b2_tani_stringsc3marcato, 255, 0, 255, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_tani_synthbassd2, 255, 242, 191, 205
 	voice_directsound 60, 0, DirectSoundWaveData_dp_timpany_e_16, 255, 251, 0, 205
-	voice_keysplit voicegroup261, KeySplitTable115   @ trumpets || 74
+	voice_keysplit voicegroup261, KeySplitTable132   @ trumpets || 74
 	voice_directsound 60, 0, DirectSoundWaveData_hg_141tbne3, 255, 242, 210, 205
 	voice_keysplit voicegroup327, KeySplitTable68    @ french horns ||| 69
 	voice_directsound 60, 0, DirectSoundWaveData_hg_096flt1c6, 255, 246, 159, 205

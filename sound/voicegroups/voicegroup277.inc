@@ -32,7 +32,7 @@ voicegroup277:: @ BW Adachi/Misc.
 	voice_keysplit voicegroup254, KeySplitTable73    @ synth bass
 	voice_keysplit voicegroup255, KeySplitTable79    @ strings | 66
 	voice_keysplit voicegroup255, KeySplitTable60    @ strings
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_keysplit voicegroup255, KeySplitTable115   @ strings | 66 | 75
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
 	voice_keysplit voicegroup293, KeySplitTable107   @ pizzicato | 48 | 57 | 65
 	voice_keysplit voicegroup299, KeySplitTable78    @ harp 2

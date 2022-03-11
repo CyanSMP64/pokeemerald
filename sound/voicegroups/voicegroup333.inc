@@ -1,6 +1,6 @@
 	.align 2
 voicegroup333:: @ B2W2 Ichinose
-	voice_keysplit voicegroup323, KeySplitTable116   @ piano
+	voice_keysplit voicegroup323, KeySplitTable133   @ piano
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup237, KeySplitTable83    @ rhodes 2 (hgss)
 	voice_directsound 60, 0, DirectSoundWaveData_bw_063rhodc5, 255, 250, 0, 210
@@ -12,7 +12,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_b2_powerchord_n, 255, 253, 0, 171
 	voice_keysplit voicegroup297, KeySplitTable76    @ vibraphone
 	voice_directsound 60, 0, DirectSoundWaveData_b2_synthpadc4_marinetube, 255, 251, 0, 205
-	voice_keysplit voicegroup240, KeySplitTable115   @ xylophone || 74
+	voice_keysplit voicegroup240, KeySplitTable132   @ xylophone || 74
 	voice_keysplit voicegroup353, KeySplitTable129   @ choir (marine tube)
 	voice_keysplit voicegroup241, KeySplitTable25    @ tubular bell
 	voice_directsound 60, 0, DirectSoundWaveData_bw_074glocknc5, 255, 249, 0, 205
@@ -50,7 +50,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_bw_064flt2a5, 255, 246, 159, 205
 	voice_keysplit voicegroup328, KeySplitTable65    @ flute 1
 	voice_directsound 60, 0, DirectSoundWaveData_bw_synthbassfs1_plasma, 255, 249, 0, 205
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_hg_096flt1c6, 255, 246, 159, 205
 	voice_keysplit voicegroup349, KeySplitTable76    @ synth lead (humilau)
 	voice_directsound 60, 0, DirectSoundWaveData_bw_fhornsripc3, 255, 248, 0, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_gongf, 255, 251, 0, 205

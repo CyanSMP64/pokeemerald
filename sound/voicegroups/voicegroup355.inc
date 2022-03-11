@@ -1,6 +1,6 @@
 	.align 2
 voicegroup355:: @ 
-	voice_keysplit voicegroup323, KeySplitTable116   @ piano 1
+	voice_keysplit voicegroup323, KeySplitTable133   @ piano 1
 	voice_keysplit voicegroup237, KeySplitTable83    @ rhodes 2 (hgss)
 	voice_keysplit voicegroup235, KeySplitTable91    @ piano octave
 	voice_keysplit voicegroup294, KeySplitTable36    @ rhodes
@@ -12,7 +12,7 @@ voicegroup355:: @
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup297, KeySplitTable76    @ vibraphone
 	voice_keysplit voicegroup295, KeySplitTable74    @ marimba
-	voice_keysplit voicegroup240, KeySplitTable115   @ xylophone
+	voice_keysplit voicegroup240, KeySplitTable132   @ xylophone
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
 	voice_keysplit voicegroup241, KeySplitTable25    @ tubular bell
 	voice_directsound 60, 0, DirectSoundWaveData_bw_074glocknc5, 255, 249, 0, 205

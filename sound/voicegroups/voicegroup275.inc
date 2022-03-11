@@ -9,10 +9,10 @@ voicegroup275:: @ BW Sato
 	voice_keysplit voicegroup326, KeySplitTable36    @ tack piano
 	voice_keysplit voicegroup290, KeySplitTable70    @ harpsichord
 	voice_keysplit voicegroup300, KeySplitTable36    @ rhodes (short release)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_keysplit voicegroup237, KeySplitTable9     @ rhodes 2 (hgss)
 	voice_keysplit voicegroup297, KeySplitTable76    @ vibraphone
 	voice_keysplit voicegroup295, KeySplitTable74    @ marimba
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_keysplit voicegroup244, KeySplitTable40    @ drawbar organ (hgss)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
 	voice_keysplit voicegroup241, KeySplitTable25    @ tubular bell
 	voice_keysplit voicegroup296, KeySplitTable83    @ glockenspiel
@@ -49,7 +49,7 @@ voicegroup275:: @ BW Sato
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
 	voice_keysplit voicegroup287, KeySplitTable67    @ flute 2
 	voice_keysplit voicegroup328, KeySplitTable65    @ flute 1
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_keysplit voicegroup267, KeySplitTable53    @ flute (hgss)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
 	voice_directsound 60, 0, DirectSoundWaveData_bw_sambawhistlec4_route2, 255, 0, 255, 171
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder

@@ -123,8 +123,8 @@ voicegroup276:: @ BW Ichinose
 	voice_keysplit voicegroup327, KeySplitTable72    @ french horns | 52 | 60
 	voice_directsound 60, 0, DirectSoundWaveData_bw_taikohardg4_ghetsis, 255, 248, 0, 205
 	voice_keysplit voicegroup297, KeySplitTable113   @ vibraphone | 60
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_hg_000uprigc2, 255, 251, 0, 192
+	voice_directsound 60, 0, DirectSoundWaveData_bw_sawleadc4_vsleader, 255, 242, 191, 64
 	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitmajor60, 255, 0, 255, 205
 	voice_keysplit_all voicegroup284				 @ drums 2
 	voice_keysplit_all voicegroup283				 @ drums

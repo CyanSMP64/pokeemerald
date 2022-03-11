@@ -33,7 +33,7 @@ voicegroup274:: @ BW Kageyama
 	voice_keysplit voicegroup255, KeySplitTable60    @ strings
 	voice_keysplit voicegroup315, KeySplitTable90    @ picked bass (nimbasa)
 	voice_keysplit voicegroup256, KeySplitTable46    @ violin
-	voice_directsound 60, 0, DirectSoundWaveData_hg_021cellog2, 254, 242, 255, 205
+	voice_keysplit voicegroup257, KeySplitTable66    @ cello
 	voice_keysplit voicegroup301, KeySplitTable79    @ clarinet (pokecenter)
 	voice_keysplit voicegroup299, KeySplitTable78    @ harp 2
 	voice_keysplit voicegroup302, KeySplitTable80    @ harp 1
@@ -69,15 +69,15 @@ voicegroup274:: @ BW Kageyama
 	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitminor60, 255, 0, 255, 205
 	voice_keysplit voicegroup332, KeySplitTable114   @ piano (longer decay)
 	voice_keysplit voicegroup255, KeySplitTable79    @ strings | 66
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_keysplit voicegroup297, KeySplitTable83    @ vibraphone | 68
 	voice_directsound 60, 0, DirectSoundWaveData_bw_gongp, 255, 252, 0, 236
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_keysplit voicegroup255, KeySplitTable115   @ strings | 66 | 75
+	voice_directsound 60, 0, DirectSoundWaveData_hg_144tptc4, 255, 246, 210, 205
+	voice_keysplit voicegroup266, KeySplitTable113   @ clarinet | 60
+	voice_keysplit voicegroup244, KeySplitTable102   @ drawbar organ | 56
 	voice_keysplit voicegroup319, KeySplitTable97    @ pipe organ
 	voice_directsound 60, 0, DirectSoundWaveData_bw_steeldrumc4_undella, 255, 251, 0, 205
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_keysplit voicegroup261, KeySplitTable116   @ trumpets | 65 | 76
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
