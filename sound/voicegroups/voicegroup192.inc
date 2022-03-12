@@ -4,15 +4,15 @@ voicegroup192:: @
 	voice_programmable_wave 60, 0, ProgrammableWaveData_sq25half, 1, 2, 6, 2   @ triple up of 070
 	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitmajor60, 255, 200, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitminor60, 255, 200, 255, 171
-	voice_programmable_wave 60, 0, ProgrammableWaveData_sq50half, 0, 7, 9, 1   @ triple up of 042 / 052
-	voice_square_1 60, 0, 0, 2, 0, 7, 9, 1      @ double up of 042 / 052
+	voice_programmable_wave 60, 0, ProgrammableWaveData_sq50half, 0, 7, 10, 0   @ triple up of 042
+	voice_square_1 60, 0, 0, 2, 0, 7, 10, 0      @ double up of 042
 	voice_square_1 60, 0, 0, 0, 0, 6, 6, 2       @ double up of 063
 	voice_programmable_wave 60, 0, ProgrammableWaveData_sq50oct, 0, 7, 2, 0   @ double up of 031 (oct lower)
 	voice_programmable_wave 60, 0, ProgrammableWaveData_sq50half, 0, 7, 2, 0   @ double up of 031
 	voice_programmable_wave 60, 0, ProgrammableWaveData_sq50oct, 0, 6, 6, 2   @ double up of 067 (oct lower)
 	voice_square_1 60, 0, 0, 2, 0, 7, 2, 0       @ double up of 031
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 7, 8, 2      @ double up of 052
+	voice_programmable_wave 60, 0, ProgrammableWaveData_sq50half, 0, 7, 8, 2   @ triple up of 052
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0

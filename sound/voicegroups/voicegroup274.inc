@@ -78,53 +78,53 @@ voicegroup274:: @ BW Kageyama
 	voice_keysplit voicegroup319, KeySplitTable97    @ pipe organ
 	voice_directsound 60, 0, DirectSoundWaveData_bw_steeldrumc4_undella, 255, 251, 0, 205
 	voice_keysplit voicegroup261, KeySplitTable116   @ trumpets | 65 | 76
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
 	voice_keysplit voicegroup306, KeySplitTable102   @ saw lead | 56
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
 	voice_keysplit voicegroup320, KeySplitTable99    @ french horns p
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
 	voice_directsound 60, 0, DirectSoundWaveData_bw_drumloop_vssubway, 255, 0, 255, 2
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
 	voice_directsound 60, 0, DirectSoundWaveData_bw_seashorec4, 255, 0, 255, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
 	voice_square_1 60, 0, 0, 2, 0, 6, 2, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
 	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitmajor60, 255, 0, 255, 205
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
 	voice_keysplit_all voicegroup281				 @ drums

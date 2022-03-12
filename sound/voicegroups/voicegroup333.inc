@@ -1,7 +1,7 @@
 	.align 2
 voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup323, KeySplitTable133   @ piano
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
 	voice_keysplit voicegroup237, KeySplitTable83    @ rhodes 2 (hgss)
 	voice_directsound 60, 0, DirectSoundWaveData_bw_063rhodc5, 255, 250, 0, 210
 	voice_directsound 60, 0, DirectSoundWaveData_bw_063rhodc5, 255, 250, 0, 32
@@ -63,7 +63,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup327, KeySplitTable68    @ french horns ||| 69
 	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitmajor60, 255, 0, 255, 205
 	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitminor60, 255, 0, 255, 205
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
 	voice_directsound 60, 0, DirectSoundWaveData_bw_sawleadc4_vsleader, 255, 242, 191, 0
 	voice_directsound 60, 0, DirectSoundWaveData_bw_acidbassb1short, 255, 42, 227, 0
 	voice_directsound 60, 0, DirectSoundWaveData_bw_synthbassf1_leader, 255, 251, 14, 171
@@ -83,7 +83,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit_all voicegroup336				 @ drum set 1
 	voice_keysplit_all voicegroup337				 @ drum set 2
 	voice_keysplit_all voicegroup338				 @ drum set 3 (addictive drums)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
 	voice_directsound 60, 0, DirectSoundWaveData_bw_solotrumpetc5, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_trombonesstaccatocs2, 255, 42, 227, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_spiccatostringse2, 255, 0, 255, 171
@@ -116,7 +116,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_nimbasagym, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_vscolress, 255, 0, 255, 0
 	voice_keysplit voicegroup354, KeySplitTable130   @ 1 2 3 4 5 (colress)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
 	voice_directsound 60, 0, DirectSoundWaveData_b2_virbankgym_female1_sing, 255, 0, 252, 32
 	voice_directsound 60, 0, DirectSoundWaveData_b2_chimesmetalchina, 255, 251, 0, 129
 	voice_directsound 60, 0, DirectSoundWaveData_b2_adriansfilterbankc3, 255, 234, 191, 129

@@ -9,11 +9,11 @@ voicegroup355:: @
 	voice_keysplit voicegroup290, KeySplitTable70    @ harpsichord
 	voice_keysplit voicegroup332, KeySplitTable114   @ piano 1 (longer decay)
 	voice_keysplit voicegroup341, KeySplitTable120   @ piano 3
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
 	voice_keysplit voicegroup297, KeySplitTable76    @ vibraphone
 	voice_keysplit voicegroup295, KeySplitTable74    @ marimba
 	voice_keysplit voicegroup240, KeySplitTable132   @ xylophone
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
 	voice_keysplit voicegroup241, KeySplitTable25    @ tubular bell
 	voice_directsound 60, 0, DirectSoundWaveData_bw_074glocknc5, 255, 249, 0, 205
 	voice_keysplit voicegroup243, KeySplitTable76    @ music box
@@ -114,17 +114,17 @@ voicegroup355:: @
 	voice_directsound 60, 0, DirectSoundWaveData_b2_nimbasagymsynthe1, 255, 242, 227, 214
 	voice_directsound 60, 0, DirectSoundWaveData_b2_nimbasagymsynthe4, 255, 242, 227, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_nimbasagymsynthe6, 255, 242, 227, 205
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy

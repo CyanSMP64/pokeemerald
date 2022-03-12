@@ -15,7 +15,7 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit voicegroup240, KeySplitTable39    @ xylophone
 	voice_directsound 60, 0, DirectSoundWaveData_bw_228vibrc6, 255, 248, 0, 205
 	voice_keysplit voicegroup241, KeySplitTable25    @ tubular bell
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
 	voice_keysplit voicegroup243, KeySplitTable76    @ music box
 	voice_keysplit voicegroup244, KeySplitTable71    @ drawbar organ
 	voice_keysplit voicegroup245, KeySplitTable71    @ jazz organ
@@ -54,21 +54,21 @@ voicegroup334:: @ B2W2 Sato
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_wind, 67, 243, 155, 224
 	voice_keysplit voicegroup260, KeySplitTable131   @ timpani || 64
 	voice_keysplit voicegroup327, KeySplitTable72    @ french horns | 52 | 60
-	voice_directsound 60, 0, DirectSoundWaveData_hg_096flt1c6, 255, 246, 159, 205
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_directsound 60, 0, DirectSoundWaveData_hg_096flt1c6, 255, 246, 78, 192
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
 	voice_keysplit voicegroup303, KeySplitTable81    @ choir full
 	voice_keysplit voicegroup344, KeySplitTable121   @ synth vox
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
 	voice_directsound 60, 0, DirectSoundWaveData_b2_wind_grotto, 255, 197, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_areyouready, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_areyouready_high, 255, 0, 255, 0
@@ -101,13 +101,13 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit voicegroup351, KeySplitTable127   @ spanish guitar
 	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 242, 25, 0
 	voice_square_2 60, 0, 2, 0, 7, 2, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
 	voice_keysplit voicegroup348, KeySplitTable126   @ over run
 	voice_directsound 60, 0, DirectSoundWaveData_b2_vinylsfx, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_sewers, 255, 0, 255, 0
@@ -125,6 +125,6 @@ voicegroup334:: @ B2W2 Sato
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_reversalmountain, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_shadowtriad, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_humilaugym, 255, 0, 255, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
 	voice_directsound 60, 0, DirectSoundWaveData_b2_cry_tympole, 255, 0, 255, 0

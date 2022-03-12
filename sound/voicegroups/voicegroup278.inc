@@ -1,7 +1,7 @@
 	.align 2
 voicegroup278:: @ BW DLC Musicals
 	voice_keysplit voicegroup233, KeySplitTable103   @ piano
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
 	voice_keysplit voicegroup236, KeySplitTable83    @ rhodes 1
 	voice_keysplit voicegroup237, KeySplitTable83    @ rhodes 2
 	voice_keysplit voicegroup238, KeySplitTable83    @ vibraphone
@@ -27,9 +27,9 @@ voicegroup278:: @ BW DLC Musicals
 	voice_programmable_wave 60, 0, ProgrammableWaveData_sq37half, 0, 7, 11, 3
 	voice_square_2 60, 0, 0, 0, 7, 11, 3
 	voice_directsound 60, 0, DirectSoundWaveData_puresquare_37, 254, 234, 191, 210
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
 	voice_keysplit voicegroup234, KeySplitTable36    @ piano 2
 	voice_keysplit voicegroup294, KeySplitTable36    @ rhodes
 	voice_keysplit voicegroup297, KeySplitTable76    @ vibraphone
@@ -39,67 +39,67 @@ voicegroup278:: @ BW DLC Musicals
 	voice_keysplit voicegroup292, KeySplitTable72    @ nylon str. guitar
 	voice_keysplit_all voicegroup286				 @ drums
 	voice_keysplit voicegroup253, KeySplitTable43    @ fingered bass
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
 	voice_directsound 60, 0, DirectSoundWaveData_bw_gflogo1, 255, 0, 255, 236
 	voice_directsound 60, 0, DirectSoundWaveData_bw_gflogo2, 255, 0, 255, 236
 	voice_directsound 60, 0, DirectSoundWaveData_bw_gflogo3, 255, 0, 255, 236
 	voice_directsound 60, 0, DirectSoundWaveData_bw_gflogo4, 255, 0, 255, 236
 	voice_directsound 60, 0, DirectSoundWaveData_bw_gflogo5, 255, 0, 255, 236
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
 	voice_directsound 60, 0, DirectSoundWaveData_bw_msl_mellowmunna, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_msl_yeah, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_msl_thatsright, 255, 0, 255, 171
@@ -111,7 +111,7 @@ voicegroup278:: @ BW DLC Musicals
 	voice_directsound 60, 0, DirectSoundWaveData_bw_msl_dulcimer, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_msl_aah, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_msl_deepkick, 255, 0, 255, 171
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ placeholder
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                                       @ dummy
 	voice_directsound 60, 0, DirectSoundWaveData_bw_drumloop_meloetta, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_msl_kick_melo, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_172snare909, 255, 0, 255, 171
