@@ -509,7 +509,10 @@ void PrintAgbTrack(std::vector<Event>& events)
             ResetTrackVars();
             break;
         case EventType::Tempo:
-            PrintByte("TEMPO , (%u*%s_tbs+1)/2", 60000000 / event.param2, g_asmLabel.c_str());
+            if (g_clocksPerBeat > 1)
+                PrintByte("TEMPO , %u*%s_tbs/2", 60000000 / event.param2, g_asmLabel.c_str());
+            else
+                PrintByte("TEMPO , (%u*%s_tbs+1)/2", 60000000 / event.param2, g_asmLabel.c_str());
             PrintWait(event.time);
             break;
         case EventType::InstrumentChange:

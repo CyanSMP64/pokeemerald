@@ -9,23 +9,23 @@ voicegroup192:: @
 	voice_square_1 60, 0, 0, 0, 0, 6, 6, 2       @ double up of 063
 	voice_programmable_wave 60, 0, ProgrammableWaveData_sq50oct, 0, 7, 2, 0   @ double up of 031 (oct lower)
 	voice_programmable_wave 60, 0, ProgrammableWaveData_sq50half, 0, 7, 2, 0   @ double up of 031
-	voice_programmable_wave 60, 0, ProgrammableWaveData_sq50oct, 0, 6, 6, 2   @ double up of 067 (oct lower)
+	voice_programmable_wave 60, 0, ProgrammableWaveData_sq50oct, 0, 3, 6, 2   @ double up of 067 (oct lower)
 	voice_square_1 60, 0, 0, 2, 0, 7, 2, 0       @ double up of 031
 	voice_square_1 60, 0, 0, 2, 0, 7, 8, 2      @ double up of 052
 	voice_programmable_wave 60, 0, ProgrammableWaveData_sq50half, 0, 7, 8, 2   @ triple up of 052
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 6, 6, 2       @ double up of 067
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
 	voice_keysplit voicegroup227, KeySplitTable25    @ music box (platinum only)
 	voice_keysplit voicegroup228, KeySplitTable34    @ banjo
 	voice_directsound 60, 64, DirectSoundWaveData_dp_sne1_roop, 255, 255, 191, 32
