@@ -1,7 +1,8 @@
 - Converting instruments and volumes
     DP and HGSS square leads should be transposed up one octave (12 semitones)
+    HGSS: Check every program change event and look for ones higher than 39.
 
-- Delete all CC 20 events
+- Delete all CC 16 and CC 20 events
 
 - Executing midfix4agb
 
