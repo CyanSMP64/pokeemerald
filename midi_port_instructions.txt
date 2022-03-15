@@ -6,7 +6,7 @@
 
 - Executing midfix4agb
 
-- Volume of any PSG should be multiplied by 150%
+- Volume of any PSG should be multiplied by 160%
 
 - Check pitch bends
     Multiply every negative pitch bend by 99%
