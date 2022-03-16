@@ -570,7 +570,7 @@
 #define MUS_DP_TSURETEKE              552 // Hurry Along
 #define MUS_DP_PC_01                  553 // Pokémon Center (Day)
 #define MUS_DP_PC_02                  554 // Pokémon Center (Night)
-#define MUS_DP_ASA                    555 // Pokémon Healed                  (TODO: SWEEP PITCH!!)
+#define MUS_DP_ASA                    555 // Pokémon Healed
 #define MUS_DP_EYE_BOY                556 // Trainers' Eyes Meet (Youngster)
 #define MUS_DP_EYE_GIRL               557 // Trainers' Eyes Meet (Lass)
 #define MUS_DP_BA_TRAIN               558 // Battle! (Trainer Battle)
