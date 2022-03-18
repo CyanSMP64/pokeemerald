@@ -780,7 +780,7 @@ gSongTable::
 	song mus_hg_wifitower, 0, 0
 	song mus_hg_bld_gtc, 0, 0
 	song mus_hg_me_hyouka3, 2, 2
-	song mus_hg_pl_bicycle, 0, 0
+	song mus_hg_bicycle, 0, 0
 	song mus_hg_eye_j_shoujo, 0, 0
 	song mus_hg_me_pokegear_regist, 2, 2
 	song mus_hg_d_kouen, 0, 0

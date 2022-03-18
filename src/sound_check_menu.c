@@ -1475,7 +1475,7 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(MUS_HG_WIFITOWER             , "MUS-HG-WIFITOWER") \
     X(MUS_HG_BLD_GTC               , "MUS-HG-BLD-GTC") \
     X(MUS_HG_ME_HYOUKA3            , "MUS-HG-ME-HYOUKA3") \
-    X(MUS_HG_PL_BICYCLE            , "MUS-HG-PL-BICYCLE") \
+    X(MUS_HG_PL_BICYCLE            , "MUS-HG-BICYCLE") \
     X(MUS_HG_EYE_J_SHOUJO          , "MUS-HG-EYE-J-SHOUJO") \
     X(MUS_HG_ME_POKEGEAR_REGIST    , "MUS-HG-ME-POKEGEAR-REGIST") \
     X(MUS_HG_D_KOUEN               , "MUS-HG-D-KOUEN") \

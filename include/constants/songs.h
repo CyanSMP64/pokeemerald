@@ -798,7 +798,7 @@
 #define MUS_HG_WIFITOWER              776 // Global Terminal
 #define MUS_HG_BLD_GTC                777 // GTS
 #define MUS_HG_ME_HYOUKA3             778 // Pokédex Evaluation... Keep at It!
-#define MUS_HG_PL_BICYCLE             779 // Bicycle
+#define MUS_HG_BICYCLE                779 // Bicycle
 #define MUS_HG_EYE_J_SHOUJO           780 // Trainers' Eyes Meet (Girl 1)
 #define MUS_HG_ME_POKEGEAR_REGIST     781 // Registered in the Pokégear!
 #define MUS_HG_D_KOUEN                782 // National Park

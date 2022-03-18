@@ -1971,7 +1971,7 @@ $(MID_SUBDIR)/mus_hg_bld_gtc.s: %.s: %.mid
 $(MID_SUBDIR)/mus_hg_me_hyouka3.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G229 -V081 -p5
 
-$(MID_SUBDIR)/mus_hg_pl_bicycle.s: %.s: %.mid
+$(MID_SUBDIR)/mus_hg_bicycle.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G229 -V085
 
 $(MID_SUBDIR)/mus_hg_eye_j_shoujo.s: %.s: %.mid
