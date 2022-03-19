@@ -69,7 +69,7 @@ voicegroup229:: @ HGSS main
 @	voice_directsound 60, 0, DirectSoundWaveData_dp_sawtoothlead60, 255, 197, 255, 171								@ 66
 @	voice_keysplit voicegroup272, KeySplitTable57    @ shamisen														@ 67
 @	voice_directsound 60, 0, DirectSoundWaveData_hg_hyoshigi, 255, 0, 255, 171										@ 68
-@	voice_directsound 60, 0, DirectSoundWaveData_hg_ecruteaklow, 255, 0, 255, 171									@ 69
+@	voice_directsound 60, 0, DirectSoundWaveData_hg_kodaiko, 255, 0, 255, 171										@ 69
 @	voice_directsound 60, 0, DirectSoundWaveData_hg_tsuzumi, 255, 0, 255, 171										@ 70
 @	voice_directsound 60, 0, DirectSoundWaveData_hg_jinglebell, 255, 0, 255, 171									@ 71
 @	voice_directsound 60, 0, DirectSoundWaveData_hg_hoohclap, 255, 0, 255, 0										@ 72

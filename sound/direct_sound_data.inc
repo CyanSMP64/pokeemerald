@@ -3439,8 +3439,8 @@ DirectSoundWaveData_hg_hyoshigi::
 	.incbin "sound/direct_sound_samples/hg_hyoshigi.bin"
 
 	.align 2
-DirectSoundWaveData_hg_ecruteaklow::
-	.incbin "sound/direct_sound_samples/hg_ecruteaklow.bin"
+DirectSoundWaveData_hg_kodaiko::
+	.incbin "sound/direct_sound_samples/hg_kodaiko.bin"
 
 	.align 2
 DirectSoundWaveData_hg_tsuzumi::

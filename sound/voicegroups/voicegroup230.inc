@@ -8,7 +8,7 @@ voicegroup230:: @
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sawtoothlead60, 255, 197, 255, 171
 	voice_keysplit voicegroup272, KeySplitTable57    @ shamisen
 	voice_directsound 60, 0, DirectSoundWaveData_hg_hyoshigi, 255, 0, 255, 171
-	voice_directsound 60, 0, DirectSoundWaveData_hg_ecruteaklow, 255, 0, 255, 171
+	voice_directsound 60, 0, DirectSoundWaveData_hg_kodaiko, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_hg_tsuzumi, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_hg_jinglebell, 255, 0, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_hg_hoohclap, 255, 0, 255, 0
