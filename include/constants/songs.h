@@ -938,7 +938,7 @@
 #define MUS_BW_T_02                   914 // Accumula Town
 #define MUS_BW_E_TSURETEKE2           915 // Hurry Along 2
 #define MUS_BW_POKECEN                916 // Pokémon Center
-#define MUS_BW_ME_ASA                 917 // Pokémon Healed                                (TODO: SWEEP PITCH!!)
+#define MUS_BW_ME_ASA                 917 // Pokémon Healed
 #define MUS_BW_ME_HYOUKA1             918 // Pokédex Evaluation... You've Just Begun!
 #define MUS_BW_E_SAGE                 919 // Team Plasma Plots
 #define MUS_BW_R_B_SP                 920 // Route 2 (Spring)

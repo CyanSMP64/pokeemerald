@@ -86,7 +86,7 @@ voicegroup276:: @ BW Ichinose
 	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitminor60, 255, 197, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitminor60, 58, 197, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_whitenoise_n, 255, 0, 255, 171
-	voice_keysplit voicegroup270, KeySplitTable38    @ square wave (HGSS)
+	voice_directsound 60, 0, DirectSoundWaveData_hg_126squarc5, 255, 242, 191, 171
 	voice_directsound 60, 0, DirectSoundWaveData_hg_039drawbc4, 255, 0, 255, 171
 	voice_keysplit voicegroup306, KeySplitTable38    @ saw lead
 	voice_keysplit voicegroup313, KeySplitTable88    @ synth string

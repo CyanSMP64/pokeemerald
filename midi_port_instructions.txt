@@ -29,7 +29,7 @@
         If CC 23 is blank, assume it is 1 and multiply CC 1 by 50%
     
     Show all channels that use CC 1 and show CC 21
-    Multiply all CC 21 events by (150 / current BPM)
+    Multiply all CC 21 events by (210 / current BPM)
 
     Multiply all CC 26 events by 50%
 
