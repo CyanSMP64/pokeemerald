@@ -22,7 +22,7 @@
         Delete CC 22 events in channels that do not use CC 22.
         Show CC 23 showing the blank or zero CC 22 channels.
         Multiply CC 1 by the value of CC 23 divided by 6 rounded up to the nearest hundredth.
-        If CC 23 is blank, assume it is 3 and multiply CC 1 by 50%
+        If CC 23 is blank, assume it is 1 and multiply CC 1 by 17%
     No:
         Show CC 23 showing the non-zero CC 22 channels.
         Multiply CC 1 by the value of CC 23 divided by 2.
@@ -31,6 +31,6 @@
     Show all channels that use CC 1 and show CC 21
     Multiply all CC 21 events by (210 / current BPM)
 
-    Multiply all CC 26 events by 50%
+    Multiply all CC 26 events by (current BPM / 480)
 
 - Convert all CC 14 events to CC 39
