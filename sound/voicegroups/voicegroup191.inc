@@ -54,7 +54,7 @@ voicegroup191:: @ DPPt main
 	voice_keysplit voicegroup218, KeySplitTable27    @ timpani 2
 	voice_square_2 60, 0, 2, 0, 7, 8, 2
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_square_wave, 255, 250, 0, 171 @ shift up by 1 octave
-	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_bubbles, 254, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_bubbles, 150, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_dp_octhit_c2_16, 255, 200, 255, 222
 	voice_keysplit voicegroup219, KeySplitTable29    @ trumpets 1
 	voice_keysplit voicegroup220, KeySplitTable30    @ trombone
