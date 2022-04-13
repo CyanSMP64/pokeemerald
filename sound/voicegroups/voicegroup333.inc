@@ -63,7 +63,7 @@ voicegroup333:: @ B2W2 Ichinose
 	voice_keysplit voicegroup327, KeySplitTable68    @ french horns ||| 69
 	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitmajor60, 255, 0, 255, 205
 	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitminor60, 255, 0, 255, 205
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_directsound 60, 0, DirectSoundWaveData_bw_168slapbc2, 255, 197, 227, 171
 	voice_directsound 60, 0, DirectSoundWaveData_bw_sawleadc4_vsleader, 255, 242, 191, 0
 	voice_directsound 60, 0, DirectSoundWaveData_bw_acidbassb1short, 255, 42, 227, 0
 	voice_directsound 60, 0, DirectSoundWaveData_bw_synthbassf1_leader, 255, 251, 14, 171
