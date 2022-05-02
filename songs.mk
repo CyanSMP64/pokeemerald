@@ -1774,7 +1774,7 @@ $(MID_SUBDIR)/mus_pl_city11_d.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V080
 
 $(MID_SUBDIR)/mus_pl_bf_roulette.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V110
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V110 -X
 
 $(MID_SUBDIR)/mus_pl_don2.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V120
@@ -2881,7 +2881,7 @@ $(MID_SUBDIR)/mus_bw_e_sound_designer.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G274 -V064
 
 $(MID_SUBDIR)/mus_bw_vs_rai.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G276 -V091 -X
+	$(MID) $< $@ -E -R$(STD_REVERB) -G276 -V091
 
 $(MID_SUBDIR)/mus_bw_me_hyouka6.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G274 -V076 -p5
