@@ -1638,6 +1638,12 @@ $(MID_SUBDIR)/mus_dp_fanfa3.s: %.s: %.mid
 $(MID_SUBDIR)/mus_dp_fanfa4.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100 -P5
 
+$(MID_SUBDIR)/mus_dp_fanfa6.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100 -P5
+
+$(MID_SUBDIR)/mus_dp_fanfa2.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V094 -P5
+
 $(MID_SUBDIR)/mus_dp_badge.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100 -P5
 
@@ -1661,6 +1667,9 @@ $(MID_SUBDIR)/mus_dp_kinomi.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_dp_co_dress.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V110
+
+$(MID_SUBDIR)/mus_dp_koukan.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
 
 $(MID_SUBDIR)/mus_dp_bld_ev_dendo2.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V088
@@ -1701,11 +1710,11 @@ $(MID_SUBDIR)/mus_dp_slot_ooatari.s: %.s: %.mid
 $(MID_SUBDIR)/mus_dp_bld_ending.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V127
 
-$(MID_SUBDIR)/mus_pl_title00.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V127
+$(MID_SUBDIR)/mus_dp_slot.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V112
 
-$(MID_SUBDIR)/mus_pl_title01.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V127
+$(MID_SUBDIR)/mus_pl_city11_d.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V080
 
 $(MID_SUBDIR)/mus_pl_tv_housou.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V096
@@ -1713,19 +1722,70 @@ $(MID_SUBDIR)/mus_pl_tv_housou.s: %.s: %.mid
 $(MID_SUBDIR)/mus_pl_tv_end.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V090 -P5
 
-$(MID_SUBDIR)/mus_pl_handsome.s: %.s: %.mid
+$(MID_SUBDIR)/mus_pl_title00.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V127
+
+$(MID_SUBDIR)/mus_pl_title01.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V127
+
+$(MID_SUBDIR)/mus_pl_d_giratina.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V105
+
+$(MID_SUBDIR)/mus_pl_bf_roulette.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V110 -X
+
+$(MID_SUBDIR)/mus_pl_bf_stage.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V115
+
+$(MID_SUBDIR)/mus_pl_bf_castle.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V110
+
+$(MID_SUBDIR)/mus_pl_bf_factory.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V110
 
 $(MID_SUBDIR)/mus_pl_wifitower.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V085
 
-$(MID_SUBDIR)/mus_pl_wifiunion.s: %.s: %.mid
+$(MID_SUBDIR)/mus_pl_audio.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V120
+
+$(MID_SUBDIR)/mus_pl_handsome.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V115
+
+$(MID_SUBDIR)/mus_pl_ba_gira.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V105
+
+$(MID_SUBDIR)/mus_pl_ba_brain.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V120
+
+$(MID_SUBDIR)/mus_pl_winbrain.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V108
+
+$(MID_SUBDIR)/mus_pl_ba_regi.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V105
+
+$(MID_SUBDIR)/mus_pl_mtkakko.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
+
+$(MID_SUBDIR)/mus_pl_mtkashi.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
+
+$(MID_SUBDIR)/mus_pl_mtkawa.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
+
+$(MID_SUBDIR)/mus_pl_mttakma.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
+
+$(MID_SUBDIR)/mus_pl_mtutsuk.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
+
+$(MID_SUBDIR)/mus_pl_guruguru.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
 
 $(MID_SUBDIR)/mus_pl_wifigame.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V115
 
-$(MID_SUBDIR)/mus_pl_winmini2.s: %.s: %.mid
+$(MID_SUBDIR)/mus_pl_wifiunion.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
 
 $(MID_SUBDIR)/mus_pl_wifiparade.s: %.s: %.mid
@@ -1737,56 +1797,14 @@ $(MID_SUBDIR)/mus_pl_ev_gira.s: %.s: %.mid
 $(MID_SUBDIR)/mus_pl_ev_gira2.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V115
 
-$(MID_SUBDIR)/mus_pl_d_giratina.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V105
-
-$(MID_SUBDIR)/mus_pl_ba_gira.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V105
-
-$(MID_SUBDIR)/mus_pl_guruguru.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
-
 $(MID_SUBDIR)/mus_pl_pthaifu.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V090
-
-$(MID_SUBDIR)/mus_pl_mtkawa.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
-
-$(MID_SUBDIR)/mus_pl_mtkakko.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
-
-$(MID_SUBDIR)/mus_pl_mttakma.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
-
-$(MID_SUBDIR)/mus_pl_mtutsuk.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
-
-$(MID_SUBDIR)/mus_pl_mtkashi.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
 
 $(MID_SUBDIR)/mus_pl_town02.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
 
-$(MID_SUBDIR)/mus_pl_audio.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V120
-
-$(MID_SUBDIR)/mus_pl_city11_d.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V080
-
-$(MID_SUBDIR)/mus_pl_bf_roulette.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V110 -X
-
 $(MID_SUBDIR)/mus_pl_don2.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V120
-
-$(MID_SUBDIR)/mus_pl_bf_stage.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V115
-
-$(MID_SUBDIR)/mus_pl_bf_factory.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V110
-
-$(MID_SUBDIR)/mus_pl_bf_castle.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V110
 
 $(MID_SUBDIR)/mus_pl_fro.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V105
@@ -1794,14 +1812,8 @@ $(MID_SUBDIR)/mus_pl_fro.s: %.s: %.mid
 $(MID_SUBDIR)/mus_pl_pointget3.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V127
 
-$(MID_SUBDIR)/mus_pl_ba_brain.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V120
-
-$(MID_SUBDIR)/mus_pl_winbrain.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V108
-
-$(MID_SUBDIR)/mus_pl_ba_regi.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V105
+$(MID_SUBDIR)/mus_pl_winmini2.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V100
 
 $(MID_SUBDIR)/mus_hg_title.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G229 -V122

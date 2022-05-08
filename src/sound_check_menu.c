@@ -1361,6 +1361,8 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(MUS_DP_FANFA5                , "MUS-DP-FANFA5") \
     X(MUS_DP_FANFA3                , "MUS-DP-FANFA3") \
     X(MUS_DP_FANFA4                , "MUS-DP-FANFA4") \
+    X(MUS_DP_FANFA6                , "MUS-DP-FANFA6") \
+    X(MUS_DP_FANFA2                , "MUS-DP-FANFA2") \
     X(MUS_DP_BADGE                 , "MUS-DP-BADGE") \
     X(MUS_DP_POCKETCH              , "MUS-DP-POCKETCH") \
     X(MUS_DP_WAZA                  , "MUS-DP-WAZA") \
@@ -1369,6 +1371,7 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(MUS_DP_ASA                   , "MUS-DP-ASA") \
     X(MUS_DP_KINOMI                , "MUS-DP-KINOMI") \
     X(MUS_DP_CO_DRESS              , "MUS-DP-CO-DRESS") \
+    X(MUS_DP_KOUKAN                , "MUS-DP-KOUKAN") \
     X(MUS_DP_BLD_EV_DENDO2         , "MUS-DP-BLD-EV-DENDO2") \
     X(MUS_DP_TITLE00               , "MUS-DP-TITLE00") \
     X(MUS_DP_TITLE01               , "MUS-DP-TITLE01") \
@@ -1382,40 +1385,41 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(MUS_DP_SLOT_ATARI            , "MUS-DP-SLOT-ATARI") \
     X(MUS_DP_SLOT_OOATARI          , "MUS-DP-SLOT-OOATARI") \
     X(MUS_DP_BLD_ENDING            , "MUS-DP-BLD-ENDING") \
-    X(MUS_PL_TITLE00               , "MUS-PL-TITLE00") \
-    X(MUS_PL_TITLE01               , "MUS-PL-TITLE01") \
+    X(MUS_DP_SLOT                  , "MUS-DP-SLOT") \
+    X(MUS_PL_CITY11_D              , "MUS-PL-CITY11-D") \
     X(MUS_PL_TV_HOUSOU             , "MUS-PL-TV-HOUSOU") \
     X(MUS_PL_TV_END                , "MUS-PL-TV-END") \
-    X(MUS_PL_HANDSOME              , "MUS-PL-HANDSOME") \
-    X(MUS_PL_WIFITOWER             , "MUS-PL-WIFITOWER") \
-    X(MUS_PL_WIFIUNION             , "MUS-PL-WIFIUNION") \
-    X(MUS_PL_WIFIGAME              , "MUS-PL-WIFIGAME") \
-    X(MUS_PL_WINMINI2              , "MUS-PL-WINMINI2") \
-    X(MUS_PL_WIFIPARADE            , "MUS-PL-WIFIPARADE") \
-    X(MUS_PL_EV_GIRA               , "MUS-PL-EV-GIRA") \
-    X(MUS_PL_EV_GIRA2              , "MUS-PL-EV-GIRA2") \
+    X(MUS_PL_TITLE00               , "MUS-PL-TITLE00") \
+    X(MUS_PL_TITLE01               , "MUS-PL-TITLE01") \
     X(MUS_PL_D_GIRATINA            , "MUS-PL-D-GIRATINA") \
-    X(MUS_PL_BA_GIRA               , "MUS-PL-BA-GIRA") \
-    X(MUS_PL_GURUGURU              , "MUS-PL-GURUGURU") \
-    X(MUS_PL_PTHAIFU               , "MUS-PL-PTHAIFU") \
-    X(MUS_PL_MTKAWA                , "MUS-PL-MTKAWA") \
-    X(MUS_PL_MTKAKKO               , "MUS-PL-MTKAKKO") \
-    X(MUS_PL_MTTAKMA               , "MUS-PL-MTTAKMA") \
-    X(MUS_PL_MTUTSUK               , "MUS-PL-MTUTSUK") \
-    X(MUS_PL_MTKASHI               , "MUS-PL-MTKASHI") \
-    X(MUS_PL_TOWN02                , "MUS-PL-TOWN02") \
-    X(MUS_PL_AUDIO                 , "MUS-PL-AUDIO") \
-    X(MUS_PL_CITY11_D              , "MUS-PL-CITY11-D") \
     X(MUS_PL_BF_ROULETTE           , "MUS-PL-BF-ROULETTE") \
-    X(MUS_PL_DON2                  , "MUS-PL-DON2") \
     X(MUS_PL_BF_STAGE              , "MUS-PL-BF-STAGE") \
-    X(MUS_PL_BF_FACTORY            , "MUS-PL-BF-FACTORY") \
     X(MUS_PL_BF_CASTLE             , "MUS-PL-BF-CASTLE") \
-    X(MUS_PL_FRO                   , "MUS-PL-FRO") \
-    X(MUS_PL_POINTGET3             , "MUS-PL-POINTGET3") \
+    X(MUS_PL_BF_FACTORY            , "MUS-PL-BF-FACTORY") \
+    X(MUS_PL_WIFITOWER             , "MUS-PL-WIFITOWER") \
+    X(MUS_PL_AUDIO                 , "MUS-PL-AUDIO") \
+    X(MUS_PL_HANDSOME              , "MUS-PL-HANDSOME") \
+    X(MUS_PL_BA_GIRA               , "MUS-PL-BA-GIRA") \
     X(MUS_PL_BA_BRAIN              , "MUS-PL-BA-BRAIN") \
     X(MUS_PL_WINBRAIN              , "MUS-PL-WINBRAIN") \
     X(MUS_PL_BA_REGI               , "MUS-PL-BA-REGI") \
+    X(MUS_PL_MTKAKKO               , "MUS-PL-MTKAKKO") \
+    X(MUS_PL_MTKASHI               , "MUS-PL-MTKASHI") \
+    X(MUS_PL_MTKAWA                , "MUS-PL-MTKAWA") \
+    X(MUS_PL_MTTAKMA               , "MUS-PL-MTTAKMA") \
+    X(MUS_PL_MTUTSUK               , "MUS-PL-MTUTSUK") \
+    X(MUS_PL_GURUGURU              , "MUS-PL-GURUGURU") \
+    X(MUS_PL_WIFIGAME              , "MUS-PL-WIFIGAME") \
+    X(MUS_PL_WIFIUNION             , "MUS-PL-WIFIUNION") \
+    X(MUS_PL_WIFIPARADE            , "MUS-PL-WIFIPARADE") \
+    X(MUS_PL_EV_GIRA               , "MUS-PL-EV-GIRA") \
+    X(MUS_PL_EV_GIRA2              , "MUS-PL-EV-GIRA2") \
+    X(MUS_PL_PTHAIFU               , "MUS-PL-PTHAIFU") \
+    X(MUS_PL_TOWN02                , "MUS-PL-TOWN02") \
+    X(MUS_PL_DON2                  , "MUS-PL-DON2") \
+    X(MUS_PL_FRO                   , "MUS-PL-FRO") \
+    X(MUS_PL_POINTGET3             , "MUS-PL-POINTGET3") \
+    X(MUS_PL_WINMINI2              , "MUS-PL-WINMINI2") \
     X(MUS_HG_TITLE                 , "MUS-HG-TITLE") \
     X(MUS_HG_POKEMON_THEME         , "MUS-HG-POKEMON-THEME") \
     X(MUS_HG_STARTING              , "MUS-HG-STARTING") \

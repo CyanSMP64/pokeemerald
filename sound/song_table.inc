@@ -666,6 +666,8 @@ gSongTable::
 	song mus_dp_fanfa5, 2, 2
 	song mus_dp_fanfa3, 2, 2
 	song mus_dp_fanfa4, 2, 2
+	song mus_dp_fanfa6, 2, 2
+	song mus_dp_fanfa2, 2, 2
 	song mus_dp_badge, 2, 2
 	song mus_dp_pocketch, 2, 2
 	song mus_dp_waza, 2, 2
@@ -674,6 +676,7 @@ gSongTable::
 	song mus_dp_asa, 2, 2
 	song mus_dp_kinomi, 2, 2
 	song mus_dp_co_dress, 0, 0
+	song mus_dp_koukan, 0, 0
 	song mus_dp_bld_ev_dendo2, 0, 0
 	song mus_dp_title00, 0, 0
 	song mus_dp_title01, 0, 0
@@ -687,40 +690,41 @@ gSongTable::
 	song mus_dp_slot_atari, 0, 0
 	song mus_dp_slot_ooatari, 0, 0
 	song mus_dp_bld_ending, 0, 0
-	song mus_pl_title00, 0, 0
-	song mus_pl_title01, 0, 0
+	song mus_dp_slot, 0, 0
+	song mus_pl_city11_d, 0, 0
 	song mus_pl_tv_housou, 0, 0
 	song mus_pl_tv_end, 2, 2
-	song mus_pl_handsome, 0, 0
-	song mus_pl_wifitower, 0, 0
-	song mus_pl_wifiunion, 0, 0
-	song mus_pl_wifigame, 0, 0
-	song mus_pl_winmini2, 2, 2
-	song mus_pl_wifiparade, 0, 0
-	song mus_pl_ev_gira, 0, 0
-	song mus_pl_ev_gira2, 0, 0
+	song mus_pl_title00, 0, 0
+	song mus_pl_title01, 0, 0
 	song mus_pl_d_giratina, 0, 0
-	song mus_pl_ba_gira, 0, 0
-	song mus_pl_guruguru, 0, 0
-	song mus_pl_pthaifu, 0, 0
-	song mus_pl_mtkawa, 0, 0
-	song mus_pl_mtkakko, 0, 0
-	song mus_pl_mttakma, 0, 0
-	song mus_pl_mtutsuk, 0, 0
-	song mus_pl_mtkashi, 0, 0
-	song mus_pl_town02, 0, 0
-	song mus_pl_audio, 0, 0
-	song mus_pl_city11_d, 0, 0
 	song mus_pl_bf_roulette, 0, 0
-	song mus_pl_don2, 2, 2
 	song mus_pl_bf_stage, 0, 0
-	song mus_pl_bf_factory, 0, 0
 	song mus_pl_bf_castle, 0, 0
-	song mus_pl_fro, 2, 2
-	song mus_pl_pointget3, 2, 2
+	song mus_pl_bf_factory, 0, 0
+	song mus_pl_wifitower, 0, 0
+	song mus_pl_audio, 0, 0
+	song mus_pl_handsome, 0, 0
+	song mus_pl_ba_gira, 0, 0
 	song mus_pl_ba_brain, 0, 0
 	song mus_pl_winbrain, 0, 0
 	song mus_pl_ba_regi, 0, 0
+	song mus_pl_mtkakko, 0, 0
+	song mus_pl_mtkashi, 0, 0
+	song mus_pl_mtkawa, 0, 0
+	song mus_pl_mttakma, 0, 0
+	song mus_pl_mtutsuk, 0, 0
+	song mus_pl_guruguru, 0, 0
+	song mus_pl_wifigame, 0, 0
+	song mus_pl_wifiunion, 0, 0
+	song mus_pl_wifiparade, 0, 0
+	song mus_pl_ev_gira, 0, 0
+	song mus_pl_ev_gira2, 0, 0
+	song mus_pl_pthaifu, 0, 0
+	song mus_pl_town02, 0, 0
+	song mus_pl_don2, 2, 2
+	song mus_pl_fro, 2, 2
+	song mus_pl_pointget3, 2, 2
+	song mus_pl_winmini2, 2, 2
 	song mus_hg_title, 0, 0
 	song mus_hg_pokemon_theme, 0, 0
 	song mus_hg_starting, 0, 0
