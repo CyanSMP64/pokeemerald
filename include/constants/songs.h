@@ -746,20 +746,20 @@
 #define MUS_HG_TITLE                  724 // Opening Movie
 #define MUS_HG_POKEMON_THEME          725 // Title Screen
 #define MUS_HG_STARTING               726 // An Adventure Begins!
-#define MUS_HG_T_WAKABA               727 //#New Bark Town
+#define MUS_HG_T_WAKABA               727 // New Bark Town
 #define MUS_HG_E_TSURETEKE1           728 // Hurry Along
-#define MUS_HG_E_SUPPORT_F            729 //#Lyra
+#define MUS_HG_E_SUPPORT_F            729 // Lyra
 #define MUS_HG_E_SUPPORT_M            730 // Ethan
 #define MUS_HG_UTSUGI_RABO            731 // Elm Pokémon Lab
 #define MUS_HG_ME_KEYITEM             732 // Obtained a Key Item!
-#define MUS_HG_R_1_29                 733 //#Route 29
+#define MUS_HG_R_1_29                 733 // Route 29
 #define MUS_HG_VS_NORAPOKE            734 // Battle! (Wild Pokémon - Johto Version)
 #define MUS_HG_WIN2                   735 // Victory! (Wild Pokémon)
 #define MUS_HG_WIN2_NOT_FAN           736 // Victory! (Wild Pokémon) (No intro)
 #define MUS_HG_ME_LVUP                737 // Level Up!
-#define MUS_HG_C_YOSHINO              738 //#Cherrygrove City
+#define MUS_HG_C_YOSHINO              738 // Cherrygrove City
 #define MUS_HG_E_TSURETEKE2           739 // Hurry Along 2
-#define MUS_HG_POKESEN                740 //#Pokémon Center
+#define MUS_HG_POKESEN                740 // Pokémon Center
 #define MUS_HG_ME_ASA                 741 //#Pokémon Healed
 #define MUS_HG_EYE_J_SHOUNEN          742 // Trainers' Eyes Meet (Boy 1)
 #define MUS_HG_VS_TRAINER             743 // Battle! (Trainer Battle - Johto Version)
