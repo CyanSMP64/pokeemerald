@@ -760,13 +760,13 @@
 #define MUS_HG_C_YOSHINO              738 // Cherrygrove City
 #define MUS_HG_E_TSURETEKE2           739 // Hurry Along 2
 #define MUS_HG_POKESEN                740 // Pokémon Center
-#define MUS_HG_ME_ASA                 741 //#Pokémon Healed
+#define MUS_HG_ME_ASA                 741 // Pokémon Healed
 #define MUS_HG_EYE_J_SHOUNEN          742 // Trainers' Eyes Meet (Boy 1)
 #define MUS_HG_VS_TRAINER             743 // Battle! (Trainer Battle - Johto Version)
 #define MUS_HG_WIN1                   744 // Victory! (Trainer Battle)
 #define MUS_HG_R_1_30                 745 // Route 30
 #define MUS_HG_ME_HYOUKA1             746 // Pokédex Evaluation... No Good!
-#define MUS_HG_C_KIKYOU               747 //#Violet City
+#define MUS_HG_C_KIKYOU               747 // Violet City
 #define MUS_HG_TO_MADATSUBOMI1        748 // Sprout Tower
 #define MUS_HG_EYE_BOUZU              749 //#Trainers' Eyes Meet (Sage)
 #define MUS_HG_FS                     750 // Poké Mart
