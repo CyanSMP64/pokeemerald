@@ -768,14 +768,14 @@
 #define MUS_HG_ME_HYOUKA1             746 // Pokédex Evaluation... No Good!
 #define MUS_HG_C_KIKYOU               747 // Violet City
 #define MUS_HG_TO_MADATSUBOMI1        748 // Sprout Tower
-#define MUS_HG_EYE_BOUZU              749 //#Trainers' Eyes Meet (Sage)
+#define MUS_HG_EYE_BOUZU              749 // Trainers' Eyes Meet (Sage)
 #define MUS_HG_FS                     750 // Poké Mart
 #define MUS_HG_ME_TAMAGO_GET          751 // Received a Pokémon Egg!
-#define MUS_HG_E_MAIKO_THEME          752 //#Kimono Girl
+#define MUS_HG_E_MAIKO_THEME          752 // Kimono Girl
 #define MUS_HG_D_CHIKATSUURO          753 // Union Cave
 #define MUS_HG_ME_ITEM                754 // Picked Up an Item!
 #define MUS_HG_D_UNKNOWN_ISEKI        755 // Ruins of Alph
-#define MUS_HG_RADIO_UNKNOWN          756 //#Pokégear Radio: Unown
+#define MUS_HG_RADIO_UNKNOWN          756 // Pokégear Radio: Unown
 #define MUS_HG_ME_HYOUKA2             757 // Pokédex Evaluation... You're on Your Way!
 #define MUS_HG_T_HIWADA               758 //#Azalea Town
 #define MUS_HG_EYE_ROCKET             759 // Trainers' Eyes Meet (Team Rocket)

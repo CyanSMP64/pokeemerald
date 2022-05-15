@@ -1912,7 +1912,7 @@ $(MID_SUBDIR)/mus_hg_d_unknown_iseki.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V093
 
 $(MID_SUBDIR)/mus_hg_radio_unknown.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V089
+	$(MID) $< $@ -E -R0 -G229 -V089 -X
 
 $(MID_SUBDIR)/mus_hg_me_hyouka2.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V095 -P5
