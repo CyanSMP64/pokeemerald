@@ -777,11 +777,11 @@
 #define MUS_HG_D_UNKNOWN_ISEKI        755 // Ruins of Alph
 #define MUS_HG_RADIO_UNKNOWN          756 // Pokégear Radio: Unown
 #define MUS_HG_ME_HYOUKA2             757 // Pokédex Evaluation... You're on Your Way!
-#define MUS_HG_T_HIWADA               758 //#Azalea Town
+#define MUS_HG_T_HIWADA               758 // Azalea Town
 #define MUS_HG_EYE_ROCKET             759 // Trainers' Eyes Meet (Team Rocket)
-#define MUS_HG_VS_ROCKET              760 //#Battle! (Team Rocket)
+#define MUS_HG_VS_ROCKET              760 // Battle! (Team Rocket)
 #define MUS_HG_R_4_34                 761 // Route 34
-#define MUS_HG_E_RIVAL1               762 //#A Rival Appears!
+#define MUS_HG_E_RIVAL1               762 // A Rival Appears!
 #define MUS_HG_VS_RIVAL               763 //#Battle! (Rival)
 #define MUS_HG_SHINKA                 764 //#Evolution
 #define MUS_HG_KOUKAN                 765 //#Evolution (No intro)
