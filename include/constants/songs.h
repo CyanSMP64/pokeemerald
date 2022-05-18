@@ -782,7 +782,7 @@
 #define MUS_HG_VS_ROCKET              760 // Battle! (Team Rocket)
 #define MUS_HG_R_4_34                 761 // Route 34
 #define MUS_HG_E_RIVAL1               762 // A Rival Appears!
-#define MUS_HG_VS_RIVAL               763 //#Battle! (Rival)
+#define MUS_HG_VS_RIVAL               763 // Battle! (Rival)
 #define MUS_HG_SHINKA                 764 //#Evolution
 #define MUS_HG_KOUKAN                 765 //#Evolution (No intro)
 #define MUS_HG_ME_SHINKAOME           766 // Congratulations! Your Pokémon Evolved!
