@@ -1255,7 +1255,7 @@ $(MID_SUBDIR)/mus_dp_town06_d.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V094
 
 $(MID_SUBDIR)/mus_dp_town07_d.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G191 -V096
+	$(MID) $< $@ -E -R0 -G191 -V096 -X
 
 $(MID_SUBDIR)/mus_dp_city01_d.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V096
@@ -1333,7 +1333,7 @@ $(MID_SUBDIR)/mus_dp_town06_n.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V094
 
 $(MID_SUBDIR)/mus_dp_town07_n.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G191 -V095
+	$(MID) $< $@ -E -R0 -G191 -V095 -X
 
 $(MID_SUBDIR)/mus_dp_city01_n.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V104
@@ -1667,9 +1667,6 @@ $(MID_SUBDIR)/mus_dp_kinomi.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_dp_co_dress.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V110
-
-$(MID_SUBDIR)/mus_dp_koukan.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G191 -V100
 
 $(MID_SUBDIR)/mus_dp_bld_ev_dendo2.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V088

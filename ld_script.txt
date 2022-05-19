@@ -1368,7 +1368,6 @@ SECTIONS {
         sound/songs/midi/mus_dp_asa.o(.rodata);
         sound/songs/midi/mus_dp_kinomi.o(.rodata);
         sound/songs/midi/mus_dp_co_dress.o(.rodata);
-        sound/songs/midi/mus_dp_koukan.o(.rodata);
         sound/songs/midi/mus_dp_bld_ev_dendo2.o(.rodata);
         sound/songs/midi/mus_dp_title00.o(.rodata);
         sound/songs/midi/mus_dp_title01.o(.rodata);

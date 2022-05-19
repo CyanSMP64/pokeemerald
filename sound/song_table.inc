@@ -676,7 +676,6 @@ gSongTable::
 	song mus_dp_asa, 2, 2
 	song mus_dp_kinomi, 2, 2
 	song mus_dp_co_dress, 0, 0
-	song mus_dp_koukan, 0, 0
 	song mus_dp_bld_ev_dendo2, 0, 0
 	song mus_dp_title00, 0, 0
 	song mus_dp_title01, 0, 0

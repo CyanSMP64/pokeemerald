@@ -99,7 +99,7 @@
 #define FANFARE_BW_MISSION_CLEAR         95
 #define FANFARE_BW_MISSION_FAILED        96
 #define FANFARE_BW_OBTAIN_BERRY          97
-#define FANFARE_B2_IMMORTALIZED          98
+#define FANFARE_B2_POKESTAR_STUDIOS      98
 #define FANFARE_B2_JOIN_AVENUE_1         99
 #define FANFARE_B2_JOIN_AVENUE_2         100
 #define FANFARE_B2_EARN_MEDAL            101

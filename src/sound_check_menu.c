@@ -1371,7 +1371,6 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(MUS_DP_ASA                   , "MUS-DP-ASA") \
     X(MUS_DP_KINOMI                , "MUS-DP-KINOMI") \
     X(MUS_DP_CO_DRESS              , "MUS-DP-CO-DRESS") \
-    X(MUS_DP_KOUKAN                , "MUS-DP-KOUKAN") \
     X(MUS_DP_BLD_EV_DENDO2         , "MUS-DP-BLD-EV-DENDO2") \
     X(MUS_DP_TITLE00               , "MUS-DP-TITLE00") \
     X(MUS_DP_TITLE01               , "MUS-DP-TITLE01") \
