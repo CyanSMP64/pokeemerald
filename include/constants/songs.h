@@ -819,13 +819,13 @@
 #define MUS_HG_NAMINORI               797 // Surf
 #define MUS_HG_C_TANBA                798 // Cianwood City
 #define MUS_HG_ME_PT_SPECIAL          799 // Received a Pokémon!
-#define MUS_HG_R_7_42                 800 //#Route 42
-#define MUS_HG_KAIDENPA               801 //#Radio Transmission
-#define MUS_HG_D_AJITO                802 //#Team Rocket HQ
-#define MUS_HG_EYE_J_AYASHII          803 //#Trainers' Eyes Meet (Suspicious Figure 1)
-#define MUS_HG_E_RIVAL2               804 //#A Rival Appears! (Version 2)
+#define MUS_HG_R_7_42                 800 // Route 42
+#define MUS_HG_KAIDENPA               801 // Radio Transmission
+#define MUS_HG_D_AJITO                802 // Team Rocket HQ
+#define MUS_HG_EYE_J_AYASHII          803 // Trainers' Eyes Meet (Suspicious Figure 1)
+#define MUS_HG_E_RIVAL2               804 // A Rival Appears! (Version 2)
 #define MUS_HG_SENKYO                 805 // Radio Tower Occupied!
-#define MUS_HG_D_KOORINONUKE          806 //#Ice Path
+#define MUS_HG_D_KOORINONUKE          806 // Ice Path
 #define MUS_HG_ME_WASURE              807 // Move Deleted
 #define MUS_HG_RYUUNOANA              808 //#Dragon's Den
 #define MUS_HG_IBUKI                  809 //#Clair

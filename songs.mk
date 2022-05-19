@@ -2038,7 +2038,7 @@ $(MID_SUBDIR)/mus_hg_r_7_42.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V085
 
 $(MID_SUBDIR)/mus_hg_kaidenpa.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V092
+	$(MID) $< $@ -E -R0 -G229 -V092 -X
 
 $(MID_SUBDIR)/mus_hg_d_ajito.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V081
