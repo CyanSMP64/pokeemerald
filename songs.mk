@@ -3278,3 +3278,4 @@ $(MID_SUBDIR)/mus_b2_ending.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_b2_theend.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V115
+	
