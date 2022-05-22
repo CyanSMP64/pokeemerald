@@ -355,3 +355,4 @@
 .include "sound/voicegroups/voicegroup353.inc"
 .include "sound/voicegroups/voicegroup354.inc"
 .include "sound/voicegroups/voicegroup355.inc" @ B2W2 Voice group for musicians
+.include "sound/voicegroups/voicegroup356.inc"

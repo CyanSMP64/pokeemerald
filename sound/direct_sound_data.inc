@@ -5737,3 +5737,43 @@ DirectSoundWaveData_b2_kick_n::
 	.align 2
 DirectSoundWaveData_b2_snare_credits:
 	.incbin "sound/direct_sound_samples/b2_snare_credits.bin"
+
+	.align 2
+DirectSoundWaveData_eb_00:
+	.incbin "sound/direct_sound_samples/eb_00.bin"
+
+	.align 2
+DirectSoundWaveData_eb_03:
+	.incbin "sound/direct_sound_samples/eb_03.bin"
+
+	.align 2
+DirectSoundWaveData_eb_08:
+	.incbin "sound/direct_sound_samples/eb_08.bin"
+
+	.align 2
+DirectSoundWaveData_eb_09:
+	.incbin "sound/direct_sound_samples/eb_09.bin"
+
+	.align 2
+DirectSoundWaveData_eb_10:
+	.incbin "sound/direct_sound_samples/eb_10.bin"
+
+	.align 2
+DirectSoundWaveData_eb_20:
+	.incbin "sound/direct_sound_samples/eb_20.bin"
+
+	.align 2
+DirectSoundWaveData_eb_21:
+	.incbin "sound/direct_sound_samples/eb_21.bin"
+
+	.align 2
+DirectSoundWaveData_eb_22:
+	.incbin "sound/direct_sound_samples/eb_22.bin"
+
+	.align 2
+DirectSoundWaveData_eb_29:
+	.incbin "sound/direct_sound_samples/eb_29.bin"
+
+	.align 2
+DirectSoundWaveData_eb_30:
+	.incbin "sound/direct_sound_samples/eb_30.bin"

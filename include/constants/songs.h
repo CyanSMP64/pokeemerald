@@ -1237,6 +1237,9 @@
 #define MUS_B2_THEEND                 1211 // The End
 
 
+#define MUS_WHAT    1212
+
+
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
 #define MUS_NONE                    0xFFFF

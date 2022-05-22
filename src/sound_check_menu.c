@@ -389,7 +389,7 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
             if (gTasks[taskId].tBgmIndex > 0)
                 gTasks[taskId].tBgmIndex--;
             else
-                gTasks[taskId].tBgmIndex = (MUS_B2_THEEND - (MUS_LITTLEROOT_TEST - 1));
+                gTasks[taskId].tBgmIndex = (MUS_WHAT - (MUS_LITTLEROOT_TEST - 1));
         }
         return TRUE;
     }
@@ -404,7 +404,7 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
         }
         else
         {
-            if (gTasks[taskId].tBgmIndex < (MUS_B2_THEEND - (MUS_LITTLEROOT_TEST - 1)))
+            if (gTasks[taskId].tBgmIndex < (MUS_WHAT - (MUS_LITTLEROOT_TEST - 1)))
                 gTasks[taskId].tBgmIndex++;
             else
                 gTasks[taskId].tBgmIndex = 0;
@@ -1908,6 +1908,7 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(MUS_B2_VS_IRIS               , "MUS-B2-VS-IRIS") \
     X(MUS_B2_ENDING                , "MUS-B2-ENDING") \
     X(MUS_B2_THEEND                , "MUS-B2-THEEND") \
+    X(MUS_WHAT   , "MUS-WHAT") \
 
 #define SOUND_LIST_SE \
     X(SE_STOP, "STOP") \

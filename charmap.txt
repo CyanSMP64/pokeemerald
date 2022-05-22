@@ -1677,6 +1677,7 @@ MUS_B2_ME_MD_FAN04            = B8 04
 MUS_B2_VS_IRIS                = B9 04
 MUS_B2_ENDING                 = BA 04
 MUS_B2_THEEND                 = BB 04
+MUS_WHAT                 = BC 04
 
 A_BUTTON = F8 00
 B_BUTTON = F8 01

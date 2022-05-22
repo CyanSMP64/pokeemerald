@@ -1213,6 +1213,7 @@ gSongTable::
 	song mus_b2_vs_iris, 0, 0
 	song mus_b2_ending, 0, 0
 	song mus_b2_theend, 0, 0
+	song mus_what, 0, 0
 
 	.align 2
 dummy_song_header:
