@@ -1678,6 +1678,10 @@ MUS_B2_VS_IRIS                = B9 04
 MUS_B2_ENDING                 = BA 04
 MUS_B2_THEEND                 = BB 04
 MUS_WHAT                 = BC 04
+MUS_BW_WIN1MEME = BD 04
+MUS_ZINNIA      = BE 04
+MUS_DIALGA_PMD  = BF 04
+MUS_KH2_XEMNAS3 = C0 04
 
 A_BUTTON = F8 00
 B_BUTTON = F8 01

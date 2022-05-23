@@ -389,7 +389,7 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
             if (gTasks[taskId].tBgmIndex > 0)
                 gTasks[taskId].tBgmIndex--;
             else
-                gTasks[taskId].tBgmIndex = (MUS_WHAT - (MUS_LITTLEROOT_TEST - 1));
+                gTasks[taskId].tBgmIndex = (MUS_KH2_XEMNAS3 - (MUS_LITTLEROOT_TEST - 1));
         }
         return TRUE;
     }
@@ -404,7 +404,7 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
         }
         else
         {
-            if (gTasks[taskId].tBgmIndex < (MUS_WHAT - (MUS_LITTLEROOT_TEST - 1)))
+            if (gTasks[taskId].tBgmIndex < (MUS_KH2_XEMNAS3 - (MUS_LITTLEROOT_TEST - 1)))
                 gTasks[taskId].tBgmIndex++;
             else
                 gTasks[taskId].tBgmIndex = 0;
@@ -1909,6 +1909,10 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(MUS_B2_ENDING                , "MUS-B2-ENDING") \
     X(MUS_B2_THEEND                , "MUS-B2-THEEND") \
     X(MUS_WHAT   , "MUS-WHAT") \
+    X(MUS_BW_WIN1MEME, "MUS-BW-WIN1MEME") \
+    X(MUS_ZINNIA     , "MUS-ZINNIA") \
+    X(MUS_DIALGA_PMD , "MUS-DIALGA-PMD") \
+    X(MUS_KH2_XEMNAS3, "MUS-KH2-XEMNAS3") \
 
 #define SOUND_LIST_SE \
     X(SE_STOP, "STOP") \

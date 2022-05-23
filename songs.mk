@@ -3281,4 +3281,16 @@ $(MID_SUBDIR)/mus_b2_theend.s: %.s: %.mid
 	
 $(MID_SUBDIR)/mus_what.s: %.s: %.mid
 	$(MID) $< $@ -E -R16 -G356 -V127 -X
+		
+$(MID_SUBDIR)/mus_bw_win1meme.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G274 -V116
+			
+$(MID_SUBDIR)/mus_zinnia.s: %.s: %.mid
+	$(MID) $< $@ -E -R30 -G229 -V090
+				
+$(MID_SUBDIR)/mus_dialga_pmd.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V090
+					
+$(MID_SUBDIR)/mus_kh2_xemnas3.s: %.s: %.mid
+	$(MID) $< $@ -E -R30 -G274 -V090
 	

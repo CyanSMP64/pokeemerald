@@ -1214,6 +1214,10 @@ gSongTable::
 	song mus_b2_ending, 0, 0
 	song mus_b2_theend, 0, 0
 	song mus_what, 0, 0
+	song mus_bw_win1meme, 0, 0
+	song mus_zinnia, 0, 0
+	song mus_dialga_pmd, 0, 0
+	song mus_kh2_xemnas3, 0, 0
 
 	.align 2
 dummy_song_header:

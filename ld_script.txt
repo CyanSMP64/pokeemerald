@@ -1906,6 +1906,10 @@ SECTIONS {
         sound/songs/midi/mus_b2_ending.o(.rodata);
         sound/songs/midi/mus_b2_theend.o(.rodata);
         sound/songs/midi/mus_what.o(.rodata);
+        sound/songs/midi/mus_bw_win1meme.o(.rodata);
+        sound/songs/midi/mus_zinnia.o(.rodata);
+        sound/songs/midi/mus_dialga_pmd.o(.rodata);
+        sound/songs/midi/mus_kh2_xemnas3.o(.rodata);
     } =0
 
     lib_rodata :
