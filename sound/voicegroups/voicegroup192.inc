@@ -8,17 +8,17 @@ voicegroup192:: @
 	voice_square_1 60, 0, 0, 2, 0, 7, 10, 0      @ double up of 042
 	voice_square_1 60, 0, 0, 0, 0, 6, 6, 2       @ double up of 063
 	voice_programmable_wave 60, 0, ProgrammableWaveData_sq50oct, 0, 7, 2, 0   @ double up of 031 (oct lower)
-	voice_programmable_wave 60, 0, ProgrammableWaveData_sq50half, 0, 7, 2, 0   @ double up of 031
+	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 242, 25, 0 	@ 031
 	voice_programmable_wave 60, 0, ProgrammableWaveData_sq50oct, 0, 3, 6, 2   @ double up of 067 (oct lower)
 	voice_square_1 60, 0, 0, 2, 0, 7, 2, 0       @ double up of 031
 	voice_square_1 60, 0, 0, 2, 0, 7, 8, 2      @ double up of 052
 	voice_programmable_wave 60, 0, ProgrammableWaveData_sq50half, 0, 7, 8, 2   @ triple up of 052
 	voice_square_1 60, 0, 0, 2, 0, 6, 6, 2       @ double up of 067
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 252, 0, 64 	@ 042
+	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 250, 0, 214	@ 052
+	voice_directsound 60, 0, DirectSoundWaveData_puresquare_12, 255, 242, 101, 214	@ 063
+	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 242, 101, 214	@ 067
+	voice_directsound 60, 0, DirectSoundWaveData_puresquare_25, 33, 0, 101, 214		@ 070
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy

@@ -2171,6 +2171,10 @@ DirectSoundWaveData_sd90_enhanced_delay_shaku::
 	.incbin "sound/direct_sound_samples/sd90_enhanced_delay_shaku.bin"
 
 	.align 2
+DirectSoundWaveData_puresquare_12::
+	.incbin "sound/direct_sound_samples/puresquare_12.bin"
+
+	.align 2
 DirectSoundWaveData_puresquare_25::
 	.incbin "sound/direct_sound_samples/puresquare_25.bin"
 
