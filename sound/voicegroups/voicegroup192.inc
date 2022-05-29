@@ -18,7 +18,7 @@ voicegroup192:: @
 	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 250, 0, 214	@ 052
 	voice_directsound 60, 0, DirectSoundWaveData_puresquare_12, 255, 242, 101, 214	@ 063
 	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 242, 101, 214	@ 067
-	voice_directsound 60, 0, DirectSoundWaveData_puresquare_25, 33, 0, 101, 214		@ 070
+	voice_directsound 60, 0, DirectSoundWaveData_puresquare_25, 37, 0, 101, 214		@ 070
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy

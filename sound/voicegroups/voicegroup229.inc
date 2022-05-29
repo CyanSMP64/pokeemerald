@@ -86,7 +86,7 @@ voicegroup229:: @ HGSS main
 @	voice_keysplit voicegroup220, KeySplitTable30    @ dp trombone (arceus)											@ 83
 @	voice_square_1 60, 0, 0, 2, 0, 2, 6, 2									 @ double up of 051						@ 84
 @	voice_square_1 60, 0, 0, 2, 0, 2, 2, 0									 @ double up of 048						@ 85
-@	voice_programmable_wave 60, 0, ProgrammableWaveData_sq50half, 0, 2, 2, 0 @ triple up of 048 (half volume)		@ 86
-@	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 242, 25, 0  @ 4x and up of 048					@ 87
+@	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 242, 101, 214	@ 051							@ 86
+@	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 242, 25, 0  @ 048								@ 87
 @	voice_square_1 60, 0, 0, 2, 0, 7, 0, 0									 @ double up of 049						@ 88
 @	voice_square_1 60, 0, 2, 0, 0, 2, 6, 1									 @ double up of 052						@ 89
