@@ -27,8 +27,8 @@ voicegroup230:: @
 	voice_square_1 60, 0, 0, 2, 0, 2, 2, 0									 @ double up of 048
 	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 242, 101, 214	@ 051							@ 86
 	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 242, 25, 0  @ 048								@ 87
-	voice_square_1 60, 0, 0, 2, 0, 7, 0, 0									 @ double up of 049
-	voice_square_1 60, 0, 2, 0, 0, 2, 6, 1									 @ double up of 052
+	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 252, 0, 64  @ 049								@ 88
+	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 242, 101, 129	@ 052							@ 89
 	voice_directsound 60, 64, DirectSoundWaveData_dp_handclup1, 255, 0, 227, 171
 	voice_directsound 60, 64, DirectSoundWaveData_dp_sne2_loop, 255, 255, 191, 171
 	voice_directsound 48, 64, DirectSoundWaveData_dp_reverscyn_16, 2, 0, 227, 171

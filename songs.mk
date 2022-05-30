@@ -2242,7 +2242,7 @@ $(MID_SUBDIR)/mus_hg_bf_stage.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V080
 
 $(MID_SUBDIR)/mus_hg_bf_roulette.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V077
+	$(MID) $< $@ -E -R0 -G229 -V077 -X
 
 $(MID_SUBDIR)/mus_hg_me_roulette.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V098 -p5
