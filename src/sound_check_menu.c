@@ -1422,179 +1422,179 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(MUS_HG_TITLE                 , "MUS-HG-TITLE") \
     X(MUS_HG_POKEMON_THEME         , "MUS-HG-POKEMON-THEME") \
     X(MUS_HG_STARTING              , "MUS-HG-STARTING") \
-    X(MUS_HG_T_WAKABA              , "MUS-HG-T-WAKABA") \
-    X(MUS_HG_E_TSURETEKE1          , "MUS-HG-E-TSURETEKE1") \
-    X(MUS_HG_E_SUPPORT_F           , "MUS-HG-E-SUPPORT-F") \
-    X(MUS_HG_E_SUPPORT_M           , "MUS-HG-E-SUPPORT-M") \
-    X(MUS_HG_UTSUGI_RABO           , "MUS-HG-UTSUGI-RABO") \
-    X(MUS_HG_ME_KEYITEM            , "MUS-HG-ME-KEYITEM") \
-    X(MUS_HG_R_1_29                , "MUS-HG-R-1-29") \
-    X(MUS_HG_VS_NORAPOKE           , "MUS-HG-VS-NORAPOKE") \
-    X(MUS_HG_WIN2                  , "MUS-HG-WIN2") \
-    X(MUS_HG_WIN2_NOT_FAN          , "MUS-HG-WIN2-NOT-FAN") \
-    X(MUS_HG_ME_LVUP               , "MUS-HG-ME-LVUP") \
-    X(MUS_HG_C_YOSHINO             , "MUS-HG-C-YOSHINO") \
-    X(MUS_HG_E_TSURETEKE2          , "MUS-HG-E-TSURETEKE2") \
-    X(MUS_HG_POKESEN               , "MUS-HG-POKESEN") \
-    X(MUS_HG_ME_ASA                , "MUS-HG-ME-ASA") \
-    X(MUS_HG_EYE_J_SHOUNEN         , "MUS-HG-EYE-J-SHOUNEN") \
-    X(MUS_HG_VS_TRAINER            , "MUS-HG-VS-TRAINER") \
-    X(MUS_HG_WIN1                  , "MUS-HG-WIN1") \
-    X(MUS_HG_R_1_30                , "MUS-HG-R-1-30") \
-    X(MUS_HG_ME_HYOUKA1            , "MUS-HG-ME-HYOUKA1") \
-    X(MUS_HG_C_KIKYOU              , "MUS-HG-C-KIKYOU") \
-    X(MUS_HG_TO_MADATSUBOMI1       , "MUS-HG-TO-MADATSUBOMI1") \
-    X(MUS_HG_EYE_BOUZU             , "MUS-HG-EYE-BOUZU") \
-    X(MUS_HG_FS                    , "MUS-HG-FS") \
-    X(MUS_HG_ME_TAMAGO_GET         , "MUS-HG-ME-TAMAGO-GET") \
-    X(MUS_HG_E_MAIKO_THEME         , "MUS-HG-E-MAIKO-THEME") \
-    X(MUS_HG_D_CHIKATSUURO         , "MUS-HG-D-CHIKATSUURO") \
-    X(MUS_HG_ME_ITEM               , "MUS-HG-ME-ITEM") \
-    X(MUS_HG_D_UNKNOWN_ISEKI       , "MUS-HG-D-UNKNOWN-ISEKI") \
-    X(MUS_HG_RADIO_UNKNOWN         , "MUS-HG-RADIO-UNKNOWN") \
-    X(MUS_HG_ME_HYOUKA2            , "MUS-HG-ME-HYOUKA2") \
-    X(MUS_HG_T_HIWADA              , "MUS-HG-T-HIWADA") \
-    X(MUS_HG_EYE_ROCKET            , "MUS-HG-EYE-ROCKET") \
-    X(MUS_HG_VS_ROCKET             , "MUS-HG-VS-ROCKET") \
-    X(MUS_HG_R_4_34                , "MUS-HG-R-4-34") \
-    X(MUS_HG_E_RIVAL1              , "MUS-HG-E-RIVAL1") \
-    X(MUS_HG_VS_RIVAL              , "MUS-HG-VS-RIVAL") \
     X(MUS_HG_SHINKA                , "MUS-HG-SHINKA") \
     X(MUS_HG_KOUKAN                , "MUS-HG-KOUKAN") \
-    X(MUS_HG_ME_SHINKAOME          , "MUS-HG-ME-SHINKAOME") \
-    X(MUS_HG_C_KOGANE              , "MUS-HG-C-KOGANE") \
-    X(MUS_HG_GYM                   , "MUS-HG-GYM") \
-    X(MUS_HG_VS_GYMREADER          , "MUS-HG-VS-GYMREADER") \
-    X(MUS_HG_WIN3                  , "MUS-HG-WIN3") \
-    X(MUS_HG_ME_BADGE              , "MUS-HG-ME-BADGE") \
-    X(MUS_HG_RADIO_JINGLE          , "MUS-HG-RADIO-JINGLE") \
-    X(MUS_HG_AIKOTOBA              , "MUS-HG-AIKOTOBA") \
-    X(MUS_HG_ME_WAZA               , "MUS-HG-ME-WAZA") \
-    X(MUS_HG_GAME                  , "MUS-HG-GAME") \
-    X(MUS_HG_GAMEATARI             , "MUS-HG-GAMEATARI") \
-    X(MUS_HG_ME_CARDGAME1          , "MUS-HG-ME-CARDGAME1") \
-    X(MUS_HG_ME_CARDGAME2          , "MUS-HG-ME-CARDGAME2") \
-    X(MUS_HG_ME_ACCE               , "MUS-HG-ME-ACCE") \
-    X(MUS_HG_WIFITOWER             , "MUS-HG-WIFITOWER") \
-    X(MUS_HG_BLD_GTC               , "MUS-HG-BLD-GTC") \
-    X(MUS_HG_ME_HYOUKA3            , "MUS-HG-ME-HYOUKA3") \
     X(MUS_HG_BICYCLE               , "MUS-HG-BICYCLE") \
-    X(MUS_HG_EYE_J_SHOUJO          , "MUS-HG-EYE-J-SHOUJO") \
-    X(MUS_HG_ME_POKEGEAR_REGIST    , "MUS-HG-ME-POKEGEAR-REGIST") \
-    X(MUS_HG_D_KOUEN               , "MUS-HG-D-KOUEN") \
-    X(MUS_HG_ME_KINOMI             , "MUS-HG-ME-KINOMI") \
-    X(MUS_HG_C_ENJU                , "MUS-HG-C-ENJU") \
-    X(MUS_HG_KABURENJOU            , "MUS-HG-KABURENJOU") \
-    X(MUS_HG_TO_YAKETA             , "MUS-HG-TO-YAKETA") \
-    X(MUS_HG_E_MINAKI              , "MUS-HG-E-MINAKI") \
-    X(MUS_HG_OHKIDO_RABO           , "MUS-HG-OHKIDO-RABO") \
-    X(MUS_HG_ME_HYOUKA4            , "MUS-HG-ME-HYOUKA4") \
-    X(MUS_HG_R_6_38                , "MUS-HG-R-6-38") \
-    X(MUS_HG_RADIO_MARCH           , "MUS-HG-RADIO-MARCH") \
-    X(MUS_HG_VS_RAIKOU             , "MUS-HG-VS-RAIKOU") \
-    X(MUS_HG_TO_TOUDAI             , "MUS-HG-TO-TOUDAI") \
     X(MUS_HG_NAMINORI              , "MUS-HG-NAMINORI") \
+    X(MUS_HG_E_DENDOURIRI          , "MUS-HG-E-DENDOURIRI") \
+    X(MUS_HG_ENDING                , "MUS-HG-ENDING") \
+    X(MUS_HG_ENDING2               , "MUS-HG-ENDING2") \
+    X(MUS_HG_T_WAKABA              , "MUS-HG-T-WAKABA") \
+    X(MUS_HG_C_YOSHINO             , "MUS-HG-C-YOSHINO") \
+    X(MUS_HG_C_KIKYOU              , "MUS-HG-C-KIKYOU") \
+    X(MUS_HG_T_HIWADA              , "MUS-HG-T-HIWADA") \
+    X(MUS_HG_C_KOGANE              , "MUS-HG-C-KOGANE") \
+    X(MUS_HG_C_ENJU                , "MUS-HG-C-ENJU") \
     X(MUS_HG_C_TANBA               , "MUS-HG-C-TANBA") \
-    X(MUS_HG_ME_PT_SPECIAL         , "MUS-HG-ME-PT-SPECIAL") \
+    X(MUS_HG_R_1_29                , "MUS-HG-R-1-29") \
+    X(MUS_HG_R_1_30                , "MUS-HG-R-1-30") \
+    X(MUS_HG_R_4_34                , "MUS-HG-R-4-34") \
+    X(MUS_HG_R_6_38                , "MUS-HG-R-6-38") \
     X(MUS_HG_R_7_42                , "MUS-HG-R-7-42") \
-    X(MUS_HG_KAIDENPA              , "MUS-HG-KAIDENPA") \
-    X(MUS_HG_D_AJITO               , "MUS-HG-D-AJITO") \
-    X(MUS_HG_EYE_J_AYASHII         , "MUS-HG-EYE-J-AYASHII") \
-    X(MUS_HG_E_RIVAL2              , "MUS-HG-E-RIVAL2") \
-    X(MUS_HG_SENKYO                , "MUS-HG-SENKYO") \
-    X(MUS_HG_D_KOORINONUKE         , "MUS-HG-D-KOORINONUKE") \
-    X(MUS_HG_ME_WASURE             , "MUS-HG-ME-WASURE") \
-    X(MUS_HG_RYUUNOANA             , "MUS-HG-RYUUNOANA") \
-    X(MUS_HG_IBUKI                 , "MUS-HG-IBUKI") \
-    X(MUS_HG_VS_ENTEI              , "MUS-HG-VS-ENTEI") \
-    X(MUS_HG_TO_SUZU               , "MUS-HG-TO-SUZU") \
-    X(MUS_HG_E_MAIKO_MAI           , "MUS-HG-E-MAIKO-MAI") \
-    X(MUS_HG_E_HOUOU               , "MUS-HG-E-HOUOU") \
-    X(MUS_HG_VS_HOUOU              , "MUS-HG-VS-HOUOU") \
-    X(MUS_HG_R_1_26                , "MUS-HG-R-1-26") \
-    X(MUS_HG_KOUSOKUSEN            , "MUS-HG-KOUSOKUSEN") \
     X(MUS_HG_C_KUCHIBA             , "MUS-HG-C-KUCHIBA") \
-    X(MUS_HG_VS_GYMREADER_KANTO    , "MUS-HG-VS-GYMREADER-KANTO") \
-    X(MUS_HG_T_CHION               , "MUS-HG-T-CHION") \
-    X(MUS_HG_D_IWAYAMA             , "MUS-HG-D-IWAYAMA") \
-    X(MUS_HG_VS_NORAPOKE_KANTO     , "MUS-HG-VS-NORAPOKE-KANTO") \
-    X(MUS_HG_ME_HYOUKA5            , "MUS-HG-ME-HYOUKA5") \
-    X(MUS_HG_C_HANADA              , "MUS-HG-C-HANADA") \
-    X(MUS_HG_R_12_24               , "MUS-HG-R-12-24") \
-    X(MUS_HG_E_LINEAR              , "MUS-HG-E-LINEAR") \
-    X(MUS_HG_RADIO_KOMORIUTA       , "MUS-HG-RADIO-KOMORIUTA") \
-    X(MUS_HG_VS_SUICUNE            , "MUS-HG-VS-SUICUNE") \
-    X(MUS_HG_C_TAMAMUSHI           , "MUS-HG-C-TAMAMUSHI") \
-    X(MUS_HG_R_10_11               , "MUS-HG-R-10-11") \
-    X(MUS_HG_HUE                   , "MUS-HG-HUE") \
-    X(MUS_HG_D_TOKIWANOMORI3       , "MUS-HG-D-TOKIWANOMORI3") \
-    X(MUS_HG_EYE_K_SHOUNEN         , "MUS-HG-EYE-K-SHOUNEN") \
     X(MUS_HG_C_YAMABUKI            , "MUS-HG-C-YAMABUKI") \
-    X(MUS_HG_R_9_03                , "MUS-HG-R-9-03") \
-    X(MUS_HG_EYE_K_AYASHII         , "MUS-HG-EYE-K-AYASHII") \
-    X(MUS_HG_OTSUKIMI_EVENT        , "MUS-HG-OTSUKIMI-EVENT") \
-    X(MUS_HG_R_9_01                , "MUS-HG-R-9-01") \
+    X(MUS_HG_C_HANADA              , "MUS-HG-C-HANADA") \
+    X(MUS_HG_T_CHION               , "MUS-HG-T-CHION") \
+    X(MUS_HG_C_TAMAMUSHI           , "MUS-HG-C-TAMAMUSHI") \
     X(MUS_HG_T_MASARA              , "MUS-HG-T-MASARA") \
-    X(MUS_HG_OHKIDO                , "MUS-HG-OHKIDO") \
-    X(MUS_HG_ME_HYOUKA6            , "MUS-HG-ME-HYOUKA6") \
-    X(MUS_HG_EYE_K_SHOUJO          , "MUS-HG-EYE-K-SHOUJO") \
-    X(MUS_HG_VS_TRAINER_KANTO      , "MUS-HG-VS-TRAINER-KANTO") \
     X(MUS_HG_T_GUREN               , "MUS-HG-T-GUREN") \
-    X(MUS_HG_SAFARI_ROAD           , "MUS-HG-SAFARI-ROAD") \
-    X(MUS_HG_SAFARI_HOUSE          , "MUS-HG-SAFARI-HOUSE") \
-    X(MUS_HG_SAFARI_FIELD          , "MUS-HG-SAFARI-FIELD") \
-    X(MUS_HG_RADIO_VARIETY         , "MUS-HG-RADIO-VARIETY") \
+    X(MUS_HG_R_9_01                , "MUS-HG-R-9-01") \
+    X(MUS_HG_R_9_03                , "MUS-HG-R-9-03") \
+    X(MUS_HG_R_10_11               , "MUS-HG-R-10-11") \
+    X(MUS_HG_R_12_24               , "MUS-HG-R-12-24") \
+    X(MUS_HG_R_1_26                , "MUS-HG-R-1-26") \
+    X(MUS_HG_POKESEN               , "MUS-HG-POKESEN") \
+    X(MUS_HG_FS                    , "MUS-HG-FS") \
+    X(MUS_HG_GYM                   , "MUS-HG-GYM") \
+    X(MUS_HG_UTSUGI_RABO           , "MUS-HG-UTSUGI-RABO") \
+    X(MUS_HG_OHKIDO                , "MUS-HG-OHKIDO") \
+    X(MUS_HG_KABURENJOU            , "MUS-HG-KABURENJOU") \
+    X(MUS_HG_GAME                  , "MUS-HG-GAME") \
+    X(MUS_HG_BATTLETOWER           , "MUS-HG-BATTLETOWER") \
+    X(MUS_HG_BATTLETOWER2          , "MUS-HG-BATTLETOWER2") \
+    X(MUS_HG_TO_MADATSUBOMI1       , "MUS-HG-TO-MADATSUBOMI1") \
+    X(MUS_HG_D_CHIKATSUURO         , "MUS-HG-D-CHIKATSUURO") \
+    X(MUS_HG_D_UNKNOWN_ISEKI       , "MUS-HG-D-UNKNOWN-ISEKI") \
+    X(MUS_HG_D_KOUEN               , "MUS-HG-D-KOUEN") \
+    X(MUS_HG_TO_YAKETA             , "MUS-HG-TO-YAKETA") \
+    X(MUS_HG_TO_SUZU               , "MUS-HG-TO-SUZU") \
+    X(MUS_HG_TO_TOUDAI             , "MUS-HG-TO-TOUDAI") \
+    X(MUS_HG_D_AJITO               , "MUS-HG-D-AJITO") \
+    X(MUS_HG_D_KOORINONUKE         , "MUS-HG-D-KOORINONUKE") \
+    X(MUS_HG_RYUUNOANA             , "MUS-HG-RYUUNOANA") \
+    X(MUS_HG_D_IWAYAMA             , "MUS-HG-D-IWAYAMA") \
+    X(MUS_HG_D_TOKIWANOMORI3       , "MUS-HG-D-TOKIWANOMORI3") \
+    X(MUS_HG_D_CHAMPROAD           , "MUS-HG-D-CHAMPROAD") \
+    X(MUS_HG_CHAMPROAD             , "MUS-HG-CHAMPROAD") \
+    X(MUS_HG_E_TSURETEKE1          , "MUS-HG-E-TSURETEKE1") \
+    X(MUS_HG_E_TSURETEKE2          , "MUS-HG-E-TSURETEKE2") \
+    X(MUS_HG_E_RIVAL1              , "MUS-HG-E-RIVAL1") \
+    X(MUS_HG_E_RIVAL2              , "MUS-HG-E-RIVAL2") \
     X(MUS_HG_TAIKAIMAE             , "MUS-HG-TAIKAIMAE") \
     X(MUS_HG_TAIKAI                , "MUS-HG-TAIKAI") \
-    X(MUS_HG_ME_MUSHITORI3         , "MUS-HG-ME-MUSHITORI3") \
-    X(MUS_HG_ME_MUSHITORI2         , "MUS-HG-ME-MUSHITORI2") \
-    X(MUS_HG_ME_MUSHITORI1         , "MUS-HG-ME-MUSHITORI1") \
+    X(MUS_HG_KAIDENPA              , "MUS-HG-KAIDENPA") \
+    X(MUS_HG_SENKYO                , "MUS-HG-SENKYO") \
+    X(MUS_HG_E_LINEAR              , "MUS-HG-E-LINEAR") \
+    X(MUS_HG_KOUSOKUSEN            , "MUS-HG-KOUSOKUSEN") \
+    X(MUS_HG_OTSUKIMI_EVENT        , "MUS-HG-OTSUKIMI-EVENT") \
+    X(MUS_HG_RADIO_JINGLE          , "MUS-HG-RADIO-JINGLE") \
+    X(MUS_HG_RADIO_KOMORIUTA       , "MUS-HG-RADIO-KOMORIUTA") \
+    X(MUS_HG_RADIO_MARCH           , "MUS-HG-RADIO-MARCH") \
+    X(MUS_HG_RADIO_UNKNOWN         , "MUS-HG-RADIO-UNKNOWN") \
+    X(MUS_HG_HUE                   , "MUS-HG-HUE") \
+    X(MUS_HG_OHKIDO_RABO           , "MUS-HG-OHKIDO-RABO") \
+    X(MUS_HG_AIKOTOBA              , "MUS-HG-AIKOTOBA") \
+    X(MUS_HG_E_MINAKI              , "MUS-HG-E-MINAKI") \
+    X(MUS_HG_IBUKI                 , "MUS-HG-IBUKI") \
+    X(MUS_HG_EYE_J_SHOUJO          , "MUS-HG-EYE-J-SHOUJO") \
+    X(MUS_HG_EYE_J_SHOUNEN         , "MUS-HG-EYE-J-SHOUNEN") \
+    X(MUS_HG_EYE_J_AYASHII         , "MUS-HG-EYE-J-AYASHII") \
+    X(MUS_HG_EYE_BOUZU             , "MUS-HG-EYE-BOUZU") \
+    X(MUS_HG_EYE_MAIKO             , "MUS-HG-EYE-MAIKO") \
+    X(MUS_HG_EYE_ROCKET            , "MUS-HG-EYE-ROCKET") \
+    X(MUS_HG_EYE_K_SHOUJO          , "MUS-HG-EYE-K-SHOUJO") \
+    X(MUS_HG_EYE_K_SHOUNEN         , "MUS-HG-EYE-K-SHOUNEN") \
+    X(MUS_HG_EYE_K_AYASHII         , "MUS-HG-EYE-K-AYASHII") \
+    X(MUS_HG_VS_NORAPOKE           , "MUS-HG-VS-NORAPOKE") \
+    X(MUS_HG_VS_TRAINER            , "MUS-HG-VS-TRAINER") \
+    X(MUS_HG_VS_GYMREADER          , "MUS-HG-VS-GYMREADER") \
+    X(MUS_HG_VS_RIVAL              , "MUS-HG-VS-RIVAL") \
+    X(MUS_HG_VS_ROCKET             , "MUS-HG-VS-ROCKET") \
+    X(MUS_HG_VS_SUICUNE            , "MUS-HG-VS-SUICUNE") \
+    X(MUS_HG_VS_ENTEI              , "MUS-HG-VS-ENTEI") \
+    X(MUS_HG_VS_RAIKOU             , "MUS-HG-VS-RAIKOU") \
+    X(MUS_HG_VS_CHAMP              , "MUS-HG-VS-CHAMP") \
+    X(MUS_HG_VS_NORAPOKE_KANTO     , "MUS-HG-VS-NORAPOKE-KANTO") \
+    X(MUS_HG_VS_TRAINER_KANTO      , "MUS-HG-VS-TRAINER-KANTO") \
+    X(MUS_HG_VS_GYMREADER_KANTO    , "MUS-HG-VS-GYMREADER-KANTO") \
+    X(MUS_HG_WIN1                  , "MUS-HG-WIN1") \
+    X(MUS_HG_WIN2                  , "MUS-HG-WIN2") \
+    X(MUS_HG_WIN2_NOT_FAN          , "MUS-HG-WIN2-NOT-FAN") \
+    X(MUS_HG_WIN3                  , "MUS-HG-WIN3") \
+    X(MUS_HG_VS_HOUOU              , "MUS-HG-VS-HOUOU") \
+    X(MUS_HG_VS_LUGIA              , "MUS-HG-VS-LUGIA") \
     X(MUS_HG_PT_ENTR               , "MUS-HG-PT-ENTR") \
-    X(MUS_HG_ME_PT_NEW             , "MUS-HG-ME-PT-NEW") \
     X(MUS_HG_PT_OPEN               , "MUS-HG-PT-OPEN") \
     X(MUS_HG_PT_TITLE              , "MUS-HG-PT-TITLE") \
     X(MUS_HG_PT_GAME               , "MUS-HG-PT-GAME") \
-    X(MUS_HG_ME_PT_RESULTG         , "MUS-HG-ME-PT-RESULTG") \
     X(MUS_HG_PT_GAMEF              , "MUS-HG-PT-GAMEF") \
     X(MUS_HG_PT_RESULT             , "MUS-HG-PT-RESULT") \
     X(MUS_HG_PT_END                , "MUS-HG-PT-END") \
     X(MUS_HG_PT_VICTORY            , "MUS-HG-PT-VICTORY") \
-    X(MUS_HG_WIFI_PRESENT          , "MUS-HG-WIFI-PRESENT") \
-    X(MUS_HG_BATTLETOWER2          , "MUS-HG-BATTLETOWER2") \
-    X(MUS_HG_BATTLETOWER           , "MUS-HG-BATTLETOWER") \
-    X(MUS_HG_ME_BPGET              , "MUS-HG-ME-BPGET") \
     X(MUS_HG_BF_FACTORY            , "MUS-HG-BF-FACTORY") \
     X(MUS_HG_BF_STAGE              , "MUS-HG-BF-STAGE") \
     X(MUS_HG_BF_ROULETTE           , "MUS-HG-BF-ROULETTE") \
-    X(MUS_HG_ME_ROULETTE           , "MUS-HG-ME-ROULETTE") \
     X(MUS_HG_BF_CASTLE             , "MUS-HG-BF-CASTLE") \
-    X(MUS_HG_ME_CASTLE             , "MUS-HG-ME-CASTLE") \
     X(MUS_HG_BA_BRAIN              , "MUS-HG-BA-BRAIN") \
     X(MUS_HG_WINBRAIN              , "MUS-HG-WINBRAIN") \
-    X(MUS_HG_RADIO_TRAINER         , "MUS-HG-RADIO-TRAINER") \
-    X(MUS_HG_GURUGURU              , "MUS-HG-GURUGURU") \
     X(MUS_HG_WIFI_ACCESS           , "MUS-HG-WIFI-ACCESS") \
+    X(MUS_HG_WIFI_PRESENT          , "MUS-HG-WIFI-PRESENT") \
     X(MUS_HG_WIFIUNION             , "MUS-HG-WIFIUNION") \
     X(MUS_HG_WIFIGAME              , "MUS-HG-WIFIGAME") \
-    X(MUS_HG_ME_MINIGAME           , "MUS-HG-ME-MINIGAME") \
     X(MUS_HG_WIFIPARADE            , "MUS-HG-WIFIPARADE") \
+    X(MUS_HG_WIFITOWER             , "MUS-HG-WIFITOWER") \
+    X(MUS_HG_GURUGURU              , "MUS-HG-GURUGURU") \
+    X(MUS_HG_BLD_GTC               , "MUS-HG-BLD-GTC") \
+    X(MUS_HG_SAFARI_ROAD           , "MUS-HG-SAFARI-ROAD") \
+    X(MUS_HG_SAFARI_HOUSE          , "MUS-HG-SAFARI-HOUSE") \
+    X(MUS_HG_SAFARI_FIELD          , "MUS-HG-SAFARI-FIELD") \
+    X(MUS_HG_E_SUPPORT_M           , "MUS-HG-E-SUPPORT-M") \
+    X(MUS_HG_E_SUPPORT_F           , "MUS-HG-E-SUPPORT-F") \
+    X(MUS_HG_GAMEATARI             , "MUS-HG-GAMEATARI") \
+    X(MUS_HG_E_MAIKO_MAI           , "MUS-HG-E-MAIKO-MAI") \
+    X(MUS_HG_E_MAIKO_THEME         , "MUS-HG-E-MAIKO-THEME") \
+    X(MUS_HG_E_HOUOU               , "MUS-HG-E-HOUOU") \
+    X(MUS_HG_E_LUGIA               , "MUS-HG-E-LUGIA") \
+    X(MUS_HG_E_G_PICHU             , "MUS-HG-E-G-PICHU") \
+    X(MUS_HG_D_SHINTO              , "MUS-HG-D-SHINTO") \
     X(MUS_HG_RADIO_R_101           , "MUS-HG-RADIO-R-101") \
     X(MUS_HG_RADIO_R_201           , "MUS-HG-RADIO-R-201") \
-    X(MUS_HG_PHC                   , "MUS-HG-PHC") \
-    X(MUS_HG_E_G_PICHU             , "MUS-HG-E-G-PICHU") \
-    X(MUS_HG_EYE_MAIKO             , "MUS-HG-EYE-MAIKO") \
-    X(MUS_HG_E_LUGIA               , "MUS-HG-E-LUGIA") \
-    X(MUS_HG_VS_LUGIA              , "MUS-HG-VS-LUGIA") \
-    X(MUS_HG_D_CHAMPROAD           , "MUS-HG-D-CHAMPROAD") \
-    X(MUS_HG_CHAMPROAD             , "MUS-HG-CHAMPROAD") \
-    X(MUS_HG_VS_CHAMP              , "MUS-HG-VS-CHAMP") \
-    X(MUS_HG_E_DENDOURIRI          , "MUS-HG-E-DENDOURIRI") \
-    X(MUS_HG_ENDING                , "MUS-HG-ENDING") \
-    X(MUS_HG_ENDING2               , "MUS-HG-ENDING2") \
+    X(MUS_HG_RADIO_TRAINER         , "MUS-HG-RADIO-TRAINER") \
+    X(MUS_HG_RADIO_VARIETY         , "MUS-HG-RADIO-VARIETY") \
     X(MUS_HG_VS_KODAI              , "MUS-HG-VS-KODAI") \
-    X(MUS_HG_D_SHINTO              , "MUS-HG-D-SHINTO") \
+    X(MUS_HG_PHC                   , "MUS-HG-PHC") \
     X(MUS_HG_E_ARCEUS              , "MUS-HG-E-ARCEUS") \
+    X(MUS_HG_ME_ASA                , "MUS-HG-ME-ASA") \
+    X(MUS_HG_ME_LVUP               , "MUS-HG-ME-LVUP") \
+    X(MUS_HG_ME_ITEM               , "MUS-HG-ME-ITEM") \
+    X(MUS_HG_ME_KEYITEM            , "MUS-HG-ME-KEYITEM") \
+    X(MUS_HG_ME_SHINKAOME          , "MUS-HG-ME-SHINKAOME") \
+    X(MUS_HG_ME_BADGE              , "MUS-HG-ME-BADGE") \
+    X(MUS_HG_ME_WAZA               , "MUS-HG-ME-WAZA") \
+    X(MUS_HG_ME_ACCE               , "MUS-HG-ME-ACCE") \
+    X(MUS_HG_ME_WASURE             , "MUS-HG-ME-WASURE") \
+    X(MUS_HG_ME_KINOMI             , "MUS-HG-ME-KINOMI") \
+    X(MUS_HG_ME_HYOUKA1            , "MUS-HG-ME-HYOUKA1") \
+    X(MUS_HG_ME_HYOUKA2            , "MUS-HG-ME-HYOUKA2") \
+    X(MUS_HG_ME_HYOUKA3            , "MUS-HG-ME-HYOUKA3") \
+    X(MUS_HG_ME_HYOUKA4            , "MUS-HG-ME-HYOUKA4") \
+    X(MUS_HG_ME_HYOUKA5            , "MUS-HG-ME-HYOUKA5") \
+    X(MUS_HG_ME_HYOUKA6            , "MUS-HG-ME-HYOUKA6") \
+    X(MUS_HG_ME_TAMAGO_GET         , "MUS-HG-ME-TAMAGO-GET") \
+    X(MUS_HG_ME_MUSHITORI1         , "MUS-HG-ME-MUSHITORI1") \
+    X(MUS_HG_ME_MUSHITORI2         , "MUS-HG-ME-MUSHITORI2") \
+    X(MUS_HG_ME_MUSHITORI3         , "MUS-HG-ME-MUSHITORI3") \
+    X(MUS_HG_ME_CARDGAME1          , "MUS-HG-ME-CARDGAME1") \
+    X(MUS_HG_ME_CARDGAME2          , "MUS-HG-ME-CARDGAME2") \
+    X(MUS_HG_ME_POKEGEAR_REGIST    , "MUS-HG-ME-POKEGEAR-REGIST") \
     X(MUS_HG_ME_GONIN              , "MUS-HG-ME-GONIN") \
+    X(MUS_HG_ME_PT_NEW             , "MUS-HG-ME-PT-NEW") \
+    X(MUS_HG_ME_PT_RESULTG         , "MUS-HG-ME-PT-RESULTG") \
+    X(MUS_HG_ME_PT_SPECIAL         , "MUS-HG-ME-PT-SPECIAL") \
+    X(MUS_HG_ME_ROULETTE           , "MUS-HG-ME-ROULETTE") \
+    X(MUS_HG_ME_CASTLE             , "MUS-HG-ME-CASTLE") \
+    X(MUS_HG_ME_BPGET              , "MUS-HG-ME-BPGET") \
+    X(MUS_HG_ME_MINIGAME           , "MUS-HG-ME-MINIGAME") \
     X(MUS_BW_GF_LOGO               , "MUS-BW-GF-LOGO") \
     X(MUS_BW_TITLE                 , "MUS-BW-TITLE") \
     X(MUS_BW_TITLE01               , "MUS-BW-TITLE01") \

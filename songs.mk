@@ -1821,28 +1821,292 @@ $(MID_SUBDIR)/mus_hg_pokemon_theme.s: %.s: %.mid
 $(MID_SUBDIR)/mus_hg_starting.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V073
 
+$(MID_SUBDIR)/mus_hg_shinka.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V080
+
+$(MID_SUBDIR)/mus_hg_koukan.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -v080
+
+$(MID_SUBDIR)/mus_hg_bicycle.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V085
+
+$(MID_SUBDIR)/mus_hg_naminori.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V085
+
+$(MID_SUBDIR)/mus_hg_e_dendouiri.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V099
+
+$(MID_SUBDIR)/mus_hg_ending.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V059
+
+$(MID_SUBDIR)/mus_hg_ending2.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V074
+
 $(MID_SUBDIR)/mus_hg_t_wakaba.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V080
 
-$(MID_SUBDIR)/mus_hg_e_tsureteke1.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V079
+$(MID_SUBDIR)/mus_hg_c_yoshino.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V068
 
-$(MID_SUBDIR)/mus_hg_e_support_f.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V087
+$(MID_SUBDIR)/mus_hg_c_kikyou.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V078
 
-$(MID_SUBDIR)/mus_hg_e_support_m.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V087
+$(MID_SUBDIR)/mus_hg_t_hiwada.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V073
 
-$(MID_SUBDIR)/mus_hg_utsugi_rabo.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V080
+$(MID_SUBDIR)/mus_hg_c_kogane.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V072
 
-$(MID_SUBDIR)/mus_hg_me_keyitem.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V081 -P5
+$(MID_SUBDIR)/mus_hg_c_enju.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V054
+
+$(MID_SUBDIR)/mus_hg_c_tanba.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V073
 
 $(MID_SUBDIR)/mus_hg_r_1_29.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V063
 
+$(MID_SUBDIR)/mus_hg_r_1_30.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V093
+
+$(MID_SUBDIR)/mus_hg_r_4_34.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V092
+
+$(MID_SUBDIR)/mus_hg_r_6_38.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V083
+
+$(MID_SUBDIR)/mus_hg_r_7_42.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V085
+
+$(MID_SUBDIR)/mus_hg_c_kuchiba.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V062
+
+$(MID_SUBDIR)/mus_hg_c_yamabuki.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V058
+
+$(MID_SUBDIR)/mus_hg_c_hanada.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V073
+
+$(MID_SUBDIR)/mus_hg_t_chion.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V073
+
+$(MID_SUBDIR)/mus_hg_c_tamamushi.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V063
+
+$(MID_SUBDIR)/mus_hg_t_masara.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V080
+
+$(MID_SUBDIR)/mus_hg_t_guren.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V075
+
+$(MID_SUBDIR)/mus_hg_r_9_01.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V085
+
+$(MID_SUBDIR)/mus_hg_r_9_03.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V087
+
+$(MID_SUBDIR)/mus_hg_r_10_11.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V077
+
+$(MID_SUBDIR)/mus_hg_r_12_24.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V080
+
+$(MID_SUBDIR)/mus_hg_r_1_26.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V078
+
+$(MID_SUBDIR)/mus_hg_pokesen.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V075
+
+$(MID_SUBDIR)/mus_hg_fs.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V078
+
+$(MID_SUBDIR)/mus_hg_gym.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V080
+
+$(MID_SUBDIR)/mus_hg_utsugi_rabo.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V080
+
+$(MID_SUBDIR)/mus_hg_ohkido.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V100
+
+$(MID_SUBDIR)/mus_hg_kaburenjou.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V080
+
+$(MID_SUBDIR)/mus_hg_game.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V092
+
+$(MID_SUBDIR)/mus_hg_battletower.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V097
+
+$(MID_SUBDIR)/mus_hg_battletower2.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V070
+
+$(MID_SUBDIR)/mus_hg_to_madatsubomi1.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V062
+
+$(MID_SUBDIR)/mus_hg_d_chikatsuuro.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V080
+
+$(MID_SUBDIR)/mus_hg_d_unknown_iseki.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V093
+
+$(MID_SUBDIR)/mus_hg_d_kouen.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V087
+
+$(MID_SUBDIR)/mus_hg_to_yaketa.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V070
+
+$(MID_SUBDIR)/mus_hg_to_suzu.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V080
+
+$(MID_SUBDIR)/mus_hg_to_toudai.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V050
+
+$(MID_SUBDIR)/mus_hg_d_ajito.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V081
+
+$(MID_SUBDIR)/mus_hg_d_koorinonuke.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V072
+
+$(MID_SUBDIR)/mus_hg_ryuunoana.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V087
+
+$(MID_SUBDIR)/mus_hg_d_iwayama.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V079
+
+$(MID_SUBDIR)/mus_hg_d_tokiwanomori3.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V087
+
+$(MID_SUBDIR)/mus_hg_d_champroad.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V087
+
+$(MID_SUBDIR)/mus_hg_champroad.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V082
+
+$(MID_SUBDIR)/mus_hg_e_tsureteke1.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V079
+
+$(MID_SUBDIR)/mus_hg_e_tsureteke2.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V078
+
+$(MID_SUBDIR)/mus_hg_e_rival1.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V089
+
+$(MID_SUBDIR)/mus_hg_e_rival2.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V089
+
+$(MID_SUBDIR)/mus_hg_taikaimae.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V052
+
+$(MID_SUBDIR)/mus_hg_taikai.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V100
+
+$(MID_SUBDIR)/mus_hg_kaidenpa.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V092 -X
+
+$(MID_SUBDIR)/mus_hg_senkyo.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V069
+
+$(MID_SUBDIR)/mus_hg_e_linear.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V100
+
+$(MID_SUBDIR)/mus_hg_kousokusen.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V077
+
+$(MID_SUBDIR)/mus_hg_otsukimi_event.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V105
+
+$(MID_SUBDIR)/mus_hg_radio_jingle.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V082
+
+$(MID_SUBDIR)/mus_hg_radio_komoriuta.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V082
+
+$(MID_SUBDIR)/mus_hg_radio_march.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V082
+
+$(MID_SUBDIR)/mus_hg_radio_unknown.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V089 -X
+
+$(MID_SUBDIR)/mus_hg_hue.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V089
+
+$(MID_SUBDIR)/mus_hg_ohkido_rabo.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V089
+
+$(MID_SUBDIR)/mus_hg_aikotoba.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V092
+
+$(MID_SUBDIR)/mus_hg_e_minaki.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V086
+
+$(MID_SUBDIR)/mus_hg_ibuki.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V089
+
+$(MID_SUBDIR)/mus_hg_eye_j_shoujo.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V084
+
+$(MID_SUBDIR)/mus_hg_eye_j_shounen.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V102
+
+$(MID_SUBDIR)/mus_hg_eye_j_ayashii.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V073
+
+$(MID_SUBDIR)/mus_hg_eye_bouzu.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V084
+
+$(MID_SUBDIR)/mus_hg_eye_maiko.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V084
+
+$(MID_SUBDIR)/mus_hg_eye_rocket.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V071
+
+$(MID_SUBDIR)/mus_hg_eye_k_shoujo.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V097
+
+$(MID_SUBDIR)/mus_hg_eye_k_shounen.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V089
+
+$(MID_SUBDIR)/mus_hg_eye_k_ayashii.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V086
+
 $(MID_SUBDIR)/mus_hg_vs_norapoke.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V110
+
+$(MID_SUBDIR)/mus_hg_vs_trainer.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V111
+
+$(MID_SUBDIR)/mus_hg_vs_gymreader.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V108
+
+$(MID_SUBDIR)/mus_hg_vs_rival.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V084
+
+$(MID_SUBDIR)/mus_hg_vs_rocket.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V102
+
+$(MID_SUBDIR)/mus_hg_vs_suicune.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V098
+
+$(MID_SUBDIR)/mus_hg_vs_entei.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V098
+
+$(MID_SUBDIR)/mus_hg_vs_raikou.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V098
+
+$(MID_SUBDIR)/mus_hg_vs_champ.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V113
+
+$(MID_SUBDIR)/mus_hg_vs_norapoke_kanto.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V103
+
+$(MID_SUBDIR)/mus_hg_vs_trainer_kanto.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V119
+
+$(MID_SUBDIR)/mus_hg_vs_gymreader_kanto.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V075
+
+$(MID_SUBDIR)/mus_hg_win1.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V110
 
 $(MID_SUBDIR)/mus_hg_win2.s: %.s: %.mid
@@ -1851,353 +2115,17 @@ $(MID_SUBDIR)/mus_hg_win2.s: %.s: %.mid
 $(MID_SUBDIR)/mus_hg_win2_not_fan.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V072
 
-$(MID_SUBDIR)/mus_hg_me_lvup.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V102 -P5
-
-$(MID_SUBDIR)/mus_hg_c_yoshino.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V068
-
-$(MID_SUBDIR)/mus_hg_e_tsureteke2.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V078
-
-$(MID_SUBDIR)/mus_hg_pokesen.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V075
-
-$(MID_SUBDIR)/mus_hg_me_asa.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V080 -P5
-
-$(MID_SUBDIR)/mus_hg_eye_j_shounen.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V102
-
-$(MID_SUBDIR)/mus_hg_vs_trainer.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V111
-
-$(MID_SUBDIR)/mus_hg_win1.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V110
-
-$(MID_SUBDIR)/mus_hg_r_1_30.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V093
-
-$(MID_SUBDIR)/mus_hg_me_hyouka1.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V092 -P5
-
-$(MID_SUBDIR)/mus_hg_c_kikyou.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V078
-
-$(MID_SUBDIR)/mus_hg_to_madatsubomi1.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V062
-
-$(MID_SUBDIR)/mus_hg_eye_bouzu.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V084
-
-$(MID_SUBDIR)/mus_hg_fs.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V078
-
-$(MID_SUBDIR)/mus_hg_me_tamago_get.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V088 -P5
-
-$(MID_SUBDIR)/mus_hg_e_maiko_theme.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V088
-
-$(MID_SUBDIR)/mus_hg_d_chikatsuuro.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V080
-
-$(MID_SUBDIR)/mus_hg_me_item.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V081 -P5
-
-$(MID_SUBDIR)/mus_hg_d_unknown_iseki.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V093
-
-$(MID_SUBDIR)/mus_hg_radio_unknown.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V089 -X
-
-$(MID_SUBDIR)/mus_hg_me_hyouka2.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V095 -P5
-
-$(MID_SUBDIR)/mus_hg_t_hiwada.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V073
-
-$(MID_SUBDIR)/mus_hg_eye_rocket.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V071
-
-$(MID_SUBDIR)/mus_hg_vs_rocket.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V102
-
-$(MID_SUBDIR)/mus_hg_r_4_34.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V092
-
-$(MID_SUBDIR)/mus_hg_e_rival1.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V089
-
-$(MID_SUBDIR)/mus_hg_vs_rival.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V084
-
-$(MID_SUBDIR)/mus_hg_shinka.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V080
-
-$(MID_SUBDIR)/mus_hg_me_shinkaome.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V076 -p5
-
-$(MID_SUBDIR)/mus_hg_c_kogane.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V072
-
-$(MID_SUBDIR)/mus_hg_gym.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V080
-
-$(MID_SUBDIR)/mus_hg_vs_gymreader.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V108
-
 $(MID_SUBDIR)/mus_hg_win3.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V102
-
-$(MID_SUBDIR)/mus_hg_me_badge.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V104 -p5
-
-$(MID_SUBDIR)/mus_hg_radio_jingle.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V082
-
-$(MID_SUBDIR)/mus_hg_aikotoba.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V092
-
-$(MID_SUBDIR)/mus_hg_me_waza.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V087 -p5
-
-$(MID_SUBDIR)/mus_hg_game.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V092
-
-$(MID_SUBDIR)/mus_hg_gameatari.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V078
-
-$(MID_SUBDIR)/mus_hg_me_acce.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V072 -p5
-
-$(MID_SUBDIR)/mus_hg_wifitower.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V075
-
-$(MID_SUBDIR)/mus_hg_bld_gtc.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V091
-
-$(MID_SUBDIR)/mus_hg_me_hyouka3.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V081 -p5
-
-$(MID_SUBDIR)/mus_hg_bicycle.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V085
-
-$(MID_SUBDIR)/mus_hg_eye_j_shoujo.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V084
-
-$(MID_SUBDIR)/mus_hg_me_pokegear_regist.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V097 -p5
-
-$(MID_SUBDIR)/mus_hg_d_kouen.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V087
-
-$(MID_SUBDIR)/mus_hg_me_kinomi.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V082 -p5
-
-$(MID_SUBDIR)/mus_hg_c_enju.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V054
-
-$(MID_SUBDIR)/mus_hg_kaburenjou.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V080
-
-$(MID_SUBDIR)/mus_hg_to_yaketa.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V070
-
-$(MID_SUBDIR)/mus_hg_e_minaki.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V086
-
-$(MID_SUBDIR)/mus_hg_ohkido_rabo.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V089
-
-$(MID_SUBDIR)/mus_hg_me_hyouka4.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V092 -p5
-
-$(MID_SUBDIR)/mus_hg_r_6_38.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V083
-
-$(MID_SUBDIR)/mus_hg_radio_march.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V082
-
-$(MID_SUBDIR)/mus_hg_vs_raikou.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V098
-
-$(MID_SUBDIR)/mus_hg_to_toudai.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V050
-
-$(MID_SUBDIR)/mus_hg_naminori.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V085
-
-$(MID_SUBDIR)/mus_hg_c_tanba.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V073
-
-$(MID_SUBDIR)/mus_hg_me_pt_special.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V098 -p5
-
-$(MID_SUBDIR)/mus_hg_r_7_42.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V085
-
-$(MID_SUBDIR)/mus_hg_kaidenpa.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V092 -X
-
-$(MID_SUBDIR)/mus_hg_d_ajito.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V081
-
-$(MID_SUBDIR)/mus_hg_eye_j_ayashii.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V073
-
-$(MID_SUBDIR)/mus_hg_e_rival2.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V089
-
-$(MID_SUBDIR)/mus_hg_senkyo.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V069
-
-$(MID_SUBDIR)/mus_hg_d_koorinonuke.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V072
-
-$(MID_SUBDIR)/mus_hg_me_wasure.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V105 -p5
-
-$(MID_SUBDIR)/mus_hg_ryuunoana.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V087
-
-$(MID_SUBDIR)/mus_hg_ibuki.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V089
-
-$(MID_SUBDIR)/mus_hg_vs_entei.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V098
-
-$(MID_SUBDIR)/mus_hg_to_suzu.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V080
-
-$(MID_SUBDIR)/mus_hg_e_maiko_mai.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V088
-
-$(MID_SUBDIR)/mus_hg_e_houou.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V108
 
 $(MID_SUBDIR)/mus_hg_vs_houou.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V079
 
-$(MID_SUBDIR)/mus_hg_r_1_26.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V078
-
-$(MID_SUBDIR)/mus_hg_kousokusen.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V077
-
-$(MID_SUBDIR)/mus_hg_c_kuchiba.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V062
-
-$(MID_SUBDIR)/mus_hg_vs_gymreader_kanto.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V075
-
-$(MID_SUBDIR)/mus_hg_t_chion.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V073
-
-$(MID_SUBDIR)/mus_hg_d_iwayama.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V079
-
-$(MID_SUBDIR)/mus_hg_vs_norapoke_kanto.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V103
-
-$(MID_SUBDIR)/mus_hg_me_hyouka5.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V092 -p5
-
-$(MID_SUBDIR)/mus_hg_c_hanada.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V073
-
-$(MID_SUBDIR)/mus_hg_r_12_24.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V080
-
-$(MID_SUBDIR)/mus_hg_e_linear.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V100
-
-$(MID_SUBDIR)/mus_hg_radio_komoriuta.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V082
-
-$(MID_SUBDIR)/mus_hg_vs_suicune.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V098
-
-$(MID_SUBDIR)/mus_hg_c_tamamushi.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V063
-
-$(MID_SUBDIR)/mus_hg_r_10_11.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V077
-
-$(MID_SUBDIR)/mus_hg_hue.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V089
-
-$(MID_SUBDIR)/mus_hg_d_tokiwanomori3.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V087
-
-$(MID_SUBDIR)/mus_hg_eye_k_shounen.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V089
-
-$(MID_SUBDIR)/mus_hg_c_yamabuki.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V058
-
-$(MID_SUBDIR)/mus_hg_r_9_03.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V087
-
-$(MID_SUBDIR)/mus_hg_eye_k_ayashii.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V086
-
-$(MID_SUBDIR)/mus_hg_otsukimi_event.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V105
-
-$(MID_SUBDIR)/mus_hg_r_9_01.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V085
-
-$(MID_SUBDIR)/mus_hg_t_masara.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V080
-
-$(MID_SUBDIR)/mus_hg_ohkido.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V100
-
-$(MID_SUBDIR)/mus_hg_me_hyouka6.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V092 -p5
-
-$(MID_SUBDIR)/mus_hg_eye_k_shoujo.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V097
-
-$(MID_SUBDIR)/mus_hg_vs_trainer_kanto.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V119
-
-$(MID_SUBDIR)/mus_hg_t_guren.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V075
-
-$(MID_SUBDIR)/mus_hg_safari_road.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V073
-
-$(MID_SUBDIR)/mus_hg_safari_house.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V079
-
-$(MID_SUBDIR)/mus_hg_safari_field.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V087
-
-$(MID_SUBDIR)/mus_hg_radio_variety.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V073
-
-$(MID_SUBDIR)/mus_hg_taikaimae.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V052
-
-$(MID_SUBDIR)/mus_hg_taikai.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V100
-
-$(MID_SUBDIR)/mus_hg_me_mushitori3.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V097 -p5
-
-$(MID_SUBDIR)/mus_hg_me_mushitori2.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V102 -p5
-
-$(MID_SUBDIR)/mus_hg_me_mushitori1.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V097 -p5
+$(MID_SUBDIR)/mus_hg_vs_lugia.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V102
 
 $(MID_SUBDIR)/mus_hg_pt_entr.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V085
-
-$(MID_SUBDIR)/mus_hg_me_pt_new.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V102 -p5
 
 $(MID_SUBDIR)/mus_hg_pt_open.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V090
@@ -2207,9 +2135,6 @@ $(MID_SUBDIR)/mus_hg_pt_title.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_hg_pt_game.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V096
-
-$(MID_SUBDIR)/mus_hg_me_pt_resultg.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V098 -p5
 
 $(MID_SUBDIR)/mus_hg_pt_gamef.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V097
@@ -2223,18 +2148,6 @@ $(MID_SUBDIR)/mus_hg_pt_end.s: %.s: %.mid
 $(MID_SUBDIR)/mus_hg_pt_victory.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V088
 
-$(MID_SUBDIR)/mus_hg_wifi_present.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V087
-
-$(MID_SUBDIR)/mus_hg_battletower2.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V070
-
-$(MID_SUBDIR)/mus_hg_battletower.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V097
-
-$(MID_SUBDIR)/mus_hg_me_bpget.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V107 -p5
-
 $(MID_SUBDIR)/mus_hg_bf_factory.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V077
 
@@ -2244,14 +2157,8 @@ $(MID_SUBDIR)/mus_hg_bf_stage.s: %.s: %.mid
 $(MID_SUBDIR)/mus_hg_bf_roulette.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V077 -X
 
-$(MID_SUBDIR)/mus_hg_me_roulette.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V098 -p5
-
 $(MID_SUBDIR)/mus_hg_bf_castle.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V097
-
-$(MID_SUBDIR)/mus_hg_me_castle.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V086 -p5
 
 $(MID_SUBDIR)/mus_hg_ba_brain.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V100
@@ -2259,14 +2166,11 @@ $(MID_SUBDIR)/mus_hg_ba_brain.s: %.s: %.mid
 $(MID_SUBDIR)/mus_hg_winbrain.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V097
 
-$(MID_SUBDIR)/mus_hg_radio_trainer.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V073
-
-$(MID_SUBDIR)/mus_hg_guruguru.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V093
-
 $(MID_SUBDIR)/mus_hg_wifi_access.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V079
+
+$(MID_SUBDIR)/mus_hg_wifi_present.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V087
 
 $(MID_SUBDIR)/mus_hg_wifiunion.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V085
@@ -2274,11 +2178,53 @@ $(MID_SUBDIR)/mus_hg_wifiunion.s: %.s: %.mid
 $(MID_SUBDIR)/mus_hg_wifigame.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V095
 
-$(MID_SUBDIR)/mus_hg_me_minigame.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V091 -p5
-
 $(MID_SUBDIR)/mus_hg_wifiparade.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V092
+
+$(MID_SUBDIR)/mus_hg_wifitower.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V075
+
+$(MID_SUBDIR)/mus_hg_guruguru.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V093
+
+$(MID_SUBDIR)/mus_hg_bld_gtc.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V091
+
+$(MID_SUBDIR)/mus_hg_safari_road.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V073
+
+$(MID_SUBDIR)/mus_hg_safari_house.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V079
+
+$(MID_SUBDIR)/mus_hg_safari_field.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V087
+
+$(MID_SUBDIR)/mus_hg_e_support_m.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V087
+
+$(MID_SUBDIR)/mus_hg_e_support_f.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V087
+
+$(MID_SUBDIR)/mus_hg_gameatari.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V078
+
+$(MID_SUBDIR)/mus_hg_e_maiko_mai.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V088
+
+$(MID_SUBDIR)/mus_hg_e_maiko_theme.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V088
+
+$(MID_SUBDIR)/mus_hg_e_houou.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V108
+
+$(MID_SUBDIR)/mus_hg_e_lugia.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V092
+
+$(MID_SUBDIR)/mus_hg_e_g_pichu.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V100
+
+$(MID_SUBDIR)/mus_hg_d_shinto.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V088
 
 $(MID_SUBDIR)/mus_hg_radio_r_101.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V069
@@ -2286,50 +2232,80 @@ $(MID_SUBDIR)/mus_hg_radio_r_101.s: %.s: %.mid
 $(MID_SUBDIR)/mus_hg_radio_r_201.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V104
 
-$(MID_SUBDIR)/mus_hg_phc.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V106
+$(MID_SUBDIR)/mus_hg_radio_trainer.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V073
 
-$(MID_SUBDIR)/mus_hg_e_g_pichu.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V100
-
-$(MID_SUBDIR)/mus_hg_eye_maiko.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V084
-
-$(MID_SUBDIR)/mus_hg_e_lugia.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V092
-
-$(MID_SUBDIR)/mus_hg_vs_lugia.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V102
-
-$(MID_SUBDIR)/mus_hg_d_champroad.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V087
-
-$(MID_SUBDIR)/mus_hg_champroad.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V082
-
-$(MID_SUBDIR)/mus_hg_vs_champ.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V113
-
-$(MID_SUBDIR)/mus_hg_e_dendouiri.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V099
-
-$(MID_SUBDIR)/mus_hg_ending.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V059
-
-$(MID_SUBDIR)/mus_hg_ending2.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V074
+$(MID_SUBDIR)/mus_hg_radio_variety.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V073
 
 $(MID_SUBDIR)/mus_hg_vs_kodai.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V110
 
-$(MID_SUBDIR)/mus_hg_d_shinto.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -V088
+$(MID_SUBDIR)/mus_hg_phc.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V106
 
 $(MID_SUBDIR)/mus_hg_e_arceus.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V099
 
-$(MID_SUBDIR)/mus_hg_koukan.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G229 -v080
+$(MID_SUBDIR)/mus_hg_me_asa.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V080 -P5
+
+$(MID_SUBDIR)/mus_hg_me_lvup.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V102 -P5
+
+$(MID_SUBDIR)/mus_hg_me_item.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V081 -P5
+
+$(MID_SUBDIR)/mus_hg_me_keyitem.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V081 -P5
+
+$(MID_SUBDIR)/mus_hg_me_shinkaome.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V076 -p5
+
+$(MID_SUBDIR)/mus_hg_me_badge.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V104 -p5
+
+$(MID_SUBDIR)/mus_hg_me_waza.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V087 -p5
+
+$(MID_SUBDIR)/mus_hg_me_acce.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V072 -p5
+
+$(MID_SUBDIR)/mus_hg_me_wasure.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V105 -p5
+
+$(MID_SUBDIR)/mus_hg_me_kinomi.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V082 -p5
+
+$(MID_SUBDIR)/mus_hg_me_hyouka1.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V092 -P5
+
+$(MID_SUBDIR)/mus_hg_me_hyouka2.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V095 -P5
+
+$(MID_SUBDIR)/mus_hg_me_hyouka3.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V081 -p5
+
+$(MID_SUBDIR)/mus_hg_me_hyouka4.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V092 -p5
+
+$(MID_SUBDIR)/mus_hg_me_hyouka5.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V092 -p5
+
+$(MID_SUBDIR)/mus_hg_me_hyouka6.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V092 -p5
+
+$(MID_SUBDIR)/mus_hg_me_tamago_get.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V088 -P5
+
+$(MID_SUBDIR)/mus_hg_me_mushitori1.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V097 -p5
+
+$(MID_SUBDIR)/mus_hg_me_mushitori2.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V102 -p5
+
+$(MID_SUBDIR)/mus_hg_me_mushitori3.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V097 -p5
 
 $(MID_SUBDIR)/mus_hg_me_cardgame1.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V098 -p5
@@ -2337,8 +2313,32 @@ $(MID_SUBDIR)/mus_hg_me_cardgame1.s: %.s: %.mid
 $(MID_SUBDIR)/mus_hg_me_cardgame2.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V097 -p5
 
+$(MID_SUBDIR)/mus_hg_me_pokegear_regist.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V097 -p5
+
 $(MID_SUBDIR)/mus_hg_me_gonin.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V088 -p5
+
+$(MID_SUBDIR)/mus_hg_me_pt_new.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V102 -p5
+
+$(MID_SUBDIR)/mus_hg_me_pt_resultg.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V098 -p5
+
+$(MID_SUBDIR)/mus_hg_me_pt_special.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V098 -p5
+
+$(MID_SUBDIR)/mus_hg_me_roulette.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V098 -p5
+
+$(MID_SUBDIR)/mus_hg_me_castle.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V086 -p5
+
+$(MID_SUBDIR)/mus_hg_me_bpget.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V107 -p5
+
+$(MID_SUBDIR)/mus_hg_me_minigame.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G229 -V091 -p5
 
 $(MID_SUBDIR)/mus_bw_gf_logo.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G278 -V070

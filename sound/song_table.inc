@@ -727,179 +727,179 @@ gSongTable::
 	song mus_hg_title, 0, 0
 	song mus_hg_pokemon_theme, 0, 0
 	song mus_hg_starting, 0, 0
-	song mus_hg_t_wakaba, 0, 0
-	song mus_hg_e_tsureteke1, 0, 0
-	song mus_hg_e_support_f, 0, 0
-	song mus_hg_e_support_m, 0, 0
-	song mus_hg_utsugi_rabo, 0, 0
-	song mus_hg_me_keyitem, 2, 2
-	song mus_hg_r_1_29, 0, 0
-	song mus_hg_vs_norapoke, 0, 0
-	song mus_hg_win2, 0, 0
-	song mus_hg_win2_not_fan, 0, 0
-	song mus_hg_me_lvup, 2, 2
-	song mus_hg_c_yoshino, 0, 0
-	song mus_hg_e_tsureteke2, 0, 0
-	song mus_hg_pokesen, 0, 0
-	song mus_hg_me_asa, 2, 2
-	song mus_hg_eye_j_shounen, 0, 0
-	song mus_hg_vs_trainer, 0, 0
-	song mus_hg_win1, 0, 0
-	song mus_hg_r_1_30, 0, 0
-	song mus_hg_me_hyouka1, 2, 2
-	song mus_hg_c_kikyou, 0, 0
-	song mus_hg_to_madatsubomi1, 0, 0
-	song mus_hg_eye_bouzu, 0, 0
-    song mus_hg_fs, 0, 0
-    song mus_hg_me_tamago_get, 2, 2
-    song mus_hg_e_maiko_theme, 0, 0
-    song mus_hg_d_chikatsuuro, 0, 0
-    song mus_hg_me_item, 2, 2
-    song mus_hg_d_unknown_iseki, 0, 0
-	song mus_hg_radio_unknown, 0, 0
-	song mus_hg_me_hyouka2, 2, 2
-	song mus_hg_t_hiwada, 0, 0
-	song mus_hg_eye_rocket, 0, 0
-	song mus_hg_vs_rocket, 0, 0
-	song mus_hg_r_4_34, 0, 0
-	song mus_hg_e_rival1, 0, 0
-	song mus_hg_vs_rival, 0, 0
 	song mus_hg_shinka, 0, 0
 	song mus_hg_koukan, 0, 0
-	song mus_hg_me_shinkaome, 2, 2
-	song mus_hg_c_kogane, 0, 0
-	song mus_hg_gym, 0, 0
-	song mus_hg_vs_gymreader, 0, 0
-	song mus_hg_win3, 0, 0
-	song mus_hg_me_badge, 2, 2
-    song mus_hg_radio_jingle, 0, 0
-    song mus_hg_aikotoba, 0, 0
-    song mus_hg_me_waza, 2, 2
-    song mus_hg_game, 0, 0
-    song mus_hg_gameatari, 0, 0
-	song mus_hg_me_cardgame1, 2, 2
-	song mus_hg_me_cardgame2, 2, 2
-	song mus_hg_me_acce, 2, 2
-	song mus_hg_wifitower, 0, 0
-	song mus_hg_bld_gtc, 0, 0
-	song mus_hg_me_hyouka3, 2, 2
 	song mus_hg_bicycle, 0, 0
-	song mus_hg_eye_j_shoujo, 0, 0
-	song mus_hg_me_pokegear_regist, 2, 2
-	song mus_hg_d_kouen, 0, 0
-	song mus_hg_me_kinomi, 2, 2
-	song mus_hg_c_enju, 0, 0
-	song mus_hg_kaburenjou, 0, 0
-	song mus_hg_to_yaketa, 0, 0
-	song mus_hg_e_minaki, 0, 0
-	song mus_hg_ohkido_rabo, 0, 0
-	song mus_hg_me_hyouka4, 2, 2
-	song mus_hg_r_6_38, 0, 0
-	song mus_hg_radio_march, 0, 0
-	song mus_hg_vs_raikou, 0, 0
-	song mus_hg_to_toudai, 0, 0
 	song mus_hg_naminori, 0, 0
+	song mus_hg_e_dendouiri, 0, 0
+	song mus_hg_ending, 0, 0
+	song mus_hg_ending2, 0, 0
+	song mus_hg_t_wakaba, 0, 0
+	song mus_hg_c_yoshino, 0, 0
+	song mus_hg_c_kikyou, 0, 0
+	song mus_hg_t_hiwada, 0, 0
+	song mus_hg_c_kogane, 0, 0
+	song mus_hg_c_enju, 0, 0
 	song mus_hg_c_tanba, 0, 0
-	song mus_hg_me_pt_special, 2, 2
+	song mus_hg_r_1_29, 0, 0
+	song mus_hg_r_1_30, 0, 0
+	song mus_hg_r_4_34, 0, 0
+	song mus_hg_r_6_38, 0, 0
 	song mus_hg_r_7_42, 0, 0
-	song mus_hg_kaidenpa, 0, 0
-	song mus_hg_d_ajito, 0, 0
-	song mus_hg_eye_j_ayashii, 0, 0
-	song mus_hg_e_rival2, 0, 0
-	song mus_hg_senkyo, 0, 0
-	song mus_hg_d_koorinonuke, 0, 0
-	song mus_hg_me_wasure, 2, 2
-	song mus_hg_ryuunoana, 0, 0
-	song mus_hg_ibuki, 0, 0
-	song mus_hg_vs_entei, 0, 0
-	song mus_hg_to_suzu, 0, 0
-	song mus_hg_e_maiko_mai, 0, 0
-	song mus_hg_e_houou, 0, 0
-	song mus_hg_vs_houou, 0, 0
-	song mus_hg_r_1_26, 0, 0
-	song mus_hg_kousokusen, 0, 0
 	song mus_hg_c_kuchiba, 0, 0
-	song mus_hg_vs_gymreader_kanto, 0, 0
-	song mus_hg_t_chion, 0, 0
-	song mus_hg_d_iwayama, 0, 0
-	song mus_hg_vs_norapoke_kanto, 0, 0
-	song mus_hg_me_hyouka5, 2, 2
-	song mus_hg_c_hanada, 0, 0
-	song mus_hg_r_12_24, 0, 0
-	song mus_hg_e_linear, 0, 0
-	song mus_hg_radio_komoriuta, 0, 0
-	song mus_hg_vs_suicune, 0, 0
-	song mus_hg_c_tamamushi, 0, 0
-	song mus_hg_r_10_11, 0, 0
-	song mus_hg_hue, 0, 0
-	song mus_hg_d_tokiwanomori3, 0, 0
-	song mus_hg_eye_k_shounen, 0, 0
 	song mus_hg_c_yamabuki, 0, 0
-	song mus_hg_r_9_03, 0, 0
-	song mus_hg_eye_k_ayashii, 0, 0
-	song mus_hg_otsukimi_event, 0, 0
-	song mus_hg_r_9_01, 0, 0
+	song mus_hg_c_hanada, 0, 0
+	song mus_hg_t_chion, 0, 0
+	song mus_hg_c_tamamushi, 0, 0
 	song mus_hg_t_masara, 0, 0
-	song mus_hg_ohkido, 0, 0
-	song mus_hg_me_hyouka6, 2, 2
-	song mus_hg_eye_k_shoujo, 0, 0
-	song mus_hg_vs_trainer_kanto, 0, 0
 	song mus_hg_t_guren, 0, 0
-	song mus_hg_safari_road, 0, 0
-	song mus_hg_safari_house, 0, 0
-	song mus_hg_safari_field, 0, 0
-	song mus_hg_radio_variety, 0, 0
+	song mus_hg_r_9_01, 0, 0
+	song mus_hg_r_9_03, 0, 0
+	song mus_hg_r_10_11, 0, 0
+	song mus_hg_r_12_24, 0, 0
+	song mus_hg_r_1_26, 0, 0
+	song mus_hg_pokesen, 0, 0
+    song mus_hg_fs, 0, 0
+	song mus_hg_gym, 0, 0
+	song mus_hg_utsugi_rabo, 0, 0
+	song mus_hg_ohkido, 0, 0
+	song mus_hg_kaburenjou, 0, 0
+    song mus_hg_game, 0, 0
+	song mus_hg_battletower, 0, 0
+	song mus_hg_battletower2, 0, 0
+	song mus_hg_to_madatsubomi1, 0, 0
+    song mus_hg_d_chikatsuuro, 0, 0
+    song mus_hg_d_unknown_iseki, 0, 0
+	song mus_hg_d_kouen, 0, 0
+	song mus_hg_to_yaketa, 0, 0
+	song mus_hg_to_suzu, 0, 0
+	song mus_hg_to_toudai, 0, 0
+	song mus_hg_d_ajito, 0, 0
+	song mus_hg_d_koorinonuke, 0, 0
+	song mus_hg_ryuunoana, 0, 0
+	song mus_hg_d_iwayama, 0, 0
+	song mus_hg_d_tokiwanomori3, 0, 0
+	song mus_hg_d_champroad, 0, 0
+	song mus_hg_champroad, 0, 0
+	song mus_hg_e_tsureteke1, 0, 0
+	song mus_hg_e_tsureteke2, 0, 0
+	song mus_hg_e_rival1, 0, 0
+	song mus_hg_e_rival2, 0, 0
 	song mus_hg_taikaimae, 0, 0
 	song mus_hg_taikai, 0, 0
-	song mus_hg_me_mushitori3, 2, 2
-	song mus_hg_me_mushitori2, 2, 2
-	song mus_hg_me_mushitori1, 2, 2
+	song mus_hg_kaidenpa, 0, 0
+	song mus_hg_senkyo, 0, 0
+	song mus_hg_e_linear, 0, 0
+	song mus_hg_kousokusen, 0, 0
+	song mus_hg_otsukimi_event, 0, 0
+    song mus_hg_radio_jingle, 0, 0
+	song mus_hg_radio_komoriuta, 0, 0
+	song mus_hg_radio_march, 0, 0
+	song mus_hg_radio_unknown, 0, 0
+	song mus_hg_hue, 0, 0
+	song mus_hg_ohkido_rabo, 0, 0
+    song mus_hg_aikotoba, 0, 0
+	song mus_hg_e_minaki, 0, 0
+	song mus_hg_ibuki, 0, 0
+	song mus_hg_eye_j_shoujo, 0, 0
+	song mus_hg_eye_j_shounen, 0, 0
+	song mus_hg_eye_j_ayashii, 0, 0
+	song mus_hg_eye_bouzu, 0, 0
+	song mus_hg_eye_maiko, 0, 0
+	song mus_hg_eye_rocket, 0, 0
+	song mus_hg_eye_k_shoujo, 0, 0
+	song mus_hg_eye_k_shounen, 0, 0
+	song mus_hg_eye_k_ayashii, 0, 0
+	song mus_hg_vs_norapoke, 0, 0
+	song mus_hg_vs_trainer, 0, 0
+	song mus_hg_vs_gymreader, 0, 0
+	song mus_hg_vs_rival, 0, 0
+	song mus_hg_vs_rocket, 0, 0
+	song mus_hg_vs_suicune, 0, 0
+	song mus_hg_vs_entei, 0, 0
+	song mus_hg_vs_raikou, 0, 0
+	song mus_hg_vs_champ, 0, 0
+	song mus_hg_vs_norapoke_kanto, 0, 0
+	song mus_hg_vs_trainer_kanto, 0, 0
+	song mus_hg_vs_gymreader_kanto, 0, 0
+	song mus_hg_win1, 0, 0
+	song mus_hg_win2, 0, 0
+	song mus_hg_win2_not_fan, 0, 0
+	song mus_hg_win3, 0, 0
+	song mus_hg_vs_houou, 0, 0
+	song mus_hg_vs_lugia, 0, 0
 	song mus_hg_pt_entr, 0, 0
-	song mus_hg_me_pt_new, 2, 2
 	song mus_hg_pt_open, 0, 0
 	song mus_hg_pt_title, 0, 0
 	song mus_hg_pt_game, 0, 0
-	song mus_hg_me_pt_resultg, 2, 2
 	song mus_hg_pt_gamef, 0, 0
 	song mus_hg_pt_result, 0, 0
 	song mus_hg_pt_end, 0, 0
 	song mus_hg_pt_victory, 0, 0
-	song mus_hg_wifi_present, 0, 0
-	song mus_hg_battletower2, 0, 0
-	song mus_hg_battletower, 0, 0
-	song mus_hg_me_bpget, 2, 2
 	song mus_hg_bf_factory, 0, 0
 	song mus_hg_bf_stage, 0, 0
 	song mus_hg_bf_roulette, 0, 0
-	song mus_hg_me_roulette, 2, 2
 	song mus_hg_bf_castle, 0, 0
-	song mus_hg_me_castle, 2, 2
 	song mus_hg_ba_brain, 0, 0
 	song mus_hg_winbrain, 0, 0
-	song mus_hg_radio_trainer, 0, 0
-	song mus_hg_guruguru, 0, 0
 	song mus_hg_wifi_access, 0, 0
+	song mus_hg_wifi_present, 0, 0
 	song mus_hg_wifiunion, 0, 0
 	song mus_hg_wifigame, 0, 0
-	song mus_hg_me_minigame, 2, 2
 	song mus_hg_wifiparade, 0, 0
+	song mus_hg_wifitower, 0, 0
+	song mus_hg_guruguru, 0, 0
+	song mus_hg_bld_gtc, 0, 0
+	song mus_hg_safari_road, 0, 0
+	song mus_hg_safari_house, 0, 0
+	song mus_hg_safari_field, 0, 0
+	song mus_hg_e_support_m, 0, 0
+	song mus_hg_e_support_f, 0, 0
+    song mus_hg_gameatari, 0, 0
+	song mus_hg_e_maiko_mai, 0, 0
+    song mus_hg_e_maiko_theme, 0, 0
+	song mus_hg_e_houou, 0, 0
+	song mus_hg_e_lugia, 0, 0
+	song mus_hg_e_g_pichu, 0, 0
+	song mus_hg_d_shinto, 0, 0
 	song mus_hg_radio_r_101, 0, 0
 	song mus_hg_radio_r_201, 0, 0
-	song mus_hg_phc, 0, 0
-	song mus_hg_e_g_pichu, 0, 0
-	song mus_hg_eye_maiko, 0, 0
-	song mus_hg_e_lugia, 0, 0
-	song mus_hg_vs_lugia, 0, 0
-	song mus_hg_d_champroad, 0, 0
-	song mus_hg_champroad, 0, 0
-	song mus_hg_vs_champ, 0, 0
-	song mus_hg_e_dendouiri, 0, 0
-	song mus_hg_ending, 0, 0
-	song mus_hg_ending2, 0, 0
+	song mus_hg_radio_trainer, 0, 0
+	song mus_hg_radio_variety, 0, 0
 	song mus_hg_vs_kodai, 0, 0
-	song mus_hg_d_shinto, 0, 0
+	song mus_hg_phc, 0, 0
 	song mus_hg_e_arceus, 0, 0
+	song mus_hg_me_asa, 2, 2
+	song mus_hg_me_lvup, 2, 2
+    song mus_hg_me_item, 2, 2
+	song mus_hg_me_keyitem, 2, 2
+	song mus_hg_me_shinkaome, 2, 2
+	song mus_hg_me_badge, 2, 2
+    song mus_hg_me_waza, 2, 2
+	song mus_hg_me_acce, 2, 2
+	song mus_hg_me_wasure, 2, 2
+	song mus_hg_me_kinomi, 2, 2
+	song mus_hg_me_hyouka1, 2, 2
+	song mus_hg_me_hyouka2, 2, 2
+	song mus_hg_me_hyouka3, 2, 2
+	song mus_hg_me_hyouka4, 2, 2
+	song mus_hg_me_hyouka5, 2, 2
+	song mus_hg_me_hyouka6, 2, 2
+    song mus_hg_me_tamago_get, 2, 2
+	song mus_hg_me_mushitori1, 2, 2
+	song mus_hg_me_mushitori2, 2, 2
+	song mus_hg_me_mushitori3, 2, 2
+	song mus_hg_me_cardgame1, 2, 2
+	song mus_hg_me_cardgame2, 2, 2
+	song mus_hg_me_pokegear_regist, 2, 2
 	song mus_hg_me_gonin, 2, 2
+	song mus_hg_me_pt_new, 2, 2
+	song mus_hg_me_pt_resultg, 2, 2
+	song mus_hg_me_pt_special, 2, 2
+	song mus_hg_me_roulette, 2, 2
+	song mus_hg_me_castle, 2, 2
+	song mus_hg_me_bpget, 2, 2
+	song mus_hg_me_minigame, 2, 2
 	song mus_bw_gf_logo, 0, 0
 	song mus_bw_title, 0, 0
 	song mus_bw_title01, 0, 0

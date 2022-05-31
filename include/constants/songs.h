@@ -745,179 +745,179 @@
 #define MUS_HG_TITLE                  723 // Opening Movie
 #define MUS_HG_POKEMON_THEME          724 // Title Screen
 #define MUS_HG_STARTING               725 // An Adventure Begins!
-#define MUS_HG_T_WAKABA               726 // New Bark Town
-#define MUS_HG_E_TSURETEKE1           727 // Hurry Along
-#define MUS_HG_E_SUPPORT_F            728 // Lyra
-#define MUS_HG_E_SUPPORT_M            729 // Ethan
-#define MUS_HG_UTSUGI_RABO            730 // Elm Pokémon Lab
-#define MUS_HG_ME_KEYITEM             731 // Obtained a Key Item!
-#define MUS_HG_R_1_29                 732 // Route 29
-#define MUS_HG_VS_NORAPOKE            733 // Battle! (Wild Pokémon - Johto Version)
-#define MUS_HG_WIN2                   734 // Victory! (Wild Pokémon)
-#define MUS_HG_WIN2_NOT_FAN           735 // Victory! (Wild Pokémon) (No intro)
-#define MUS_HG_ME_LVUP                736 // Level Up!
-#define MUS_HG_C_YOSHINO              737 // Cherrygrove City
-#define MUS_HG_E_TSURETEKE2           738 // Hurry Along 2
-#define MUS_HG_POKESEN                739 // Pokémon Center
-#define MUS_HG_ME_ASA                 740 // Pokémon Healed
-#define MUS_HG_EYE_J_SHOUNEN          741 // Trainers' Eyes Meet (Boy 1)
-#define MUS_HG_VS_TRAINER             742 // Battle! (Trainer Battle - Johto Version)
-#define MUS_HG_WIN1                   743 // Victory! (Trainer Battle)
-#define MUS_HG_R_1_30                 744 // Route 30
-#define MUS_HG_ME_HYOUKA1             745 // Pokédex Evaluation... No Good!
-#define MUS_HG_C_KIKYOU               746 // Violet City
-#define MUS_HG_TO_MADATSUBOMI1        747 // Sprout Tower
-#define MUS_HG_EYE_BOUZU              748 // Trainers' Eyes Meet (Sage)
-#define MUS_HG_FS                     749 // Poké Mart
-#define MUS_HG_ME_TAMAGO_GET          750 // Received a Pokémon Egg!
-#define MUS_HG_E_MAIKO_THEME          751 // Kimono Girl
-#define MUS_HG_D_CHIKATSUURO          752 // Union Cave
-#define MUS_HG_ME_ITEM                753 // Picked Up an Item!
-#define MUS_HG_D_UNKNOWN_ISEKI        754 // Ruins of Alph
-#define MUS_HG_RADIO_UNKNOWN          755 // Pokégear Radio: Unown
-#define MUS_HG_ME_HYOUKA2             756 // Pokédex Evaluation... You're on Your Way!
-#define MUS_HG_T_HIWADA               757 // Azalea Town
-#define MUS_HG_EYE_ROCKET             758 // Trainers' Eyes Meet (Team Rocket)
-#define MUS_HG_VS_ROCKET              759 // Battle! (Team Rocket)
-#define MUS_HG_R_4_34                 760 // Route 34
-#define MUS_HG_E_RIVAL1               761 // A Rival Appears!
-#define MUS_HG_VS_RIVAL               762 // Battle! (Rival)
-#define MUS_HG_SHINKA                 763 // Evolution
-#define MUS_HG_KOUKAN                 764 // Evolution (No intro)
-#define MUS_HG_ME_SHINKAOME           765 // Congratulations! Your Pokémon Evolved!
-#define MUS_HG_C_KOGANE               766 // Goldenrod City
-#define MUS_HG_GYM                    767 // Pokémon Gym
-#define MUS_HG_VS_GYMREADER           768 // Battle! (Gym Leader - Johto Version)
-#define MUS_HG_WIN3                   769 // Victory! (Gym Leader)
-#define MUS_HG_ME_BADGE               770 // Received a Gym Badge!
-#define MUS_HG_RADIO_JINGLE           771 // Pokégear Radio: Pokémon Channel
-#define MUS_HG_AIKOTOBA               772 // Pokégear Radio: Buena's Password
-#define MUS_HG_ME_WAZA                773 // Received a TM!
-#define MUS_HG_GAME                   774 // Goldenrod Game Corner
-#define MUS_HG_GAMEATARI              775 // You're a Winner!
-#define MUS_HG_ME_CARDGAME1           776 // Voltorb Flip: Is this what you're expecting?!
-#define MUS_HG_ME_CARDGAME2           777 // Voltorb Flip: Game Over
-#define MUS_HG_ME_ACCE                778 // Obtained an Accessory
-#define MUS_HG_WIFITOWER              779 // Global Terminal
-#define MUS_HG_BLD_GTC                780 // GTS
-#define MUS_HG_ME_HYOUKA3             781 // Pokédex Evaluation... Keep at It!
-#define MUS_HG_BICYCLE                782 // Bicycle
-#define MUS_HG_EYE_J_SHOUJO           783 // Trainers' Eyes Meet (Girl 1)
-#define MUS_HG_ME_POKEGEAR_REGIST     784 // Registered in the Pokégear!
-#define MUS_HG_D_KOUEN                785 // National Park
-#define MUS_HG_ME_KINOMI              786 // Obtained a Berry!
-#define MUS_HG_C_ENJU                 787 // Ecruteak City
-#define MUS_HG_KABURENJOU             788 // Ecruteak Dance Theater
-#define MUS_HG_TO_YAKETA              789 // Burned Tower
-#define MUS_HG_E_MINAKI               790 // Eusine
-#define MUS_HG_OHKIDO_RABO            791 // Pokégear Radio: Professor Oak's Pokémon Talk
-#define MUS_HG_ME_HYOUKA4             792 // Pokédex Evaluation... Not Bad!
-#define MUS_HG_R_6_38                 793 // Route 38
-#define MUS_HG_RADIO_MARCH            794 // Pokégear Radio: Pokémon March
-#define MUS_HG_VS_RAIKOU              795 // Battle! (Raikou)
-#define MUS_HG_TO_TOUDAI              796 // Olivine Lighthouse
-#define MUS_HG_NAMINORI               797 // Surf
-#define MUS_HG_C_TANBA                798 // Cianwood City
-#define MUS_HG_ME_PT_SPECIAL          799 // Received a Pokémon!
-#define MUS_HG_R_7_42                 800 // Route 42
-#define MUS_HG_KAIDENPA               801 // Radio Transmission
-#define MUS_HG_D_AJITO                802 // Team Rocket HQ
-#define MUS_HG_EYE_J_AYASHII          803 // Trainers' Eyes Meet (Suspicious Figure 1)
-#define MUS_HG_E_RIVAL2               804 // A Rival Appears! (Version 2)
-#define MUS_HG_SENKYO                 805 // Radio Tower Occupied!
-#define MUS_HG_D_KOORINONUKE          806 // Ice Path
-#define MUS_HG_ME_WASURE              807 // Move Deleted
-#define MUS_HG_RYUUNOANA              808 // Dragon's Den
-#define MUS_HG_IBUKI                  809 // Clair
-#define MUS_HG_VS_ENTEI               810 // Battle! (Entei)
-#define MUS_HG_TO_SUZU                811 // Bell Tower
-#define MUS_HG_E_MAIKO_MAI            812 // The Dance of Ecruteak
-#define MUS_HG_E_HOUOU                813 // Ho-Oh Appears!
-#define MUS_HG_VS_HOUOU               814 // Battle! (Ho-Oh)
-#define MUS_HG_R_1_26                 815 // Route 26
-#define MUS_HG_KOUSOKUSEN             816 // S.S. Aqua
-#define MUS_HG_C_KUCHIBA              817 // Vermilion City
-#define MUS_HG_VS_GYMREADER_KANTO     818 // Battle! (Gym Leader - Kanto Version)
-#define MUS_HG_T_CHION                819 // Lavender Town
-#define MUS_HG_D_IWAYAMA              820 // Rock Tunnel
-#define MUS_HG_VS_NORAPOKE_KANTO      821 // Battle! (Wild Pokémon - Kanto Version)
-#define MUS_HG_ME_HYOUKA5             822 // Pokédex Evaluation... Just a Little More!
-#define MUS_HG_C_HANADA               823 // Cerulean City
-#define MUS_HG_R_12_24                824 // Route 24
-#define MUS_HG_E_LINEAR               825 // Magnet Train
-#define MUS_HG_RADIO_KOMORIUTA        826 // Pokégear Radio: Pokémon Lullaby
-#define MUS_HG_VS_SUICUNE             827 // Battle! (Suicune)
-#define MUS_HG_C_TAMAMUSHI            828 // Celadon City
-#define MUS_HG_R_10_11                829 // Route 11
-#define MUS_HG_HUE                    830 // Pokégear Radio: Poké Flute
-#define MUS_HG_D_TOKIWANOMORI3        831 // Viridian Forest
-#define MUS_HG_EYE_K_SHOUNEN          832 // Trainers' Eyes Meet (Boy 2)
-#define MUS_HG_C_YAMABUKI             833 // Pewter City
-#define MUS_HG_R_9_03                 834 // Route 3
-#define MUS_HG_EYE_K_AYASHII          835 // Trainers' Eyes Meet (Suspicious Figure 2)
-#define MUS_HG_OTSUKIMI_EVENT         836 // Mt. Moon
-#define MUS_HG_R_9_01                 837 // Route 1
-#define MUS_HG_T_MASARA               838 // Pallet Town
-#define MUS_HG_OHKIDO                 839 // Professor Oak
-#define MUS_HG_ME_HYOUKA6             840 // Pokédex Evaluation... Complete!
-#define MUS_HG_EYE_K_SHOUJO           841 // Trainers' Eyes Meet (Girl 2)
-#define MUS_HG_VS_TRAINER_KANTO       842 // Battle! (Trainer Battle - Kanto Version)
-#define MUS_HG_T_GUREN                843 // Cinnabar Island
-#define MUS_HG_SAFARI_ROAD            844 // Route 47
-#define MUS_HG_SAFARI_HOUSE           845 // Safari Zone Gate
-#define MUS_HG_SAFARI_FIELD           846 // Safari Zone
-#define MUS_HG_RADIO_VARIETY          847 // Pokégear Radio: Variety Channel
-#define MUS_HG_TAIKAIMAE              848 // The Bug-Catching Contest Begins!
-#define MUS_HG_TAIKAI                 849 // The Bug-Catching Contest
-#define MUS_HG_ME_MUSHITORI3          850 // Bug-Catching Contest: Third Place
-#define MUS_HG_ME_MUSHITORI2          851 // Bug-Catching Contest: Second Place
-#define MUS_HG_ME_MUSHITORI1          852 // Bug-Catching Contest: Winner
-#define MUS_HG_PT_ENTR                853 // Pokéathlon: In the Pokéathlon Dome
-#define MUS_HG_ME_PT_NEW              854 // Pokéathlon: Getting Changed
-#define MUS_HG_PT_OPEN                855 // Pokéathlon: Opening Ceremony
-#define MUS_HG_PT_TITLE               856 // Pokéathlon: An Event Begins!
-#define MUS_HG_PT_GAME                857 // Pokéathlon: Event Time!
-#define MUS_HG_ME_PT_RESULTG          858 // Pokéathlon: In First Place!
-#define MUS_HG_PT_GAMEF               859 // Pokéathlon: Finals!
-#define MUS_HG_PT_RESULT              860 // Pokéathlon: Results Announcement!
-#define MUS_HG_PT_END                 861 // Pokéathlon: Medal Ceremony
-#define MUS_HG_PT_VICTORY             862 // Pokéathlon: Winner!
-#define MUS_HG_WIFI_PRESENT           863 // Mystery Gift
-#define MUS_HG_BATTLETOWER2           864 // Battle Tower Reception Desk
-#define MUS_HG_BATTLETOWER            865 // Battle Tower (Johto)
-#define MUS_HG_ME_BPGET               866 // Received Battle Points!
-#define MUS_HG_BF_FACTORY             867 // Battle Factory
-#define MUS_HG_BF_STAGE               868 // Battle Hall
-#define MUS_HG_BF_ROULETTE            869 // Battle Arcade
-#define MUS_HG_ME_ROULETTE            870 // Received Battle Points in the Battle Arcade!
-#define MUS_HG_BF_CASTLE              871 // Battle Castle
-#define MUS_HG_ME_CASTLE              872 // Received Castle Points!
-#define MUS_HG_BA_BRAIN               873 // Battle! (Frontier Brain)
-#define MUS_HG_WINBRAIN               874 // Victory! (Frontier Brain)
-#define MUS_HG_RADIO_TRAINER          875 // Pokégear Radio: Trainer Channel
-#define MUS_HG_GURUGURU               876 // Spin Trade
-#define MUS_HG_WIFI_ACCESS            877 // Nintendo Wi-Fi Connection
-#define MUS_HG_WIFIUNION              878 // Wi-Fi Plaza
-#define MUS_HG_WIFIGAME               879 // Wi-Fi Plaza: Plaza Games
-#define MUS_HG_ME_MINIGAME            880 // Cleared Wobbuffet Pop!
-#define MUS_HG_WIFIPARADE             881 // Wi-Fi Plaza: Parade
-#define MUS_HG_RADIO_R_101            882 // Pokégear Radio: Route 101
-#define MUS_HG_RADIO_R_201            883 // Pokégear Radio: Route 201
-#define MUS_HG_PHC                    884 // Pokéwalker
-#define MUS_HG_E_G_PICHU              885 // Spiky-Eared Pichu Appears!
-#define MUS_HG_EYE_MAIKO              886 // Trainers' Eyes Meet (Kimono Girl)
-#define MUS_HG_E_LUGIA                887 // Lugia Appears!
-#define MUS_HG_VS_LUGIA               888 // Battle! (Lugia)
-#define MUS_HG_D_CHAMPROAD            889 // Victory Road
-#define MUS_HG_CHAMPROAD              890 // The Pokémon League
-#define MUS_HG_VS_CHAMP               891 // Battle! (Champion)
-#define MUS_HG_E_DENDOURIRI           892 // The Hall of Fame
-#define MUS_HG_ENDING                 893 // Ending Theme
-#define MUS_HG_ENDING2                894 // The End
-#define MUS_HG_VS_KODAI               895 // Battle! (Super-Ancient Pokémon)
-#define MUS_HG_D_SHINTO               896 // Sinjoh Ruins
-#define MUS_HG_E_ARCEUS               897 // Arceus
-#define MUS_HG_ME_GONIN               898 // Let's Go Together (Unused?)
+#define MUS_HG_SHINKA                 726 // Evolution
+#define MUS_HG_KOUKAN                 727 // Evolution (No intro)
+#define MUS_HG_BICYCLE                728 // Bicycle
+#define MUS_HG_NAMINORI               729 // Surf
+#define MUS_HG_E_DENDOURIRI           730 // The Hall of Fame
+#define MUS_HG_ENDING                 731 // Ending Theme
+#define MUS_HG_ENDING2                732 // The End
+#define MUS_HG_T_WAKABA               733 // New Bark Town
+#define MUS_HG_C_YOSHINO              734 // Cherrygrove City
+#define MUS_HG_C_KIKYOU               735 // Violet City
+#define MUS_HG_T_HIWADA               736 // Azalea Town
+#define MUS_HG_C_KOGANE               737 // Goldenrod City
+#define MUS_HG_C_ENJU                 738 // Ecruteak City
+#define MUS_HG_C_TANBA                739 // Cianwood City
+#define MUS_HG_R_1_29                 740 // Route 29
+#define MUS_HG_R_1_30                 741 // Route 30
+#define MUS_HG_R_4_34                 742 // Route 34
+#define MUS_HG_R_6_38                 743 // Route 38
+#define MUS_HG_R_7_42                 744 // Route 42
+#define MUS_HG_C_KUCHIBA              745 // Vermilion City
+#define MUS_HG_C_YAMABUKI             746 // Pewter City
+#define MUS_HG_C_HANADA               747 // Cerulean City
+#define MUS_HG_T_CHION                748 // Lavender Town
+#define MUS_HG_C_TAMAMUSHI            749 // Celadon City
+#define MUS_HG_T_MASARA               750 // Pallet Town
+#define MUS_HG_T_GUREN                751 // Cinnabar Island
+#define MUS_HG_R_9_01                 752 // Route 1
+#define MUS_HG_R_9_03                 753 // Route 3
+#define MUS_HG_R_10_11                754 // Route 11
+#define MUS_HG_R_12_24                755 // Route 24
+#define MUS_HG_R_1_26                 756 // Route 26
+#define MUS_HG_POKESEN                757 // Pokémon Center
+#define MUS_HG_FS                     758 // Poké Mart
+#define MUS_HG_GYM                    759 // Pokémon Gym
+#define MUS_HG_UTSUGI_RABO            760 // Elm Pokémon Lab
+#define MUS_HG_OHKIDO                 761 // Professor Oak
+#define MUS_HG_KABURENJOU             762 // Ecruteak Dance Theater
+#define MUS_HG_GAME                   763 // Goldenrod Game Corner
+#define MUS_HG_BATTLETOWER            764 // Battle Tower (Johto)
+#define MUS_HG_BATTLETOWER2           765 // Battle Tower Reception Desk
+#define MUS_HG_TO_MADATSUBOMI1        766 // Sprout Tower
+#define MUS_HG_D_CHIKATSUURO          767 // Union Cave
+#define MUS_HG_D_UNKNOWN_ISEKI        768 // Ruins of Alph
+#define MUS_HG_D_KOUEN                769 // National Park
+#define MUS_HG_TO_YAKETA              770 // Burned Tower
+#define MUS_HG_TO_SUZU                771 // Bell Tower
+#define MUS_HG_TO_TOUDAI              772 // Olivine Lighthouse
+#define MUS_HG_D_AJITO                773 // Team Rocket HQ
+#define MUS_HG_D_KOORINONUKE          774 // Ice Path
+#define MUS_HG_RYUUNOANA              775 // Dragon's Den
+#define MUS_HG_D_IWAYAMA              776 // Rock Tunnel
+#define MUS_HG_D_TOKIWANOMORI3        777 // Viridian Forest
+#define MUS_HG_D_CHAMPROAD            778 // Victory Road
+#define MUS_HG_CHAMPROAD              779 // The Pokémon League
+#define MUS_HG_E_TSURETEKE1           780 // Hurry Along
+#define MUS_HG_E_TSURETEKE2           781 // Hurry Along 2
+#define MUS_HG_E_RIVAL1               782 // A Rival Appears!
+#define MUS_HG_E_RIVAL2               783 // A Rival Appears! (Version 2)
+#define MUS_HG_TAIKAIMAE              784 // The Bug-Catching Contest Begins!
+#define MUS_HG_TAIKAI                 785 // The Bug-Catching Contest
+#define MUS_HG_KAIDENPA               786 // Radio Transmission
+#define MUS_HG_SENKYO                 787 // Radio Tower Occupied!
+#define MUS_HG_E_LINEAR               788 // Magnet Train
+#define MUS_HG_KOUSOKUSEN             789 // S.S. Aqua
+#define MUS_HG_OTSUKIMI_EVENT         790 // Mt. Moon
+#define MUS_HG_RADIO_JINGLE           791 // Pokégear Radio: Pokémon Channel
+#define MUS_HG_RADIO_KOMORIUTA        792 // Pokégear Radio: Pokémon Lullaby
+#define MUS_HG_RADIO_MARCH            793 // Pokégear Radio: Pokémon March
+#define MUS_HG_RADIO_UNKNOWN          794 // Pokégear Radio: Unown
+#define MUS_HG_HUE                    795 // Pokégear Radio: Poké Flute
+#define MUS_HG_OHKIDO_RABO            796 // Pokégear Radio: Professor Oak's Pokémon Talk
+#define MUS_HG_AIKOTOBA               797 // Pokégear Radio: Buena's Password
+#define MUS_HG_E_MINAKI               798 // Eusine
+#define MUS_HG_IBUKI                  799 // Clair
+#define MUS_HG_EYE_J_SHOUJO           800 // Trainers' Eyes Meet (Girl 1)
+#define MUS_HG_EYE_J_SHOUNEN          801 // Trainers' Eyes Meet (Boy 1)
+#define MUS_HG_EYE_J_AYASHII          802 // Trainers' Eyes Meet (Suspicious Figure 1)
+#define MUS_HG_EYE_BOUZU              803 // Trainers' Eyes Meet (Sage)
+#define MUS_HG_EYE_MAIKO              804 // Trainers' Eyes Meet (Kimono Girl)
+#define MUS_HG_EYE_ROCKET             805 // Trainers' Eyes Meet (Team Rocket)
+#define MUS_HG_EYE_K_SHOUJO           806 // Trainers' Eyes Meet (Girl 2)
+#define MUS_HG_EYE_K_SHOUNEN          807 // Trainers' Eyes Meet (Boy 2)
+#define MUS_HG_EYE_K_AYASHII          808 // Trainers' Eyes Meet (Suspicious Figure 2)
+#define MUS_HG_VS_NORAPOKE            809 // Battle! (Wild Pokémon - Johto Version)
+#define MUS_HG_VS_TRAINER             810 // Battle! (Trainer Battle - Johto Version)
+#define MUS_HG_VS_GYMREADER           811 // Battle! (Gym Leader - Johto Version)
+#define MUS_HG_VS_RIVAL               812 // Battle! (Rival)
+#define MUS_HG_VS_ROCKET              813 // Battle! (Team Rocket)
+#define MUS_HG_VS_SUICUNE             814 // Battle! (Suicune)
+#define MUS_HG_VS_ENTEI               815 // Battle! (Entei)
+#define MUS_HG_VS_RAIKOU              816 // Battle! (Raikou)
+#define MUS_HG_VS_CHAMP               817 // Battle! (Champion)
+#define MUS_HG_VS_NORAPOKE_KANTO      818 // Battle! (Wild Pokémon - Kanto Version)
+#define MUS_HG_VS_TRAINER_KANTO       819 // Battle! (Trainer Battle - Kanto Version)
+#define MUS_HG_VS_GYMREADER_KANTO     820 // Battle! (Gym Leader - Kanto Version)
+#define MUS_HG_WIN1                   821 // Victory! (Trainer Battle)
+#define MUS_HG_WIN2                   822 // Victory! (Wild Pokémon)
+#define MUS_HG_WIN2_NOT_FAN           823 // Victory! (Wild Pokémon) (No intro)
+#define MUS_HG_WIN3                   824 // Victory! (Gym Leader)
+#define MUS_HG_VS_HOUOU               825 // Battle! (Ho-Oh)
+#define MUS_HG_VS_LUGIA               826 // Battle! (Lugia)
+#define MUS_HG_PT_ENTR                827 // Pokéathlon: In the Pokéathlon Dome
+#define MUS_HG_PT_OPEN                828 // Pokéathlon: Opening Ceremony
+#define MUS_HG_PT_TITLE               829 // Pokéathlon: An Event Begins!
+#define MUS_HG_PT_GAME                830 // Pokéathlon: Event Time!
+#define MUS_HG_PT_GAMEF               831 // Pokéathlon: Finals!
+#define MUS_HG_PT_RESULT              832 // Pokéathlon: Results Announcement!
+#define MUS_HG_PT_END                 833 // Pokéathlon: Medal Ceremony
+#define MUS_HG_PT_VICTORY             834 // Pokéathlon: Winner!
+#define MUS_HG_BF_FACTORY             835 // Battle Factory
+#define MUS_HG_BF_STAGE               836 // Battle Hall
+#define MUS_HG_BF_ROULETTE            837 // Battle Arcade
+#define MUS_HG_BF_CASTLE              838 // Battle Castle
+#define MUS_HG_BA_BRAIN               839 // Battle! (Frontier Brain)
+#define MUS_HG_WINBRAIN               840 // Victory! (Frontier Brain)
+#define MUS_HG_WIFI_ACCESS            841 // Nintendo Wi-Fi Connection
+#define MUS_HG_WIFI_PRESENT           842 // Mystery Gift
+#define MUS_HG_WIFIUNION              843 // Wi-Fi Plaza
+#define MUS_HG_WIFIGAME               844 // Wi-Fi Plaza: Plaza Games
+#define MUS_HG_WIFIPARADE             845 // Wi-Fi Plaza: Parade
+#define MUS_HG_WIFITOWER              846 // Global Terminal
+#define MUS_HG_GURUGURU               847 // Spin Trade
+#define MUS_HG_BLD_GTC                848 // GTS
+#define MUS_HG_SAFARI_ROAD            849 // Route 47
+#define MUS_HG_SAFARI_HOUSE           850 // Safari Zone Gate
+#define MUS_HG_SAFARI_FIELD           851 // Safari Zone
+#define MUS_HG_E_SUPPORT_M            852 // Ethan
+#define MUS_HG_E_SUPPORT_F            853 // Lyra
+#define MUS_HG_GAMEATARI              854 // You're a Winner!
+#define MUS_HG_E_MAIKO_MAI            855 // The Dance of Ecruteak
+#define MUS_HG_E_MAIKO_THEME          856 // Kimono Girl
+#define MUS_HG_E_HOUOU                857 // Ho-Oh Appears!
+#define MUS_HG_E_LUGIA                858 // Lugia Appears!
+#define MUS_HG_E_G_PICHU              859 // Spiky-Eared Pichu Appears!
+#define MUS_HG_D_SHINTO               860 // Sinjoh Ruins
+#define MUS_HG_RADIO_R_101            861 // Pokégear Radio: Route 101
+#define MUS_HG_RADIO_R_201            862 // Pokégear Radio: Route 201
+#define MUS_HG_RADIO_TRAINER          863 // Pokégear Radio: Trainer Channel
+#define MUS_HG_RADIO_VARIETY          864 // Pokégear Radio: Variety Channel
+#define MUS_HG_VS_KODAI               865 // Battle! (Super-Ancient Pokémon)
+#define MUS_HG_PHC                    866 // Pokéwalker
+#define MUS_HG_E_ARCEUS               867 // Arceus
+#define MUS_HG_ME_ASA                 868 // Pokémon Healed
+#define MUS_HG_ME_LVUP                869 // Level Up!
+#define MUS_HG_ME_ITEM                870 // Picked Up an Item!
+#define MUS_HG_ME_KEYITEM             871 // Obtained a Key Item!
+#define MUS_HG_ME_SHINKAOME           872 // Congratulations! Your Pokémon Evolved!
+#define MUS_HG_ME_BADGE               873 // Received a Gym Badge!
+#define MUS_HG_ME_WAZA                874 // Received a TM!
+#define MUS_HG_ME_ACCE                875 // Obtained an Accessory
+#define MUS_HG_ME_WASURE              876 // Move Deleted
+#define MUS_HG_ME_KINOMI              877 // Obtained a Berry!
+#define MUS_HG_ME_HYOUKA1             878 // Pokédex Evaluation... No Good!
+#define MUS_HG_ME_HYOUKA2             879 // Pokédex Evaluation... You're on Your Way!
+#define MUS_HG_ME_HYOUKA3             880 // Pokédex Evaluation... Keep at It!
+#define MUS_HG_ME_HYOUKA4             881 // Pokédex Evaluation... Not Bad!
+#define MUS_HG_ME_HYOUKA5             882 // Pokédex Evaluation... Just a Little More!
+#define MUS_HG_ME_HYOUKA6             883 // Pokédex Evaluation... Complete!
+#define MUS_HG_ME_TAMAGO_GET          884 // Received a Pokémon Egg!
+#define MUS_HG_ME_MUSHITORI1          885 // Bug-Catching Contest: Winner
+#define MUS_HG_ME_MUSHITORI2          886 // Bug-Catching Contest: Second Place
+#define MUS_HG_ME_MUSHITORI3          887 // Bug-Catching Contest: Third Place
+#define MUS_HG_ME_CARDGAME1           888 // Voltorb Flip: Is this what you're expecting?!
+#define MUS_HG_ME_CARDGAME2           889 // Voltorb Flip: Game Over
+#define MUS_HG_ME_POKEGEAR_REGIST     890 // Registered in the Pokégear!
+#define MUS_HG_ME_GONIN               891 // Let's Go Together
+#define MUS_HG_ME_PT_NEW              892 // Pokéathlon: Getting Changed
+#define MUS_HG_ME_PT_RESULTG          893 // Pokéathlon: In First Place!
+#define MUS_HG_ME_PT_SPECIAL          894 // Received a Pokémon!
+#define MUS_HG_ME_ROULETTE            895 // Received Battle Points in the Battle Arcade!
+#define MUS_HG_ME_CASTLE              896 // Received Castle Points!
+#define MUS_HG_ME_BPGET               897 // Received Battle Points!
+#define MUS_HG_ME_MINIGAME            898 // Cleared Wobbuffet Pop!
 
 // Black & White Music
 #define MUS_BW_GF_LOGO                899 // Game Freak
