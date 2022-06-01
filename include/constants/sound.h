@@ -99,16 +99,18 @@
 #define FANFARE_BW_MISSION_CLEAR         95
 #define FANFARE_BW_MISSION_FAILED        96
 #define FANFARE_BW_OBTAIN_BERRY          97
-#define FANFARE_B2_POKESTAR_STUDIOS      98
-#define FANFARE_B2_JOIN_AVENUE_1         99
-#define FANFARE_B2_JOIN_AVENUE_2         100
-#define FANFARE_B2_EARN_MEDAL            101
-#define FANFARE_B2_MEDAL_BOX             102
-#define FANFARE_B2_START_MINIGAME        103
-#define FANFARE_B2_WON_MINIGAME          104
-#define FANFARE_B2_TYMPOLE_CHOIR         105
-#define FANFARE_B2_HABITAT_LIST_COMPLETE 106
-#define FANFARE_B2_MEDAL_RALLY_COMPLETE  107
+#define FANFARE_BW_QUIZ                  98
+#define FANFARE_BW_DEL_POWER             99
+#define FANFARE_B2_POKESTAR_STUDIOS      100
+#define FANFARE_B2_JOIN_AVENUE_1         101
+#define FANFARE_B2_JOIN_AVENUE_2         102
+#define FANFARE_B2_EARN_MEDAL            103
+#define FANFARE_B2_MEDAL_BOX             104
+#define FANFARE_B2_START_MINIGAME        105
+#define FANFARE_B2_WON_MINIGAME          106
+#define FANFARE_B2_TYMPOLE_CHOIR         107
+#define FANFARE_B2_HABITAT_LIST_COMPLETE 108
+#define FANFARE_B2_MEDAL_RALLY_COMPLETE  109
 
 #define CRY_MODE_NORMAL        0 // Default
 #define CRY_MODE_DOUBLES       1 // Shortened cry for double battles

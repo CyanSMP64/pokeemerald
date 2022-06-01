@@ -1595,197 +1595,199 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(MUS_HG_ME_CASTLE             , "MUS-HG-ME-CASTLE") \
     X(MUS_HG_ME_BPGET              , "MUS-HG-ME-BPGET") \
     X(MUS_HG_ME_MINIGAME           , "MUS-HG-ME-MINIGAME") \
-    X(MUS_BW_GF_LOGO               , "MUS-BW-GF-LOGO") \
     X(MUS_BW_TITLE                 , "MUS-BW-TITLE") \
     X(MUS_BW_TITLE01               , "MUS-BW-TITLE01") \
     X(MUS_BW_POKEMON_THEME         , "MUS-BW-POKEMON-THEME") \
     X(MUS_BW_STARTING              , "MUS-BW-STARTING") \
     X(MUS_BW_STARTING2             , "MUS-BW-STARTING2") \
-    X(MUS_BW_E_OPENING             , "MUS-BW-E-OPENING") \
+    X(MUS_BW_SHINKA                , "MUS-BW-SHINKA") \
+    X(MUS_BW_KOUKAN                , "MUS-BW-KOUKAN") \
+    X(MUS_BW_BICYCLE               , "MUS-BW-BICYCLE") \
+    X(MUS_BW_NAMINORI              , "MUS-BW-NAMINORI") \
+    X(MUS_BW_DIVING                , "MUS-BW-DIVING") \
+    X(MUS_BW_E_DENDOUIRI           , "MUS-BW-E-DENDOUIRI") \
+    X(MUS_BW_ENDING                , "MUS-BW-ENDING") \
     X(MUS_BW_T_01                  , "MUS-BW-T-01") \
-    X(MUS_BW_VS_RIVAL              , "MUS-BW-VS-RIVAL") \
-    X(MUS_BW_E_TSURETEKE1          , "MUS-BW-E-TSURETEKE1") \
-    X(MUS_BW_E_DOCTOR              , "MUS-BW-E-DOCTOR") \
-    X(MUS_BW_LABO                  , "MUS-BW-LABO") \
-    X(MUS_BW_ME_KEYITEM            , "MUS-BW-ME-KEYITEM") \
-    X(MUS_BW_E_FRIEND              , "MUS-BW-E-FRIEND") \
-    X(MUS_BW_R_A                   , "MUS-BW-R-A") \
-    X(MUS_BW_VS_NORAPOKE           , "MUS-BW-VS-NORAPOKE") \
-    X(MUS_BW_WIN1                  , "MUS-BW-WIN1") \
-    X(MUS_BW_ME_LVUP               , "MUS-BW-ME-LVUP") \
     X(MUS_BW_T_02                  , "MUS-BW-T-02") \
-    X(MUS_BW_E_TSURETEKE2          , "MUS-BW-E-TSURETEKE2") \
-    X(MUS_BW_POKECEN               , "MUS-BW-POKECEN") \
-    X(MUS_BW_ME_ASA                , "MUS-BW-ME-ASA") \
-    X(MUS_BW_ME_HYOUKA1            , "MUS-BW-ME-HYOUKA1") \
-    X(MUS_BW_E_SAGE                , "MUS-BW-E-SAGE") \
+    X(MUS_BW_T_03                  , "MUS-BW-T-03") \
+    X(MUS_BW_T_04                  , "MUS-BW-T-04") \
+    X(MUS_BW_T_05_SP               , "MUS-BW-T-05-SP") \
+    X(MUS_BW_T_05_SU               , "MUS-BW-T-05-SU") \
+    X(MUS_BW_C_01                  , "MUS-BW-C-01") \
+    X(MUS_BW_C_02                  , "MUS-BW-C-02") \
+    X(MUS_BW_C_03                  , "MUS-BW-C-03") \
+    X(MUS_BW_C_04                  , "MUS-BW-C-04") \
+    X(MUS_BW_C_05                  , "MUS-BW-C-05") \
+    X(MUS_BW_C_06                  , "MUS-BW-C-06") \
+    X(MUS_BW_C_07                  , "MUS-BW-C-07") \
+    X(MUS_BW_C_08_B                , "MUS-BW-C-08-B") \
+    X(MUS_BW_C_08_W                , "MUS-BW-C-08-W") \
+    X(MUS_BW_C_10_B                , "MUS-BW-C-10-B") \
+    X(MUS_BW_C_10_W                , "MUS-BW-C-10-W") \
+    X(MUS_BW_R_A                   , "MUS-BW-R-A") \
     X(MUS_BW_R_B_SP                , "MUS-BW-R-B-SP") \
     X(MUS_BW_R_B_SU                , "MUS-BW-R-B-SU") \
     X(MUS_BW_R_B_AU                , "MUS-BW-R-B-AU") \
     X(MUS_BW_R_B_WI                , "MUS-BW-R-B-WI") \
-    X(MUS_BW_ME_CALL               , "MUS-BW-ME-CALL") \
-    X(MUS_BW_EYE_01                , "MUS-BW-EYE-01") \
-    X(MUS_BW_VS_TRAINER            , "MUS-BW-VS-TRAINER") \
-    X(MUS_BW_WIN2                  , "MUS-BW-WIN2") \
-    X(MUS_BW_EYE_02                , "MUS-BW-EYE-02") \
-    X(MUS_BW_ME_ITEM               , "MUS-BW-ME-ITEM") \
-    X(MUS_BW_C_01                  , "MUS-BW-C-01") \
-    X(MUS_BW_ME_HYOUKA2            , "MUS-BW-ME-HYOUKA2") \
-    X(MUS_BW_D_01                  , "MUS-BW-D-01") \
-    X(MUS_BW_D_01_B1F              , "MUS-BW-D-01-B1F") \
-    X(MUS_BW_E_PLASMA              , "MUS-BW-E-PLASMA") \
-    X(MUS_BW_VS_PLASMA             , "MUS-BW-VS-PLASMA") \
-    X(MUS_BW_WIN6                  , "MUS-BW-WIN6") \
-    X(MUS_BW_SHINKA                , "MUS-BW-SHINKA") \
-    X(MUS_BW_KOUKAN                , "MUS-BW-KOUKAN") \
-    X(MUS_BW_ME_SHINKAOME          , "MUS-BW-ME-SHINKAOME") \
-    X(MUS_BW_EYE_03                , "MUS-BW-EYE-03") \
-    X(MUS_BW_E_RIVAL               , "MUS-BW-E-RIVAL") \
-    X(MUS_BW_E_TROUBLE             , "MUS-BW-E-TROUBLE") \
-    X(MUS_BW_C_02                  , "MUS-BW-C-02") \
-    X(MUS_BW_ME_HYOUKA3            , "MUS-BW-ME-HYOUKA3") \
-    X(MUS_BW_GYM                   , "MUS-BW-GYM") \
-    X(MUS_BW_VS_GYMLEADER          , "MUS-BW-VS-GYMLEADER") \
-    X(MUS_BW_BATTLESUPERIOR        , "MUS-BW-BATTLESUPERIOR") \
-    X(MUS_BW_WIN3                  , "MUS-BW-WIN3") \
-    X(MUS_BW_ME_BADGE              , "MUS-BW-ME-BADGE") \
-    X(MUS_BW_ME_WAZA               , "MUS-BW-ME-WAZA") \
-    X(MUS_BW_GATE                  , "MUS-BW-GATE") \
-    X(MUS_BW_H_01                  , "MUS-BW-H-01") \
-    X(MUS_BW_C_03                  , "MUS-BW-C-03") \
-    X(MUS_BW_EYE_12                , "MUS-BW-EYE-12") \
     X(MUS_BW_R_C_SP                , "MUS-BW-R-C-SP") \
     X(MUS_BW_R_C_SU                , "MUS-BW-R-C-SU") \
     X(MUS_BW_R_C_AU                , "MUS-BW-R-C-AU") \
     X(MUS_BW_R_C_WI                , "MUS-BW-R-C-WI") \
-    X(MUS_BW_EYE_11                , "MUS-BW-EYE-11") \
-    X(MUS_BW_C_04                  , "MUS-BW-C-04") \
-    X(MUS_BW_E_SUPPORT             , "MUS-BW-E-SUPPORT") \
-    X(MUS_BW_E_EMOTION             , "MUS-BW-E-EMOTION") \
-    X(MUS_BW_E_N                   , "MUS-BW-E-N") \
-    X(MUS_BW_VS_N                  , "MUS-BW-VS-N") \
-    X(MUS_BW_BATTLEPINCH           , "MUS-BW-BATTLEPINCH") \
-    X(MUS_BW_BICYCLE               , "MUS-BW-BICYCLE") \
-    X(MUS_BW_E_CHAMPION            , "MUS-BW-E-CHAMPION") \
-    X(MUS_BW_H_02                  , "MUS-BW-H-02") \
-    X(MUS_BW_C_05                  , "MUS-BW-C-05") \
-    X(MUS_BW_D_03                  , "MUS-BW-D-03") \
     X(MUS_BW_R_D_SP                , "MUS-BW-R-D-SP") \
     X(MUS_BW_R_D_SU                , "MUS-BW-R-D-SU") \
     X(MUS_BW_R_D_AU                , "MUS-BW-R-D-AU") \
     X(MUS_BW_R_D_WI                , "MUS-BW-R-D-WI") \
-    X(MUS_BW_EYE_06                , "MUS-BW-EYE-06") \
-    X(MUS_BW_EYE_09                , "MUS-BW-EYE-09") \
+    X(MUS_BW_R_E_SP                , "MUS-BW-R-E-SP") \
+    X(MUS_BW_R_E_SU                , "MUS-BW-R-E-SU") \
+    X(MUS_BW_R_E_AU                , "MUS-BW-R-E-AU") \
+    X(MUS_BW_R_E_WI                , "MUS-BW-R-E-WI") \
+    X(MUS_BW_R_F                   , "MUS-BW-R-F") \
+    X(MUS_BW_H_01                  , "MUS-BW-H-01") \
+    X(MUS_BW_H_02                  , "MUS-BW-H-02") \
+    X(MUS_BW_H_03                  , "MUS-BW-H-03") \
+    X(MUS_BW_H_04                  , "MUS-BW-H-04") \
+    X(MUS_BW_H_05                  , "MUS-BW-H-05") \
+    X(MUS_BW_POKECEN               , "MUS-BW-POKECEN") \
+    X(MUS_BW_FS                    , "MUS-BW-FS") \
+    X(MUS_BW_GYM                   , "MUS-BW-GYM") \
+    X(MUS_BW_LABO                  , "MUS-BW-LABO") \
+    X(MUS_BW_GATE                  , "MUS-BW-GATE") \
+    X(MUS_BW_GEAR_STATION          , "MUS-BW-GEAR-STATION") \
+    X(MUS_BW_BATTLE_SUBWAY         , "MUS-BW-BATTLE-SUBWAY") \
+    X(MUS_BW_PALPARK               , "MUS-BW-PALPARK") \
+    X(MUS_BW_PLEASURE_BOAT         , "MUS-BW-PLEASURE-BOAT") \
+    X(MUS_BW_PALACE                , "MUS-BW-PALACE") \
+    X(MUS_BW_PALACE2               , "MUS-BW-PALACE2") \
+    X(MUS_BW_UNITED_NATIONS        , "MUS-BW-UNITED-NATIONS") \
+    X(MUS_BW_POKEMON_LEAGUE        , "MUS-BW-POKEMON-LEAGUE") \
+    X(MUS_BW_N_CASTLE_BRIDGE       , "MUS-BW-N-CASTLE-BRIDGE") \
+    X(MUS_BW_N_CASTLE              , "MUS-BW-N-CASTLE") \
+    X(MUS_BW_D_01                  , "MUS-BW-D-01") \
+    X(MUS_BW_D_01_B1F              , "MUS-BW-D-01-B1F") \
     X(MUS_BW_D_02                  , "MUS-BW-D-02") \
     X(MUS_BW_D_02_B1F              , "MUS-BW-D-02-B1F") \
     X(MUS_BW_D_02_B2F              , "MUS-BW-D-02-B2F") \
-    X(MUS_BW_C_06                  , "MUS-BW-C-06") \
-    X(MUS_BW_E_DOCTOR2             , "MUS-BW-E-DOCTOR2") \
-    X(MUS_BW_ME_HYOUKA4            , "MUS-BW-ME-HYOUKA4") \
-    X(MUS_BW_ME_WASURE             , "MUS-BW-ME-WASURE") \
-    X(MUS_BW_EYE_08                , "MUS-BW-EYE-08") \
-    X(MUS_BW_C_07                  , "MUS-BW-C-07") \
-    X(MUS_BW_D_05                  , "MUS-BW-D-05") \
-    X(MUS_BW_EYE_PLASMA            , "MUS-BW-EYE-PLASMA") \
-    X(MUS_BW_D_07                  , "MUS-BW-D-07") \
+    X(MUS_BW_D_03                  , "MUS-BW-D-03") \
     X(MUS_BW_D_04                  , "MUS-BW-D-04") \
-    X(MUS_BW_ME_ITEM_MYSTERY       , "MUS-BW-ME-ITEM-MYSTERY") \
-    X(MUS_BW_H_03                  , "MUS-BW-H-03") \
-    X(MUS_BW_FS                    , "MUS-BW-FS") \
-    X(MUS_BW_EYE_05                , "MUS-BW-EYE-05") \
-    X(MUS_BW_C_08_B                , "MUS-BW-C-08-B") \
-    X(MUS_BW_C_08_W                , "MUS-BW-C-08-W") \
-    X(MUS_BW_R_F                   , "MUS-BW-R-F") \
+    X(MUS_BW_D_05                  , "MUS-BW-D-05") \
+    X(MUS_BW_D_06                  , "MUS-BW-D-06") \
+    X(MUS_BW_D_07                  , "MUS-BW-D-07") \
     X(MUS_BW_D_CHAMPROAD           , "MUS-BW-D-CHAMPROAD") \
-    X(MUS_BW_EYE_04                , "MUS-BW-EYE-04") \
-    X(MUS_BW_POKEMON_LEAGUE        , "MUS-BW-POKEMON-LEAGUE") \
-    X(MUS_BW_VS_SHITENNO           , "MUS-BW-VS-SHITENNO") \
-    X(MUS_BW_E_N_CASTLE            , "MUS-BW-E-N-CASTLE") \
-    X(MUS_BW_N_CASTLE_BRIDGE       , "MUS-BW-N-CASTLE-BRIDGE") \
-    X(MUS_BW_N_CASTLE              , "MUS-BW-N-CASTLE") \
-    X(MUS_BW_N_ROOM                , "MUS-BW-N-ROOM") \
-    X(MUS_BW_E_LEGEND_COME         , "MUS-BW-E-LEGEND-COME") \
-    X(MUS_BW_E_LEGEND_BORN         , "MUS-BW-E-LEGEND-BORN") \
-    X(MUS_BW_VS_SHIN               , "MUS-BW-VS-SHIN") \
-    X(MUS_BW_VS_N_2                , "MUS-BW-VS-N-2") \
+    X(MUS_BW_E_TSURETEKE1          , "MUS-BW-E-TSURETEKE1") \
+    X(MUS_BW_E_TSURETEKE2          , "MUS-BW-E-TSURETEKE2") \
+    X(MUS_BW_E_RIVAL               , "MUS-BW-E-RIVAL") \
+    X(MUS_BW_E_SUPPORT             , "MUS-BW-E-SUPPORT") \
+    X(MUS_BW_E_DOCTOR              , "MUS-BW-E-DOCTOR") \
+    X(MUS_BW_E_DOCTOR2             , "MUS-BW-E-DOCTOR2") \
+    X(MUS_BW_E_PLASMA              , "MUS-BW-E-PLASMA") \
+    X(MUS_BW_E_N                   , "MUS-BW-E-N") \
+    X(MUS_BW_E_SAGE                , "MUS-BW-E-SAGE") \
     X(MUS_BW_E_G_CIS               , "MUS-BW-E-G-CIS") \
-    X(MUS_BW_VS_G_CIS              , "MUS-BW-VS-G-CIS") \
-    X(MUS_BW_WIN4                  , "MUS-BW-WIN4") \
+    X(MUS_BW_E_INISHIE             , "MUS-BW-E-INISHIE") \
+    X(MUS_BW_E_EMOTION             , "MUS-BW-E-EMOTION") \
+    X(MUS_BW_E_TROUBLE             , "MUS-BW-E-TROUBLE") \
     X(MUS_BW_E_LAST                , "MUS-BW-E-LAST") \
-    X(MUS_BW_ENDING                , "MUS-BW-ENDING") \
     X(MUS_BW_E_HANDSOME            , "MUS-BW-E-HANDSOME") \
-    X(MUS_BW_ME_TAMAGO_GET         , "MUS-BW-ME-TAMAGO-GET") \
-    X(MUS_BW_PLEASURE_BOAT         , "MUS-BW-PLEASURE-BOAT") \
-    X(MUS_BW_WIFI_ACCESS           , "MUS-BW-WIFI-ACCESS") \
-    X(MUS_BW_GLTERMINAL            , "MUS-BW-GLTERMINAL") \
-    X(MUS_BW_GTS                   , "MUS-BW-GTS") \
-    X(MUS_BW_GURUGURU              , "MUS-BW-GURUGURU") \
-    X(MUS_BW_UNITED_NATIONS        , "MUS-BW-UNITED-NATIONS") \
-    X(MUS_BW_ME_HYOUKA5            , "MUS-BW-ME-HYOUKA5") \
-    X(MUS_BW_GEAR_STATION          , "MUS-BW-GEAR-STATION") \
-    X(MUS_BW_BATTLE_SUBWAY         , "MUS-BW-BATTLE-SUBWAY") \
-    X(MUS_BW_VS_SUBWAY_TRAINER     , "MUS-BW-VS-SUBWAY-TRAINER") \
-    X(MUS_BW_ME_BPGET              , "MUS-BW-ME-BPGET") \
+    X(MUS_BW_E_CHAMPION            , "MUS-BW-E-CHAMPION") \
+    X(MUS_BW_E_OPENING             , "MUS-BW-E-OPENING") \
+    X(MUS_BW_E_KANRANSYA           , "MUS-BW-E-KANRANSYA") \
+    X(MUS_BW_E_N_CASTLE            , "MUS-BW-E-N-CASTLE") \
+    X(MUS_BW_E_LEGEND_BORN         , "MUS-BW-E-LEGEND-BORN") \
     X(MUS_BW_MSL_FIELD             , "MUS-BW-MSL-FIELD") \
-    X(MUS_BW_ME_ACCE               , "MUS-BW-ME-ACCE") \
     X(MUS_BW_MSL_DRESSUP           , "MUS-BW-MSL-DRESSUP") \
     X(MUS_BW_MSL_BEFORE            , "MUS-BW-MSL-BEFORE") \
     X(MUS_BW_MSL_01                , "MUS-BW-MSL-01") \
     X(MUS_BW_MSL_02                , "MUS-BW-MSL-02") \
     X(MUS_BW_MSL_03                , "MUS-BW-MSL-03") \
     X(MUS_BW_MSL_04                , "MUS-BW-MSL-04") \
+    X(MUS_BW_EYE_01                , "MUS-BW-EYE-01") \
+    X(MUS_BW_EYE_02                , "MUS-BW-EYE-02") \
+    X(MUS_BW_EYE_03                , "MUS-BW-EYE-03") \
+    X(MUS_BW_EYE_04                , "MUS-BW-EYE-04") \
+    X(MUS_BW_EYE_05                , "MUS-BW-EYE-05") \
+    X(MUS_BW_EYE_06                , "MUS-BW-EYE-06") \
+    X(MUS_BW_EYE_07                , "MUS-BW-EYE-07") \
+    X(MUS_BW_EYE_08                , "MUS-BW-EYE-08") \
+    X(MUS_BW_EYE_09                , "MUS-BW-EYE-09") \
+    X(MUS_BW_EYE_10                , "MUS-BW-EYE-10") \
+    X(MUS_BW_EYE_11                , "MUS-BW-EYE-11") \
+    X(MUS_BW_EYE_12                , "MUS-BW-EYE-12") \
+    X(MUS_BW_EYE_13                , "MUS-BW-EYE-13") \
+    X(MUS_BW_EYE_PLASMA            , "MUS-BW-EYE-PLASMA") \
+    X(MUS_BW_VS_NORAPOKE           , "MUS-BW-VS-NORAPOKE") \
+    X(MUS_BW_VS_TSUYOPOKE          , "MUS-BW-VS-TSUYOPOKE") \
+    X(MUS_BW_VS_TRAINER            , "MUS-BW-VS-TRAINER") \
+    X(MUS_BW_VS_SUBWAY_TRAINER     , "MUS-BW-VS-SUBWAY-TRAINER") \
+    X(MUS_BW_VS_GYMLEADER          , "MUS-BW-VS-GYMLEADER") \
+    X(MUS_BW_VS_RIVAL              , "MUS-BW-VS-RIVAL") \
+    X(MUS_BW_VS_PLASMA             , "MUS-BW-VS-PLASMA") \
+    X(MUS_BW_VS_SHITENNO           , "MUS-BW-VS-SHITENNO") \
+    X(MUS_BW_VS_CHAMP              , "MUS-BW-VS-CHAMP") \
+    X(MUS_BW_VS_N                  , "MUS-BW-VS-N") \
+    X(MUS_BW_VS_N_2                , "MUS-BW-VS-N-2") \
+    X(MUS_BW_VS_G_CIS              , "MUS-BW-VS-G-CIS") \
+    X(MUS_BW_VS_SHIN               , "MUS-BW-VS-SHIN") \
+    X(MUS_BW_VS_RAI                , "MUS-BW-VS-RAI") \
+    X(MUS_BW_VS_MOVEPOKE           , "MUS-BW-VS-MOVEPOKE") \
+    X(MUS_BW_VS_SHIRONA            , "MUS-BW-VS-SHIRONA") \
+    X(MUS_BW_BATTLEPINCH           , "MUS-BW-BATTLEPINCH") \
+    X(MUS_BW_BATTLESUPERIOR        , "MUS-BW-BATTLESUPERIOR") \
+    X(MUS_BW_WIN1                  , "MUS-BW-WIN1") \
+    X(MUS_BW_WIN2                  , "MUS-BW-WIN2") \
+    X(MUS_BW_WIN3                  , "MUS-BW-WIN3") \
+    X(MUS_BW_WIN4                  , "MUS-BW-WIN4") \
+    X(MUS_BW_WIN5                  , "MUS-BW-WIN5") \
+    X(MUS_BW_WIFI_ACCESS           , "MUS-BW-WIFI-ACCESS") \
+    X(MUS_BW_WIFI_PRESENT          , "MUS-BW-WIFI-PRESENT") \
+    X(MUS_BW_GAME_SYNC             , "MUS-BW-GAME-SYNC") \
+    X(MUS_BW_GLTERMINAL            , "MUS-BW-GLTERMINAL") \
+    X(MUS_BW_GURUGURU              , "MUS-BW-GURUGURU") \
+    X(MUS_BW_GTS                   , "MUS-BW-GTS") \
+    X(MUS_BW_WCS                   , "MUS-BW-WCS") \
+    X(MUS_BW_E_SHIRONA             , "MUS-BW-E-SHIRONA") \
+    X(MUS_BW_E_FRIEND              , "MUS-BW-E-FRIEND") \
+    X(MUS_BW_E_SOUND_DESIGNER      , "MUS-BW-E-SOUND-DESIGNER") \
+    X(MUS_BW_VS_WCS                , "MUS-BW-VS-WCS") \
+    X(MUS_BW_E_LEGEND_COME         , "MUS-BW-E-LEGEND-COME") \
+    X(MUS_BW_WIN6                  , "MUS-BW-WIN6") \
+    X(MUS_BW_N_ROOM                , "MUS-BW-N-ROOM") \
+    X(MUS_BW_GF_LOGO               , "MUS-BW-GF-LOGO") \
     X(MUS_BW_MSL_DL_MUNNA          , "MUS-BW-MSL-DL-MUNNA") \
     X(MUS_BW_MSL_DL_SMASH          , "MUS-BW-MSL-DL-SMASH") \
     X(MUS_BW_MSL_DL_FESTA          , "MUS-BW-MSL-DL-FESTA") \
     X(MUS_BW_MSL_DL_RELIC          , "MUS-BW-MSL-DL-RELIC") \
     X(MUS_BW_MSL_DL_RUNPA          , "MUS-BW-MSL-DL-RUNPA") \
-    X(MUS_BW_E_KANRANSYA           , "MUS-BW-E-KANRANSYA") \
-    X(MUS_BW_ME_AISHOU_KIDOU       , "MUS-BW-ME-AISHOU-KIDOU") \
+    X(MUS_BW_ME_ASA                , "MUS-BW-ME-ASA") \
+    X(MUS_BW_ME_LVUP               , "MUS-BW-ME-LVUP") \
+    X(MUS_BW_ME_ITEM               , "MUS-BW-ME-ITEM") \
+    X(MUS_BW_ME_KEYITEM            , "MUS-BW-ME-KEYITEM") \
+    X(MUS_BW_ME_SHINKAOME          , "MUS-BW-ME-SHINKAOME") \
+    X(MUS_BW_ME_BADGE              , "MUS-BW-ME-BADGE") \
+    X(MUS_BW_ME_WAZA               , "MUS-BW-ME-WAZA") \
+    X(MUS_BW_ME_ACCE               , "MUS-BW-ME-ACCE") \
+    X(MUS_BW_ME_WASURE             , "MUS-BW-ME-WASURE") \
+    X(MUS_BW_ME_KINOMI             , "MUS-BW-ME-KINOMI") \
+    X(MUS_BW_ME_HYOUKA1            , "MUS-BW-ME-HYOUKA1") \
+    X(MUS_BW_ME_HYOUKA2            , "MUS-BW-ME-HYOUKA2") \
+    X(MUS_BW_ME_HYOUKA3            , "MUS-BW-ME-HYOUKA3") \
+    X(MUS_BW_ME_HYOUKA4            , "MUS-BW-ME-HYOUKA4") \
+    X(MUS_BW_ME_HYOUKA5            , "MUS-BW-ME-HYOUKA5") \
+    X(MUS_BW_ME_HYOUKA6            , "MUS-BW-ME-HYOUKA6") \
+    X(MUS_BW_ME_TAMAGO_GET         , "MUS-BW-ME-TAMAGO-GET") \
+    X(MUS_BW_ME_BPGET              , "MUS-BW-ME-BPGET") \
     X(MUS_BW_ME_AISHOU_H           , "MUS-BW-ME-AISHOU-H") \
     X(MUS_BW_ME_AISHOU_M           , "MUS-BW-ME-AISHOU-M") \
     X(MUS_BW_ME_AISHOU_L           , "MUS-BW-ME-AISHOU-L") \
-    X(MUS_BW_VS_MOVEPOKE           , "MUS-BW-VS-MOVEPOKE") \
-    X(MUS_BW_T_03                  , "MUS-BW-T-03") \
-    X(MUS_BW_H_05                  , "MUS-BW-H-05") \
-    X(MUS_BW_R_E_SP                , "MUS-BW-R-E-SP") \
-    X(MUS_BW_R_E_SU                , "MUS-BW-R-E-SU") \
-    X(MUS_BW_R_E_AU                , "MUS-BW-R-E-AU") \
-    X(MUS_BW_R_E_WI                , "MUS-BW-R-E-WI") \
-    X(MUS_BW_EYE_07                , "MUS-BW-EYE-07") \
-    X(MUS_BW_PALPARK               , "MUS-BW-PALPARK") \
-    X(MUS_BW_PALPARK_BOX           , "MUS-BW-PALPARK-BOX") \
-    X(MUS_BW_PALPARK_GAME          , "MUS-BW-PALPARK-GAME") \
-    X(MUS_BW_EYE_10                , "MUS-BW-EYE-10") \
-    X(MUS_BW_C_10_B                , "MUS-BW-C-10-B") \
-    X(MUS_BW_C_10_W                , "MUS-BW-C-10-W") \
-    X(MUS_BW_GAME_SYNC             , "MUS-BW-GAME-SYNC") \
-    X(MUS_BW_PALACE                , "MUS-BW-PALACE") \
+    X(MUS_BW_ME_AISHOU_KIDOU       , "MUS-BW-ME-AISHOU-KIDOU") \
     X(MUS_BW_ME_MISSION_START      , "MUS-BW-ME-MISSION-START") \
-    X(MUS_BW_PALACE2               , "MUS-BW-PALACE2") \
     X(MUS_BW_ME_MISSION_CLEAR      , "MUS-BW-ME-MISSION-CLEAR") \
     X(MUS_BW_ME_MISSION_FAILED     , "MUS-BW-ME-MISSION-FAILED") \
-    X(MUS_BW_EYE_13                , "MUS-BW-EYE-13") \
-    X(MUS_BW_T_05_SP               , "MUS-BW-T-05-SP") \
-    X(MUS_BW_T_05_SU               , "MUS-BW-T-05-SU") \
-    X(MUS_BW_E_SHIRONA             , "MUS-BW-E-SHIRONA") \
-    X(MUS_BW_VS_SHIRONA            , "MUS-BW-VS-SHIRONA") \
-    X(MUS_BW_D_06                  , "MUS-BW-D-06") \
-    X(MUS_BW_VS_TSUYOPOKE          , "MUS-BW-VS-TSUYOPOKE") \
-    X(MUS_BW_NAMINORI              , "MUS-BW-NAMINORI") \
-    X(MUS_BW_DIVING                , "MUS-BW-DIVING") \
-    X(MUS_BW_T_04                  , "MUS-BW-T-04") \
-    X(MUS_BW_H_04                  , "MUS-BW-H-04") \
-    X(MUS_BW_WIFI_PRESENT          , "MUS-BW-WIFI-PRESENT") \
-    X(MUS_BW_WCS                   , "MUS-BW-WCS") \
-    X(MUS_BW_E_SOUND_DESIGNER      , "MUS-BW-E-SOUND-DESIGNER") \
-    X(MUS_BW_VS_RAI                , "MUS-BW-VS-RAI") \
-    X(MUS_BW_ME_HYOUKA6            , "MUS-BW-ME-HYOUKA6") \
-    X(MUS_BW_VS_CHAMP              , "MUS-BW-VS-CHAMP") \
-    X(MUS_BW_WIN5                  , "MUS-BW-WIN5") \
-    X(MUS_BW_E_DENDOUIRI           , "MUS-BW-E-DENDOUIRI") \
-    X(MUS_BW_E_INISHIE             , "MUS-BW-E-INISHIE") \
-    X(MUS_BW_VS_WCS                , "MUS-BW-VS-WCS") \
-    X(MUS_BW_ME_KINOMI             , "MUS-BW-ME-KINOMI") \
+    X(MUS_BW_ME_ITEM_MYSTERY       , "MUS-BW-ME-ITEM-MYSTERY") \
+    X(MUS_BW_ME_CALL               , "MUS-BW-ME-CALL") \
+    X(MUS_BW_ME_QUIZ               , "MUS-BW-ME-QUIZ") \
+    X(MUS_BW_ME_DEL_POWER          , "MUS-BW-ME-DEL-POWER") \
+    X(MUS_BW_PALPARK_BOX           , "MUS-BW-PALPARK-BOX") \
+    X(MUS_BW_PALPARK_GAME          , "MUS-BW-PALPARK-GAME") \
     X(MUS_B2_TITLE01               , "MUS-B2-TITLE01") \
     X(MUS_B2_DEMO_OPENING          , "MUS-B2-DEMO-OPENING") \
     X(MUS_B2_C_12                  , "MUS-B2-C-12") \

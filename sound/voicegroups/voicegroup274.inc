@@ -37,7 +37,7 @@ voicegroup274:: @ BW Kageyama
 	voice_keysplit voicegroup301, KeySplitTable79    @ clarinet (pokecenter)
 	voice_keysplit voicegroup299, KeySplitTable78    @ harp 2
 	voice_keysplit voicegroup302, KeySplitTable80    @ harp 1
-	voice_directsound 60, 0, DirectSoundWaveData_bw_orchhita3_lowhp, 254, 250, 2, 205
+	voice_directsound 60, 0, DirectSoundWaveData_bw_orchhita3_lowhp, 255, 250, 2, 205
 	voice_keysplit voicegroup260, KeySplitTable61    @ timpani
 	voice_keysplit voicegroup261, KeySplitTable39    @ trumpets
 	voice_keysplit voicegroup262, KeySplitTable47    @ trombones

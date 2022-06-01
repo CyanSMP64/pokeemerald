@@ -900,197 +900,199 @@ gSongTable::
 	song mus_hg_me_castle, 2, 2
 	song mus_hg_me_bpget, 2, 2
 	song mus_hg_me_minigame, 2, 2
-	song mus_bw_gf_logo, 0, 0
 	song mus_bw_title, 0, 0
 	song mus_bw_title01, 0, 0
 	song mus_bw_pokemon_theme, 0, 0
 	song mus_bw_starting, 0, 0
 	song mus_bw_starting2, 0, 0
-	song mus_bw_e_opening, 0, 0
+	song mus_bw_shinka, 0, 0
+	song mus_bw_koukan, 0, 0
+	song mus_bw_bicycle, 0, 0
+	song mus_bw_naminori, 0, 0
+	song mus_bw_diving, 0, 0
+	song mus_bw_e_dendouiri, 0, 0
+	song mus_bw_ending, 0, 0
 	song mus_bw_t_01, 0, 0
-	song mus_bw_vs_rival, 0, 0
-	song mus_bw_e_tsureteke1, 0, 0
-	song mus_bw_e_doctor, 0, 0
-	song mus_bw_labo, 0, 0
-	song mus_bw_me_keyitem, 2, 2
-	song mus_bw_e_friend, 0, 0
-	song mus_bw_r_a, 0, 0
-	song mus_bw_vs_norapoke, 0, 0
-	song mus_bw_win1, 0, 0
-	song mus_bw_me_lvup, 2, 2
 	song mus_bw_t_02, 0, 0
-	song mus_bw_e_tsureteke2, 0, 0
-	song mus_bw_pokecen, 0, 0
-	song mus_bw_me_asa, 2, 2
-	song mus_bw_me_hyouka1, 2, 2
-	song mus_bw_e_sage, 0, 0
+	song mus_bw_t_03, 0, 0
+	song mus_bw_t_04, 0, 0
+	song mus_bw_t_05_sp, 0, 0
+	song mus_bw_t_05_su, 0, 0
+	song mus_bw_c_01, 0, 0
+	song mus_bw_c_02, 0, 0
+	song mus_bw_c_03, 0, 0
+	song mus_bw_c_04, 0, 0
+	song mus_bw_c_05, 0, 0
+	song mus_bw_c_06, 0, 0
+	song mus_bw_c_07, 0, 0
+	song mus_bw_c_08_b, 0, 0
+	song mus_bw_c_08_w, 0, 0
+	song mus_bw_c_10_b, 0, 0
+	song mus_bw_c_10_w, 0, 0
+	song mus_bw_r_a, 0, 0
 	song mus_bw_r_b_sp, 0, 0
 	song mus_bw_r_b_su, 0, 0
 	song mus_bw_r_b_au, 0, 0
 	song mus_bw_r_b_wi, 0, 0
-	song mus_bw_me_call, 2, 2
-	song mus_bw_eye_01, 0, 0
-	song mus_bw_vs_trainer, 0, 0
-	song mus_bw_win2, 0, 0
-	song mus_bw_eye_02, 0, 0
-	song mus_bw_me_item, 2, 2
-	song mus_bw_c_01, 0, 0
-	song mus_bw_me_hyouka2, 2, 2
-	song mus_bw_d_01, 0, 0
-	song mus_bw_d_01_b1f, 0, 0
-	song mus_bw_e_plasma, 0, 0
-	song mus_bw_vs_plasma, 0, 0
-	song mus_bw_win6, 0, 0
-	song mus_bw_shinka, 0, 0
-	song mus_bw_koukan, 0, 0
-	song mus_bw_me_shinkaome, 2, 2
-	song mus_bw_eye_03, 0, 0
-	song mus_bw_e_rival, 0, 0
-	song mus_bw_e_trouble, 0, 0
-	song mus_bw_c_02, 0, 0
-	song mus_bw_me_hyouka3, 2, 2
-	song mus_bw_gym, 0, 0
-	song mus_bw_vs_gymleader, 0, 0
-	song mus_bw_battlesuperior, 0, 0
-	song mus_bw_win3, 0, 0
-	song mus_bw_me_badge, 2, 2
-	song mus_bw_me_waza, 2, 2
-	song mus_bw_gate, 0, 0
-	song mus_bw_h_01, 0, 0
-	song mus_bw_c_03, 0, 0
-	song mus_bw_eye_12, 0, 0
 	song mus_bw_r_c_sp, 0, 0
 	song mus_bw_r_c_su, 0, 0
 	song mus_bw_r_c_au, 0, 0
 	song mus_bw_r_c_wi, 0, 0
-	song mus_bw_eye_11, 0, 0
-	song mus_bw_c_04, 0, 0
-	song mus_bw_e_support, 0, 0
-	song mus_bw_e_emotion, 0, 0
-	song mus_bw_e_n, 0, 0
-	song mus_bw_vs_n, 0, 0
-	song mus_bw_battlepinch, 0, 0		@ consider adding a second bgm player if you plan to use this like in gen 5 (MINIMUM 6 TRACKS)
-	song mus_bw_bicycle, 0, 0
-	song mus_bw_e_champion, 0, 0
-	song mus_bw_h_02, 0, 0
-	song mus_bw_c_05, 0, 0
-	song mus_bw_d_03, 0, 0
 	song mus_bw_r_d_sp, 0, 0
 	song mus_bw_r_d_su, 0, 0
 	song mus_bw_r_d_au, 0, 0
 	song mus_bw_r_d_wi, 0, 0
-	song mus_bw_eye_06, 0, 0
-	song mus_bw_eye_09, 0, 0
+	song mus_bw_r_e_sp, 0, 0
+	song mus_bw_r_e_su, 0, 0
+	song mus_bw_r_e_au, 0, 0
+	song mus_bw_r_e_wi, 0, 0
+	song mus_bw_r_f, 0, 0
+	song mus_bw_h_01, 0, 0
+	song mus_bw_h_02, 0, 0
+	song mus_bw_h_03, 0, 0
+	song mus_bw_h_04, 0, 0
+	song mus_bw_h_05, 0, 0
+	song mus_bw_pokecen, 0, 0
+	song mus_bw_fs, 0, 0
+	song mus_bw_gym, 0, 0
+	song mus_bw_labo, 0, 0
+	song mus_bw_gate, 0, 0
+	song mus_bw_gear_station, 0, 0
+	song mus_bw_battle_subway, 0, 0
+	song mus_bw_palpark, 0, 0
+	song mus_bw_pleasure_boat, 0, 0
+	song mus_bw_palace, 0, 0
+	song mus_bw_palace2, 0, 0
+	song mus_bw_united_nations, 0, 0
+	song mus_bw_pokemon_league, 0, 0
+	song mus_bw_n_castle_bridge, 0, 0
+	song mus_bw_n_castle, 0, 0
+	song mus_bw_d_01, 0, 0
+	song mus_bw_d_01_b1f, 0, 0
 	song mus_bw_d_02, 0, 0
 	song mus_bw_d_02_b1f, 0, 0
 	song mus_bw_d_02_b2f, 0, 0
-	song mus_bw_c_06, 0, 0
-	song mus_bw_e_doctor2, 0, 0
-	song mus_bw_me_hyouka4, 2, 2
-	song mus_bw_me_wasure, 2, 2
-	song mus_bw_eye_08, 0, 0
-	song mus_bw_c_07, 0, 0
-	song mus_bw_d_05, 0, 0
-	song mus_bw_eye_plasma, 0, 0
-	song mus_bw_d_07, 0, 0
+	song mus_bw_d_03, 0, 0
 	song mus_bw_d_04, 0, 0
-	song mus_bw_me_item_mystery, 2, 2
-	song mus_bw_h_03, 0, 0
-	song mus_bw_fs, 0, 0
-	song mus_bw_eye_05, 0, 0
-	song mus_bw_c_08_b, 0, 0
-	song mus_bw_c_08_w, 0, 0
-	song mus_bw_r_f, 0, 0
+	song mus_bw_d_05, 0, 0
+	song mus_bw_d_06, 0, 0
+	song mus_bw_d_07, 0, 0
 	song mus_bw_d_champroad, 0, 0
-	song mus_bw_eye_04, 0, 0
-	song mus_bw_pokemon_league, 0, 0
-	song mus_bw_vs_shitenno, 0, 0
-	song mus_bw_e_n_castle, 0, 0
-	song mus_bw_n_castle_bridge, 0, 0
-	song mus_bw_n_castle, 0, 0
-	song mus_bw_n_room, 0, 0
-	song mus_bw_e_legend_come, 0, 0
-	song mus_bw_e_legend_born, 0, 0
-	song mus_bw_vs_shin, 0, 0
-	song mus_bw_vs_n_2, 0, 0
+	song mus_bw_e_tsureteke1, 0, 0
+	song mus_bw_e_tsureteke2, 0, 0
+	song mus_bw_e_rival, 0, 0
+	song mus_bw_e_support, 0, 0
+	song mus_bw_e_doctor, 0, 0
+	song mus_bw_e_doctor2, 0, 0
+	song mus_bw_e_plasma, 0, 0
+	song mus_bw_e_n, 0, 0
+	song mus_bw_e_sage, 0, 0
 	song mus_bw_e_g_cis, 0, 0
-	song mus_bw_vs_g_cis, 0, 0
-	song mus_bw_win4, 0, 0
+	song mus_bw_e_inishie, 0, 0
+	song mus_bw_e_emotion, 0, 0
+	song mus_bw_e_trouble, 0, 0
 	song mus_bw_e_last, 0, 0
-	song mus_bw_ending, 0, 0
 	song mus_bw_e_handsome, 0, 0
-	song mus_bw_me_tamago_get, 2, 2
-	song mus_bw_pleasure_boat, 0, 0
-	song mus_bw_wifi_access, 0, 0
-	song mus_bw_glterminal, 0, 0
-	song mus_bw_gts, 0, 0
-	song mus_bw_guruguru, 0, 0
-	song mus_bw_united_nations, 0, 0
-	song mus_bw_me_hyouka5, 2, 2
-	song mus_bw_gear_station, 0, 0
-	song mus_bw_battle_subway, 0, 0
-	song mus_bw_vs_subway_trainer, 0, 0
-	song mus_bw_me_bpget, 2, 2
+	song mus_bw_e_champion, 0, 0
+	song mus_bw_e_opening, 0, 0
+	song mus_bw_e_kanransya, 0, 0
+	song mus_bw_e_n_castle, 0, 0
+	song mus_bw_e_legend_born, 0, 0
 	song mus_bw_msl_field, 0, 0
-	song mus_bw_me_acce, 2, 2
 	song mus_bw_msl_dressup, 0, 0
 	song mus_bw_msl_before, 0, 0
 	song mus_bw_msl_01, 0, 0
 	song mus_bw_msl_02, 0, 0
 	song mus_bw_msl_03, 0, 0
 	song mus_bw_msl_04, 0, 0
+	song mus_bw_eye_01, 0, 0
+	song mus_bw_eye_02, 0, 0
+	song mus_bw_eye_03, 0, 0
+	song mus_bw_eye_04, 0, 0
+	song mus_bw_eye_05, 0, 0
+	song mus_bw_eye_06, 0, 0
+	song mus_bw_eye_07, 0, 0
+	song mus_bw_eye_08, 0, 0
+	song mus_bw_eye_09, 0, 0
+	song mus_bw_eye_10, 0, 0
+	song mus_bw_eye_11, 0, 0
+	song mus_bw_eye_12, 0, 0
+	song mus_bw_eye_13, 0, 0
+	song mus_bw_eye_plasma, 0, 0
+	song mus_bw_vs_norapoke, 0, 0
+	song mus_bw_vs_tsuyopoke, 0, 0
+	song mus_bw_vs_trainer, 0, 0
+	song mus_bw_vs_subway_trainer, 0, 0
+	song mus_bw_vs_gymleader, 0, 0
+	song mus_bw_vs_rival, 0, 0
+	song mus_bw_vs_plasma, 0, 0
+	song mus_bw_vs_shitenno, 0, 0
+	song mus_bw_vs_champ, 0, 0
+	song mus_bw_vs_n, 0, 0
+	song mus_bw_vs_n_2, 0, 0
+	song mus_bw_vs_g_cis, 0, 0
+	song mus_bw_vs_shin, 0, 0
+	song mus_bw_vs_rai, 0, 0
+	song mus_bw_vs_movepoke, 0, 0
+	song mus_bw_vs_shirona, 0, 0
+	song mus_bw_battlepinch, 0, 0
+	song mus_bw_battlesuperior, 0, 0
+	song mus_bw_win1, 0, 0
+	song mus_bw_win2, 0, 0
+	song mus_bw_win3, 0, 0
+	song mus_bw_win4, 0, 0
+	song mus_bw_win5, 0, 0
+	song mus_bw_wifi_access, 0, 0
+	song mus_bw_wifi_present, 0, 0
+	song mus_bw_game_sync, 0, 0
+	song mus_bw_glterminal, 0, 0
+	song mus_bw_guruguru, 0, 0
+	song mus_bw_gts, 0, 0
+	song mus_bw_wcs, 0, 0
+	song mus_bw_e_shirona, 0, 0
+	song mus_bw_e_friend, 0, 0
+	song mus_bw_e_sound_designer, 0, 0
+	song mus_bw_vs_wcs, 0, 0
+	song mus_bw_e_legend_come, 0, 0
+	song mus_bw_win6, 0, 0
+	song mus_bw_n_room, 0, 0
+	song mus_bw_gf_logo, 0, 0
 	song mus_bw_msl_dl_munna, 0, 0
 	song mus_bw_msl_dl_smash, 0, 0
 	song mus_bw_msl_dl_festa, 0, 0
 	song mus_bw_msl_dl_relic, 0, 0
 	song mus_bw_msl_dl_runpa, 0, 0
-	song mus_bw_e_kanransya, 0, 0
-	song mus_bw_me_aishou_kidou, 2, 2
+	song mus_bw_me_asa, 2, 2
+	song mus_bw_me_lvup, 2, 2
+	song mus_bw_me_item, 2, 2
+	song mus_bw_me_keyitem, 2, 2
+	song mus_bw_me_shinkaome, 2, 2
+	song mus_bw_me_badge, 2, 2
+	song mus_bw_me_waza, 2, 2
+	song mus_bw_me_acce, 2, 2
+	song mus_bw_me_wasure, 2, 2
+	song mus_bw_me_kinomi, 2, 2
+	song mus_bw_me_hyouka1, 2, 2
+	song mus_bw_me_hyouka2, 2, 2
+	song mus_bw_me_hyouka3, 2, 2
+	song mus_bw_me_hyouka4, 2, 2
+	song mus_bw_me_hyouka5, 2, 2
+	song mus_bw_me_hyouka6, 2, 2
+	song mus_bw_me_tamago_get, 2, 2
+	song mus_bw_me_bpget, 2, 2
 	song mus_bw_me_aishou_h, 2, 2
 	song mus_bw_me_aishou_m, 2, 2
 	song mus_bw_me_aishou_l, 2, 2
-	song mus_bw_vs_movepoke, 0, 0
-	song mus_bw_t_03, 0, 0
-	song mus_bw_h_05, 0, 0
-	song mus_bw_r_e_sp, 0, 0
-	song mus_bw_r_e_su, 0, 0
-	song mus_bw_r_e_au, 0, 0
-	song mus_bw_r_e_wi, 0, 0
-	song mus_bw_eye_07, 0, 0
-	song mus_bw_palpark, 0, 0
-	song mus_bw_palpark_box, 0, 0
-	song mus_bw_palpark_game, 0, 0
-	song mus_bw_eye_10, 0, 0
-	song mus_bw_c_10_b, 0, 0
-	song mus_bw_c_10_w, 0, 0
-	song mus_bw_game_sync, 0, 0
-	song mus_bw_palace, 0, 0
+	song mus_bw_me_aishou_kidou, 2, 2
 	song mus_bw_me_mission_start, 2, 2
-	song mus_bw_palace2, 0, 0
 	song mus_bw_me_mission_clear, 2, 2
 	song mus_bw_me_mission_failed, 2, 2
-	song mus_bw_eye_13, 0, 0
-	song mus_bw_t_05_sp, 0, 0
-	song mus_bw_t_05_su, 0, 0
-	song mus_bw_e_shirona, 0, 0
-	song mus_bw_vs_shirona, 0, 0
-	song mus_bw_d_06, 0, 0
-	song mus_bw_vs_tsuyopoke, 0, 0
-	song mus_bw_naminori, 0, 0
-	song mus_bw_diving, 0, 0
-	song mus_bw_t_04, 0, 0
-	song mus_bw_h_04, 0, 0
-	song mus_bw_wifi_present, 0, 0
-	song mus_bw_wcs, 0, 0
-	song mus_bw_e_sound_designer, 0, 0
-	song mus_bw_vs_rai, 0, 0
-	song mus_bw_me_hyouka6, 2, 2
-	song mus_bw_vs_champ, 0, 0
-	song mus_bw_win5, 0, 0
-	song mus_bw_e_dendouiri, 0, 0
-	song mus_bw_e_inishie, 0, 0
-	song mus_bw_vs_wcs, 0, 0
-	song mus_bw_me_kinomi, 2, 2
+	song mus_bw_me_item_mystery, 2, 2
+	song mus_bw_me_call, 2, 2
+	song mus_bw_me_quiz, 2, 2
+	song mus_bw_me_del_power, 2, 2
+	song mus_bw_palpark_box, 0, 0
+	song mus_bw_palpark_game, 0, 0
 	song mus_b2_title01, 0, 0
 	song mus_b2_demo_opening, 0, 0
 	song mus_b2_c_12, 0, 0
@@ -1222,3 +1224,4 @@ gSongTable::
 	.align 2
 dummy_song_header:
 	.byte 0, 0, 0, 0
+		@ consider adding a second bgm player if you plan to use this like in gen 5 (MINIMUM 6 TRACKS)
