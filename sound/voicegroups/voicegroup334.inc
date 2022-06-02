@@ -56,13 +56,13 @@ voicegroup334:: @ B2W2 Sato
 	voice_keysplit voicegroup327, KeySplitTable72    @ french horns | 52 | 60
 	voice_directsound 60, 0, DirectSoundWaveData_hg_096flt1c6, 255, 246, 78, 192
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy
+	voice_directsound 60, 0, DirectSoundWaveData_b2_bell_ringing, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_unknown1, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_unknown2, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_unknown3, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_unknown4, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_unknown5, 255, 0, 255, 0
+	voice_directsound 60, 0, DirectSoundWaveData_b2_unknown93, 255, 0, 255, 0
 	voice_keysplit voicegroup303, KeySplitTable81    @ choir full
 	voice_keysplit voicegroup344, KeySplitTable121   @ synth vox
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0                          @ dummy

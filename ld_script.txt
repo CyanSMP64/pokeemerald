@@ -1907,6 +1907,12 @@ SECTIONS {
         sound/songs/midi/mus_b2_vs_iris.o(.rodata);
         sound/songs/midi/mus_b2_ending.o(.rodata);
         sound/songs/midi/mus_b2_theend.o(.rodata);
+        sound/songs/midi/mus_b2_d_27_g_ajito.o(.rodata);
+        sound/songs/midi/mus_b2_me_lcg_03.o(.rodata);
+        sound/songs/midi/mus_b2_me_lcg_04.o(.rodata);
+        sound/songs/midi/mus_b2_me_avenue_03.o(.rodata);
+        sound/songs/midi/mus_b2_me_call_long.o(.rodata);
+        sound/songs/midi/mus_b2_me_zukan_02.o(.rodata);
         sound/songs/midi/mus_what.o(.rodata);
         sound/songs/midi/mus_bw_win1meme.o(.rodata);
         sound/songs/midi/mus_zinnia.o(.rodata);

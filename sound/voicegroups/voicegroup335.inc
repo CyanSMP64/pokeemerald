@@ -97,8 +97,8 @@ voicegroup335:: @ B2W2 Misc.
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sawtoothlead60, 255, 197, 255, 171
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_keysplit voicegroup304, KeySplitTable63    @ xtransceiver tone
+	voice_directsound 60, 0, DirectSoundWaveData_bw_xtransceiverbeep, 255, 0, 255, 205
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_b2_tani_tubad2, 255, 234, 210, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_tani_stringsc3attack, 255, 242, 191, 205
@@ -124,3 +124,4 @@ voicegroup335:: @ B2W2 Misc.
 	voice_directsound 60, 0, DirectSoundWaveData_b2_tani_chiff, 255, 242, 191, 205
 	voice_directsound 60, 0, DirectSoundWaveData_b2_tani_falling, 255, 242, 191, 205
 	voice_directsound 60, 0, DirectSoundWaveData_hg_145tptg5, 255, 246, 210, 205
+	voice_directsound 60, 0, DirectSoundWaveData_b2_tani_snareroll, 255, 0, 255, 0

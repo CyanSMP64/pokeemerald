@@ -3284,6 +3284,24 @@ $(MID_SUBDIR)/mus_b2_ending.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_b2_theend.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V115
+
+$(MID_SUBDIR)/mus_b2_d_27_g_ajito.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G334 -V115
+
+$(MID_SUBDIR)/mus_b2_me_lcg_03.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G335 -V070 -p5
+
+$(MID_SUBDIR)/mus_b2_me_lcg_04.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G335 -V090 -p5
+
+$(MID_SUBDIR)/mus_b2_me_avenue_03.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G334 -V120 -p5
+
+$(MID_SUBDIR)/mus_b2_me_call_long.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G335 -V095 -p5
+
+$(MID_SUBDIR)/mus_b2_me_zukan_02.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G334 -V110 -p5
 	
 $(MID_SUBDIR)/mus_what.s: %.s: %.mid
 	$(MID) $< $@ -E -R16 -G356 -V127 -X

@@ -4735,6 +4735,10 @@ DirectSoundWaveData_b2_tani_splash::
 	.incbin "sound/direct_sound_samples/b2_tani_splash.bin"
 
 	.align 2
+DirectSoundWaveData_b2_tani_snareroll::
+	.incbin "sound/direct_sound_samples/b2_tani_snareroll.bin"
+
+	.align 2
 DirectSoundWaveData_b2_drumloop_sewers::
 	.incbin "sound/direct_sound_samples/b2_drumloop_sewers.bin"
 
@@ -5741,6 +5745,34 @@ DirectSoundWaveData_b2_kick_n::
 	.align 2
 DirectSoundWaveData_b2_snare_credits:
 	.incbin "sound/direct_sound_samples/b2_snare_credits.bin"
+
+	.align 2
+DirectSoundWaveData_b2_bell_ringing:
+	.incbin "sound/direct_sound_samples/b2_bell_ringing.bin"
+
+	.align 2
+DirectSoundWaveData_b2_unknown1:
+	.incbin "sound/direct_sound_samples/b2_unknown1.bin"
+
+	.align 2
+DirectSoundWaveData_b2_unknown2:
+	.incbin "sound/direct_sound_samples/b2_unknown2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_unknown3:
+	.incbin "sound/direct_sound_samples/b2_unknown3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_unknown4:
+	.incbin "sound/direct_sound_samples/b2_unknown4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_unknown5:
+	.incbin "sound/direct_sound_samples/b2_unknown5.bin"
+
+	.align 2
+DirectSoundWaveData_b2_unknown93:
+	.incbin "sound/direct_sound_samples/b2_unknown93.bin"
 
 	.align 2
 DirectSoundWaveData_eb_00:

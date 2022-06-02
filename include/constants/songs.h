@@ -1237,13 +1237,19 @@
 #define MUS_B2_VS_IRIS               1211 // Battle! (Champion Iris)
 #define MUS_B2_ENDING                1212 // Staff Credits
 #define MUS_B2_THEEND                1213 // The End
+#define MUS_B2_D_27_G_AJITO          1214 // 
+#define MUS_B2_ME_LCG_03             1215 // 
+#define MUS_B2_ME_LCG_04             1216 // 
+#define MUS_B2_ME_AVENUE_03          1217 // 
+#define MUS_B2_ME_CALL_LONG          1218 // 
+#define MUS_B2_ME_ZUKAN_02           1219 // 
 
 
-#define MUS_WHAT 1212
-#define MUS_BW_WIN1MEME 1213
-#define MUS_ZINNIA 1214
-#define MUS_DIALGA_PMD 1215
-#define MUS_KH2_XEMNAS3 1216
+#define MUS_WHAT 1220
+#define MUS_BW_WIN1MEME 1221
+#define MUS_ZINNIA 1222
+#define MUS_DIALGA_PMD 1223
+#define MUS_KH2_XEMNAS3 1224
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().

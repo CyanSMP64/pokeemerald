@@ -137,6 +137,7 @@ static const struct Fanfare sFanfares[] = {
     [FANFARE_B2_POKESTAR_STUDIOS]      = { MUS_B2_ME_POKEWOOD,        445 },
     [FANFARE_B2_JOIN_AVENUE_1]         = { MUS_B2_ME_AVENUE_01,       205 },
     [FANFARE_B2_JOIN_AVENUE_2]         = { MUS_B2_ME_AVENUE_02,       310 },
+    [FANFARE_B2_JOIN_AVENUE_3]         = { MUS_B2_ME_AVENUE_03,       110 },
     [FANFARE_B2_EARN_MEDAL]            = { MUS_B2_ME_MD_FAN03,        230 },
     [FANFARE_B2_MEDAL_BOX]             = { MUS_B2_ME_MD_FAN01,        210 },
     [FANFARE_B2_START_MINIGAME]        = { MUS_B2_ME_LCG_01,          110 },

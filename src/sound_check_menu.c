@@ -1910,6 +1910,12 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(MUS_B2_VS_IRIS               , "MUS-B2-VS-IRIS") \
     X(MUS_B2_ENDING                , "MUS-B2-ENDING") \
     X(MUS_B2_THEEND                , "MUS-B2-THEEND") \
+    X(MUS_B2_D_27_G_AJITO          , "MUS-B2-D-27-G-AJITO") \
+    X(MUS_B2_ME_LCG_03             , "MUS-B2-ME-LCG-03") \
+    X(MUS_B2_ME_LCG_04             , "MUS-B2-ME-LCG-04") \
+    X(MUS_B2_ME_AVENUE_03          , "MUS-B2-ME-AVENUE-03") \
+    X(MUS_B2_ME_CALL_LONG          , "MUS-B2-ME-CALL-LONG") \
+    X(MUS_B2_ME_ZUKAN_02           , "MUS-B2-ME-ZUKAN-02") \
     X(MUS_WHAT   , "MUS-WHAT") \
     X(MUS_BW_WIN1MEME, "MUS-BW-WIN1MEME") \
     X(MUS_ZINNIA     , "MUS-ZINNIA") \

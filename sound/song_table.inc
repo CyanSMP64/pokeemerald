@@ -1215,6 +1215,12 @@ gSongTable::
 	song mus_b2_vs_iris, 0, 0
 	song mus_b2_ending, 0, 0
 	song mus_b2_theend, 0, 0
+	song mus_b2_d_27_g_ajito, 2, 2
+	song mus_b2_me_lcg_03, 2, 2
+	song mus_b2_me_lcg_04, 2, 2
+	song mus_b2_me_avenue_03, 2, 2
+	song mus_b2_me_call_long, 2, 2
+	song mus_b2_me_zukan_02, 2, 2
 	song mus_what, 0, 0
 	song mus_bw_win1meme, 0, 0
 	song mus_zinnia, 0, 0
