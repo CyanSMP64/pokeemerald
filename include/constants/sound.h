@@ -112,6 +112,8 @@
 #define FANFARE_B2_TYMPOLE_CHOIR         108
 #define FANFARE_B2_HABITAT_LIST_COMPLETE 109
 #define FANFARE_B2_MEDAL_RALLY_COMPLETE  110
+#define FANFARE_B2_XTRANSCEIVER_LONG     111
+#define FANFARE_B2_ZUKAN_02              112
 
 #define CRY_MODE_NORMAL        0 // Default
 #define CRY_MODE_DOUBLES       1 // Shortened cry for double battles

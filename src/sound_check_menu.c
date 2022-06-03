@@ -1789,22 +1789,61 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(MUS_BW_PALPARK_BOX           , "MUS-BW-PALPARK-BOX") \
     X(MUS_BW_PALPARK_GAME          , "MUS-BW-PALPARK-GAME") \
     X(MUS_B2_TITLE01               , "MUS-B2-TITLE01") \
+    X(MUS_B2_ENDING                , "MUS-B2-ENDING") \
+    X(MUS_B2_GROUND_GYM_01         , "MUS-B2-GROUND-GYM-01") \
+    X(MUS_B2_D_N_CASTLE            , "MUS-B2-D-N-CASTLE") \
+    X(MUS_B2_MUGEN_LOBBY_B         , "MUS-B2-MUGEN-LOBBY-B") \
+    X(MUS_B2_MUGEN_LOBBY_W         , "MUS-B2-MUGEN-LOBBY-W") \
+    X(MUS_B2_MUGEN_D_B             , "MUS-B2-MUGEN-D-B") \
+    X(MUS_B2_MUGEN_D_W             , "MUS-B2-MUGEN-D-W") \
+    X(MUS_B2_E_CHEREN              , "MUS-B2-E-CHEREN") \
+    X(MUS_B2_E_BERU                , "MUS-B2-E-BERU") \
+    X(MUS_B2_E_N_SWAN              , "MUS-B2-E-N-SWAN") \
+    X(MUS_B2_ERECTRIC_GYM_01       , "MUS-B2-ERECTRIC-GYM-01") \
+    X(MUS_B2_ERECTRIC_GYM_02       , "MUS-B2-ERECTRIC-GYM-02") \
+    X(MUS_B2_INSECT_GYM_01         , "MUS-B2-INSECT-GYM-01") \
+    X(MUS_B2_POISONE_GYM_01        , "MUS-B2-POISONE-GYM-01") \
+    X(MUS_B2_POISONE_GYM_01_JP     , "MUS-B2-POISONE-GYM-01-JP") \
     X(MUS_B2_DEMO_OPENING          , "MUS-B2-DEMO-OPENING") \
     X(MUS_B2_C_12                  , "MUS-B2-C-12") \
-    X(MUS_B2_E_BERU                , "MUS-B2-E-BERU") \
+    X(MUS_B2_C_13                  , "MUS-B2-C-13") \
+    X(MUS_B2_C_14                  , "MUS-B2-C-14") \
+    X(MUS_B2_EYE_NEO_PLASMA        , "MUS-B2-EYE-NEO-PLASMA") \
+    X(MUS_B2_VS_NORAPOKE           , "MUS-B2-VS-NORAPOKE") \
+    X(MUS_B2_VS_TRAINER            , "MUS-B2-VS-TRAINER") \
+    X(MUS_B2_VS_GYMLEADER          , "MUS-B2-VS-GYMLEADER") \
+    X(MUS_B2_VS_DPLEGEND           , "MUS-B2-VS-DPLEGEND") \
+    X(MUS_B2_VS_SWAN_N             , "MUS-B2-VS-SWAN-N") \
+    X(MUS_B2_VS_UMA                , "MUS-B2-VS-UMA") \
+    X(MUS_B2_VS_REGI               , "MUS-B2-VS-REGI") \
+    X(MUS_B2_BATTLESUPERIOR        , "MUS-B2-BATTLESUPERIOR") \
+    X(MUS_B2_D_N_ROOM              , "MUS-B2-D-N-ROOM") \
     X(MUS_B2_R_19_SP               , "MUS-B2-R-19-SP") \
     X(MUS_B2_R_19_SU               , "MUS-B2-R-19-SU") \
     X(MUS_B2_R_19_AU               , "MUS-B2-R-19-AU") \
     X(MUS_B2_R_19_WI               , "MUS-B2-R-19-WI") \
-    X(MUS_B2_VS_NORAPOKE           , "MUS-B2-VS-NORAPOKE") \
+    X(MUS_B2_R_22_SP               , "MUS-B2-R-22-SP") \
+    X(MUS_B2_R_22_SU               , "MUS-B2-R-22-SU") \
+    X(MUS_B2_R_22_AU               , "MUS-B2-R-22-AU") \
+    X(MUS_B2_R_22_WI               , "MUS-B2-R-22-WI") \
+    X(MUS_B2_R_23                  , "MUS-B2-R-23") \
+    X(MUS_B2_KAZAN                 , "MUS-B2-KAZAN") \
     X(MUS_B2_T_06                  , "MUS-B2-T-06") \
+    X(MUS_B2_T_07                  , "MUS-B2-T-07") \
     X(MUS_B2_D_22                  , "MUS-B2-D-22") \
-    X(MUS_B2_E_HUE                 , "MUS-B2-E-HUE") \
-    X(MUS_B2_VS_HUE                , "MUS-B2-VS-HUE") \
-    X(MUS_B2_C_13                  , "MUS-B2-C-13") \
-    X(MUS_B2_POISONE_GYM_01        , "MUS-B2-POISONE-GYM-01") \
-    X(MUS_B2_POISONE_GYM_01_JP     , "MUS-B2-POISONE-GYM-01-JP") \
-    X(MUS_B2_E_PLASMA              , "MUS-B2-E-PLASMA") \
+    X(MUS_B2_D_23                  , "MUS-B2-D-23") \
+    X(MUS_B2_D_24_W                , "MUS-B2-D-24-W") \
+    X(MUS_B2_D_24_B                , "MUS-B2-D-24-B") \
+    X(MUS_B2_D_25                  , "MUS-B2-D-25") \
+    X(MUS_B2_D_27_F_AJITO          , "MUS-B2-D-27-F-AJITO") \
+    X(MUS_B2_D_27_L_AJITO          , "MUS-B2-D-27-L-AJITO") \
+    X(MUS_B2_D_27_G_AJITO          , "MUS-B2-D-27-G-AJITO") \
+    X(MUS_B2_D_REGI                , "MUS-B2-D-REGI") \
+    X(MUS_B2_D_UMA                 , "MUS-B2-D-UMA") \
+    X(MUS_B2_H_06                  , "MUS-B2-H-06") \
+    X(MUS_B2_WBT_LOBBY             , "MUS-B2-WBT-LOBBY") \
+    X(MUS_B2_WBT_GROUND            , "MUS-B2-WBT-GROUND") \
+    X(MUS_B2_WBT_FANFARE           , "MUS-B2-WBT-FANFARE") \
     X(MUS_B2_PW_LAND               , "MUS-B2-PW-LAND") \
     X(MUS_B2_PW_FILMING            , "MUS-B2-PW-FILMING") \
     X(MUS_B2_PW_SCENARIO_01_F      , "MUS-B2-PW-SCENARIO-01-F") \
@@ -1822,25 +1861,26 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(MUS_B2_PW_SCENARIO_07_F      , "MUS-B2-PW-SCENARIO-07-F") \
     X(MUS_B2_PW_SCENARIO_07_L      , "MUS-B2-PW-SCENARIO-07-L") \
     X(MUS_B2_PW_SCENARIO_08_F      , "MUS-B2-PW-SCENARIO-08-F") \
-    X(MUS_B2_ME_POKEWOOD           , "MUS-B2-ME-POKEWOOD") \
-    X(MUS_B2_D_23                  , "MUS-B2-D-23") \
-    X(MUS_B2_INSECT_GYM_01         , "MUS-B2-INSECT-GYM-01") \
-    X(MUS_B2_EYE_CLOWN             , "MUS-B2-EYE-CLOWN") \
-    X(MUS_B2_FES                   , "MUS-B2-FES") \
-    X(MUS_B2_E_ACHROMA             , "MUS-B2-E-ACHROMA") \
-    X(MUS_B2_VS_TRAINER            , "MUS-B2-VS-TRAINER") \
+    X(MUS_B2_FLIGHT_GYM_01         , "MUS-B2-FLIGHT-GYM-01") \
+    X(MUS_B2_WATER_GYM_01          , "MUS-B2-WATER-GYM-01") \
+    X(MUS_B2_DRAGON_GYM_01         , "MUS-B2-DRAGON-GYM-01") \
+    X(MUS_B2_LCG_01                , "MUS-B2-LCG-01") \
+    X(MUS_B2_DATA_CONV             , "MUS-B2-DATA-CONV") \
     X(MUS_B2_REZO_RIZO             , "MUS-B2-REZO-RIZO") \
-    X(MUS_B2_ME_AVENUE_01          , "MUS-B2-ME-AVENUE-01") \
-    X(MUS_B2_ME_AVENUE_02          , "MUS-B2-ME-AVENUE-02") \
-    X(MUS_B2_JAPARADE              , "MUS-B2-JAPARADE") \
-    X(MUS_B2_ERECTRIC_GYM_01       , "MUS-B2-ERECTRIC-GYM-01") \
+    X(MUS_B2_FES                   , "MUS-B2-FES") \
+    X(MUS_B2_DEMO_UNION_00         , "MUS-B2-DEMO-UNION-00") \
+    X(MUS_B2_DEMO_UNION_01         , "MUS-B2-DEMO-UNION-01") \
+    X(MUS_B2_DEMO_UNION_02         , "MUS-B2-DEMO-UNION-02") \
+    X(MUS_B2_DEMO_UNION_03         , "MUS-B2-DEMO-UNION-03") \
+    X(MUS_B2_DEMO_AJITO_SHIP       , "MUS-B2-DEMO-AJITO-SHIP") \
+    X(MUS_B2_DEMO_FRIGATE          , "MUS-B2-DEMO-FRIGATE") \
+    X(MUS_B2_E_HUE                 , "MUS-B2-E-HUE") \
+    X(MUS_B2_E_ACHROMA             , "MUS-B2-E-ACHROMA") \
+    X(MUS_B2_DARK_TRINITY          , "MUS-B2-DARK-TRINITY") \
+    X(MUS_B2_E_7_SAGE              , "MUS-B2-E-7-SAGE") \
+    X(MUS_B2_E_C08_ICE             , "MUS-B2-E-C08-ICE") \
     X(MUS_B2_EYE_DANCER            , "MUS-B2-EYE-DANCER") \
-    X(MUS_B2_ERECTRIC_GYM_02       , "MUS-B2-ERECTRIC-GYM-02") \
-    X(MUS_B2_VS_GYMLEADER          , "MUS-B2-VS-GYMLEADER") \
-    X(MUS_B2_BATTLESUPERIOR        , "MUS-B2-BATTLESUPERIOR") \
-    X(MUS_B2_GROUND_GYM_01         , "MUS-B2-GROUND-GYM-01") \
-    X(MUS_B2_WBT_LOBBY             , "MUS-B2-WBT-LOBBY") \
-    X(MUS_B2_WBT_GROUND            , "MUS-B2-WBT-GROUND") \
+    X(MUS_B2_EYE_CLOWN             , "MUS-B2-EYE-CLOWN") \
     X(MUS_B2_VS_RG_LEADER          , "MUS-B2-VS-RG-LEADER") \
     X(MUS_B2_VS_RG_CHAMP           , "MUS-B2-VS-RG-CHAMP") \
     X(MUS_B2_VS_GS_LEADER          , "MUS-B2-VS-GS-LEADER") \
@@ -1850,72 +1890,32 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(MUS_B2_VS_DP_LEADER          , "MUS-B2-VS-DP-LEADER") \
     X(MUS_B2_VS_DP_CHAMP           , "MUS-B2-VS-DP-CHAMP") \
     X(MUS_B2_VS_WBT                , "MUS-B2-VS-WBT") \
-    X(MUS_B2_WIN_WBT               , "MUS-B2-WIN-WBT") \
-    X(MUS_B2_WBT_FANFARE           , "MUS-B2-WBT-FANFARE") \
-    X(MUS_B2_D_REGI                , "MUS-B2-D-REGI") \
-    X(MUS_B2_VS_REGI               , "MUS-B2-VS-REGI") \
-    X(MUS_B2_D_27_F_AJITO          , "MUS-B2-D-27-F-AJITO") \
-    X(MUS_B2_E_7_SAGE              , "MUS-B2-E-7-SAGE") \
-    X(MUS_B2_E_CHEREN              , "MUS-B2-E-CHEREN") \
-    X(MUS_B2_KEMONOMICHI           , "MUS-B2-KEMONOMICHI") \
-    X(MUS_B2_FLIGHT_GYM_01         , "MUS-B2-FLIGHT-GYM-01") \
-    X(MUS_B2_ME_MD_FAN03           , "MUS-B2-ME-MD-FAN03") \
-    X(MUS_B2_ME_MD_FAN01           , "MUS-B2-ME-MD-FAN01") \
-    X(MUS_B2_T_07                  , "MUS-B2-T-07") \
-    X(MUS_B2_KAZAN                 , "MUS-B2-KAZAN") \
-    X(MUS_B2_D_24_B                , "MUS-B2-D-24-B") \
-    X(MUS_B2_D_24_W                , "MUS-B2-D-24-W") \
-    X(MUS_B2_D_25                  , "MUS-B2-D-25") \
-    X(MUS_B2_VS_DPLEGEND           , "MUS-B2-VS-DPLEGEND") \
-    X(MUS_B2_DRAGON_GYM_01         , "MUS-B2-DRAGON-GYM-01") \
-    X(MUS_B2_DEMO_AJITO_SHIP       , "MUS-B2-DEMO-AJITO-SHIP") \
-    X(MUS_B2_E_C08_ICE             , "MUS-B2-E-C08-ICE") \
-    X(MUS_B2_EYE_NEO_PLASMA        , "MUS-B2-EYE-NEO-PLASMA") \
-    X(MUS_B2_VS_NEO_PLASMA         , "MUS-B2-VS-NEO-PLASMA") \
-    X(MUS_B2_DARK_TRINITY          , "MUS-B2-DARK-TRINITY") \
-    X(MUS_B2_H_06                  , "MUS-B2-H-06") \
-    X(MUS_B2_C_14                  , "MUS-B2-C-14") \
-    X(MUS_B2_WATER_GYM_01          , "MUS-B2-WATER-GYM-01") \
-    X(MUS_B2_R_22_SP               , "MUS-B2-R-22-SP") \
-    X(MUS_B2_R_22_SU               , "MUS-B2-R-22-SU") \
-    X(MUS_B2_R_22_AU               , "MUS-B2-R-22-AU") \
-    X(MUS_B2_R_22_WI               , "MUS-B2-R-22-WI") \
-    X(MUS_B2_DEMO_FRIGATE          , "MUS-B2-DEMO-FRIGATE") \
-    X(MUS_B2_D_27_L_AJITO          , "MUS-B2-D-27-L-AJITO") \
-    X(MUS_B2_VS_ACHROMA            , "MUS-B2-VS-ACHROMA") \
-    X(MUS_B2_DEMO_UNION_00         , "MUS-B2-DEMO-UNION-00") \
-    X(MUS_B2_DEMO_UNION_01         , "MUS-B2-DEMO-UNION-01") \
-    X(MUS_B2_DEMO_UNION_02         , "MUS-B2-DEMO-UNION-02") \
-    X(MUS_B2_DEMO_UNION_03         , "MUS-B2-DEMO-UNION-03") \
     X(MUS_B2_VS_KYURAMU            , "MUS-B2-VS-KYURAMU") \
+    X(MUS_B2_VS_NEO_PLASMA         , "MUS-B2-VS-NEO-PLASMA") \
+    X(MUS_B2_VS_ACHROMA            , "MUS-B2-VS-ACHROMA") \
     X(MUS_B2_VS_NEW_G_CIS          , "MUS-B2-VS-NEW-G-CIS") \
-    X(MUS_B2_R_23                  , "MUS-B2-R-23") \
-    X(MUS_B2_D_N_CASTLE            , "MUS-B2-D-N-CASTLE") \
-    X(MUS_B2_D_N_ROOM              , "MUS-B2-D-N-ROOM") \
-    X(MUS_B2_E_N_SWAN              , "MUS-B2-E-N-SWAN") \
-    X(MUS_B2_VS_SWAN_N             , "MUS-B2-VS-SWAN-N") \
-    X(MUS_B2_DATA_CONV             , "MUS-B2-DATA-CONV") \
-    X(MUS_B2_LCG_01                , "MUS-B2-LCG-01") \
+    X(MUS_B2_VS_IRIS               , "MUS-B2-VS-IRIS") \
+    X(MUS_B2_VS_HUE                , "MUS-B2-VS-HUE") \
+    X(MUS_B2_WIN_WBT               , "MUS-B2-WIN-WBT") \
+    X(MUS_B2_KEMONOMICHI           , "MUS-B2-KEMONOMICHI") \
+    X(MUS_B2_JAPARADE              , "MUS-B2-JAPARADE") \
+    X(MUS_B2_E_PLASMA              , "MUS-B2-E-PLASMA") \
+    X(MUS_B2_THEEND                , "MUS-B2-THEEND") \
     X(MUS_B2_ME_LCG_01             , "MUS-B2-ME-LCG-01") \
     X(MUS_B2_ME_LCG_02             , "MUS-B2-ME-LCG-02") \
-    X(MUS_B2_D_UMA                 , "MUS-B2-D-UMA") \
-    X(MUS_B2_VS_UMA                , "MUS-B2-VS-UMA") \
-    X(MUS_B2_MUGEN_LOBBY_B         , "MUS-B2-MUGEN-LOBBY-B") \
-    X(MUS_B2_MUGEN_D_B             , "MUS-B2-MUGEN-D-B") \
-    X(MUS_B2_MUGEN_LOBBY_W         , "MUS-B2-MUGEN-LOBBY-W") \
-    X(MUS_B2_MUGEN_D_W             , "MUS-B2-MUGEN-D-W") \
-    X(MUS_B2_ME_OTAMARO            , "MUS-B2-ME-OTAMARO") \
-    X(MUS_B2_ME_ZUKAN_01           , "MUS-B2-ME-ZUKAN-01") \
-    X(MUS_B2_ME_MD_FAN04           , "MUS-B2-ME-MD-FAN04") \
-    X(MUS_B2_VS_IRIS               , "MUS-B2-VS-IRIS") \
-    X(MUS_B2_ENDING                , "MUS-B2-ENDING") \
-    X(MUS_B2_THEEND                , "MUS-B2-THEEND") \
-    X(MUS_B2_D_27_G_AJITO          , "MUS-B2-D-27-G-AJITO") \
     X(MUS_B2_ME_LCG_03             , "MUS-B2-ME-LCG-03") \
     X(MUS_B2_ME_LCG_04             , "MUS-B2-ME-LCG-04") \
+    X(MUS_B2_ME_MD_FAN01           , "MUS-B2-ME-MD-FAN01") \
+    X(MUS_B2_ME_MD_FAN03           , "MUS-B2-ME-MD-FAN03") \
+    X(MUS_B2_ME_MD_FAN04           , "MUS-B2-ME-MD-FAN04") \
+    X(MUS_B2_ME_OTAMARO            , "MUS-B2-ME-OTAMARO") \
+    X(MUS_B2_ME_AVENUE_01          , "MUS-B2-ME-AVENUE-01") \
+    X(MUS_B2_ME_AVENUE_02          , "MUS-B2-ME-AVENUE-02") \
     X(MUS_B2_ME_AVENUE_03          , "MUS-B2-ME-AVENUE-03") \
     X(MUS_B2_ME_CALL_LONG          , "MUS-B2-ME-CALL-LONG") \
+    X(MUS_B2_ME_ZUKAN_01           , "MUS-B2-ME-ZUKAN-01") \
     X(MUS_B2_ME_ZUKAN_02           , "MUS-B2-ME-ZUKAN-02") \
+    X(MUS_B2_ME_POKEWOOD           , "MUS-B2-ME-POKEWOOD") \
     X(MUS_WHAT   , "MUS-WHAT") \
     X(MUS_BW_WIN1MEME, "MUS-BW-WIN1MEME") \
     X(MUS_ZINNIA     , "MUS-ZINNIA") \

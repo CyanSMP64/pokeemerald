@@ -1035,7 +1035,7 @@ gSongTable::
 	song mus_bw_vs_rai, 0, 0
 	song mus_bw_vs_movepoke, 0, 0
 	song mus_bw_vs_shirona, 0, 0
-	song mus_bw_battlepinch, 0, 0
+	song mus_bw_battlepinch, 0, 0		@ consider adding a second bgm player if you plan to use this like in gen 5 (MINIMUM 6 TRACKS)
 	song mus_bw_battlesuperior, 0, 0
 	song mus_bw_win1, 0, 0
 	song mus_bw_win2, 0, 0
@@ -1094,22 +1094,61 @@ gSongTable::
 	song mus_bw_palpark_box, 0, 0
 	song mus_bw_palpark_game, 0, 0
 	song mus_b2_title01, 0, 0
+	song mus_b2_ending, 0, 0
+	song mus_b2_ground_gym_01, 0, 0
+	song mus_b2_d_n_castle, 0, 0
+	song mus_b2_mugen_lobby_b, 0, 0
+	song mus_b2_mugen_lobby_w, 0, 0
+	song mus_b2_mugen_d_b, 0, 0
+	song mus_b2_mugen_d_w, 0, 0
+	song mus_b2_e_cheren, 0, 0
+	song mus_b2_e_beru, 0, 0
+	song mus_b2_e_n_swan, 0, 0
+	song mus_b2_erectric_gym_01, 0, 0
+	song mus_b2_erectric_gym_02, 0, 0
+	song mus_b2_insect_gym_01, 0, 0
+	song mus_b2_poisone_gym_01, 0, 0
+	song mus_b2_poisone_gym_01_jp, 0, 0
 	song mus_b2_demo_opening, 0, 0
 	song mus_b2_c_12, 0, 0
-	song mus_b2_e_beru, 0, 0
+	song mus_b2_c_13, 0, 0
+	song mus_b2_c_14, 0, 0
+	song mus_b2_eye_neo_plasma, 0, 0
+	song mus_b2_vs_norapoke, 0, 0
+	song mus_b2_vs_trainer, 0, 0
+	song mus_b2_vs_gymleader, 0, 0
+	song mus_b2_vs_dplegend, 0, 0
+	song mus_b2_vs_swan_n, 0, 0
+	song mus_b2_vs_uma, 0, 0
+	song mus_b2_vs_regi, 0, 0
+	song mus_b2_battlesuperior, 0, 0
+	song mus_b2_d_n_room, 0, 0
 	song mus_b2_r_19_sp, 0, 0
 	song mus_b2_r_19_su, 0, 0
 	song mus_b2_r_19_au, 0, 0
 	song mus_b2_r_19_wi, 0, 0
-	song mus_b2_vs_norapoke, 0, 0
+	song mus_b2_r_22_sp, 0, 0
+	song mus_b2_r_22_su, 0, 0
+	song mus_b2_r_22_au, 0, 0
+	song mus_b2_r_22_wi, 0, 0
+	song mus_b2_r_23, 0, 0
+	song mus_b2_kazan, 0, 0
 	song mus_b2_t_06, 0, 0
+	song mus_b2_t_07, 0, 0
 	song mus_b2_d_22, 0, 0
-	song mus_b2_e_hue, 0, 0
-	song mus_b2_vs_hue, 0, 0
-	song mus_b2_c_13, 0, 0
-	song mus_b2_poisone_gym_01, 0, 0
-	song mus_b2_poisone_gym_01_jp, 0, 0
-	song mus_b2_e_plasma, 0, 0
+	song mus_b2_d_23, 0, 0
+	song mus_b2_d_24_w, 0, 0
+	song mus_b2_d_24_b, 0, 0
+	song mus_b2_d_25, 0, 0
+	song mus_b2_d_27_f_ajito, 0, 0
+	song mus_b2_d_27_l_ajito, 0, 0
+	song mus_b2_d_27_g_ajito, 0, 0
+	song mus_b2_d_regi, 0, 0
+	song mus_b2_d_uma, 0, 0
+	song mus_b2_h_06, 0, 0
+	song mus_b2_wbt_lobby, 0, 0
+	song mus_b2_wbt_ground, 0, 0
+	song mus_b2_wbt_fanfare, 0, 0
 	song mus_b2_pw_land, 0, 0
 	song mus_b2_pw_filming, 0, 0
 	song mus_b2_pw_scenario_01_f, 0, 0
@@ -1127,25 +1166,26 @@ gSongTable::
 	song mus_b2_pw_scenario_07_f, 0, 0
 	song mus_b2_pw_scenario_07_l, 0, 0
 	song mus_b2_pw_scenario_08_f, 0, 0
-	song mus_b2_me_pokewood, 2, 2
-	song mus_b2_d_23, 0, 0
-	song mus_b2_insect_gym_01, 0, 0
-	song mus_b2_eye_clown, 0, 0
-	song mus_b2_fes, 0, 0
-	song mus_b2_e_achroma, 0, 0
-	song mus_b2_vs_trainer, 0, 0
+	song mus_b2_flight_gym_01, 0, 0
+	song mus_b2_water_gym_01, 0, 0
+	song mus_b2_dragon_gym_01, 0, 0
+	song mus_b2_lcg_01, 0, 0
+	song mus_b2_data_conv, 0, 0
 	song mus_b2_rezo_rizo, 0, 0
-	song mus_b2_me_avenue_01, 2, 2
-	song mus_b2_me_avenue_02, 2, 2
-	song mus_b2_japarade, 0, 0
-	song mus_b2_erectric_gym_01, 0, 0
+	song mus_b2_fes, 0, 0
+	song mus_b2_demo_union_00, 0, 0
+	song mus_b2_demo_union_01, 0, 0
+	song mus_b2_demo_union_02, 0, 0
+	song mus_b2_demo_union_03, 0, 0
+	song mus_b2_demo_ajito_ship, 0, 0
+	song mus_b2_demo_frigate, 0, 0
+	song mus_b2_e_hue, 0, 0
+	song mus_b2_e_achroma, 0, 0
+	song mus_b2_dark_trinity, 0, 0
+	song mus_b2_e_7_sage, 0, 0
+	song mus_b2_e_c08_ice, 0, 0
 	song mus_b2_eye_dancer, 0, 0
-	song mus_b2_erectric_gym_02, 0, 0
-	song mus_b2_vs_gymleader, 0, 0
-	song mus_b2_battlesuperior, 0, 0
-	song mus_b2_ground_gym_01, 0, 0
-	song mus_b2_wbt_lobby, 0, 0
-	song mus_b2_wbt_ground, 0, 0
+	song mus_b2_eye_clown, 0, 0
 	song mus_b2_vs_rg_leader, 0, 0
 	song mus_b2_vs_rg_champ, 0, 0
 	song mus_b2_vs_gs_leader, 0, 0
@@ -1155,72 +1195,32 @@ gSongTable::
 	song mus_b2_vs_dp_leader, 0, 0
 	song mus_b2_vs_dp_champ, 0, 0
 	song mus_b2_vs_wbt, 0, 0
-	song mus_b2_win_wbt, 0, 0
-	song mus_b2_wbt_fanfare, 0, 0
-	song mus_b2_d_regi, 0, 0
-	song mus_b2_vs_regi, 0, 0
-	song mus_b2_d_27_f_ajito, 0, 0
-	song mus_b2_e_7_sage, 0, 0
-	song mus_b2_e_cheren, 0, 0
-	song mus_b2_kemonomichi, 0, 0
-	song mus_b2_flight_gym_01, 0, 0
-	song mus_b2_me_md_fan03, 2, 2
-	song mus_b2_me_md_fan01, 2, 2
-	song mus_b2_t_07, 0, 0
-	song mus_b2_kazan, 0, 0
-	song mus_b2_d_24_b, 0, 0
-	song mus_b2_d_24_w, 0, 0
-	song mus_b2_d_25, 0, 0
-	song mus_b2_vs_dplegend, 0, 0
-	song mus_b2_dragon_gym_01, 0, 0
-	song mus_b2_demo_ajito_ship, 0, 0
-	song mus_b2_e_c08_ice, 0, 0
-	song mus_b2_eye_neo_plasma, 0, 0
-	song mus_b2_vs_neo_plasma, 0, 0
-	song mus_b2_dark_trinity, 0, 0
-	song mus_b2_h_06, 0, 0
-	song mus_b2_c_14, 0, 0
-	song mus_b2_water_gym_01, 0, 0
-	song mus_b2_r_22_sp, 0, 0
-	song mus_b2_r_22_su, 0, 0
-	song mus_b2_r_22_au, 0, 0
-	song mus_b2_r_22_wi, 0, 0
-	song mus_b2_demo_frigate, 0, 0
-	song mus_b2_d_27_l_ajito, 0, 0
-	song mus_b2_vs_achroma, 0, 0
-	song mus_b2_demo_union_00, 0, 0
-	song mus_b2_demo_union_01, 0, 0
-	song mus_b2_demo_union_02, 0, 0
-	song mus_b2_demo_union_03, 0, 0
 	song mus_b2_vs_kyuramu, 0, 0
+	song mus_b2_vs_neo_plasma, 0, 0
+	song mus_b2_vs_achroma, 0, 0
 	song mus_b2_vs_new_g_cis, 0, 0
-	song mus_b2_r_23, 0, 0
-	song mus_b2_d_n_castle, 0, 0
-	song mus_b2_d_n_room, 0, 0
-	song mus_b2_e_n_swan, 0, 0
-	song mus_b2_vs_swan_n, 0, 0
-	song mus_b2_data_conv, 0, 0
-	song mus_b2_lcg_01, 0, 0
+	song mus_b2_vs_iris, 0, 0
+	song mus_b2_vs_hue, 0, 0
+	song mus_b2_win_wbt, 0, 0
+	song mus_b2_kemonomichi, 0, 0
+	song mus_b2_japarade, 0, 0
+	song mus_b2_e_plasma, 0, 0
+	song mus_b2_theend, 0, 0
 	song mus_b2_me_lcg_01, 2, 2
 	song mus_b2_me_lcg_02, 2, 2
-	song mus_b2_d_uma, 0, 0
-	song mus_b2_vs_uma, 0, 0
-	song mus_b2_mugen_lobby_b, 0, 0
-	song mus_b2_mugen_d_b, 0, 0
-	song mus_b2_mugen_lobby_w, 0, 0
-	song mus_b2_mugen_d_w, 0, 0
-	song mus_b2_me_otamaro, 2, 2
-	song mus_b2_me_zukan_01, 2, 2
-	song mus_b2_me_md_fan04, 2, 2
-	song mus_b2_vs_iris, 0, 0
-	song mus_b2_ending, 0, 0
-	song mus_b2_theend, 0, 0
-	song mus_b2_d_27_g_ajito, 2, 2
 	song mus_b2_me_lcg_03, 2, 2
 	song mus_b2_me_lcg_04, 2, 2
+	song mus_b2_me_md_fan01, 2, 2
+	song mus_b2_me_md_fan03, 2, 2
+	song mus_b2_me_md_fan04, 2, 2
+	song mus_b2_me_otamaro, 2, 2
+	song mus_b2_me_avenue_01, 2, 2
+	song mus_b2_me_avenue_02, 2, 2
 	song mus_b2_me_avenue_03, 2, 2
 	song mus_b2_me_call_long, 2, 2
+	song mus_b2_me_zukan_01, 2, 2
 	song mus_b2_me_zukan_02, 2, 2
+	song mus_b2_me_pokewood, 2, 2
 	song mus_what, 0, 0
 	song mus_bw_win1meme, 0, 0
 	song mus_zinnia, 0, 0
@@ -1230,4 +1230,3 @@ gSongTable::
 	.align 2
 dummy_song_header:
 	.byte 0, 0, 0, 0
-		@ consider adding a second bgm player if you plan to use this like in gen 5 (MINIMUM 6 TRACKS)
