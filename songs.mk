@@ -1239,52 +1239,52 @@ $(MID_SUBDIR)/se_m_leer.s: %.s: %.mid
 $(MID_SUBDIR)/se_dex_search.s: %.s: %.mid
 	$(MID) $< $@ -E -G127 -v100 -P5
 
-$(MID_SUBDIR)/mus_dp_town01_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_twinleaf_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V125
 
-$(MID_SUBDIR)/mus_dp_town02_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_sandgem_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_town03_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_floaroma_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V110
 
-$(MID_SUBDIR)/mus_dp_town04_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_solaceon_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V110
 
-$(MID_SUBDIR)/mus_dp_town06_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route225_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V094
 
-$(MID_SUBDIR)/mus_dp_town07_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_valor_lakefront_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V096 -X
 
-$(MID_SUBDIR)/mus_dp_city01_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_jubilife_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V096
 
-$(MID_SUBDIR)/mus_dp_city02_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_canalave_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V108
 
-$(MID_SUBDIR)/mus_dp_city03_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_oreburgh_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_city04_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_eterna_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V096
 
-$(MID_SUBDIR)/mus_dp_city05_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_hearthome_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V092
 
-$(MID_SUBDIR)/mus_dp_city07_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_veilstone_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V120
 
-$(MID_SUBDIR)/mus_dp_city08_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_sunyshore_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_city09_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_snowpoint_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V100
 
-$(MID_SUBDIR)/mus_dp_city10_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_pokemon_league_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V110
 
-$(MID_SUBDIR)/mus_dp_city11_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_fight_area_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V080
 
 $(MID_SUBDIR)/mus_dp_road_a_d.s: %.s: %.mid

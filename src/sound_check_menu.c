@@ -1228,22 +1228,22 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(MUS_VS_FRONTIER_BRAIN, "MUS-VS-FRONTIER-BRAIN") \
     X(MUS_VS_MEW, "MUS-VS-MEW") \
     X(MUS_B_DOME_LOBBY, "MUS-B-DOME-LOBBY") \
-    X(MUS_DP_TOWN01_D              , "MUS-DP-TWINLEAF-DAY") \
-    X(MUS_DP_TOWN02_D              , "MUS-DP-SANDGEM-DAY") \
-    X(MUS_DP_TOWN03_D              , "MUS-DP-FLOAROMA-DAY") \
-    X(MUS_DP_TOWN04_D              , "MUS-DP-SOLACEON-DAY") \
-    X(MUS_DP_TOWN06_D              , "MUS-DP-ROUTE225-DAY") \
-    X(MUS_DP_TOWN07_D              , "MUS-DP-VALOR-LAKEFRONT-DAY") \
-    X(MUS_DP_CITY01_D              , "MUS-DP-JUBILIFE-DAY") \
-    X(MUS_DP_CITY02_D              , "MUS-DP-CANALAVE-DAY") \
-    X(MUS_DP_CITY03_D              , "MUS-DP-OREBURGH-DAY") \
-    X(MUS_DP_CITY04_D              , "MUS-DP-ETERNA-DAY") \
-    X(MUS_DP_CITY05_D              , "MUS-DP-HEARTHOME-DAY") \
-    X(MUS_DP_CITY07_D              , "MUS-DP-VEILSTONE-DAY") \
-    X(MUS_DP_CITY08_D              , "MUS-DP-SUNYSHORE-DAY") \
-    X(MUS_DP_CITY09_D              , "MUS-DP-SNOWPOINT-DAY") \
-    X(MUS_DP_CITY10_D              , "MUS-DP-POKEMON-LEAGUE-DAY") \
-    X(MUS_DP_CITY11_D              , "MUS-DP-FIGHT-AREA-DAY") \
+    X(MUS_DP_TWINLEAF_DAY              , "MUS-DP-TWINLEAF-DAY") \
+    X(MUS_DP_SANDGEM_DAY              , "MUS-DP-SANDGEM-DAY") \
+    X(MUS_DP_FLOAROMA_DAY              , "MUS-DP-FLOAROMA-DAY") \
+    X(MUS_DP_SOLACEON_DAY              , "MUS-DP-SOLACEON-DAY") \
+    X(MUS_DP_ROUTE225_DAY              , "MUS-DP-ROUTE225-DAY") \
+    X(MUS_DP_VALOR_LAKEFRONT_DAY              , "MUS-DP-VALOR-LAKEFRONT-DAY") \
+    X(MUS_DP_JUBILIFE_DAY              , "MUS-DP-JUBILIFE-DAY") \
+    X(MUS_DP_CANALAVE_DAY              , "MUS-DP-CANALAVE-DAY") \
+    X(MUS_DP_OREBURGH_DAY              , "MUS-DP-OREBURGH-DAY") \
+    X(MUS_DP_ETERNA_DAY              , "MUS-DP-ETERNA-DAY") \
+    X(MUS_DP_HEARTHOME_DAY              , "MUS-DP-HEARTHOME-DAY") \
+    X(MUS_DP_VEILSTONE_DAY              , "MUS-DP-VEILSTONE-DAY") \
+    X(MUS_DP_SUNYSHORE_DAY              , "MUS-DP-SUNYSHORE-DAY") \
+    X(MUS_DP_SNOWPOINT_DAY              , "MUS-DP-SNOWPOINT-DAY") \
+    X(MUS_DP_POKEMON_LEAGUE_DAY              , "MUS-DP-POKEMON-LEAGUE-DAY") \
+    X(MUS_DP_FIGHT_AREA_DAY              , "MUS-DP-FIGHT-AREA-DAY") \
     X(MUS_DP_ROAD_A_D              , "MUS-DP-ROUTE201-DAY") \
     X(MUS_DP_ROAD_B_D              , "MUS-DP-ROUTE203-DAY") \
     X(MUS_DP_ROAD_C_D              , "MUS-DP-ROUTE205-DAY") \

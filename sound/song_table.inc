@@ -533,22 +533,22 @@ gSongTable::
 	song mus_vs_frontier_brain, 0, 0
 	song mus_vs_mew, 0, 0
 	song mus_b_dome_lobby, 0, 0
-	song mus_dp_town01_d, 0, 0
-	song mus_dp_town02_d, 0, 0
-	song mus_dp_town03_d, 0, 0
-	song mus_dp_town04_d, 0, 0
-	song mus_dp_town06_d, 0, 0
-	song mus_dp_town07_d, 0, 0
-	song mus_dp_city01_d, 0, 0
-	song mus_dp_city02_d, 0, 0
-	song mus_dp_city03_d, 0, 0
-	song mus_dp_city04_d, 0, 0
-	song mus_dp_city05_d, 0, 0
-	song mus_dp_city07_d, 0, 0
-	song mus_dp_city08_d, 0, 0
-	song mus_dp_city09_d, 0, 0
-	song mus_dp_city10_d, 0, 0
-	song mus_dp_city11_d, 0, 0
+	song mus_dp_twinleaf_day, 0, 0
+	song mus_dp_sandgem_day, 0, 0
+	song mus_dp_floaroma_day, 0, 0
+	song mus_dp_solaceon_day, 0, 0
+	song mus_dp_route225_day, 0, 0
+	song mus_dp_valor_lakefront_day, 0, 0
+	song mus_dp_jubilife_day, 0, 0
+	song mus_dp_canalave_day, 0, 0
+	song mus_dp_oreburgh_day, 0, 0
+	song mus_dp_eterna_day, 0, 0
+	song mus_dp_hearthome_day, 0, 0
+	song mus_dp_veilstone_day, 0, 0
+	song mus_dp_sunyshore_day, 0, 0
+	song mus_dp_snowpoint_day, 0, 0
+	song mus_dp_pokemon_league_day, 0, 0
+	song mus_dp_fight_area_day, 0, 0
 	song mus_dp_road_a_d, 0, 0
 	song mus_dp_road_b_d, 0, 0
 	song mus_dp_road_c_d, 0, 0
