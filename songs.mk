@@ -1287,304 +1287,304 @@ $(MID_SUBDIR)/mus_dp_pokemon_league_day.s: %.s: %.mid
 $(MID_SUBDIR)/mus_dp_fight_area_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V080
 
-$(MID_SUBDIR)/mus_dp_road_a_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route201_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V127
 
-$(MID_SUBDIR)/mus_dp_road_b_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route203_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V100
 
-$(MID_SUBDIR)/mus_dp_road_c_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route205_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V086
 
-$(MID_SUBDIR)/mus_dp_road_d_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route206_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V108
 
-$(MID_SUBDIR)/mus_dp_road_e_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route209_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V086
 
-$(MID_SUBDIR)/mus_dp_road_f_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route210_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V080
 
-$(MID_SUBDIR)/mus_dp_road_snow_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route216_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V100
 
-$(MID_SUBDIR)/mus_dp_road_bza_d.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route228_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_opening.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_rowan.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V127
 
-$(MID_SUBDIR)/mus_dp_tv_housou.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_tv_broadcast.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V096
 
-$(MID_SUBDIR)/mus_dp_town01_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_twinleaf_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_town02_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_sandgem_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_town03_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_floaroma_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V110
 
-$(MID_SUBDIR)/mus_dp_town04_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_solaceon_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V110
 
-$(MID_SUBDIR)/mus_dp_town06_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route225_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V094
 
-$(MID_SUBDIR)/mus_dp_town07_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_valor_lakefront_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V095 -X
 
-$(MID_SUBDIR)/mus_dp_city01_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_jubilife_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V104
 
-$(MID_SUBDIR)/mus_dp_city02_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_canalave_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V110
 
-$(MID_SUBDIR)/mus_dp_city03_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_oreburgh_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_city04_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_eterna_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V098
 
-$(MID_SUBDIR)/mus_dp_city05_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_hearthome_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V100
 
-$(MID_SUBDIR)/mus_dp_city07_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_veilstone_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V118
 
-$(MID_SUBDIR)/mus_dp_city08_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_sunyshore_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_city09_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_snowpoint_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V100
 
-$(MID_SUBDIR)/mus_dp_city10_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_pokemon_league_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V110
 
-$(MID_SUBDIR)/mus_dp_city11_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_fight_area_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V080
 
-$(MID_SUBDIR)/mus_dp_road_a_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route201_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V127
 
-$(MID_SUBDIR)/mus_dp_road_b_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route203_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V100
 
-$(MID_SUBDIR)/mus_dp_road_c_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route205_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V086
 
-$(MID_SUBDIR)/mus_dp_road_d_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route206_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V108
 
-$(MID_SUBDIR)/mus_dp_road_e_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route209_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V086
 
-$(MID_SUBDIR)/mus_dp_road_f_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route210_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V080
 
-$(MID_SUBDIR)/mus_dp_road_snow_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route216_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V100
 
-$(MID_SUBDIR)/mus_dp_road_bza_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_route228_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_tankou.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_underground.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V100
 
-$(MID_SUBDIR)/mus_dp_hatanige.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_flag_captured.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_d_01.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_victory_road.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_d_02.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_eterna_forest.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V088
 
-$(MID_SUBDIR)/mus_dp_d_03.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_old_chateau.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V127
 
-$(MID_SUBDIR)/mus_dp_d_ryayhy.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_lake_caverns.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_d_kouen.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_amity_square.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V115
 
-$(MID_SUBDIR)/mus_dp_d_agito.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_galactic_hq.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V086
 
-$(MID_SUBDIR)/mus_dp_d_ginlobby.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_galactic_eterna_building.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V100
 
-$(MID_SUBDIR)/mus_dp_d_safari.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_great_marsh.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V084
 
-$(MID_SUBDIR)/mus_dp_d_lake.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_lake.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V088
 
-$(MID_SUBDIR)/mus_dp_d_mount1.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_mt_coronet.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V112
 
-$(MID_SUBDIR)/mus_dp_d_mount2.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_spear_pillar.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V110
 
-$(MID_SUBDIR)/mus_dp_d_06.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_stark_mountain.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V100
 
-$(MID_SUBDIR)/mus_dp_d_05.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_oreburgh_gate.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V110
 
-$(MID_SUBDIR)/mus_dp_d_04.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_oreburgh_mine.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V120
 
-$(MID_SUBDIR)/mus_dp_d_league.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_inside_pokemon_league.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V100
 
-$(MID_SUBDIR)/mus_dp_bld_dendo.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_hall_of_fame_room.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V112
 
-$(MID_SUBDIR)/mus_dp_pc_01.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_poke_center_day.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V110
 
-$(MID_SUBDIR)/mus_dp_pc_02.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_poke_center_night.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V127
 
 $(MID_SUBDIR)/mus_dp_gym.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V118
 
-$(MID_SUBDIR)/mus_dp_kenkyujo.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_rowan_lab.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V127
 
-$(MID_SUBDIR)/mus_dp_bld_con.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_contest_lobby.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V056
 
-$(MID_SUBDIR)/mus_dp_fs.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_poke_mart.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V082
 
-$(MID_SUBDIR)/mus_dp_bld_game.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_game_corner.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V127
 
-$(MID_SUBDIR)/mus_dp_bf_towwer.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_b_tower.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V078
 
-$(MID_SUBDIR)/mus_dp_bld_tv.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_tv_station.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V108
 
-$(MID_SUBDIR)/mus_dp_the_event04.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_galactic_hq_basement.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V127
 
-$(MID_SUBDIR)/mus_dp_fue.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_azure_flute.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V127
 
-$(MID_SUBDIR)/mus_dp_aus.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_hall_of_origin.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V127
 
-$(MID_SUBDIR)/mus_dp_bld_bld_gtc.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_gts.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V096
 
-$(MID_SUBDIR)/mus_dp_eye_boy.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_encounter_boy.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V105
 
-$(MID_SUBDIR)/mus_dp_eye_kid.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_encounter_twins.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V082
 
-$(MID_SUBDIR)/mus_dp_eye_fight.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_encounter_intense.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V070
 
-$(MID_SUBDIR)/mus_dp_eye_ginga.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_encounter_galactic.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V068
 
-$(MID_SUBDIR)/mus_dp_eye_lady.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_encounter_lady.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_eye_mount.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_encounter_hiker.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V088
 
-$(MID_SUBDIR)/mus_dp_eye_rich.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_encounter_rich.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V080
 
-$(MID_SUBDIR)/mus_dp_eye_enka.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_encounter_sailor.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V070
 
-$(MID_SUBDIR)/mus_dp_eye_mys.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_encounter_suspicious.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V080
 
-$(MID_SUBDIR)/mus_dp_eye_elite.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_encounter_ace_trainer.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V080
 
-$(MID_SUBDIR)/mus_dp_eye_girl.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_encounter_girl.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V095
 
-$(MID_SUBDIR)/mus_dp_eye_sport.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_encounter_cyclist.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V095
 
-$(MID_SUBDIR)/mus_dp_eye_fun.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_encounter_artist.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V115
 
-$(MID_SUBDIR)/mus_dp_eye_tenno.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_encounter_elite_four.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V086
 
-$(MID_SUBDIR)/mus_dp_eye_champ.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_encounter_champion.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V100
 
-$(MID_SUBDIR)/mus_dp_ba_poke.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_vs_wild.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V088
 
-$(MID_SUBDIR)/mus_dp_ba_gym.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_vs_gym_leader.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V088
 
-$(MID_SUBDIR)/mus_dp_ba_dpoke1.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_vs_uxie_mesprit_azelf.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V078
 
-$(MID_SUBDIR)/mus_dp_ba_train.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_vs_trainer.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V088
 
-$(MID_SUBDIR)/mus_dp_ba_agaki.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_vs_galactic_boss.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_ba_dpoke2.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_vs_dialga_palkia.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_ba_chanp.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_vs_champion.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_ba_ginga.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_vs_galactic.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_ba_rival.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_vs_rival.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V088
 
-$(MID_SUBDIR)/mus_dp_ba_secret1.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_vs_arceus.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V092
 
-$(MID_SUBDIR)/mus_dp_ba_secret2.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_vs_legend.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V092
 
-$(MID_SUBDIR)/mus_dp_winpoke.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_victory_wild.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V114
 
-$(MID_SUBDIR)/mus_dp_wintrain.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_victory_trainer.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V118
 
-$(MID_SUBDIR)/mus_dp_wintgym.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_victory_gym_leader.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V120
 
-$(MID_SUBDIR)/mus_dp_winchamp.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_victory_champion.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V105
 
-$(MID_SUBDIR)/mus_dp_winginga.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_victory_galactic.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V100
 
-$(MID_SUBDIR)/mus_dp_wintenno.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_victory_elite_four.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_ba_ginga3.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_vs_galactic_commander.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V090
 
-$(MID_SUBDIR)/mus_dp_con_test.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_contest.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V110
 
-$(MID_SUBDIR)/mus_dp_ba_tenno.s: %.s: %.mid
+$(MID_SUBDIR)/mus_dp_vs_elite_four.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V094
 
 $(MID_SUBDIR)/mus_dp_tsureteke.s: %.s: %.mid

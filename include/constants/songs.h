@@ -563,106 +563,106 @@
 #define MUS_DP_SNOWPOINT_DAY               545 // Snowpoint City (Day)
 #define MUS_DP_POKEMON_LEAGUE_DAY               546 // Pokémon League (Day)
 #define MUS_DP_FIGHT_AREA_DAY               547 // Fight Area (Day)
-#define MUS_DP_ROAD_A_D               548 // Route 201 (Day)
-#define MUS_DP_ROAD_B_D               549 // Route 203 (Day)
-#define MUS_DP_ROAD_C_D               550 // Route 205 (Day)
-#define MUS_DP_ROAD_D_D               551 // Route 206 (Day)
-#define MUS_DP_ROAD_E_D               552 // Route 209 (Day)
-#define MUS_DP_ROAD_F_D               553 // Route 210 (Day)
-#define MUS_DP_ROAD_SNOW_D            554 // Route 216 (Day)
-#define MUS_DP_ROAD_BZA_D             555 // Route 228 (Day)
-#define MUS_DP_OPENING                556 // Introduction
-#define MUS_DP_TV_HOUSOU              557 // Special Report "Search for the Red Gyarados!" (Part 1)
-#define MUS_DP_TOWN01_N               558 // Twinleaf Town (Night)
-#define MUS_DP_TOWN02_N               559 // Sandgem Town (Night)
-#define MUS_DP_TOWN03_N               560 // Floaroma Town (Night)
-#define MUS_DP_TOWN04_N               561 // Solaceon Town (Night)
-#define MUS_DP_TOWN06_N               562 // Route 225 (Night)
-#define MUS_DP_TOWN07_N               563 // Valor Lakefront (Night)
-#define MUS_DP_CITY01_N               564 // Jubilife City (Night)
-#define MUS_DP_CITY02_N               565 // Canalave City (Night)
-#define MUS_DP_CITY03_N               566 // Oreburgh City (Night)
-#define MUS_DP_CITY04_N               567 // Eterna City (Night)
-#define MUS_DP_CITY05_N               568 // Hearthome City (Night)
-#define MUS_DP_CITY07_N               569 // Veilstone City (Night)
-#define MUS_DP_CITY08_N               570 // Sunyshore City (Night)
-#define MUS_DP_CITY09_N               571 // Snowpoint City (Night)
-#define MUS_DP_CITY10_N               572 // Pokémon League (Night)
-#define MUS_DP_CITY11_N               573 // Fight Area (Night)
-#define MUS_DP_ROAD_A_N               574 // Route 201 (Night)
-#define MUS_DP_ROAD_B_N               575 // Route 203 (Night)
-#define MUS_DP_ROAD_C_N               576 // Route 205 (Night)
-#define MUS_DP_ROAD_D_N               577 // Route 206 (Night)
-#define MUS_DP_ROAD_E_N               578 // Route 209 (Night)
-#define MUS_DP_ROAD_F_N               579 // Route 210 (Night)
-#define MUS_DP_ROAD_SNOW_N            580 // Route 216 (Night)
-#define MUS_DP_ROAD_BZA_N             581 // Route 228 (Night)
-#define MUS_DP_TANKOU                 582 // The Underground
-#define MUS_DP_HATANIGE               583 // Captured a Flag Underground!
-#define MUS_DP_D_01                   584 // Victory Road
-#define MUS_DP_D_02                   585 // Eterna Forest
-#define MUS_DP_D_03                   586 // Old Chateau
-#define MUS_DP_D_RYAYHY               587 // Lake Caverns
-#define MUS_DP_D_KOUEN                588 // Amity Square
-#define MUS_DP_D_AGITO                589 // Team Galactic HQ
-#define MUS_DP_D_GINLOBBY             590 // Galactic Eterna Building
-#define MUS_DP_D_SAFARI               591 // Great Marsh
-#define MUS_DP_D_LAKE                 592 // Lake
-#define MUS_DP_D_MOUNT1               593 // Mt. Coronet
-#define MUS_DP_D_MOUNT2               594 // Spear Pillar
-#define MUS_DP_D_06                   595 // Stark Mountain
-#define MUS_DP_D_05                   596 // Oreburgh Gate
-#define MUS_DP_D_04                   597 // Oreburgh Mine
-#define MUS_DP_D_LEAGUE               598 // Decisive Battle! (Pokémon League)
-#define MUS_DP_BLD_DENDO              599 // Hall of Fame
-#define MUS_DP_PC_01                  600 // Pokémon Center (Day)
-#define MUS_DP_PC_02                  601 // Pokémon Center (Night)
+#define MUS_DP_ROUTE201_DAY               548 // Route 201 (Day)
+#define MUS_DP_ROUTE203_DAY               549 // Route 203 (Day)
+#define MUS_DP_ROUTE205_DAY               550 // Route 205 (Day)
+#define MUS_DP_ROUTE206_DAY               551 // Route 206 (Day)
+#define MUS_DP_ROUTE209_DAY               552 // Route 209 (Day)
+#define MUS_DP_ROUTE210_DAY               553 // Route 210 (Day)
+#define MUS_DP_ROUTE216_DAY            554 // Route 216 (Day)
+#define MUS_DP_ROUTE228_DAY             555 // Route 228 (Day)
+#define MUS_DP_ROWAN                556 // Introduction
+#define MUS_DP_TV_BROADCAST              557 // Special Report "Search for the Red Gyarados!" (Part 1)
+#define MUS_DP_TWINLEAF_NIGHT               558 // Twinleaf Town (Night)
+#define MUS_DP_SANDGEM_NIGHT               559 // Sandgem Town (Night)
+#define MUS_DP_FLOAROMA_NIGHT               560 // Floaroma Town (Night)
+#define MUS_DP_SOLACEON_NIGHT               561 // Solaceon Town (Night)
+#define MUS_DP_ROUTE225_NIGHT               562 // Route 225 (Night)
+#define MUS_DP_VALOR_LAKEFRONT_NIGHT               563 // Valor Lakefront (Night)
+#define MUS_DP_JUBILIFE_NIGHT               564 // Jubilife City (Night)
+#define MUS_DP_CANALAVE_NIGHT               565 // Canalave City (Night)
+#define MUS_DP_OREBURGH_NIGHT               566 // Oreburgh City (Night)
+#define MUS_DP_ETERNA_NIGHT               567 // Eterna City (Night)
+#define MUS_DP_HEARTHOME_NIGHT               568 // Hearthome City (Night)
+#define MUS_DP_VEILSTONE_NIGHT               569 // Veilstone City (Night)
+#define MUS_DP_SUNYSHORE_NIGHT               570 // Sunyshore City (Night)
+#define MUS_DP_SNOWPOINT_NIGHT               571 // Snowpoint City (Night)
+#define MUS_DP_POKEMON_LEAGUE_NIGHT               572 // Pokémon League (Night)
+#define MUS_DP_FIGHT_AREA_NIGHT               573 // Fight Area (Night)
+#define MUS_DP_ROUTE201_NIGHT               574 // Route 201 (Night)
+#define MUS_DP_ROUTE203_NIGHT               575 // Route 203 (Night)
+#define MUS_DP_ROUTE205_NIGHT               576 // Route 205 (Night)
+#define MUS_DP_ROUTE206_NIGHT               577 // Route 206 (Night)
+#define MUS_DP_ROUTE209_NIGHT               578 // Route 209 (Night)
+#define MUS_DP_ROUTE210_NIGHT               579 // Route 210 (Night)
+#define MUS_DP_ROUTE216_NIGHT            580 // Route 216 (Night)
+#define MUS_DP_ROUTE228_NIGHT             581 // Route 228 (Night)
+#define MUS_DP_UNDERGROUND                 582 // The Underground
+#define MUS_DP_FLAG_CAPTURED               583 // Captured a Flag Underground!
+#define MUS_DP_VICTORY_ROAD                   584 // Victory Road
+#define MUS_DP_ETERNA_FOREST                   585 // Eterna Forest
+#define MUS_DP_OLD_CHATEAU                   586 // Old Chateau
+#define MUS_DP_LAKE_CAVERNS               587 // Lake Caverns
+#define MUS_DP_AMITY_SQUARE                588 // Amity Square
+#define MUS_DP_GALACTIC_HQ                589 // Team Galactic HQ
+#define MUS_DP_GALACTIC_ETERNA_BUILDING             590 // Galactic Eterna Building
+#define MUS_DP_GREAT_MARSH               591 // Great Marsh
+#define MUS_DP_LAKE                 592 // Lake
+#define MUS_DP_MT_CORONET               593 // Mt. Coronet
+#define MUS_DP_SPEAR_PILLAR               594 // Spear Pillar
+#define MUS_DP_STARK_MOUNTAIN                   595 // Stark Mountain
+#define MUS_DP_OREBURGH_GATE                   596 // Oreburgh Gate
+#define MUS_DP_OREBURGH_MINE                   597 // Oreburgh Mine
+#define MUS_DP_INSIDE_POKEMON_LEAGUE               598 // Decisive Battle! (Pokémon League)
+#define MUS_DP_HALL_OF_FAME_ROOM              599 // Hall of Fame
+#define MUS_DP_POKE_CENTER_DAY                  600 // Pokémon Center (Day)
+#define MUS_DP_POKE_CENTER_NIGHT                  601 // Pokémon Center (Night)
 #define MUS_DP_GYM                    602 // Pokémon Gym
-#define MUS_DP_KENKYUJO               603 // The Pokémon Lab
-#define MUS_DP_BLD_CON                604 // Contest Hall
-#define MUS_DP_FS                     605 // Poké Mart
-#define MUS_DP_BLD_GAME               606 // Game Corner
-#define MUS_DP_BF_TOWWER              607 // Battle Tower
-#define MUS_DP_BLD_TV                 608 // TV Station
-#define MUS_DP_THE_EVENT04            609 // Deep Within Team Galactic HQ
-#define MUS_DP_FUE                    610 // Azure Flute
-#define MUS_DP_AUS                    611 // Hall of Origin
-#define MUS_DP_BLD_BLD_GTC            612 // GTS
-#define MUS_DP_EYE_BOY                613 // Trainers' Eyes Meet (Youngster)
-#define MUS_DP_EYE_KID                614 // Trainers' Eyes Meet (Twins)
-#define MUS_DP_EYE_FIGHT              615 // Trainers' Eyes Meet (Black Belt)
-#define MUS_DP_EYE_GINGA              616 // Team Galactic Appears!
-#define MUS_DP_EYE_LADY               617 // Trainers' Eyes Meet (Aroma Lady)
-#define MUS_DP_EYE_MOUNT              618 // Trainers' Eyes Meet (Hiker)
-#define MUS_DP_EYE_RICH               619 // Trainers' Eyes Meet (PI)
-#define MUS_DP_EYE_ENKA               620 // Trainers' Eyes Meet (Sailor)
-#define MUS_DP_EYE_MYS                621 // Trainers' Eyes Meet (Collector)
-#define MUS_DP_EYE_ELITE              622 // Trainers' Eyes Meet (Ace Trainer)
-#define MUS_DP_EYE_GIRL               623 // Trainers' Eyes Meet (Lass)
-#define MUS_DP_EYE_SPORT              624 // Trainers' Eyes Meet (Cyclist)
-#define MUS_DP_EYE_FUN                625 // Trainers' Eyes Meet (Artist)
-#define MUS_DP_EYE_TENNO              626 // The Elite Four Appears!
-#define MUS_DP_EYE_CHAMP              627 // Champion Cynthia
-#define MUS_DP_BA_POKE                628 // Battle! (Wild Pokémon)
-#define MUS_DP_BA_GYM                 629 // Battle! (Gym Leader)
-#define MUS_DP_BA_DPOKE1              630 // Battle! (Uxie / Mesprit / Azelf)
-#define MUS_DP_BA_TRAIN               631 // Battle! (Trainer Battle)
-#define MUS_DP_BA_AGAKI               632 // Battle! (Team Galactic Boss)
-#define MUS_DP_BA_DPOKE2              633 // Battle! (Dialga / Palkia)
-#define MUS_DP_BA_CHANP               634 // Battle! (Champion)
-#define MUS_DP_BA_GINGA               635 // Battle! (Team Galactic)
-#define MUS_DP_BA_RIVAL               636 // Battle! (Rival)
-#define MUS_DP_BA_SECRET1             637 // Battle! Arceus
-#define MUS_DP_BA_SECRET2             638 // Battle! (Legendary Pokémon)
-#define MUS_DP_WINPOKE                639 // Victory! (Wild Pokémon)
-#define MUS_DP_WINTRAIN               640 // Victory! (Trainer Battle)
-#define MUS_DP_WINTGYM                641 // Victory! (Gym Leader)
-#define MUS_DP_WINCHAMP               642 // Victory! (Champion)
-#define MUS_DP_WINGINGA               643 // Victory! (Team Galactic)
-#define MUS_DP_WINTENNO               644 // Victory (Elite Four)
-#define MUS_DP_BA_GINGA3              645 // Battle! (Team Galactic Commander)
-#define MUS_DP_CON_TEST               646 // Super Contest!
-#define MUS_DP_BA_TENNO               647 // Battle! (Elite Four)
+#define MUS_DP_ROWAN_LAB               603 // The Pokémon Lab
+#define MUS_DP_CONTEST_LOBBY                604 // Contest Hall
+#define MUS_DP_POKE_MART                     605 // Poké Mart
+#define MUS_DP_GAME_CORNER               606 // Game Corner
+#define MUS_DP_B_TOWER              607 // Battle Tower
+#define MUS_DP_TV_STATION                 608 // TV Station
+#define MUS_DP_GALACTIC_HQ_BASEMENT            609 // Deep Within Team Galactic HQ
+#define MUS_DP_AZURE_FLUTE                    610 // Azure Flute
+#define MUS_DP_HALL_OF_ORIGIN                    611 // Hall of Origin
+#define MUS_DP_GTS            612 // GTS
+#define MUS_DP_ENCOUNTER_BOY                613 // Trainers' Eyes Meet (Youngster)
+#define MUS_DP_ENCOUNTER_TWINS                614 // Trainers' Eyes Meet (Twins)
+#define MUS_DP_ENCOUNTER_INTENSE              615 // Trainers' Eyes Meet (Black Belt)
+#define MUS_DP_ENCOUNTER_GALACTIC              616 // Team Galactic Appears!
+#define MUS_DP_ENCOUNTER_LADY               617 // Trainers' Eyes Meet (Aroma Lady)
+#define MUS_DP_ENCOUNTER_HIKER              618 // Trainers' Eyes Meet (Hiker)
+#define MUS_DP_ENCOUNTER_RICH               619 // Trainers' Eyes Meet (PI)
+#define MUS_DP_ENCOUNTER_SAILOR               620 // Trainers' Eyes Meet (Sailor)
+#define MUS_DP_ENCOUNTER_SUSPICIOUS                621 // Trainers' Eyes Meet (Collector)
+#define MUS_DP_ENCOUNTER_ACE_TRAINER              622 // Trainers' Eyes Meet (Ace Trainer)
+#define MUS_DP_ENCOUNTER_GIRL               623 // Trainers' Eyes Meet (Lass)
+#define MUS_DP_ENCOUNTER_CYCLIST              624 // Trainers' Eyes Meet (Cyclist)
+#define MUS_DP_ENCOUNTER_ARTIST                625 // Trainers' Eyes Meet (Artist)
+#define MUS_DP_ENCOUNTER_ELITE_FOUR              626 // The Elite Four Appears!
+#define MUS_DP_ENCOUNTER_CHAMPION              627 // Champion Cynthia
+#define MUS_DP_VS_WILD                628 // Battle! (Wild Pokémon)
+#define MUS_DP_VS_GYM_LEADER                 629 // Battle! (Gym Leader)
+#define MUS_DP_VS_UXIE_MESPRIT_AZELF              630 // Battle! (Uxie / Mesprit / Azelf)
+#define MUS_DP_VS_TRAINER               631 // Battle! (Trainer Battle)
+#define MUS_DP_VS_GALACTIC_BOSS               632 // Battle! (Team Galactic Boss)
+#define MUS_DP_VS_DIALGA_PALKIA              633 // Battle! (Dialga / Palkia)
+#define MUS_DP_VS_CHAMPION               634 // Battle! (Champion)
+#define MUS_DP_VS_GALACTIC               635 // Battle! (Team Galactic)
+#define MUS_DP_VS_RIVAL               636 // Battle! (Rival)
+#define MUS_DP_VS_ARCEUS             637 // Battle! Arceus
+#define MUS_DP_VS_LEGEND             638 // Battle! (Legendary Pokémon)
+#define MUS_DP_VICTORY_WILD                639 // Victory! (Wild Pokémon)
+#define MUS_DP_VICTORY_TRAINER               640 // Victory! (Trainer Battle)
+#define MUS_DP_VICTORY_GYM_LEADER                641 // Victory! (Gym Leader)
+#define MUS_DP_VICTORY_CHAMPION               642 // Victory! (Champion)
+#define MUS_DP_VICTORY_GALACTIC               643 // Victory! (Team Galactic)
+#define MUS_DP_VICTORY_ELITE_FOUR               644 // Victory (Elite Four)
+#define MUS_DP_VS_GALACTIC_COMMANDER              645 // Battle! (Team Galactic Commander)
+#define MUS_DP_CONTEST               646 // Super Contest!
+#define MUS_DP_VS_ELITE_FOUR               647 // Battle! (Elite Four)
 #define MUS_DP_TSURETEKE              648 // Hurry Along
 #define MUS_DP_THE_RIV                649 // Rival
 #define MUS_DP_THE_EVENT01            650 // A Surprise at the Lake!

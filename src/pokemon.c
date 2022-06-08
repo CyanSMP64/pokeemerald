@@ -6461,10 +6461,10 @@ u16 GetBattleBGM(void)
         case SPECIES_UXIE:
         case SPECIES_MESPRIT:
         case SPECIES_AZELF:
-            return MUS_DP_BA_DPOKE1;
+            return MUS_DP_VS_UXIE_MESPRIT_AZELF;
         case SPECIES_DIALGA:
         case SPECIES_PALKIA:
-            return MUS_DP_BA_DPOKE2;
+            return MUS_DP_VS_DIALGA_PALKIA;
         case SPECIES_ROTOM:
         case SPECIES_ROTOM_HEAT:
         case SPECIES_ROTOM_WASH:
@@ -6474,7 +6474,7 @@ u16 GetBattleBGM(void)
         case SPECIES_HEATRAN:
         case SPECIES_MANAPHY:
         case SPECIES_DARKRAI:
-            return MUS_DP_BA_SECRET2;
+            return MUS_DP_VS_LEGEND;
         case SPECIES_GIRATINA:
         case SPECIES_GIRATINA_ORIGIN:
             return MUS_PL_BA_GIRA;
@@ -6482,7 +6482,7 @@ u16 GetBattleBGM(void)
         case SPECIES_PHIONE:
         case SPECIES_SHAYMIN:
         case SPECIES_SHAYMIN_SKY:
-            return MUS_DP_BA_POKE;
+            return MUS_DP_VS_WILD;
         case SPECIES_ARCEUS:
         case SPECIES_ARCEUS_FIGHTING:
         case SPECIES_ARCEUS_FLYING:
@@ -6501,7 +6501,7 @@ u16 GetBattleBGM(void)
         case SPECIES_ARCEUS_DRAGON:
         case SPECIES_ARCEUS_DARK:
         case SPECIES_ARCEUS_FAIRY:
-            return MUS_DP_BA_SECRET1;
+            return MUS_DP_VS_ARCEUS;
         case SPECIES_VICTINI:
         case SPECIES_COBALION:
         case SPECIES_TERRAKION:
