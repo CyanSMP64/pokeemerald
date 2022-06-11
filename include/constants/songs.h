@@ -663,83 +663,83 @@
 #define MUS_DP_VS_GALACTIC_COMMANDER              645 // Battle! (Team Galactic Commander)
 #define MUS_DP_CONTEST               646 // Super Contest!
 #define MUS_DP_VS_ELITE_FOUR               647 // Battle! (Elite Four)
-#define MUS_DP_TSURETEKE              648 // Hurry Along
-#define MUS_DP_THE_RIV                649 // Rival
-#define MUS_DP_THE_EVENT01            650 // A Surprise at the Lake!
-#define MUS_DP_SHINKA                 651 // Evolution
-#define MUS_DP_THE_BOY                652 // Lucas
-#define MUS_DP_THE_GIRL               653 // Dawn
-#define MUS_DP_THE_EVENT02            654 // The Legendary Pokémon Appears!
-#define MUS_DP_THE_EVENT03            655 // Catastrophe!
-#define MUS_DP_KUSAGASA               656 // A Poké Radar Hit!
-#define MUS_DP_NAMINORI               657 // Surf
-#define MUS_DP_BICYCLE                658 // Bicycle
-#define MUS_DP_GONIN                  659 // Let's Go Together
+#define MUS_DP_FOLLOW_ME              648 // Hurry Along
+#define MUS_DP_RIVAL                649 // Rival
+#define MUS_DP_LAKE_EVENT            650 // A Surprise at the Lake!
+#define MUS_DP_EVOLUTION                 651 // Evolution
+#define MUS_DP_LUCAS                652 // Lucas
+#define MUS_DP_DAWN               653 // Dawn
+#define MUS_DP_LEGEND_APPEARS            654 // The Legendary Pokémon Appears!
+#define MUS_DP_CATASTROPHE            655 // Catastrophe!
+#define MUS_DP_POKE_RADAR               656 // A Poké Radar Hit!
+#define MUS_DP_SURF               657 // Surf
+#define MUS_DP_CYCLING                658 // Bicycle
+#define MUS_DP_LETS_GO_TOGETHER                  659 // Let's Go Together
 #define MUS_DP_TV_END                 660 // Special Report "Search for the Red Gyarados!" (Part 2)
-#define MUS_DP_FANFA1                 661 // Level Up!
-#define MUS_DP_FANFA5                 662 // Congratulations! Your Pokémon Evolved!
-#define MUS_DP_FANFA3                 663 // Obtained a Key Item!
-#define MUS_DP_FANFA4                 664 // Obtained an Item!
-#define MUS_DP_FANFA6                 665 // 
-#define MUS_DP_FANFA2                 666 // 
-#define MUS_DP_BADGE                  667 // Obtained a Badge!
-#define MUS_DP_POCKETCH               668 // Obtained a Pokétch App!
-#define MUS_DP_WAZA                   669 // Obtained a TM!
-#define MUS_DP_ACCE                   670 // Got an Accessory
-#define MUS_DP_WASURE                 671 // Move Deleted
-#define MUS_DP_ASA                    672 // Pokémon Healed
-#define MUS_DP_KINOMI                 673 // Obtained a Berry!
-#define MUS_DP_CO_DRESS               674 // Contest: Dress Up
-#define MUS_DP_BLD_EV_DENDO2          675 // Congratulations on Entering the Hall of Fame!
-#define MUS_DP_TITLE00                676 // Opening Movie (Part 1)
-#define MUS_DP_TITLE01                677 // Opening Movie (Part 2)
-#define MUS_DP_PRESENT                678 // Mystery Gift
-#define MUS_DP_WIFILOBBY              689 // Nintendo Wi-Fi Connection
-#define MUS_DP_CO_KASHI               680 // Dance: Easy
-#define MUS_DP_CO_TAKUMA              681 // Dance: Difficult
-#define MUS_DP_CO_KEKKA               682 // Contest: Results Announcement
-#define MUS_DP_CO_FANFA               683 // Contest: Winner
-#define MUS_DP_KINOMI1                684 // Poffins
-#define MUS_DP_SLOT_ATARI             685 // You're a Winner!
-#define MUS_DP_SLOT_OOATARI           686 // You're a Jackpot Winner!
-#define MUS_DP_BLD_ENDING             687 // Ending Theme
-#define MUS_DP_SLOT                   688 // 
+#define MUS_DP_LEVEL_UP                 661 // Level Up!
+#define MUS_DP_EVOLVED                 662 // Congratulations! Your Pokémon Evolved!
+#define MUS_DP_OBTAIN_KEY_ITEM                 663 // Obtained a Key Item!
+#define MUS_DP_OBTAIN_ITEM                 664 // Obtained an Item!
+#define MUS_DP_CAUGHT_INTRO                 665 // 
+#define MUS_DP_DEX_RATING                 666 // 
+#define MUS_DP_OBTAIN_BADGE                  667 // Obtained a Badge!
+#define MUS_DP_POKETCH               668 // Obtained a Pokétch App!
+#define MUS_DP_OBTAIN_TMHM                   669 // Obtained a TM!
+#define MUS_DP_OBTAIN_ACCESSORY                   670 // Got an Accessory
+#define MUS_DP_MOVE_DELETED                 671 // Move Deleted
+#define MUS_DP_HEAL                    672 // Pokémon Healed
+#define MUS_DP_OBTAIN_BERRY                 673 // Obtained a Berry!
+#define MUS_DP_CONTEST_DRESS_UP               674 // Contest: Dress Up
+#define MUS_DP_HALL_OF_FAME          675 // Congratulations on Entering the Hall of Fame!
+#define MUS_DP_INTRO                676 // Opening Movie (Part 1)
+#define MUS_DP_TITLE                677 // Opening Movie (Part 2)
+#define MUS_DP_MYSTERY_GIFT                678 // Mystery Gift
+#define MUS_DP_WFC              689 // Nintendo Wi-Fi Connection
+#define MUS_DP_DANCE_EASY               680 // Dance: Easy
+#define MUS_DP_DANCE_DIFFICULT              681 // Dance: Difficult
+#define MUS_DP_CONTEST_RESULTS               682 // Contest: Results Announcement
+#define MUS_DP_CONTEST_WINNER               683 // Contest: Winner
+#define MUS_DP_POFFINS                684 // Poffins
+#define MUS_DP_SLOTS_WIN             685 // You're a Winner!
+#define MUS_DP_SLOTS_JACKPOT           686 // You're a Jackpot Winner!
+#define MUS_DP_CREDITS             687 // Ending Theme
+#define MUS_DP_SLOTS_UNUSED                   688 // 
 
 // Platinum Music 
-#define MUS_PL_CITY11_D               689 // Fight Area (Battle Frontier)
-#define MUS_PL_TV_HOUSOU              690 // Special Program: "Let's Ask Prof. Rowan!" (Part 1)
+#define MUS_PL_FIGHT_AREA_DAY               689 // Fight Area (Battle Frontier)
+#define MUS_PL_TV_BROADCAST              690 // Special Program: "Let's Ask Prof. Rowan!" (Part 1)
 #define MUS_PL_TV_END                 691 // Special Program: "Let's Ask Prof. Rowan!" (Part 2)
-#define MUS_PL_TITLE00                692 // Title Screen
-#define MUS_PL_TITLE01                693 // Press Start
-#define MUS_PL_D_GIRATINA             694 // Distortion World
-#define MUS_PL_BF_ROULETTE            695 // Battle Arcade
-#define MUS_PL_BF_STAGE               696 // Battle Hall
-#define MUS_PL_BF_CASTLE              697 // Battle Castle
-#define MUS_PL_BF_FACTORY             698 // Battle Factory
-#define MUS_PL_WIFITOWER              699 // Global Terminal
-#define MUS_PL_AUDIO                  700 // Villa Audio System: Bossa Nova Lilycove
-#define MUS_PL_HANDSOME               701 // Looker's Theme
-#define MUS_PL_BA_GIRA                702 // Battle! (Giratina)
-#define MUS_PL_BA_BRAIN               703 // Battle! (Frontier Brain)
-#define MUS_PL_WINBRAIN               704 // Victory! (Frontier Brain)
-#define MUS_PL_BA_REGI                705 // Battle! (Regirock / Regice / Registeel / Regigigas)
-#define MUS_PL_MTKAKKO                706 // Super Contest: Coolness
-#define MUS_PL_MTKASHI                707 // Super Contest: Smartness
-#define MUS_PL_MTKAWA                 708 // Super Contest: Cuteness
-#define MUS_PL_MTTAKMA                709 // Super Contest: Toughness
-#define MUS_PL_MTUTSUK                710 // Super Contest: Beauty
-#define MUS_PL_GURUGURU               711 // Spin Trade
-#define MUS_PL_WIFIGAME               712 // Wi-Fi Plaza: Mini-Games
-#define MUS_PL_WIFIUNION              713 // Wi-Fi Plaza
-#define MUS_PL_WIFIPARADE             714 // Wi-Fi Plaza: Parade
-#define MUS_PL_EV_GIRA                715 // Giratina Appears!
-#define MUS_PL_EV_GIRA2               716 // Giratina Appears! Part 2
-#define MUS_PL_PTHAIFU                717 // Mystery Gift
-#define MUS_PL_TOWN02                 718 // Villa Music Box: Twinleaf Tune
-#define MUS_PL_DON2                   719 // Received BP in the Battle Arcade!
-#define MUS_PL_FRO                    720 // Received Castle Points!
-#define MUS_PL_POINTGET3              721 // Received Battle Points!
-#define MUS_PL_WINMINI2               722 // Cleared Wobbuffet Pop!
+#define MUS_PL_INTRO                692 // Title Screen
+#define MUS_PL_TITLE                693 // Press Start
+#define MUS_PL_DISTORTION_WORLD             694 // Distortion World
+#define MUS_PL_B_ARCADE            695 // Battle Arcade
+#define MUS_PL_B_HALL               696 // Battle Hall
+#define MUS_PL_B_CASTLE              697 // Battle Castle
+#define MUS_PL_B_FACTORY             698 // Battle Factory
+#define MUS_PL_GLOBAL_TERMINAL              699 // Global Terminal
+#define MUS_PL_LILYCOVE_BOSSA_NOVA                  700 // Villa Audio System: Bossa Nova Lilycove
+#define MUS_PL_LOOKER               701 // Looker's Theme
+#define MUS_PL_VS_GIRATINA                702 // Battle! (Giratina)
+#define MUS_PL_VS_FRONTIER_BRAIN               703 // Battle! (Frontier Brain)
+#define MUS_PL_VICTORY_FRONTIER_BRAIN               704 // Victory! (Frontier Brain)
+#define MUS_PL_VS_REGI                705 // Battle! (Regirock / Regice / Registeel / Regigigas)
+#define MUS_PL_CONTEST_COOL                706 // Super Contest: Coolness
+#define MUS_PL_CONTEST_SMART                707 // Super Contest: Smartness
+#define MUS_PL_CONTEST_CUTE                 708 // Super Contest: Cuteness
+#define MUS_PL_CONTEST_TOUGH                709 // Super Contest: Toughness
+#define MUS_PL_CONTEST_BEAUTY                710 // Super Contest: Beauty
+#define MUS_PL_SPIN_TRADE               711 // Spin Trade
+#define MUS_PL_WIFI_MINIGAMES               712 // Wi-Fi Plaza: Mini-Games
+#define MUS_PL_WIFI_PLAZA              713 // Wi-Fi Plaza
+#define MUS_PL_WIFI_PARADE             714 // Wi-Fi Plaza: Parade
+#define MUS_PL_GIRATINA_APPEARS_1                715 // Giratina Appears!
+#define MUS_PL_GIRATINA_APPEARS_2               716 // Giratina Appears! Part 2
+#define MUS_PL_MYSTERY_GIFT                717 // Mystery Gift
+#define MUS_PL_TWINLEAF_MUSIC_BOX                 718 // Villa Music Box: Twinleaf Tune
+#define MUS_PL_OBTAIN_ARCADE_POINTS                   719 // Received BP in the Battle Arcade!
+#define MUS_PL_OBTAIN_CASTLE_POINTS                    720 // Received Castle Points!
+#define MUS_PL_OBTAIN_B_POINTS              721 // Received Battle Points!
+#define MUS_PL_WIN_MINIGAME               722 // Cleared Wobbuffet Pop!
  
 // HeartGold & SoulSilver Music 
 #define MUS_HG_TITLE                  723 // Opening Movie

@@ -6477,7 +6477,7 @@ u16 GetBattleBGM(void)
             return MUS_DP_VS_LEGEND;
         case SPECIES_GIRATINA:
         case SPECIES_GIRATINA_ORIGIN:
-            return MUS_PL_BA_GIRA;
+            return MUS_PL_VS_GIRATINA;
         case SPECIES_CRESSELIA:
         case SPECIES_PHIONE:
         case SPECIES_SHAYMIN:
