@@ -2187,6 +2187,10 @@ DirectSoundWaveData_puresquare_50::
 	.incbin "sound/direct_sound_samples/puresquare_50.bin"
 
 	.align 2
+DirectSoundWaveData_purenoise::
+	.incbin "sound/direct_sound_samples/purenoise.bin"
+
+	.align 2
 DirectSoundWaveData_dp_808snare_16::
 	.incbin "sound/direct_sound_samples/dp_808snare_16.bin"
 
