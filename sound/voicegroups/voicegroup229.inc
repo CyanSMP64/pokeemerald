@@ -49,12 +49,12 @@ voicegroup229:: @ HGSS main
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_square_wave, 255, 250, 0, 171 @ 1 octave too low
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_bubbles, 255, 0, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 242, 25, 0  @ also 066 in BATTLE4 and DUNGEON4
-	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 252, 0, 128
-	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 250, 0, 234
-	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 160, 242, 101, 234
-	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 160, 242, 101, 192
-	voice_directsound 60, 0, DirectSoundWaveData_purenoise, 32, 0, 57, 192
-	voice_directsound 60, 0, DirectSoundWaveData_purenoise, 192, 242, 0, 192
+	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 252, 0, 96
+	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 250, 0, 220
+	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 224, 242, 101, 220
+	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 224, 242, 101, 192
+	voice_directsound 60, 0, DirectSoundWaveData_purenoise, 42, 0, 57, 192
+	voice_directsound 60, 0, DirectSoundWaveData_purenoise, 240, 242, 0, 192
 @	voice_directsound 60, 0, DirectSoundWaveData_dp_whistle_c5_16, 255, 246, 78, 192	@ remaining voices wrap around
 @	voice_directsound 60, 0, DirectSoundWaveData_dp_reverscyn_16, 255, 0, 255, 16		@ to the next voice group, so
 @	voice_directsound 60, 0, DirectSoundWaveData_dp_org5_c3_16, 255, 167, 235, 171		@ have some dittos
