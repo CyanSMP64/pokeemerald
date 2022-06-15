@@ -78,4 +78,31 @@ voicegroup191:: @ DPPt main
 	voice_directsound 60, 0, DirectSoundWaveData_dp_basschoir36, 255, 200, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_dp_tenorchoir48, 255, 200, 255, 171
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sopranochoir60, 255, 200, 255, 171
-
+@	voice_directsound 60, 0, DirectSoundWaveData_dp_whistle_c5_16, 255, 247, 78, 196			@ remaining voices wrap around
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy		@ to the next voice group, so
+@	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitmajor60, 255, 200, 255, 171			@ have some dittos
+@	voice_directsound 60, 0, DirectSoundWaveData_dp_orchhitminor60, 255, 200, 255, 171
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0											@ dummy
+@	voice_keysplit voicegroup227, KeySplitTable25    @ music box (platinum only)
+@	voice_keysplit voicegroup228, KeySplitTable34    @ banjo

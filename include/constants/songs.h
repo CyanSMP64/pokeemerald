@@ -680,8 +680,8 @@
 #define MUS_DP_EVOLVED                 662 // Congratulations! Your Pokémon Evolved!
 #define MUS_DP_OBTAIN_KEY_ITEM                 663 // Obtained a Key Item!
 #define MUS_DP_OBTAIN_ITEM                 664 // Obtained an Item!
-#define MUS_DP_CAUGHT_INTRO                 665 // 
-#define MUS_DP_DEX_RATING                 666 // 
+#define MUS_DP_CAUGHT_INTRO                 665 // Fanfare: Pokémon Caught (Unused)
+#define MUS_DP_DEX_RATING                 666 // Pokédex Evaluation (Unused)
 #define MUS_DP_OBTAIN_BADGE                  667 // Obtained a Badge!
 #define MUS_DP_POKETCH               668 // Obtained a Pokétch App!
 #define MUS_DP_OBTAIN_TMHM                   669 // Obtained a TM!
@@ -703,7 +703,7 @@
 #define MUS_DP_SLOTS_WIN             685 // You're a Winner!
 #define MUS_DP_SLOTS_JACKPOT           686 // You're a Jackpot Winner!
 #define MUS_DP_CREDITS             687 // Ending Theme
-#define MUS_DP_SLOTS_UNUSED                   688 // 
+#define MUS_DP_SLOTS_UNUSED                   688 // ??
 
 // Platinum Music 
 #define MUS_PL_FIGHT_AREA_DAY               689 // Fight Area (Battle Frontier)
@@ -1109,8 +1109,8 @@
 #define MUS_BW_ME_MISSION_FAILED     1085 // Mission Failed!
 #define MUS_BW_ME_ITEM_MYSTERY       1086 // Light Stone/Dark Stone
 #define MUS_BW_ME_CALL               1087 // Xtransceiver
-#define MUS_BW_ME_QUIZ               1088 // 
-#define MUS_BW_ME_DEL_POWER          1089 // 
+#define MUS_BW_ME_QUIZ               1088 // ??
+#define MUS_BW_ME_DEL_POWER          1089 // ??
 
 #define MUS_BW_PALPARK_BOX           1090 // Poké Transfer: Choose Your Pokémon!
 #define MUS_BW_PALPARK_GAME          1091 // Poké Transfer: Catch Your Pokémon!
@@ -1231,16 +1231,16 @@
 #define MUS_B2_THEEND                1204 // The End
 #define MUS_B2_ME_LCG_01             1205 // Xtransceiver - Game Start!
 #define MUS_B2_ME_LCG_02             1206 // Xtransceiver - Game Won!
-#define MUS_B2_ME_LCG_03             1207 // 
-#define MUS_B2_ME_LCG_04             1208 // 
+#define MUS_B2_ME_LCG_03             1207 // Xtransceiver Drum Roll
+#define MUS_B2_ME_LCG_04             1208 // Xtransceiver Drum Roll End
 #define MUS_B2_ME_MD_FAN01           1209 // Medal Box: Medal Box Upgraded!
 #define MUS_B2_ME_MD_FAN03           1210 // Earned a Participation Prize Medal!
 #define MUS_B2_ME_MD_FAN04           1211 // Medal Rally Complete!
 #define MUS_B2_ME_OTAMARO            1212 // Tympole Choir                             (TODO: PORTAMENTO!!)
 #define MUS_B2_ME_AVENUE_01          1213 // Join Avenue Level Up 1
 #define MUS_B2_ME_AVENUE_02          1214 // Join Avenue Level Up 2
-#define MUS_B2_ME_AVENUE_03          1215 // 
-#define MUS_B2_ME_CALL_LONG          1216 // 
+#define MUS_B2_ME_AVENUE_03          1215 // Join Avenue Raffle Drawn
+#define MUS_B2_ME_CALL_LONG          1216 // Xtransceiver call (long ver)
 #define MUS_B2_ME_ZUKAN_01           1217 // Pokédex Habitat List Complete!
 #define MUS_B2_ME_ZUKAN_02           1218 // 
 #define MUS_B2_ME_POKEWOOD           1219 // Immortalized in Pokéstar Studios!
