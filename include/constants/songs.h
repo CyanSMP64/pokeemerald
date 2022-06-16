@@ -920,200 +920,200 @@
 #define MUS_HG_WIN_MINIGAME            898 // Cleared Wobbuffet Pop!
 
 // Black & White Music
-#define MUS_BW_TITLE                  899 // Coronation Day
-#define MUS_BW_TITLE01                900 // A New Adventure!
-#define MUS_BW_POKEMON_THEME          901 // Title Screen
-#define MUS_BW_STARTING               902 // Onward to Adventure! (Part 1)
-#define MUS_BW_STARTING2              903 // Onward to Adventure! (Part 2)
-#define MUS_BW_SHINKA                 904 // Evolution (Part 1)
-#define MUS_BW_KOUKAN                 905 // Evolution (Part 2)
-#define MUS_BW_BICYCLE                906 // Bicycle
-#define MUS_BW_NAMINORI               907 // Surf
-#define MUS_BW_DIVING                 908 // Abyssal Ruins
-#define MUS_BW_E_DENDOUIRI            909 // Congratulations on Entering the Hall of Fame!
-#define MUS_BW_ENDING                 910 // Ending "Onward to Our Own Futures"
-#define MUS_BW_T_01                   911 // Nuvema Town
-#define MUS_BW_T_02                   912 // Accumula Town
-#define MUS_BW_T_03                   913 // Anville Town
-#define MUS_BW_T_04                   914 // Lacunosa Town
-#define MUS_BW_T_05_SP                915 // Undella Town (Autumn/Winter/Spring)
-#define MUS_BW_T_05_SU                916 // Undella Town (Summer)
-#define MUS_BW_C_01                   917 // Striaton City
-#define MUS_BW_C_02                   918 // Nacrene City
-#define MUS_BW_C_03                   919 // Castelia City
-#define MUS_BW_C_04                   920 // Nimbasa City
-#define MUS_BW_C_05                   921 // Driftveil City
-#define MUS_BW_C_06                   922 // Mistralton City                             (TODO: PORTAMENTO!!)
-#define MUS_BW_C_07                   923 // Icirrus City
-#define MUS_BW_C_08_B                 924 // Opelucid City (Pokémon Black)               (TODO: PORTAMENTO!!)
-#define MUS_BW_C_08_W                 925 // Opelucid City (Pokémon White)               (TODO: PORTAMENTO!!)
-#define MUS_BW_C_10_B                 926 // Black City
-#define MUS_BW_C_10_W                 927 // White Forest
-#define MUS_BW_R_A                    928 // Route 1
-#define MUS_BW_R_B_SP                 929 // Route 2 (Spring)
-#define MUS_BW_R_B_SU                 930 // Route 2 (Summer)
-#define MUS_BW_R_B_AU                 931 // Route 2 (Autumn)
-#define MUS_BW_R_B_WI                 932 // Route 2 (Winter)
-#define MUS_BW_R_C_SP                 933 // Route 4 (Spring)
-#define MUS_BW_R_C_SU                 934 // Route 4 (Summer)
-#define MUS_BW_R_C_AU                 935 // Route 4 (Autumn)
-#define MUS_BW_R_C_WI                 936 // Route 4 (Winter)
-#define MUS_BW_R_D_SP                 937 // Route 6 (Spring)
-#define MUS_BW_R_D_SU                 938 // Route 6 (Summer)
-#define MUS_BW_R_D_AU                 939 // Route 6 (Autumn)
-#define MUS_BW_R_D_WI                 940 // Route 6 (Winter)
-#define MUS_BW_R_E_SP                 941 // Route 12 (Spring)
-#define MUS_BW_R_E_SU                 942 // Route 12 (Summer)
-#define MUS_BW_R_E_AU                 943 // Route 12 (Autumn)
-#define MUS_BW_R_E_WI                 944 // Route 12 (Winter)
-#define MUS_BW_R_F                    945 // Route 10
-#define MUS_BW_H_01                   946 // Skyarrow Bridge
-#define MUS_BW_H_02                   947 // Driftveil Drawbridge
-#define MUS_BW_H_03                   948 // Tubeline Bridge
-#define MUS_BW_H_04                   949 // Village Bridge
-#define MUS_BW_H_05                   950 // Marvelous Bridge
-#define MUS_BW_POKECEN                951 // Pokémon Center
-#define MUS_BW_FS                     952 // Shopping Mall Nine
+#define MUS_BW_INTRO_1                  899 // Coronation Day
+#define MUS_BW_INTRO_2                900 // A New Adventure!
+#define MUS_BW_TITLE          901 // Title Screen
+#define MUS_BW_NEW_GAME_1               902 // Onward to Adventure! (Part 1)
+#define MUS_BW_NEW_GAME_2              903 // Onward to Adventure! (Part 2)
+#define MUS_BW_EVOLUTION_INTRO                 904 // Evolution (Part 1)
+#define MUS_BW_EVOLUTION                 905 // Evolution (Part 2)
+#define MUS_BW_CYCLING                906 // Bicycle
+#define MUS_BW_SURF               907 // Surf
+#define MUS_BW_UNDERWATER                 908 // Abyssal Ruins
+#define MUS_BW_HALL_OF_FAME            909 // Congratulations on Entering the Hall of Fame!
+#define MUS_BW_CREDITS                 910 // Ending "Onward to Our Own Futures"
+#define MUS_BW_NUVEMA                   911 // Nuvema Town
+#define MUS_BW_ACCUMULA                   912 // Accumula Town
+#define MUS_BW_ANVILLE                   913 // Anville Town
+#define MUS_BW_LACUNOSA                   914 // Lacunosa Town
+#define MUS_BW_UNDELLA_WINTER                915 // Undella Town (Autumn/Winter/Spring)
+#define MUS_BW_UNDELLA_SUMMER                916 // Undella Town (Summer)
+#define MUS_BW_STRIATON                   917 // Striaton City
+#define MUS_BW_NACRENE                   918 // Nacrene City
+#define MUS_BW_CASTELIA                   919 // Castelia City
+#define MUS_BW_NIMBASA                   920 // Nimbasa City
+#define MUS_BW_DRIFTVEIL                   921 // Driftveil City
+#define MUS_BW_MISTRALTON                   922 // Mistralton City                             (TODO: PORTAMENTO!!)
+#define MUS_BW_ICIRRUS                   923 // Icirrus City
+#define MUS_BW_OPELUCID_BLACK                 924 // Opelucid City (Pokémon Black)               (TODO: PORTAMENTO!!)
+#define MUS_BW_OPELUCID_WHITE                 925 // Opelucid City (Pokémon White)               (TODO: PORTAMENTO!!)
+#define MUS_BW_BLACK_CITY                 926 // Black City
+#define MUS_BW_WHITE_FOREST                 927 // White Forest
+#define MUS_BW_ROUTE1                    928 // Route 1
+#define MUS_BW_ROUTE2_SPRING                 929 // Route 2 (Spring)
+#define MUS_BW_ROUTE2_SUMMER                 930 // Route 2 (Summer)
+#define MUS_BW_ROUTE2_AUTUMN                 931 // Route 2 (Autumn)
+#define MUS_BW_ROUTE2_WINTER                 932 // Route 2 (Winter)
+#define MUS_BW_ROUTE4_SPRING                 933 // Route 4 (Spring)
+#define MUS_BW_ROUTE4_SUMMER                 934 // Route 4 (Summer)
+#define MUS_BW_ROUTE4_AUTUMN                 935 // Route 4 (Autumn)
+#define MUS_BW_ROUTE4_WINTER                 936 // Route 4 (Winter)
+#define MUS_BW_ROUTE6_SPRING                 937 // Route 6 (Spring)
+#define MUS_BW_ROUTE6_SUMMER                 938 // Route 6 (Summer)
+#define MUS_BW_ROUTE6_AUTUMN                 939 // Route 6 (Autumn)
+#define MUS_BW_ROUTE6_WINTER                 940 // Route 6 (Winter)
+#define MUS_BW_ROUTE12_SPRING                 941 // Route 12 (Spring)
+#define MUS_BW_ROUTE12_SUMMER                 942 // Route 12 (Summer)
+#define MUS_BW_ROUTE12_AUTUMN                 943 // Route 12 (Autumn)
+#define MUS_BW_ROUTE12_WINTER                 944 // Route 12 (Winter)
+#define MUS_BW_ROUTE10                    945 // Route 10
+#define MUS_BW_SKYARROW_BRIDGE                   946 // Skyarrow Bridge
+#define MUS_BW_DRIFTVEIL_DRAWBRIDGE                   947 // Driftveil Drawbridge
+#define MUS_BW_TUBELINE_BRIDGE                   948 // Tubeline Bridge
+#define MUS_BW_VILLAGE_BRIDGE                   949 // Village Bridge
+#define MUS_BW_MARVELOUS_BRIDGE                   950 // Marvelous Bridge
+#define MUS_BW_POKE_CENTER                951 // Pokémon Center
+#define MUS_BW_SHOPPING_MALL_NINE                     952 // Shopping Mall Nine
 #define MUS_BW_GYM                    953 // Pokémon Gym
-#define MUS_BW_LABO                   954 // Juniper Pokémon Lab
+#define MUS_BW_JUNIPER_LAB                   954 // Juniper Pokémon Lab
 #define MUS_BW_GATE                   955 // Gate
 #define MUS_BW_GEAR_STATION           956 // Gear Station
 #define MUS_BW_BATTLE_SUBWAY          957 // The Battle Subway (Carriage 7)            (TODO: PORTAMENTO!!)
-#define MUS_BW_PALPARK                958 // Poké Transfer Lab
-#define MUS_BW_PLEASURE_BOAT          959 // The Royal Unova
-#define MUS_BW_PALACE                 960 // Entralink
-#define MUS_BW_PALACE2                961 // Someone's Entralink
-#define MUS_BW_UNITED_NATIONS         962 // Unity Tower
+#define MUS_BW_POKE_TRANSFER_LAB                958 // Poké Transfer Lab
+#define MUS_BW_ROYAL_UNOVA          959 // The Royal Unova
+#define MUS_BW_ENTRALINK                 960 // Entralink
+#define MUS_BW_SOMEONES_ENTRALINK                961 // Someone's Entralink
+#define MUS_BW_UNITY_TOWER         962 // Unity Tower
 #define MUS_BW_POKEMON_LEAGUE         963 // The Pokémon League
 #define MUS_BW_N_CASTLE_BRIDGE        964 // Embracing One's Duty
 #define MUS_BW_N_CASTLE               965 // N's Castle
-#define MUS_BW_D_01                   966 // The Dreamyard
-#define MUS_BW_D_01_B1F               967 // The Dreamyard (B1F)
-#define MUS_BW_D_02                   968 // Chargestone Cave
-#define MUS_BW_D_02_B1F               969 // Chargestone Cave (B1F)
-#define MUS_BW_D_02_B2F               970 // Chargestone Cave (B2F)
-#define MUS_BW_D_03                   971 // Cold Storage
-#define MUS_BW_D_04                   972 // Relic Castle
-#define MUS_BW_D_05                   973 // Dragonspiral Tower
-#define MUS_BW_D_06                   974 // Lostlorn Forest
-#define MUS_BW_D_07                   975 // Dragonspiral Tower Top Floor
-#define MUS_BW_D_CHAMPROAD            976 // Victory Road (All Badges)
-#define MUS_BW_E_TSURETEKE1           977 // Hurry Along 1
-#define MUS_BW_E_TSURETEKE2           978 // Hurry Along 2
-#define MUS_BW_E_RIVAL                979 // Cheren's Theme
-#define MUS_BW_E_SUPPORT              980 // Bianca's Theme
-#define MUS_BW_E_DOCTOR               981 // Professor Juniper
-#define MUS_BW_E_DOCTOR2              982 // Cedric Juniper
-#define MUS_BW_E_PLASMA               983 // Team Plasma Appears!                          (TODO: PORTAMENTO!!)
-#define MUS_BW_E_N                    984 // Prisoner to a Formula
-#define MUS_BW_E_SAGE                 985 // Team Plasma Plots
-#define MUS_BW_E_G_CIS                986 // Ghetsis' Ambitions
-#define MUS_BW_E_INISHIE              987 // Relic Song
-#define MUS_BW_E_EMOTION              988 // An Unwavering Heart
-#define MUS_BW_E_TROUBLE              989 // There's Trouble!
-#define MUS_BW_E_LAST                 990 // Farewell
-#define MUS_BW_E_HANDSOME             991 // Looker's Theme
-#define MUS_BW_E_CHAMPION             992 // Champion Alder
-#define MUS_BW_E_OPENING              993 // A Day of Beginnings
-#define MUS_BW_E_KANRANSYA            994 // A Ferris Wheel Ride Together
-#define MUS_BW_E_N_CASTLE             995 // The Pokémon League Besieged!
-#define MUS_BW_E_LEGEND_BORN          996 // The Dragon Awakes
-#define MUS_BW_MSL_FIELD              997 // Musical Theater
-#define MUS_BW_MSL_DRESSUP            998 // Dress Up with Props
-#define MUS_BW_MSL_BEFORE             999 // The Curtain for the Musical Rises!
-#define MUS_BW_MSL_01                1000 // Musical: "Stardom"                        (TODO: PORTAMENTO!!)
-#define MUS_BW_MSL_02                1001 // Musical: "Forest Stroll"
-#define MUS_BW_MSL_03                1002 // Musical: "A Sweet Soirée"
-#define MUS_BW_MSL_04                1003 // Musical: "Exciting Nimbasa"
-#define MUS_BW_EYE_01                1004 // Trainers' Eyes Meet (Youngster)
-#define MUS_BW_EYE_02                1005 // Trainers' Eyes Meet (Lass)
-#define MUS_BW_EYE_03                1006 // Trainers' Eyes Meet (Twins)
-#define MUS_BW_EYE_04                1007 // Trainers' Eyes Meet (Ace Trainer)
-#define MUS_BW_EYE_05                1008 // Trainers' Eyes Meet (Roughneck)
-#define MUS_BW_EYE_06                1009 // Trainers' Eyes Meet (Parasol Lady)
-#define MUS_BW_EYE_07                1010 // Trainers' Eyes Meet (Cyclist)
-#define MUS_BW_EYE_08                1011 // Trainers' Eyes Meet (Psychic)               (TODO: PORTAMENTO!!)
-#define MUS_BW_EYE_09                1012 // Trainers' Eyes Meet (Scientist)
-#define MUS_BW_EYE_10                1013 // Trainers' Eyes Meet (Pokéfan)
-#define MUS_BW_EYE_11                1014 // Trainers' Eyes Meet (Backpacker)
-#define MUS_BW_EYE_12                1015 // Trainers' Eyes Meet (Clerk ♂)
-#define MUS_BW_EYE_13                1016 // Trainers' Eyes Meet (Gentleman)
-#define MUS_BW_EYE_PLASMA            1017 // Trainers' Eyes Meet (Team Plasma)           (TODO: PORTAMENTO!!)
-#define MUS_BW_VS_NORAPOKE           1018 // Battle! (Wild Pokémon)                        (TODO: PORTAMENTO!!)
-#define MUS_BW_VS_TSUYOPOKE          1019 // Battle! (Strong Wild Pokémon)             (TODO: PORTAMENTO!!)
+#define MUS_BW_DREAMYARD                   966 // The Dreamyard
+#define MUS_BW_DREAMYARD_B1F               967 // The Dreamyard (B1F)
+#define MUS_BW_CHARGESTONE_CAVE                   968 // Chargestone Cave
+#define MUS_BW_CHARGESTONE_CAVE_B1F               969 // Chargestone Cave (B1F)
+#define MUS_BW_CHARGESTONE_CAVE_B2F               970 // Chargestone Cave (B2F)
+#define MUS_BW_COLD_STORAGE                   971 // Cold Storage
+#define MUS_BW_RELIC_CASTLE                   972 // Relic Castle
+#define MUS_BW_DRAGONSPIRAL_TOWER                   973 // Dragonspiral Tower
+#define MUS_BW_LOSTLORN_FOREST                   974 // Lostlorn Forest
+#define MUS_BW_DRAGONSPIRAL_TOWER_TOP                   975 // Dragonspiral Tower Top Floor
+#define MUS_BW_VICTORY_ROAD            976 // Victory Road (All Badges)
+#define MUS_BW_FOLLOW_ME_1           977 // Hurry Along 1
+#define MUS_BW_FOLLOW_ME_2           978 // Hurry Along 2
+#define MUS_BW_CHEREN                979 // Cheren's Theme
+#define MUS_BW_BIANCA              980 // Bianca's Theme
+#define MUS_BW_JUNIPER               981 // Professor Juniper
+#define MUS_BW_CEDRIC_JUNIPER              982 // Cedric Juniper
+#define MUS_BW_PLASMA               983 // Team Plasma Appears!                          (TODO: PORTAMENTO!!)
+#define MUS_BW_N                    984 // Prisoner to a Formula
+#define MUS_BW_PLASMA_PLOTS                 985 // Team Plasma Plots
+#define MUS_BW_GHETSIS                986 // Ghetsis' Ambitions
+#define MUS_BW_RELIC_SONG              987 // Relic Song
+#define MUS_BW_EMOTION              988 // An Unwavering Heart
+#define MUS_BW_TROUBLE              989 // There's Trouble!
+#define MUS_BW_FAREWELL                 990 // Farewell
+#define MUS_BW_LOOKER             991 // Looker's Theme
+#define MUS_BW_ALDER             992 // Champion Alder
+#define MUS_BW_OPENING              993 // A Day of Beginnings
+#define MUS_BW_FERRIS_WHEEL            994 // A Ferris Wheel Ride Together
+#define MUS_BW_N_CASTLE_APPEARS             995 // The Pokémon League Besieged!
+#define MUS_BW_LEGEND_AWAKENS          996 // The Dragon Awakes
+#define MUS_BW_MUSICAL_THEATER              997 // Musical Theater
+#define MUS_BW_MUSICAL_DRESS_UP            998 // Dress Up with Props
+#define MUS_BW_MUSICAL_BEFORE             999 // The Curtain for the Musical Rises!
+#define MUS_BW_MUSICAL_1                1000 // Musical: "Stardom"                        (TODO: PORTAMENTO!!)
+#define MUS_BW_MUSICAL_2                1001 // Musical: "Forest Stroll"
+#define MUS_BW_MUSICAL_3                1002 // Musical: "A Sweet Soirée"
+#define MUS_BW_MUSICAL_4                1003 // Musical: "Exciting Nimbasa"
+#define MUS_BW_ENCOUNTER_BOY                1004 // Trainers' Eyes Meet (Youngster)
+#define MUS_BW_ENCOUNTER_GIRL                1005 // Trainers' Eyes Meet (Lass)
+#define MUS_BW_ENCOUNTER_TWINS                1006 // Trainers' Eyes Meet (Twins)
+#define MUS_BW_ENCOUNTER_ACE_TRAINER                1007 // Trainers' Eyes Meet (Ace Trainer)
+#define MUS_BW_ENCOUNTER_ROUGHNECK                1008 // Trainers' Eyes Meet (Roughneck)
+#define MUS_BW_ENCOUNTER_LADY                1009 // Trainers' Eyes Meet (Parasol Lady)
+#define MUS_BW_ENCOUNTER_CYCLIST                1010 // Trainers' Eyes Meet (Cyclist)
+#define MUS_BW_ENCOUNTER_PSYCHIC                1011 // Trainers' Eyes Meet (Psychic)               (TODO: PORTAMENTO!!)
+#define MUS_BW_ENCOUNTER_SUSPICIOUS                1012 // Trainers' Eyes Meet (Scientist)
+#define MUS_BW_ENCOUNTER_POKEFAN                1013 // Trainers' Eyes Meet (Pokéfan)
+#define MUS_BW_ENCOUNTER_HIKER                1014 // Trainers' Eyes Meet (Backpacker)
+#define MUS_BW_ENCOUNTER_CLERK                1015 // Trainers' Eyes Meet (Clerk ♂)
+#define MUS_BW_ENCOUNTER_RICH                1016 // Trainers' Eyes Meet (Gentleman)
+#define MUS_BW_ENCOUNTER_PLASMA            1017 // Trainers' Eyes Meet (Team Plasma)           (TODO: PORTAMENTO!!)
+#define MUS_BW_VS_WILD           1018 // Battle! (Wild Pokémon)                        (TODO: PORTAMENTO!!)
+#define MUS_BW_VS_WILD_STRONG          1019 // Battle! (Strong Wild Pokémon)             (TODO: PORTAMENTO!!)
 #define MUS_BW_VS_TRAINER            1020 // Battle! (Trainer Battle)
 #define MUS_BW_VS_SUBWAY_TRAINER     1021 // Battle! (Battle Subway Trainer)
-#define MUS_BW_VS_GYMLEADER          1022 // Battle! (Gym Leader)                          (TODO: PORTAMENTO!!)
+#define MUS_BW_VS_GYM_LEADER          1022 // Battle! (Gym Leader)                          (TODO: PORTAMENTO!!)
 #define MUS_BW_VS_RIVAL              1023 // Battle! (Cheren/Bianca)                       (TODO: PORTAMENTO!!)
 #define MUS_BW_VS_PLASMA             1024 // Battle! (Team Plasma)                         (TODO: PORTAMENTO!!)
-#define MUS_BW_VS_SHITENNO           1025 // Battle! (Elite Four)                       (TODO: PORTAMENTO!!)
-#define MUS_BW_VS_CHAMP              1026 // Battle! (Champion)                        (TODO: PORTAMENTO!!)
+#define MUS_BW_VS_ELITE_FOUR           1025 // Battle! (Elite Four)                       (TODO: PORTAMENTO!!)
+#define MUS_BW_VS_CHAMPION              1026 // Battle! (Champion)                        (TODO: PORTAMENTO!!)
 #define MUS_BW_VS_N                  1027 // Battle! (N)                                   (TODO: PORTAMENTO!!)
-#define MUS_BW_VS_N_2                1028 // Decisive Battle! (N)                       (TODO: PORTAMENTO!! Trust me this sounds absolutely terrible without it)
-#define MUS_BW_VS_G_CIS              1029 // Battle! (Ghetsis)                          (TODO: PORTAMENTO!!)
-#define MUS_BW_VS_SHIN               1030 // Battle! (Reshiram/Zekrom)                  (TODO: PORTAMENTO!!)
-#define MUS_BW_VS_RAI                1031 // Battle! (Kyurem)                          (TODO: PORTAMENTO!!)
-#define MUS_BW_VS_MOVEPOKE           1032 // Battle! (Legendary Pokémon)               (TODO: PORTAMENTO!!)
-#define MUS_BW_VS_SHIRONA            1033 // Battle! (Cynthia)
-#define MUS_BW_BATTLEPINCH           1034 // A Tight Spot During Battle!
-#define MUS_BW_BATTLESUPERIOR        1035 // Victory Lies Before You!
-#define MUS_BW_WIN1                  1036 // Victory! (Wild Pokémon)
-#define MUS_BW_WIN2                  1037 // Victory! (Trainer Battle)
-#define MUS_BW_WIN3                  1038 // Victory! (Gym Leader)
-#define MUS_BW_WIN4                  1039 // Victory! (Final N & Ghetsis)
-#define MUS_BW_WIN5                  1040 // Victory! (Champion)
-#define MUS_BW_WIFI_ACCESS           1041 // Nintendo Wi-Fi Connection
-#define MUS_BW_WIFI_PRESENT          1042 // Mystery Gift                              (TODO: PORTAMENTO!!)
+#define MUS_BW_VS_N_FINAL                1028 // Decisive Battle! (N)                       (TODO: PORTAMENTO!! Trust me this sounds absolutely terrible without it)
+#define MUS_BW_VS_GHETSIS              1029 // Battle! (Ghetsis)                          (TODO: PORTAMENTO!!)
+#define MUS_BW_VS_RESHIRAM_ZEKROM               1030 // Battle! (Reshiram/Zekrom)                  (TODO: PORTAMENTO!!)
+#define MUS_BW_VS_KYUREM                1031 // Battle! (Kyurem)                          (TODO: PORTAMENTO!!)
+#define MUS_BW_VS_LEGEND           1032 // Battle! (Legendary Pokémon)               (TODO: PORTAMENTO!!)
+#define MUS_BW_VS_CYNTHIA            1033 // Battle! (Cynthia)
+#define MUS_BW_LOW_HEALTH           1034 // A Tight Spot During Battle!
+#define MUS_BW_GYM_LEADER_LAST_MON        1035 // Victory Lies Before You!
+#define MUS_BW_VICTORY_WILD                  1036 // Victory! (Wild Pokémon)
+#define MUS_BW_VICTORY_TRAINER                  1037 // Victory! (Trainer Battle)
+#define MUS_BW_VICTORY_GYM_LEADER                  1038 // Victory! (Gym Leader)
+#define MUS_BW_VICTORY_GHETSIS                  1039 // Victory! (Final N & Ghetsis)
+#define MUS_BW_VICTORY_CHAMPION                  1040 // Victory! (Champion)
+#define MUS_BW_WFC           1041 // Nintendo Wi-Fi Connection
+#define MUS_BW_MYSTERY_GIFT          1042 // Mystery Gift                              (TODO: PORTAMENTO!!)
 #define MUS_BW_GAME_SYNC             1043 // Game Sync
-#define MUS_BW_GLTERMINAL            1044 // Global Terminal
-#define MUS_BW_GURUGURU              1045 // Spin Trade
+#define MUS_BW_GLOBAL_TERMINAL            1044 // Global Terminal
+#define MUS_BW_SPIN_TRADE              1045 // Spin Trade
 #define MUS_BW_GTS                   1046 // Gts
-#define MUS_BW_WCS                   1047 // Challenging a Battle Competition
-#define MUS_BW_E_SHIRONA             1048 // Cynthia's Theme
-#define MUS_BW_E_FRIEND              1049 // Let's Go Together!
-#define MUS_BW_E_SOUND_DESIGNER      1050 // Team Rocket!?
-#define MUS_BW_VS_WCS                1051 // Pokémon World Championships Final
-#define MUS_BW_E_LEGEND_COME         1052 // N's Dragon
-#define MUS_BW_WIN6                  1053 // Victory! (Team Plasma)
+#define MUS_BW_WIFI_BATTLE_LOBBY                   1047 // Challenging a Battle Competition
+#define MUS_BW_ENCOUNTER_CYNTHIA             1048 // Cynthia's Theme
+#define MUS_BW_CHEREN_BIANCA              1049 // Let's Go Together!
+#define MUS_BW_ROCKET      1050 // Team Rocket!?
+#define MUS_BW_VS_WORLD_CHAMPIONSHIPS                1051 // Pokémon World Championships Final
+#define MUS_BW_N_LEGEND_APPEARS         1052 // N's Dragon
+#define MUS_BW_VICTORY_PLASMA                  1053 // Victory! (Team Plasma)
 #define MUS_BW_N_ROOM                1054 // The Pokémon Child, N
-#define MUS_BW_GF_LOGO               1055 // Game Freak
-#define MUS_BW_MSL_DL_MUNNA          1056 // Musical: "Charming Munna"
-#define MUS_BW_MSL_DL_SMASH          1057 // Musical: "Pokémon Smash!"                 (TODO: PORTAMENTO!!)
-#define MUS_BW_MSL_DL_FESTA          1058 // Musical: "Carnival Pokémon"               (TODO: PORTAMENTO!!)
-#define MUS_BW_MSL_DL_RELIC          1059 // Musical: "Meloettaaa!!!"
-#define MUS_BW_MSL_DL_RUNPA          1060 // Musical: "Carnival Ludicolo!"
-#define MUS_BW_ME_ASA                1061 // Pokémon Healed
-#define MUS_BW_ME_LVUP               1062 // Level Up!
-#define MUS_BW_ME_ITEM               1063 // Obtained an Item!
-#define MUS_BW_ME_KEYITEM            1064 // Obtained a Key Item!
-#define MUS_BW_ME_SHINKAOME          1065 // Congratulations! Your Pokémon Evolved!
-#define MUS_BW_ME_BADGE              1066 // Received a League Gym Badge
-#define MUS_BW_ME_WAZA               1067 // Obtained a TM!
-#define MUS_BW_ME_ACCE               1068 // Received Props!
-#define MUS_BW_ME_WASURE             1069 // Move Deleted
-#define MUS_BW_ME_KINOMI             1070 // Obtained a Berry! (Unused)
-#define MUS_BW_ME_HYOUKA1            1071 // Pokédex Evaluation... You've Just Begun!
-#define MUS_BW_ME_HYOUKA2            1072 // Pokédex Evaluation... You're on Your Way!
-#define MUS_BW_ME_HYOUKA3            1073 // Pokédex Evaluation... Keep at It!
-#define MUS_BW_ME_HYOUKA4            1074 // Pokédex Evaluation... Not Bad!
-#define MUS_BW_ME_HYOUKA5            1075 // Pokédex Evaluation... Just a Little More!
-#define MUS_BW_ME_HYOUKA6            1076 // Pokédex Evaluation... It's Perfect!
-#define MUS_BW_ME_TAMAGO_GET         1077 // Received a Pokémon Egg!
-#define MUS_BW_ME_BPGET              1078 // Received BP!
-#define MUS_BW_ME_AISHOU_H           1079 // Feeling Check: Perfect!
-#define MUS_BW_ME_AISHOU_M           1080 // Feeling Check: Getting Close
-#define MUS_BW_ME_AISHOU_L           1081 // Feeling Check: Lukewarm
-#define MUS_BW_ME_AISHOU_KIDOU       1082 // Feeling Check
-#define MUS_BW_ME_MISSION_START      1083 // Begin an Entralink Mission!
-#define MUS_BW_ME_MISSION_CLEAR      1084 // Mission Accomplished!
-#define MUS_BW_ME_MISSION_FAILED     1085 // Mission Failed!
-#define MUS_BW_ME_ITEM_MYSTERY       1086 // Light Stone/Dark Stone
-#define MUS_BW_ME_CALL               1087 // Xtransceiver
+#define MUS_BW_GAME_FREAK               1055 // Game Freak
+#define MUS_BW_MUSICAL_DLC_1          1056 // Musical: "Charming Munna"
+#define MUS_BW_MUSICAL_DLC_2          1057 // Musical: "Pokémon Smash!"                 (TODO: PORTAMENTO!!)
+#define MUS_BW_MUSICAL_DLC_3          1058 // Musical: "Carnival Pokémon"               (TODO: PORTAMENTO!!)
+#define MUS_BW_MUSICAL_DLC_4          1059 // Musical: "Meloettaaa!!!"
+#define MUS_BW_MUSICAL_DLC_5          1060 // Musical: "Carnival Ludicolo!"
+#define MUS_BW_HEAL                1061 // Pokémon Healed
+#define MUS_BW_LEVEL_UP               1062 // Level Up!
+#define MUS_BW_OBTAIN_ITEM               1063 // Obtained an Item!
+#define MUS_BW_OBTAIN_KEY_ITEM            1064 // Obtained a Key Item!
+#define MUS_BW_EVOLVED          1065 // Congratulations! Your Pokémon Evolved!
+#define MUS_BW_OBTAIN_BADGE              1066 // Received a League Gym Badge
+#define MUS_BW_OBTAIN_TMHM               1067 // Obtained a TM!
+#define MUS_BW_OBTAIN_ACCESSORY               1068 // Received Props!
+#define MUS_BW_MOVE_DELETED             1069 // Move Deleted
+#define MUS_BW_OBTAIN_BERRY             1070 // Obtained a Berry! (Unused)
+#define MUS_BW_DEX_RATING_1            1071 // Pokédex Evaluation... You've Just Begun!
+#define MUS_BW_DEX_RATING_2            1072 // Pokédex Evaluation... You're on Your Way!
+#define MUS_BW_DEX_RATING_3            1073 // Pokédex Evaluation... Keep at It!
+#define MUS_BW_DEX_RATING_4            1074 // Pokédex Evaluation... Not Bad!
+#define MUS_BW_DEX_RATING_5            1075 // Pokédex Evaluation... Just a Little More!
+#define MUS_BW_DEX_RATING_6            1076 // Pokédex Evaluation... It's Perfect!
+#define MUS_BW_OBTAIN_EGG         1077 // Received a Pokémon Egg!
+#define MUS_BW_OBTAIN_B_POINTS              1078 // Received BP!
+#define MUS_BW_FEELING_CHECK_3           1079 // Feeling Check: Perfect!
+#define MUS_BW_FEELING_CHECK_2           1080 // Feeling Check: Getting Close
+#define MUS_BW_FEELING_CHECK_1           1081 // Feeling Check: Lukewarm
+#define MUS_BW_FEELING_CHECK_START       1082 // Feeling Check
+#define MUS_BW_MISSION_START      1083 // Begin an Entralink Mission!
+#define MUS_BW_MISSION_CLEAR      1084 // Mission Accomplished!
+#define MUS_BW_MISSION_FAILED     1085 // Mission Failed!
+#define MUS_BW_OBTAIN_LIGHT_DARK_STONE       1086 // Light Stone/Dark Stone
+#define MUS_BW_XTRANSCEIVER_CALL               1087 // Xtransceiver
 #define MUS_BW_ME_QUIZ               1088 // ??
 #define MUS_BW_ME_DEL_POWER          1089 // ??
 
-#define MUS_BW_PALPARK_BOX           1090 // Poké Transfer: Choose Your Pokémon!
-#define MUS_BW_PALPARK_GAME          1091 // Poké Transfer: Catch Your Pokémon!
+#define MUS_BW_POKE_TRANSFER_BOX           1090 // Poké Transfer: Choose Your Pokémon!
+#define MUS_BW_POKE_TRANSFER_GAME          1091 // Poké Transfer: Catch Your Pokémon!
 
 // Black 2 & White 2 Music
 #define MUS_B2_TITLE01               1092 // Opening

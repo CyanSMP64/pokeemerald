@@ -6521,12 +6521,12 @@ u16 GetBattleBGM(void)
         case SPECIES_GENESECT_SHOCK_DRIVE:
         case SPECIES_GENESECT_BURN_DRIVE:
         case SPECIES_GENESECT_CHILL_DRIVE:
-            return MUS_BW_VS_MOVEPOKE;
+            return MUS_BW_VS_LEGEND;
         case SPECIES_RESHIRAM:
         case SPECIES_ZEKROM:
-            return MUS_BW_VS_SHIN;
+            return MUS_BW_VS_RESHIRAM_ZEKROM;
         case SPECIES_KYUREM:
-            return MUS_BW_VS_RAI;
+            return MUS_BW_VS_KYUREM;
         case SPECIES_KYUREM_WHITE:
         case SPECIES_KYUREM_BLACK:
             return MUS_B2_VS_KYURAMU;
