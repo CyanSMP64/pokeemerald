@@ -2919,388 +2919,388 @@ $(MID_SUBDIR)/mus_bw_poke_transfer_box.s: %.s: %.mid
 $(MID_SUBDIR)/mus_bw_poke_transfer_game.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G275 -V073
 
-$(MID_SUBDIR)/mus_b2_title01.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_intro.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V127
 
-$(MID_SUBDIR)/mus_b2_ending.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_credits.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V127
 
-$(MID_SUBDIR)/mus_b2_ground_gym_01.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_driftveil_gym.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V115
 
-$(MID_SUBDIR)/mus_b2_d_n_castle.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_n_castle.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V120
 
-$(MID_SUBDIR)/mus_b2_mugen_lobby_b.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_black_tower_lobby.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V080
 
-$(MID_SUBDIR)/mus_b2_mugen_lobby_w.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_white_treehollow_lobby.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V072
 
-$(MID_SUBDIR)/mus_b2_mugen_d_b.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_black_tower.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V090
 
-$(MID_SUBDIR)/mus_b2_mugen_d_w.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_white_treehollow.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V078
 
-$(MID_SUBDIR)/mus_b2_e_cheren.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_cheren.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V095
 
-$(MID_SUBDIR)/mus_b2_e_beru.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_bianca.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V115
 
-$(MID_SUBDIR)/mus_b2_e_n_swan.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_n.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V095
 
-$(MID_SUBDIR)/mus_b2_erectric_gym_01.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_nimbasa_gym_1.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V090
 
-$(MID_SUBDIR)/mus_b2_erectric_gym_02.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_nimbasa_gym_2.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V080
 
-$(MID_SUBDIR)/mus_b2_insect_gym_01.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_castelia_gym.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V100
 
-$(MID_SUBDIR)/mus_b2_poisone_gym_01.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_virbank_gym.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V104
 
-$(MID_SUBDIR)/mus_b2_poisone_gym_01_jp.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_virbank_gym_jp.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V104
 
-$(MID_SUBDIR)/mus_b2_demo_opening.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_opening.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V090
 
-$(MID_SUBDIR)/mus_b2_c_12.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_aspertia.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V112
 
-$(MID_SUBDIR)/mus_b2_c_13.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_virbank.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V100
 
-$(MID_SUBDIR)/mus_b2_c_14.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_humilau.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V078
 
-$(MID_SUBDIR)/mus_b2_eye_neo_plasma.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_encounter_neo_plasma.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V080
 
-$(MID_SUBDIR)/mus_b2_vs_norapoke.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_wild.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V094
 
 $(MID_SUBDIR)/mus_b2_vs_trainer.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V090
 
-$(MID_SUBDIR)/mus_b2_vs_gymleader.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_gym_leader.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V106
 
-$(MID_SUBDIR)/mus_b2_vs_dplegend.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_sinnoh_legend.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V090
 
-$(MID_SUBDIR)/mus_b2_vs_swan_n.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_n.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V127
 
-$(MID_SUBDIR)/mus_b2_vs_uma.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_uxie_mesprit_azelf.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V090
 
 $(MID_SUBDIR)/mus_b2_vs_regi.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V100
 
-$(MID_SUBDIR)/mus_b2_battlesuperior.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_gym_leader_last_mon.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V090
 
-$(MID_SUBDIR)/mus_b2_d_n_room.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_n_room.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V093
 
-$(MID_SUBDIR)/mus_b2_r_19_sp.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_route19_spring.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V092
 
-$(MID_SUBDIR)/mus_b2_r_19_su.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_route19_summer.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V092
 
-$(MID_SUBDIR)/mus_b2_r_19_au.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_route19_autumn.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V092
 
-$(MID_SUBDIR)/mus_b2_r_19_wi.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_route19_winter.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V092
 
-$(MID_SUBDIR)/mus_b2_r_22_sp.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_route22_spring.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V127
 
-$(MID_SUBDIR)/mus_b2_r_22_su.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_route22_summer.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V127
 
-$(MID_SUBDIR)/mus_b2_r_22_au.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_route22_autumn.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V127
 
-$(MID_SUBDIR)/mus_b2_r_22_wi.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_route22_winter.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V127
 
-$(MID_SUBDIR)/mus_b2_r_23.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_route23.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V105
 
-$(MID_SUBDIR)/mus_b2_kazan.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_road_to_reversal_mountain.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V103
 
-$(MID_SUBDIR)/mus_b2_t_06.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_floccesy.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V093
 
-$(MID_SUBDIR)/mus_b2_t_07.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_lentimas.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V078
 
-$(MID_SUBDIR)/mus_b2_d_22.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_floccesy_ranch.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V070
 
-$(MID_SUBDIR)/mus_b2_d_23.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_castelia_sewers.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V080
 
-$(MID_SUBDIR)/mus_b2_d_24_w.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_reversal_mountain_white.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V095
 
-$(MID_SUBDIR)/mus_b2_d_24_b.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_reversal_mountain_black.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V095
 
-$(MID_SUBDIR)/mus_b2_d_25.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_strange_house.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V084
 
-$(MID_SUBDIR)/mus_b2_d_27_f_ajito.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_plasma_frigate_1.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V092
 
-$(MID_SUBDIR)/mus_b2_d_27_l_ajito.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_plasma_frigate_2.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V070
 
-$(MID_SUBDIR)/mus_b2_d_27_g_ajito.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_plasma_frigate_3.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V115
 
-$(MID_SUBDIR)/mus_b2_d_regi.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_sealed_chamber.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V080
 
-$(MID_SUBDIR)/mus_b2_d_uma.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_cave_of_being.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V080
 
-$(MID_SUBDIR)/mus_b2_h_06.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_marine_tube.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V080
 
-$(MID_SUBDIR)/mus_b2_wbt_lobby.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pwt_lobby.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V110
 
-$(MID_SUBDIR)/mus_b2_wbt_ground.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pwt.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V073
 
-$(MID_SUBDIR)/mus_b2_wbt_fanfare.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pwt_winner.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V094
 
-$(MID_SUBDIR)/mus_b2_pw_land.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_studios.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V095
 
-$(MID_SUBDIR)/mus_b2_pw_filming.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_studios_filming.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V115
 
-$(MID_SUBDIR)/mus_b2_pw_scenario_01_f.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_studios_battle.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V092
 
-$(MID_SUBDIR)/mus_b2_pw_scenario_01_l.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_studios_glory.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V116
 
-$(MID_SUBDIR)/mus_b2_pw_scenario_02_f.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_studios_defeat.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V114
 
-$(MID_SUBDIR)/mus_b2_pw_scenario_02_l.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_studios_invasion.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V125
 
-$(MID_SUBDIR)/mus_b2_pw_scenario_03_f.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_studios_success.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V100
 
-$(MID_SUBDIR)/mus_b2_pw_scenario_03_l.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_studios_retreat.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V100
 
-$(MID_SUBDIR)/mus_b2_pw_scenario_04_f.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_studios_weird.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V080
 
-$(MID_SUBDIR)/mus_b2_pw_scenario_04_l.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_studios_love.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V080
 
-$(MID_SUBDIR)/mus_b2_pw_scenario_05_f.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_studios_sorrow.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V080
 
-$(MID_SUBDIR)/mus_b2_pw_scenario_05_l.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_studios_horror.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V125
 
-$(MID_SUBDIR)/mus_b2_pw_scenario_06_f.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_studios_purified.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V080
 
-$(MID_SUBDIR)/mus_b2_pw_scenario_06_l.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_studios_fear.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V095
 
-$(MID_SUBDIR)/mus_b2_pw_scenario_07_f.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_studios_humor.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V080
 
-$(MID_SUBDIR)/mus_b2_pw_scenario_07_l.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_studios_despair.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V090
 
-$(MID_SUBDIR)/mus_b2_pw_scenario_08_f.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_studios_shock.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V080
 
-$(MID_SUBDIR)/mus_b2_flight_gym_01.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_mistralton_gym.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V122
 
-$(MID_SUBDIR)/mus_b2_water_gym_01.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_humilau_gym.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V122
 
-$(MID_SUBDIR)/mus_b2_dragon_gym_01.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_opelucid_gym.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V100
 
-$(MID_SUBDIR)/mus_b2_lcg_01.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_xtransceiver_minigames.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V120
 
-$(MID_SUBDIR)/mus_b2_data_conv.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_unova_link.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V072
 
-$(MID_SUBDIR)/mus_b2_rezo_rizo.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_join_avenue.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V080
 
-$(MID_SUBDIR)/mus_b2_fes.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_funfest_mission.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V115
 
-$(MID_SUBDIR)/mus_b2_demo_union_00.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_kyurem_scene_1.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V127
 
-$(MID_SUBDIR)/mus_b2_demo_union_01.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_kyurem_scene_2.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V127
 
-$(MID_SUBDIR)/mus_b2_demo_union_02.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_kyurem_scene_3.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V127
 
-$(MID_SUBDIR)/mus_b2_demo_union_03.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_kyurem_scene_4.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V127
 
-$(MID_SUBDIR)/mus_b2_demo_ajito_ship.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_opelucid_attacked.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V116
 
-$(MID_SUBDIR)/mus_b2_demo_frigate.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_plasma_frigate_scene.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V127
 
-$(MID_SUBDIR)/mus_b2_e_hue.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_rival.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V105
 
-$(MID_SUBDIR)/mus_b2_e_achroma.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_colress.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V068
 
-$(MID_SUBDIR)/mus_b2_dark_trinity.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_shadow_triad.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V090
 
-$(MID_SUBDIR)/mus_b2_e_7_sage.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_zinzolin.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V090
 
-$(MID_SUBDIR)/mus_b2_e_c08_ice.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_opelucid_frozen.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V120
 
-$(MID_SUBDIR)/mus_b2_eye_dancer.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_encounter_beauty.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V085
 
-$(MID_SUBDIR)/mus_b2_eye_clown.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_encounter_clown.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V080
 
-$(MID_SUBDIR)/mus_b2_vs_rg_leader.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_leader_kanto.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V127
 
-$(MID_SUBDIR)/mus_b2_vs_rg_champ.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_champion_kanto.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V111
 
-$(MID_SUBDIR)/mus_b2_vs_gs_leader.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_leader_johto.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V113
 
-$(MID_SUBDIR)/mus_b2_vs_gs_champ.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_champion_johto.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V110
 
-$(MID_SUBDIR)/mus_b2_vs_rs_leader.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_leader_hoenn.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V086
 
-$(MID_SUBDIR)/mus_b2_vs_rs_champ.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_champion_hoenn.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V111
 
-$(MID_SUBDIR)/mus_b2_vs_dp_leader.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_leader_sinnoh.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V127
 
-$(MID_SUBDIR)/mus_b2_vs_dp_champ.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_champion_sinnoh.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V090
 
-$(MID_SUBDIR)/mus_b2_vs_wbt.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_pwt_finals.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V090
 
-$(MID_SUBDIR)/mus_b2_vs_kyuramu.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_black_white_kyurem.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V125
 
 $(MID_SUBDIR)/mus_b2_vs_neo_plasma.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V080
 
-$(MID_SUBDIR)/mus_b2_vs_achroma.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_colress.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V125
 
-$(MID_SUBDIR)/mus_b2_vs_new_g_cis.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_ghetsis.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V090
 
 $(MID_SUBDIR)/mus_b2_vs_iris.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V127
 
-$(MID_SUBDIR)/mus_b2_vs_hue.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_vs_rival.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V115
 
-$(MID_SUBDIR)/mus_b2_win_wbt.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_victory_pwt.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V127
 
-$(MID_SUBDIR)/mus_b2_kemonomichi.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_hidden_grotto.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V127
 
-$(MID_SUBDIR)/mus_b2_japarade.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_join_avenue_greeting.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V110
 
-$(MID_SUBDIR)/mus_b2_e_plasma.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_neo_plasma.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G333 -V115
 
-$(MID_SUBDIR)/mus_b2_theend.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_end.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V115
 
-$(MID_SUBDIR)/mus_b2_me_lcg_01.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_xtransceiver_game_start.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V063 -p5
 
-$(MID_SUBDIR)/mus_b2_me_lcg_02.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_xtransceiver_game_win.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V082 -p5
 
-$(MID_SUBDIR)/mus_b2_me_lcg_03.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_xtransceiver_03.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V070 -p5
 
-$(MID_SUBDIR)/mus_b2_me_lcg_04.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_xtransceiver_04.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V090 -p5
 
-$(MID_SUBDIR)/mus_b2_me_md_fan01.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_medal_box_upgraded.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V070 -p5
 
-$(MID_SUBDIR)/mus_b2_me_md_fan03.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_participation_medal.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V076 -p5
 
-$(MID_SUBDIR)/mus_b2_me_md_fan04.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_medal_rally_complete.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V076 -p5
 
-$(MID_SUBDIR)/mus_b2_me_otamaro.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_tympole_choir.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V100 -p5
 
-$(MID_SUBDIR)/mus_b2_me_avenue_01.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_join_avenue_rank_up_1.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V120 -p5
 
-$(MID_SUBDIR)/mus_b2_me_avenue_02.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_join_avenue_rank_up_2.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V120 -p5
 
-$(MID_SUBDIR)/mus_b2_me_avenue_03.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_join_avenue_raffle.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V120 -p5
 
-$(MID_SUBDIR)/mus_b2_me_call_long.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_xtransceiver_call_long.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V095 -p5
 
-$(MID_SUBDIR)/mus_b2_me_zukan_01.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_habitat_list_1.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V110 -p5
 
-$(MID_SUBDIR)/mus_b2_me_zukan_02.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_habitat_list_2.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V110 -p5
 
-$(MID_SUBDIR)/mus_b2_me_pokewood.s: %.s: %.mid
+$(MID_SUBDIR)/mus_b2_pokestar_fanfare.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G335 -V076 -p5
 	
 $(MID_SUBDIR)/mus_what.s: %.s: %.mid

@@ -6529,7 +6529,7 @@ u16 GetBattleBGM(void)
             return MUS_BW_VS_KYUREM;
         case SPECIES_KYUREM_WHITE:
         case SPECIES_KYUREM_BLACK:
-            return MUS_B2_VS_KYURAMU;
+            return MUS_B2_VS_BLACK_WHITE_KYUREM;
         #endif
         default:
             return MUS_VS_WILD;
