@@ -3139,7 +3139,7 @@ $(MID_SUBDIR)/mus_b2_pokestar_studios_shock.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V080
 
 $(MID_SUBDIR)/mus_b2_mistralton_gym.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G334 -V122
+	$(MID) $< $@ -E -R0 -G334 -V102
 
 $(MID_SUBDIR)/mus_b2_humilau_gym.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G334 -V122
