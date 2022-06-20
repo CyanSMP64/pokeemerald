@@ -294,7 +294,7 @@ static const u8 *const gSENames[];
 static void Task_HandleDrawingSoundCheckMenuText(u8 taskId) // sub_080E85F4
 {
     FillWindowPixelRect(WIN_MUS, PIXEL_FILL(1), 0, 14, 224, 12);
-    PrintSoundNumber(gTasks[taskId].tBgmIndex + (MUS_LITTLEROOT_TEST - 1), WIN_MUS); // print by BGM index
+    PrintSoundNumber(gTasks[taskId].tBgmIndex + (SONGS_START - 1), WIN_MUS); // print by BGM index
     PrintPaddedString(gBGMNames[gTasks[taskId].tBgmIndex], WIN_MUS);
     FillWindowPixelRect(WIN_SE, PIXEL_FILL(1), 0, 14, 224, 12);
     PrintSoundNumber(gTasks[taskId].tSeIndex, WIN_SE);
@@ -346,19 +346,19 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
             {
                 if (gTasks[taskId].tBgmIndex != 0)
                 {
-                    m4aSongNumStop(gTasks[taskId].tBgmIndexOld + (MUS_LITTLEROOT_TEST - 1));
-                    m4aSongNumStart(gTasks[taskId].tBgmIndex + (MUS_LITTLEROOT_TEST - 1));
+                    m4aSongNumStop(gTasks[taskId].tBgmIndexOld + (SONGS_START - 1));
+                    m4aSongNumStart(gTasks[taskId].tBgmIndex + (SONGS_START - 1));
                     gTasks[taskId].tBgmIndexOld = gTasks[taskId].tBgmIndex;
                 }
                 else
                 {
-                    m4aSongNumStop(gTasks[taskId].tBgmIndexOld + (MUS_LITTLEROOT_TEST - 1));
+                    m4aSongNumStop(gTasks[taskId].tBgmIndexOld + (SONGS_START - 1));
                     gTasks[taskId].tBgmIndexOld = 0;
                 }
             }
             else if (gTasks[taskId].tBgmIndex != 0)
             {
-                m4aSongNumStart(gTasks[taskId].tBgmIndex + (MUS_LITTLEROOT_TEST - 1));
+                m4aSongNumStart(gTasks[taskId].tBgmIndex + (SONGS_START - 1));
                 gTasks[taskId].tBgmIndexOld = gTasks[taskId].tBgmIndex;
             }
         }
@@ -382,14 +382,14 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
             if (gTasks[taskId].tSeIndex > 0)
                 gTasks[taskId].tSeIndex--;
             else
-                gTasks[taskId].tSeIndex = PH_NURSE_SOLO;
+                gTasks[taskId].tSeIndex = SOUND_EFFECTS_END;
         }
         else
         {
             if (gTasks[taskId].tBgmIndex > 0)
                 gTasks[taskId].tBgmIndex--;
             else
-                gTasks[taskId].tBgmIndex = (MUS_KH2_XEMNAS3 - (MUS_LITTLEROOT_TEST - 1));
+                gTasks[taskId].tBgmIndex = (SONGS_END - (SONGS_START - 1));
         }
         return TRUE;
     }
@@ -397,14 +397,14 @@ static bool8 Task_ProcessSoundCheckMenuInput(u8 taskId) // sub_080E8688
     {
         if (gTasks[taskId].tWindowSelected != TEST_MUS)
         {
-            if (gTasks[taskId].tSeIndex < PH_NURSE_SOLO)
+            if (gTasks[taskId].tSeIndex < SOUND_EFFECTS_END)
                 gTasks[taskId].tSeIndex++;
             else
                 gTasks[taskId].tSeIndex = 0;
         }
         else
         {
-            if (gTasks[taskId].tBgmIndex < (MUS_KH2_XEMNAS3 - (MUS_LITTLEROOT_TEST - 1)))
+            if (gTasks[taskId].tBgmIndex < (SONGS_END - (SONGS_START - 1)))
                 gTasks[taskId].tBgmIndex++;
             else
                 gTasks[taskId].tBgmIndex = 0;
@@ -482,7 +482,7 @@ static void PrintPaddedString(const u8 *const string, u8 windowId) // sub_080E89
     for (i = 0; string[i] != EOS && i < 31; i++)
         str[i] = string[i];
 
-    AddTextPrinterParameterized(windowId, 2, str, 40, 14, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(windowId, 2, str, 32, 14, TEXT_SKIP_DRAW, NULL);
     PutWindowTilemapAndCopyWindowToVram(windowId);
 }
 

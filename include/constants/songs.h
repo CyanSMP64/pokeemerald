@@ -3,6 +3,8 @@
 
 // Original JP names listed on right, along with any additional notes
 
+#define SOUND_EFFECTS_START                 0
+
 #define MUS_DUMMY                           0 // MUS_DUMMY
 #define SE_USE_ITEM                         1 // SE_KAIFUKU
 #define SE_PC_LOGIN                         2 // SE_PC_LOGIN
@@ -329,7 +331,12 @@
 #define PH_NURSE_HELD                     320
 #define PH_NURSE_SOLO                     321
 
+#define SOUND_EFFECTS_END                 PH_NURSE_SOLO
+
+#define SONGS_START                       (SOUND_EFFECTS_END + 1)
 // Ruby & Sapphire Music 
+#define RS_MUSIC_START                    SONGS_START
+
 #define MUS_LITTLEROOT_TEST               322 // MUS_TETSUJI
 #define MUS_GSC_ROUTE38                   323 // MUS_FIELD13
 #define MUS_CAUGHT                        324 // MUS_KACHI22
@@ -448,7 +455,11 @@
 #define MUS_VS_ELITE_FOUR                 437 // MUS_BATTLE38
 #define MUS_VS_AQUA_MAGMA_LEADER          438 // MUS_BATTLE30
 
+#define RS_MUSIC_END                      MUS_VS_AQUA_MAGMA_LEADER
+
 // FireRed & LeafGreen Music 
+#define RG_MUSIC_START                    (RS_MUSIC_END + 1)
+
 #define MUS_RG_FOLLOW_ME                  439 // MUS_RG_ANNAI
 #define MUS_RG_GAME_CORNER                440 // MUS_RG_SLOT
 #define MUS_RG_ROCKET_HIDEOUT             441 // MUS_RG_AJITO
@@ -525,7 +536,11 @@
 #define MUS_RG_SLOW_PALLET                512 // MUS_RG_SLOWMASARA
 #define MUS_RG_TEACHY_TV_MENU             513 // MUS_RG_TVNOIZE
 
+#define RG_MUSIC_END                      MUS_RG_TEACHY_TV_MENU
+
 // Emerald Music
+#define EM_MUSIC_START                    (RG_MUSIC_END + 1)
+
 #define MUS_ABNORMAL_WEATHER              514 // MUS_OOAME
 #define MUS_B_FRONTIER                    515 // MUS_B_FRONTIER
 #define MUS_B_ARENA                       516 // MUS_B_ARENA
@@ -545,8 +560,11 @@
 #define MUS_VS_MEW                        530 // MUS_VS_MEW
 #define MUS_B_DOME_LOBBY                  531 // MUS_B_DOME1
 
- 
+#define EM_MUSIC_END                      MUS_B_DOME_LOBBY
+
 // Diamond & Pearl Music
+#define DP_MUSIC_START                    (EM_MUSIC_END + 1)
+
 #define MUS_DP_TWINLEAF_DAY               532 // Twinleaf Town (Day)
 #define MUS_DP_SANDGEM_DAY                533 // Sandgem Town (Day)
 #define MUS_DP_FLOAROMA_DAY               534 // Floaroma Town (Day)
@@ -705,7 +723,11 @@
 #define MUS_DP_CREDITS                    687 // Ending Theme
 #define MUS_DP_SLOTS_UNUSED               688 // ??
 
+#define DP_MUSIC_END                      MUS_DP_SLOTS_UNUSED
+
 // Platinum Music
+#define PL_MUSIC_START                    (DP_MUSIC_END + 1)
+
 #define MUS_PL_FIGHT_AREA_DAY             689 // Fight Area (Battle Frontier)
 #define MUS_PL_TV_BROADCAST               690 // Special Program: "Let's Ask Prof. Rowan!" (Part 1)
 #define MUS_PL_TV_END                     691 // Special Program: "Let's Ask Prof. Rowan!" (Part 2)
@@ -741,7 +763,11 @@
 #define MUS_PL_OBTAIN_B_POINTS            721 // Received Battle Points!
 #define MUS_PL_WIN_MINIGAME               722 // Cleared Wobbuffet Pop!
 
+#define PL_MUSIC_END                      MUS_PL_WIN_MINIGAME
+
 // HeartGold & SoulSilver Music
+#define HG_MUSIC_START                    (PL_MUSIC_END + 1)
+
 #define MUS_HG_INTRO                      723 // Opening Movie
 #define MUS_HG_TITLE                      724 // Title Screen
 #define MUS_HG_NEW_GAME                   725 // An Adventure Begins!
@@ -919,7 +945,11 @@
 #define MUS_HG_OBTAIN_B_POINTS            897 // Received Battle Points!
 #define MUS_HG_WIN_MINIGAME               898 // Cleared Wobbuffet Pop!
 
+#define HG_MUSIC_END                      MUS_HG_WIN_MINIGAME
+
 // Black & White Music
+#define BW_MUSIC_START                    (HG_MUSIC_END + 1)
+
 #define MUS_BW_INTRO_1                    899 // Coronation Day
 #define MUS_BW_INTRO_2                    900 // A New Adventure!
 #define MUS_BW_TITLE                      901 // Title Screen
@@ -1115,7 +1145,11 @@
 #define MUS_BW_POKE_TRANSFER_BOX         1090 // Poké Transfer: Choose Your Pokémon!
 #define MUS_BW_POKE_TRANSFER_GAME        1091 // Poké Transfer: Catch Your Pokémon!
 
+#define BW_MUSIC_END                     MUS_BW_POKE_TRANSFER_GAME
+
 // Black 2 & White 2 Music
+#define B2_MUSIC_START                   (BW_MUSIC_END + 1)
+
 #define MUS_B2_INTRO                     1092 // Opening
 #define MUS_B2_CREDITS                   1093 // Staff Credits
 #define MUS_B2_DRIFTVEIL_GYM             1094 // Driftveil City Gym
@@ -1245,11 +1279,15 @@
 #define MUS_B2_HABITAT_LIST_2            1218 //
 #define MUS_B2_POKESTAR_FANFARE          1219 // Immortalized in Pokéstar Studios!
 
+#define B2_MUSIC_END                     MUS_B2_POKESTAR_FANFARE
+
 #define MUS_WHAT 1220
 #define MUS_BW_WIN1MEME 1221
 #define MUS_ZINNIA 1222
 #define MUS_DIALGA_PMD 1223   
 #define MUS_KH2_XEMNAS3 1224
+
+#define SONGS_END       MUS_KH2_XEMNAS3
 
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
