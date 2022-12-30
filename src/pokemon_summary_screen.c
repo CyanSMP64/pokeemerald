@@ -3435,7 +3435,7 @@ static void BufferLeftColumnStats(void)
 
 static void PrintLeftColumnStats(void)
 {
-    PrintTextOnWindow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_STATS_LEFT), gStringVar4, 4, 1, 0, 0);
+    PrintTextOnWindow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_STATS_LEFT), gStringVar4, 5, 1, 0, 0);
 }
 
 static void BufferRightColumnStats(void)
@@ -3453,7 +3453,7 @@ static void BufferRightColumnStats(void)
 
 static void PrintRightColumnStats(void)
 {
-    PrintTextOnWindow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_STATS_RIGHT), gStringVar4, 4, 1, 0, 0);
+    PrintTextOnWindow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_STATS_RIGHT), gStringVar4, 3, 1, 0, 0);
 }
 
 static void BufferLeftColumnIVs(void)
@@ -3471,7 +3471,7 @@ static void BufferLeftColumnIVs(void)
 
 static void PrintLeftColumnIVs(void)
 {
-    PrintTextOnWindowNarrow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_IVS_LEFT), gStringVar4, 4, 1, 0, 0);
+    PrintTextOnWindowNarrow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_IVS_LEFT), gStringVar4, 6, 1, 0, 0);
 }
 
 static void BufferRightColumnIVs(void)
@@ -3489,7 +3489,7 @@ static void BufferRightColumnIVs(void)
 
 static void PrintRightColumnIVs(void)
 {
-    PrintTextOnWindowNarrow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_IVS_RIGHT), gStringVar4, 2, 1, 0, 0);
+    PrintTextOnWindowNarrow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_IVS_RIGHT), gStringVar4, 6, 1, 0, 0);
 }
 
 static void PrintExpPointsNextLevel(void)
