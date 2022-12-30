@@ -2747,6 +2747,11 @@ static void PrintTextOnWindow(u8 windowId, const u8 *string, u8 x, u8 y, u8 line
     AddTextPrinterParameterized4(windowId, FONT_NORMAL, x, y, 0, lineSpacing, sTextColors[colorId], 0, string);
 }
 
+static void PrintTextOnWindowNarrow(u8 windowId, const u8 *string, u8 x, u8 y, u8 lineSpacing, u8 colorId)
+{
+    AddTextPrinterParameterized4(windowId, FONT_NARROW, x, y, 0, lineSpacing, sTextColors[colorId], 0, string);
+}
+
 static void PrintMonInfo(void)
 {
     FillWindowPixelBuffer(PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER, PIXEL_FILL(0));
@@ -3346,20 +3351,12 @@ static void Task_PrintSkillsPage(u8 taskId)
         break;
     case 7:
         BufferLeftColumnIVs();
-        break;
-    case 8:
         PrintLeftColumnIVs();
-        break;
-    case 9:
         BufferRightColumnIVs();
-        break;
-    case 10:
         PrintRightColumnIVs();
-        break;
-    case 11:
         PrintExpPointsNextLevel();
         break;
-    case 12:
+    case 8:
         DestroyTask(taskId);
         return;
     }
@@ -3474,7 +3471,7 @@ static void BufferLeftColumnIVs(void)
 
 static void PrintLeftColumnIVs(void)
 {
-    PrintTextOnWindow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_IVS_LEFT), gStringVar4, 4, 1, 0, 0);
+    PrintTextOnWindowNarrow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_IVS_LEFT), gStringVar4, 4, 1, 0, 0);
 }
 
 static void BufferRightColumnIVs(void)
@@ -3492,7 +3489,7 @@ static void BufferRightColumnIVs(void)
 
 static void PrintRightColumnIVs(void)
 {
-    PrintTextOnWindow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_IVS_RIGHT), gStringVar4, 2, 1, 0, 0);
+    PrintTextOnWindowNarrow(AddWindowFromTemplateList(sPageSkillsTemplate, PSS_DATA_WINDOW_SKILLS_IVS_RIGHT), gStringVar4, 2, 1, 0, 0);
 }
 
 static void PrintExpPointsNextLevel(void)
