@@ -66,6 +66,7 @@ endif
 ROM_NAME := pokeemerald.gba
 ELF_NAME := $(ROM_NAME:.gba=.elf)
 MAP_NAME := $(ROM_NAME:.gba=.map)
+INI_NAME := $(ROM_NAME:.gba=.ini)
 OBJ_DIR_NAME := build/emerald
 
 MODERN_ROM_NAME := pokeemerald_modern.gba
@@ -77,6 +78,7 @@ SHELL := /bin/bash -o pipefail
 
 ELF = $(ROM:.gba=.elf)
 MAP = $(ROM:.gba=.map)
+INI = $(ROM:.gba=.ini)
 SYM = $(ROM:.gba=.sym)
 
 C_SUBDIR = src
@@ -131,6 +133,7 @@ RAMSCRGEN := tools/ramscrgen/ramscrgen$(EXE)
 FIX := tools/gbafix/gbafix$(EXE)
 MAPJSON := tools/mapjson/mapjson$(EXE)
 JSONPROC := tools/jsonproc/jsonproc$(EXE)
+INIGEN := tools/inigen/inigen$(EXE)
 
 PERL := perl
 
@@ -150,7 +153,7 @@ MAKEFLAGS += --no-print-directory
 # Secondary expansion is required for dependency variables in object rules.
 .SECONDEXPANSION:
 
-.PHONY: all rom clean compare tidy tools mostlyclean clean-tools $(TOOLDIRS) libagbsyscall modern tidymodern tidynonmodern
+.PHONY: all rom clean compare tidy tools mostlyclean clean-tools $(TOOLDIRS) libagbsyscall modern tidymodern tidynonmodern ini release
 
 infoshell = $(foreach line, $(shell $1 | sed "s/ /__SPACE__/g"), $(info $(subst __SPACE__, ,$(line))))
 
@@ -158,7 +161,7 @@ infoshell = $(foreach line, $(shell $1 | sed "s/ /__SPACE__/g"), $(info $(subst 
 # Disable dependency scanning for clean/tidy/tools
 # Use a separate minimal makefile for speed
 # Since we don't need to reload most of this makefile
-ifeq (,$(filter-out all rom compare modern libagbsyscall syms,$(MAKECMDGOALS)))
+ifeq (,$(filter-out all rom compare modern libagbsyscall release syms,$(MAKECMDGOALS)))
 $(call infoshell, $(MAKE) -f make_tools.mk)
 else
 NODEP ?= 1
@@ -226,6 +229,10 @@ ifeq ($(COMPARE),1)
 	@$(SHA1) rom.sha1
 endif
 
+release: ini
+
+ini: $(INI)
+
 # For contributors to make sure a change didn't affect the contents of the ROM.
 compare: all
 
@@ -248,7 +255,7 @@ mostlyclean: tidynonmodern tidymodern
 tidy: tidynonmodern tidymodern
 
 tidynonmodern:
-	rm -f $(ROM_NAME) $(ELF_NAME) $(MAP_NAME)
+	rm -f $(ROM_NAME) $(ELF_NAME) $(MAP_NAME) $(INI_NAME)
 	rm -rf $(OBJ_DIR_NAME)
 
 tidymodern:
@@ -429,6 +436,10 @@ modern: all
 
 libagbsyscall:
 	@$(MAKE) -C libagbsyscall TOOLCHAIN=$(TOOLCHAIN) MODERN=$(MODERN)
+
+$(INI): $(ROM)
+	$(INIGEN) $(ELF) $@ --name "Emerald (U)" --code $(GAME_CODE)
+	echo "MD5Hash="$(shell md5sum $< | cut -d' ' -f1) >> $@
 
 ###################
 ### Symbol file ###
