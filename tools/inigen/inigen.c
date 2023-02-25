@@ -740,6 +740,9 @@ Binary patches are included in the randomizer program, so please use
 hard-coded linker addresses to make sure the following symbols have their
 addresses unchanged from vanilla Emerald:
 
+src/pokemon.o(ewram_data)                   - 0x020244e8 (random statics)
+        gEnemyParty                         - 0x02024744 (random statics)
+
 gflib/text.o(text)                          - 0x080045a4 (instant text)
         RunTextPrinters                     - 0x08004778 (instant text)
 
