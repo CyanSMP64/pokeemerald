@@ -362,8 +362,6 @@ Route119_EventScript_Jackson::
 Route119_EventScript_RegisterJackson::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
-	msgbox Route119_Text_JacksonRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_JACKSON_1
 	release
 	end
 
@@ -383,8 +381,6 @@ Route119_EventScript_Catherine::
 Route119_EventScript_RegisterCatherine::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
-	msgbox Route119_Text_CatherineRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_CATHERINE_1
 	release
 	end
 
@@ -471,9 +467,6 @@ Route119_EventScript_TrainerTipsDecoration::
 	end
 
 Route119_EventScript_ScottWonAtFortreeGymCall::
-	lockall
-	pokenavcall Route119_Text_ScottYouWonAtFortreeGym
-	waitmessage
 	clearflag FLAG_SCOTT_CALL_FORTREE_GYM
 	addvar VAR_SCOTT_STATE, 1
 	releaseall

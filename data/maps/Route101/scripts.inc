@@ -4,15 +4,29 @@
 Route101_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route101_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route101_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, Route101_OnWarp
 	.byte 0
 
 Route101_OnTransition:
 	call ProfBirch_EventScript_UpdateLocation
+	call_if_eq VAR_ROUTE101_STATE, 0, Route101_EventScript_PlayHelpBGM
 	end
 
 Route101_OnFrame:
 	map_script_2 VAR_ROUTE101_STATE, 0, Route101_EventScript_HideMapNamePopup
 	.2byte 0
+
+Route101_OnWarp:
+	map_script_2 VAR_ROUTE101_STATE, 0, Route101_EventScript_PlayerTurnEast
+	.2byte 0
+
+Route101_EventScript_PlayerTurnEast::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	end
+
+Route101_EventScript_PlayHelpBGM::
+	playbgm MUS_HELP, TRUE
+	return
 
 Route101_EventScript_HideMapNamePopup::
 	setflag FLAG_HIDE_MAP_NAME_POPUP
@@ -20,34 +34,11 @@ Route101_EventScript_HideMapNamePopup::
 	end
 
 Route101_EventScript_StartBirchRescue::
-	lockall
-	playbgm MUS_HELP, TRUE
-	msgbox Route101_Text_HelpMe, MSGBOX_DEFAULT
-	closemessage
-	setobjectxy LOCALID_BIRCH, 0, 15
-	setobjectxy LOCALID_ZIGZAGOON, 0, 16
-	applymovement OBJ_EVENT_ID_PLAYER, Route101_Movement_EnterScene
-	applymovement LOCALID_BIRCH, Route101_Movement_BirchRunAway1
-	applymovement LOCALID_ZIGZAGOON, Route101_Movement_ZigzagoonChase1
-	waitmovement 0
-	applymovement LOCALID_ZIGZAGOON, Route101_Movement_ZigzagoonChaseInCircles
-	applymovement LOCALID_BIRCH, Route101_Movement_BirchRunInCircles
-	waitmovement 0
-	applymovement LOCALID_BIRCH, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	applymovement LOCALID_ZIGZAGOON, Route101_Movement_ZigzagoonFaceBirch
-	applymovement LOCALID_BIRCH, Route101_Movement_BirchFaceZigzagoon
-	waitmovement 0
-	msgbox Route101_Text_PleaseHelp, MSGBOX_DEFAULT
-	closemessage
 	setvar VAR_ROUTE101_STATE, 2
-	releaseall
 	end
 
 Route101_EventScript_PreventExitSouth::
 	lockall
-	msgbox Route101_Text_DontLeaveMe, MSGBOX_DEFAULT
-	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, Route101_Movement_PreventExitSouth
 	waitmovement 0
 	releaseall
@@ -55,8 +46,6 @@ Route101_EventScript_PreventExitSouth::
 
 Route101_EventScript_PreventExitWest::
 	lockall
-	msgbox Route101_Text_DontLeaveMe, MSGBOX_DEFAULT
-	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, Route101_Movement_PreventExitWest
 	waitmovement 0
 	releaseall
@@ -64,23 +53,21 @@ Route101_EventScript_PreventExitWest::
 
 Route101_EventScript_PreventExitNorth::
 	lockall
-	msgbox Route101_Text_DontLeaveMe, MSGBOX_DEFAULT
-	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, Route101_Movement_PreventExitNorth
 	waitmovement 0
 	releaseall
 	end
 
 Route101_Movement_PreventExitSouth:
-	walk_up
+	walk_faster_up
 	step_end
 
 Route101_Movement_PreventExitWest:
-	walk_right
+	walk_faster_right
 	step_end
 
 Route101_Movement_PreventExitNorth:
-	walk_down
+	walk_faster_down
 	step_end
 
 Route101_Movement_ZigzagoonChaseInCircles:
@@ -230,9 +217,6 @@ Route101_EventScript_BirchsBag::
 	waitmovement 0
 	special ChooseStarter
 	waitstate
-	applymovement LOCALID_BIRCH, Route101_Movement_BirchApproachPlayer
-	waitmovement 0
-	msgbox Route101_Text_YouSavedMe, MSGBOX_DEFAULT
 	special HealPlayerParty
 	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
@@ -257,7 +241,7 @@ Route101_EventScript_HideBrendanInBedroom::
 	return
 
 Route101_Movement_BirchApproachPlayer:
-	walk_right
+	walk_faster_right
 	step_end
 
 Route101_Text_HelpMe:
@@ -274,15 +258,7 @@ Route101_Text_DontLeaveMe:
 	.string "Don't leave me like this!$"
 
 Route101_Text_YouSavedMe:
-	.string "PROF. BIRCH: Whew…\p"
-	.string "I was in the tall grass studying wild\n"
-	.string "POKéMON when I was jumped.\p"
-	.string "You saved me.\n"
-	.string "Thanks a lot!\p"
-	.string "Oh?\p"
-	.string "Hi, you're {PLAYER}{KUN}!\p"
-	.string "This is not the place to chat, so come\n"
-	.string "by my POKéMON LAB later, okay?$"
+	.string "PROF. BIRCH: You saved me :)$"
 
 Route101_Text_TakeTiredPokemonToPokeCenter:
 	.string "If POKéMON get tired, take them to\n"

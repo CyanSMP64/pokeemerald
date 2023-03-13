@@ -110,8 +110,6 @@ Route114_EventScript_Steve::
 Route114_EventScript_RegisterSteve::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
-	msgbox Route114_Text_SteveRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_STEVE_1
 	release
 	end
 
@@ -131,8 +129,6 @@ Route114_EventScript_Bernie::
 Route114_EventScript_RegisterBernie::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
-	msgbox Route114_Text_BernieRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_BERNIE_1
 	release
 	end
 

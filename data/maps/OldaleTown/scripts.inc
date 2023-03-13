@@ -44,8 +44,6 @@ OldaleTown_EventScript_MartEmployee::
 	goto_if_set FLAG_TEMP_1, OldaleTown_EventScript_ExplainPotion
 	setflag FLAG_TEMP_1
 	playbgm MUS_FOLLOW_ME, FALSE
-	msgbox OldaleTown_Text_IWorkAtPokemonMart, MSGBOX_DEFAULT
-	closemessage
 	switch VAR_FACING
 	case DIR_SOUTH, OldaleTown_EventScript_GoToMartSouth
 	case DIR_NORTH, OldaleTown_EventScript_GoToMartNorth
@@ -74,10 +72,8 @@ OldaleTown_EventScript_GoToMartEast::
 	end
 
 OldaleTown_EventScript_ExplainPokemonMart::
-	msgbox OldaleTown_Text_ThisIsAPokemonMart, MSGBOX_DEFAULT
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, OldaleTown_EventScript_BagIsFull
-	msgbox OldaleTown_Text_PotionExplanation, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_POTION_OLDALE
 	fadedefaultbgm
 	release
@@ -95,37 +91,37 @@ OldaleTown_EventScript_BagIsFull::
 	end
 
 OldaleTown_Movement_EmployeeEast:
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
 	walk_in_place_faster_down
 	step_end
 
 OldaleTown_Movement_EmployeeSouth:
-	walk_left
-	walk_up
-	walk_up
-	walk_right
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_faster_left
+	walk_faster_up
+	walk_faster_up
+	walk_faster_right
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
 	walk_in_place_faster_down
 	step_end
 
 OldaleTown_Movement_EmployeeNorth:
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
 	walk_in_place_faster_down
 	step_end
 
@@ -146,35 +142,35 @@ OldaleTown_Movement_Unknown1:
 	step_end
 
 OldaleTown_Movement_PlayerEast:
-	walk_right
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_faster_right
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
 	step_end
 
 OldaleTown_Movement_PlayerSouth:
-	delay_16
-	delay_16
-	delay_16
-	delay_16
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	delay_4
+	delay_4
+	delay_4
+	delay_4
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
 	step_end
 
 OldaleTown_Movement_PlayerNorth:
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
 	step_end
 
 OldaleTown_Movement_Unknown2:
@@ -264,17 +260,14 @@ OldaleTown_EventScript_ShowRivalMessage::
 	end
 
 OldaleTown_EventScript_ShowMayMessage::
-	msgbox OldaleTown_Text_MayLetsGoBack, MSGBOX_DEFAULT
 	goto OldaleTown_EventScript_RivalFinish
 	end
 
 OldaleTown_EventScript_ShowBrendanMessage::
-	msgbox OldaleTown_Text_BrendanLetsGoBack, MSGBOX_DEFAULT
 	goto OldaleTown_EventScript_RivalFinish
 	end
 
 OldaleTown_EventScript_RivalFinish::
-	closemessage
 	call_if_eq VAR_0x8009, 0, OldaleTown_EventScript_DoExitMovement1
 	call_if_eq VAR_0x8009, 1, OldaleTown_EventScript_DoExitMovement2
 	applymovement LOCALID_RIVAL, OldaleTown_Movement_RivalExit
@@ -298,12 +291,12 @@ OldaleTown_EventScript_DoExitMovement2::
 	return
 
 OldaleTown_Movement_RivalApproachPlayer1:
-	walk_left
-	walk_left
+	walk_faster_left
+	walk_faster_left
 	step_end
 
 OldaleTown_Movement_RivalApproachPlayer2:
-	walk_left
+	walk_faster_left
 	step_end
 
 OldaleTown_Movement_RivalApproachPlayer3:
@@ -311,36 +304,36 @@ OldaleTown_Movement_RivalApproachPlayer3:
 	step_end
 
 OldaleTown_Movement_RivalExit:
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
 	step_end
 
 OldaleTown_Movement_WatchRivalExit:
-	delay_8
-	delay_4
+	delay_2
+	delay_1
 	walk_in_place_faster_down
 	step_end
 
 OldaleTown_Movement_PlayerStepBack:
-	delay_8
-	walk_right
+	delay_2
+	walk_faster_right
 	step_end
 
 OldaleTown_Movement_BackUp:
-	walk_fast_up
+	walk_faster_up
 	walk_in_place_faster_left
 	lock_facing_direction
-	walk_right
+	walk_faster_right
 	unlock_facing_direction
 	step_end
 
 OldaleTown_Movement_ReturnToOriginalPosition:
-	walk_down
-	walk_left
+	walk_faster_down
+	walk_faster_left
 	step_end
 
 OldaleTown_Text_SavingMyProgress:
@@ -361,9 +354,8 @@ OldaleTown_Text_ThisIsAPokemonMart:
 	.string "a promotional item.$"
 
 OldaleTown_Text_PotionExplanation:
-	.string "A POTION can be used anytime, so it's\n"
-	.string "even more useful than a POKéMON CENTER\l"
-	.string "in certain situations.$"
+	.string "A POTION can be used only in battles.\n"
+	.string "Don't be a filthy cheater.$"
 
 OldaleTown_Text_WaitDontComeInHere:
 	.string "Aaaaah! Wait!\n"

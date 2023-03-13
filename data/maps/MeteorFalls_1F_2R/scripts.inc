@@ -12,8 +12,6 @@ MeteorFalls_1F_2R_EventScript_Nicolas::
 MeteorFalls_1F_2R_EventScript_RegisterNicolas::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
-	msgbox MeteorFalls_1F_2R_Text_NicolasRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_NICOLAS_1
 	release
 	end
 
@@ -31,8 +29,6 @@ MeteorFalls_1F_2R_EventScript_John::
 	end
 
 MeteorFalls_1F_2R_EventScript_RegisterJohn::
-	msgbox MeteorFalls_1F_2R_Text_JohnRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_JOHN_AND_JAY_1
 	release
 	end
 
@@ -50,8 +46,6 @@ MeteorFalls_1F_2R_EventScript_Jay::
 	end
 
 MeteorFalls_1F_2R_EventScript_RegisterJay::
-	msgbox MeteorFalls_1F_2R_Text_JohnRegister, MSGBOX_DEFAULT  @ John speaks for both during register
-	register_matchcall TRAINER_JOHN_AND_JAY_1
 	release
 	end
 

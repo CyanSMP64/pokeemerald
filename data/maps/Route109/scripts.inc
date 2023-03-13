@@ -405,8 +405,6 @@ Route109_EventScript_Ricky::
 Route109_EventScript_RickyRegisterMatchCallAfterBattle::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
-	msgbox Route109_Text_RickyRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_RICKY_1
 	release
 	end
 
@@ -426,8 +424,6 @@ Route109_EventScript_Lola::
 Route109_EventScript_LolaRegisterMatchCallAfterBattle::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
-	msgbox Route109_Text_LolaRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_LOLA_1
 	release
 	end
 

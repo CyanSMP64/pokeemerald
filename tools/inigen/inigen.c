@@ -723,7 +723,7 @@ int main(int argc, char ** argv)
 
     print("SkipShops=[1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 19, 20, 21, 22, 23, 24, 25, 26]\n"); // hardcoded
     print("MainGameShops=[0, 4, 17, 18]\n"); // hardcoded
-    print("CRC32=1F1C08FB"); // CRC32 of the ROM. must change manually if modified
+    print("CRC32=1F1C08FB\n"); // CRC32 of an official Emerald ROM. Unless you change it the rando will tell you that it's unofficial, but it doesn't matter,
 
     DestroyResources();
     fclose(outFile);
@@ -733,36 +733,110 @@ int main(int argc, char ** argv)
 
 
 /******************************************************************************
+ * 
+ * IMPORTANT!!
+ * 
+ * Binary patches are included in the randomizer program, so please use
+ * hard-coded linker addresses to make sure the following symbols have their
+ * addresses unchanged from vanilla Emerald:
+ * 
+ * src/pokemon.o(ewram_data)                   - 0x020244e8 (random statics)
+ *         gEnemyParty                         - 0x02024744 (random statics)
+ * 
+ * gflib/text.o(.text)                         - 0x080045a4 (instant text)
+ *         RunTextPrinters                     - 0x08004778 (instant text)
+ * 
+ * src/battle_controllers.o(.text)             - 0x08032654 (random statics)
+ *         SetUpBattleVarsAndBirchZigzagoon    - 0x0803269c (random statics)
+ * 
+ * src/pokemon.o(.text)                        - 0x08067a74 (random statics)
+ *         CreateMon                           - 0x08067b4c (random statics)
+ *         SetMonData                          - 0x0806acac (random statics)
+ * 
+ * src/battle_setup.o(.text)                   - 0x080b05f0 (fix music)
+ *         BattleSetup_StartLegendaryBattle    - 0x080b0934 (fix music)
+ * 
+ * src/menu.o(.rodata)                         - 0x0860f074 (instant text)
+ *         sTextSpeedFrameDelays               - 0x0860f094 (instant text)
+ * 
+ * Also please make sure no data is written to the following addresses:
+ * 
+ * 0x08a00000 - 0x08a000df (instant text)
+ * 0x08fe0000 - 0x08fe0047 (random statics)
+ * 0x08fe0100 - 0x08fe017f (fix music)
+ * 
+******************************************************************************/
 
-IMPORTANT!!
 
-Binary patches are included in the randomizer program, so please use
-hard-coded linker addresses to make sure the following symbols have their
-addresses unchanged from vanilla Emerald:
 
-src/pokemon.o(ewram_data)                   - 0x020244e8 (random statics)
-        gEnemyParty                         - 0x02024744 (random statics)
 
-gflib/text.o(text)                          - 0x080045a4 (instant text)
-        RunTextPrinters                     - 0x08004778 (instant text)
 
-src/battle_controllers.o(.text)             - 0x08032654 (random statics)
-        SetUpBattleVarsAndBirchZigzagoon    - 0x0803269c (random statics)
-
-src/pokemon.o(.text)                        - 0x08067a74 (random statics)
-        CreateMon                           - 0x08067b4c (random statics)
-        SetMonData                          - 0x0806acac (random statics)
-
-src/battle_setup.o(.text)                   - 0x080b05f0 (fix music)
-        BattleSetup_StartLegendaryBattle    - 0x080b0934 (fix music)
-
-src/menu.o(.rodata)                         - 0x0860f074 (instant text)
-        sTextSpeedFrameDelays               - 0x0860f094 (instant text)
-
-Also please make sure no data is written to the following addresses:
-
-0x08a00000 - 0x08a000df (instant text)
-0x08fe0000 - 0x08fe0047 (random statics)
-0x08fe0100 - 0x08fe017f (fix music)
-
+/******************************************************************************
+ * 
+ * List of ROM addresses read by IronMON Tracker:
+ * 
+ * src/pokemon.o(.text)                                 - 0x08067a74
+ *         GetEvolutionTargetSpecies                    - 0x0806d098
+ * 
+ * src/evolution_scene.o(.text)                         - 0x0813d9b0
+ *         Task_EvolutionScene                          - 0x0813e570
+ * 
+ * data/battle_scripts_1.o(script_data)                 - 0x082d86a8
+ *         BattleScript_CantMakeAsleep                  - 0x082d8acf
+ *         BattleScript_AbsorbUpdateHp                  - 0x082d8b2e
+ *         BattleScript_RestCantSleep                   - 0x082d8fc6
+ *         BattleScript_EffectHealBell                  - 0x082d96c1
+ *         BattleScript_PerishSongNotAffected           - 0x082d99ac
+ *         BattleScript_PrintAbilityMadeIneffective     - 0x082da382
+ *         BattleScript_RanAwayUsingMonAbility          - 0x082daae9
+ *         BattleScript_TryLearnMoveLoop                - 0x082dabd9
+ *         BattleScript_LearnMoveReturn                 - 0x082dac2b
+ *         BattleScript_LeechSeedTurnPrintAndUpdateHp   - 0x082dad4d
+ *         BattleScript_SnatchedMove                    - 0x082db1ac
+ *         BattleScript_FocusPunchSetUp                 - 0x082db1ff
+ *         BattleScript_MoveUsedIsFrozen                - 0x082db26a
+ *         BattleScript_MoveUsedUnfroze                 - 0x082db277
+ *         BattleScript_MoveUsedIsConfused              - 0x082db2bd
+ *         BattleScript_MoveUsedIsConfusedNoMore        - 0x082db300
+ *         BattleScript_MoveUsedIsInLove                - 0x082db327
+ *         BattleScript_MoveEffectSleep                 - 0x082db36a
+ *         BattleScript_MoveEffectPoison                - 0x082db386
+ *         BattleScript_MoveEffectBurn                  - 0x082db395
+ *         BattleScript_MoveEffectParalysis             - 0x082db3b3
+ *         BattleScript_DrizzleActivates                - 0x082db430
+ *         BattleScript_SpeedBoostActivates             - 0x082db444
+ *         BattleScript_TraceActivates                  - 0x082db452
+ *         BattleScript_RainDishActivates               - 0x082db45c
+ *         BattleScript_SandstreamActivates             - 0x082db470
+ *         BattleScript_ShedSkinActivates               - 0x082db484
+ *         BattleScript_IntimidateActivatesLoop         - 0x082db4cd
+ *         BattleScript_IntimidatePrevented             - 0x082db51c
+ *         BattleScript_DroughtActivates                - 0x082db52a
+ *         BattleScript_TookAttack                      - 0x082db53e
+ *         BattleScript_SturdyPreventsOHKO              - 0x082db552
+ *         BattleScript_DampStopsExplosion              - 0x082db560
+ *         BattleScript_MoveHPDrain                     - 0x082db56f
+ *         BattleScript_MonMadeMoveUseless              - 0x082db592
+ *         BattleScript_FlashFireBoost                  - 0x082db5a8
+ *         BattleScript_AbilityPreventsPhasingOut       - 0x082db5b9
+ *         BattleScript_AbilityNoStatLoss               - 0x082db5c7
+ *         BattleScript_BRNPrevention                   - 0x082db5d1
+ *         BattleScript_PRLZPrevention                  - 0x082db5dd
+ *         BattleScript_PSNPrevention                   - 0x082db5e9
+ *         BattleScript_ObliviousPreventsAttraction     - 0x082db5f5
+ *         BattleScript_FlinchPrevention                - 0x082db603
+ *         BattleScript_OwnTempoPrevents                - 0x082db611
+ *         BattleScript_SoundproofProtected             - 0x082db61f
+ *         BattleScript_AbilityNoSpecificStatLoss       - 0x082db62f
+ *         BattleScript_StickyHoldActivates             - 0x082db63f
+ *         BattleScript_ColorChangeActivates            - 0x082db64d
+ *         BattleScript_RoughSkinActivates              - 0x082db654
+ *         BattleScript_CuteCharmActivates              - 0x082db66f
+ *         BattleScript_MoveUsedLoafingAround           - 0x082db6ad
+ * 
+ * src/pokemon.o(.rodata)                               - 0x0831c898
+ *         gBattleMoves                                 - 0x0831c898
+ *         gExperienceTables                            - 0x0831f72c
+ *         gSpeciesInfo                                 - 0x083203cc
+ * 
 ******************************************************************************/

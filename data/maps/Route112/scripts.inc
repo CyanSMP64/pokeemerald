@@ -79,8 +79,6 @@ Route112_EventScript_Trent::
 Route112_EventScript_RegisterTrent::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
-	msgbox Route112_Text_TrentRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_TRENT_1
 	release
 	end
 

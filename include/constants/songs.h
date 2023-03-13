@@ -277,6 +277,44 @@
 #define SE_PIKE_CURTAIN_OPEN        268 // SE_CURTAIN1
 #define SE_SUDOWOODO_SHAKE          269 // SE_USSOKI
 
+
+// Custom music
+#define MUS_DP_VS_RIVAL                 270
+#define MUS_DP_VS_GALACTIC_COMMANDER    271
+#define MUS_DP_VS_GYM_LEADER            272
+#define MUS_DP_VS_ELITE_FOUR            273
+#define MUS_DP_VS_GALACTIC_BOSS         274
+#define MUS_DP_VS_DIALGA_PALKIA         275
+#define MUS_PL_VS_FRONTIER_BRAIN        276
+#define MUS_HG_VS_TRAINER               277
+#define MUS_HG_VS_GYM_LEADER            278
+#define MUS_HG_VS_RIVAL                 279
+#define MUS_HG_VS_ROCKET                280
+#define MUS_HG_VS_CHAMPION              281
+#define MUS_HG_VS_WILD                  282
+#define MUS_HG_VS_RAIKOU                283
+#define MUS_HG_VS_ENTEI                 284
+#define MUS_HG_VS_SUICUNE               285
+#define MUS_HG_VS_LUGIA                 286
+#define MUS_HG_VS_HO_OH                 287
+#define MUS_BW_VS_CYNTHIA               288
+#define MUS_BW_VS_RIVAL                 289
+#define MUS_BW_VS_PLASMA                290
+#define MUS_BW_VS_N                     291
+#define MUS_BW_VS_GYM_LEADER            292
+#define MUS_BW_VS_ELITE_FOUR            293
+#define MUS_BW_VS_CHAMPION              294
+#define MUS_BW_VS_N_FINAL               295
+#define MUS_BW_VS_GHETSIS               296
+#define MUS_B2_VS_GHETSIS               297
+#define MUS_B2_VS_GYM_LEADER            298
+#define MUS_B2_VS_IRIS                  299
+#define MUS_B2_VS_RIVAL                 300
+#define MUS_B2_VS_COLRESS               301
+#define MUS_B2_VS_LEADER_SINNOH         302
+#define MUS_B2_VS_CHAMPION_SINNOH       303
+#define MUS_B2_VS_NEO_PLASMA            304
+
 // Music
 #define MUS_LITTLEROOT_TEST         350 // MUS_TETSUJI
 #define MUS_GSC_ROUTE38             351 // MUS_FIELD13

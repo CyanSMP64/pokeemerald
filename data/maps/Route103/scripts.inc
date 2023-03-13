@@ -27,14 +27,10 @@ Route103_EventScript_Rival::
 	end
 
 Route103_EventScript_RivalMay::
-	msgbox Route103_Text_MayRoute103Pokemon, MSGBOX_DEFAULT
-	closemessage
 	playbgm MUS_ENCOUNTER_MAY, TRUE
 	applymovement LOCALID_RIVAL, Common_Movement_FacePlayer
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	msgbox Route103_Text_MayLetsBattle, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
@@ -44,14 +40,10 @@ Route103_EventScript_RivalMay::
 	end
 
 Route103_EventScript_RivalBrendan::
-	msgbox Route103_Text_BrendanRoute103Pokemon, MSGBOX_DEFAULT
-	closemessage
 	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
 	applymovement LOCALID_RIVAL, Common_Movement_FacePlayer
 	waitmovement 0
 	applymovement LOCALID_RIVAL, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_RIVAL, Common_Movement_Delay48
 	waitmovement 0
 	msgbox Route103_Text_BrendanLetsBattle, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
@@ -91,12 +83,10 @@ Route103_EventScript_StartBrendanBattleMudkip::
 	end
 
 Route103_EventScript_AfterMayBattle::
-	msgbox Route103_Text_MayTimeToHeadBack, MSGBOX_DEFAULT
 	goto Route103_EventScript_RivalExit
 	end
 
 Route103_EventScript_AfterBrendanBattle::
-	msgbox Route103_Text_BrendanTimeToHeadBack, MSGBOX_DEFAULT
 	goto Route103_EventScript_RivalExit
 	end
 
@@ -151,41 +141,39 @@ Route103_EventScript_RivalEnd::
 	end
 
 Route103_Movement_RivalExitFacingNorth1:
-	walk_left
-	walk_down
+	walk_faster_left
+	walk_faster_down
 	step_end
 
 Route103_Movement_RivalExitFacingNorth2:
 	jump_2_down
-	delay_16
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
 	step_end
 
 Route103_Movement_WatchRivalExitFacingNorth:
-	delay_16
 	delay_4
+	delay_1
 	walk_in_place_faster_left
-	delay_16
+	delay_4
 	walk_in_place_faster_down
 	step_end
 
 Route103_Movement_RivalExit1:
-	walk_down
+	walk_faster_down
 	step_end
 
 Route103_Movement_RivalExit2:
 	jump_2_down
-	delay_16
-	walk_down
-	walk_down
-	walk_down
+	walk_faster_down
+	walk_faster_down
+	walk_faster_down
 	step_end
 
 Route103_Movement_WatchRivalExitFacingEastOrWest:
-	delay_16
+	delay_4
 	walk_in_place_faster_down
 	step_end
 
@@ -214,8 +202,6 @@ Route103_EventScript_Amy::
 	end
 
 Route102_EventScript_AmyRegisterMatchCallAfterBattle::
-	msgbox Route103_Text_AmyLivRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_AMY_AND_LIV_1
 	release
 	end
 
@@ -232,8 +218,6 @@ Route103_EventScript_Liv::
 	end
 
 Route102_EventScript_LivRegisterMatchCallAfterBattle::
-	msgbox Route103_Text_AmyLivRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_AMY_AND_LIV_1
 	release
 	end
 
@@ -258,8 +242,6 @@ Route103_EventScript_Miguel::
 Route102_EventScript_MiguelRegisterMatchCallAfterBattle::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
-	msgbox Route103_Text_MiguelRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_MIGUEL_1
 	release
 	end
 
@@ -293,13 +275,7 @@ Route103_Text_MayRoute103Pokemon:
 	.string "on ROUTE 103 include…$"
 
 Route103_Text_MayLetsBattle:
-	.string "Oh, hi, {PLAYER}{KUN}!\p"
-	.string "…Oh, I see, my dad gave you\n"
-	.string "a POKéMON as a gift.\p"
-	.string "Since we're here, let's have a quick\n"
-	.string "battle!\p"
-	.string "I'll give you a taste of what being\n"
-	.string "a TRAINER is like.$"
+	.string "Fight me, nerd.$"
 
 Route103_Text_MayDefeated:
 	.string "Wow! That's great!\n"
@@ -320,12 +296,7 @@ Route103_Text_BrendanRoute103Pokemon:
 	.string "that one that live on ROUTE 103…$"
 
 Route103_Text_BrendanLetsBattle:
-	.string "Hey, it's {PLAYER}!\p"
-	.string "…Oh, yeah, Dad gave you a POKéMON.\p"
-	.string "Since we're here, how about a little\n"
-	.string "battle?\p"
-	.string "I'll teach you what being a TRAINER's\n"
-	.string "about!$"
+	.string "Fight me, nerd.$"
 
 Route103_Text_BrendanDefeated:
 	.string "Huh, {PLAYER}, you're not too shabby.$"

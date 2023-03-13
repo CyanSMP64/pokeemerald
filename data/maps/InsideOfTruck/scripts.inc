@@ -51,6 +51,14 @@ InsideOfTruck_EventScript_MovingBox::
 	msgbox InsideOfTruck_Text_BoxPrintedWithMonLogo, MSGBOX_SIGN
 	end
 
+InsideOfTruck_EventScript_PC::
+	lockall
+	playse SE_PC_ON
+	special BedroomPC
+	waitstate
+	releaseall
+	end
+
 InsideOfTruck_Text_BoxPrintedWithMonLogo:
 	.string "The box is printed with a POKéMON logo.\p"
 	.string "It's a POKéMON brand moving and\n"

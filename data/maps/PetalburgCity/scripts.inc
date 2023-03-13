@@ -18,7 +18,8 @@ PetalburgCity_OnTransition:
 	end
 
 PetalburgCity_EventScript_MoveGymBoyToWestEntrance::
-	setobjectxyperm LOCALID_GYM_BOY, 5, 11
+	setvar VAR_PETALBURG_GYM_STATE, 2
+	setvar VAR_PETALBURG_CITY_STATE, 3
 	return
 
 PetalburgCity_EventScript_DisableMapNameAndMusic::
@@ -503,69 +504,24 @@ PetalburgCity_Movement_PlayerWalkToGym3:
 	step_end
 
 PetalburgCity_EventScript_Scott0::
-	lockall
-	addobject LOCALID_SCOTT
-	setvar VAR_0x8008, 0
-	setobjectxy LOCALID_SCOTT, 13, 10
 	goto PetalburgCity_EventScript_Scott
 	end
 
 PetalburgCity_EventScript_Scott1::
-	lockall
-	addobject LOCALID_SCOTT
-	setvar VAR_0x8008, 1
-	setobjectxy LOCALID_SCOTT, 13, 11
 	goto PetalburgCity_EventScript_Scott
 	end
 
 PetalburgCity_EventScript_Scott2::
-	lockall
-	addobject LOCALID_SCOTT
-	setvar VAR_0x8008, 2
-	setobjectxy LOCALID_SCOTT, 13, 12
 	goto PetalburgCity_EventScript_Scott
 	end
 
 PetalburgCity_EventScript_Scott3::
-	lockall
-	addobject LOCALID_SCOTT
-	setvar VAR_0x8008, 3
-	setobjectxy LOCALID_SCOTT, 13, 13
 	goto PetalburgCity_EventScript_Scott
 	end
 
 PetalburgCity_EventScript_Scott::
-	applymovement LOCALID_SCOTT, PetalburgCity_Movement_ScottStartWalkLeft
-	waitmovement 0
-	playse SE_PIN
-	applymovement LOCALID_SCOTT, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_SCOTT, Common_Movement_Delay48
-	waitmovement 0
-	applymovement LOCALID_SCOTT, PetalburgCity_Movement_ScottApproachPlayer
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
 	setvar VAR_SCOTT_STATE, 1
-	msgbox PetalburgCity_Text_AreYouATrainer, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_SCOTT, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	delay 30
-	msgbox PetalburgCity_Text_WellMaybeNot, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_SCOTT, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	delay 30
-	msgbox PetalburgCity_Text_ImLookingForTalentedTrainers, MSGBOX_DEFAULT
-	closemessage
-	call_if_eq VAR_0x8008, 0, PetalburgCity_EventScript_ScottExit0
-	call_if_eq VAR_0x8008, 1, PetalburgCity_EventScript_ScottExit1
-	call_if_eq VAR_0x8008, 2, PetalburgCity_EventScript_ScottExit2
-	call_if_eq VAR_0x8008, 3, PetalburgCity_EventScript_ScottExit3
 	setvar VAR_SCOTT_PETALBURG_ENCOUNTER, 1
-	removeobject LOCALID_SCOTT
-	releaseall
 	end
 
 PetalburgCity_EventScript_ScottExit0::

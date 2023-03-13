@@ -2858,7 +2858,6 @@ extern const u32 gMonFrontPic_CircledQuestionMark[];
 extern const u32 gMonBackPic_CircledQuestionMark[];
 extern const u32 gMonPalette_CircledQuestionMark[];
 extern const u32 gMonShinyPalette_CircledQuestionMark[];
-extern const u32 gMonStillFrontPic_CircledQuestionMark[];
 extern const u8 gMonIcon_QuestionMark[];
 extern const u8 gMonFootprint_QuestionMark[];
 extern const u32 gMonFrontPic_DoubleQuestionMark[];

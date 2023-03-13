@@ -261,11 +261,9 @@ Route104_EventScript_ExpertF::
 	lock
 	faceplayer
 	goto_if_set FLAG_RECEIVED_CHESTO_BERRY_ROUTE_104, Route104_EventScript_ReceivedBerry
-	msgbox Route104_Text_PlantBerriesInSoilTakeThis, MSGBOX_DEFAULT
 	giveitem ITEM_CHESTO_BERRY
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_CHESTO_BERRY_ROUTE_104
-	msgbox Route104_Text_TrainersOftenMakeMonHoldBerries, MSGBOX_DEFAULT
 	release
 	end
 
@@ -356,8 +354,7 @@ Route104_EventScript_SailToDewford::
 	waitmovement 0
 	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_ROUTE104
 	call Common_EventScript_PlayBrineysBoatMusic
-	goto_if_set FLAG_ENABLE_NORMAN_MATCH_CALL, Route104_EventScript_SailToDewfordNoCall
-	goto_if_unset FLAG_ENABLE_NORMAN_MATCH_CALL, Route104_EventScript_SailToDewfordDadCalls
+	goto Route104_EventScript_SailToDewfordNoCall
 	end
 
 Route104_EventScript_SailToDewfordNoCall::
@@ -386,7 +383,6 @@ Route104_EventScript_SailToDewfordDadCalls::
 	goto Route104_EventScript_ArriveInDewford
 
 Route104_EventScript_ArriveInDewford::
-	delay 50
 	applymovement OBJ_EVENT_ID_PLAYER, Route104_Movement_PlayerExitBoat
 	waitmovement 0
 	call Common_EventScript_StopBrineysBoatMusic
@@ -414,12 +410,10 @@ Route104_EventScript_ArriveInDewford::
 	end
 
 Route104_EventScript_DeliverLetterReminder::
-	msgbox Route104_Text_LandedInDewfordDeliverLetter, MSGBOX_DEFAULT
 	releaseall
 	end
 
 Route104_EventScript_LandedInDewford::
-	msgbox DewfordTown_Text_BrineyLandedInDewford, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -821,28 +815,28 @@ Route104_Movement_SailToDewford:
 	step_end
 
 Route104_Movement_PlayerBoardBoat:
-	walk_left
-	walk_down
-	walk_down
+	walk_faster_left
+	walk_faster_down
+	walk_faster_down
 	step_end
 
 Route104_Movement_PlayerExitBoat:
-	walk_down
+	walk_faster_down
 	step_end
 
 Route104_Movement_PlayerMoveForBriney:
-	walk_down
-	walk_left
+	walk_faster_down
+	walk_faster_left
 	walk_in_place_faster_right
 	step_end
 
 Route104_Movement_BrineyBoardBoat:
-	walk_down
-	walk_down
+	walk_faster_down
+	walk_faster_down
 	step_end
 
 Route104_Movement_BrineyExitBoat:
-	walk_down
+	walk_faster_down
 	walk_in_place_faster_left
 	step_end
 
@@ -875,8 +869,6 @@ Route104_EventScript_TryRegisterHaleyAfterBattle::
 	end
 
 Route104_EventScript_RegisterHaleyAfterBattle::
-	msgbox Route104_Text_HaleyRegister2, MSGBOX_DEFAULT
-	register_matchcall TRAINER_HALEY_1
 	release
 	end
 
@@ -887,8 +879,6 @@ Route104_EventScript_TryRegisterHaley::
 	end
 
 Route104_EventScript_RegisterHaley::
-	msgbox Route104_Text_HaleyRegister1, MSGBOX_DEFAULT
-	register_matchcall TRAINER_HALEY_1
 	release
 	end
 
@@ -916,8 +906,6 @@ Route104_EventScript_TryRegisterWinstonAfterBattle::
 	end
 
 Route104_EventScript_RegisterWinstonAfterBattle::
-	msgbox Route104_Text_WinstonRegister2, MSGBOX_DEFAULT
-	register_matchcall TRAINER_WINSTON_1
 	release
 	end
 
@@ -928,8 +916,6 @@ Route104_EventScript_TryRegisterWinston::
 	end
 
 Route104_EventScript_RegisterWinston::
-	msgbox Route104_Text_WinstonRegister1, MSGBOX_DEFAULT
-	register_matchcall TRAINER_WINSTON_1
 	release
 	end
 
@@ -957,8 +943,6 @@ Route104_EventScript_TryRegisterCindyAfterBattle::
 	end
 
 Route104_EventScript_RegisterCindyAfterBattle::
-	msgbox Route104_Text_CindyRegister2, MSGBOX_DEFAULT
-	register_matchcall TRAINER_CINDY_1
 	release
 	end
 
@@ -969,8 +953,6 @@ Route104_EventScript_TryRegisterCindy::
 	end
 
 Route104_EventScript_RegisterCindy::
-	msgbox Route104_Text_CindyRegister1, MSGBOX_DEFAULT
-	register_matchcall TRAINER_CINDY_1
 	release
 	end
 

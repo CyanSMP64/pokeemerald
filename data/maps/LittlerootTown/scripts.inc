@@ -118,7 +118,24 @@ LittlerootTown_EventScript_StepOffTruckMale::
 	setvar VAR_0x8005, 8
 	call LittlerootTown_EventScript_GoInsideWithMom
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK
-	warpsilent MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F, 8, 8
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
+	setflag FLAG_SET_WALL_CLOCK
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_1
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_2
+	setflag FLAG_SYS_TV_HOME
+	setvar VAR_LITTLEROOT_INTRO_STATE, 7
+	setflag FLAG_MET_RIVAL_MOM
+	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 2
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MAY
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_POKE_BALL
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
+	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
+	setvar VAR_LITTLEROOT_TOWN_STATE, 1
+	setflag FLAG_RIVAL_LEFT_FOR_ROUTE103
+	setvar VAR_LITTLEROOT_TOWN_STATE, 2
+	warp MAP_ROUTE101, 8, 14
 	waitstate
 	releaseall
 	end
@@ -129,13 +146,29 @@ LittlerootTown_EventScript_StepOffTruckFemale::
 	setvar VAR_0x8005, 8
 	call LittlerootTown_EventScript_GoInsideWithMom
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
-	warpsilent MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F, 2, 8
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
+	setflag FLAG_SET_WALL_CLOCK
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_1
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_2
+	setflag FLAG_SYS_TV_HOME
+	setvar VAR_LITTLEROOT_INTRO_STATE, 7
+	setflag FLAG_MET_RIVAL_MOM
+	setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 2
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_BRENDAN
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_POKE_BALL
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
+	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
+	setvar VAR_LITTLEROOT_TOWN_STATE, 1
+	setflag FLAG_RIVAL_LEFT_FOR_ROUTE103
+	setvar VAR_LITTLEROOT_TOWN_STATE, 2
+	warp MAP_ROUTE101, 8, 14
 	waitstate
 	releaseall
 	end
 
 LittlerootTown_EventScript_GoInsideWithMom::
-	delay 15
 	playse SE_LEDGE
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerStepOffTruck
 	waitmovement 0
@@ -146,34 +179,18 @@ LittlerootTown_EventScript_GoInsideWithMom::
 	waitmovement 0
 	closedoor VAR_0x8004, VAR_0x8005
 	waitdooranim
-	delay 10
 	applymovement LOCALID_MOM, LittlerootTown_Movement_MomApproachPlayerAtTruck
 	waitmovement 0
 	msgbox LittlerootTown_Text_OurNewHomeLetsGoInside, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_MOM, LittlerootTown_Movement_MomApproachDoor
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerApproachDoor
-	waitmovement 0
-	opendoor VAR_0x8004, VAR_0x8005
-	waitdooranim
-	applymovement LOCALID_MOM, LittlerootTown_Movement_MomEnterHouse
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerEnterHouse
-	waitmovement 0
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
-	setvar VAR_LITTLEROOT_INTRO_STATE, 3
-	hideobjectat OBJ_EVENT_ID_PLAYER, 0
-	closedoor VAR_0x8004, VAR_0x8005
-	waitdooranim
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN
-	clearflag FLAG_HIDE_MAP_NAME_POPUP
+	call PlayersHouse_2F_EventScript_SetWallClock
 	return
 
 LittlerootTown_Movement_MomExitHouse:
-	walk_down
+	walk_faster_down
 	step_end
 
 LittlerootTown_Movement_MomApproachPlayerAtTruck:
-	walk_down
+	walk_faster_down
 	walk_in_place_faster_left
 	step_end
 
@@ -202,9 +219,6 @@ LittlerootTown_Movement_PlayerEnterHouse:
 
 LittlerootTown_Movement_PlayerStepOffTruck:
 	jump_right
-	delay_16
-	delay_16
-	delay_16
 	step_end
 
 LittlerootTown_EventScript_BeginDexUpgradeScene::
@@ -910,16 +924,7 @@ LittlerootTown_EventScript_GiveRunningShoes::
 	return
 
 LittlerootTown_Text_OurNewHomeLetsGoInside:
-	.string "MOM: {PLAYER}, we're here, honey!\p"
-	.string "It must be tiring riding with our things\n"
-	.string "in the moving truck.\p"
-	.string "Well, this is LITTLEROOT TOWN.\p"
-	.string "How do you like it?\n"
-	.string "This is our new home!\p"
-	.string "It has a quaint feel, but it seems to be\n"
-	.string "an easy place to live, don't you think?\p"
-	.string "And, you get your own room, {PLAYER}!\n"
-	.string "Let's go inside.$"
+	.string "MOM: What time is it?$"
 
 LittlerootTown_Text_WaitPlayer:
 	.string "MOM: Wait, {PLAYER}!$"

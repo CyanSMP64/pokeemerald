@@ -304,7 +304,6 @@ const union AnimCmd *const gAnims_MonPic[] =
 
 #include "data/pokemon_graphics/unused_anims.h"
 #include "data/pokemon_graphics/front_pic_coordinates.h"
-#include "data/pokemon_graphics/still_front_pic_table.h"
 #include "data/pokemon_graphics/back_pic_coordinates.h"
 
 #include "data/pokemon_graphics/back_pic_table.h"

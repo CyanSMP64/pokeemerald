@@ -273,16 +273,12 @@ RusturfTunnel_EventScript_TunnelBlockagePos3::
 	end
 
 RusturfTunnel_EventScript_AquaGruntBackUp::
-	lockall
-	msgbox RusturfTunnel_Text_ComeAndGetSome, MSGBOX_DEFAULT
-	closemessage
 	applymovement LOCALID_GRUNT, RusturfTunnel_Movement_GruntAndPeekoBackUp
 	applymovement LOCALID_PEEKO, RusturfTunnel_Movement_GruntAndPeekoBackUp
 	waitmovement 0
 	copyobjectxytoperm LOCALID_GRUNT
 	copyobjectxytoperm LOCALID_PEEKO
 	setvar VAR_RUSTURF_TUNNEL_STATE, 3
-	releaseall
 	end
 
 RusturfTunnel_Movement_GruntAndPeekoBackUp:
@@ -307,21 +303,18 @@ RusturfTunnel_EventScript_Grunt::
 	playbgm MUS_ENCOUNTER_AQUA, FALSE
 	msgbox RusturfTunnel_Text_GruntIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_GRUNT_RUSTURF_TUNNEL, RusturfTunnel_Text_GruntDefeat
-	msgbox RusturfTunnel_Text_GruntTakePackage, MSGBOX_DEFAULT
 	giveitem ITEM_DEVON_GOODS
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, RusturfTunnel_Movement_PushPlayerAsideForGrunt
 	applymovement LOCALID_GRUNT, RusturfTunnel_Movement_GruntEscape
 	waitmovement 0
 	removeobject LOCALID_GRUNT
-	delay 50
 	addobject LOCALID_BRINEY
 	applymovement LOCALID_BRINEY, RusturfTunnel_Movement_BrineyApproachPeeko1
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, RusturfTunnel_Movement_PlayerMoveAsideForBriney
 	applymovement LOCALID_BRINEY, RusturfTunnel_Movement_BrineyApproachPeeko2
 	waitmovement 0
-	msgbox RusturfTunnel_Text_PeekoGladToSeeYouSafe, MSGBOX_DEFAULT
 	applymovement LOCALID_BRINEY, Common_Movement_FacePlayer
 	waitmovement 0
 	message RusturfTunnel_Text_ThankYouLetsGoHomePeeko
@@ -348,74 +341,74 @@ RusturfTunnel_EventScript_Grunt::
 RusturfTunnel_Movement_PushPlayerAsideForGrunt:
 	face_down
 	lock_facing_direction
-	walk_up
+	walk_faster_up
 	unlock_facing_direction
 	walk_in_place_faster_left
 	step_end
 
 RusturfTunnel_Movement_PlayerMoveAsideForBriney:
-	walk_down
+	walk_faster_down
 	walk_in_place_faster_up
 	step_end
 
 RusturfTunnel_Movement_GruntEscape:
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	walk_fast_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
 	step_end
 
 RusturfTunnel_Movement_BrineyApproachPeeko1:
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
 	step_end
 
 RusturfTunnel_Movement_BrineyExit:
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
 	step_end
 
 RusturfTunnel_Movement_PlayerWatchBrineyExit:
-	delay_16
-	delay_8
 	delay_4
+	delay_2
+	delay_1
 	walk_in_place_faster_left
 	step_end
 
 RusturfTunnel_Movement_BrineyApproachPeeko2:
-	delay_16
-	walk_right
+	delay_4
+	walk_faster_right
 	step_end
 
 RusturfTunnel_Movement_PeekoExit:
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
+	walk_faster_left
 	step_end
 
 RusturfTunnel_EventScript_Mike::
@@ -431,12 +424,6 @@ RusturfTunnel_Text_Peeko:
 	.string "PEEKO: Pii pihyoh!$"
 
 RusturfTunnel_Text_GruntIntro:
-	.string "Grah, keelhaul it all!\p"
-	.string "That hostage POKéMON turned out to\n"
-	.string "be worthless!\p"
-	.string "And to think I made a getaway…\n"
-	.string "In this tunnel to nowhere!\p"
-	.string "Hey! You!\n"
 	.string "So you want to battle me?$"
 
 RusturfTunnel_Text_GruntDefeat:
@@ -457,19 +444,7 @@ RusturfTunnel_Text_PeekoGladToSeeYouSafe:
 	.string "Am I glad to see you're safe!$"
 
 RusturfTunnel_Text_ThankYouLetsGoHomePeeko:
-	.string "PEEKO owes her life to you!\p"
-	.string "They call me MR. BRINEY.\n"
-	.string "And, you are?\p"
-	.string "… … … … … … … …\n"
-	.string "… … … … … … … …\p"
-	.string "Ah, so you are {PLAYER}{KUN}!\n"
-	.string "I sincerely thank you!\p"
-	.string "Now, if there's anything that troubles\n"
-	.string "you, don't hesitate to tell me!\p"
-	.string "You can usually find me in my cottage\n"
-	.string "by the sea near PETALBURG WOODS.\p"
-	.string "Come, PEEKO, we should make our way\n"
-	.string "home.\p"
+	.string "Thank you for saving my birdge.\p"
 	.string "PEEKO: Pihyoh!$"
 
 RusturfTunnel_Text_WhyCantTheyKeepDigging:

@@ -31,8 +31,6 @@ Route124_EventScript_Jenny::
 Route124_EventScript_RegisterJenny::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
-	msgbox Route124_Text_JennyRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_JENNY_1
 	release
 	end
 
@@ -60,8 +58,6 @@ Route124_EventScript_Lila::
 	end
 
 Route124_EventScript_RegisterLila::
-	msgbox Route124_Text_LilaRoyRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_LILA_AND_ROY_1
 	release
 	end
 
@@ -79,8 +75,6 @@ Route124_EventScript_Roy::
 	end
 
 Route124_EventScript_RegisterRoy::
-	msgbox Route124_Text_LilaRoyRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_LILA_AND_ROY_1
 	release
 	end
 

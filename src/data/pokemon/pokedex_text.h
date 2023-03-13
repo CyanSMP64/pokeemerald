@@ -119,10 +119,7 @@ const u8 gRattataPokedexText[] = _(
     "It will make its nest anywhere.");
 
 const u8 gRaticatePokedexText[] = _(
-    "A RATICATE's sturdy fangs grow steadily.\n"
-    "To keep them ground down, it gnaws on\n"
-    "rocks and logs. It may even chew on the\n"
-    "walls of houses.");
+    "I hate the mouse. But don't we all?");
 
 const u8 gSpearowPokedexText[] = _(
     "Its loud cry can be heard over half a mile\n"
@@ -467,10 +464,10 @@ const u8 gPonytaPokedexText[] = _(
     "keep up with its parent.");
 
 const u8 gRapidashPokedexText[] = _(
-    "It usually canters casually in the fields\n"
-    "and plains. But once a RAPIDASH turns\n"
-    "serious, its fiery manes flare and blaze\n"
-    "as it gallops its way up to 150 mph.");
+    "Dialga is a horse. Deal with the truth.\n"
+    "According to legend, time began flowing\n"
+    "when Dialga was born. It is said to\n"
+    "have the power to travel through time.");
 
 const u8 gSlowpokePokedexText[] = _(
     "It catches prey by dipping its tail in\n"

@@ -836,7 +836,7 @@ static void Task_SetClock_AskConfirm(u8 taskId)
     AddTextPrinterParameterized(WIN_MSG, FONT_NORMAL, gText_IsThisTheCorrectTime, 0, 1, 0, NULL);
     PutWindowTilemap(WIN_MSG);
     ScheduleBgCopyTilemapToVram(0);
-    CreateYesNoMenu(&sWindowTemplate_ConfirmYesNo, 0x250, 0x0d, 1);
+    CreateYesNoMenu(&sWindowTemplate_ConfirmYesNo, 0x250, 0x0d, 0);
     gTasks[taskId].func = Task_SetClock_HandleConfirmInput;
 }
 

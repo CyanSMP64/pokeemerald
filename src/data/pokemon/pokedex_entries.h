@@ -938,14 +938,14 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_RAPIDASH] =
     {
-        .categoryName = _("FIRE HORSE"),
-        .height = 17,
-        .weight = 950,
+        .categoryName = _("HORSE"),
+        .height = 54,
+        .weight = 6830,
         .description = gRapidashPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 289,
-        .trainerOffset = 1,
+        .trainerScale = 689,
+        .trainerOffset = 17,
     },
 
     [NATIONAL_DEX_SLOWPOKE] =

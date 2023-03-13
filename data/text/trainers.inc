@@ -1,7 +1,5 @@
 Route102_Text_CalvinIntro:
-	.string "If you have POKéMON with you, then\n"
-	.string "you're an official POKéMON TRAINER!\l"
-	.string "You can't say no to my challenge!$"
+	.string "I probably have a legendary.$"
 
 Route102_Text_CalvinDefeated:
 	.string "Arrgh, I lost…\n"
@@ -35,16 +33,15 @@ Route102_Text_CalvinRematchPostBattle:
 	.string "I'll get stronger, too.$"
 
 Route102_Text_AllenIntro:
-	.string "Did you just become a TRAINER?\n"
-	.string "We're both beginners!$"
+	.string "i catch as many POKé and will\n"
+	.string "always win..$"
 
 Route102_Text_AllenDefeated:
-	.string "I called you because I thought\n"
-	.string "I could beat you…$"
+	.string "Fuck!$"
 
 Route102_Text_AllenPostBattle:
-	.string "I haven't won once yet…\n"
-	.string "I wish I would win soon…$"
+	.string "Mever again will I fight.\n"
+	.string "To be defeete will ruin me.$"
 
 Route102_Text_RickIntro:
 	.string "Hahah! Our eyes met!\n"
