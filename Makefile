@@ -439,7 +439,6 @@ libagbsyscall:
 
 $(INI): $(ROM)
 	$(INIGEN) $(ELF) $@ --name "Emerald (U)" --code $(GAME_CODE)
-	echo "MD5Hash="$(shell md5sum $< | cut -d' ' -f1) >> $@
 
 ###################
 ### Symbol file ###
