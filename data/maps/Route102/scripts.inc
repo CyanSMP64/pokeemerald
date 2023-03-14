@@ -56,7 +56,53 @@ Route102_EventScript_CalvinRematch::
 
 Route102_EventScript_Rick::
 	trainerbattle_single TRAINER_RICK, Route102_Text_RickIntro, Route102_Text_RickDefeated
-	msgbox Route102_Text_RickPostBattle, MSGBOX_AUTOCLOSE
+@	msgbox Route102_Text_RickPostBattle, MSGBOX_AUTOCLOSE
+	lockall
+	playse SE_M_NIGHTMARE
+	delay 5
+	removeobject 3
+	delay 1
+	addobject 3
+	delay 4
+	removeobject 3
+	delay 1
+	addobject 3
+	delay 3
+	removeobject 3
+	delay 1
+	addobject 3
+	delay 2
+	removeobject 3
+	delay 1
+	addobject 3
+	delay 1
+	removeobject 3
+	delay 1
+	addobject 3
+	delay 1
+	removeobject 3
+	delay 1
+	addobject 3
+	delay 1
+	removeobject 3
+	delay 1
+	addobject 3
+	delay 1
+	removeobject 3
+	delay 2
+	addobject 3
+	delay 1
+	removeobject 3
+	delay 3
+	addobject 3
+	delay 1
+	removeobject 3
+	delay 5
+	addobject 3
+	delay 1
+	removeobject 3
+	setflag FLAG_HIDE_RICK
+	releaseall
 	end
 
 Route102_EventScript_Tiana::

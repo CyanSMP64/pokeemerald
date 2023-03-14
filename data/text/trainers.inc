@@ -44,11 +44,11 @@ Route102_Text_AllenPostBattle:
 	.string "To be defeete will ruin me.$"
 
 Route102_Text_RickIntro:
-	.string "Hahah! Our eyes met!\n"
-	.string "I'll take you on with my BUG POKéMON!$"
+	.string "Is this a nuzlocke?$"
 
 Route102_Text_RickDefeated:
-	.string "Ow! Down and out!$"
+	.string "You've killed me…\p"
+	.string "{PLAYER}: Good.$"
 
 Route102_Text_RickPostBattle:
 	.string "If you lock eyes with a TRAINER,\n"

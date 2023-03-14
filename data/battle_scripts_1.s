@@ -2040,7 +2040,7 @@ BattleScript_PresentHealTarget::
 	goto BattleScript_MoveEnd
 
 BattleScript_AlreadyAtFullHp::
-	pause 1
+	pause 30
 	printstring STRINGID_PKMNHPFULL
 	waitmessage 1
 	goto BattleScript_MoveEnd

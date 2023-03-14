@@ -1357,9 +1357,16 @@ SECTIONS {
         src/match_call.o(.rodata);
     } =0
 
-    new_songs :
+    new_sound :
     ALIGN(4)
     {
+        data/sound_data_2.o(.rodata);
+    } =0
+
+    new_songs 0x08fe0000 :
+    ALIGN(4)
+    {
+        data/dummy_data.o(.rodata);
         sound/songs/midi/mus_dp_vs_rival.o(.rodata);
         sound/songs/midi/mus_dp_vs_galactic_commander.o(.rodata);
         sound/songs/midi/mus_dp_vs_gym_leader.o(.rodata);
@@ -1389,17 +1396,6 @@ SECTIONS {
         sound/songs/midi/mus_bw_vs_ghetsis.o(.rodata);
         sound/songs/midi/mus_b2_vs_ghetsis.o(.rodata);
         sound/songs/midi/mus_b2_vs_gym_leader.o(.rodata);
-    } =0
-
-    new_sound :
-    ALIGN(4)
-    {
-        data/sound_data_2.o(.rodata);
-    } =0
-
-    new_songs_2 0x08fe0180 :
-    ALIGN(4)
-    {
         sound/songs/midi/mus_b2_vs_iris.o(.rodata);
         sound/songs/midi/mus_b2_vs_rival.o(.rodata);
         sound/songs/midi/mus_b2_vs_colress.o(.rodata);

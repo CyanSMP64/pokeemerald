@@ -291,10 +291,10 @@ static const u8 sKeyboardChars[KBPAGE_COUNT][KBROW_COUNT][KBCOL_COUNT] = {
         __("TUVWXYZ "),
     },
     [KEYBOARD_SYMBOLS] = {
-        __("01234   "),
-        __("56789   "),
+        __("01234(  "),
+        __("56789)  "),
         __("!?♂♀/-  "),
-        __("…“”‘'   "),
+        __("…“”:'   "),
     }
 };
 

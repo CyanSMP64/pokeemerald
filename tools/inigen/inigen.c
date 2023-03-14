@@ -761,9 +761,9 @@ int main(int argc, char ** argv)
  * 
  * Also please make sure no data is written to the following addresses:
  * 
- * 0x08a00000 - 0x08a000df (instant text)
- * 0x08fe0000 - 0x08fe0047 (random statics)
- * 0x08fe0100 - 0x08fe017f (fix music)
+ * 0x08a00000 - 0x08a000df (instant text)     only 0x00 bytes
+ * 0x08fe0000 - 0x08fe0047 (random statics)   only 0xFF bytes
+ * 0x08fe0100 - 0x08fe017f (fix music)        only 0xFF bytes
  * 
 ******************************************************************************/
 
