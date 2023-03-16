@@ -1402,6 +1402,7 @@ SECTIONS {
         sound/songs/midi/mus_b2_vs_leader_sinnoh.o(.rodata);
         sound/songs/midi/mus_b2_vs_champion_sinnoh.o(.rodata);
         sound/songs/midi/mus_b2_vs_neo_plasma.o(.rodata);
+        sound/songs/midi/mus_k64_miracle.o(.rodata);
     } =0
 
     new_sound_2 :

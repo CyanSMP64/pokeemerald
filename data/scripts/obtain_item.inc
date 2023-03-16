@@ -61,7 +61,7 @@ EventScript_NoRoomForItem::
 	return
 
 EventScript_PlayFanfareObtainedItem::
-	playfanfare MUS_OBTAIN_ITEM
+	playfanfare MUS_LEVEL_UP
 	return
 
 EventScript_PlayFanfareObtainedTMHM::

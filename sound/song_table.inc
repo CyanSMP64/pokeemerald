@@ -306,7 +306,7 @@ gSongTable::
 	song mus_b2_vs_leader_sinnoh, 0, 0
 	song mus_b2_vs_champion_sinnoh, 0, 0
 	song mus_b2_vs_neo_plasma, 0, 0
-	song dummy_song_header, 0, 0
+	song mus_k64_miracle, 0, 0
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0

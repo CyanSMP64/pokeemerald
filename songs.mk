@@ -1367,3 +1367,6 @@ $(MID_SUBDIR)/mus_b2_vs_champion_sinnoh.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_b2_vs_neo_plasma.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G322 -V080
+
+$(MID_SUBDIR)/mus_k64_miracle.s: %.s: %.mid
+	$(MID) $< $@ -E -R20 -G324 -V127

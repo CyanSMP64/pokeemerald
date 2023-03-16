@@ -323,3 +323,13 @@
 .include "sound/voicegroups/voicegroup321.inc"
 .include "sound/voicegroups/voicegroup322.inc" @ bw2 - neo plasma
 .include "sound/voicegroups/voicegroup323.inc"
+.include "sound/voicegroups/voicegroup324.inc" @ kirby 64
+.include "sound/voicegroups/voicegroup325.inc"
+.include "sound/voicegroups/voicegroup326.inc"
+.include "sound/voicegroups/voicegroup327.inc"
+.include "sound/voicegroups/voicegroup328.inc"
+.include "sound/voicegroups/voicegroup329.inc"
+.include "sound/voicegroups/voicegroup330.inc"
+.include "sound/voicegroups/voicegroup331.inc"
+.include "sound/voicegroups/voicegroup332.inc"
+.include "sound/voicegroups/voicegroup333.inc"

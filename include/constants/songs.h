@@ -314,6 +314,7 @@
 #define MUS_B2_VS_LEADER_SINNOH         302
 #define MUS_B2_VS_CHAMPION_SINNOH       303
 #define MUS_B2_VS_NEO_PLASMA            304
+#define MUS_K64_MIRACLE                 305
 
 // Music
 #define MUS_LITTLEROOT_TEST         350 // MUS_TETSUJI          // Unused, likely a test track.
