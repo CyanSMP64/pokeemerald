@@ -618,7 +618,7 @@ static void UpdateFriendshipStepCounter(void)
     int i;
 
     (*ptr)++;
-    (*ptr) %= 8;
+    (*ptr) %= 1;
     if (*ptr == 0)
     {
         struct Pokemon *mon = gPlayerParty;

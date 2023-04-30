@@ -940,12 +940,12 @@ const struct PokedexEntry gPokedexEntries[] =
     {
         .categoryName = _("HORSE"),
         .height = 54,
-        .weight = 6830,
+        .weight = 950,
         .description = gRapidashPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
-        .trainerScale = 689,
-        .trainerOffset = 17,
+        .trainerScale = 721,
+        .trainerOffset = 19,
     },
 
     [NATIONAL_DEX_SLOWPOKE] =

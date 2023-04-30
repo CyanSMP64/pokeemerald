@@ -770,7 +770,7 @@ BattleScript_EffectOHKO::
 	trysetdestinybondtohappen
 	goto BattleScript_HitFromAtkAnimation
 BattleScript_KOFail::
-	pause 1
+	pause 30
 	printfromtable gKOFailedStringIds
 	waitmessage 1
 	goto BattleScript_MoveEnd
@@ -3149,7 +3149,7 @@ BattleScript_PursuitDmgOnSwitchOutRet:
 	return
 
 BattleScript_Pausex20::
-	pause 1
+	pause 30
 	return
 
 BattleScript_LevelUp::

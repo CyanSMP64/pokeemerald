@@ -32,15 +32,15 @@ voicegroup324::
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_k64_orchhit, 255, 0, 255, 197
-	voice_directsound 60, 0, DirectSoundWaveData_k64_tractor_noise, 255, 0, 255, 32
+	voice_directsound 60, 0, DirectSoundWaveData_k64_orchhit, 255, 0, 255, 209
+	voice_directsound 60, 0, DirectSoundWaveData_k64_tractor_noise, 255, 0, 255, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_k64_tambourine, 255, 0, 255, 32
+	voice_directsound 60, 0, DirectSoundWaveData_k64_tambourine, 255, 0, 255, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroup329, KeySplitTable9	@ ride & crash
@@ -54,6 +54,6 @@ voicegroup324::
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroup332, KeySplitTable86	@ pipe organ
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_k64_timpani, 255, 250, 255, 165
+	voice_directsound 60, 0, DirectSoundWaveData_k64_timpani, 255, 250, 255, 193
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit_all voicegroup325				@ drum kit

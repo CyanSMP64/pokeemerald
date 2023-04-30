@@ -83,15 +83,14 @@ Route103_EventScript_StartBrendanBattleMudkip::
 	end
 
 Route103_EventScript_AfterMayBattle::
-	goto Route103_EventScript_RivalExit
+	goto Route103_EventScript_RivalEnd
 	end
 
 Route103_EventScript_AfterBrendanBattle::
-	goto Route103_EventScript_RivalExit
+	goto Route103_EventScript_RivalEnd
 	end
 
 Route103_EventScript_RivalExit::
-	closemessage
 	switch VAR_FACING
 	case DIR_SOUTH, Route103_EventScript_RivalExitFacingSouth
 	case DIR_NORTH, Route103_EventScript_RivalExitFacingNorth
@@ -129,14 +128,16 @@ Route103_EventScript_RivalExitFacingSouth::
 	end
 
 Route103_EventScript_RivalEnd::
-	removeobject LOCALID_RIVAL
 	setvar VAR_BIRCH_LAB_STATE, 4
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL
+	setflag FLAG_HIDE_ROUTE_103_RIVAL
 	setflag FLAG_DEFEATED_RIVAL_ROUTE103
-	setvar VAR_OLDALE_RIVAL_STATE, 1
-	clearflag FLAG_HIDE_OLDALE_TOWN_RIVAL
+	setvar VAR_OLDALE_RIVAL_STATE, 2
 	savebgm MUS_DUMMY
 	fadedefaultbgm
+	special HealPlayerParty
+	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 6, 5
+	waitstate
 	releaseall
 	end
 
@@ -278,8 +279,7 @@ Route103_Text_MayLetsBattle:
 	.string "Fight me, nerd.$"
 
 Route103_Text_MayDefeated:
-	.string "Wow! That's great!\n"
-	.string "{PLAYER}{KUN}, you're pretty good!$"
+	.string "I got societied.$"
 
 Route103_Text_MayTimeToHeadBack:
 	.string "MAY: I think I know why my dad has\n"
@@ -299,7 +299,7 @@ Route103_Text_BrendanLetsBattle:
 	.string "Fight me, nerd.$"
 
 Route103_Text_BrendanDefeated:
-	.string "Huh, {PLAYER}, you're not too shabby.$"
+	.string "I got societied.$"
 
 Route103_Text_BrendanTimeToHeadBack:
 	.string "BRENDAN: I think I get it.\n"

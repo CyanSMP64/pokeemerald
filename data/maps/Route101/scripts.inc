@@ -18,10 +18,17 @@ Route101_OnFrame:
 
 Route101_OnWarp:
 	map_script_2 VAR_ROUTE101_STATE, 0, Route101_EventScript_PlayerTurnEast
+	map_script_2 VAR_BIRCH_LAB_STATE, 3, Route101_EventScript_PlayerTurnEast
+	map_script_2 VAR_BIRCH_LAB_STATE, 6, Route101_EventScript_PlayerTurnEast2
 	.2byte 0
 
 Route101_EventScript_PlayerTurnEast::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	end
+
+Route101_EventScript_PlayerTurnEast2::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	setvar VAR_BIRCH_LAB_STATE, 5
 	end
 
 Route101_EventScript_PlayHelpBGM::

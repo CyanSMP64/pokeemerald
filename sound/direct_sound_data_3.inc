@@ -1,4 +1,8 @@
 	.align 2
+DirectSoundWaveData_b2_stylus_rmx_groove125::
+	.incbin "sound/direct_sound_samples/b2_stylus_rmx_groove125.bin"
+
+	.align 2
 DirectSoundWaveData_b2_plugsound_pro_classical_piano1_29::
 	.incbin "sound/direct_sound_samples/b2_plugsound_pro_classical_piano1_29.bin"
 

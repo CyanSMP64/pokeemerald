@@ -379,8 +379,7 @@ Route104_Text_WinstonPostRematch:
 	.string "It's so deep, the world of POKéMON…$"
 
 Route104_Text_CindyIntro:
-	.string "We must have been fated to meet.\n"
-	.string "May I ask you for a battle?$"
+	.string "I have a Full Restore :)$"
 
 Route104_Text_CindyDefeat:
 	.string "Oh, my!$"

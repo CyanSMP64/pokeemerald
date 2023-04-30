@@ -12,14 +12,19 @@ EventScript_RepelWoreOff::
 	bufferitemname 1, VAR_REPEL_LAST_USED
 	removeitem VAR_REPEL_LAST_USED, 1
 	playse SE_REPEL
-	msgbox gText_PlayerUsedVar2, MSGBOX_SIGN
-	goto EventScript_RepelWoreOff_End
+	msgbox Text_PlayerUsedRepel, MSGBOX_DEFAULT
+	closemessage
+	releaseall
+	end
+
 EventScript_RepelWoreOff_ChooseNo:
 	closemessage
-	goto EventScript_RepelWoreOff_End
+	releaseall
+	end
+
 EventScript_RepelWoreOff_NoMoreRepels:
-	msgbox Text_RepelWoreOff, MSGBOX_SIGN
-EventScript_RepelWoreOff_End:
+	msgbox Text_RepelWoreOff, MSGBOX_DEFAULT
+	closemessage
 	releaseall
 	end
 
@@ -29,3 +34,7 @@ Text_RepelWoreOff:
 Text_RepelWoreOff_UseAnother:
 	.string "REPEL's effect wore off…\n"
 	.string "Use another?$"
+
+Text_PlayerUsedRepel:
+	.string "{PLAYER} used the\n"
+	.string "{STR_VAR_2}.$"

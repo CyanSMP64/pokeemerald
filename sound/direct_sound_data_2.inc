@@ -1633,7 +1633,3 @@ DirectSoundWaveData_b2_ew_ra_gamelan_67::
 	.align 2
 DirectSoundWaveData_b2_ew_ra_gamelan_72::
 	.incbin "sound/direct_sound_samples/b2_ew_ra_gamelan_72.bin"
-
-	.align 2
-DirectSoundWaveData_b2_stylus_rmx_groove125::
-	.incbin "sound/direct_sound_samples/b2_stylus_rmx_groove125.bin"

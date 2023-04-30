@@ -115,6 +115,30 @@ Route102_EventScript_Allen::
 	msgbox Route102_Text_AllenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route102_EventScript_Nurse::
+	lock
+	faceplayer
+	msgbox Route102_Text_HealPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Route102_EventScript_NurseHeal
+	msgbox Route102_Text_PokemonNotHealed, MSGBOX_DEFAULT
+	release
+	end
+
+Route102_EventScript_NurseHeal::
+	special HealPlayerParty
+	playse SE_USE_ITEM
+	msgbox Route102_Text_PokemonHealed, MSGBOX_DEFAULT
+	release
+	end
+
+Route102_Text_HealPokemon:
+	.string "Want me to heal your Pokémon?$"
+
+Route102_Text_PokemonHealed:
+	.string "Your Pokémon is healthy.\n"
+Route102_Text_PokemonNotHealed:
+	.string "Come again!$"
+
 Route102_Text_WatchMeCatchPokemon:
 	.string "WALLY: {PLAYER}…\n"
 	.string "POKéMON hide in tall grass like this,\l"
@@ -139,8 +163,7 @@ Route102_Text_ImNotVeryTall:
 	.string "Fwatchoo!$"
 
 Route102_Text_CatchWholeBunchOfPokemon:
-	.string "I'm going to catch a whole bunch of\n"
-	.string "POKéMON!$"
+	.string "I knew you wanted to join me.$"
 
 Route102_Text_RouteSignOldale:
 	.string "ROUTE 102\n"
