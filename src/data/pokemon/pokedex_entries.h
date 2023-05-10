@@ -194,12 +194,12 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_PIDGEY] =
     {
-        .categoryName = _("TINY BIRD"),
-        .height = 3,
+        .categoryName = _("WRESTLING"),
+        .height = 8,
         .weight = 18,
         .description = gPidgeyPokedexText,
-        .pokemonScale = 508,
-        .pokemonOffset = -3,
+        .pokemonScale = 366,
+        .pokemonOffset = 7,
         .trainerScale = 256,
         .trainerOffset = 0,
     },

@@ -96,7 +96,9 @@ static const union AnimCmd sAnim_Beedrill_1[] =
 
 static const union AnimCmd sAnim_Pidgey_1[] =
 {
-    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(0, 10),
+    ANIMCMD_FRAME(1, 44),
+    ANIMCMD_FRAME(0, 10),
     ANIMCMD_END,
 };
 

@@ -95,10 +95,10 @@ const u8 gBeedrillPokedexText[] = _(
     "they will attack in a swarm.");
 
 const u8 gPidgeyPokedexText[] = _(
-    "It has an extremely sharp sense of\n"
-    "direction. It can unerringly return home to\n"
-    "its nest, however far it may be removed\n"
-    "from its familiar surroundings.");
+    "With its wings, it controls its position in\n"
+    "the air. Its proficient fighting skills\n"
+    "enable it to keep up with big bruisers\n"
+    "like MACHAMP and HARIYAMA.");
 
 const u8 gPidgeottoPokedexText[] = _(
     "This POKéMON flies around, patrolling its\n"
