@@ -5,7 +5,7 @@ voicegroup191::
 	voice_keysplit voicegroup196, KeySplitTable10	@ ew grand piano
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroup210, KeySplitTable22	@ sd90 soft rhodes
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_keysplit voicegroup257, KeySplitTable13	@ sd90 fm e.piano
 	voice_keysplit_all voicegroup214				@ drum kit 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -33,7 +33,7 @@ voicegroup191::
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroup212, KeySplitTable24	@ zero-g woody bass
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_dp_ps16_stingray_bass_hard, 255, 251, 0, 208	@ 127/ 60/  1/116/ 64
 	voice_directsound 60, 0, DirectSoundWaveData_dp_zg_pick_bass, 255, 251, 0, 208	@ 127/ 60/  1/116/ 64
 	voice_directsound 60, 0, DirectSoundWaveData_dp_zg_woody_bass_38, 255, 0, 255, 197	@ 127/127/127/118/ 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -45,7 +45,7 @@ voicegroup191::
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_wind, 67, 243, 155, 225	@  99/ 99/ 99/110/ 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_keysplit voicegroup360, KeySplitTable15	@ prosamples 41 violin pizzicato forte
 	voice_keysplit voicegroup202, KeySplitTable15	@ classic orchestra 2 harp long
 	voice_keysplit voicegroup208, KeySplitTable18	@ classic orchestra timpani
 	voice_keysplit voicegroup195, KeySplitTable9	@ sd90 strings 2

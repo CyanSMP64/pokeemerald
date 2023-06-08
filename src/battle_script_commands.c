@@ -9604,6 +9604,7 @@ static void Cmd_pickup(void)
                 s32 j;
                 s32 rand = Random() % 100;
                 u8 lvlDivBy10 = (GetMonData(&gPlayerParty[i], MON_DATA_LEVEL) - 1) / 10;
+                PlaySE(SE_DINKDONK);
                 if (lvlDivBy10 > 9)
                     lvlDivBy10 = 9;
 

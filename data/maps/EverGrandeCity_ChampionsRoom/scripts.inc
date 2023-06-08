@@ -228,7 +228,7 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
 	.string "dolphinDumper dolphinDumper dolphinDumper{FONT_NORMAL}$"
 
 EverGrandeCity_ChampionsRoom_Text_Defeat:
-	.string "I, the CHAMPION, fall in defeat…\p"
+	.string "I've dolphin'd my last Dumper…\p"
 	.string "That was wonderful work.\n"
 	.string "You were elegant, infuriatingly so.\l"
 	.string "And yet it was utterly glorious!\p"
@@ -264,14 +264,13 @@ EverGrandeCity_ChampionsRoom_Text_MayItsAlreadyOver:
 	.string "It's already over?$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanAdvice:
-	.string "BRENDAN: {PLAYER}!\p"
-	.string "How would you like some advice before\n"
-	.string "you challenge the CHAMPION?…$"
+	.string "BRENDAN: Fight me, n…$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanYouveWon:
-	.string "BRENDAN: {PLAYER}…\p"
-	.string "Are you trying to tell me…\n"
-	.string "You've beaten the CHAMPION?$"
+	.string "BRENDAN: Oh… you've beaten the\n"
+	.string "CHAMPION.\p"
+	.string "I only wanted to kick your ass,\n"
+	.string "but you'd just kick mine instead.$"
 
 EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex:
 	.string "PROF. BIRCH: See?\n"
@@ -317,9 +316,9 @@ EverGrandeCity_ChampionsRoom_Text_MayCongratulations:
 	.string "Honestly, congratulations!$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations:
-	.string "BRENDAN: Whaaaat?! … … … … …\n"
-	.string "… … … … … … … …\p"
-	.string "It can't be helped if that's the rule.\p"
-	.string "{PLAYER}, way to go!\n"
-	.string "Congratulations!$"
+	.string "BRENDAN: … … … … …\p"
+	.string "Yeah, whatever.\n"
+	.string "Not like I wanted to stick around\l"
+	.string "with this nerd anyway.\p"
+	.string "Get out of my sight already.$"
 

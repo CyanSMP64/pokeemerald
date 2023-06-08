@@ -396,6 +396,7 @@ extern const u8 gText_BattleNameHugh[];
 extern const u8 gText_BattleNameColress[];
 extern const u8 gText_BattleNamePreston[];
 extern const u8 gText_BattleNameSalty[];
+extern const u8 gText_BattleNameDialga[];
 
 extern const u8 gText_Win[];
 extern const u8 gText_Loss[];

@@ -242,13 +242,13 @@ DirectSoundWaveData_dp_sd90_perky_spin_48::
 DirectSoundWaveData_dp_sd90_perky_spin_60::
 	.incbin "sound/direct_sound_samples/dp_sd90_perky_spin_60.bin"
 	
-@	.align 2
-@DirectSoundWaveData_dp_sd90_perky_spin_72::
-@	.incbin "sound/direct_sound_samples/dp_sd90_perky_spin_72.bin"
-@	
-@	.align 2
-@DirectSoundWaveData_dp_sd90_perky_spin_84::
-@	.incbin "sound/direct_sound_samples/dp_sd90_perky_spin_84.bin"
+	.align 2
+DirectSoundWaveData_dp_sd90_perky_spin_72::
+	.incbin "sound/direct_sound_samples/dp_sd90_perky_spin_72.bin"
+	
+	.align 2
+DirectSoundWaveData_dp_sd90_perky_spin_84::
+	.incbin "sound/direct_sound_samples/dp_sd90_perky_spin_84.bin"
 	
 	.align 2
 DirectSoundWaveData_dp_sd90_reverse_cymbal::
@@ -321,10 +321,10 @@ DirectSoundWaveData_dp_sd90_orchestra_snare::
 @	.align 2
 @DirectSoundWaveData_dp_sd90_vibraphone2_36::
 @	.incbin "sound/direct_sound_samples/dp_sd90_vibraphone2_36.bin"
-@	
-@	.align 2
-@DirectSoundWaveData_dp_sd90_vibraphone2_48::
-@	.incbin "sound/direct_sound_samples/dp_sd90_vibraphone2_48.bin"
+	
+	.align 2
+DirectSoundWaveData_dp_sd90_vibraphone2_48::
+	.incbin "sound/direct_sound_samples/dp_sd90_vibraphone2_48.bin"
 	
 	.align 2
 DirectSoundWaveData_dp_sd90_vibraphone2_60::
@@ -334,10 +334,10 @@ DirectSoundWaveData_dp_sd90_vibraphone2_60::
 DirectSoundWaveData_dp_sd90_vibraphone2_72::
 	.incbin "sound/direct_sound_samples/dp_sd90_vibraphone2_72.bin"
 	
-@	.align 2
-@DirectSoundWaveData_dp_sd90_vibraphone2_84::
-@	.incbin "sound/direct_sound_samples/dp_sd90_vibraphone2_84.bin"
-@	
+	.align 2
+DirectSoundWaveData_dp_sd90_vibraphone2_84::
+	.incbin "sound/direct_sound_samples/dp_sd90_vibraphone2_84.bin"
+	
 @	.align 2
 @DirectSoundWaveData_dp_sd90_vibraphone2_96::
 @	.incbin "sound/direct_sound_samples/dp_sd90_vibraphone2_96.bin"
@@ -457,6 +457,18 @@ DirectSoundWaveData_dp_sd90_standard2_open_triangle::
 	.align 2
 DirectSoundWaveData_dp_sd90_fm_e_piano_72::
 	.incbin "sound/direct_sound_samples/dp_sd90_fm_e_piano_72.bin"
+		
+	.align 2
+DirectSoundWaveData_dp_ps41_violin_pizzicato_forte_67::
+	.incbin "sound/direct_sound_samples/dp_ps41_violin_pizzicato_forte_67.bin"
+		
+	.align 2
+DirectSoundWaveData_dp_ps41_violin_pizzicato_forte_79::
+	.incbin "sound/direct_sound_samples/dp_ps41_violin_pizzicato_forte_79.bin"
+		
+	.align 2
+DirectSoundWaveData_dp_ps16_stingray_bass_hard::
+	.incbin "sound/direct_sound_samples/dp_ps16_stingray_bass_hard.bin"
 
 	.align 2
 DirectSoundWaveData_hg_sampletank_string_orchestra_60::
@@ -931,6 +943,14 @@ DirectSoundWaveData_hg_plugsound_pro_square_wave_72::
 	.incbin "sound/direct_sound_samples/hg_plugsound_pro_square_wave_72.bin"
 
 	.align 2
+DirectSoundWaveData_hg_plugsound_pro_rock_piano_60::
+	.incbin "sound/direct_sound_samples/hg_plugsound_pro_rock_piano_60.bin"
+
+	.align 2
+DirectSoundWaveData_hg_plugsound_pro_rock_piano_72::
+	.incbin "sound/direct_sound_samples/hg_plugsound_pro_rock_piano_72.bin"
+
+	.align 2
 DirectSoundWaveData_bw_sampletank_string_orchestra_60::
 	.incbin "sound/direct_sound_samples/bw_sampletank_string_orchestra_60.bin"
 
@@ -1001,6 +1021,10 @@ DirectSoundWaveData_bw_kfl_trumpet_ensemble_79::
 	.align 2
 DirectSoundWaveData_bw_plugsound_pro_elastik_36::
 	.incbin "sound/direct_sound_samples/bw_plugsound_pro_elastik_36.bin"
+
+	.align 2
+DirectSoundWaveData_bw_plugsound_pro_elastik_48::
+	.incbin "sound/direct_sound_samples/bw_plugsound_pro_elastik_48.bin"
 
 	.align 2
 DirectSoundWaveData_bw_kfl_violin_ensemble_pizz_69::
@@ -1274,6 +1298,10 @@ DirectSoundWaveData_bw_kfl_trombone_ensemble_43::
 DirectSoundWaveData_bw_kfl_trombone_ensemble_52::
 	.incbin "sound/direct_sound_samples/bw_kfl_trombone_ensemble_52.bin"
 
+	.align 2
+DirectSoundWaveData_bw_kfl_trombone_ensemble_60::
+	.incbin "sound/direct_sound_samples/bw_kfl_trombone_ensemble_60.bin"
+
 @	.align 2
 @DirectSoundWaveData_bw_sampletank_marimba_60_22::
 @	.incbin "sound/direct_sound_samples/bw_sampletank_marimba_60_22.bin"
@@ -1383,8 +1411,20 @@ DirectSoundWaveData_bw_sd90_taiko::
 	.incbin "sound/direct_sound_samples/bw_sd90_taiko.bin"
 
 	.align 2
+DirectSoundWaveData_bw_kfl_harp_48::
+	.incbin "sound/direct_sound_samples/bw_kfl_harp_48.bin"
+
+	.align 2
 DirectSoundWaveData_bw_kfl_harp_60::
 	.incbin "sound/direct_sound_samples/bw_kfl_harp_60.bin"
+
+	.align 2
+DirectSoundWaveData_bw_kfl_harp_72::
+	.incbin "sound/direct_sound_samples/bw_kfl_harp_72.bin"
+
+	.align 2
+DirectSoundWaveData_bw_kfl_harp_84::
+	.incbin "sound/direct_sound_samples/bw_kfl_harp_84.bin"
 
 	.align 2
 DirectSoundWaveData_bw_plugsound_pro_vibraphone1_84::
@@ -1459,6 +1499,114 @@ DirectSoundWaveData_bw_ps15_snare105::
 	.incbin "sound/direct_sound_samples/bw_ps15_snare105.bin"
 
 	.align 2
+DirectSoundWaveData_bw_kfl_cymbals_a_due::
+	.incbin "sound/direct_sound_samples/bw_kfl_cymbals_a_due.bin"
+
+	.align 2
+DirectSoundWaveData_bw_plugsound_pro_cello_sus_43::
+	.incbin "sound/direct_sound_samples/bw_plugsound_pro_cello_sus_43.bin"
+
+	.align 2
+DirectSoundWaveData_bw_ewsc_full_chorus_ah_43::
+	.incbin "sound/direct_sound_samples/bw_ewsc_full_chorus_ah_43.bin"
+
+	.align 2
+DirectSoundWaveData_bw_ewsc_full_chorus_ah_52::
+	.incbin "sound/direct_sound_samples/bw_ewsc_full_chorus_ah_52.bin"
+
+	.align 2
+DirectSoundWaveData_bw_ewsc_full_chorus_ah_60::
+	.incbin "sound/direct_sound_samples/bw_ewsc_full_chorus_ah_60.bin"
+
+	.align 2
+DirectSoundWaveData_bw_ewso_orch_chimes_67::
+	.incbin "sound/direct_sound_samples/bw_ewso_orch_chimes_67.bin"
+
+	.align 2
+DirectSoundWaveData_bw_ewso_orch_chimes_72::
+	.incbin "sound/direct_sound_samples/bw_ewso_orch_chimes_72.bin"
+
+	.align 2
+DirectSoundWaveData_bw_battery3_hihat_closed::
+	.incbin "sound/direct_sound_samples/bw_battery3_hihat_closed.bin"
+
+	.align 2
+DirectSoundWaveData_bw_battery3_hihat_open::
+	.incbin "sound/direct_sound_samples/bw_battery3_hihat_open.bin"
+
+	.align 2
+DirectSoundWaveData_bw_plugsound_pro_timpani_55::
+	.incbin "sound/direct_sound_samples/bw_plugsound_pro_timpani_55.bin"
+
+@	.align 2
+@DirectSoundWaveData_bw_plugsound_pro_timpani_60::
+@	.incbin "sound/direct_sound_samples/bw_plugsound_pro_timpani_60.bin"
+@	
+@	.align 2
+@DirectSoundWaveData_bw_plugsound_pro_timpani_67::
+@	.incbin "sound/direct_sound_samples/bw_plugsound_pro_timpani_67.bin"
+
+	.align 2
+DirectSoundWaveData_bw_unknown_snare_roll::
+	.incbin "sound/direct_sound_samples/bw_unknown_snare_roll.bin"
+	
+@	.align 2
+@DirectSoundWaveData_bw_plugsound_pro_flute_sus_60::
+@	.incbin "sound/direct_sound_samples/bw_plugsound_pro_flute_sus_60.bin"
+@	
+	.align 2
+DirectSoundWaveData_bw_plugsound_pro_flute_sus_69::
+	.incbin "sound/direct_sound_samples/bw_plugsound_pro_flute_sus_69.bin"
+	
+	.align 2
+DirectSoundWaveData_bw_plugsound_pro_flute_sus_77::
+	.incbin "sound/direct_sound_samples/bw_plugsound_pro_flute_sus_77.bin"
+	
+	.align 2
+DirectSoundWaveData_bw_plugsound_pro_flute_sus_84::
+	.incbin "sound/direct_sound_samples/bw_plugsound_pro_flute_sus_84.bin"
+	
+	.align 2
+DirectSoundWaveData_bw_kfl_harp_55::
+	.incbin "sound/direct_sound_samples/bw_kfl_harp_55.bin"
+	
+	.align 2
+DirectSoundWaveData_bw_kfl_harp_67::
+	.incbin "sound/direct_sound_samples/bw_kfl_harp_67.bin"
+	
+	.align 2
+DirectSoundWaveData_bw_kfl_harp_76::
+	.incbin "sound/direct_sound_samples/bw_kfl_harp_76.bin"
+	
+	.align 2
+DirectSoundWaveData_bw_sampletank_clarinet_55::
+	.incbin "sound/direct_sound_samples/bw_sampletank_clarinet_55.bin"
+	
+	.align 2
+DirectSoundWaveData_bw_sampletank_clarinet_64::
+	.incbin "sound/direct_sound_samples/bw_sampletank_clarinet_64.bin"
+	
+	.align 2
+DirectSoundWaveData_bw_sampletank_clarinet_72::
+	.incbin "sound/direct_sound_samples/bw_sampletank_clarinet_72.bin"
+	
+	.align 2
+DirectSoundWaveData_bw_zg_dpt_orch_snare_16_18_02::
+	.incbin "sound/direct_sound_samples/bw_zg_dpt_orch_snare_16_18_02.bin"
+	
+	.align 2
+DirectSoundWaveData_bw_unknown_suspended_cymbal_40::
+	.incbin "sound/direct_sound_samples/bw_unknown_suspended_cymbal_40.bin"
+	
+	.align 2
+DirectSoundWaveData_bw_independence_pro_khso_trumpets_stc::
+	.incbin "sound/direct_sound_samples/bw_independence_pro_khso_trumpets_stc.bin"
+	
+	.align 2
+DirectSoundWaveData_bw_independence_pro_khso_all_strings_sus1::
+	.incbin "sound/direct_sound_samples/bw_independence_pro_khso_all_strings_sus1.bin"
+
+	.align 2
 DirectSoundWaveData_b2_ew_goliath_pink_strat_40_22::
 	.incbin "sound/direct_sound_samples/b2_ew_goliath_pink_strat_40_22.bin"
 
@@ -1477,159 +1625,3 @@ DirectSoundWaveData_b2_ew_goliath_pink_strat_69_22::
 	.align 2
 DirectSoundWaveData_b2_ew_goliath_pink_strat_81_22::
 	.incbin "sound/direct_sound_samples/b2_ew_goliath_pink_strat_81_22.bin"
-
-	.align 2
-DirectSoundWaveData_b2_ew_ra_chinese_gong_vs::
-	.incbin "sound/direct_sound_samples/b2_ew_ra_chinese_gong_vs.bin"
-
-	.align 2
-DirectSoundWaveData_b2_ew_ra_chinese_gong_vs_2::
-	.incbin "sound/direct_sound_samples/b2_ew_ra_chinese_gong_vs_2.bin"
-
-	.align 2
-DirectSoundWaveData_b2_sd90_timpani2_37_22::
-	.incbin "sound/direct_sound_samples/b2_sd90_timpani2_37_22.bin"
-
-	.align 2
-DirectSoundWaveData_b2_sd90_timpani2_49_22::
-	.incbin "sound/direct_sound_samples/b2_sd90_timpani2_49_22.bin"
-
-	.align 2
-DirectSoundWaveData_b2_sd90_timpani2_61_22::
-	.incbin "sound/direct_sound_samples/b2_sd90_timpani2_61_22.bin"
-
-	.align 2
-DirectSoundWaveData_b2_independence_pro_khso_all_strings_spc_up_22::
-	.incbin "sound/direct_sound_samples/b2_independence_pro_khso_all_strings_spc_up_22.bin"
-
-	.align 2
-DirectSoundWaveData_b2_ethno_instrument_taiko_reverb_mic2_loop::
-	.incbin "sound/direct_sound_samples/b2_ethno_instrument_taiko_reverb_mic2_loop.bin"
-
-	.align 2
-DirectSoundWaveData_b2_ps13_classic_choir_ahh_57_22::
-	.incbin "sound/direct_sound_samples/b2_ps13_classic_choir_ahh_57_22.bin"
-
-	.align 2
-DirectSoundWaveData_b2_ps13_classic_choir_ahh_65_22::
-	.incbin "sound/direct_sound_samples/b2_ps13_classic_choir_ahh_65_22.bin"
-
-	.align 2
-DirectSoundWaveData_b2_ps13_classic_choir_ahh_72_22::
-	.incbin "sound/direct_sound_samples/b2_ps13_classic_choir_ahh_72_22.bin"
-
-	.align 2
-DirectSoundWaveData_b2_kfl_trumpet_ensemble_60cut_22::
-	.incbin "sound/direct_sound_samples/b2_kfl_trumpet_ensemble_60cut_22.bin"
-
-	.align 2
-DirectSoundWaveData_b2_kfl_trumpet_ensemble_69cut_22::
-	.incbin "sound/direct_sound_samples/b2_kfl_trumpet_ensemble_69cut_22.bin"
-
-	.align 2
-DirectSoundWaveData_b2_unknown_snare_ghetsis::
-	.incbin "sound/direct_sound_samples/b2_unknown_snare_ghetsis.bin"
-
-	.align 2
-DirectSoundWaveData_b2_halion_t9_analog_kick_22::
-	.incbin "sound/direct_sound_samples/b2_halion_t9_analog_kick_22.bin"
-
-	.align 2
-DirectSoundWaveData_b2_sd90_power2_snare_20::
-	.incbin "sound/direct_sound_samples/b2_sd90_power2_snare_20.bin"
-
-	.align 2
-DirectSoundWaveData_b2_addictive_drums_tom::
-	.incbin "sound/direct_sound_samples/b2_addictive_drums_tom.bin"
-
-	.align 2
-DirectSoundWaveData_b2_addictive_drums_room_snare_ghetsis::
-	.incbin "sound/direct_sound_samples/b2_addictive_drums_room_snare_ghetsis.bin"
-
-	.align 2
-DirectSoundWaveData_b2_qy70_doublsaw::
-	.incbin "sound/direct_sound_samples/b2_qy70_doublsaw.bin"
-
-	.align 2
-DirectSoundWaveData_b2_qy70_doublsaw_72::
-	.incbin "sound/direct_sound_samples/b2_qy70_doublsaw_72.bin"
-
-	.align 2
-DirectSoundWaveData_b2_ew_goliath_pink_strat_40::
-	.incbin "sound/direct_sound_samples/b2_ew_goliath_pink_strat_40.bin"
-
-	.align 2
-DirectSoundWaveData_b2_ew_goliath_pink_strat_52::
-	.incbin "sound/direct_sound_samples/b2_ew_goliath_pink_strat_52.bin"
-
-	.align 2
-DirectSoundWaveData_b2_ew_goliath_pink_strat_64::
-	.incbin "sound/direct_sound_samples/b2_ew_goliath_pink_strat_64.bin"
-
-	.align 2
-DirectSoundWaveData_b2_ew_goliath_pink_strat_69::
-	.incbin "sound/direct_sound_samples/b2_ew_goliath_pink_strat_69.bin"
-
-	.align 2
-DirectSoundWaveData_b2_ew_goliath_pink_strat_81::
-	.incbin "sound/direct_sound_samples/b2_ew_goliath_pink_strat_81.bin"
-
-@	.align 2
-@DirectSoundWaveData_b2_absynth_square_pad_flange_38::
-@	.incbin "sound/direct_sound_samples/b2_absynth_square_pad_flange_38.bin"
-
-	.align 2
-DirectSoundWaveData_b2_absynth_square_pad_flange_50::
-	.incbin "sound/direct_sound_samples/b2_absynth_square_pad_flange_50.bin"
-
-	.align 2
-DirectSoundWaveData_b2_absynth_square_pad_flange_62::
-	.incbin "sound/direct_sound_samples/b2_absynth_square_pad_flange_62.bin"
-
-	.align 2
-DirectSoundWaveData_b2_absynth_square_pad_flange_74::
-	.incbin "sound/direct_sound_samples/b2_absynth_square_pad_flange_74.bin"
-
-	.align 2
-DirectSoundWaveData_b2_absynth_square_pad_flange_86::
-	.incbin "sound/direct_sound_samples/b2_absynth_square_pad_flange_86.bin"
-
-	.align 2
-DirectSoundWaveData_b2_fm8_dj_handy_38::
-	.incbin "sound/direct_sound_samples/b2_fm8_dj_handy_38.bin"
-
-	.align 2
-DirectSoundWaveData_b2_fm8_dj_handy_50::
-	.incbin "sound/direct_sound_samples/b2_fm8_dj_handy_50.bin"
-
-	.align 2
-DirectSoundWaveData_b2_fm8_dj_handy_62::
-	.incbin "sound/direct_sound_samples/b2_fm8_dj_handy_62.bin"
-
-	.align 2
-DirectSoundWaveData_b2_fm8_dj_handy_74::
-	.incbin "sound/direct_sound_samples/b2_fm8_dj_handy_74.bin"
-
-	.align 2
-DirectSoundWaveData_b2_fm8_dj_handy_86::
-	.incbin "sound/direct_sound_samples/b2_fm8_dj_handy_86.bin"
-
-@	.align 2
-@DirectSoundWaveData_b2_ew_ra_gamelan_48::
-@	.incbin "sound/direct_sound_samples/b2_ew_ra_gamelan_48.bin"
-@
-@	.align 2
-@DirectSoundWaveData_b2_ew_ra_gamelan_55::
-@	.incbin "sound/direct_sound_samples/b2_ew_ra_gamelan_55.bin"
-@
-@	.align 2
-@DirectSoundWaveData_b2_ew_ra_gamelan_60::
-@	.incbin "sound/direct_sound_samples/b2_ew_ra_gamelan_60.bin"
-
-	.align 2
-DirectSoundWaveData_b2_ew_ra_gamelan_67::
-	.incbin "sound/direct_sound_samples/b2_ew_ra_gamelan_67.bin"
-
-	.align 2
-DirectSoundWaveData_b2_ew_ra_gamelan_72::
-	.incbin "sound/direct_sound_samples/b2_ew_ra_gamelan_72.bin"

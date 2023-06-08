@@ -315,6 +315,28 @@
 #define MUS_B2_VS_CHAMPION_SINNOH       303
 #define MUS_B2_VS_NEO_PLASMA            304
 #define MUS_K64_MIRACLE                 305
+#define SE_DINKDONK                     306
+#define MUS_B2_VS_LEADER_KANTO          307
+#define MUS_B2_VS_CHAMPION_KANTO        308
+#define MUS_B2_VS_LEADER_JOHTO          309
+#define MUS_B2_VS_CHAMPION_JOHTO        310
+#define MUS_B2_VS_LEADER_HOENN          311
+#define MUS_B2_VS_CHAMPION_HOENN        312
+#define MUS_B2_VICTORY_PWT              313
+#define MUS_BW_VICTORY_TRAINER          314
+#define MUS_BW_VICTORY_GYM_LEADER       315
+#define MUS_BW_VICTORY_N_GHETSIS        316
+#define MUS_BW_VICTORY_CHAMPION         317
+#define MUS_BW_VICTORY_PLASMA           318
+#define MUS_DP_VICTORY_TRAINER          319
+#define MUS_DP_VICTORY_GALACTIC         320
+#define MUS_DP_VICTORY_GYM_LEADER       321
+#define MUS_DP_VICTORY_ELITE_FOUR       322
+#define MUS_DP_VICTORY_CHAMPION         323
+#define MUS_PL_VICTORY_FRONTIER_BRAIN   324
+#define MUS_HG_VICTORY_TRAINER          325
+#define MUS_HG_VICTORY_GYM_LEADER       326
+#define SE_UTVANISH                     327
 
 // Music
 #define MUS_LITTLEROOT_TEST         350 // MUS_TETSUJI          // Unused, likely a test track.

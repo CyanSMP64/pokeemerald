@@ -483,37 +483,28 @@ LilycoveCity_Text_MayYouGoingToBattleFrontier:
 	.string "See you!$"
 
 LilycoveCity_Text_BrendanShoppingLetsBattle:
-	.string "BRENDAN: Oh, hey, it's {PLAYER}.\p"
-	.string "I'm running an errand for my dad.\n"
-	.string "No, I'm not buying any DOLLS.\p"
-	.string "Anyways, it's been a while.\p"
-	.string "Want to have a battle to see who's been\n"
-	.string "raising POKéMON better?$"
+	.string "BRENDAN: What up, nerd.\n"
+	.string "I'm ready to thrash you.\l"
+	.string "How about you?$"
 
 LilycoveCity_Text_BrendanNoConfidence:
-	.string "BRENDAN: Oh, what's the matter?\n"
-	.string "Don't have the confidence?$"
+	.string "BRENDAN: Oh, boo-hoo.$"
 
 LilycoveCity_Text_BrendanBattleMe:
-	.string "BRENDAN: Want to battle to see who's\n"
-	.string "been raising POKéMON better?$"
+	.string "BRENDAN: Fight me, nerd.$"
 
 LilycoveCity_Text_BrendanWontBeBeaten:
-	.string "BRENDAN: Aww, but you know I'm not\n"
-	.string "going to lose to no {PLAYER}.$"
+	.string "BRENDAN: It's about time I kicked\n"
+	.string "your miserable ass.$"
 
 LilycoveCity_Text_BrendanDefeat:
-	.string "Humph…\n"
-	.string "You've done a lot of raising.\p"
-	.string "That stings a bit--I had a head start\n"
-	.string "on you as a TRAINER…$"
+	.string "Humph…$"
 
 LilycoveCity_Text_BrendanGoingBackToLittleroot:
 	.string "BRENDAN: I…\n"
-	.string "I plan on going home to LITTLEROOT.\p"
-	.string "You know I'm helping out my dad on his\n"
-	.string "POKéDEX. It's coming together pretty\l"
-	.string "decently, so I should go show him.$"
+	.string "I hope I never see you again!\l"
+	.string "Hahaha!\p"
+	.string "So long, nerd.$"
 
 LilycoveCity_Text_BrendanYouGoingToCollectBadges:
 	.string "{PLAYER}, what are you going to do?\p"

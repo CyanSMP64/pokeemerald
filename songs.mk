@@ -1370,3 +1370,69 @@ $(MID_SUBDIR)/mus_b2_vs_neo_plasma.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_k64_miracle.s: %.s: %.mid
 	$(MID) $< $@ -E -R20 -G324 -V127
+
+$(MID_SUBDIR)/se_dinkdonk.s: %.s: %.mid
+	$(MID) $< $@ -E -G128 -V127 -P5
+
+$(MID_SUBDIR)/mus_b2_vs_leader_kanto.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G334 -V127
+
+$(MID_SUBDIR)/mus_b2_vs_champion_kanto.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G337 -V111
+
+$(MID_SUBDIR)/mus_b2_vs_leader_johto.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G340 -V113
+
+$(MID_SUBDIR)/mus_b2_vs_champion_johto.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G344 -V110
+
+$(MID_SUBDIR)/mus_b2_vs_leader_hoenn.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G346 -V086
+
+$(MID_SUBDIR)/mus_b2_vs_champion_hoenn.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G349 -V111
+
+$(MID_SUBDIR)/mus_b2_victory_pwt.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G351 -V127
+
+$(MID_SUBDIR)/mus_bw_victory_trainer.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G354 -V095
+
+$(MID_SUBDIR)/mus_bw_victory_gym_leader.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G354 -V096
+
+$(MID_SUBDIR)/mus_bw_victory_n_ghetsis.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G358 -V083
+
+$(MID_SUBDIR)/mus_bw_victory_champion.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G354 -V095
+
+$(MID_SUBDIR)/mus_bw_victory_plasma.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G358 -V079
+
+$(MID_SUBDIR)/mus_dp_victory_trainer.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V118
+
+$(MID_SUBDIR)/mus_dp_victory_galactic.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V100
+
+$(MID_SUBDIR)/mus_dp_victory_gym_leader.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V120
+
+$(MID_SUBDIR)/mus_dp_victory_elite_four.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V090
+
+$(MID_SUBDIR)/mus_dp_victory_champion.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V105
+
+$(MID_SUBDIR)/mus_pl_victory_frontier_brain.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V108
+
+$(MID_SUBDIR)/mus_hg_victory_trainer.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G215 -V110
+
+$(MID_SUBDIR)/mus_hg_victory_gym_leader.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G215 -V102
+
+$(MID_SUBDIR)/se_utvanish.s: %.s: %.mid
+	$(MID) $< $@ -E -G128 -V127 -P5

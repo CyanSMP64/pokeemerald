@@ -333,3 +333,30 @@
 .include "sound/voicegroups/voicegroup331.inc"
 .include "sound/voicegroups/voicegroup332.inc"
 .include "sound/voicegroups/voicegroup333.inc"
+.include "sound/voicegroups/voicegroup334.inc" @ bw2 - kanto leader
+.include "sound/voicegroups/voicegroup335.inc"
+.include "sound/voicegroups/voicegroup336.inc"
+.include "sound/voicegroups/voicegroup337.inc" @ bw2 - kanto champion
+.include "sound/voicegroups/voicegroup338.inc"
+.include "sound/voicegroups/voicegroup339.inc"
+.include "sound/voicegroups/voicegroup340.inc" @ bw2 - johto leader
+.include "sound/voicegroups/voicegroup341.inc"
+.include "sound/voicegroups/voicegroup342.inc"
+.include "sound/voicegroups/voicegroup343.inc"
+.include "sound/voicegroups/voicegroup344.inc" @ bw2 - johto champion
+.include "sound/voicegroups/voicegroup345.inc"
+.include "sound/voicegroups/voicegroup346.inc" @ bw2 - hoenn leader
+.include "sound/voicegroups/voicegroup347.inc"
+.include "sound/voicegroups/voicegroup348.inc"
+.include "sound/voicegroups/voicegroup349.inc" @ bw2 - hoenn champion
+.include "sound/voicegroups/voicegroup350.inc"
+.include "sound/voicegroups/voicegroup351.inc" @ bw2 - pwt victory
+.include "sound/voicegroups/voicegroup352.inc"
+.include "sound/voicegroups/voicegroup353.inc"
+.include "sound/voicegroups/voicegroup354.inc" @ bw - trainer/gym leader victory
+.include "sound/voicegroups/voicegroup355.inc"
+.include "sound/voicegroups/voicegroup356.inc"
+.include "sound/voicegroups/voicegroup357.inc"
+.include "sound/voicegroups/voicegroup358.inc" @ bw - plasma victory
+.include "sound/voicegroups/voicegroup359.inc"
+.include "sound/voicegroups/voicegroup360.inc"

@@ -1449,6 +1449,7 @@ const u8 gText_BattleNameHugh[] = _("Hugh");
 const u8 gText_BattleNameColress[] = _("Colress");
 const u8 gText_BattleNamePreston[] = _("Preston");
 const u8 gText_BattleNameSalty[] = _("Salty");
+const u8 gText_BattleNameDialga[] = _("Dialga");
 
 const u8 gText_Win[] = _("{HIGHLIGHT TRANSPARENT}Win");
 const u8 gText_Loss[] = _("{HIGHLIGHT TRANSPARENT}Loss");
