@@ -4966,12 +4966,12 @@ static void HandleEndTurn_BattleWon(void)
         if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameLance))
         && (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_CHAMPION))
             PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
-        if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameCheren))
+        else if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameCheren))
         && ((gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_CHAMPION)
         ||  (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_LEADER)
         ||  (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_ELITE_FOUR)))
             PlayBGM(MUS_BW_VICTORY_GYM_LEADER);
-        if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameN)
+        else if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameN)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameRood)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameZinzolin)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameGorm)
@@ -4984,8 +4984,7 @@ static void HandleEndTurn_BattleWon(void)
         && ((gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_CHAMPION)
         ||  (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_PKMN_TRAINER_2)))
             PlayBGM(MUS_BW_VICTORY_N_GHETSIS);
-
-        if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameBrock)
+        else if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameBrock)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameMisty)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameSurge)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameErika)
@@ -5022,7 +5021,7 @@ static void HandleEndTurn_BattleWon(void)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameAnabel))
         && (gTrainers[gTrainerBattleOpponent_A].trainerClass != TRAINER_CLASS_PKMN_TRAINER_2))
             PlayBGM(MUS_VICTORY_GYM_LEADER);
-        if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameJoey)
+        else if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameJoey)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameSilver)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameProton)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNamePetrel)
@@ -5032,7 +5031,7 @@ static void HandleEndTurn_BattleWon(void)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameJames)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameRed))
             PlayBGM(MUS_HG_VICTORY_TRAINER);
-        if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameFalkner)
+        else if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameFalkner)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameBugsy)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameWhitney)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameMorty)
@@ -5044,29 +5043,29 @@ static void HandleEndTurn_BattleWon(void)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameKaren))
         && (gTrainers[gTrainerBattleOpponent_A].trainerClass != TRAINER_CLASS_PKMN_TRAINER_2))
             PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
-        if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameMatt)
+        else if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameMatt)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameShelly)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameCourtney)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameTabitha)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameArchie)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameMaxie))
             PlayBGM(MUS_VICTORY_AQUA_MAGMA);
-        if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameSidney)
+        else if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameSidney)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNamePhoebe)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameGlacia)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameDrake)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameSteven))
         && (gTrainers[gTrainerBattleOpponent_A].trainerClass != TRAINER_CLASS_PKMN_TRAINER_2))
             PlayBGM(MUS_VICTORY_LEAGUE);
-        if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameBarry))
+        else if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameBarry))
             PlayBGM(MUS_DP_VICTORY_TRAINER);
-        if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameMars)
+        else if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameMars)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameJupiter)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameSaturn)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameCharon)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameCyrus))
             PlayBGM(MUS_DP_VICTORY_GALACTIC);
-        if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameRoark)
+        else if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameRoark)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameGardenia)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameMaylene)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameWake)
@@ -5076,30 +5075,30 @@ static void HandleEndTurn_BattleWon(void)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameVolkner))
         && (gTrainers[gTrainerBattleOpponent_A].trainerClass != TRAINER_CLASS_PKMN_TRAINER_2))
             PlayBGM(MUS_DP_VICTORY_GYM_LEADER);
-        if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameAaron)
+        else if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameAaron)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameBertha)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameFlint)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameLucian))
         && (gTrainers[gTrainerBattleOpponent_A].trainerClass != TRAINER_CLASS_PKMN_TRAINER_2))
             PlayBGM(MUS_DP_VICTORY_ELITE_FOUR);
-        if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameCynthia))
+        else if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameCynthia))
         && (gTrainers[gTrainerBattleOpponent_A].trainerClass != TRAINER_CLASS_PKMN_TRAINER_2))
             PlayBGM(MUS_DP_VICTORY_CHAMPION);
-        if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNamePalmer)
+        else if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNamePalmer)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameThorton)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameDahlia)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameDarach)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameArgenta))
         && (gTrainers[gTrainerBattleOpponent_A].trainerClass != TRAINER_CLASS_PKMN_TRAINER_2))
             PlayBGM(MUS_PL_VICTORY_FRONTIER_BRAIN);
-        if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameCheren)
+        else if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameCheren)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameN))
         && (gTrainers[gTrainerBattleOpponent_A].trainerClass != TRAINER_CLASS_PKMN_TRAINER_2))
             PlayBGM(MUS_BW_VICTORY_TRAINER);
-        if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameBianca)
+        else if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameBianca)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameBenga))
             PlayBGM(MUS_BW_VICTORY_TRAINER);
-        if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameRood)
+        else if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameRood)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameZinzolin)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameGorm)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameBronius)
@@ -5109,12 +5108,12 @@ static void HandleEndTurn_BattleWon(void)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameAnthea)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameConcordia))
             PlayBGM(MUS_BW_VICTORY_PLASMA);
-        if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameGhetsis)
+        else if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameGhetsis)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameDenis)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameDennis)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameColress))
             PlayBGM(MUS_BW_VICTORY_N_GHETSIS);
-        if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameCilan)
+        else if ((!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameCilan)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameChili)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameCress)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameLenora)
@@ -5132,41 +5131,43 @@ static void HandleEndTurn_BattleWon(void)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameCaitlin))
         && (gTrainers[gTrainerBattleOpponent_A].trainerClass != TRAINER_CLASS_PKMN_TRAINER_2))
             PlayBGM(MUS_BW_VICTORY_GYM_LEADER);
-        if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameIris))
+        else if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameIris))
         {
             if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_CHAMPION || gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_PKMN_TRAINER_2)
                 PlayBGM(MUS_BW_VICTORY_CHAMPION);
             else
                 PlayBGM(MUS_BW_VICTORY_GYM_LEADER);
         }
-        if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameAlder)
+        else if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameAlder)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameIngo)
         ||  !StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleNameEmmet))
             PlayBGM(MUS_BW_VICTORY_CHAMPION);
-
-        switch (gTrainers[gTrainerBattleOpponent_A].trainerClass)
+        else
         {
-        case TRAINER_CLASS_ELITE_FOUR:
-        case TRAINER_CLASS_CHAMPION:
-            PlayBGM(MUS_VICTORY_LEAGUE);
-            break;
-        case TRAINER_CLASS_PKMN_TRAINER_2:
-            PlayBGM(MUS_B2_VICTORY_PWT);
-            break;
-        case TRAINER_CLASS_TEAM_AQUA:
-        case TRAINER_CLASS_TEAM_MAGMA:
-        case TRAINER_CLASS_AQUA_ADMIN:
-        case TRAINER_CLASS_AQUA_LEADER:
-        case TRAINER_CLASS_MAGMA_ADMIN:
-        case TRAINER_CLASS_MAGMA_LEADER:
-            PlayBGM(MUS_VICTORY_AQUA_MAGMA);
-            break;
-        case TRAINER_CLASS_LEADER:
-            PlayBGM(MUS_VICTORY_GYM_LEADER);
-            break;
-        default:
-            PlayBGM(MUS_VICTORY_TRAINER);
-            break;
+            switch (gTrainers[gTrainerBattleOpponent_A].trainerClass)
+            {
+            case TRAINER_CLASS_ELITE_FOUR:
+            case TRAINER_CLASS_CHAMPION:
+                PlayBGM(MUS_VICTORY_LEAGUE);
+                break;
+            case TRAINER_CLASS_PKMN_TRAINER_2:
+                PlayBGM(MUS_B2_VICTORY_PWT);
+                break;
+            case TRAINER_CLASS_TEAM_AQUA:
+            case TRAINER_CLASS_TEAM_MAGMA:
+            case TRAINER_CLASS_AQUA_ADMIN:
+            case TRAINER_CLASS_AQUA_LEADER:
+            case TRAINER_CLASS_MAGMA_ADMIN:
+            case TRAINER_CLASS_MAGMA_LEADER:
+                PlayBGM(MUS_VICTORY_AQUA_MAGMA);
+                break;
+            case TRAINER_CLASS_LEADER:
+                PlayBGM(MUS_VICTORY_GYM_LEADER);
+                break;
+            default:
+                PlayBGM(MUS_VICTORY_TRAINER);
+                break;
+            }
         }
     }
     else
