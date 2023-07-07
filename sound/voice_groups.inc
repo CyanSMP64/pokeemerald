@@ -190,3 +190,30 @@
 .include "sound/voicegroups/voicegroup188.inc"
 .include "sound/voicegroups/voicegroup189.inc"
 .include "sound/voicegroups/voicegroup190.inc"
+.include "sound/voicegroups/voicegroup191.inc" @ 0x1E84184
+.include "sound/voicegroups/voicegroup192.inc" @ 0x1E84784
+.include "sound/voicegroups/voicegroup193.inc" @ 0x1E848A4
+.include "sound/voicegroups/voicegroup194.inc" @ 0x1E84C7C
+.include "sound/voicegroups/voicegroup195.inc" @ 0x1E84C94
+.include "sound/voicegroups/voicegroup196.inc" @ 0x1E84CAC
+.include "sound/voicegroups/voicegroup197.inc" @ 0x1E84CD0
+.include "sound/voicegroups/voicegroup198.inc" @ 0x1E84CF4
+.include "sound/voicegroups/voicegroup199.inc" @ 0x1E84D18
+.include "sound/voicegroups/voicegroup200.inc" @ 0x1E84D30
+.include "sound/voicegroups/voicegroup201.inc" @ 0x1E84D48
+.include "sound/voicegroups/voicegroup202.inc" @ 0x1E84D6C
+.include "sound/voicegroups/voicegroup203.inc" @ 0x1E84D84
+.include "sound/voicegroups/voicegroup204.inc" @ 0x1E84D9C
+.include "sound/voicegroups/voicegroup205.inc" @ 0x1E84DC0
+.include "sound/voicegroups/voicegroup206.inc" @ 0x1E84DE4
+.include "sound/voicegroups/voicegroup207.inc" @ 0x1E84E08
+.include "sound/voicegroups/voicegroup208.inc" @ 0x1E85408
+.include "sound/voicegroups/voicegroup209.inc" @ 0x1E85420
+.include "sound/voicegroups/voicegroup210.inc" @ 0x1E85438
+.include "sound/voicegroups/voicegroup211.inc" @ 0x1E8545C
+.include "sound/voicegroups/voicegroup212.inc" @ 0x1E85480
+.include "sound/voicegroups/voicegroup213.inc" @ 0x1E85498
+.include "sound/voicegroups/voicegroup214.inc" @ 0x1E854BC
+.include "sound/voicegroups/voicegroup215.inc" @ 0x1E854D4
+.include "sound/voicegroups/voicegroup216.inc" @ 0x1E854EC
+.include "sound/voicegroups/voicegroup217.inc" @ 0x1E85510

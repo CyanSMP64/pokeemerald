@@ -1,0 +1,4 @@
+	.align 2
+voicegroup194::
+	voice_directsound 60, 0, DirectSoundWaveData_pmd1_wave_016, 51, 0, 103, 127
+	voice_directsound 60, 0, DirectSoundWaveData_pmd1_wave_017, 51, 0, 103, 127

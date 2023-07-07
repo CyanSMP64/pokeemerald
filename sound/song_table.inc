@@ -273,10 +273,10 @@ gSongTable::
 	song se_sudowoodo_shake, 1, 1
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0
-	song dummy_song_header, 0, 0
-	song dummy_song_header, 0, 0
-	song dummy_song_header, 0, 0
-	song dummy_song_header, 0, 0
+	song mus_pmd_test1, 0, 0
+	song mus_pmd_test2, 0, 0
+	song mus_pmd_test3, 0, 0
+	song mus_pmd_test4, 0, 0
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0

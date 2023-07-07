@@ -1,3 +1,57 @@
+ProgrammableWaveData_pmd1_000::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_000.pcm"
+
+ProgrammableWaveData_pmd1_001::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_001.pcm"
+
+ProgrammableWaveData_pmd1_002::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_002.pcm"
+
+ProgrammableWaveData_pmd1_003::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_003.pcm"
+
+ProgrammableWaveData_pmd1_004::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_004.pcm"
+
+ProgrammableWaveData_pmd1_005::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_005.pcm"
+
+ProgrammableWaveData_pmd1_006::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_006.pcm"
+
+ProgrammableWaveData_pmd1_007::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_007.pcm"
+
+ProgrammableWaveData_pmd1_008::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_008.pcm"
+
+ProgrammableWaveData_pmd1_009::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_009.pcm"
+
+ProgrammableWaveData_pmd1_010::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_010.pcm"
+
+ProgrammableWaveData_pmd1_011::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_011.pcm"
+
+ProgrammableWaveData_pmd1_012::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_012.pcm"
+
+ProgrammableWaveData_pmd1_013::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_013.pcm"
+
+ProgrammableWaveData_pmd1_014::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_014.pcm"
+
+ProgrammableWaveData_pmd1_015::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_015.pcm"
+
+ProgrammableWaveData_pmd1_016::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_016.pcm"
+
+ProgrammableWaveData_pmd1_017::
+	.incbin "sound/programmable_wave_samples/pmd1/gbwave_017.pcm"
+
 ProgrammableWaveData_1::
 	.incbin "sound/programmable_wave_samples/01.pcm"
 

@@ -277,6 +277,13 @@
 #define SE_PIKE_CURTAIN_OPEN        268 // SE_CURTAIN1
 #define SE_SUDOWOODO_SHAKE          269 // SE_USSOKI
 
+
+
+#define MUS_PMD_TEST1               272
+#define MUS_PMD_TEST2               273
+#define MUS_PMD_TEST3               274
+#define MUS_PMD_TEST4               275
+
 // Music
 #define MUS_LITTLEROOT_TEST         350 // MUS_TETSUJI          // Unused, likely a test track.
 #define MUS_GSC_ROUTE38             351 // MUS_FIELD13          // Unused, likely a test track.
