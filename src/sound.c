@@ -380,7 +380,7 @@ void PlayCryInternal(u16 species, s8 pan, s8 volume, u8 priority, u8 mode)
 
     // Set default values
     // May be overridden depending on mode.
-    length = 140;
+    length = 191;
     reverse = FALSE;
     release = 0;
     pitch = 15360;
@@ -488,6 +488,21 @@ void PlayCryInternal(u16 species, s8 pan, s8 volume, u8 priority, u8 mode)
         break;
     case 3:
         gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 3, reverse));
+        break;
+    case 4:
+        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 4, reverse));
+        break;
+    case 5:
+        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 5, reverse));
+        break;
+    case 6:
+        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 6, reverse));
+        break;
+    case 7:
+        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 7, reverse));
+        break;
+    case 8:
+        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 8, reverse));
         break;
     }
 

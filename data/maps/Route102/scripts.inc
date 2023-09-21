@@ -118,6 +118,8 @@ Route102_EventScript_Allen::
 Route102_EventScript_Nurse::
 	lock
 	faceplayer
+	specialvar VAR_RESULT, IsPoisonInParty
+	goto_if_eq VAR_RESULT, TRUE, Route102_EventScript_NurseCantHealPoison
 	msgbox Route102_Text_HealPokemon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route102_EventScript_NurseHeal
 	msgbox Route102_Text_PokemonNotHealed, MSGBOX_DEFAULT
@@ -131,6 +133,11 @@ Route102_EventScript_NurseHeal::
 	release
 	end
 
+Route102_EventScript_NurseCantHealPoison::
+	msgbox Route102_Text_CantHealPoison, MSGBOX_DEFAULT
+	release
+	end
+
 Route102_Text_HealPokemon:
 	.string "Want me to heal your Pokémon?$"
 
@@ -138,6 +145,12 @@ Route102_Text_PokemonHealed:
 	.string "Your Pokémon is healthy.\n"
 Route102_Text_PokemonNotHealed:
 	.string "Come again!$"
+
+Route102_Text_CantHealPoison:
+	.string "Sorry, but I can't heal if\n"
+	.string "you have a poisoned Pokémon.\p"
+	.string "Please visit a Pokémon Center\n"
+	.string "to cure poisoning.$"
 
 Route102_Text_WatchMeCatchPokemon:
 	.string "WALLY: {PLAYER}…\n"

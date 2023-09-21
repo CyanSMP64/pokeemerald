@@ -535,3 +535,6 @@ gSpecials::
 	def_special RemoveRecordsWindow
 	def_special CloseDeptStoreElevatorWindow
 	def_special TrySetBattleTowerLinkType
+	def_special DaisyMassageServices
+	def_special IsPoisonInParty
+	def_special ChoosePartyMonFRLG

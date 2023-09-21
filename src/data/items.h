@@ -2776,10 +2776,12 @@ const struct Item gItems[] =
 
     [ITEM_0E2] =
     {
-        .name = _("????????"),
-        .itemId = ITEM_NONE,
-        .price = 0,
-        .description = sDummyDesc,
+        .name = _("FAIRYFEATHER"),
+        .itemId = ITEM_0E2,
+        .price = 100,
+        .holdEffect = HOLD_EFFECT_FAIRY_POWER,
+        .holdEffectParam = 10,
+        .description = sFairyFeatherDesc,
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,

@@ -61,6 +61,7 @@ SECTIONS {
         gflib/gpu_regs.o(.text);
         gflib/bg.o(.text);
         gflib/blit.o(.text);
+        gflib/window.o(.text);
     } =0
 
     .text_1 0x080045a4 :
@@ -90,6 +91,7 @@ SECTIONS {
         src/dodrio_berry_picking.o(.text);
         src/pokemon_jump.o(.text);
         src/minigame_countdown.o(.text);
+        src/rtc.o(.text);
         src/main_menu.o(.text);
     } =0
 
@@ -98,39 +100,38 @@ SECTIONS {
     {
         src/battle_controllers.o(.text);
         src/decompress.o(.text);
-        src/digit_obj_util.o(.text);
-        src/battle_bg.o(.text);
         src/battle_main.o(.text);
         src/battle_util.o(.text);
         src/battle_script_commands.o(.text);
         src/battle_util2.o(.text);
         src/battle_controller_player.o(.text);
         src/battle_gfx_sfx_util.o(.text);
-        src/battle_controller_opponent.o(.text);
-        src/battle_ai_switch_items.o(.text);
+        src/battle_controller_link_opponent.o(.text);
+        src/pokeball.o(.text);
+        src/overworld.o(.text);
     } =0
 
     .text_3 0x08067a74 :
     ALIGN(4)
     {
         src/pokemon.o(.text);
+        src/battle_controller_opponent.o(.text);
+        src/battle_ai_switch_items.o(.text);
+        src/digit_obj_util.o(.text);
+        src/battle_bg.o(.text);
         src/trig.o(.text);
-        src/random.o(.text);
         src/util.o(.text);
         src/daycare.o(.text);
         src/egg_hatch.o(.text);
         src/battle_interface.o(.text);
         src/battle_anim_smokescreen.o(.text);
-        src/pokeball.o(.text);
         src/load_save.o(.text);
         src/trade.o(.text);
         src/berry_blender.o(.text);
         src/play_time.o(.text);
         src/new_game.o(.text);
-        src/overworld.o(.text);
         src/fieldmap.o(.text);
         src/metatile_behavior.o(.text);
-        src/field_camera.o(.text);
         src/field_door.o(.text);
         src/field_player_avatar.o(.text);
         src/event_object_movement.o(.text);
@@ -138,14 +139,11 @@ SECTIONS {
         src/event_object_lock.o(.text);
         src/text_window.o(.text);
         src/script.o(.text);
-        src/scrcmd.o(.text);
         src/field_control_avatar.o(.text);
-        src/event_data.o(.text);
         src/coord_event_weather.o(.text);
         src/field_tasks.o(.text);
         src/clock.o(.text);
         src/reset_rtc_screen.o(.text);
-        src/start_menu.o(.text);
         src/tileset_anims.o(.text);
         src/palette.o(.text);
         src/sound.o(.text);
@@ -154,14 +152,22 @@ SECTIONS {
         src/task.o(.text);
         src/reshow_battle_screen.o(.text);
         src/battle_anim_status_effects.o(.text);
-        src/title_screen.o(.text);
         src/field_weather.o(.text);
+        src/field_weather_effect.o(.text);
+        src/field_screen_effect.o(.text);
+        src/mail_data.o(.text);
     } =0
 
     .text_4 0x080b05f0 :
     ALIGN(4)
     {
         src/battle_setup.o(.text);
+        src/field_camera.o(.text);
+        src/event_data.o(.text);
+        src/random.o(.text);
+        src/scrcmd.o(.text);
+        src/start_menu.o(.text);
+        src/title_screen.o(.text);
         src/cable_club.o(.text);
         src/trainer_see.o(.text);
         src/wild_encounter.o(.text);
@@ -175,7 +181,6 @@ SECTIONS {
         src/pokemon_icon.o(.text);
         src/script_movement.o(.text);
         src/fldeff_cut.o(.text);
-        src/mail_data.o(.text);
         src/map_name_popup.o(.text);
         src/item_menu_icons.o(.text);
         src/battle_anim_mon_movement.o(.text);
@@ -191,8 +196,6 @@ SECTIONS {
         src/record_mixing.o(.text);
         src/secret_base.o(.text);
         src/tv.o(.text);
-        src/contest_util.o(.text);
-        src/script_pokemon_util.o(.text);
         src/field_poison.o(.text);
         src/pokemon_size_record.o(.text);
         src/fldeff_misc.o(.text);
@@ -209,7 +212,6 @@ SECTIONS {
         src/battle_anim_ice.o(.text);
         src/battle_anim_fight.o(.text);
         src/battle_anim_poison.o(.text);
-        src/battle_anim_flying.o(.text);
         src/battle_anim_psychic.o(.text);
         src/battle_anim_bug.o(.text);
         src/battle_anim_rock.o(.text);
@@ -238,24 +240,28 @@ SECTIONS {
         src/starter_choose.o(.text);
         src/wallclock.o(.text);
         src/fldeff_rocksmash.o(.text);
-        src/fldeff_dig.o(.text);
         src/pokeblock.o(.text);
         src/fldeff_flash.o(.text);
         src/post_battle_event_funcs.o(.text);
         src/time_events.o(.text);
-        src/birch_pc.o(.text);
         src/hof_pc.o(.text);
         src/field_specials.o(.text);
-        src/battle_records.o(.text);
+        src/pokedex_area_screen.o(.text);
+        src/coins.o(.text);
     } =0
 
     .text_5 0x0813d9b0 :
     ALIGN(4)
     {
         src/evolution_scene.o(.text);
+        src/battle_records.o(.text);
+        src/birch_pc.o(.text);
+        src/fldeff_dig.o(.text);
+        src/contest_util.o(.text);
+        src/script_pokemon_util.o(.text);
+        src/battle_anim_flying.o(.text);
         src/roulette.o(.text);
         src/pokedex_cry_screen.o(.text);
-        src/coins.o(.text);
         src/landmark.o(.text);
         src/fldeff_strength.o(.text);
         src/battle_transition.o(.text);
@@ -365,17 +371,18 @@ SECTIONS {
     ALIGN(4)
     {
         data/event_scripts.o(script_data);
+        data/field_effect_scripts.o(script_data);
+        data/battle_scripts_2.o(script_data);
+        data/battle_ai_scripts.o(script_data);
+        data/contest_ai_scripts.o(script_data);
+        data/mystery_event_script_cmd_table.o(script_data);
     } =0
 
     script_data_1 0x082d86a8 :
     ALIGN(4)
     {
         data/battle_scripts_1.o(script_data);
-        data/field_effect_scripts.o(script_data);
-        data/battle_scripts_2.o(script_data);
-        data/battle_ai_scripts.o(script_data);
-        data/contest_ai_scripts.o(script_data);
-        data/mystery_event_script_cmd_table.o(script_data);
+        data/battle_anim_scripts.o(script_data);
     } =0
 
     lib_text :
@@ -501,21 +508,25 @@ SECTIONS {
         src/main_menu.o(.rodata);
         src/battle_controllers.o(.rodata);
         src/digit_obj_util.o(.rodata);
-        src/data.o(.rodata);
         src/battle_bg.o(.rodata);
         src/battle_main.o(.rodata);
         src/battle_util.o(.rodata);
+        src/battle_script_commands.o(.rodata);
         src/battle_controller_player.o(.rodata);
         src/battle_anim_smokescreen.o(.rodata);
         src/battle_controller_opponent.o(.rodata);
         src/battle_ai_switch_items.o(.rodata);
         src/battle_controller_link_opponent.o(.rodata);
+        src/trade.o(.rodata);
+        src/pokemon_size_record.o(.rodata)
+        src/roamer.o(.rodata);
     } =0
 
     .rodata_1 0x0831c898 :
     ALIGN(4)
     {
         src/pokemon.o(.rodata);
+        src/data.o(.rodata);
         src/trig.o(.rodata);
         src/util.o(.rodata);
         src/daycare.o(.rodata);
@@ -523,7 +534,6 @@ SECTIONS {
         src/battle_gfx_sfx_util.o(.rodata);
         src/battle_interface.o(.rodata);
         src/pokeball.o(.rodata);
-        src/trade.o(.rodata);
         src/berry_blender.o(.rodata);
         src/new_game.o(.rodata);
         src/overworld.o(.rodata);
@@ -583,7 +593,6 @@ SECTIONS {
         src/tv.o(.rodata);
         src/contest_util.o(.rodata);
         src/script_pokemon_util.o(.rodata);
-        src/pokemon_size_record.o(.rodata)
         src/fldeff_misc.o(.rodata);
         src/field_special_scene.o(.rodata);
         src/rotating_gate.o(.rodata);
@@ -591,7 +600,6 @@ SECTIONS {
         src/item_use.o(.rodata);
         src/battle_anim_effects_1.o(.rodata);
         src/battle_anim_effects_2.o(.rodata);
-        src/battle_anim_water.o(.rodata);
         src/battle_anim_fire.o(.rodata);
         src/battle_anim_electric.o(.rodata);
         src/battle_anim_ice.o(.rodata);
@@ -609,7 +617,6 @@ SECTIONS {
         src/battle_anim_utility_funcs.o(.rodata);
         src/battle_intro.o(.rodata);
         src/bike.o(.rodata);
-        src/easy_chat.o(.rodata);
         src/mon_markings.o(.rodata);
         src/mauville_old_man.o(.rodata);
         src/mail.o(.rodata);
@@ -619,7 +626,6 @@ SECTIONS {
         src/image_processing_effects.o(.rodata);
         src/decoration.o(.rodata);
         src/slot_machine.o(.rodata);
-        src/contest_painting.o(.rodata);
         src/battle_ai_script_commands.o(.rodata);
         src/trader.o(.rodata);
         src/starter_choose.o(.rodata);
@@ -632,11 +638,8 @@ SECTIONS {
         src/pokedex_area_screen.o(.rodata);
         src/evolution_scene.o(.rodata);
         src/roulette.o(.rodata);
-        src/pokedex_cry_screen.o(.rodata);
         src/landmark.o(.rodata);
-        src/battle_transition.o(.rodata);
         src/battle_controller_link_partner.o(.rodata);
-        src/battle_message.o(.rodata);
         src/cable_car.o(.rodata);
         src/save.o(.rodata);
         src/field_effect_helpers.o(.rodata);
@@ -645,26 +648,20 @@ SECTIONS {
         src/battle_controller_safari.o(.rodata);
         src/battle_anim_effects_3.o(.rodata);
         src/move_relearner.o(.rodata);
-        src/roamer.o(.rodata);
-        src/battle_tower.o(.rodata);
         src/use_pokeblock.o(.rodata);
         src/battle_controller_wally.o(.rodata);
         src/player_pc.o(.rodata);
-        src/intro.o(.rodata);
         src/field_region_map.o(.rodata);
         src/battle_anim_throw.o(.rodata);
         src/hall_of_fame.o(.rodata);
-        src/credits.o(.rodata);
         src/lottery_corner.o(.rodata);
         src/diploma.o(.rodata);
-        src/strings.o(.rodata);
         src/berry_tag_screen.o(.rodata);
         src/mystery_event_menu.o(.rodata);
         src/save_failed_screen.o(.rodata);
         src/braille_puzzles.o(.rodata);
         src/pokeblock_feed.o(.rodata);
         src/clear_save_data_screen.o(.rodata);
-        src/intro_credits_graphics.o(.rodata);
         src/evolution_graphics.o(.rodata);
         src/bard_music.o(.rodata);
         src/battle_tv.o(.rodata);
@@ -675,12 +672,24 @@ SECTIONS {
         src/lilycove_lady.o(.rodata);
         src/battle_dome.o(.rodata);
         src/battle_palace.o(.rodata);
+        src/match_call.o(.rodata);
     } =0
 
     .rodata_2 0x0860f074 :
     ALIGN(4)
     {
         src/menu.o(.rodata);
+        src/pokedex_cry_screen.o(.rodata);
+        src/credits.o(.rodata);
+        src/intro_credits_graphics.o(.rodata);
+        src/battle_anim_water.o(.rodata);
+        src/easy_chat.o(.rodata);
+        src/battle_transition.o(.rodata);
+        src/battle_tower.o(.rodata);
+        src/strings.o(.rodata);
+        src/contest_painting.o(.rodata);
+        src/intro.o(.rodata);
+        src/battle_message.o(.rodata);
         src/battle_factory_screen.o(.rodata);
         src/apprentice.o(.rodata);
         src/frontier_util.o(.rodata);
@@ -735,9 +744,81 @@ SECTIONS {
         data/sound_data.o(.rodata);
     } =0
 
-    song_data :
+    lib_rodata :
+    SUBALIGN(4)
+    {
+        src/m4a.o(.rodata);
+        src/agb_flash.o(.rodata);
+        src/agb_flash_1m.o(.rodata);
+        src/agb_flash_mx.o(.rodata);
+        src/agb_flash_le.o(.rodata);
+        src/siirtc.o(.rodata);
+        src/librfu_rfu.o(.rodata);
+        src/librfu_sio32id.o(.rodata);
+        *libgcc.a:_divdi3.o(.rodata);
+        *libgcc.a:_udivdi3.o(.rodata);
+        *libc.a:memcpy.o(.rodata);
+        *libc.a:memset.o(.rodata);
+        *libc.a:strcmp.o(.rodata);
+        *libc.a:strcpy.o(.rodata);
+        *libc.a:impure.o(.rodata);
+        *libc.a:vsprintf.o(.rodata);
+        *libc.a:vfprintf.o(.rodata);
+        *libc.a:wsetup.o(.rodata);
+        *libc.a:dtoa.o(.rodata);
+        *libc.a:fflush.o(.rodata);
+        *libc.a:findfp.o(.rodata);
+        *libc.a:freer.o(.rodata);
+        *libc.a:mtrim.o(.rodata);
+        *libc.a:fvwrite.o(.rodata);
+        *libc.a:fwalk.o(.rodata);
+        *libc.a:locale.o(.rodata);
+        *libc.a:makebuf.o(.rodata);
+        *libc.a:mallocr.o(.rodata);
+        *libc.a:mbtowc_r.o(.rodata);
+        *libc.a:memchr.o(.rodata);
+        *libc.a:memmove.o(.rodata);
+        *libc.a:mlock.o(.rodata);
+        *libc.a:mprec.o(.rodata);
+        *libc.a:s_isinf.o(.rodata);
+        *libc.a:s_isnan.o(.rodata);
+        *libc.a:sbrkr.o(.rodata);
+        *libc.a:stdio.o(.rodata);
+        *libc.a:strlen.o(.rodata);
+        *libc.a:syscalls.o(.rodata);
+        *libc.a:writer.o(.rodata);
+        *libc.a:callocr.o(.rodata);
+        *libc.a:closer.o(.rodata);
+        *libc.a:errno.o(.rodata);
+        *libc.a:fstatr.o(.rodata);
+        *libc.a:libcfunc.o(.rodata);
+        *libc.a:lseekr.o(.rodata);
+        *libc.a:readr.o(.rodata);
+        src/libisagbprn.o(.rodata);
+    } =0
+
+    anim_mon_front_pic_data 0x08a000e0 :
     ALIGN(4)
     {
+        src/anim_mon_front_pics.o(.rodata);
+    } =0
+
+    gfx_data :
+    ALIGN(4)
+    {
+        src/graphics.o(.rodata);
+    } =0
+
+    new_sound :
+    ALIGN(4)
+    {
+        data/sound_data_2.o(.rodata);
+    } =0
+
+    song_data 0x08fe0000 :
+    ALIGN(4)
+    {
+        data/dummy_data.o(.rodata);
         sound/songs/midi/mus_dummy.o(.rodata);
         sound/songs/midi/se_use_item.o(.rodata);
         sound/songs/midi/se_pc_login.o(.rodata);
@@ -1270,103 +1351,9 @@ SECTIONS {
         sound/songs/midi/ph_nurse_solo.o(.rodata);
     } =0
 
-    lib_rodata :
-    SUBALIGN(4)
-    {
-        src/m4a.o(.rodata);
-        src/agb_flash.o(.rodata);
-        src/agb_flash_1m.o(.rodata);
-        src/agb_flash_mx.o(.rodata);
-        src/agb_flash_le.o(.rodata);
-        src/siirtc.o(.rodata);
-        src/librfu_rfu.o(.rodata);
-        src/librfu_sio32id.o(.rodata);
-        *libgcc.a:_divdi3.o(.rodata);
-        *libgcc.a:_udivdi3.o(.rodata);
-        *libc.a:memcpy.o(.rodata);
-        *libc.a:memset.o(.rodata);
-        *libc.a:strcmp.o(.rodata);
-        *libc.a:strcpy.o(.rodata);
-        *libc.a:impure.o(.rodata);
-        *libc.a:vsprintf.o(.rodata);
-        *libc.a:vfprintf.o(.rodata);
-        *libc.a:wsetup.o(.rodata);
-        *libc.a:dtoa.o(.rodata);
-        *libc.a:fflush.o(.rodata);
-        *libc.a:findfp.o(.rodata);
-        *libc.a:freer.o(.rodata);
-        *libc.a:mtrim.o(.rodata);
-        *libc.a:fvwrite.o(.rodata);
-        *libc.a:fwalk.o(.rodata);
-        *libc.a:locale.o(.rodata);
-        *libc.a:makebuf.o(.rodata);
-        *libc.a:mallocr.o(.rodata);
-        *libc.a:mbtowc_r.o(.rodata);
-        *libc.a:memchr.o(.rodata);
-        *libc.a:memmove.o(.rodata);
-        *libc.a:mlock.o(.rodata);
-        *libc.a:mprec.o(.rodata);
-        *libc.a:s_isinf.o(.rodata);
-        *libc.a:s_isnan.o(.rodata);
-        *libc.a:sbrkr.o(.rodata);
-        *libc.a:stdio.o(.rodata);
-        *libc.a:strlen.o(.rodata);
-        *libc.a:syscalls.o(.rodata);
-        *libc.a:writer.o(.rodata);
-        *libc.a:callocr.o(.rodata);
-        *libc.a:closer.o(.rodata);
-        *libc.a:errno.o(.rodata);
-        *libc.a:fstatr.o(.rodata);
-        *libc.a:libcfunc.o(.rodata);
-        *libc.a:lseekr.o(.rodata);
-        *libc.a:readr.o(.rodata);
-        src/libisagbprn.o(.rodata);
-    } =0
-
-    multiboot_data :
+    new_songs :
     ALIGN(4)
     {
-        data/multiboot_ereader.o(.rodata);
-        data/multiboot_berry_glitch_fix.o(.rodata);
-        data/multiboot_pokemon_colosseum.o(.rodata);
-    } =0
-
-    anim_mon_front_pic_data 0x08a000e0 :
-    ALIGN(4)
-    {
-        src/anim_mon_front_pics.o(.rodata);
-    } =0
-
-    gfx_data :
-    ALIGN(4)
-    {
-        src/graphics.o(.rodata);
-    } =0
-
-    moved_stuff :
-    ALIGN(4)
-    {
-        gflib/window.o(.text);
-        src/rtc.o(.text);
-        src/battle_controller_link_opponent.o(.text);
-        src/field_weather_effect.o(.text);
-        src/field_screen_effect.o(.text);
-        src/pokedex_area_screen.o(.text);
-        data/battle_anim_scripts.o(script_data);
-        src/battle_script_commands.o(.rodata);
-        src/match_call.o(.rodata);
-    } =0
-
-    new_sound :
-    ALIGN(4)
-    {
-        data/sound_data_2.o(.rodata);
-    } =0
-
-    new_songs 0x08fe0000 :
-    ALIGN(4)
-    {
-        data/dummy_data.o(.rodata);
         sound/songs/midi/mus_dp_vs_rival.o(.rodata);
         sound/songs/midi/mus_dp_vs_galactic_commander.o(.rodata);
         sound/songs/midi/mus_dp_vs_gym_leader.o(.rodata);
@@ -1431,6 +1418,14 @@ SECTIONS {
     ALIGN(4)
     {
         data/sound_data_3.o(.rodata);
+    } =0
+
+    multiboot_data :
+    ALIGN(4)
+    {
+        data/multiboot_ereader.o(.rodata);
+        data/multiboot_berry_glitch_fix.o(.rodata);
+        data/multiboot_pokemon_colosseum.o(.rodata);
     } =0
 
     extra :

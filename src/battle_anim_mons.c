@@ -179,7 +179,11 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
 
     if (GetBattlerSide(battlerId) == B_SIDE_PLAYER || IsContest())
     {
-        if (species == SPECIES_UNOWN)
+        if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON
+        || species == SPECIES_UNFEZANT || species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_FRILLISH || species == SPECIES_JELLICENT || species == SPECIES_VIVILLON
+        || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES || species == SPECIES_MEOWSTIC || species == SPECIES_PUMPKABOO
+        || species == SPECIES_GOURGEIST || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_TOXTRICITY || species == SPECIES_ALCREMIE || species == SPECIES_BASCULEGION
+        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE)
         {
             if (IsContest())
             {
@@ -196,11 +200,144 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
                 else
                     personality = gTransformedPersonalities[battlerId];
             }
-            letter = GET_UNOWN_LETTER(personality);
-            if (!letter)
-                coordSpecies = species;
+            if (species == SPECIES_UNOWN)
+            {
+                letter = GET_UNOWN_LETTER(personality);
+                if (!letter)
+                    coordSpecies = species;
+                else
+                    coordSpecies = letter + SPECIES_UNOWN_B - 1;
+            }
+            else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON)
+            {
+                letter = (personality >> 8) % 2;
+                if (!letter)
+                    coordSpecies = species;
+                else
+                {
+                    if (species == SPECIES_SHELLOS)
+                        coordSpecies = SPECIES_SHELLOS_EAST_SEA;
+                    else
+                        coordSpecies = SPECIES_GASTRODON_EAST_SEA;
+                }
+            }
+            else if (species == SPECIES_MAUSHOLD || species == SPECIES_DUDUNSPARCE)
+            {
+                letter = (personality >> 8) % 100;
+                if (letter != 69) //  nice
+                    coordSpecies = species;
+                else
+                {
+                    if (species == SPECIES_MAUSHOLD)
+                        coordSpecies = SPECIES_MAUSHOLD_FAMILY_OF_THREE;
+                    else
+                        coordSpecies = SPECIES_DUDUNSPARCE_THREE_SEGMENT;
+                }
+            }
+            else if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_PUMPKABOO || species == SPECIES_GOURGEIST || species == SPECIES_SQUAWKABILLY)
+            {
+                letter = (personality >> 8) % 4;
+                if (!letter)
+                    coordSpecies = species;
+                else
+                {
+                    if (species == SPECIES_DEERLING)
+                        coordSpecies = letter + SPECIES_DEERLING_SUMMER - 1;
+                    else if (species == SPECIES_SAWSBUCK)
+                        coordSpecies = letter + SPECIES_SAWSBUCK_SUMMER - 1;
+                    else if (species == SPECIES_SQUAWKABILLY)
+                        coordSpecies = letter + SPECIES_SQUAWKABILLY_BLUE_PLUMAGE - 1;
+                    else if (species == SPECIES_PUMPKABOO)
+                        coordSpecies = letter + SPECIES_PUMPKABOO_SMALL - 1;
+                    else
+                        coordSpecies = letter + SPECIES_GOURGEIST_SMALL - 1;
+                }
+            }
+            else if (species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES)
+            {
+                letter = (personality >> 8) % 5;
+                if (!letter)
+                    coordSpecies = species;
+                else
+                {
+                    if (species == SPECIES_FLABEBE)
+                        coordSpecies = letter + SPECIES_FLABEBE_YELLOW_FLOWER - 1;
+                    else if (species == SPECIES_FLOETTE)
+                        coordSpecies = letter + SPECIES_FLOETTE_YELLOW_FLOWER - 1;
+                    else
+                        coordSpecies = letter + SPECIES_FLORGES_YELLOW_FLOWER - 1;
+                }
+            }
+            else if (species == SPECIES_VIVILLON)
+            {
+                letter = (personality >> 8) % 20;
+                if (!letter)
+                    coordSpecies = species;
+                else
+                    coordSpecies = letter + SPECIES_VIVILLON_POLAR - 1;
+            }
+            else if (species == SPECIES_MINIOR_CORE_RED)
+            {
+                letter = (personality >> 8) % 7;
+                if (!letter)
+                    coordSpecies = species;
+                else
+                    coordSpecies = letter + SPECIES_MINIOR_CORE_ORANGE - 1;
+            }
+            else if (species == SPECIES_ALCREMIE)
+            {
+                letter = (personality >> 8) % 9;
+                if (!letter)
+                    coordSpecies = species;
+                else
+                    coordSpecies = letter + SPECIES_ALCREMIE_RUBY_CREAM - 1;
+            }
+            else if (species == SPECIES_TATSUGIRI)
+            {
+                letter = (personality >> 8) % 3;
+                if (!letter)
+                    coordSpecies = species;
+                else
+                    coordSpecies = letter + SPECIES_TATSUGIRI_DROOPY - 1;
+            }
+            else if (species == SPECIES_TOXTRICITY)
+            {
+                if ((personality % 25) == 0 || (personality % 25) == 2 || (personality % 25) == 3 || (personality % 25) == 4 ||
+                (personality % 25) == 6 || (personality % 25) == 8 || (personality % 25) == 9 || (personality % 25) == 11 || 
+                (personality % 25) == 13 || (personality % 25) == 14 || (personality % 25) == 19 || (personality % 25) == 22 || (personality % 25) == 24)
+                    coordSpecies = species;
+                else
+                    coordSpecies = SPECIES_TOXTRICITY_LOW_KEY;
+            }
+            else if (species == SPECIES_PYROAR)
+            {
+                if ((personality % 0x100) >= 0xDF)
+                    coordSpecies = species;
+                else
+                    coordSpecies = SPECIES_PYROAR_FEMALE;
+            }
             else
-                coordSpecies = letter + SPECIES_UNOWN_B - 1;
+            {
+                if ((personality % 0x100) >= 0x7F)
+                    coordSpecies = species;
+                else
+                    if (species == SPECIES_HIPPOPOTAS)
+                        coordSpecies = SPECIES_HIPPOPOTAS_FEMALE;
+                    else if (species == SPECIES_HIPPOWDON)
+                        coordSpecies = SPECIES_HIPPOWDON_FEMALE;
+                    else if (species == SPECIES_UNFEZANT)
+                        coordSpecies = SPECIES_UNFEZANT_FEMALE;
+                    else if (species == SPECIES_FRILLISH)
+                        coordSpecies = SPECIES_FRILLISH_FEMALE;
+                    else if (species == SPECIES_JELLICENT)
+                        coordSpecies = SPECIES_JELLICENT_FEMALE;
+                    else if (species == SPECIES_MEOWSTIC)
+                        coordSpecies = SPECIES_MEOWSTIC_FEMALE;
+                    else if (species == SPECIES_OINKOLOGNE)
+                        coordSpecies = SPECIES_OINKOLOGNE_FEMALE;
+                    else
+                        coordSpecies = SPECIES_BASCULEGION_FEMALE;
+            }
             ret = gMonBackPicCoords[coordSpecies].y_offset;
         }
         else if (species == SPECIES_CASTFORM)
@@ -218,18 +355,155 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
     }
     else
     {
-        if (species == SPECIES_UNOWN)
+        if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON
+        || species == SPECIES_UNFEZANT || species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_FRILLISH || species == SPECIES_JELLICENT || species == SPECIES_VIVILLON
+        || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES || species == SPECIES_MEOWSTIC || species == SPECIES_PUMPKABOO
+        || species == SPECIES_GOURGEIST || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_TOXTRICITY || species == SPECIES_ALCREMIE || species == SPECIES_BASCULEGION
+        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE)
         {
             spriteInfo = gBattleSpritesDataPtr->battlerData;
             if (!spriteInfo[battlerId].transformSpecies)
                 personality = GetMonData(&gEnemyParty[gBattlerPartyIndexes[battlerId]], MON_DATA_PERSONALITY);
             else
                 personality = gTransformedPersonalities[battlerId];
-            letter = GET_UNOWN_LETTER(personality);
-            if (!letter)
-                coordSpecies = species;
+            if (species == SPECIES_UNOWN)
+            {
+                letter = GET_UNOWN_LETTER(personality);
+                if (!letter)
+                    coordSpecies = species;
+                else
+                    coordSpecies = letter + SPECIES_UNOWN_B - 1;
+            }
+            else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON)
+            {
+                letter = (personality >> 8) % 2;
+                if (!letter)
+                    coordSpecies = species;
+                else
+                {
+                    if (species == SPECIES_SHELLOS)
+                        coordSpecies = SPECIES_SHELLOS_EAST_SEA;
+                    else
+                        coordSpecies = SPECIES_GASTRODON_EAST_SEA;
+                }
+            }
+            else if (species == SPECIES_MAUSHOLD || species == SPECIES_DUDUNSPARCE)
+            {
+                letter = (personality >> 8) % 100;
+                if (letter != 69) //  nice
+                    coordSpecies = species;
+                else
+                {
+                    if (species == SPECIES_MAUSHOLD)
+                        coordSpecies = SPECIES_MAUSHOLD_FAMILY_OF_THREE;
+                    else
+                        coordSpecies = SPECIES_DUDUNSPARCE_THREE_SEGMENT;
+                }
+            }
+            else if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_PUMPKABOO || species == SPECIES_GOURGEIST || species == SPECIES_SQUAWKABILLY)
+            {
+                letter = (personality >> 8) % 4;
+                if (!letter)
+                    coordSpecies = species;
+                else
+                {
+                    if (species == SPECIES_DEERLING)
+                        coordSpecies = letter + SPECIES_DEERLING_SUMMER - 1;
+                    else if (species == SPECIES_SAWSBUCK)
+                        coordSpecies = letter + SPECIES_SAWSBUCK_SUMMER - 1;
+                    else if (species == SPECIES_SQUAWKABILLY)
+                        coordSpecies = letter + SPECIES_SQUAWKABILLY_BLUE_PLUMAGE - 1;
+                    else if (species == SPECIES_PUMPKABOO)
+                        coordSpecies = letter + SPECIES_PUMPKABOO_SMALL - 1;
+                    else
+                        coordSpecies = letter + SPECIES_GOURGEIST_SMALL - 1;
+                }
+            }
+            else if (species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES)
+            {
+                letter = (personality >> 8) % 5;
+                if (!letter)
+                    coordSpecies = species;
+                else
+                {
+                    if (species == SPECIES_FLABEBE)
+                        coordSpecies = letter + SPECIES_FLABEBE_YELLOW_FLOWER - 1;
+                    else if (species == SPECIES_FLOETTE)
+                        coordSpecies = letter + SPECIES_FLOETTE_YELLOW_FLOWER - 1;
+                    else
+                        coordSpecies = letter + SPECIES_FLORGES_YELLOW_FLOWER - 1;
+                }
+            }
+            else if (species == SPECIES_VIVILLON)
+            {
+                letter = (personality >> 8) % 20;
+                if (!letter)
+                    coordSpecies = species;
+                else
+                    coordSpecies = letter + SPECIES_VIVILLON_POLAR - 1;
+            }
+            else if (species == SPECIES_MINIOR_CORE_RED)
+            {
+                letter = (personality >> 8) % 7;
+                if (!letter)
+                    coordSpecies = species;
+                else
+                    coordSpecies = letter + SPECIES_MINIOR_CORE_ORANGE - 1;
+            }
+            else if (species == SPECIES_ALCREMIE)
+            {
+                letter = (personality >> 8) % 9;
+                if (!letter)
+                    coordSpecies = species;
+                else
+                    coordSpecies = letter + SPECIES_ALCREMIE_RUBY_CREAM - 1;
+            }
+            else if (species == SPECIES_TATSUGIRI)
+            {
+                letter = (personality >> 8) % 3;
+                if (!letter)
+                    coordSpecies = species;
+                else
+                    coordSpecies = letter + SPECIES_TATSUGIRI_DROOPY - 1;
+            }
+            else if (species == SPECIES_TOXTRICITY)
+            {
+                if ((personality % 25) == 0 || (personality % 25) == 2 || (personality % 25) == 3 || (personality % 25) == 4 ||
+                (personality % 25) == 6 || (personality % 25) == 8 || (personality % 25) == 9 || (personality % 25) == 11 || 
+                (personality % 25) == 13 || (personality % 25) == 14 || (personality % 25) == 19 || (personality % 25) == 22 || (personality % 25) == 24)
+                    coordSpecies = species;
+                else
+                    coordSpecies = SPECIES_TOXTRICITY_LOW_KEY;
+            }
+            else if (species == SPECIES_PYROAR)
+            {
+                if ((personality % 0x100) >= 0xDF)
+                    coordSpecies = species;
+                else
+                    coordSpecies = SPECIES_PYROAR_FEMALE;
+            }
             else
-                coordSpecies = letter + SPECIES_UNOWN_B - 1;
+            {
+                if ((personality % 0x100) >= 0x7F)
+                    coordSpecies = species;
+                else
+                    if (species == SPECIES_HIPPOPOTAS)
+                        coordSpecies = SPECIES_HIPPOPOTAS_FEMALE;
+                    else if (species == SPECIES_HIPPOWDON)
+                        coordSpecies = SPECIES_HIPPOWDON_FEMALE;
+                    else if (species == SPECIES_UNFEZANT)
+                        coordSpecies = SPECIES_UNFEZANT_FEMALE;
+                    else if (species == SPECIES_FRILLISH)
+                        coordSpecies = SPECIES_FRILLISH_FEMALE;
+                    else if (species == SPECIES_JELLICENT)
+                        coordSpecies = SPECIES_JELLICENT_FEMALE;
+                    else if (species == SPECIES_MEOWSTIC)
+                        coordSpecies = SPECIES_MEOWSTIC_FEMALE;
+                    else if (species == SPECIES_OINKOLOGNE)
+                        coordSpecies = SPECIES_OINKOLOGNE_FEMALE;
+                    else
+                        coordSpecies = SPECIES_BASCULEGION_FEMALE;
+            }
             ret = gMonFrontPicCoords[coordSpecies].y_offset;
         }
         else if (species == SPECIES_CASTFORM)
@@ -2177,13 +2451,150 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
             species = gContestResources->moveAnim->species;
             personality = gContestResources->moveAnim->personality;
         }
-        if (species == SPECIES_UNOWN)
+        if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON
+        || species == SPECIES_UNFEZANT || species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_FRILLISH || species == SPECIES_JELLICENT || species == SPECIES_VIVILLON
+        || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES || species == SPECIES_MEOWSTIC || species == SPECIES_PUMPKABOO
+        || species == SPECIES_GOURGEIST || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_TOXTRICITY || species == SPECIES_ALCREMIE || species == SPECIES_BASCULEGION
+        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE)
         {
-            letter = GET_UNOWN_LETTER(personality);
-            if (!letter)
-                unownSpecies = SPECIES_UNOWN;
+            if (species == SPECIES_UNOWN)
+            {
+                letter = GET_UNOWN_LETTER(personality);
+                if (!letter)
+                    unownSpecies = SPECIES_UNOWN;
+                else
+                    unownSpecies = letter + SPECIES_UNOWN_B - 1;
+            }
+            else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON)
+            {
+                letter = (personality >> 8) % 2;
+                if (!letter)
+                    unownSpecies = species;
+                else
+                {
+                    if (species == SPECIES_SHELLOS)
+                        unownSpecies = SPECIES_SHELLOS_EAST_SEA;
+                    else
+                        unownSpecies = SPECIES_GASTRODON_EAST_SEA;
+                }
+            }
+            else if (species == SPECIES_MAUSHOLD || species == SPECIES_DUDUNSPARCE)
+            {
+                letter = (personality >> 8) % 100;
+                if (letter != 69) //  nice
+                    unownSpecies = species;
+                else
+                {
+                    if (species == SPECIES_MAUSHOLD)
+                        unownSpecies = SPECIES_MAUSHOLD_FAMILY_OF_THREE;
+                    else
+                        unownSpecies = SPECIES_DUDUNSPARCE_THREE_SEGMENT;
+                }
+            }
+            else if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_PUMPKABOO || species == SPECIES_GOURGEIST || species == SPECIES_SQUAWKABILLY)
+            {
+                letter = (personality >> 8) % 4;
+                if (!letter)
+                    unownSpecies = species;
+                else
+                {
+                    if (species == SPECIES_DEERLING)
+                        unownSpecies = letter + SPECIES_DEERLING_SUMMER - 1;
+                    else if (species == SPECIES_SAWSBUCK)
+                        unownSpecies = letter + SPECIES_SAWSBUCK_SUMMER - 1;
+                    else if (species == SPECIES_SQUAWKABILLY)
+                        unownSpecies = letter + SPECIES_SQUAWKABILLY_BLUE_PLUMAGE - 1;
+                    else if (species == SPECIES_PUMPKABOO)
+                        unownSpecies = letter + SPECIES_PUMPKABOO_SMALL - 1;
+                    else
+                        unownSpecies = letter + SPECIES_GOURGEIST_SMALL - 1;
+                }
+            }
+            else if (species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES)
+            {
+                letter = (personality >> 8) % 5;
+                if (!letter)
+                    unownSpecies = species;
+                else
+                {
+                    if (species == SPECIES_FLABEBE)
+                        unownSpecies = letter + SPECIES_FLABEBE_YELLOW_FLOWER - 1;
+                    else if (species == SPECIES_FLOETTE)
+                        unownSpecies = letter + SPECIES_FLOETTE_YELLOW_FLOWER - 1;
+                    else
+                        unownSpecies = letter + SPECIES_FLORGES_YELLOW_FLOWER - 1;
+                }
+            }
+            else if (species == SPECIES_VIVILLON)
+            {
+                letter = (personality >> 8) % 20;
+                if (!letter)
+                    unownSpecies = species;
+                else
+                    unownSpecies = letter + SPECIES_VIVILLON_POLAR - 1;
+            }
+            else if (species == SPECIES_MINIOR_CORE_RED)
+            {
+                letter = (personality >> 8) % 7;
+                if (!letter)
+                    unownSpecies = species;
+                else
+                    unownSpecies = letter + SPECIES_MINIOR_CORE_ORANGE - 1;
+            }
+            else if (species == SPECIES_ALCREMIE)
+            {
+                letter = (personality >> 8) % 9;
+                if (!letter)
+                    unownSpecies = species;
+                else
+                    unownSpecies = letter + SPECIES_ALCREMIE_RUBY_CREAM - 1;
+            }
+            else if (species == SPECIES_TATSUGIRI)
+            {
+                letter = (personality >> 8) % 3;
+                if (!letter)
+                    unownSpecies = species;
+                else
+                    unownSpecies = letter + SPECIES_TATSUGIRI_DROOPY - 1;
+            }
+            else if (species == SPECIES_TOXTRICITY)
+            {
+                if ((personality % 25) == 0 || (personality % 25) == 2 || (personality % 25) == 3 || (personality % 25) == 4 ||
+                (personality % 25) == 6 || (personality % 25) == 8 || (personality % 25) == 9 || (personality % 25) == 11 || 
+                (personality % 25) == 13 || (personality % 25) == 14 || (personality % 25) == 19 || (personality % 25) == 22 || (personality % 25) == 24)
+                    unownSpecies = species;
+                else
+                    unownSpecies = SPECIES_TOXTRICITY_LOW_KEY;
+            }
+            else if (species == SPECIES_PYROAR)
+            {
+                if ((personality % 0x100) >= 0xDF)
+                    unownSpecies = species;
+                else
+                    unownSpecies = SPECIES_PYROAR_FEMALE;
+            }
             else
-                unownSpecies = letter + SPECIES_UNOWN_B - 1;
+            {
+                if ((personality % 0x100) >= 0x7F)
+                    unownSpecies = species;
+                else
+                    if (species == SPECIES_HIPPOPOTAS)
+                        unownSpecies = SPECIES_HIPPOPOTAS_FEMALE;
+                    else if (species == SPECIES_HIPPOWDON)
+                        unownSpecies = SPECIES_HIPPOWDON_FEMALE;
+                    else if (species == SPECIES_UNFEZANT)
+                        unownSpecies = SPECIES_UNFEZANT_FEMALE;
+                    else if (species == SPECIES_FRILLISH)
+                        unownSpecies = SPECIES_FRILLISH_FEMALE;
+                    else if (species == SPECIES_JELLICENT)
+                        unownSpecies = SPECIES_JELLICENT_FEMALE;
+                    else if (species == SPECIES_MEOWSTIC)
+                        unownSpecies = SPECIES_MEOWSTIC_FEMALE;
+                    else if (species == SPECIES_OINKOLOGNE)
+                        unownSpecies = SPECIES_OINKOLOGNE_FEMALE;
+                    else
+                        unownSpecies = SPECIES_BASCULEGION_FEMALE;
+            }
             coords = &gMonBackPicCoords[unownSpecies];
         }
         else if (species == SPECIES_CASTFORM)
@@ -2215,13 +2626,150 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                 personality = gTransformedPersonalities[battlerId];
             }
 
-            if (species == SPECIES_UNOWN)
+            if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON
+        || species == SPECIES_UNFEZANT || species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_FRILLISH || species == SPECIES_JELLICENT || species == SPECIES_VIVILLON
+        || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES || species == SPECIES_MEOWSTIC || species == SPECIES_PUMPKABOO
+        || species == SPECIES_GOURGEIST || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_TOXTRICITY || species == SPECIES_ALCREMIE || species == SPECIES_BASCULEGION
+        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE)
             {
-                letter = GET_UNOWN_LETTER(personality);
-                if (!letter)
-                    unownSpecies = SPECIES_UNOWN;
+                if (species == SPECIES_UNOWN)
+                {
+                    letter = GET_UNOWN_LETTER(personality);
+                    if (!letter)
+                        unownSpecies = SPECIES_UNOWN;
+                    else
+                        unownSpecies = letter + SPECIES_UNOWN_B - 1;
+                }
+                else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON)
+                {
+                    letter = (personality >> 8) % 2;
+                    if (!letter)
+                        unownSpecies = species;
+                    else
+                    {
+                        if (species == SPECIES_SHELLOS)
+                            unownSpecies = SPECIES_SHELLOS_EAST_SEA;
+                        else
+                            unownSpecies = SPECIES_GASTRODON_EAST_SEA;
+                    }
+                }
+                else if (species == SPECIES_MAUSHOLD || species == SPECIES_DUDUNSPARCE)
+                {
+                    letter = (personality >> 8) % 100;
+                    if (letter != 69) //  nice
+                        unownSpecies = species;
+                    else
+                    {
+                        if (species == SPECIES_MAUSHOLD)
+                            unownSpecies = SPECIES_MAUSHOLD_FAMILY_OF_THREE;
+                        else
+                            unownSpecies = SPECIES_DUDUNSPARCE_THREE_SEGMENT;
+                    }
+                }
+                else if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_PUMPKABOO || species == SPECIES_GOURGEIST || species == SPECIES_SQUAWKABILLY)
+                {
+                    letter = (personality >> 8) % 4;
+                    if (!letter)
+                        unownSpecies = species;
+                    else
+                    {
+                        if (species == SPECIES_DEERLING)
+                            unownSpecies = letter + SPECIES_DEERLING_SUMMER - 1;
+                        else if (species == SPECIES_SAWSBUCK)
+                            unownSpecies = letter + SPECIES_SAWSBUCK_SUMMER - 1;
+                        else if (species == SPECIES_SQUAWKABILLY)
+                            unownSpecies = letter + SPECIES_SQUAWKABILLY_BLUE_PLUMAGE - 1;
+                        else if (species == SPECIES_PUMPKABOO)
+                            unownSpecies = letter + SPECIES_PUMPKABOO_SMALL - 1;
+                        else
+                            unownSpecies = letter + SPECIES_GOURGEIST_SMALL - 1;
+                    }
+                }
+                else if (species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES)
+                {
+                    letter = (personality >> 8) % 5;
+                    if (!letter)
+                        unownSpecies = species;
+                    else
+                    {
+                        if (species == SPECIES_FLABEBE)
+                            unownSpecies = letter + SPECIES_FLABEBE_YELLOW_FLOWER - 1;
+                        else if (species == SPECIES_FLOETTE)
+                            unownSpecies = letter + SPECIES_FLOETTE_YELLOW_FLOWER - 1;
+                        else
+                            unownSpecies = letter + SPECIES_FLORGES_YELLOW_FLOWER - 1;
+                    }
+                }
+                else if (species == SPECIES_VIVILLON)
+                {
+                    letter = (personality >> 8) % 20;
+                    if (!letter)
+                        unownSpecies = species;
+                    else
+                        unownSpecies = letter + SPECIES_VIVILLON_POLAR - 1;
+                }
+                else if (species == SPECIES_MINIOR_CORE_RED)
+                {
+                    letter = (personality >> 8) % 7;
+                    if (!letter)
+                        unownSpecies = species;
+                    else
+                        unownSpecies = letter + SPECIES_MINIOR_CORE_ORANGE - 1;
+                }
+                else if (species == SPECIES_ALCREMIE)
+                {
+                    letter = (personality >> 8) % 9;
+                    if (!letter)
+                        unownSpecies = species;
+                    else
+                        unownSpecies = letter + SPECIES_ALCREMIE_RUBY_CREAM - 1;
+                }
+                else if (species == SPECIES_TATSUGIRI)
+                {
+                    letter = (personality >> 8) % 3;
+                    if (!letter)
+                        unownSpecies = species;
+                    else
+                        unownSpecies = letter + SPECIES_TATSUGIRI_DROOPY - 1;
+                }
+                else if (species == SPECIES_TOXTRICITY)
+                {
+                    if ((personality % 25) == 0 || (personality % 25) == 2 || (personality % 25) == 3 || (personality % 25) == 4 ||
+                    (personality % 25) == 6 || (personality % 25) == 8 || (personality % 25) == 9 || (personality % 25) == 11 || 
+                    (personality % 25) == 13 || (personality % 25) == 14 || (personality % 25) == 19 || (personality % 25) == 22 || (personality % 25) == 24)
+                        unownSpecies = species;
+                    else
+                        unownSpecies = SPECIES_TOXTRICITY_LOW_KEY;
+                }
+                else if (species == SPECIES_PYROAR)
+                {
+                    if ((personality % 0x100) >= 0xDF)
+                        unownSpecies = species;
+                    else
+                        unownSpecies = SPECIES_PYROAR_FEMALE;
+                }
                 else
-                    unownSpecies = letter + SPECIES_UNOWN_B - 1;
+                {
+                    if ((personality % 0x100) >= 0x7F)
+                        unownSpecies = species;
+                    else
+                        if (species == SPECIES_HIPPOPOTAS)
+                            unownSpecies = SPECIES_HIPPOPOTAS_FEMALE;
+                        else if (species == SPECIES_HIPPOWDON)
+                            unownSpecies = SPECIES_HIPPOWDON_FEMALE;
+                        else if (species == SPECIES_UNFEZANT)
+                            unownSpecies = SPECIES_UNFEZANT_FEMALE;
+                        else if (species == SPECIES_FRILLISH)
+                            unownSpecies = SPECIES_FRILLISH_FEMALE;
+                        else if (species == SPECIES_JELLICENT)
+                            unownSpecies = SPECIES_JELLICENT_FEMALE;
+                        else if (species == SPECIES_MEOWSTIC)
+                            unownSpecies = SPECIES_MEOWSTIC_FEMALE;
+                        else if (species == SPECIES_OINKOLOGNE)
+                            unownSpecies = SPECIES_OINKOLOGNE_FEMALE;
+                        else
+                            unownSpecies = SPECIES_BASCULEGION_FEMALE;
+                }
                 coords = &gMonBackPicCoords[unownSpecies];
             }
             else if (species > NUM_SPECIES)
@@ -2247,13 +2795,150 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                 personality = gTransformedPersonalities[battlerId];
             }
 
-            if (species == SPECIES_UNOWN)
+            if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON
+        || species == SPECIES_UNFEZANT || species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_FRILLISH || species == SPECIES_JELLICENT || species == SPECIES_VIVILLON
+        || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES || species == SPECIES_MEOWSTIC || species == SPECIES_PUMPKABOO
+        || species == SPECIES_GOURGEIST || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_TOXTRICITY || species == SPECIES_ALCREMIE || species == SPECIES_BASCULEGION
+        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE)
             {
-                letter = GET_UNOWN_LETTER(personality);
-                if (!letter)
-                    unownSpecies = SPECIES_UNOWN;
+                if (species == SPECIES_UNOWN)
+                {
+                    letter = GET_UNOWN_LETTER(personality);
+                    if (!letter)
+                        unownSpecies = SPECIES_UNOWN;
+                    else
+                        unownSpecies = letter + SPECIES_UNOWN_B - 1;
+                }
+                else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON)
+                {
+                    letter = (personality >> 8) % 2;
+                    if (!letter)
+                        unownSpecies = species;
+                    else
+                    {
+                        if (species == SPECIES_SHELLOS)
+                            unownSpecies = SPECIES_SHELLOS_EAST_SEA;
+                        else
+                            unownSpecies = SPECIES_GASTRODON_EAST_SEA;
+                    }
+                }
+                else if (species == SPECIES_MAUSHOLD || species == SPECIES_DUDUNSPARCE)
+                {
+                    letter = (personality >> 8) % 100;
+                    if (letter != 69) //  nice
+                        unownSpecies = species;
+                    else
+                    {
+                        if (species == SPECIES_MAUSHOLD)
+                            unownSpecies = SPECIES_MAUSHOLD_FAMILY_OF_THREE;
+                        else
+                            unownSpecies = SPECIES_DUDUNSPARCE_THREE_SEGMENT;
+                    }
+                }
+                else if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_PUMPKABOO || species == SPECIES_GOURGEIST || species == SPECIES_SQUAWKABILLY)
+                {
+                    letter = (personality >> 8) % 4;
+                    if (!letter)
+                        unownSpecies = species;
+                    else
+                    {
+                        if (species == SPECIES_DEERLING)
+                            unownSpecies = letter + SPECIES_DEERLING_SUMMER - 1;
+                        else if (species == SPECIES_SAWSBUCK)
+                            unownSpecies = letter + SPECIES_SAWSBUCK_SUMMER - 1;
+                        else if (species == SPECIES_SQUAWKABILLY)
+                            unownSpecies = letter + SPECIES_SQUAWKABILLY_BLUE_PLUMAGE - 1;
+                        else if (species == SPECIES_PUMPKABOO)
+                            unownSpecies = letter + SPECIES_PUMPKABOO_SMALL - 1;
+                        else
+                            unownSpecies = letter + SPECIES_GOURGEIST_SMALL - 1;
+                    }
+                }
+                else if (species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES)
+                {
+                    letter = (personality >> 8) % 5;
+                    if (!letter)
+                        unownSpecies = species;
+                    else
+                    {
+                        if (species == SPECIES_FLABEBE)
+                            unownSpecies = letter + SPECIES_FLABEBE_YELLOW_FLOWER - 1;
+                        else if (species == SPECIES_FLOETTE)
+                            unownSpecies = letter + SPECIES_FLOETTE_YELLOW_FLOWER - 1;
+                        else
+                            unownSpecies = letter + SPECIES_FLORGES_YELLOW_FLOWER - 1;
+                    }
+                }
+                else if (species == SPECIES_VIVILLON)
+                {
+                    letter = (personality >> 8) % 20;
+                    if (!letter)
+                        unownSpecies = species;
+                    else
+                        unownSpecies = letter + SPECIES_VIVILLON_POLAR - 1;
+                }
+                else if (species == SPECIES_MINIOR_CORE_RED)
+                {
+                    letter = (personality >> 8) % 7;
+                    if (!letter)
+                        unownSpecies = species;
+                    else
+                        unownSpecies = letter + SPECIES_MINIOR_CORE_ORANGE - 1;
+                }
+                else if (species == SPECIES_ALCREMIE)
+                {
+                    letter = (personality >> 8) % 9;
+                    if (!letter)
+                        unownSpecies = species;
+                    else
+                        unownSpecies = letter + SPECIES_ALCREMIE_RUBY_CREAM - 1;
+                }
+                else if (species == SPECIES_TATSUGIRI)
+                {
+                    letter = (personality >> 8) % 3;
+                    if (!letter)
+                        unownSpecies = species;
+                    else
+                        unownSpecies = letter + SPECIES_TATSUGIRI_DROOPY - 1;
+                }
+                else if (species == SPECIES_TOXTRICITY)
+                {
+                    if ((personality % 25) == 0 || (personality % 25) == 2 || (personality % 25) == 3 || (personality % 25) == 4 ||
+                    (personality % 25) == 6 || (personality % 25) == 8 || (personality % 25) == 9 || (personality % 25) == 11 || 
+                    (personality % 25) == 13 || (personality % 25) == 14 || (personality % 25) == 19 || (personality % 25) == 22 || (personality % 25) == 24)
+                        unownSpecies = species;
+                    else
+                        unownSpecies = SPECIES_TOXTRICITY_LOW_KEY;
+                }
+                else if (species == SPECIES_PYROAR)
+                {
+                    if ((personality % 0x100) >= 0xDF)
+                        unownSpecies = species;
+                    else
+                        unownSpecies = SPECIES_PYROAR_FEMALE;
+                }
                 else
-                    unownSpecies = letter + SPECIES_UNOWN_B - 1;
+                {
+                    if ((personality % 0x100) >= 0x7F)
+                        unownSpecies = species;
+                    else
+                        if (species == SPECIES_HIPPOPOTAS)
+                            unownSpecies = SPECIES_HIPPOPOTAS_FEMALE;
+                        else if (species == SPECIES_HIPPOWDON)
+                            unownSpecies = SPECIES_HIPPOWDON_FEMALE;
+                        else if (species == SPECIES_UNFEZANT)
+                            unownSpecies = SPECIES_UNFEZANT_FEMALE;
+                        else if (species == SPECIES_FRILLISH)
+                            unownSpecies = SPECIES_FRILLISH_FEMALE;
+                        else if (species == SPECIES_JELLICENT)
+                            unownSpecies = SPECIES_JELLICENT_FEMALE;
+                        else if (species == SPECIES_MEOWSTIC)
+                            unownSpecies = SPECIES_MEOWSTIC_FEMALE;
+                        else if (species == SPECIES_OINKOLOGNE)
+                            unownSpecies = SPECIES_OINKOLOGNE_FEMALE;
+                        else
+                            unownSpecies = SPECIES_BASCULEGION_FEMALE;
+                }
                 coords = &gMonFrontPicCoords[unownSpecies];
             }
             else if (species == SPECIES_CASTFORM)

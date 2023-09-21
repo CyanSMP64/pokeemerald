@@ -451,6 +451,7 @@ static void Task_PartyMenuWaitForFade(u8 taskId);
 static void Task_ChooseContestMon(u8 taskId);
 static void CB2_ChooseContestMon(void);
 static void Task_ChoosePartyMon(u8 taskId);
+static void Task_ChoosePartyMonFRLG(u8 taskId);
 static void Task_ChooseMonForMoveRelearner(u8);
 static void CB2_ChooseMonForMoveRelearner(void);
 static void Task_BattlePyramidChooseMonHeldItems(u8);
@@ -1347,6 +1348,11 @@ static void HandleChooseMonSelection(u8 taskId, s8 *slotPtr)
             break;
         case PARTY_ACTION_CHOOSE_AND_CLOSE:
             PlaySE(SE_SELECT);
+            Task_ClosePartyMenu(taskId);
+            break;
+        case PARTY_ACTION_CHOOSE_AND_CLOSE2:
+            PlaySE(SE_SELECT);
+            gSpecialVar_0x8004 = *slotPtr;
             Task_ClosePartyMenu(taskId);
             break;
         case PARTY_ACTION_MINIGAME:
@@ -6198,11 +6204,11 @@ void ChooseMonForDaycare(void)
     InitPartyMenu(PARTY_MENU_TYPE_DAYCARE, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_MON, FALSE, PARTY_MSG_CHOOSE_MON_2, Task_HandleChooseMonInput, BufferMonSelection);
 }
 
-// Unused
+// Leftover from FRLG, used in custom script
 static void ChoosePartyMonByMenuType(u8 menuType)
 {
     gFieldCallback2 = CB2_FadeFromPartyMenu;
-    InitPartyMenu(menuType, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_AND_CLOSE, FALSE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ReturnToField);
+    InitPartyMenu(menuType, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_AND_CLOSE2, FALSE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ReturnToField);
 }
 
 static void BufferMonSelection(void)
@@ -6266,12 +6272,32 @@ void ChoosePartyMon(void)
     CreateTask(Task_ChoosePartyMon, 10);
 }
 
+void ChoosePartyMonFRLG(void)
+{
+    u8 taskId;
+
+    LockPlayerFieldControls();
+    taskId = CreateTask(Task_ChoosePartyMonFRLG, 10);
+    gTasks[taskId].data[0] = PARTY_MENU_TYPE_CHOOSE_MON;
+    BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
+}
+
 static void Task_ChoosePartyMon(u8 taskId)
 {
     if (!gPaletteFade.active)
     {
         CleanupOverworldWindowsAndTilemaps();
         InitPartyMenu(PARTY_MENU_TYPE_CHOOSE_MON, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_AND_CLOSE, FALSE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, BufferMonSelection);
+        DestroyTask(taskId);
+    }
+}
+
+static void Task_ChoosePartyMonFRLG(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        gPaletteFade.bufferTransferDisabled = TRUE;
+        ChoosePartyMonByMenuType((u8)gTasks[taskId].data[0]);
         DestroyTask(taskId);
     }
 }

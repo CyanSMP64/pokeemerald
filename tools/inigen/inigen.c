@@ -75,7 +75,8 @@ static const char * gTypeNames[] = {
     "Psychic",
     "Ice",
     "Dragon",
-    "Dark"
+    "Dark",
+    "Psychic" // "Fairy"
 };
 
 static const char * gPokeMarts[] = {
@@ -793,6 +794,7 @@ int main(int argc, char ** argv)
  *         BattleScript_LeechSeedTurnPrintAndUpdateHp   - 0x082dad4d
  *         BattleScript_SnatchedMove                    - 0x082db1ac
  *         BattleScript_FocusPunchSetUp                 - 0x082db1ff
+ *         BattleScript_MoveUsedWokeUp                  - 0x082db220
  *         BattleScript_MoveUsedIsFrozen                - 0x082db26a
  *         BattleScript_MoveUsedUnfroze                 - 0x082db277
  *         BattleScript_MoveUsedIsConfused              - 0x082db2bd
@@ -835,7 +837,7 @@ int main(int argc, char ** argv)
  * 
  * src/pokemon.o(.rodata)                               - 0x0831c898
  *         gBattleMoves                                 - 0x0831c898
- *         gExperienceTables                            - 0x0831f72c
- *         gSpeciesInfo                                 - 0x083203cc
+ *         gExperienceTables                            - 0x0831f72c        // changed the addresses internally
+ *         gSpeciesInfo                                 - 0x083203cc        // changed the addresses internally
  * 
 ******************************************************************************/

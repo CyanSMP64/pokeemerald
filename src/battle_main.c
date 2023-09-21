@@ -332,7 +332,7 @@ static const s8 sCenterToCornerVecXs[8] ={-32, -16, -16, -32, -32};
 // 10 is ×1.0 TYPE_MUL_NORMAL
 // 05 is ×0.5 TYPE_MUL_NOT_EFFECTIVE
 // 00 is ×0.0 TYPE_MUL_NO_EFFECT
-const u8 gTypeEffectiveness[336] =
+const u8 gTypeEffectiveness[372] =
 {
     TYPE_NORMAL, TYPE_ROCK, TYPE_MUL_NOT_EFFECTIVE,
     TYPE_NORMAL, TYPE_STEEL, TYPE_MUL_NOT_EFFECTIVE,
@@ -445,6 +445,18 @@ const u8 gTypeEffectiveness[336] =
     TYPE_FORESIGHT, TYPE_FORESIGHT, TYPE_MUL_NO_EFFECT,
     TYPE_NORMAL, TYPE_GHOST, TYPE_MUL_NO_EFFECT,
     TYPE_FIGHTING, TYPE_GHOST, TYPE_MUL_NO_EFFECT,
+    TYPE_FAIRY, TYPE_DRAGON, TYPE_MUL_SUPER_EFFECTIVE,
+    TYPE_FAIRY, TYPE_FIGHTING, TYPE_MUL_SUPER_EFFECTIVE,
+    TYPE_FAIRY, TYPE_DARK, TYPE_MUL_SUPER_EFFECTIVE,
+    TYPE_FAIRY, TYPE_FIRE, TYPE_MUL_NOT_EFFECTIVE,
+    TYPE_FAIRY, TYPE_POISON, TYPE_MUL_NOT_EFFECTIVE,
+    TYPE_FAIRY, TYPE_STEEL, TYPE_MUL_NOT_EFFECTIVE,
+    TYPE_STEEL, TYPE_FAIRY, TYPE_MUL_SUPER_EFFECTIVE,
+    TYPE_POISON, TYPE_FAIRY, TYPE_MUL_SUPER_EFFECTIVE,
+    TYPE_DARK, TYPE_FAIRY, TYPE_MUL_NOT_EFFECTIVE,
+    TYPE_FIGHTING, TYPE_FAIRY, TYPE_MUL_NOT_EFFECTIVE,
+    TYPE_BUG, TYPE_FAIRY, TYPE_MUL_NOT_EFFECTIVE,
+    TYPE_DRAGON, TYPE_FAIRY, TYPE_MUL_NO_EFFECT,
     TYPE_ENDTABLE, TYPE_ENDTABLE, TYPE_MUL_NO_EFFECT
 };
 
@@ -468,6 +480,7 @@ const u8 gTypeNames[NUMBER_OF_MON_TYPES][TYPE_NAME_LENGTH + 1] =
     [TYPE_ICE] = _("ICE"),
     [TYPE_DRAGON] = _("DRAGON"),
     [TYPE_DARK] = _("DARK"),
+    [TYPE_FAIRY] = _("FAIRY"),
 };
 
 // This is a factor in how much money you get for beating a trainer.
@@ -2757,16 +2770,152 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
 
     GetMonData(&gEnemyParty[gBattlerPartyIndexes[battler]], MON_DATA_PERSONALITY);  // Unused return value.
 
-    if (species == SPECIES_UNOWN)
+    if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON
+        || species == SPECIES_UNFEZANT || species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_FRILLISH || species == SPECIES_JELLICENT || species == SPECIES_VIVILLON
+        || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES || species == SPECIES_MEOWSTIC || species == SPECIES_PUMPKABOO
+        || species == SPECIES_GOURGEIST || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_TOXTRICITY || species == SPECIES_ALCREMIE || species == SPECIES_BASCULEGION
+        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE)
     {
         u32 personalityValue = GetMonData(&gEnemyParty[gBattlerPartyIndexes[battler]], MON_DATA_PERSONALITY);
-        u16 unownForm = GET_UNOWN_LETTER(personalityValue);
+        u16 unownForm;
         u16 unownSpecies;
 
-        if (unownForm == 0)
-            unownSpecies = SPECIES_UNOWN;  // Use the A Unown form.
+        if (species == SPECIES_UNOWN)
+        {
+            unownForm = GET_UNOWN_LETTER(personalityValue);
+            if (unownForm == 0)
+                unownSpecies = SPECIES_UNOWN;  // Use the A Unown form.
+            else
+                unownSpecies = NUM_SPECIES + unownForm;  // Use one of the other Unown letters.
+        }
+        else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON)
+        {
+            unownForm = (personalityValue >> 8) % 2;
+            if (!unownForm)
+                unownSpecies = species;
+            else
+            {
+                if (species == SPECIES_SHELLOS)
+                    unownSpecies = SPECIES_SHELLOS_EAST_SEA;
+                else
+                    unownSpecies = SPECIES_GASTRODON_EAST_SEA;
+            }
+        }
+        else if (species == SPECIES_MAUSHOLD || species == SPECIES_DUDUNSPARCE)
+        {
+            unownForm = (personalityValue >> 8) % 100;
+            if (unownForm != 69) //  nice
+                unownSpecies = species;
+            else
+            {
+                if (species == SPECIES_MAUSHOLD)
+                    unownSpecies = SPECIES_MAUSHOLD_FAMILY_OF_THREE;
+                else
+                    unownSpecies = SPECIES_DUDUNSPARCE_THREE_SEGMENT;
+            }
+        }
+        else if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_PUMPKABOO || species == SPECIES_GOURGEIST || species == SPECIES_SQUAWKABILLY)
+        {
+            unownForm = (personalityValue >> 8) % 4;
+            if (!unownForm)
+                unownSpecies = species;
+            else
+            {
+                if (species == SPECIES_DEERLING)
+                    unownSpecies = unownForm + SPECIES_DEERLING_SUMMER - 1;
+                else if (species == SPECIES_SAWSBUCK)
+                    unownSpecies = unownForm + SPECIES_SAWSBUCK_SUMMER - 1;
+                else if (species == SPECIES_SQUAWKABILLY)
+                    unownSpecies = unownForm + SPECIES_SQUAWKABILLY_BLUE_PLUMAGE - 1;
+                else if (species == SPECIES_PUMPKABOO)
+                    unownSpecies = unownForm + SPECIES_PUMPKABOO_SMALL - 1;
+                else
+                    unownSpecies = unownForm + SPECIES_GOURGEIST_SMALL - 1;
+            }
+        }
+        else if (species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES)
+        {
+            unownForm = (personalityValue >> 8) % 5;
+            if (!unownForm)
+                unownSpecies = species;
+            else
+            {
+                if (species == SPECIES_FLABEBE)
+                    unownSpecies = unownForm + SPECIES_FLABEBE_YELLOW_FLOWER - 1;
+                else if (species == SPECIES_FLOETTE)
+                    unownSpecies = unownForm + SPECIES_FLOETTE_YELLOW_FLOWER - 1;
+                else
+                    unownSpecies = unownForm + SPECIES_FLORGES_YELLOW_FLOWER - 1;
+            }
+        }
+        else if (species == SPECIES_VIVILLON)
+        {
+            unownForm = (personalityValue >> 8) % 20;
+            if (!unownForm)
+                unownSpecies = species;
+            else
+                unownSpecies = unownForm + SPECIES_VIVILLON_POLAR - 1;
+        }
+        else if (species == SPECIES_MINIOR_CORE_RED)
+        {
+            unownForm = (personalityValue >> 8) % 7;
+            if (!unownForm)
+                unownSpecies = species;
+            else
+                unownSpecies = unownForm + SPECIES_MINIOR_CORE_ORANGE - 1;
+        }
+        else if (species == SPECIES_ALCREMIE)
+        {
+            unownForm = (personalityValue >> 8) % 9;
+            if (!unownForm)
+                unownSpecies = species;
+            else
+                unownSpecies = unownForm + SPECIES_ALCREMIE_RUBY_CREAM - 1;
+        }
+        else if (species == SPECIES_TATSUGIRI)
+        {
+            unownForm = (personalityValue >> 8) % 3;
+            if (!unownForm)
+                unownSpecies = species;
+            else
+                unownSpecies = unownForm + SPECIES_TATSUGIRI_DROOPY - 1;
+        }
+        else if (species == SPECIES_TOXTRICITY)
+        {
+            if ((personalityValue % 25) == 0 || (personalityValue % 25) == 2 || (personalityValue % 25) == 3 || (personalityValue % 25) == 4 ||
+            (personalityValue % 25) == 6 || (personalityValue % 25) == 8 || (personalityValue % 25) == 9 || (personalityValue % 25) == 11 || 
+            (personalityValue % 25) == 13 || (personalityValue % 25) == 14 || (personalityValue % 25) == 19 || (personalityValue % 25) == 22 || (personalityValue % 25) == 24)
+                unownSpecies = species;
+            else
+                unownSpecies = SPECIES_TOXTRICITY_LOW_KEY;
+        }
+        else if (species == SPECIES_PYROAR)
+        {
+            if ((personalityValue % 0x100) >= 0xDF)
+                unownSpecies = species;
+            else
+                unownSpecies = SPECIES_PYROAR_FEMALE;
+        }
         else
-            unownSpecies = NUM_SPECIES + unownForm;  // Use one of the other Unown letters.
+        {
+            if ((personalityValue % 0x100) >= 0x7F)
+                unownSpecies = species;
+            else
+                if (species == SPECIES_HIPPOPOTAS)
+                    unownSpecies = SPECIES_HIPPOPOTAS_FEMALE;
+                else if (species == SPECIES_HIPPOWDON)
+                    unownSpecies = SPECIES_HIPPOWDON_FEMALE;
+                else if (species == SPECIES_UNFEZANT)
+                    unownSpecies = SPECIES_UNFEZANT_FEMALE;
+                else if (species == SPECIES_FRILLISH)
+                    unownSpecies = SPECIES_FRILLISH_FEMALE;
+                else if (species == SPECIES_JELLICENT)
+                    unownSpecies = SPECIES_JELLICENT_FEMALE;
+                else if (species == SPECIES_MEOWSTIC)
+                    unownSpecies = SPECIES_MEOWSTIC_FEMALE;
+                else
+                    unownSpecies = SPECIES_BASCULEGION_FEMALE;
+        }
 
         yOffset = gMonFrontPicCoords[unownSpecies].y_offset;
     }

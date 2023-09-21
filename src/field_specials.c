@@ -1461,6 +1461,14 @@ bool8 IsPokerusInParty(void)
     return TRUE;
 }
 
+bool8 IsPoisonInParty(void)
+{
+    if (!CheckPartyPoison(gPlayerParty, (1 << PARTY_SIZE) - 1))
+        return FALSE;
+
+    return TRUE;
+}
+
 // Task data for Task_ShakeCamera
 #define tHorizontalPan  data[0]
 #define tDelayCounter   data[1]
@@ -4269,4 +4277,9 @@ void SetPlayerGotFirstFans(void)
 u8 Script_TryGainNewFanFromCounter(void)
 {
     return TryGainNewFanFromCounter(gSpecialVar_0x8004);
+}
+
+void DaisyMassageServices(void)
+{
+    AdjustFriendship(&gPlayerParty[gSpecialVar_0x8004], FRIENDSHIP_EVENT_MASSAGE);
 }
