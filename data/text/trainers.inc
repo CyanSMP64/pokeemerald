@@ -47,8 +47,7 @@ Route102_Text_RickIntro:
 	.string "Is this a nuzlocke?$"
 
 Route102_Text_RickDefeated:
-	.string "You've killed me…\p"
-	.string "{PLAYER}: Good.$"
+	.string "I didn't play around the crit…$"
 
 Route102_Text_RickPostBattle:
 	.string "If you lock eyes with a TRAINER,\n"

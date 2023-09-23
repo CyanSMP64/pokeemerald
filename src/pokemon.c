@@ -9634,6 +9634,8 @@ u16 GetBattleBGM(void)
         {    
         case SPECIES_DIALGA:
         case SPECIES_PALKIA:
+        case SPECIES_DIALGA_ORIGIN:
+        case SPECIES_PALKIA_ORIGIN:
             return MUS_DP_VS_DIALGA_PALKIA;
         case SPECIES_ARTICUNO:
         case SPECIES_ZAPDOS:
@@ -9643,6 +9645,8 @@ u16 GetBattleBGM(void)
         case SPECIES_MOLTRES_GALARIAN:
             return MUS_RG_VS_LEGEND;
         case SPECIES_MEWTWO:
+        case SPECIES_MEWTWO_MEGA_X:
+        case SPECIES_MEWTWO_MEGA_Y:
             return MUS_RG_VS_MEWTWO;
         case SPECIES_MEW:
             return MUS_VS_MEW;
@@ -9661,16 +9665,27 @@ u16 GetBattleBGM(void)
         case SPECIES_REGIROCK:
         case SPECIES_REGICE:
         case SPECIES_REGISTEEL:
+        case SPECIES_REGIGIGAS:
+        case SPECIES_REGIDRAGO:
+        case SPECIES_REGIELEKI:
             return MUS_VS_REGI;
         case SPECIES_LATIAS:
         case SPECIES_LATIOS:
+        case SPECIES_LATIAS_MEGA:
+        case SPECIES_LATIOS_MEGA:
         case SPECIES_JIRACHI:
             return MUS_VS_WILD;
         case SPECIES_GROUDON:
         case SPECIES_KYOGRE:
         case SPECIES_RAYQUAZA:
+        case SPECIES_GROUDON_PRIMAL:
+        case SPECIES_KYOGRE_PRIMAL:
+        case SPECIES_RAYQUAZA_MEGA:
             return MUS_VS_KYOGRE_GROUDON;
         case SPECIES_DEOXYS:
+        case SPECIES_DEOXYS_ATTACK:
+        case SPECIES_DEOXYS_DEFENSE:
+        case SPECIES_DEOXYS_SPEED:
             return MUS_RG_VS_DEOXYS;
         default:
             return MUS_VS_WILD;
