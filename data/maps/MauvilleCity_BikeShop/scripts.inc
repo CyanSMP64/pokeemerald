@@ -36,11 +36,11 @@ MauvilleCity_BikeShop_EventScript_YesFar::
 
 MauvilleCity_BikeShop_EventScript_GetMachBike::
 	giveitem ITEM_MACH_BIKE
-	giveitem ITEM_ACRO_BIKE
-	goto MauvilleCity_BikeShop_EventScript_ComeBackToSwitchBikes
+	goto MauvilleCity_BikeShop_EventScript_GetAcroBike
 	end
 
 MauvilleCity_BikeShop_EventScript_GetAcroBike::
+	giveitem ITEM_ACRO_BIKE
 	goto MauvilleCity_BikeShop_EventScript_ComeBackToSwitchBikes
 	end
 

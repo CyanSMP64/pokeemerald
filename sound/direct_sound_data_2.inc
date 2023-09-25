@@ -949,31 +949,3 @@ DirectSoundWaveData_hg_plugsound_pro_rock_piano_60::
 	.align 2
 DirectSoundWaveData_hg_plugsound_pro_rock_piano_72::
 	.incbin "sound/direct_sound_samples/hg_plugsound_pro_rock_piano_72.bin"
-
-	.align 2
-DirectSoundWaveData_bw_sampletank_string_orchestra_60::
-	.incbin "sound/direct_sound_samples/bw_sampletank_string_orchestra_60.bin"
-
-	.align 2
-DirectSoundWaveData_bw_sampletank_string_orchestra_69::
-	.incbin "sound/direct_sound_samples/bw_sampletank_string_orchestra_69.bin"
-
-	.align 2
-DirectSoundWaveData_bw_sampletank_string_orchestra_77::
-	.incbin "sound/direct_sound_samples/bw_sampletank_string_orchestra_77.bin"
-
-	.align 2
-DirectSoundWaveData_bw_sampletank_string_orchestra_84::
-	.incbin "sound/direct_sound_samples/bw_sampletank_string_orchestra_84.bin"
-
-	.align 2
-DirectSoundWaveData_bw_plugsound_pro_violin_sus_64::
-	.incbin "sound/direct_sound_samples/bw_plugsound_pro_violin_sus_64.bin"
-
-	.align 2
-DirectSoundWaveData_bw_plugsound_pro_violin_sus_72::
-	.incbin "sound/direct_sound_samples/bw_plugsound_pro_violin_sus_72.bin"
-
-	.align 2
-DirectSoundWaveData_bw_plugsound_pro_violin_sus_81::
-	.incbin "sound/direct_sound_samples/bw_plugsound_pro_violin_sus_81.bin"

@@ -271,63 +271,63 @@ gSongTable::
 	song se_pike_curtain_close, 1, 1
 	song se_pike_curtain_open, 1, 1
 	song se_sudowoodo_shake, 1, 1
-	song mus_dp_vs_rival, 0, 0
-	song mus_dp_vs_galactic_commander, 0, 0
-	song mus_dp_vs_gym_leader, 0, 0
-	song mus_dp_vs_elite_four, 0, 0
-	song mus_dp_vs_galactic_boss, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
 	song mus_dp_vs_dialga_palkia, 0, 0
-	song mus_pl_vs_frontier_brain, 0, 0
-	song mus_hg_vs_trainer, 0, 0
-	song mus_hg_vs_gym_leader, 0, 0
-	song mus_hg_vs_rival, 0, 0
-	song mus_hg_vs_rocket, 0, 0
-	song mus_hg_vs_champion, 0, 0
-	song mus_hg_vs_wild, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
 	song mus_hg_vs_raikou, 0, 0
 	song mus_hg_vs_entei, 0, 0
 	song mus_hg_vs_suicune, 0, 0
 	song mus_hg_vs_lugia, 0, 0
 	song mus_hg_vs_ho_oh, 0, 0
-	song mus_bw_vs_cynthia, 0, 0
-	song mus_bw_vs_rival, 0, 0
-	song mus_bw_vs_plasma, 0, 0
-	song mus_bw_vs_n, 0, 0
-	song mus_bw_vs_gym_leader, 0, 0
-	song mus_bw_vs_elite_four, 0, 0
-	song mus_bw_vs_champion, 0, 0
-	song mus_bw_vs_n_final, 0, 0
-	song mus_bw_vs_ghetsis, 0, 0
-	song mus_b2_vs_ghetsis, 0, 0
-	song mus_b2_vs_gym_leader, 0, 0
-	song mus_b2_vs_iris, 0, 0
-	song mus_b2_vs_rival, 0, 0
-	song mus_b2_vs_colress, 0, 0
-	song mus_b2_vs_leader_sinnoh, 0, 0
-	song mus_b2_vs_champion_sinnoh, 0, 0
-	song mus_b2_vs_neo_plasma, 0, 0
-	song mus_k64_miracle, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
 	song se_dinkdonk, 1, 1
-	song mus_b2_vs_leader_kanto, 0, 0
-	song mus_b2_vs_champion_kanto, 0, 0
-	song mus_b2_vs_leader_johto, 0, 0
-	song mus_b2_vs_champion_johto, 0, 0
-	song mus_b2_vs_leader_hoenn, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
 	song mus_b2_vs_champion_hoenn, 0, 0
 	song mus_b2_victory_pwt, 0, 0
-	song mus_bw_victory_trainer, 0, 0
-	song mus_bw_victory_gym_leader, 0, 0
-	song mus_bw_victory_n_ghetsis, 0, 0
-	song mus_bw_victory_champion, 0, 0
-	song mus_bw_victory_plasma, 0, 0
-	song mus_dp_victory_trainer, 0, 0
-	song mus_dp_victory_galactic, 0, 0
-	song mus_dp_victory_gym_leader, 0, 0
-	song mus_dp_victory_elite_four, 0, 0
-	song mus_dp_victory_champion, 0, 0
-	song mus_pl_victory_frontier_brain, 0, 0
-	song mus_hg_victory_trainer, 0, 0
-	song mus_hg_victory_gym_leader, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
+	song dummy_song_header, 0, 0
 	song se_utvanish, 1, 1
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0

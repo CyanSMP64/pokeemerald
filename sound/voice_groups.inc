@@ -252,111 +252,14 @@
 .include "sound/voicegroups/voicegroup250.inc"
 .include "sound/voicegroups/voicegroup251.inc"
 .include "sound/voicegroups/voicegroup252.inc"
-.include "sound/voicegroups/voicegroup253.inc" @ bw - cynthia
 .include "sound/voicegroups/voicegroup254.inc"
-.include "sound/voicegroups/voicegroup255.inc"
-.include "sound/voicegroups/voicegroup256.inc"
 .include "sound/voicegroups/voicegroup257.inc"
-.include "sound/voicegroups/voicegroup258.inc" @ bw - rival
-.include "sound/voicegroups/voicegroup259.inc"
-.include "sound/voicegroups/voicegroup260.inc"
-.include "sound/voicegroups/voicegroup261.inc"
-.include "sound/voicegroups/voicegroup262.inc" @ bw - plasma
-.include "sound/voicegroups/voicegroup263.inc"
-.include "sound/voicegroups/voicegroup264.inc"
-.include "sound/voicegroups/voicegroup265.inc"
-.include "sound/voicegroups/voicegroup266.inc" @ bw - n
-.include "sound/voicegroups/voicegroup267.inc"
-.include "sound/voicegroups/voicegroup268.inc"
-.include "sound/voicegroups/voicegroup269.inc"
-.include "sound/voicegroups/voicegroup270.inc" @ bw - gym leader
-.include "sound/voicegroups/voicegroup271.inc"
-.include "sound/voicegroups/voicegroup272.inc"
-.include "sound/voicegroups/voicegroup273.inc"
-.include "sound/voicegroups/voicegroup274.inc"
-.include "sound/voicegroups/voicegroup275.inc"
-.include "sound/voicegroups/voicegroup276.inc" @ bw - elite four
 .include "sound/voicegroups/voicegroup277.inc"
-.include "sound/voicegroups/voicegroup278.inc"
-.include "sound/voicegroups/voicegroup279.inc"
-.include "sound/voicegroups/voicegroup280.inc" @ bw - champion
-.include "sound/voicegroups/voicegroup281.inc"
-.include "sound/voicegroups/voicegroup282.inc"
-.include "sound/voicegroups/voicegroup283.inc"
-.include "sound/voicegroups/voicegroup284.inc" @ bw - n final
-.include "sound/voicegroups/voicegroup285.inc"
-.include "sound/voicegroups/voicegroup286.inc"
-.include "sound/voicegroups/voicegroup287.inc"
-.include "sound/voicegroups/voicegroup288.inc" @ bw - ghetsis
-.include "sound/voicegroups/voicegroup289.inc"
-.include "sound/voicegroups/voicegroup290.inc" @ bw2 - ghetsis
-.include "sound/voicegroups/voicegroup291.inc"
-.include "sound/voicegroups/voicegroup292.inc"
-.include "sound/voicegroups/voicegroup293.inc"
-.include "sound/voicegroups/voicegroup294.inc"
-.include "sound/voicegroups/voicegroup295.inc"
-.include "sound/voicegroups/voicegroup296.inc" @ bw2 - gym leader
-.include "sound/voicegroups/voicegroup297.inc"
-.include "sound/voicegroups/voicegroup298.inc"
-.include "sound/voicegroups/voicegroup299.inc" @ bw2 - iris
-.include "sound/voicegroups/voicegroup300.inc"
-.include "sound/voicegroups/voicegroup301.inc"
-.include "sound/voicegroups/voicegroup302.inc"
-.include "sound/voicegroups/voicegroup303.inc"
-.include "sound/voicegroups/voicegroup304.inc"
-.include "sound/voicegroups/voicegroup305.inc" @ bw2 - rival
-.include "sound/voicegroups/voicegroup306.inc"
-.include "sound/voicegroups/voicegroup307.inc"
-.include "sound/voicegroups/voicegroup308.inc"
-.include "sound/voicegroups/voicegroup309.inc" @ bw2 - colress
-.include "sound/voicegroups/voicegroup310.inc"
-.include "sound/voicegroups/voicegroup311.inc"
-.include "sound/voicegroups/voicegroup312.inc"
-.include "sound/voicegroups/voicegroup313.inc"
-.include "sound/voicegroups/voicegroup314.inc" @ bw2 - sinnoh leader
 .include "sound/voicegroups/voicegroup315.inc"
-.include "sound/voicegroups/voicegroup316.inc"
-.include "sound/voicegroups/voicegroup317.inc"
-.include "sound/voicegroups/voicegroup318.inc" @ bw2 - sinnoh champion
-.include "sound/voicegroups/voicegroup319.inc"
-.include "sound/voicegroups/voicegroup320.inc"
-.include "sound/voicegroups/voicegroup321.inc"
-.include "sound/voicegroups/voicegroup322.inc" @ bw2 - neo plasma
-.include "sound/voicegroups/voicegroup323.inc"
-.include "sound/voicegroups/voicegroup324.inc" @ kirby 64
-.include "sound/voicegroups/voicegroup325.inc"
-.include "sound/voicegroups/voicegroup326.inc"
-.include "sound/voicegroups/voicegroup327.inc"
-.include "sound/voicegroups/voicegroup328.inc"
-.include "sound/voicegroups/voicegroup329.inc"
-.include "sound/voicegroups/voicegroup330.inc"
-.include "sound/voicegroups/voicegroup331.inc"
-.include "sound/voicegroups/voicegroup332.inc"
-.include "sound/voicegroups/voicegroup333.inc"
-.include "sound/voicegroups/voicegroup334.inc" @ bw2 - kanto leader
 .include "sound/voicegroups/voicegroup335.inc"
-.include "sound/voicegroups/voicegroup336.inc"
-.include "sound/voicegroups/voicegroup337.inc" @ bw2 - kanto champion
-.include "sound/voicegroups/voicegroup338.inc"
-.include "sound/voicegroups/voicegroup339.inc"
-.include "sound/voicegroups/voicegroup340.inc" @ bw2 - johto leader
-.include "sound/voicegroups/voicegroup341.inc"
-.include "sound/voicegroups/voicegroup342.inc"
-.include "sound/voicegroups/voicegroup343.inc"
-.include "sound/voicegroups/voicegroup344.inc" @ bw2 - johto champion
-.include "sound/voicegroups/voicegroup345.inc"
-.include "sound/voicegroups/voicegroup346.inc" @ bw2 - hoenn leader
-.include "sound/voicegroups/voicegroup347.inc"
-.include "sound/voicegroups/voicegroup348.inc"
 .include "sound/voicegroups/voicegroup349.inc" @ bw2 - hoenn champion
 .include "sound/voicegroups/voicegroup350.inc"
 .include "sound/voicegroups/voicegroup351.inc" @ bw2 - pwt victory
 .include "sound/voicegroups/voicegroup352.inc"
 .include "sound/voicegroups/voicegroup353.inc"
-.include "sound/voicegroups/voicegroup354.inc" @ bw - trainer/gym leader victory
-.include "sound/voicegroups/voicegroup355.inc"
-.include "sound/voicegroups/voicegroup356.inc"
-.include "sound/voicegroups/voicegroup357.inc"
-.include "sound/voicegroups/voicegroup358.inc" @ bw - plasma victory
-.include "sound/voicegroups/voicegroup359.inc"
 .include "sound/voicegroups/voicegroup360.inc"

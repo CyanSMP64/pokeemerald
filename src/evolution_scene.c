@@ -673,7 +673,7 @@ static void Task_EvolutionScene(u8 taskId)
         }
         break;
     case EVOSTATE_INTRO_SOUND:
-        if (EvoScene_IsMonAnimFinished(sEvoStructPtr->preEvoSpriteId))
+        if (IsCryFinished())
         {
             PlaySE(MUS_EVOLUTION_INTRO);
             gTasks[taskId].tState++;
@@ -1676,7 +1676,7 @@ static void RestoreBgAfterAnim(void)
 
 static void EvoScene_DoMonAnimAndCry(u8 monSpriteId, u16 speciesId)
 {
-    DoMonFrontSpriteAnimation(&gSprites[monSpriteId], speciesId, FALSE, 0);
+    DoMonFrontSpriteAnimation(&gSprites[monSpriteId], speciesId, FALSE, 0 | SKIP_FRONT_ANIM);
 }
 
 static bool32 EvoScene_IsMonAnimFinished(u8 monSpriteId)
