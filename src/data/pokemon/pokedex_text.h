@@ -1,5 +1,5 @@
 const u8 gDummyPokedexText[] = _(
-    "");
+    "Submit a custom entry for this Pokémon!");
 
 const u8 gBulbasaurPokedexText[] = _(
     "BULBASAUR can be seen napping in bright\n"

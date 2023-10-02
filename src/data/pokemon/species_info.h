@@ -2,38 +2,6 @@
 // 255 (MON_GENDERLESS) is reserved for genderless Pokémon.
 #define PERCENT_FEMALE(percent) min(254, ((percent * 255) / 100))
 
-#define OLD_UNOWN_SPECIES_INFO                                              \
-    {                                                                       \
-        .baseHP = 50,                                                       \
-        .baseAttack = 150,                                                  \
-        .baseDefense = 50,                                                  \
-        .baseSpeed = 150,                                                   \
-        .baseSpAttack = 150,                                                \
-        .baseSpDefense = 50,                                                \
-        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
-        .catchRate = 3,                                                     \
-        .expYield = 1,                                                      \
-        .evYield_HP = 2,                                                    \
-        .evYield_Attack = 2,                                                \
-        .evYield_Defense = 2,                                               \
-        .evYield_Speed = 2,                                                 \
-        .evYield_SpAttack = 2,                                              \
-        .evYield_SpDefense = 2,                                             \
-        .itemCommon = ITEM_NONE,                                            \
-        .itemRare   = ITEM_NONE,                                            \
-        .genderRatio = MON_GENDERLESS,                                      \
-        .eggCycles = 120,                                                   \
-        .friendship = 0,                                                    \
-        .growthRate = GROWTH_MEDIUM_FAST,                                   \
-        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
-        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
-        .safariZoneFleeRate = 0,                                            \
-        .bodyColor = BODY_COLOR_BLACK,                                      \
-        .noFlip = FALSE,                                                    \
-    }
-
-
-
 
 // exp yield for every pokemon has had 17 subtracted from them to
 // balance exp in kaizo runs
@@ -2902,22 +2870,6 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
-#define TAUROS_MISC_INFO                                      \
-        .baseHP        = 75,                                  \
-        .baseAttack    = 100,                                 \
-        .baseDefense   = 95,                                  \
-        .baseSpeed     = 110,                                 \
-        .baseSpAttack  = 40,                                  \
-        .baseSpDefense = 70,                                  \
-        .catchRate = 45,                                      \
-        .expYield = 155,                                      \
-        .genderRatio = MON_MALE,                              \
-        .eggCycles = 20,                                      \
-        .friendship = STANDARD_FRIENDSHIP,                    \
-        .growthRate = GROWTH_SLOW,                            \
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD},     \
-        .noFlip = FALSE
-
     [SPECIES_TAUROS] =
     {
         .baseHP        = 75,
@@ -2939,33 +2891,6 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .abilities = {ABILITY_INTIMIDATE, 0},
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
-    },
-
-    [SPECIES_TAUROS_PALDEAN] =
-    {
-        .types = { TYPE_FIGHTING, TYPE_FIGHTING },
-        .evYield_Attack    = 2,
-        .abilities = {ABILITY_INTIMIDATE, 0},
-        .bodyColor = BODY_COLOR_BROWN,
-        TAUROS_MISC_INFO
-    },
-
-    [SPECIES_TAUROS_PALDEAN_BLAZE_BREED] =
-    {
-        .types = { TYPE_FIGHTING, TYPE_FIRE },
-        .evYield_Attack    = 2,
-        .abilities = {ABILITY_INTIMIDATE, 0},
-        .bodyColor = BODY_COLOR_BROWN,
-        TAUROS_MISC_INFO
-    },
-
-    [SPECIES_TAUROS_PALDEAN_AQUA_BREED] =
-    {
-        .types = { TYPE_FIGHTING, TYPE_WATER },
-        .evYield_Attack    = 2,
-        .abilities = {ABILITY_INTIMIDATE, 0},
-        .bodyColor = BODY_COLOR_BROWN,
-        TAUROS_MISC_INFO
     },
 
     [SPECIES_MAGIKARP] =
@@ -4419,23 +4344,6 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
-#define WOOPER_MISC_INFO                                                        \
-        .baseHP        = 55,                                                    \
-        .baseAttack    = 45,                                                    \
-        .baseDefense   = 45,                                                    \
-        .baseSpeed     = 15,                                                    \
-        .baseSpAttack  = 25,                                                    \
-        .baseSpDefense = 25,                                                    \
-        .catchRate = 255,                                                       \
-        .expYield = 25,                                                         \
-        .evYield_HP        = 1,                                                 \
-        .genderRatio = PERCENT_FEMALE(50),                                      \
-        .eggCycles = 20,                                                        \
-        .friendship = STANDARD_FRIENDSHIP,                                      \
-        .growthRate = GROWTH_MEDIUM_FAST,                                       \
-        .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_FIELD},                     \
-        .noFlip = FALSE
-
     [SPECIES_WOOPER] =
     {
         .baseHP        = 55,
@@ -4456,14 +4364,6 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .abilities = {ABILITY_DAMP, ABILITY_WATER_ABSORB},
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
-    },
-
-    [SPECIES_WOOPER_PALDEAN] =
-    {
-        .types = { TYPE_POISON, TYPE_GROUND },
-        .abilities = {ABILITY_POISON_POINT, ABILITY_WATER_ABSORB},
-        .bodyColor = BODY_COLOR_BROWN,
-        WOOPER_MISC_INFO
     },
 
     [SPECIES_QUAGSIRE] =
@@ -5746,55 +5646,755 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_OLD_UNOWN_B] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_B] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_C] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_C] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_D] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_D] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_E] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_E] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_F] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_F] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_G] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_G] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_H] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_H] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_I] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_I] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_J] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_J] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_K] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_K] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_L] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_L] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_M] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_M] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_N] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_N] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_O] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_O] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_P] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_P] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_Q] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_Q] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_R] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_R] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_S] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_S] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_T] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_T] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_U] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_U] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_V] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_V] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_W] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_W] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_X] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_X] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_Y] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_Y] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
-    [SPECIES_OLD_UNOWN_Z] = OLD_UNOWN_SPECIES_INFO,
+    [SPECIES_OLD_UNOWN_Z] = 
+    {                                                                       \
+        .baseHP = 50,                                                       \
+        .baseAttack = 150,                                                  \
+        .baseDefense = 50,                                                  \
+        .baseSpeed = 150,                                                   \
+        .baseSpAttack = 150,                                                \
+        .baseSpDefense = 50,                                                \
+        .types = { TYPE_NORMAL, TYPE_NORMAL},                               \
+        .catchRate = 3,                                                     \
+        .expYield = 1,                                                      \
+        .evYield_HP = 2,                                                    \
+        .evYield_Attack = 2,                                                \
+        .evYield_Defense = 2,                                               \
+        .evYield_Speed = 2,                                                 \
+        .evYield_SpAttack = 2,                                              \
+        .evYield_SpDefense = 2,                                             \
+        .itemCommon = ITEM_NONE,                                            \
+        .itemRare   = ITEM_NONE,                                            \
+        .genderRatio = MON_GENDERLESS,                                      \
+        .eggCycles = 120,                                                   \
+        .friendship = 0,                                                    \
+        .growthRate = GROWTH_MEDIUM_FAST,                                   \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED, },   \
+        .abilities = {ABILITY_NONE, ABILITY_NONE},                          \
+        .safariZoneFleeRate = 0,                                            \
+        .bodyColor = BODY_COLOR_BLACK,                                      \
+        .noFlip = FALSE,                                                    \
+    },
 
     [SPECIES_TREECKO] =
     {
@@ -20621,18 +21221,6 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
-#define OINKOLOGNE_MISC_INFO                                \
-        .types = { TYPE_NORMAL, TYPE_NORMAL },              \
-        .catchRate = 100,                                   \
-        .expYield = 154,                                    \
-        .evYield_HP = 2,                                    \
-        .eggCycles = 15,                                    \
-        .friendship = 50,                                   \
-        .growthRate = GROWTH_MEDIUM_FAST,                   \
-        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD},   \
-        .bodyColor = BODY_COLOR_GRAY,                       \
-        .noFlip = FALSE
-
     [SPECIES_OINKOLOGNE] =
     {
         .baseHP        = 110,
@@ -20643,7 +21231,16 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpDefense = 80,
         .genderRatio = PERCENT_FEMALE(50),
         .abilities = {1, 0},
-        OINKOLOGNE_MISC_INFO,
+        .types = { TYPE_NORMAL, TYPE_NORMAL },              \
+        .catchRate = 100,                                   \
+        .expYield = 154,                                    \
+        .evYield_HP = 2,                                    \
+        .eggCycles = 15,                                    \
+        .friendship = 50,                                   \
+        .growthRate = GROWTH_MEDIUM_FAST,                   \
+        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD},   \
+        .bodyColor = BODY_COLOR_GRAY,                       \
+        .noFlip = FALSE,
     },
 
     [SPECIES_TAROUNTULA] =
@@ -20822,7 +21419,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
-#define MAUSHOLD_SPECIES_INFO \
+    [SPECIES_MAUSHOLD] = 
     { \
         .baseHP        = 74, \
         .baseAttack    = 75, \
@@ -20842,9 +21439,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .abilities = {1, 0}, \
         .bodyColor = BODY_COLOR_WHITE, \
         .noFlip = FALSE, \
-    }
-
-    [SPECIES_MAUSHOLD] = MAUSHOLD_SPECIES_INFO,
+    },
 
     [SPECIES_FIDOUGH] =
     {
@@ -20956,7 +21551,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
-#define SQUAWKABILLY_MISC_INFO                                  \
+    [SPECIES_SQUAWKABILLY] =
+    {
+        .abilities = {ABILITY_INTIMIDATE, ABILITY_HUSTLE},
+        .bodyColor = BODY_COLOR_GREEN,
         .baseHP        = 82,                                    \
         .baseAttack    = 96,                                    \
         .baseDefense   = 51,                                    \
@@ -20972,13 +21570,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = 50,                                       \
         .growthRate = GROWTH_ERRATIC,                           \
         .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING},     \
-        .noFlip = FALSE
-
-    [SPECIES_SQUAWKABILLY] =
-    {
-        .abilities = {ABILITY_INTIMIDATE, ABILITY_HUSTLE},
-        .bodyColor = BODY_COLOR_GREEN,
-        SQUAWKABILLY_MISC_INFO,
+        .noFlip = FALSE,
     },
 
     [SPECIES_NACLI] =
@@ -21685,7 +22277,13 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
-#define PALAFIN_MISC_INFO                                   \
+    [SPECIES_PALAFIN] =
+    {
+        .baseAttack    = 70,
+        .baseDefense   = 72,
+        .baseSpAttack  = 53,
+        .baseSpDefense = 62,
+        .expYield = 143,
         .baseHP        = 100,                               \
         .baseSpeed     = 100,                               \
         .types = { TYPE_WATER, TYPE_WATER },                \
@@ -21698,26 +22296,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_WATER_2}, \
         .abilities = {1, ABILITY_NONE},  \
         .bodyColor = BODY_COLOR_BLUE,                       \
-        .noFlip = FALSE
-
-    [SPECIES_PALAFIN] =
-    {
-        .baseAttack    = 70,
-        .baseDefense   = 72,
-        .baseSpAttack  = 53,
-        .baseSpDefense = 62,
-        .expYield = 143,
-        PALAFIN_MISC_INFO,
-    },
-
-    [SPECIES_PALAFIN_HERO] =
-    {
-        .baseAttack    = 160,
-        .baseDefense   = 97,
-        .baseSpAttack  = 106,
-        .baseSpDefense = 100,
-        .expYield = 211,
-        PALAFIN_MISC_INFO,
+        .noFlip = FALSE,
     },
 
     [SPECIES_VAROOM] =
@@ -22006,7 +22585,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
-#define TATSUGIRI_SPECIES_INFO(color) \
+    [SPECIES_TATSUGIRI] = 
     { \
         .baseHP        = 68, \
         .baseAttack    = 50, \
@@ -22024,11 +22603,9 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .growthRate = GROWTH_MEDIUM_SLOW, \
         .eggGroups = { EGG_GROUP_WATER_2, EGG_GROUP_WATER_2}, \
         .abilities = {1, ABILITY_NONE}, \
-        .bodyColor = color, \
+        .bodyColor = BODY_COLOR_PINK, \
         .noFlip = FALSE, \
-    }
-
-    [SPECIES_TATSUGIRI] = TATSUGIRI_SPECIES_INFO(BODY_COLOR_PINK),
+    },
 
     [SPECIES_ANNIHILAPE] =
     {
@@ -22096,7 +22673,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
-#define DUDUNSPARCE_SPECIES_INFO \
+    [SPECIES_DUDUNSPARCE] = 
     { \
         .baseHP        = 125, \
         .baseAttack    = 100, \
@@ -22116,9 +22693,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .abilities = {ABILITY_SERENE_GRACE, ABILITY_RUN_AWAY}, \
         .bodyColor = BODY_COLOR_YELLOW, \
         .noFlip = FALSE, \
-    }
-
-    [SPECIES_DUDUNSPARCE] = DUDUNSPARCE_SPECIES_INFO,
+    },
 
     [SPECIES_KINGAMBIT] =
     {
@@ -22474,18 +23049,6 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
-#define GIMMIGHOUL_MISC_INFO \
-        .types = { TYPE_GHOST, TYPE_GHOST }, \
-        .catchRate = 45, \
-        .expYield = 43, \
-        .evYield_SpAttack = 1, \
-        .genderRatio = MON_GENDERLESS, \
-        .eggCycles = 50, \
-        .friendship = 50, \
-        .growthRate = GROWTH_SLOW, \
-        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED}, \
-        .noFlip = FALSE
-
     [SPECIES_GIMMIGHOUL] =
     {
         .baseHP        = 45, \
@@ -22496,7 +23059,16 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpDefense = 70, \
         .abilities = {1, ABILITY_NONE}, \
         .bodyColor = BODY_COLOR_BROWN, \
-        GIMMIGHOUL_MISC_INFO
+        .types = { TYPE_GHOST, TYPE_GHOST }, \
+        .catchRate = 45, \
+        .expYield = 43, \
+        .evYield_SpAttack = 1, \
+        .genderRatio = MON_GENDERLESS, \
+        .eggCycles = 50, \
+        .friendship = 50, \
+        .growthRate = GROWTH_SLOW, \
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED}, \
+        .noFlip = FALSE
     },
 
     [SPECIES_GHOLDENGO] =
@@ -25039,6 +25611,94 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
+    [SPECIES_TAUROS_PALDEAN] =
+    {
+        .types = { TYPE_FIGHTING, TYPE_FIGHTING },
+        .evYield_Attack    = 2,
+        .abilities = {ABILITY_INTIMIDATE, 0},
+        .bodyColor = BODY_COLOR_BROWN,
+        .baseHP        = 75,                                  \
+        .baseAttack    = 100,                                 \
+        .baseDefense   = 95,                                  \
+        .baseSpeed     = 110,                                 \
+        .baseSpAttack  = 40,                                  \
+        .baseSpDefense = 70,                                  \
+        .catchRate = 45,                                      \
+        .expYield = 155,                                      \
+        .genderRatio = MON_MALE,                              \
+        .eggCycles = 20,                                      \
+        .friendship = STANDARD_FRIENDSHIP,                    \
+        .growthRate = GROWTH_SLOW,                            \
+        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD},     \
+        .noFlip = FALSE,
+    },
+
+    [SPECIES_WOOPER_PALDEAN] =
+    {
+        .types = { TYPE_POISON, TYPE_GROUND },
+        .abilities = {ABILITY_POISON_POINT, ABILITY_WATER_ABSORB},
+        .bodyColor = BODY_COLOR_BROWN,
+        .baseHP        = 55,                                                    \
+        .baseAttack    = 45,                                                    \
+        .baseDefense   = 45,                                                    \
+        .baseSpeed     = 15,                                                    \
+        .baseSpAttack  = 25,                                                    \
+        .baseSpDefense = 25,                                                    \
+        .catchRate = 255,                                                       \
+        .expYield = 25,                                                         \
+        .evYield_HP        = 1,                                                 \
+        .genderRatio = PERCENT_FEMALE(50),                                      \
+        .eggCycles = 20,                                                        \
+        .friendship = STANDARD_FRIENDSHIP,                                      \
+        .growthRate = GROWTH_MEDIUM_FAST,                                       \
+        .eggGroups = { EGG_GROUP_WATER_1, EGG_GROUP_FIELD},                     \
+        .noFlip = FALSE,
+    },
+
+    [SPECIES_TAUROS_PALDEAN_BLAZE_BREED] =
+    {
+        .types = { TYPE_FIGHTING, TYPE_FIRE },
+        .evYield_Attack    = 2,
+        .abilities = {ABILITY_INTIMIDATE, 0},
+        .bodyColor = BODY_COLOR_BROWN,
+        .baseHP        = 75,                                  \
+        .baseAttack    = 100,                                 \
+        .baseDefense   = 95,                                  \
+        .baseSpeed     = 110,                                 \
+        .baseSpAttack  = 40,                                  \
+        .baseSpDefense = 70,                                  \
+        .catchRate = 45,                                      \
+        .expYield = 155,                                      \
+        .genderRatio = MON_MALE,                              \
+        .eggCycles = 20,                                      \
+        .friendship = STANDARD_FRIENDSHIP,                    \
+        .growthRate = GROWTH_SLOW,                            \
+        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD},     \
+        .noFlip = FALSE,
+    },
+
+    [SPECIES_TAUROS_PALDEAN_AQUA_BREED] =
+    {
+        .types = { TYPE_FIGHTING, TYPE_WATER },
+        .evYield_Attack    = 2,
+        .abilities = {ABILITY_INTIMIDATE, 0},
+        .bodyColor = BODY_COLOR_BROWN,
+        .baseHP        = 75,                                  \
+        .baseAttack    = 100,                                 \
+        .baseDefense   = 95,                                  \
+        .baseSpeed     = 110,                                 \
+        .baseSpAttack  = 40,                                  \
+        .baseSpDefense = 70,                                  \
+        .catchRate = 45,                                      \
+        .expYield = 155,                                      \
+        .genderRatio = MON_MALE,                              \
+        .eggCycles = 20,                                      \
+        .friendship = STANDARD_FRIENDSHIP,                    \
+        .growthRate = GROWTH_SLOW,                            \
+        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD},     \
+        .noFlip = FALSE,
+    },
+
     [SPECIES_CASTFORM_SUNNY] = 
     {
         .baseHP        = 70,
@@ -25584,6 +26244,28 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED},
         .abilities = {ABILITY_INTIMIDATE, ABILITY_NONE},
         .bodyColor = BODY_COLOR_BROWN,
+        .noFlip = FALSE,
+    },
+
+    [SPECIES_ENAMORUS_THERIAN] =
+    {
+        .baseHP        = 74,
+        .baseAttack    = 115,
+        .baseDefense   = 110,
+        .baseSpeed     = 46,
+        .baseSpAttack  = 135,
+        .baseSpDefense = 100,
+        .types = { TYPE_FAIRY, TYPE_FLYING},
+        .catchRate = 3,
+        .expYield = 253,
+        .evYield_SpAttack  = 3,
+        .genderRatio = MON_FEMALE,
+        .eggCycles = 120,
+        .friendship = 90,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED},
+        .abilities = {1, ABILITY_NONE},
+        .bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
     },
 
@@ -26168,25 +26850,25 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_ENAMORUS_THERIAN] =
+    [SPECIES_PALAFIN_HERO] =
     {
-        .baseHP        = 74,
-        .baseAttack    = 115,
-        .baseDefense   = 110,
-        .baseSpeed     = 46,
-        .baseSpAttack  = 135,
-        .baseSpDefense = 100,
-        .types = { TYPE_FAIRY, TYPE_FLYING},
-        .catchRate = 3,
-        .expYield = 253,
-        .evYield_SpAttack  = 3,
-        .genderRatio = MON_FEMALE,
-        .eggCycles = 120,
-        .friendship = 90,
-        .growthRate = GROWTH_SLOW,
-        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED},
-        .abilities = {1, ABILITY_NONE},
-        .bodyColor = BODY_COLOR_PINK,
+        .baseAttack    = 160,
+        .baseDefense   = 97,
+        .baseSpAttack  = 106,
+        .baseSpDefense = 87,
+        .expYield = 211,
+        .baseHP        = 100,                               \
+        .baseSpeed     = 100,                               \
+        .types = { TYPE_WATER, TYPE_WATER },                \
+        .catchRate = 45,                                    \
+        .evYield_HP = 2,                                    \
+        .genderRatio = PERCENT_FEMALE(50),                  \
+        .eggCycles = 40,                                    \
+        .friendship = 50,                                   \
+        .growthRate = GROWTH_SLOW,                          \
+        .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_WATER_2}, \
+        .abilities = {1, ABILITY_NONE},  \
+        .bodyColor = BODY_COLOR_BLUE,                       \
         .noFlip = FALSE,
     },
 };

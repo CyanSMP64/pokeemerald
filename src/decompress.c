@@ -226,6 +226,8 @@ void LoadSpecialPokePic(const struct CompressedSpriteSheet *src, void *dest, s32
                     i = SPECIES_JELLICENT_FEMALE;
                 else if (species == SPECIES_MEOWSTIC)
                     i = SPECIES_MEOWSTIC_FEMALE;
+                else if (species == SPECIES_OINKOLOGNE)
+                    i = SPECIES_OINKOLOGNE_FEMALE;
                 else
                     i = SPECIES_BASCULEGION_FEMALE;
         }
@@ -584,6 +586,8 @@ void LoadSpecialPokePic_2(const struct CompressedSpriteSheet *src, void *dest, s
                     i = SPECIES_JELLICENT_FEMALE;
                 else if (species == SPECIES_MEOWSTIC)
                     i = SPECIES_MEOWSTIC_FEMALE;
+                else if (species == SPECIES_OINKOLOGNE)
+                    i = SPECIES_OINKOLOGNE_FEMALE;
                 else
                     i = SPECIES_BASCULEGION_FEMALE;
         }
@@ -778,6 +782,8 @@ void LoadSpecialPokePic_DontHandleDeoxys(const struct CompressedSpriteSheet *src
                     i = SPECIES_JELLICENT_FEMALE;
                 else if (species == SPECIES_MEOWSTIC)
                     i = SPECIES_MEOWSTIC_FEMALE;
+                else if (species == SPECIES_OINKOLOGNE)
+                    i = SPECIES_OINKOLOGNE_FEMALE;
                 else
                     i = SPECIES_BASCULEGION_FEMALE;
         }

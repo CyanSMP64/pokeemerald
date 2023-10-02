@@ -2756,8 +2756,8 @@ u8 CreateMonIcon(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_FRILLISH_FEMALE];
     if (species == SPECIES_BASCULEGION && (personality % 0x100) < 0x7F)
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_BASCULEGION_FEMALE];
-    //if (species == SPECIES_OINKOLOGNE && (personality % 0x100) < 0x7F)
-    //    iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_OINKOLOGNE_FEMALE];
+    if (species == SPECIES_OINKOLOGNE && (personality % 0x100) < 0x7F)
+        iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_OINKOLOGNE_FEMALE];
     if (species == SPECIES_DEERLING && (personality >> 8) % 4 == 2)
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_DEERLING_AUTUMN];
     if (species == SPECIES_DEERLING && (personality >> 8) % 4 == 3)
@@ -2949,6 +2949,8 @@ u16 GetIconSpecies(u16 species, u32 personality)
                     letter = SPECIES_JELLICENT_FEMALE;
                 else if (species == SPECIES_MEOWSTIC)
                     letter = SPECIES_MEOWSTIC_FEMALE;
+                else if (species == SPECIES_OINKOLOGNE)
+                    letter = SPECIES_OINKOLOGNE_FEMALE;
                 else
                     letter = SPECIES_BASCULEGION_FEMALE;
         }
