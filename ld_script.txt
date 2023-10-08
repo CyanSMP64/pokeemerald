@@ -100,21 +100,27 @@ SECTIONS {
     {
         src/battle_controllers.o(.text);
         src/decompress.o(.text);
+    } =0
+
+    .text_3 0x08036760 :
+    ALIGN(4)
+    {
         src/battle_main.o(.text);
         src/battle_util.o(.text);
         src/battle_script_commands.o(.text);
-        src/battle_util2.o(.text);
         src/battle_controller_player.o(.text);
         src/battle_gfx_sfx_util.o(.text);
         src/battle_controller_link_opponent.o(.text);
         src/pokeball.o(.text);
         src/overworld.o(.text);
+        src/task.o(.text);
     } =0
 
-    .text_3 0x08067a74 :
+    .text_4 0x08067a74 :
     ALIGN(4)
     {
         src/pokemon.o(.text);
+        src/battle_util2.o(.text);
         src/battle_controller_opponent.o(.text);
         src/battle_ai_switch_items.o(.text);
         src/digit_obj_util.o(.text);
@@ -148,7 +154,6 @@ SECTIONS {
         src/sound.o(.text);
         src/battle_anim.o(.text);
         src/battle_anim_mons.o(.text);
-        src/task.o(.text);
         src/reshow_battle_screen.o(.text);
         src/battle_anim_status_effects.o(.text);
         src/field_weather.o(.text);
@@ -158,7 +163,7 @@ SECTIONS {
         src/pokemon_icon.o(.text);
     } =0
 
-    .text_4 0x080b05f0 :
+    .text_5 0x080b05f0 :
     ALIGN(4)
     {
         src/battle_setup.o(.text);
@@ -250,7 +255,7 @@ SECTIONS {
         src/coins.o(.text);
     } =0
 
-    .text_5 0x0813d9b0 :
+    .text_6 0x0813d9b0 :
     ALIGN(4)
     {
         src/evolution_scene.o(.text);
@@ -673,12 +678,30 @@ SECTIONS {
         src/battle_dome.o(.rodata);
         src/battle_palace.o(.rodata);
         src/match_call.o(.rodata);
+        src/rotating_tile_puzzle.o(.rodata);
     } =0
 
     .rodata_2 0x0860f074 :
     ALIGN(4)
     {
         src/menu.o(.rodata);
+        src/battle_factory_screen.o(.rodata);
+        src/apprentice.o(.rodata);
+        src/frontier_util.o(.rodata);
+        src/battle_arena.o(.rodata);
+        src/battle_factory.o(.rodata);
+        src/battle_pike.o(.rodata);
+        src/battle_pyramid.o(.rodata);
+        src/item_menu.o(.rodata);
+        src/list_menu.o(.rodata);
+        src/save_location.o(.rodata);
+        src/item_icon.o(.rodata);
+    } =0
+
+    .rodata_3 0x0861500c :
+    ALIGN(4)
+    {
+        src/party_menu.o(.rodata);
         src/pokedex_cry_screen.o(.rodata);
         src/credits.o(.rodata);
         src/intro_credits_graphics.o(.rodata);
@@ -690,19 +713,6 @@ SECTIONS {
         src/contest_painting.o(.rodata);
         src/intro.o(.rodata);
         src/battle_message.o(.rodata);
-        src/battle_factory_screen.o(.rodata);
-        src/apprentice.o(.rodata);
-        src/frontier_util.o(.rodata);
-        src/battle_arena.o(.rodata);
-        src/battle_factory.o(.rodata);
-        src/battle_pike.o(.rodata);
-        src/rotating_tile_puzzle.o(.rodata);
-        src/battle_pyramid.o(.rodata);
-        src/item_menu.o(.rodata);
-        src/list_menu.o(.rodata);
-        src/save_location.o(.rodata);
-        src/item_icon.o(.rodata);
-        src/party_menu.o(.rodata);
         src/battle_tent.o(.rodata);
         src/braille.o(.rodata);
         src/multiboot.o(.rodata);

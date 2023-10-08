@@ -774,6 +774,13 @@ int main(int argc, char ** argv)
 /******************************************************************************
  * 
  * List of ROM addresses read by IronMON Tracker:
+ * (use `make syms` to generate .sym file)
+ * 
+ * src/battle_main.o(.text)                             - 0x08036760
+ *         BattleIntroDrawPartySummaryScreens           - 0x0803af80
+ *         BattleIntroOpponent1SendsOutMonAnimation     - 0x0803b25c
+ *         HandleTurnActionSelectionState               - 0x0803be74
+ *         ReturnFromBattleToOverworld                  - 0x0803df70
  * 
  * src/pokemon.o(.text)                                 - 0x08067a74
  *         GetEvolutionTargetSpecies                    - 0x0806d098
@@ -839,5 +846,8 @@ int main(int argc, char ** argv)
  *         gBattleMoves                                 - 0x0831c898
  *         gExperienceTables                            - 0x0831f72c        // changed the addresses internally
  *         gSpeciesInfo                                 - 0x083203cc        // changed the addresses internally
+ * 
+ * src/party_menu.o(.rodata)                            - 0x0861500c
+ *         sTMHMMoves                                   - 0x08616040
  * 
 ******************************************************************************/

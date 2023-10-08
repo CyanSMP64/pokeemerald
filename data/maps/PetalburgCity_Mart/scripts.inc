@@ -15,6 +15,7 @@ PetalburgCity_Mart_EventScript_Clerk::
 	.align 2
 PetalburgCity_Mart_Pokemart_Basic:
 	.2byte ITEM_POKE_BALL
+	.2byte ITEM_POTION
 	.2byte ITEM_REPEL
 	.2byte ITEM_NONE
 	release

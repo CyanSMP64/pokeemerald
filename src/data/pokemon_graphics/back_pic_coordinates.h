@@ -1176,7 +1176,7 @@ const struct MonCoords gMonBackPicCoords[] =
     [SPECIES_SNEASEL_HISUIAN]              = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  3 },
     [SPECIES_SAMUROTT_HISUIAN]             = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  8 },
     [SPECIES_LILLIGANT_HISUIAN]            = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  5 },
-    [SPECIES_ZORUA_HISUIAN]                = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  1 },
+    [SPECIES_ZORUA_HISUIAN]                = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  3 },
     [SPECIES_ZOROARK_HISUIAN]              = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_BRAVIARY_HISUIAN]             = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  7 },
     [SPECIES_SLIGGOO_HISUIAN]              = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },

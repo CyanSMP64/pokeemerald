@@ -1,5 +1,8 @@
 const u8 gDummyPokedexText[] = _(
-    "Submit a custom entry for this Pokémon!");
+    "Submit a custom entry for this Pokémon!\n"
+    "DM me at cyansixfour on Discord to get\n"
+    "your entry in for the next patch!\n"
+    "(120 chars max.)");
 
 const u8 gBulbasaurPokedexText[] = _(
     "BULBASAUR can be seen napping in bright\n"

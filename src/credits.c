@@ -163,6 +163,15 @@ static const u8 sTheEnd_LetterMap_D[] =
     1, 0x86, 0x87,
 };
 
+static const u8 sTheEnd_LetterMap_Q[] =
+{
+    0xFF, 0xFF, 0xFF,
+    0xFF, 0xFF, 0xFF,
+    0xFF, 0xFF, 0xFF,
+    11, 0xFF, 0xFF,
+    10, 0xFF, 0xFF,
+};
+
 #include "data/credits.h"
 
 static const struct BgTemplate sBackgroundTemplates[] =
@@ -639,7 +648,7 @@ static void Task_CreditsTheEnd3(u8 taskId)
                                 | DISPCNT_OBJ_1D_MAP
                                 | DISPCNT_BG0_ON);
 
-    gTasks[taskId].tDelay = 235; //set this to 215 to actually show "THE END" in time to the last song beat
+    gTasks[taskId].tDelay = 180; //set this to 215 to actually show "THE END" in time to the last song beat
     gTasks[taskId].func = Task_CreditsTheEnd4;
 }
 
@@ -1301,7 +1310,7 @@ static void LoadTheEndScreen(u16 tileOffsetLoad, u16 tileOffsetWrite, u16 palOff
 
 static u16 GetLetterMapTile(u8 baseTiles)
 {
-    u16 out = (baseTiles & 0x3F) + 80;
+    u16 out = (baseTiles & 0x3F) + 77;
 
     if (baseTiles == 0xFF)
         return 1;
@@ -1340,6 +1349,7 @@ static void DrawTheEnd(u16 offset, u16 palette)
     DrawLetterMapTiles(sTheEnd_LetterMap_E, 16, 7, offset, palette);
     DrawLetterMapTiles(sTheEnd_LetterMap_N, 20, 7, offset, palette);
     DrawLetterMapTiles(sTheEnd_LetterMap_D, 24, 7, offset, palette);
+    DrawLetterMapTiles(sTheEnd_LetterMap_Q, 27, 7, offset, palette);
 }
 
 #define sState data[0]
