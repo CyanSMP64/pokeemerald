@@ -1,5 +1,5 @@
 Route102_Text_CalvinIntro:
-	.string "I probably have a legendary.$"
+	.string "I probably have a Legendary.$"
 
 Route102_Text_CalvinDefeated:
 	.string "Arrgh, I lost…\n"
@@ -33,30 +33,29 @@ Route102_Text_CalvinRematchPostBattle:
 	.string "I'll get stronger, too.$"
 
 Route102_Text_AllenIntro:
-	.string "i catch as many POKé and will\n"
-	.string "always win..$"
+	.string "Did you just become a TRAINER?\n"
+	.string "We're both beginners!$"
 
 Route102_Text_AllenDefeated:
-	.string "Fuck!$"
+	.string "I called you because I thought\n"
+	.string "I could beat you…$"
 
 Route102_Text_AllenPostBattle:
-	.string "Mever again will I fight.\n"
-	.string "To be defeete will ruin me.$"
+	.string "I haven't won once yet…\n"
+	.string "I wish I would win soon…$"
 
 Route102_Text_RickIntro:
-	.string "Is this a nuzlocke?$"
+	.string "Is this a Nuzlocke?$"
 
 Route102_Text_RickDefeated:
 	.string "I didn't play around the crit…$"
 
 Route102_Text_RickPostBattle:
-	.string "If you lock eyes with a TRAINER,\n"
-	.string "you have to challenge! It's a rule!$"
+	.string "HUHHHHHH????$"
 
 Route102_Text_TianaIntro:
-	.string "I'm going to keep winning and aim\n"
-	.string "to be the best TRAINER.\p"
-	.string "Help me further my career!$"
+	.string "Entering my line of sight?\n"
+	.string "Sounds like a skill issue!$"
 
 Route102_Text_TianaDefeated:
 	.string "I ended up furthering your career…$"

@@ -56,7 +56,6 @@ Route102_EventScript_CalvinRematch::
 
 Route102_EventScript_Rick::
 	trainerbattle_single TRAINER_RICK, Route102_Text_RickIntro, Route102_Text_RickDefeated
-@	msgbox Route102_Text_RickPostBattle, MSGBOX_AUTOCLOSE
 	lockall
 	playse SE_M_NIGHTMARE
 	delay 5
@@ -102,6 +101,10 @@ Route102_EventScript_Rick::
 	delay 1
 	removeobject 3
 	setflag FLAG_HIDE_RICK
+	delay 10
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_QuestionMark
+	playse SE_M_METRONOME
+	msgbox Route102_Text_RickPostBattle, MSGBOX_DEFAULT
 	releaseall
 	end
 

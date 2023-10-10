@@ -148,7 +148,7 @@ const struct TMText gTMTexts[] = {
     { 5,  0, 29, 12,  0x0D, "All my POKéMON does is [move]... No one dares to come near me...\\pSigh... If you would, please take this TM away..."},
     { 5,  0, 29, 12,  0x2F, "TM05 contains [move]."},
     { 8,  3,  3,  1,  0x96, "That TM08 contains [move]."},
-    { 9,  0, 19, 32,  0x0D, "I like filling my mouth with seeds, then spitting them out fast!\\pI like you, so you can have this!\\pUse it on a POKéMON, and it will learn [move].\\pWhat does that have to do with firing seeds? Well, nothing!"},
+    { 9,  0, 19, 31,  0x0D, "I like filling my mouth with seeds, then spitting them out fast!\\pI like you, so you can have this!\\pUse it on a POKéMON, and it will learn [move].\\pWhat does that have to do with firing seeds? Well, nothing!"},
     {24,  0,  2,  8,  0x4C, "WATTSON: Wahahahaha!\\pI knew it, \\v01\\v05! I knew I’d made the right choice asking you!\\pThis is my thanks - a TM containing [move]!\\pGo on, you’ve earned it!"},
     {31, 15,  5,  1,  0x2F, "TM31 contains [move]! It’s a move so horrible that I can’t describe it."},
     {34, 10,  0,  1,  0xA5, "That TM34 there contains [move]. You can count on it!"},

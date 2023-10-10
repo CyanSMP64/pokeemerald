@@ -7,8 +7,8 @@
 .equ LOCALID_BOAT_R109, 1
 .equ LOCALID_BRINEY_R109, 2
 
-.equ LOCALID_BOAT_R104, 7
-.equ LOCALID_BRINEY_R104, 8
+.equ LOCALID_BOAT_R104, 6
+.equ LOCALID_BRINEY_R104, 7
 
 DewfordTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, DewfordTown_OnTransition
