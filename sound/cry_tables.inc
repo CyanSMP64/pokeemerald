@@ -1040,6 +1040,14 @@ gCryTable::
     cry Cry_Miraidon
     cry Cry_WalkingWake
     cry Cry_IronLeaves
+    cry Cry_OinkologneFemale
+    cry Cry_Dipplin
+    cry Cry_Poltchageist
+    cry Cry_Sinistcha
+    cry Cry_Okidogi
+    cry Cry_Munkidori
+    cry Cry_Fezandipiti
+    cry Cry_Ogerpon
 
 	.align 2
 gCryTable_Reverse::
@@ -2083,3 +2091,11 @@ gCryTable_Reverse::
     cry_reverse Cry_Miraidon
     cry_reverse Cry_WalkingWake
     cry_reverse Cry_IronLeaves
+    cry_reverse Cry_OinkologneFemale
+    cry_reverse Cry_Dipplin
+    cry_reverse Cry_Poltchageist
+    cry_reverse Cry_Sinistcha
+    cry_reverse Cry_Okidogi
+    cry_reverse Cry_Munkidori
+    cry_reverse Cry_Fezandipiti
+    cry_reverse Cry_Ogerpon

@@ -252,9 +252,28 @@
 .include "sound/voicegroups/voicegroup250.inc"
 .include "sound/voicegroups/voicegroup251.inc"
 .include "sound/voicegroups/voicegroup252.inc"
+.include "sound/voicegroups/voicegroup253.inc"
 .include "sound/voicegroups/voicegroup254.inc"
+.include "sound/voicegroups/voicegroup255.inc" @ smw songs
+.include "sound/voicegroups/voicegroup256.inc"
 .include "sound/voicegroups/voicegroup257.inc"
+.include "sound/voicegroups/voicegroup258.inc"
+.include "sound/voicegroups/voicegroup267.inc"
+.include "sound/voicegroups/voicegroup268.inc"
+.include "sound/voicegroups/voicegroup271.inc"
+.include "sound/voicegroups/voicegroup273.inc"
+.include "sound/voicegroups/voicegroup274.inc"
+.include "sound/voicegroups/voicegroup276.inc" @ bw - reshiram
 .include "sound/voicegroups/voicegroup277.inc"
+.include "sound/voicegroups/voicegroup278.inc"
+.include "sound/voicegroups/voicegroup279.inc"
+.include "sound/voicegroups/voicegroup280.inc"
+.include "sound/voicegroups/voicegroup281.inc" @ bw - zekrom
+.include "sound/voicegroups/voicegroup282.inc" @ bw - legendary
+.include "sound/voicegroups/voicegroup283.inc"
+.include "sound/voicegroups/voicegroup284.inc" @ bw2 - kyurem
+.include "sound/voicegroups/voicegroup285.inc"
+.include "sound/voicegroups/voicegroup286.inc"
 .include "sound/voicegroups/voicegroup315.inc"
 .include "sound/voicegroups/voicegroup335.inc"
 .include "sound/voicegroups/voicegroup349.inc" @ bw2 - hoenn champion

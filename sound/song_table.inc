@@ -289,15 +289,15 @@ gSongTable::
 	song mus_hg_vs_suicune, 0, 0
 	song mus_hg_vs_lugia, 0, 0
 	song mus_hg_vs_ho_oh, 0, 0
-	song dummy_song_header, 0, 0
-	song dummy_song_header, 0, 0
-	song dummy_song_header, 0, 0
-	song dummy_song_header, 0, 0
-	song dummy_song_header, 0, 0
-	song dummy_song_header, 0, 0
-	song dummy_song_header, 0, 0
-	song dummy_song_header, 0, 0
-	song dummy_song_header, 0, 0
+	song mus_dp_vs_uxie_mesprit_azelf, 0, 0
+	song mus_dp_vs_legend, 0, 0
+	song mus_dp_vs_arceus, 0, 0
+	song mus_pl_vs_giratina, 0, 0
+	song mus_bw_vs_legend, 0, 0
+	song mus_bw_vs_reshiram, 0, 0
+	song mus_bw_vs_kyurem, 0, 0
+	song mus_b2_vs_black_white_kyurem, 0, 0
+	song mus_bw_vs_zekrom, 0, 0
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0
@@ -329,7 +329,7 @@ gSongTable::
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0
 	song se_utvanish, 1, 1
-	song dummy_song_header, 0, 0
+	song mus_smwend, 0, 0
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0

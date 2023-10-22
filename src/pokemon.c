@@ -1135,6 +1135,13 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(MIRAIDON),
     SPECIES_TO_HOENN(WALKING_WAKE),
     SPECIES_TO_HOENN(IRON_LEAVES),
+    SPECIES_TO_HOENN(DIPPLIN),
+    SPECIES_TO_HOENN(POLTCHAGEIST),
+    SPECIES_TO_HOENN(SINISTCHA),
+    SPECIES_TO_HOENN(OKIDOGI),
+    SPECIES_TO_HOENN(MUNKIDORI),
+    SPECIES_TO_HOENN(FEZANDIPITI),
+    SPECIES_TO_HOENN(OGERPON),
     SPECIES_TO_HOENN(VENUSAUR_MEGA),
     SPECIES_TO_HOENN(CHARIZARD_MEGA_X),
     SPECIES_TO_HOENN(CHARIZARD_MEGA_Y),
@@ -1231,6 +1238,7 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(SNEASEL_HISUIAN),
     SPECIES_TO_HOENN(SAMUROTT_HISUIAN),
     SPECIES_TO_HOENN(LILLIGANT_HISUIAN),
+    SPECIES_TO_HOENN(BASCULIN_WHITE_STRIPED),
     SPECIES_TO_HOENN(ZORUA_HISUIAN),
     SPECIES_TO_HOENN(ZOROARK_HISUIAN),
     SPECIES_TO_HOENN(BRAVIARY_HISUIAN),
@@ -1248,6 +1256,8 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(DEOXYS_ATTACK),
     SPECIES_TO_HOENN(DEOXYS_DEFENSE),
     SPECIES_TO_HOENN(DEOXYS_SPEED),
+    SPECIES_TO_HOENN(BURMY_SANDY_CLOAK),
+    SPECIES_TO_HOENN(BURMY_TRASH_CLOAK),
     SPECIES_TO_HOENN(WORMADAM_SANDY_CLOAK),
     SPECIES_TO_HOENN(WORMADAM_TRASH_CLOAK),
     SPECIES_TO_HOENN(ROTOM_HEAT),
@@ -1259,8 +1269,6 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(PALKIA_ORIGIN),
     SPECIES_TO_HOENN(GIRATINA_ORIGIN),
     SPECIES_TO_HOENN(SHAYMIN_SKY),
-    SPECIES_TO_HOENN(BASCULIN_BLUE_STRIPED),
-    SPECIES_TO_HOENN(BASCULIN_WHITE_STRIPED),
     SPECIES_TO_HOENN(DARMANITAN_ZEN_MODE),
     SPECIES_TO_HOENN(DARMANITAN_ZEN_MODE_GALARIAN),
     SPECIES_TO_HOENN(TORNADUS_THERIAN),
@@ -1272,28 +1280,28 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(MELOETTA_PIROUETTE),
     SPECIES_TO_HOENN(GRENINJA_ASH),
     SPECIES_TO_HOENN(FLOETTE_ETERNAL_FLOWER),
-    SPECIES_TO_HOENN(AEGISLASH_BLADE),
     SPECIES_TO_HOENN(ZYGARDE_10),
     SPECIES_TO_HOENN(ZYGARDE_COMPLETE),
     SPECIES_TO_HOENN(HOOPA_UNBOUND),
     SPECIES_TO_HOENN(ORICORIO_POM_POM),
     SPECIES_TO_HOENN(ORICORIO_PAU),
     SPECIES_TO_HOENN(ORICORIO_SENSU),
-    SPECIES_TO_HOENN(LYCANROC_MIDNIGHT),
-    SPECIES_TO_HOENN(LYCANROC_DUSK),
     SPECIES_TO_HOENN(WISHIWASHI_SCHOOL),
     SPECIES_TO_HOENN(MINIOR_CORE_RED),
     SPECIES_TO_HOENN(NECROZMA_DUSK_MANE),
     SPECIES_TO_HOENN(NECROZMA_DAWN_WINGS),
     SPECIES_TO_HOENN(NECROZMA_ULTRA),
-    SPECIES_TO_HOENN(EISCUE_NOICE_FACE),
     SPECIES_TO_HOENN(INDEEDEE_FEMALE),
     SPECIES_TO_HOENN(ZACIAN_CROWNED_SWORD),
     SPECIES_TO_HOENN(ZAMAZENTA_CROWNED_SHIELD),
     SPECIES_TO_HOENN(URSHIFU_RAPID_STRIKE_STYLE),
     SPECIES_TO_HOENN(CALYREX_ICE_RIDER),
     SPECIES_TO_HOENN(CALYREX_SHADOW_RIDER),
+    SPECIES_TO_HOENN(URSALUNA_BLOODMOON),
     SPECIES_TO_HOENN(PALAFIN_HERO),
+    SPECIES_TO_HOENN(OGERPON_WELLSPRING),
+    SPECIES_TO_HOENN(OGERPON_HEARTHFLAME),
+    SPECIES_TO_HOENN(OGERPON_CORNERSTONE),
 };
 
 // Assigns all species to the National Dex Index (Summary No. for National Dex)
@@ -2334,6 +2342,13 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(MIRAIDON),
     SPECIES_TO_NATIONAL(WALKING_WAKE),
     SPECIES_TO_NATIONAL(IRON_LEAVES),
+    SPECIES_TO_NATIONAL(DIPPLIN),
+    SPECIES_TO_NATIONAL(POLTCHAGEIST),
+    SPECIES_TO_NATIONAL(SINISTCHA),
+    SPECIES_TO_NATIONAL(OKIDOGI),
+    SPECIES_TO_NATIONAL(MUNKIDORI),
+    SPECIES_TO_NATIONAL(FEZANDIPITI),
+    SPECIES_TO_NATIONAL(OGERPON),
     SPECIES_TO_NATIONAL(VENUSAUR_MEGA),
     SPECIES_TO_NATIONAL(CHARIZARD_MEGA_X),
     SPECIES_TO_NATIONAL(CHARIZARD_MEGA_Y),
@@ -2430,6 +2445,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(SNEASEL_HISUIAN),
     SPECIES_TO_NATIONAL(SAMUROTT_HISUIAN),
     SPECIES_TO_NATIONAL(LILLIGANT_HISUIAN),
+    SPECIES_TO_NATIONAL(BASCULIN_WHITE_STRIPED),
     SPECIES_TO_NATIONAL(ZORUA_HISUIAN),
     SPECIES_TO_NATIONAL(ZOROARK_HISUIAN),
     SPECIES_TO_NATIONAL(BRAVIARY_HISUIAN),
@@ -2447,6 +2463,8 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(DEOXYS_ATTACK),
     SPECIES_TO_NATIONAL(DEOXYS_DEFENSE),
     SPECIES_TO_NATIONAL(DEOXYS_SPEED),
+    SPECIES_TO_NATIONAL(BURMY_SANDY_CLOAK),
+    SPECIES_TO_NATIONAL(BURMY_TRASH_CLOAK),
     SPECIES_TO_NATIONAL(WORMADAM_SANDY_CLOAK),
     SPECIES_TO_NATIONAL(WORMADAM_TRASH_CLOAK),
     SPECIES_TO_NATIONAL(ROTOM_HEAT),
@@ -2458,8 +2476,6 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(PALKIA_ORIGIN),
     SPECIES_TO_NATIONAL(GIRATINA_ORIGIN),
     SPECIES_TO_NATIONAL(SHAYMIN_SKY),
-    SPECIES_TO_NATIONAL(BASCULIN_BLUE_STRIPED),
-    SPECIES_TO_NATIONAL(BASCULIN_WHITE_STRIPED),
     SPECIES_TO_NATIONAL(DARMANITAN_ZEN_MODE),
     SPECIES_TO_NATIONAL(DARMANITAN_ZEN_MODE_GALARIAN),
     SPECIES_TO_NATIONAL(TORNADUS_THERIAN),
@@ -2471,28 +2487,28 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(MELOETTA_PIROUETTE),
     SPECIES_TO_NATIONAL(GRENINJA_ASH),
     SPECIES_TO_NATIONAL(FLOETTE_ETERNAL_FLOWER),
-    SPECIES_TO_NATIONAL(AEGISLASH_BLADE),
     SPECIES_TO_NATIONAL(ZYGARDE_10),
     SPECIES_TO_NATIONAL(ZYGARDE_COMPLETE),
     SPECIES_TO_NATIONAL(HOOPA_UNBOUND),
     SPECIES_TO_NATIONAL(ORICORIO_POM_POM),
     SPECIES_TO_NATIONAL(ORICORIO_PAU),
     SPECIES_TO_NATIONAL(ORICORIO_SENSU),
-    SPECIES_TO_NATIONAL(LYCANROC_MIDNIGHT),
-    SPECIES_TO_NATIONAL(LYCANROC_DUSK),
     SPECIES_TO_NATIONAL(WISHIWASHI_SCHOOL),
     SPECIES_TO_NATIONAL(MINIOR_CORE_RED),
     SPECIES_TO_NATIONAL(NECROZMA_DUSK_MANE),
     SPECIES_TO_NATIONAL(NECROZMA_DAWN_WINGS),
     SPECIES_TO_NATIONAL(NECROZMA_ULTRA),
-    SPECIES_TO_NATIONAL(EISCUE_NOICE_FACE),
     SPECIES_TO_NATIONAL(INDEEDEE_FEMALE),
     SPECIES_TO_NATIONAL(ZACIAN_CROWNED_SWORD),
     SPECIES_TO_NATIONAL(ZAMAZENTA_CROWNED_SHIELD),
     SPECIES_TO_NATIONAL(URSHIFU_RAPID_STRIKE_STYLE),
     SPECIES_TO_NATIONAL(CALYREX_ICE_RIDER),
     SPECIES_TO_NATIONAL(CALYREX_SHADOW_RIDER),
+    SPECIES_TO_NATIONAL(URSALUNA_BLOODMOON),
     SPECIES_TO_NATIONAL(PALAFIN_HERO),
+    SPECIES_TO_NATIONAL(OGERPON_WELLSPRING),
+    SPECIES_TO_NATIONAL(OGERPON_HEARTHFLAME),
+    SPECIES_TO_NATIONAL(OGERPON_CORNERSTONE),
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
@@ -3533,6 +3549,13 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(MIRAIDON),
     HOENN_TO_NATIONAL(WALKING_WAKE),
     HOENN_TO_NATIONAL(IRON_LEAVES),
+    HOENN_TO_NATIONAL(DIPPLIN),
+    HOENN_TO_NATIONAL(POLTCHAGEIST),
+    HOENN_TO_NATIONAL(SINISTCHA),
+    HOENN_TO_NATIONAL(OKIDOGI),
+    HOENN_TO_NATIONAL(MUNKIDORI),
+    HOENN_TO_NATIONAL(FEZANDIPITI),
+    HOENN_TO_NATIONAL(OGERPON),
     HOENN_TO_NATIONAL(VENUSAUR_MEGA),
     HOENN_TO_NATIONAL(CHARIZARD_MEGA_X),
     HOENN_TO_NATIONAL(CHARIZARD_MEGA_Y),
@@ -3629,6 +3652,7 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(SNEASEL_HISUIAN),
     HOENN_TO_NATIONAL(SAMUROTT_HISUIAN),
     HOENN_TO_NATIONAL(LILLIGANT_HISUIAN),
+    HOENN_TO_NATIONAL(BASCULIN_WHITE_STRIPED),
     HOENN_TO_NATIONAL(ZORUA_HISUIAN),
     HOENN_TO_NATIONAL(ZOROARK_HISUIAN),
     HOENN_TO_NATIONAL(BRAVIARY_HISUIAN),
@@ -3646,6 +3670,8 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(DEOXYS_ATTACK),
     HOENN_TO_NATIONAL(DEOXYS_DEFENSE),
     HOENN_TO_NATIONAL(DEOXYS_SPEED),
+    HOENN_TO_NATIONAL(BURMY_SANDY_CLOAK),
+    HOENN_TO_NATIONAL(BURMY_TRASH_CLOAK),
     HOENN_TO_NATIONAL(WORMADAM_SANDY_CLOAK),
     HOENN_TO_NATIONAL(WORMADAM_TRASH_CLOAK),
     HOENN_TO_NATIONAL(ROTOM_HEAT),
@@ -3657,8 +3683,6 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(PALKIA_ORIGIN),
     HOENN_TO_NATIONAL(GIRATINA_ORIGIN),
     HOENN_TO_NATIONAL(SHAYMIN_SKY),
-    HOENN_TO_NATIONAL(BASCULIN_BLUE_STRIPED),
-    HOENN_TO_NATIONAL(BASCULIN_WHITE_STRIPED),
     HOENN_TO_NATIONAL(DARMANITAN_ZEN_MODE),
     HOENN_TO_NATIONAL(DARMANITAN_ZEN_MODE_GALARIAN),
     HOENN_TO_NATIONAL(TORNADUS_THERIAN),
@@ -3670,28 +3694,28 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(MELOETTA_PIROUETTE),
     HOENN_TO_NATIONAL(GRENINJA_ASH),
     HOENN_TO_NATIONAL(FLOETTE_ETERNAL_FLOWER),
-    HOENN_TO_NATIONAL(AEGISLASH_BLADE),
     HOENN_TO_NATIONAL(ZYGARDE_10),
     HOENN_TO_NATIONAL(ZYGARDE_COMPLETE),
     HOENN_TO_NATIONAL(HOOPA_UNBOUND),
     HOENN_TO_NATIONAL(ORICORIO_POM_POM),
     HOENN_TO_NATIONAL(ORICORIO_PAU),
     HOENN_TO_NATIONAL(ORICORIO_SENSU),
-    HOENN_TO_NATIONAL(LYCANROC_MIDNIGHT),
-    HOENN_TO_NATIONAL(LYCANROC_DUSK),
     HOENN_TO_NATIONAL(WISHIWASHI_SCHOOL),
     HOENN_TO_NATIONAL(MINIOR_CORE_RED),
     HOENN_TO_NATIONAL(NECROZMA_DUSK_MANE),
     HOENN_TO_NATIONAL(NECROZMA_DAWN_WINGS),
     HOENN_TO_NATIONAL(NECROZMA_ULTRA),
-    HOENN_TO_NATIONAL(EISCUE_NOICE_FACE),
     HOENN_TO_NATIONAL(INDEEDEE_FEMALE),
     HOENN_TO_NATIONAL(ZACIAN_CROWNED_SWORD),
     HOENN_TO_NATIONAL(ZAMAZENTA_CROWNED_SHIELD),
     HOENN_TO_NATIONAL(URSHIFU_RAPID_STRIKE_STYLE),
     HOENN_TO_NATIONAL(CALYREX_ICE_RIDER),
     HOENN_TO_NATIONAL(CALYREX_SHADOW_RIDER),
+    HOENN_TO_NATIONAL(URSALUNA_BLOODMOON),
     HOENN_TO_NATIONAL(PALAFIN_HERO),
+    HOENN_TO_NATIONAL(OGERPON_WELLSPRING),
+    HOENN_TO_NATIONAL(OGERPON_HEARTHFLAME),
+    HOENN_TO_NATIONAL(OGERPON_CORNERSTONE),
 };
 
 const struct SpindaSpot gSpindaSpotGraphics[] =
@@ -4667,6 +4691,8 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_DEOXYS_DEFENSE - 1]      = ANIM_H_PIVOT,
     [SPECIES_DEOXYS_SPEED - 1]      = ANIM_H_PIVOT,
     //Gen 4 Forms
+    [SPECIES_BURMY_SANDY_CLOAK - 1]      = ANIM_V_STRETCH,
+    [SPECIES_BURMY_TRASH_CLOAK - 1]      = ANIM_V_STRETCH,
     [SPECIES_WORMADAM_SANDY_CLOAK - 1]   = ANIM_SWING_CONVEX_FAST_SHORT,
     [SPECIES_WORMADAM_TRASH_CLOAK - 1]   = ANIM_SWING_CONVEX_FAST_SHORT,
     [SPECIES_ROTOM_HEAT - 1]             = ANIM_V_SQUISH_AND_BOUNCE,
@@ -4676,7 +4702,6 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_ROTOM_MOW - 1]              = ANIM_TIP_MOVE_FORWARD,
     [SPECIES_SHAYMIN_SKY - 1]            = ANIM_V_STRETCH,
     //Gen 5 Forms
-    [SPECIES_BASCULIN_BLUE_STRIPED - 1]   = ANIM_TIP_MOVE_FORWARD,
     [SPECIES_TORNADUS_THERIAN - 1]        = ANIM_V_STRETCH,
     [SPECIES_THUNDURUS_THERIAN - 1]       = ANIM_RISING_WOBBLE,
     [SPECIES_LANDORUS_THERIAN - 1]        = ANIM_CIRCULAR_VIBRATE,
@@ -4690,8 +4715,6 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_ORICORIO_POM_POM - 1]          = ANIM_V_SQUISH_AND_BOUNCE, //Todo
     [SPECIES_ORICORIO_PAU - 1]              = ANIM_V_SQUISH_AND_BOUNCE, //Todo
     [SPECIES_ORICORIO_SENSU - 1]            = ANIM_V_SQUISH_AND_BOUNCE, //Todo
-    [SPECIES_LYCANROC_MIDNIGHT - 1]         = ANIM_V_SQUISH_AND_BOUNCE, //Todo
-    [SPECIES_LYCANROC_DUSK - 1]             = ANIM_V_SQUISH_AND_BOUNCE, //Todo
     [SPECIES_NECROZMA_DUSK_MANE - 1]        = ANIM_V_SQUISH_AND_BOUNCE, //Todo
     [SPECIES_NECROZMA_DAWN_WINGS - 1]       = ANIM_V_SQUISH_AND_BOUNCE, //Todo
     [SPECIES_NECROZMA_ULTRA - 1]            = ANIM_V_SQUISH_AND_BOUNCE, //Todo
@@ -5905,6 +5928,9 @@ void GiveBoxMonInitialMoveset(struct BoxPokemon *boxMon)
 
         moveLevel = (gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_LV);
 
+        if (moveLevel == 0)
+            continue;
+
         if (moveLevel > (level << 9))
             break;
 
@@ -6358,22 +6384,6 @@ u8 GetBoxMonGender(struct BoxPokemon *boxMon)
     u16 species = GetBoxMonData(boxMon, MON_DATA_SPECIES, NULL);
     u32 personality = GetBoxMonData(boxMon, MON_DATA_PERSONALITY, NULL);
 
-    switch (gSpeciesInfo[species].genderRatio)
-    {
-    case MON_MALE:
-    case MON_FEMALE:
-    case MON_GENDERLESS:
-        return gSpeciesInfo[species].genderRatio;
-    }
-
-    if (gSpeciesInfo[species].genderRatio > (personality & 0xFF))
-        return MON_FEMALE;
-    else
-        return MON_MALE;
-}
-
-u8 GetGenderFromSpeciesAndPersonality(u16 species, u32 personality)
-{
     switch (gSpeciesInfo[species].genderRatio)
     {
     case MON_MALE:
@@ -6975,6 +6985,24 @@ bool32 IsSpeciesInHoennDex(u16 species)
 #define SET16(lhs) (lhs) = data[0] + (data[1] << 8)
 #define SET32(lhs) (lhs) = data[0] + (data[1] << 8) + (data[2] << 16) + (data[3] << 24)
 
+void GetSpeciesName(u8 *name, u16 species)
+{
+    s32 i;
+
+    for (i = 0; i <= POKEMON_NAME_LENGTH; i++)
+    {
+        if (species > NUM_SPECIES)
+            name[i] = gSpeciesNames[SPECIES_NONE][i];
+        else
+            name[i] = gSpeciesNames[species][i];
+
+        if (name[i] == EOS)
+            break;
+    }
+
+    name[i] = EOS;
+}
+
 void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
 {
     const u8 *data = dataArg;
@@ -7017,6 +7045,22 @@ void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
         SetBoxMonData(&mon->box, field, data);
         break;
     }
+}
+
+u8 GetGenderFromSpeciesAndPersonality(u16 species, u32 personality)
+{
+    switch (gSpeciesInfo[species].genderRatio)
+    {
+    case MON_MALE:
+    case MON_FEMALE:
+    case MON_GENDERLESS:
+        return gSpeciesInfo[species].genderRatio;
+    }
+
+    if (gSpeciesInfo[species].genderRatio > (personality & 0xFF))
+        return MON_FEMALE;
+    else
+        return MON_MALE;
 }
 
 void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
@@ -7500,24 +7544,6 @@ bool8 IsPokemonStorageFull(void)
                 return FALSE;
 
     return TRUE;
-}
-
-void GetSpeciesName(u8 *name, u16 species)
-{
-    s32 i;
-
-    for (i = 0; i <= POKEMON_NAME_LENGTH; i++)
-    {
-        if (species > NUM_SPECIES)
-            name[i] = gSpeciesNames[SPECIES_NONE][i];
-        else
-            name[i] = gSpeciesNames[species][i];
-
-        if (name[i] == EOS)
-            break;
-    }
-
-    name[i] = EOS;
 }
 
 u8 CalculatePPWithBonus(u16 move, u8 ppBonuses, u8 moveIndex)
@@ -8454,6 +8480,14 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem)
                 if (gEvolutionTable[species][i].param <= beauty)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
+            case EVO_LEVEL_FEMALE:
+                if (gEvolutionTable[species][i].param <= level && GetMonGender(mon) == MON_FEMALE)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_MALE:
+                if (gEvolutionTable[species][i].param <= level && GetMonGender(mon) == MON_MALE)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
             }
         }
         break;
@@ -9354,8 +9388,6 @@ u16 GetBattleBGM(void)
         case SPECIES_MEWTWO_MEGA_Y:
             return MUS_RG_VS_MEWTWO;
         case SPECIES_MEW:
-        case SPECIES_CELEBI:
-        case SPECIES_JIRACHI:
             return MUS_VS_MEW;
         case SPECIES_RAIKOU:
             return MUS_HG_VS_RAIKOU;
@@ -9386,11 +9418,54 @@ u16 GetBattleBGM(void)
         case SPECIES_DEOXYS_DEFENSE:
         case SPECIES_DEOXYS_SPEED:
             return MUS_RG_VS_DEOXYS;
+        case SPECIES_UXIE:
+        case SPECIES_MESPRIT:
+        case SPECIES_AZELF:
+            return MUS_DP_VS_UXIE_MESPRIT_AZELF;
         case SPECIES_DIALGA:
         case SPECIES_PALKIA:
         case SPECIES_DIALGA_ORIGIN:
         case SPECIES_PALKIA_ORIGIN:
             return MUS_DP_VS_DIALGA_PALKIA;
+        case SPECIES_HEATRAN:
+        case SPECIES_MANAPHY:
+        case SPECIES_DARKRAI:
+        case SPECIES_CRESSELIA:
+        case SPECIES_PHIONE:
+        case SPECIES_SHAYMIN:
+        case SPECIES_SHAYMIN_SKY:
+            return MUS_DP_VS_LEGEND;
+        case SPECIES_GIRATINA:
+        case SPECIES_GIRATINA_ORIGIN:
+            return MUS_PL_VS_GIRATINA;
+        case SPECIES_ARCEUS:
+            return MUS_DP_VS_ARCEUS;
+        case SPECIES_VICTINI:
+        case SPECIES_COBALION:
+        case SPECIES_TERRAKION:
+        case SPECIES_VIRIZION:
+        case SPECIES_TORNADUS:
+        case SPECIES_THUNDURUS:
+        case SPECIES_LANDORUS:
+        case SPECIES_ENAMORUS:
+        case SPECIES_TORNADUS_THERIAN:
+        case SPECIES_THUNDURUS_THERIAN:
+        case SPECIES_LANDORUS_THERIAN:
+        case SPECIES_ENAMORUS_THERIAN:
+        case SPECIES_KELDEO:
+        case SPECIES_MELOETTA:
+        case SPECIES_MELOETTA_PIROUETTE:
+        case SPECIES_GENESECT:
+            return MUS_BW_VS_LEGEND;
+        case SPECIES_RESHIRAM:
+            return MUS_BW_VS_RESHIRAM;
+        case SPECIES_ZEKROM:
+            return MUS_BW_VS_ZEKROM;
+        case SPECIES_KYUREM:
+            return MUS_BW_VS_KYUREM;
+        case SPECIES_KYUREM_WHITE:
+        case SPECIES_KYUREM_BLACK:
+            return MUS_B2_VS_BLACK_WHITE_KYUREM;
         default:
             return MUS_VS_WILD;
         }
@@ -9518,12 +9593,18 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
             }
             return gMonShinyPaletteTable[form].data;
         }
-        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON)
+        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_BASCULIN || species == SPECIES_AEGISLASH || species == SPECIES_EISCUE)
         {
             if ((personality % 0x200) >= 0x100)
             {
                 if (species == SPECIES_SHELLOS)
                     return gMonShinyPaletteTable[SPECIES_SHELLOS_EAST_SEA].data;
+                else if (species == SPECIES_BASCULIN)
+                    return gMonShinyPaletteTable[SPECIES_BASCULIN_BLUE_STRIPED].data;
+                else if (species == SPECIES_AEGISLASH)
+                    return gMonShinyPaletteTable[SPECIES_AEGISLASH_BLADE].data;
+                else if (species == SPECIES_EISCUE)
+                    return gMonShinyPaletteTable[SPECIES_EISCUE_NOICE_FACE].data;
                 else
                     return gMonShinyPaletteTable[SPECIES_GASTRODON_EAST_SEA].data;
             }
@@ -9555,13 +9636,18 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
                 form += SPECIES_ALCREMIE_RUBY_CREAM - 1;
             return gMonShinyPaletteTable[form].data;
         }
-        if (species == SPECIES_TATSUGIRI)
+        if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
         {
             form = (personality >> 8) % 3;
             if (!form)
                 form += species;
             else
-                form += SPECIES_TATSUGIRI_DROOPY - 1;
+            {
+                if (species == SPECIES_LYCANROC)
+                    form += SPECIES_LYCANROC_MIDNIGHT - 1;
+                else
+                    form += SPECIES_TATSUGIRI_DROOPY - 1;
+            }
             return gMonShinyPaletteTable[form].data;
         }
         return gMonShinyPaletteTable[species].data;
@@ -9628,12 +9714,18 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
             }
             return gMonPaletteTable[form].data;
         }
-        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON)
+        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_BASCULIN || species == SPECIES_AEGISLASH || species == SPECIES_EISCUE)
         {
             if ((personality % 0x200) >= 0x100)
             {
                 if (species == SPECIES_SHELLOS)
                     return gMonPaletteTable[SPECIES_SHELLOS_EAST_SEA].data;
+                else if (species == SPECIES_BASCULIN)
+                    return gMonPaletteTable[SPECIES_BASCULIN_BLUE_STRIPED].data;
+                else if (species == SPECIES_AEGISLASH)
+                    return gMonPaletteTable[SPECIES_AEGISLASH_BLADE].data;
+                else if (species == SPECIES_EISCUE)
+                    return gMonPaletteTable[SPECIES_EISCUE_NOICE_FACE].data;
                 else
                     return gMonPaletteTable[SPECIES_GASTRODON_EAST_SEA].data;
             }
@@ -9665,13 +9757,18 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
                 form += SPECIES_ALCREMIE_RUBY_CREAM - 1;
             return gMonPaletteTable[form].data;
         }
-        if (species == SPECIES_TATSUGIRI)
+        if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
         {
             form = (personality >> 8) % 3;
             if (!form)
                 form += species;
             else
-                form += SPECIES_TATSUGIRI_DROOPY - 1;
+            {
+                if (species == SPECIES_LYCANROC)
+                    form += SPECIES_LYCANROC_MIDNIGHT - 1;
+                else
+                    form += SPECIES_TATSUGIRI_DROOPY - 1;
+            }
             return gMonPaletteTable[form].data;
         }
         return gMonPaletteTable[species].data;
@@ -9754,12 +9851,18 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
             }
             return &gMonShinyPaletteTable[form];
         }
-        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON)
+        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_BASCULIN || species == SPECIES_AEGISLASH || species == SPECIES_EISCUE)
         {
             if ((personality % 0x200) >= 0x100)
             {
                 if (species == SPECIES_SHELLOS)
                     return &gMonShinyPaletteTable[SPECIES_SHELLOS_EAST_SEA];
+                else if (species == SPECIES_BASCULIN)
+                    return &gMonShinyPaletteTable[SPECIES_BASCULIN_BLUE_STRIPED];
+                else if (species == SPECIES_AEGISLASH)
+                    return &gMonShinyPaletteTable[SPECIES_AEGISLASH_BLADE];
+                else if (species == SPECIES_EISCUE)
+                    return &gMonShinyPaletteTable[SPECIES_EISCUE_NOICE_FACE];
                 else
                     return &gMonShinyPaletteTable[SPECIES_GASTRODON_EAST_SEA];
             }
@@ -9791,13 +9894,18 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
                 form += SPECIES_ALCREMIE_RUBY_CREAM - 1;
             return &gMonShinyPaletteTable[form];
         }
-        if (species == SPECIES_TATSUGIRI)
+        if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
         {
             form = (personality >> 8) % 3;
             if (!form)
                 form += species;
             else
-                form += SPECIES_TATSUGIRI_DROOPY - 1;
+            {
+                if (species == SPECIES_LYCANROC)
+                    form += SPECIES_LYCANROC_MIDNIGHT - 1;
+                else
+                    form += SPECIES_TATSUGIRI_DROOPY - 1;
+            }
             return &gMonShinyPaletteTable[form];
         }
         return &gMonShinyPaletteTable[species];
@@ -9864,12 +9972,18 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
             }
             return &gMonPaletteTable[form];
         }
-        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON)
+        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_BASCULIN || species == SPECIES_AEGISLASH || species == SPECIES_EISCUE)
         {
             if ((personality % 0x200) >= 0x100)
             {
                 if (species == SPECIES_SHELLOS)
                     return &gMonPaletteTable[SPECIES_SHELLOS_EAST_SEA];
+                else if (species == SPECIES_BASCULIN)
+                    return &gMonPaletteTable[SPECIES_BASCULIN_BLUE_STRIPED];
+                else if (species == SPECIES_AEGISLASH)
+                    return &gMonPaletteTable[SPECIES_AEGISLASH_BLADE];
+                else if (species == SPECIES_EISCUE)
+                    return &gMonPaletteTable[SPECIES_EISCUE_NOICE_FACE];
                 else
                     return &gMonPaletteTable[SPECIES_GASTRODON_EAST_SEA];
             }
@@ -9901,13 +10015,18 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
                 form += SPECIES_ALCREMIE_RUBY_CREAM - 1;
             return &gMonPaletteTable[form];
         }
-        if (species == SPECIES_TATSUGIRI)
+        if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
         {
             form = (personality >> 8) % 3;
             if (!form)
                 form += species;
             else
-                form += SPECIES_TATSUGIRI_DROOPY - 1;
+            {
+                if (species == SPECIES_LYCANROC)
+                    form += SPECIES_LYCANROC_MIDNIGHT - 1;
+                else
+                    form += SPECIES_TATSUGIRI_DROOPY - 1;
+            }
             return &gMonPaletteTable[form];
         }
         return &gMonPaletteTable[species];
@@ -10522,4 +10641,32 @@ u8 *MonSpritesGfxManager_GetSpritePtr(u8 managerId, u8 spriteNum)
 
         return gfx->spritePointers[spriteNum];
     }
+}
+
+u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove)
+{
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
+    u8 level = GetMonData(mon, MON_DATA_LEVEL, NULL);
+
+    // since you can learn more than one move per level
+    // the game needs to know whether you decided to
+    // learn it or keep the old set to avoid asking
+    // you to learn the same move over and over again
+    if (firstMove)
+    {
+        sLearningMoveTableID = 0;
+    }
+    while(gLevelUpLearnsets[species][sLearningMoveTableID] != LEVEL_UP_END)
+    {
+        u16 moveLevel;
+        moveLevel = (gLevelUpLearnsets[species][sLearningMoveTableID] & LEVEL_UP_MOVE_LV);
+        while (moveLevel == 0 || moveLevel == (level << 9))
+        {
+            gMoveToLearn = (gLevelUpLearnsets[species][sLearningMoveTableID] & LEVEL_UP_MOVE_ID);
+            sLearningMoveTableID++;
+            return GiveMoveToMon(mon, gMoveToLearn);
+        }
+        sLearningMoveTableID++;
+    }
+    return 0;
 }

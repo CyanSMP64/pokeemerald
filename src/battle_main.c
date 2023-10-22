@@ -2768,11 +2768,12 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
 
     GetMonData(&gEnemyParty[gBattlerPartyIndexes[battler]], MON_DATA_PERSONALITY);  // Unused return value.
 
-    if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON
+    if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON || species == SPECIES_BASCULIN
         || species == SPECIES_UNFEZANT || species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_FRILLISH || species == SPECIES_JELLICENT || species == SPECIES_VIVILLON
         || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES || species == SPECIES_MEOWSTIC || species == SPECIES_PUMPKABOO
         || species == SPECIES_GOURGEIST || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_TOXTRICITY || species == SPECIES_ALCREMIE || species == SPECIES_BASCULEGION
-        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE)
+        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE
+        || species == SPECIES_AEGISLASH || species == SPECIES_LYCANROC || species == SPECIES_EISCUE)
     {
         u32 personalityValue = GetMonData(&gEnemyParty[gBattlerPartyIndexes[battler]], MON_DATA_PERSONALITY);
         u16 unownForm;
@@ -2786,7 +2787,7 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
             else
                 unownSpecies = NUM_SPECIES + unownForm;  // Use one of the other Unown letters.
         }
-        else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON)
+        else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_BASCULIN || species == SPECIES_AEGISLASH || species == SPECIES_EISCUE)
         {
             unownForm = (personalityValue >> 8) % 2;
             if (!unownForm)
@@ -2795,6 +2796,12 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
             {
                 if (species == SPECIES_SHELLOS)
                     unownSpecies = SPECIES_SHELLOS_EAST_SEA;
+                else if (species == SPECIES_BASCULIN)
+                    unownSpecies = SPECIES_BASCULIN_BLUE_STRIPED;
+                else if (species == SPECIES_AEGISLASH)
+                    unownSpecies = SPECIES_AEGISLASH_BLADE;
+                else if (species == SPECIES_EISCUE)
+                    unownSpecies = SPECIES_EISCUE_NOICE_FACE;
                 else
                     unownSpecies = SPECIES_GASTRODON_EAST_SEA;
             }
@@ -2870,13 +2877,18 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
             else
                 unownSpecies = unownForm + SPECIES_ALCREMIE_RUBY_CREAM - 1;
         }
-        else if (species == SPECIES_TATSUGIRI)
+        else if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
         {
             unownForm = (personalityValue >> 8) % 3;
             if (!unownForm)
                 unownSpecies = species;
             else
-                unownSpecies = unownForm + SPECIES_TATSUGIRI_DROOPY - 1;
+            {
+                if (species == SPECIES_LYCANROC)
+                    unownSpecies = unownForm + SPECIES_LYCANROC_MIDNIGHT - 1;
+                else
+                    unownSpecies = unownForm + SPECIES_TATSUGIRI_DROOPY - 1;
+            }
         }
         else if (species == SPECIES_TOXTRICITY)
         {

@@ -787,4 +787,18 @@
 #define METATILE_Underwater_FloorShadow  0x228
 #define METATILE_Underwater_RockWall     0x21E
 
+// gTileset_Unused1
+#define METATILE_Unused1_Congrat1  0x230
+#define METATILE_Unused1_Congrat2  0x231
+#define METATILE_Unused1_Congrat3  0x232
+#define METATILE_Unused1_Congrat4  0x233
+#define METATILE_Unused1_Congrat5  0x234
+#define METATILE_Unused1_Congrat6  0x235
+#define METATILE_Unused1_Congrat7  0x236
+#define METATILE_Unused1_ForReal1  0x220
+#define METATILE_Unused1_ForReal2  0x221
+#define METATILE_Unused1_ForReal3  0x222
+#define METATILE_Unused1_ForReal4  0x223
+#define METATILE_Unused1_ForReal5  0x21B
+
 #endif // GUARD_METATILE_LABELS_H

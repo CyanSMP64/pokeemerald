@@ -22,9 +22,9 @@ DirectSoundWaveData_dp_ew_pop_brass_3tp_sus_83::
 DirectSoundWaveData_dp_sd90_harmonica2::
 	.incbin "sound/direct_sound_samples/dp_sd90_harmonica2.bin"
 	
-@	.align 2
-@DirectSoundWaveData_dp_retro_sampler_organ_b3_ham_60::
-@	.incbin "sound/direct_sound_samples/dp_retro_sampler_organ_b3_ham_60.bin"
+	.align 2
+DirectSoundWaveData_dp_retro_sampler_organ_b3_ham_60::
+	.incbin "sound/direct_sound_samples/dp_retro_sampler_organ_b3_ham_60.bin"
 	
 	.align 2
 DirectSoundWaveData_dp_retro_sampler_organ_b3_ham_72::
@@ -62,6 +62,14 @@ DirectSoundWaveData_dp_sd90_strings2_60::
 DirectSoundWaveData_dp_sd90_strings2_72::
 	.incbin "sound/direct_sound_samples/dp_sd90_strings2_72.bin"
 	
+@	.align 2
+@DirectSoundWaveData_dp_ew_grand_piano_24::
+@	.incbin "sound/direct_sound_samples/dp_ew_grand_piano_24.bin"
+@	
+	.align 2
+DirectSoundWaveData_dp_ew_grand_piano_36::
+	.incbin "sound/direct_sound_samples/dp_ew_grand_piano_36.bin"
+@	
 @	.align 2
 @DirectSoundWaveData_dp_ew_grand_piano_43::
 @	.incbin "sound/direct_sound_samples/dp_ew_grand_piano_43.bin"
@@ -182,9 +190,9 @@ DirectSoundWaveData_dp_sd90_violin_vib_60::
 DirectSoundWaveData_dp_sd90_violin_vib_72::
 	.incbin "sound/direct_sound_samples/dp_sd90_violin_vib_72.bin"
 	
-@	.align 2
-@DirectSoundWaveData_dp_sd90_violin_vib_84::
-@	.incbin "sound/direct_sound_samples/dp_sd90_violin_vib_84.bin"
+	.align 2
+DirectSoundWaveData_dp_sd90_violin_vib_84::
+	.incbin "sound/direct_sound_samples/dp_sd90_violin_vib_84.bin"
 	
 	.align 2
 DirectSoundWaveData_dp_qy70_doublsaw::
@@ -282,9 +290,9 @@ DirectSoundWaveData_dp_sd90_flute2_72::
 DirectSoundWaveData_dp_sd90_flute2_84::
 	.incbin "sound/direct_sound_samples/dp_sd90_flute2_84.bin"
 	
-@	.align 2
-@DirectSoundWaveData_dp_sd90_flute2_96::
-@	.incbin "sound/direct_sound_samples/dp_sd90_flute2_96.bin"
+	.align 2
+DirectSoundWaveData_dp_sd90_flute2_96::
+	.incbin "sound/direct_sound_samples/dp_sd90_flute2_96.bin"
 	
 	.align 2
 DirectSoundWaveData_dp_zg_woody_bass_31::
@@ -321,43 +329,43 @@ DirectSoundWaveData_dp_sd90_orchestra_snare::
 @	.align 2
 @DirectSoundWaveData_dp_sd90_vibraphone2_36::
 @	.incbin "sound/direct_sound_samples/dp_sd90_vibraphone2_36.bin"
-	
+
 	.align 2
 DirectSoundWaveData_dp_sd90_vibraphone2_48::
 	.incbin "sound/direct_sound_samples/dp_sd90_vibraphone2_48.bin"
-	
+
 	.align 2
 DirectSoundWaveData_dp_sd90_vibraphone2_60::
 	.incbin "sound/direct_sound_samples/dp_sd90_vibraphone2_60.bin"
-	
+
 	.align 2
 DirectSoundWaveData_dp_sd90_vibraphone2_72::
 	.incbin "sound/direct_sound_samples/dp_sd90_vibraphone2_72.bin"
-	
+
 	.align 2
 DirectSoundWaveData_dp_sd90_vibraphone2_84::
 	.incbin "sound/direct_sound_samples/dp_sd90_vibraphone2_84.bin"
-	
-@	.align 2
-@DirectSoundWaveData_dp_sd90_vibraphone2_96::
-@	.incbin "sound/direct_sound_samples/dp_sd90_vibraphone2_96.bin"
-	
+
+	.align 2
+DirectSoundWaveData_dp_sd90_vibraphone2_96::
+	.incbin "sound/direct_sound_samples/dp_sd90_vibraphone2_96.bin"
+
 	.align 2
 DirectSoundWaveData_dp_sd90_soft_rhodes_60::
 	.incbin "sound/direct_sound_samples/dp_sd90_soft_rhodes_60.bin"
-	
+
 	.align 2
 DirectSoundWaveData_dp_sd90_soft_rhodes_72::
 	.incbin "sound/direct_sound_samples/dp_sd90_soft_rhodes_72.bin"
-	
+
 	.align 2
 DirectSoundWaveData_dp_trinity_pop_u_wit_dis::
 	.incbin "sound/direct_sound_samples/dp_trinity_pop_u_wit_dis.bin"
-	
+
 	.align 2
 DirectSoundWaveData_dp_zg_bass_filter_slaps::
 	.incbin "sound/direct_sound_samples/dp_zg_bass_filter_slaps.bin"
-	
+
 	.align 2
 DirectSoundWaveData_dp_ps13_classic_choir_ahh_48::
 	.incbin "sound/direct_sound_samples/dp_ps13_classic_choir_ahh_48.bin"
@@ -374,9 +382,9 @@ DirectSoundWaveData_dp_sd90_tubular_bell2_48::
 DirectSoundWaveData_dp_sd90_tubular_bell2_60::
 	.incbin "sound/direct_sound_samples/dp_sd90_tubular_bell2_60.bin"
 	
-@	.align 2
-@DirectSoundWaveData_dp_sd90_tubular_bell2_72::
-@	.incbin "sound/direct_sound_samples/dp_sd90_tubular_bell2_72.bin"
+	.align 2
+DirectSoundWaveData_dp_sd90_tubular_bell2_72::
+	.incbin "sound/direct_sound_samples/dp_sd90_tubular_bell2_72.bin"
 @	
 @	.align 2
 @DirectSoundWaveData_dp_sd90_tubular_bell2_84::
@@ -433,55 +441,79 @@ DirectSoundWaveData_dp_sd90_whistle2::
 	.align 2
 DirectSoundWaveData_dp_sd90_tr808_snare::
 	.incbin "sound/direct_sound_samples/dp_sd90_tr808_snare.bin"
-	
+
 	.align 2
 DirectSoundWaveData_dp_dance_drums_ride::
 	.incbin "sound/direct_sound_samples/dp_dance_drums_ride.bin"
-		
+
 	.align 2
 DirectSoundWaveData_dp_sd90_standard2_high_conga::
 	.incbin "sound/direct_sound_samples/dp_sd90_standard2_high_conga.bin"
-		
+
 	.align 2
 DirectSoundWaveData_dp_sd90_standard2_muted_high_conga::
 	.incbin "sound/direct_sound_samples/dp_sd90_standard2_muted_high_conga.bin"
-		
+
 	.align 2
 DirectSoundWaveData_dp_sd90_standard2_open_triangle::
 	.incbin "sound/direct_sound_samples/dp_sd90_standard2_open_triangle.bin"
-		
-@	.align 2
-@DirectSoundWaveData_dp_sd90_fm_e_piano_60::
-@	.incbin "sound/direct_sound_samples/dp_sd90_fm_e_piano_60.bin"
-		
+
+	.align 2
+DirectSoundWaveData_dp_sd90_fm_e_piano_60::
+	.incbin "sound/direct_sound_samples/dp_sd90_fm_e_piano_60.bin"
+
 	.align 2
 DirectSoundWaveData_dp_sd90_fm_e_piano_72::
 	.incbin "sound/direct_sound_samples/dp_sd90_fm_e_piano_72.bin"
-		
+
 	.align 2
 DirectSoundWaveData_dp_ps41_violin_pizzicato_forte_67::
 	.incbin "sound/direct_sound_samples/dp_ps41_violin_pizzicato_forte_67.bin"
-		
+
 	.align 2
 DirectSoundWaveData_dp_ps41_violin_pizzicato_forte_79::
 	.incbin "sound/direct_sound_samples/dp_ps41_violin_pizzicato_forte_79.bin"
-		
+
 	.align 2
 DirectSoundWaveData_dp_ps16_stingray_bass_hard::
 	.incbin "sound/direct_sound_samples/dp_ps16_stingray_bass_hard.bin"
 
 	.align 2
+DirectSoundWaveData_dp_ps55_cello_section_61::
+	.incbin "sound/direct_sound_samples/dp_ps55_cello_section_61.bin"
+
+	.align 2
+DirectSoundWaveData_dp_ps51_french_horns_59::
+	.incbin "sound/direct_sound_samples/dp_ps51_french_horns_59.bin"
+
+@	.align 2
+@DirectSoundWaveData_dp_sd90_atack_clav1_36::
+@	.incbin "sound/direct_sound_samples/dp_sd90_atack_clav1_36.bin"
+@
+@	.align 2
+@DirectSoundWaveData_dp_sd90_atack_clav1_48::
+@	.incbin "sound/direct_sound_samples/dp_sd90_atack_clav1_48.bin"
+
+	.align 2
+DirectSoundWaveData_dp_sd90_atack_clav1_60::
+	.incbin "sound/direct_sound_samples/dp_sd90_atack_clav1_60.bin"
+
+	.align 2
+DirectSoundWaveData_dp_sy77_clarinet_60::
+	.incbin "sound/direct_sound_samples/dp_sy77_clarinet_60.bin"
+
+	.align 2
 DirectSoundWaveData_hg_sampletank_string_orchestra_60::
 	.incbin "sound/direct_sound_samples/hg_sampletank_string_orchestra_60.bin"
-	
+
 	.align 2
 DirectSoundWaveData_hg_sampletank_string_orchestra_69::
 	.incbin "sound/direct_sound_samples/hg_sampletank_string_orchestra_69.bin"
-	
+
 	.align 2
 DirectSoundWaveData_hg_sampletank_string_orchestra_77::
 	.incbin "sound/direct_sound_samples/hg_sampletank_string_orchestra_77.bin"
-	
+
 	.align 2
 DirectSoundWaveData_hg_sampletank_string_orchestra_84::
 	.incbin "sound/direct_sound_samples/hg_sampletank_string_orchestra_84.bin"

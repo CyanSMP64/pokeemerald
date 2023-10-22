@@ -179,11 +179,12 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
 
     if (GetBattlerSide(battlerId) == B_SIDE_PLAYER || IsContest())
     {
-        if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON
+        if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON || species == SPECIES_BASCULIN
         || species == SPECIES_UNFEZANT || species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_FRILLISH || species == SPECIES_JELLICENT || species == SPECIES_VIVILLON
         || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES || species == SPECIES_MEOWSTIC || species == SPECIES_PUMPKABOO
         || species == SPECIES_GOURGEIST || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_TOXTRICITY || species == SPECIES_ALCREMIE || species == SPECIES_BASCULEGION
-        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE)
+        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE
+        || species == SPECIES_AEGISLASH || species == SPECIES_LYCANROC || species == SPECIES_EISCUE)
         {
             if (IsContest())
             {
@@ -208,7 +209,7 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
                 else
                     coordSpecies = letter + SPECIES_UNOWN_B - 1;
             }
-            else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON)
+            else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_BASCULIN || species == SPECIES_AEGISLASH || species == SPECIES_EISCUE)
             {
                 letter = (personality >> 8) % 2;
                 if (!letter)
@@ -217,6 +218,12 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
                 {
                     if (species == SPECIES_SHELLOS)
                         coordSpecies = SPECIES_SHELLOS_EAST_SEA;
+                    else if (species == SPECIES_BASCULIN)
+                        coordSpecies = SPECIES_BASCULIN_BLUE_STRIPED;
+                    else if (species == SPECIES_AEGISLASH)
+                        coordSpecies = SPECIES_AEGISLASH_BLADE;
+                    else if (species == SPECIES_EISCUE)
+                        coordSpecies = SPECIES_EISCUE_NOICE_FACE;
                     else
                         coordSpecies = SPECIES_GASTRODON_EAST_SEA;
                 }
@@ -292,13 +299,18 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
                 else
                     coordSpecies = letter + SPECIES_ALCREMIE_RUBY_CREAM - 1;
             }
-            else if (species == SPECIES_TATSUGIRI)
+            else if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
             {
                 letter = (personality >> 8) % 3;
                 if (!letter)
                     coordSpecies = species;
                 else
-                    coordSpecies = letter + SPECIES_TATSUGIRI_DROOPY - 1;
+                {
+                    if (species == SPECIES_LYCANROC)
+                        coordSpecies = letter + SPECIES_LYCANROC_MIDNIGHT - 1;
+                    else
+                        coordSpecies = letter + SPECIES_TATSUGIRI_DROOPY - 1;
+                }
             }
             else if (species == SPECIES_TOXTRICITY)
             {
@@ -355,11 +367,12 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
     }
     else
     {
-        if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON
+        if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON || species == SPECIES_BASCULIN
         || species == SPECIES_UNFEZANT || species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_FRILLISH || species == SPECIES_JELLICENT || species == SPECIES_VIVILLON
         || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES || species == SPECIES_MEOWSTIC || species == SPECIES_PUMPKABOO
         || species == SPECIES_GOURGEIST || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_TOXTRICITY || species == SPECIES_ALCREMIE || species == SPECIES_BASCULEGION
-        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE)
+        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE
+        || species == SPECIES_AEGISLASH || species == SPECIES_LYCANROC || species == SPECIES_EISCUE)
         {
             spriteInfo = gBattleSpritesDataPtr->battlerData;
             if (!spriteInfo[battlerId].transformSpecies)
@@ -374,7 +387,7 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
                 else
                     coordSpecies = letter + SPECIES_UNOWN_B - 1;
             }
-            else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON)
+            else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_BASCULIN || species == SPECIES_AEGISLASH || species == SPECIES_EISCUE)
             {
                 letter = (personality >> 8) % 2;
                 if (!letter)
@@ -383,6 +396,12 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
                 {
                     if (species == SPECIES_SHELLOS)
                         coordSpecies = SPECIES_SHELLOS_EAST_SEA;
+                    else if (species == SPECIES_BASCULIN)
+                        coordSpecies = SPECIES_BASCULIN_BLUE_STRIPED;
+                    else if (species == SPECIES_AEGISLASH)
+                        coordSpecies = SPECIES_AEGISLASH_BLADE;
+                    else if (species == SPECIES_EISCUE)
+                        coordSpecies = SPECIES_EISCUE_NOICE_FACE;
                     else
                         coordSpecies = SPECIES_GASTRODON_EAST_SEA;
                 }
@@ -458,13 +477,18 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
                 else
                     coordSpecies = letter + SPECIES_ALCREMIE_RUBY_CREAM - 1;
             }
-            else if (species == SPECIES_TATSUGIRI)
+            else if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
             {
                 letter = (personality >> 8) % 3;
                 if (!letter)
                     coordSpecies = species;
                 else
-                    coordSpecies = letter + SPECIES_TATSUGIRI_DROOPY - 1;
+                {
+                    if (species == SPECIES_LYCANROC)
+                        coordSpecies = letter + SPECIES_LYCANROC_MIDNIGHT - 1;
+                    else
+                        coordSpecies = letter + SPECIES_TATSUGIRI_DROOPY - 1;
+                }
             }
             else if (species == SPECIES_TOXTRICITY)
             {
@@ -2451,11 +2475,12 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
             species = gContestResources->moveAnim->species;
             personality = gContestResources->moveAnim->personality;
         }
-        if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON
+        if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON || species == SPECIES_BASCULIN
         || species == SPECIES_UNFEZANT || species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_FRILLISH || species == SPECIES_JELLICENT || species == SPECIES_VIVILLON
         || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES || species == SPECIES_MEOWSTIC || species == SPECIES_PUMPKABOO
         || species == SPECIES_GOURGEIST || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_TOXTRICITY || species == SPECIES_ALCREMIE || species == SPECIES_BASCULEGION
-        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE)
+        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE
+        || species == SPECIES_AEGISLASH || species == SPECIES_LYCANROC || species == SPECIES_EISCUE)
         {
             if (species == SPECIES_UNOWN)
             {
@@ -2465,7 +2490,7 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                 else
                     unownSpecies = letter + SPECIES_UNOWN_B - 1;
             }
-            else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON)
+            else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_BASCULIN || species == SPECIES_AEGISLASH || species == SPECIES_EISCUE)
             {
                 letter = (personality >> 8) % 2;
                 if (!letter)
@@ -2474,6 +2499,12 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                 {
                     if (species == SPECIES_SHELLOS)
                         unownSpecies = SPECIES_SHELLOS_EAST_SEA;
+                    else if (species == SPECIES_BASCULIN)
+                        unownSpecies = SPECIES_BASCULIN_BLUE_STRIPED;
+                    else if (species == SPECIES_AEGISLASH)
+                        unownSpecies = SPECIES_AEGISLASH_BLADE;
+                    else if (species == SPECIES_EISCUE)
+                        unownSpecies = SPECIES_EISCUE_NOICE_FACE;
                     else
                         unownSpecies = SPECIES_GASTRODON_EAST_SEA;
                 }
@@ -2549,13 +2580,18 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                 else
                     unownSpecies = letter + SPECIES_ALCREMIE_RUBY_CREAM - 1;
             }
-            else if (species == SPECIES_TATSUGIRI)
+            else if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
             {
                 letter = (personality >> 8) % 3;
                 if (!letter)
                     unownSpecies = species;
                 else
-                    unownSpecies = letter + SPECIES_TATSUGIRI_DROOPY - 1;
+                {
+                    if (species == SPECIES_LYCANROC)
+                        unownSpecies = letter + SPECIES_LYCANROC_MIDNIGHT - 1;
+                    else
+                        unownSpecies = letter + SPECIES_TATSUGIRI_DROOPY - 1;
+                }
             }
             else if (species == SPECIES_TOXTRICITY)
             {
@@ -2626,11 +2662,12 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                 personality = gTransformedPersonalities[battlerId];
             }
 
-            if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON
+            if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON || species == SPECIES_BASCULIN
         || species == SPECIES_UNFEZANT || species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_FRILLISH || species == SPECIES_JELLICENT || species == SPECIES_VIVILLON
         || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES || species == SPECIES_MEOWSTIC || species == SPECIES_PUMPKABOO
         || species == SPECIES_GOURGEIST || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_TOXTRICITY || species == SPECIES_ALCREMIE || species == SPECIES_BASCULEGION
-        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE)
+        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE
+        || species == SPECIES_AEGISLASH || species == SPECIES_LYCANROC || species == SPECIES_EISCUE)
             {
                 if (species == SPECIES_UNOWN)
                 {
@@ -2640,7 +2677,7 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                     else
                         unownSpecies = letter + SPECIES_UNOWN_B - 1;
                 }
-                else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON)
+                else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_BASCULIN || species == SPECIES_AEGISLASH || species == SPECIES_EISCUE)
                 {
                     letter = (personality >> 8) % 2;
                     if (!letter)
@@ -2649,6 +2686,12 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                     {
                         if (species == SPECIES_SHELLOS)
                             unownSpecies = SPECIES_SHELLOS_EAST_SEA;
+                        else if (species == SPECIES_BASCULIN)
+                            unownSpecies = SPECIES_BASCULIN_BLUE_STRIPED;
+                        else if (species == SPECIES_AEGISLASH)
+                            unownSpecies = SPECIES_AEGISLASH_BLADE;
+                        else if (species == SPECIES_EISCUE)
+                            unownSpecies = SPECIES_EISCUE_NOICE_FACE;
                         else
                             unownSpecies = SPECIES_GASTRODON_EAST_SEA;
                     }
@@ -2724,13 +2767,18 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                     else
                         unownSpecies = letter + SPECIES_ALCREMIE_RUBY_CREAM - 1;
                 }
-                else if (species == SPECIES_TATSUGIRI)
+                else if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
                 {
                     letter = (personality >> 8) % 3;
                     if (!letter)
                         unownSpecies = species;
                     else
-                        unownSpecies = letter + SPECIES_TATSUGIRI_DROOPY - 1;
+                    {
+                        if (species == SPECIES_LYCANROC)
+                            unownSpecies = letter + SPECIES_LYCANROC_MIDNIGHT - 1;
+                        else
+                            unownSpecies = letter + SPECIES_TATSUGIRI_DROOPY - 1;
+                    }
                 }
                 else if (species == SPECIES_TOXTRICITY)
                 {
@@ -2795,11 +2843,12 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                 personality = gTransformedPersonalities[battlerId];
             }
 
-            if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON
+            if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON || species == SPECIES_BASCULIN
         || species == SPECIES_UNFEZANT || species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_FRILLISH || species == SPECIES_JELLICENT || species == SPECIES_VIVILLON
         || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES || species == SPECIES_MEOWSTIC || species == SPECIES_PUMPKABOO
         || species == SPECIES_GOURGEIST || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_TOXTRICITY || species == SPECIES_ALCREMIE || species == SPECIES_BASCULEGION
-        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE)
+        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE
+        || species == SPECIES_AEGISLASH || species == SPECIES_LYCANROC || species == SPECIES_EISCUE)
             {
                 if (species == SPECIES_UNOWN)
                 {
@@ -2809,7 +2858,7 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                     else
                         unownSpecies = letter + SPECIES_UNOWN_B - 1;
                 }
-                else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON)
+                else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_BASCULIN || species == SPECIES_AEGISLASH || species == SPECIES_EISCUE || species == SPECIES_AEGISLASH || species == SPECIES_EISCUE)
                 {
                     letter = (personality >> 8) % 2;
                     if (!letter)
@@ -2818,6 +2867,12 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                     {
                         if (species == SPECIES_SHELLOS)
                             unownSpecies = SPECIES_SHELLOS_EAST_SEA;
+                        else if (species == SPECIES_BASCULIN)
+                            unownSpecies = SPECIES_BASCULIN_BLUE_STRIPED;
+                        else if (species == SPECIES_AEGISLASH)
+                            unownSpecies = SPECIES_AEGISLASH_BLADE;
+                        else if (species == SPECIES_EISCUE)
+                            unownSpecies = SPECIES_EISCUE_NOICE_FACE;
                         else
                             unownSpecies = SPECIES_GASTRODON_EAST_SEA;
                     }
@@ -2893,13 +2948,18 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                     else
                         unownSpecies = letter + SPECIES_ALCREMIE_RUBY_CREAM - 1;
                 }
-                else if (species == SPECIES_TATSUGIRI)
+                else if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
                 {
                     letter = (personality >> 8) % 3;
                     if (!letter)
                         unownSpecies = species;
                     else
-                        unownSpecies = letter + SPECIES_TATSUGIRI_DROOPY - 1;
+                    {
+                        if (species == SPECIES_LYCANROC)
+                            unownSpecies = letter + SPECIES_LYCANROC_MIDNIGHT - 1;
+                        else
+                            unownSpecies = letter + SPECIES_TATSUGIRI_DROOPY - 1;
+                    }
                 }
                 else if (species == SPECIES_TOXTRICITY)
                 {

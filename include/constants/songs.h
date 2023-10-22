@@ -285,10 +285,20 @@
 #define MUS_HG_VS_SUICUNE               285
 #define MUS_HG_VS_LUGIA                 286
 #define MUS_HG_VS_HO_OH                 287
+#define MUS_DP_VS_UXIE_MESPRIT_AZELF    288
+#define MUS_DP_VS_LEGEND                289
+#define MUS_DP_VS_ARCEUS                290
+#define MUS_PL_VS_GIRATINA              291
+#define MUS_BW_VS_LEGEND                292
+#define MUS_BW_VS_RESHIRAM              293
+#define MUS_BW_VS_KYUREM                294
+#define MUS_B2_VS_BLACK_WHITE_KYUREM    295
+#define MUS_BW_VS_ZEKROM                296
 #define SE_DINKDONK                     306
 #define MUS_B2_VS_CHAMPION_HOENN        312
 #define MUS_B2_VICTORY_PWT              313
 #define SE_UTVANISH                     327
+#define MUS_SMWEND                      328
 
 // Music
 #define MUS_LITTLEROOT_TEST         350 // MUS_TETSUJI          // Unused, likely a test track.

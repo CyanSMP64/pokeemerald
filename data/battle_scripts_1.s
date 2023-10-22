@@ -259,9 +259,9 @@ BattleScript_HitFromAtkAnimation::
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
 	critmessage
-	waitmessage 1
+	waitmessage 16
 	resultmessage
-	waitmessage 1
+	waitmessage 8
 	seteffectwithchance
 	tryfaintmon BS_TARGET
 BattleScript_MoveEnd::
@@ -278,7 +278,7 @@ BattleScript_MoveMissedPause::
 BattleScript_MoveMissed::
 	effectivenesssound
 	resultmessage
-	waitmessage 1
+	waitmessage 8
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectSleep::
@@ -337,9 +337,9 @@ BattleScript_EffectAbsorb::
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
 	critmessage
-	waitmessage 1
+	waitmessage 16
 	resultmessage
-	waitmessage 1
+	waitmessage 8
 	negativedamage
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
 	jumpifability BS_TARGET, ABILITY_LIQUID_OOZE, BattleScript_AbsorbLiquidOoze
@@ -398,9 +398,9 @@ BattleScript_ExplosionLoop:
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
 	critmessage
-	waitmessage 1
+	waitmessage 16
 	resultmessage
-	waitmessage 1
+	waitmessage 8
 	tryfaintmon BS_TARGET
 	moveendto MOVEEND_NEXT_TARGET
 	jumpifnexttargetvalid BattleScript_ExplosionLoop
@@ -409,7 +409,7 @@ BattleScript_ExplosionLoop:
 BattleScript_ExplosionMissed:
 	effectivenesssound
 	resultmessage
-	waitmessage 1
+	waitmessage 8
 	moveendto MOVEEND_NEXT_TARGET
 	jumpifnexttargetvalid BattleScript_ExplosionLoop
 	tryfaintmon BS_ATTACKER
@@ -447,9 +447,9 @@ BattleScript_DreamEaterWorked:
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
 	critmessage
-	waitmessage 1
+	waitmessage 16
 	resultmessage
-	waitmessage 1
+	waitmessage 8
 	negativedamage
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
 	healthbarupdate BS_ATTACKER
@@ -630,9 +630,9 @@ BattleScript_DoMultiHit::
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
 	critmessage
-	waitmessage 1
+	waitmessage 16
 	printstring STRINGID_EMPTYSTRING3
-	waitmessage 1
+	waitmessage 8
 	addbyte sMULTIHIT_STRING + 4, 1
 	moveendto MOVEEND_NEXT_TARGET
 	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, MOVE_RESULT_FOE_ENDURED, BattleScript_MultiHitPrintStrings
@@ -642,7 +642,7 @@ BattleScript_MultiHitNoMoreHits::
 	pause 1
 BattleScript_MultiHitPrintStrings::
 	resultmessage
-	waitmessage 1
+	waitmessage 8
 	jumpifmovehadnoeffect BattleScript_MultiHitEnd
 	copyarray gBattleTextBuff1, sMULTIHIT_STRING, 6
 	printstring STRINGID_HITXTIMES
@@ -1412,9 +1412,9 @@ BattleScript_DoTripleKickAttack::
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
 	critmessage
-	waitmessage 1
+	waitmessage 16
 	printstring STRINGID_EMPTYSTRING3
-	waitmessage 1
+	waitmessage 8
 	moveendto MOVEEND_NEXT_TARGET
 	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, MOVE_RESULT_FOE_ENDURED, BattleScript_TripleKickPrintStrings
 	decrementmultihit BattleScript_TripleKickLoop
@@ -1859,9 +1859,9 @@ BattleScript_DoHitAllWithUndergroundBonus::
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
 	critmessage
-	waitmessage 1
+	waitmessage 16
 	resultmessage
-	waitmessage 1
+	waitmessage 8
 	printstring STRINGID_EMPTYSTRING3
 	waitmessage 1
 	tryfaintmon BS_TARGET
@@ -1961,9 +1961,9 @@ BattleScript_BeatUpAttack::
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
 	critmessage
-	waitmessage 1
+	waitmessage 16
 	resultmessage
-	waitmessage 1
+	waitmessage 8
 	tryfaintmon BS_TARGET
 	moveendto MOVEEND_NEXT_TARGET
 	goto BattleScript_BeatUpLoop
@@ -2059,7 +2059,7 @@ BattleScript_ButItFailed::
 	pause 30
 	orbyte gMoveResultFlags, MOVE_RESULT_FAILED
 	resultmessage
-	waitmessage 1
+	waitmessage 8
 	goto BattleScript_MoveEnd
 
 BattleScript_NotAffected::
@@ -2441,9 +2441,9 @@ BattleScript_BrickBreakDoHit::
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
 	critmessage
-	waitmessage 1
+	waitmessage 16
 	resultmessage
-	waitmessage 1
+	waitmessage 8
 	seteffectwithchance
 	tryfaintmon BS_TARGET
 	goto BattleScript_MoveEnd
@@ -2622,7 +2622,7 @@ BattleScript_TeeterDanceAlreadyConfused::
 
 BattleScript_TeeterDanceMissed::
 	resultmessage
-	waitmessage 1
+	waitmessage 8
 	goto BattleScript_TeeterDanceDoMoveEndIncrement
 
 BattleScript_EffectMudSport::
@@ -3136,9 +3136,9 @@ BattleScript_PursuitDmgOnSwitchOut::
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
 	critmessage
-	waitmessage 1
+	waitmessage 16
 	resultmessage
-	waitmessage 1
+	waitmessage 8
 	tryfaintmon BS_TARGET
 	moveendfromto MOVEEND_ON_DAMAGE_ABILITIES, MOVEEND_CHOICE_MOVE
 	getbattlerfainted BS_TARGET
@@ -3527,7 +3527,7 @@ BattleScript_DoFutureAttackHit::
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
 	resultmessage
-	waitmessage 1
+	waitmessage 8
 	tryfaintmon BS_TARGET
 	checkteamslost BattleScript_FutureAttackEnd
 BattleScript_FutureAttackEnd::
@@ -3541,7 +3541,7 @@ BattleScript_FutureAttackMiss::
 	setbyte gMoveResultFlags, 0
 	orbyte gMoveResultFlags, MOVE_RESULT_FAILED
 	resultmessage
-	waitmessage 1
+	waitmessage 8
 	setbyte gMoveResultFlags, 0
 	end2
 

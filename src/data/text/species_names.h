@@ -1035,6 +1035,13 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_MIRAIDON] = _("Miraidon"),
     [SPECIES_WALKING_WAKE] = _("WalkinWake"),
     [SPECIES_IRON_LEAVES] = _("IronLeaves"),
+    [SPECIES_DIPPLIN] = _("Dipplin"),
+    [SPECIES_POLTCHAGEIST] = _("Polchgeist"),
+    [SPECIES_SINISTCHA] = _("Sinistcha"),
+    [SPECIES_OKIDOGI] = _("Okidogi"),
+    [SPECIES_MUNKIDORI] = _("Munkidori"),
+    [SPECIES_FEZANDIPITI] = _("Fezandipti"),
+    [SPECIES_OGERPON] = _("Ogerpon"),
 
     // Megas
     [SPECIES_VENUSAUR_MEGA] = _("VenusaurM"),
@@ -1160,6 +1167,9 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_DEOXYS_ATTACK] = _("DeoxysA"),
     [SPECIES_DEOXYS_DEFENSE] = _("DeoxysD"),
     [SPECIES_DEOXYS_SPEED] = _("DeoxysS"),
+    // Burmy
+    [SPECIES_BURMY_SANDY_CLOAK] = _("BurmyS"),
+    [SPECIES_BURMY_TRASH_CLOAK] = _("BurmyT"),
     // Wormadam
     [SPECIES_WORMADAM_SANDY_CLOAK] = _("WormadamS"),
     [SPECIES_WORMADAM_TRASH_CLOAK] = _("WormadamT"),
@@ -1176,8 +1186,7 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     // Shaymin
     [SPECIES_SHAYMIN_SKY] = _("ShayminS"),
     // Basculin
-    [SPECIES_BASCULIN_BLUE_STRIPED] = _("BasculinB"),
-    [SPECIES_BASCULIN_WHITE_STRIPED] = _("BasculinW"),
+    [SPECIES_BASCULIN_WHITE_STRIPED] = _("BasculinH"),
     // Darmanitan
     [SPECIES_DARMANITAN_ZEN_MODE] = _("DarmanitaZ"),
     [SPECIES_DARMANITAN_ZEN_MODE_GALARIAN] = _("DarmanitZG"),
@@ -1193,8 +1202,6 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_MELOETTA_PIROUETTE] = _("MeloettaP"),
     [SPECIES_GRENINJA_ASH] = _("GreninjaA"),
     [SPECIES_FLOETTE_ETERNAL_FLOWER] = _("FloetteE"),
-    // Aegislash
-    [SPECIES_AEGISLASH_BLADE] = _("AegislashB"),
     // Zygarde
     [SPECIES_ZYGARDE_10] = _("Zygarde10"),
     [SPECIES_ZYGARDE_COMPLETE] = _("ZygardeC"),
@@ -1204,9 +1211,6 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_ORICORIO_POM_POM] = _("OricorioE"),
     [SPECIES_ORICORIO_PAU] = _("OricorioP"),
     [SPECIES_ORICORIO_SENSU] = _("OricorioG"),
-    // Lycanroc
-    [SPECIES_LYCANROC_MIDNIGHT] = _("LycanrocM"),
-    [SPECIES_LYCANROC_DUSK] = _("LycanrocD"),
     // Wishiwashi
     [SPECIES_WISHIWASHI_SCHOOL] = _("WishiwashS"),
     [SPECIES_MINIOR_CORE_RED] = _("MiniorC"),
@@ -1214,9 +1218,6 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_NECROZMA_DUSK_MANE] = _("NecrozmaDM"),
     [SPECIES_NECROZMA_DAWN_WINGS] = _("NecrozmaDW"),
     [SPECIES_NECROZMA_ULTRA] = _("NecrozmaU"),
-    // Eiscue
-    [SPECIES_EISCUE_NOICE_FACE] = _("EiscueN"),
-    // Indeedee
     [SPECIES_INDEEDEE_FEMALE] = _("IndeedeeF"),
     // Zacian
     [SPECIES_ZACIAN_CROWNED_SWORD] = _("ZacianC"),
@@ -1227,6 +1228,10 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     // Calyrex
     [SPECIES_CALYREX_ICE_RIDER] = _("CalyrexI"),
     [SPECIES_CALYREX_SHADOW_RIDER] = _("CalyrexS"),
+    [SPECIES_URSALUNA_BLOODMOON] = _("UrsalunaB"),
     // Palafin
     [SPECIES_PALAFIN_HERO] = _("PalafinH"),
+    [SPECIES_OGERPON_WELLSPRING] = _("OgerponW"),
+    [SPECIES_OGERPON_HEARTHFLAME] = _("OgerponF"),
+    [SPECIES_OGERPON_CORNERSTONE] = _("OgerponR"),
 };

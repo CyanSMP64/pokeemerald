@@ -1,7 +1,20 @@
 .set LOCALID_STEVEN, 1
 
 MeteorFalls_StevensCave_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, MeteorFalls_StevensCave_OnLoad
 	.byte 0
+
+MeteorFalls_StevensCave_OnLoad:
+	call_if_set FLAG_DEFEATED_METEOR_FALLS_STEVEN, MeteorFalls_StevensCave_EventScript_OpenEndCave
+	end
+
+MeteorFalls_StevensCave_EventScript_OpenEndCave::
+	setmetatile 24, 6, METATILE_MeteorFalls_CaveEntrance_Top, TRUE
+	setmetatile 23, 7, METATILE_MeteorFalls_CaveEntrance_Left, TRUE
+	setmetatile 24, 7, METATILE_MeteorFalls_CaveEntrance_Bottom, FALSE
+	setmetatile 25, 7, METATILE_MeteorFalls_CaveEntrance_Right, TRUE
+	setvar VAR_TEMP_0, 1
+	return
 
 MeteorFalls_StevensCave_EventScript_Steven::
 	lock
@@ -17,7 +30,28 @@ MeteorFalls_StevensCave_EventScript_Steven::
 	msgbox MeteorFalls_StevensCave_Text_ShouldKnowHowGoodIAmExpectWorst, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_STEVEN, MeteorFalls_StevensCave_Text_StevenDefeat
 	msgbox MeteorFalls_StevensCave_Text_MyPredictionCameTrue, MSGBOX_DEFAULT
+	closemessage
+	delay 10
 	setflag FLAG_DEFEATED_METEOR_FALLS_STEVEN
+	playse SE_UNLOCK
+	call MeteorFalls_StevensCave_EventScript_OpenEndCave
+	special DrawWholeMapView
+	release
+	end
+
+MeteorFalls_StevensCave_EventScript_SaveBeforeEndRoom::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceUp
+	waitmovement 0
+	delay 30
+	call Common_EventScript_SaveGame
+	goto_if_eq VAR_RESULT, 0, MeteorFalls_StevensCave_EventScript_SaveCancelled
+	release
+	end
+
+MeteorFalls_StevensCave_EventScript_SaveCancelled::
+	applymovement OBJ_EVENT_ID_PLAYER, MeteorFalls_StevensCave_Movement_MoveAwayFromCave
+	waitmovement 0
 	release
 	end
 
@@ -27,6 +61,10 @@ MeteorFalls_StevensCave_EventScript_Defeated::
 	msgbox MeteorFalls_StevensCave_Text_MyPredictionCameTrue, MSGBOX_DEFAULT
 	release
 	end
+
+MeteorFalls_StevensCave_Movement_MoveAwayFromCave:
+	walk_left
+	step_end
 
 MeteorFalls_StevensCave_Text_ShouldKnowHowGoodIAmExpectWorst:
 	.string "STEVEN: Oh, wow, {PLAYER}{KUN}.\n"

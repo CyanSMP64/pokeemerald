@@ -1292,3 +1292,33 @@ $(MID_SUBDIR)/mus_b2_victory_pwt.s: %.s: %.mid
 
 $(MID_SUBDIR)/se_utvanish.s: %.s: %.mid
 	$(MID) $< $@ -E -G128 -V127 -P5
+
+$(MID_SUBDIR)/mus_smwend.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G255 -V127 -X
+
+$(MID_SUBDIR)/mus_dp_vs_uxie_mesprit_azelf.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V078
+
+$(MID_SUBDIR)/mus_dp_vs_legend.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V092
+
+$(MID_SUBDIR)/mus_dp_vs_arceus.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V092
+
+$(MID_SUBDIR)/mus_pl_vs_giratina.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V105
+
+$(MID_SUBDIR)/mus_bw_vs_legend.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G282 -V106
+
+$(MID_SUBDIR)/mus_bw_vs_reshiram.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G276 -V091
+
+$(MID_SUBDIR)/mus_bw_vs_kyurem.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G276 -V091
+
+$(MID_SUBDIR)/mus_b2_vs_black_white_kyurem.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G284 -V125
+
+$(MID_SUBDIR)/mus_bw_vs_zekrom.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G281 -V091

@@ -4025,7 +4025,7 @@ static void Task_DisplayCaughtMonDexPage(u8 taskId)
 
 static void Task_HandleCaughtMonPageInput(u8 taskId)
 {
-    if (JOY_NEW(A_BUTTON | B_BUTTON))
+    if (JOY_NEW(A_BUTTON | B_BUTTON) && !IsCryPlayingOrClearCrySongs())
     {
         BeginNormalPaletteFade(PALETTES_BG, 0, 0, 16, RGB_BLACK);
         gSprites[gTasks[taskId].tMonSpriteId].callback = SpriteCB_SlideCaughtMonToCenter;

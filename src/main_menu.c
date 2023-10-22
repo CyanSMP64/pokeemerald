@@ -459,63 +459,36 @@ static const struct MenuAction sMenuActions_Gender[] = {
 
 static const u8 *const sMalePresetNames[] = {
     gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameTiara,
-};
-
-static const u8 *const sFemalePresetNames[] = {
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
-    gText_DefaultNameKimmy,
+    gText_DefaultNameBella,
+    gText_DefaultNameJayla,
+    gText_DefaultNameAllie,
+    gText_DefaultNameLianna,
+    gText_DefaultNameSara,
+    gText_DefaultNameMonica,
+    gText_DefaultNameCamila,
+    gText_DefaultNameAubree,
+    gText_DefaultNameRuthie,
+    gText_DefaultNameHazel,
+    gText_DefaultNameNadine,
+    gText_DefaultNameTanja,
+    gText_DefaultNameYasmin,
+    gText_DefaultNameNicola,
+    gText_DefaultNameLillie,
+    gText_DefaultNameTerra,
+    gText_DefaultNameLucy,
+    gText_DefaultNameHalie,
+    gText_DefaultNameStu,
+    gText_DefaultNameMilton,
+    gText_DefaultNameTom,
+    gText_DefaultNameKenny,
+    gText_DefaultNameReid,
+    gText_DefaultNameJude,
     gText_DefaultNameTiara,
 };
 
 // The number of male vs. female names is assumed to be the same.
 // If they aren't, the smaller of the two sizes will be used and any extra names will be ignored.
-#define NUM_PRESET_NAMES min(ARRAY_COUNT(sMalePresetNames), ARRAY_COUNT(sFemalePresetNames))
+#define NUM_PRESET_NAMES ARRAY_COUNT(sMalePresetNames)
 
 enum
 {
@@ -2117,10 +2090,7 @@ static void NewGameBirchSpeech_SetDefaultPlayerName(u8 nameId)
     const u8 *name;
     u8 i;
 
-    if (gSaveBlock2Ptr->playerGender == MALE)
-        name = sMalePresetNames[nameId];
-    else
-        name = sFemalePresetNames[nameId];
+    name = sMalePresetNames[nameId];
     for (i = 0; i < PLAYER_NAME_LENGTH; i++)
         gSaveBlock2Ptr->playerName[i] = name[i];
     gSaveBlock2Ptr->playerName[PLAYER_NAME_LENGTH] = EOS;

@@ -790,19 +790,105 @@ static u8 GetWildBattleTransition(void)
     u8 enemyLevel = GetMonData(&gEnemyParty[0], MON_DATA_LEVEL);
     u8 playerLevel = GetSumOfPlayerPartyLevel(1);
 
-    if (enemyLevel < playerLevel)
-    {
-        if (InBattlePyramid())
-            return B_TRANSITION_BLUR;
-        else
-            return sBattleTransitionTable_Wild[transitionType][0];
-    }
-    else
-    {
-        if (InBattlePyramid())
-            return B_TRANSITION_GRID_SQUARES;
-        else
-            return sBattleTransitionTable_Wild[transitionType][1];
+    switch (GetMonData(&gEnemyParty[0], MON_DATA_SPECIES, NULL))
+    {    
+    case SPECIES_ARTICUNO:
+    case SPECIES_ZAPDOS:
+    case SPECIES_MOLTRES:
+    case SPECIES_ARTICUNO_GALARIAN:
+    case SPECIES_ZAPDOS_GALARIAN:
+    case SPECIES_MOLTRES_GALARIAN:
+    case SPECIES_RAIKOU:
+    case SPECIES_ENTEI:
+    case SPECIES_SUICUNE:
+    case SPECIES_UXIE:
+    case SPECIES_MESPRIT:
+    case SPECIES_AZELF:
+    case SPECIES_HEATRAN:
+    case SPECIES_DARKRAI:
+    case SPECIES_CRESSELIA:
+    case SPECIES_COBALION:
+    case SPECIES_TERRAKION:
+    case SPECIES_VIRIZION:
+    case SPECIES_TORNADUS:
+    case SPECIES_THUNDURUS:
+    case SPECIES_LANDORUS:
+    case SPECIES_ENAMORUS:
+    case SPECIES_TORNADUS_THERIAN:
+    case SPECIES_THUNDURUS_THERIAN:
+    case SPECIES_LANDORUS_THERIAN:
+    case SPECIES_ENAMORUS_THERIAN:
+        return B_TRANSITION_BLACKHOLE;
+    case SPECIES_DEOXYS:
+    case SPECIES_DEOXYS_ATTACK:
+    case SPECIES_DEOXYS_DEFENSE:
+    case SPECIES_DEOXYS_SPEED:
+    case SPECIES_LUGIA:
+    case SPECIES_HO_OH:
+    case SPECIES_MEWTWO:
+    case SPECIES_MEWTWO_MEGA_X:
+    case SPECIES_MEWTWO_MEGA_Y:
+    case SPECIES_GIRATINA:
+    case SPECIES_GIRATINA_ORIGIN:
+        return B_TRANSITION_BLUR;
+    case SPECIES_DIALGA:
+    case SPECIES_PALKIA:
+    case SPECIES_DIALGA_ORIGIN:
+    case SPECIES_PALKIA_ORIGIN:
+    case SPECIES_RESHIRAM:
+    case SPECIES_ZEKROM:
+    case SPECIES_KYUREM:
+    case SPECIES_KYUREM_WHITE:
+    case SPECIES_KYUREM_BLACK:
+        return B_TRANSITION_BLACKHOLE_PULSATE;
+    case SPECIES_MEW:
+    case SPECIES_MANAPHY:
+    case SPECIES_PHIONE:
+    case SPECIES_SHAYMIN:
+    case SPECIES_SHAYMIN_SKY:
+    case SPECIES_ARCEUS:
+    case SPECIES_VICTINI:
+    case SPECIES_KELDEO:
+    case SPECIES_MELOETTA:
+    case SPECIES_MELOETTA_PIROUETTE:
+    case SPECIES_GENESECT:
+        return B_TRANSITION_GRID_SQUARES;
+    case SPECIES_REGIROCK:
+        return B_TRANSITION_REGIROCK;
+    case SPECIES_REGICE:
+        return B_TRANSITION_REGICE;
+    case SPECIES_REGISTEEL:
+        return B_TRANSITION_REGISTEEL;
+    case SPECIES_REGIGIGAS:
+    case SPECIES_REGIDRAGO:
+    case SPECIES_REGIELEKI:
+        return B_TRANSITION_BLACKHOLE; // temporary
+    case SPECIES_GROUDON:
+    case SPECIES_GROUDON_PRIMAL:
+        return B_TRANSITION_GROUDON;
+    case SPECIES_KYOGRE:
+    case SPECIES_KYOGRE_PRIMAL:
+        return B_TRANSITION_KYOGRE;
+    case SPECIES_RAYQUAZA:
+    case SPECIES_RAYQUAZA_MEGA:
+        return B_TRANSITION_RAYQUAZA;
+    default:
+        {
+            if (enemyLevel < playerLevel)
+            {
+                if (InBattlePyramid())
+                    return B_TRANSITION_BLUR;
+                else
+                    return sBattleTransitionTable_Wild[transitionType][0];
+            }
+            else
+            {
+                if (InBattlePyramid())
+                    return B_TRANSITION_GRID_SQUARES;
+                else
+                    return sBattleTransitionTable_Wild[transitionType][1];
+            }
+        }
     }
 }
 
