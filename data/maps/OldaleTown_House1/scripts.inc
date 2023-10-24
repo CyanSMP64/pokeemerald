@@ -25,6 +25,8 @@ OldaleTown_House1_EventScript_Woman::
 	special DaisyMassageServices
 	fadescreen FADE_FROM_BLACK
 	msgbox OldaleTown_House1_Text_AllDone, MSGBOX_DEFAULT
+	random 5
+	call_if_eq VAR_RESULT, 0, OldaleTown_House1_EventScript_ActivateAccuser
 	release
 	end
 
@@ -42,6 +44,11 @@ OldaleTown_House1_EventScript_NotEgg::
 	msgbox OldaleTown_House1_Text_Egg
 	release
 	end
+
+OldaleTown_House1_EventScript_ActivateAccuser::
+	setvar VAR_OLDALE_TOWN_STATE, 2
+	clearflag FLAG_HIDE_ACCUSER
+	return
 
 OldaleTown_House1_Text_LikeMeToRaiseFriendship:
 	.string "Would you like me to maximize your\n"

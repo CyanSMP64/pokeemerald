@@ -343,6 +343,10 @@ DirectSoundWaveData_undertale_vanish::
 	.incbin "sound/direct_sound_samples/undertale_vanish.bin"
 
 	.align 2
+DirectSoundWaveData_vineboom::
+	.incbin "sound/direct_sound_samples/cries/notcries/vineboom.bin"
+
+	.align 2
 DirectSoundWaveData_smwbass::
 	.incbin "sound/direct_sound_samples/smwbass.bin"
 

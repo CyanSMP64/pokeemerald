@@ -110,11 +110,10 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_THUNDER_STONE] = {gItemIcon_ThunderStone, gItemIconPalette_ThunderStone},
     [ITEM_WATER_STONE] = {gItemIcon_WaterStone, gItemIconPalette_WaterStone},
     [ITEM_LEAF_STONE] = {gItemIcon_LeafStone, gItemIconPalette_LeafStone},
-    // ????????
-    [ITEM_063] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_064] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_065] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
-    [ITEM_066] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_SHINY_STONE] = {gItemIcon_ShinyStone, gItemIconPalette_ShinyStone},
+    [ITEM_DUSK_STONE] = {gItemIcon_DuskStone, gItemIconPalette_DuskStone},
+    [ITEM_DAWN_STONE] = {gItemIcon_DawnStone, gItemIconPalette_DawnStone},
+    [ITEM_ICE_STONE] = {gItemIcon_IceStone, gItemIconPalette_IceStone},
     // Valuables
     [ITEM_TINY_MUSHROOM] = {gItemIcon_TinyMushroom, gItemIconPalette_Mushroom},
     [ITEM_BIG_MUSHROOM] = {gItemIcon_BigMushroom, gItemIconPalette_Mushroom},
@@ -244,7 +243,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_THICK_CLUB] = {gItemIcon_ThickClub, gItemIconPalette_ThickClub},
     [ITEM_STICK] = {gItemIcon_Stick, gItemIconPalette_Stick},
     // ????????
-    [ITEM_0E2] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_FAIRY_FEATHER] = {gItemIcon_FairyFeather, gItemIconPalette_FairyFeather},
     [ITEM_0E3] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0E4] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     [ITEM_0E5] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},

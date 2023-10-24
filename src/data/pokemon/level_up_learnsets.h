@@ -1,3 +1,17 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+3 - Axew
+4 - Torkoal
+5 - Xerneas
+6 - Magearna
+7 - Koraidon
+8 - Zeraora
+9 - Ho-Oh
+10 - Celebi
+11 - Zacian
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 #define LEVEL_UP_MOVE(lvl, move) ((lvl << 9) | move)
 
 static const u16 sBulbasaurLevelUpLearnset[] = {

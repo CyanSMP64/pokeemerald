@@ -1187,7 +1187,7 @@ const u32 gMonFrontPic_WooperPaldean[] = INCBIN_U32("graphics/pokemon/wooper/woo
 const u32 gMonPalette_WooperPaldean[] = INCBIN_U32("graphics/pokemon/wooper/wooper_paldea/normal.gbapal.lz");
 const u32 gMonBackPic_WooperPaldean[] = INCBIN_U32("graphics/pokemon/wooper/wooper_paldea/back.4bpp.lz");
 const u32 gMonShinyPalette_WooperPaldean[] = INCBIN_U32("graphics/pokemon/wooper/wooper_paldea/shiny.gbapal.lz");
-// const u8 gMonIcon_WooperPaldean[] = INCBIN_U8("graphics/pokemon/wooper/wooper_paldea/icon.4bpp");
+const u8 gMonIcon_WooperPaldean[] = INCBIN_U8("graphics/pokemon/wooper/wooper_paldea/icon.4bpp");
 // const u8 gMonFootprint_WooperPaldean[] = INCBIN_U8("graphics/pokemon/wooper/wooper_paldea/footprint.1bpp");
 
 const u32 gMonPalette_Quagsire[] = INCBIN_U32("graphics/pokemon/quagsire/normal.gbapal.lz");

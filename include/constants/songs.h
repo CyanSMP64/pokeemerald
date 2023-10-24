@@ -279,6 +279,7 @@
 
 
 // Custom music
+#define SE_VINEBOOM                     270
 #define MUS_DP_VS_DIALGA_PALKIA         275
 #define MUS_HG_VS_RAIKOU                283
 #define MUS_HG_VS_ENTEI                 284

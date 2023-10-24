@@ -139,7 +139,7 @@ const struct StaticPokemon gStaticPokemon[][9] = {
 
 const struct StaticPokemon gRoamingPokemon[][9] = {
     {{"CreateInitialRoamerMon", 0x1B, "CreateInitialRoamerMon", 0x4D, " // Latios"}, {NULL, 0x0, "CreateInitialRoamerMon", 0x59, NULL}},
-    {{"CreateInitialRoamerMon", 0x1F, "CreateInitialRoamerMon", 0x4D, " // Latias"}, {NULL, 0x0, "CreateInitialRoamerMon", 0x59, NULL}},
+    {{"CreateInitialRoamerMon", 0x23, "CreateInitialRoamerMon", 0x4D, " // Latias"}, {NULL, 0x0, "CreateInitialRoamerMon", 0x59, NULL}},
 };
 
 const struct TMText gTMTexts[] = {

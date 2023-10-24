@@ -654,9 +654,16 @@ SECTIONS {
         src/battle_anim_effects_3.o(.rodata);
         src/move_relearner.o(.rodata);
         src/use_pokeblock.o(.rodata);
+        src/field_region_map.o(.rodata);
+        src/bard_music.o(.rodata);
+    } =0
+
+    .rodata_2 0x0860f074 :
+    ALIGN(4)
+    {
+        src/menu.o(.rodata);
         src/battle_controller_wally.o(.rodata);
         src/player_pc.o(.rodata);
-        src/field_region_map.o(.rodata);
         src/battle_anim_throw.o(.rodata);
         src/hall_of_fame.o(.rodata);
         src/lottery_corner.o(.rodata);
@@ -668,7 +675,6 @@ SECTIONS {
         src/pokeblock_feed.o(.rodata);
         src/clear_save_data_screen.o(.rodata);
         src/evolution_graphics.o(.rodata);
-        src/bard_music.o(.rodata);
         src/battle_tv.o(.rodata);
         src/pokemon_animation.o(.rodata);
         src/battle_controller_recorded_opponent.o(.rodata);
@@ -676,15 +682,15 @@ SECTIONS {
         src/trainer_pokemon_sprites.o(.rodata);
         src/lilycove_lady.o(.rodata);
         src/battle_dome.o(.rodata);
-        src/battle_palace.o(.rodata);
-        src/match_call.o(.rodata);
         src/rotating_tile_puzzle.o(.rodata);
     } =0
 
-    .rodata_2 0x0860f074 :
+    .rodata_3 0x0861500c :
     ALIGN(4)
     {
-        src/menu.o(.rodata);
+        src/party_menu.o(.rodata);
+        src/battle_palace.o(.rodata);
+        src/match_call.o(.rodata);
         src/battle_factory_screen.o(.rodata);
         src/apprentice.o(.rodata);
         src/frontier_util.o(.rodata);
@@ -696,12 +702,6 @@ SECTIONS {
         src/list_menu.o(.rodata);
         src/save_location.o(.rodata);
         src/item_icon.o(.rodata);
-    } =0
-
-    .rodata_3 0x0861500c :
-    ALIGN(4)
-    {
-        src/party_menu.o(.rodata);
         src/pokedex_cry_screen.o(.rodata);
         src/credits.o(.rodata);
         src/intro_credits_graphics.o(.rodata);
@@ -1364,6 +1364,7 @@ SECTIONS {
     new_songs :
     ALIGN(4)
     {
+        sound/songs/midi/se_vineboom.o(.rodata);
         sound/songs/midi/mus_dp_vs_dialga_palkia.o(.rodata);
         sound/songs/midi/mus_hg_vs_raikou.o(.rodata);
         sound/songs/midi/mus_hg_vs_entei.o(.rodata);

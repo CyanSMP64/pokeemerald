@@ -1322,3 +1322,6 @@ $(MID_SUBDIR)/mus_b2_vs_black_white_kyurem.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_bw_vs_zekrom.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G281 -V091
+
+$(MID_SUBDIR)/se_vineboom.s: %.s: %.mid
+	$(MID) $< $@ -E -G128 -V127 -P5

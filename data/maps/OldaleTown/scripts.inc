@@ -1,10 +1,16 @@
 .set LOCALID_MART_EMPLOYEE, 2
 .set LOCALID_FOOTPRINTS_MAN, 3
 .set LOCALID_RIVAL, 4
+.set LOCALID_ACCUSER, 5
 
 OldaleTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, OldaleTown_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, OldaleTown_OnFrame
 	.byte 0
+
+OldaleTown_OnFrame:
+	map_script_2 VAR_OLDALE_TOWN_STATE, 2, OldaleTown_EventScript_Accuser
+	.2byte 0
 
 OldaleTown_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
@@ -290,6 +296,105 @@ OldaleTown_EventScript_DoExitMovement2::
 	waitmovement 0
 	return
 
+OldaleTown_EventScript_Accuser::
+	lockall
+	playse SE_PIN
+	applymovement LOCALID_ACCUSER, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_ACCUSER, Common_Movement_Delay48
+	waitmovement 0
+	playbgm MUS_GAME_CORNER, FALSE
+	delay 6
+	playse SE_LEDGE
+	applymovement LOCALID_ACCUSER, OldaleTown_Movement_AccuserJump
+	waitmovement 0
+	playse SE_LEDGE
+	applymovement LOCALID_ACCUSER, OldaleTown_Movement_AccuserJump
+	waitmovement 0
+	delay 6
+	applymovement LOCALID_ACCUSER, OldaleTown_Movement_AccuserRunRightLeft
+	waitmovement 0
+	playse SE_LEDGE
+	applymovement LOCALID_ACCUSER, OldaleTown_Movement_AccuserJump
+	waitmovement 0
+	playse SE_LEDGE
+	applymovement LOCALID_ACCUSER, OldaleTown_Movement_AccuserJump
+	waitmovement 0
+	applymovement LOCALID_ACCUSER, OldaleTown_Movement_AccuserSpinApproach
+	waitmovement 0
+	msgbox OldaleTown_Text_Accuser1, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_ACCUSER, OldaleTown_Movement_AccuserExit
+	waitmovement 0
+	removeobject LOCALID_ACCUSER
+	setflag FLAG_HIDE_ACCUSER
+	fadedefaultbgm
+	goto_if_unset FLAG_ADVENTURE_STARTED, OldaleTown_EventScript_AccuserLeaveNoDex
+	setvar VAR_OLDALE_TOWN_STATE, 1
+	releaseall
+	end
+
+OldaleTown_EventScript_AccuserLeaveNoDex::
+	setvar VAR_OLDALE_TOWN_STATE, 0
+	releaseall
+	end
+
+OldaleTown_Movement_AccuserJump:
+	jump_in_place_up
+	step_end
+
+OldaleTown_Movement_AccuserRunRightLeft:
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	delay_4
+	walk_in_place_up
+	delay_4
+	step_end
+
+OldaleTown_Movement_AccuserSpinApproach:
+	face_up
+	delay_4
+	delay_2
+	face_right
+	delay_4
+	delay_2
+	face_down
+	delay_4
+	delay_2
+	face_left
+	delay_4
+	delay_2
+	face_up
+	delay_16
+	walk_up
+	step_end
+
+OldaleTown_Movement_AccuserExit:
+	delay_16
+	face_down
+	delay_16
+	walk_fast_down
+	walk_fast_down
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
 OldaleTown_Movement_RivalApproachPlayer1:
 	walk_faster_left
 	walk_faster_left
@@ -391,3 +496,24 @@ OldaleTown_Text_TownSign:
 	.string "OLDALE TOWN\n"
 	.string "“Where things start off scarce.”$"
 
+OldaleTown_Text_Accuser1:
+	.string "Well, well, how d'ya do, young 'un?\p"
+	.string "Huh? Y'don't know me?\n"
+	.string "Who am I, y'ask?\p"
+	.string "Why, I'm the ACCUSER!\n"
+	.string "And I'm here to tell ya somethin'.\p"
+	.string "Your run…{PAUSE 30}\n"
+	.string "is officially…{PAUSE 30} {PLAY_SE SE_VINEBOOM}cursed!\p"
+	.string "From now on for the rest of the run,\n"
+	.string "chat will yell at the streamer to\l"
+	.string "reset!\p"
+	.string "They will flood the chat with\n"
+	.string "asterisks!\p"
+	.string "And laugh at the streamer! KEKW\p"
+	.string "Y'understand the consequences of\n"
+	.string "cheatin', right?\p"
+	.string "Go touch grass or somethin',\n"
+	.string "run around for a while!\l"
+	.string "That oughta teach y'all a lesson!\p"
+	.string "Y'best remember to reset the run!\n"
+	.string "Or don't! Haha! Be seein' ya later!$"
