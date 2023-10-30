@@ -143,7 +143,7 @@ const struct StaticPokemon gRoamingPokemon[][9] = {
 };
 
 const struct TMText gTMTexts[] = {
-    { 3, 15,  0,  1,  0x93, "[move] is the ultimate technique.\\pDon’t waste it on weak Pokémon."},
+    { 3, 15,  0,  1,  0x93, "[move] is the ultimate technique."},
     { 4, 14,  0,  1,  0xA2, "TATE: That TM04 contains... LIZA: [move]!\\pTATE: It’s a move that’s perfect... LIZA: For any POKéMON!"},
     { 5,  0, 29, 12,  0x0D, "All my POKéMON does is [move]... No one dares to come near me...\\pSigh... If you would, please take this TM away..."},
     { 5,  0, 29, 12,  0x2F, "TM05 contains [move]."},
