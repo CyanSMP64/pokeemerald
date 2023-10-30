@@ -78,7 +78,7 @@ BattleScript_TryNicknameCaughtMon::
 	trygivecaughtmonnick BattleScript_GiveCaughtMonEnd
 	givecaughtmon
 	printfromtable gCaughtMonStringIds
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_SuccessBallThrowEnd
 BattleScript_GiveCaughtMonEnd::
 	givecaughtmon
@@ -93,21 +93,21 @@ BattleScript_WallyBallThrow::
 
 BattleScript_ShakeBallThrow::
 	printfromtable gBallEscapeStringIds
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	jumpifword CMP_NO_COMMON_BITS, gBattleTypeFlags, BATTLE_TYPE_SAFARI, BattleScript_ShakeBallThrowEnd
 	jumpifbyte CMP_NOT_EQUAL, gNumSafariBalls, 0, BattleScript_ShakeBallThrowEnd
 	printstring STRINGID_OUTOFSAFARIBALLS
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	setbyte gBattleOutcome, B_OUTCOME_NO_SAFARI_BALLS
 BattleScript_ShakeBallThrowEnd::
 	finishaction
 
 BattleScript_TrainerBallBlock::
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	printstring STRINGID_TRAINERBLOCKEDBALL
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	printstring STRINGID_DONTBEATHIEF
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	finishaction
 
 BattleScript_PlayerUsesItem::
@@ -116,54 +116,54 @@ BattleScript_PlayerUsesItem::
 
 BattleScript_OpponentUsesHealItem::
 	printstring STRINGID_EMPTYSTRING3
-	pause 1
+	pause B_WAIT_TIME_MED
 	playse SE_USE_ITEM
 	printstring STRINGID_TRAINER1USEDITEM
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	useitemonopponent
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
 	healthbarupdate BS_ATTACKER
 	datahpupdate BS_ATTACKER
 	printstring STRINGID_PKMNSITEMRESTOREDHEALTH
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	updatestatusicon BS_ATTACKER
 	moveendcase MOVEEND_MIRROR_MOVE
 	finishaction
 
 BattleScript_OpponentUsesStatusCureItem::
 	printstring STRINGID_EMPTYSTRING3
-	pause 1
+	pause B_WAIT_TIME_MED
 	playse SE_USE_ITEM
 	printstring STRINGID_TRAINER1USEDITEM
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	useitemonopponent
 	printfromtable gTrainerItemCuredStatusStringIds
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	updatestatusicon BS_ATTACKER
 	moveendcase MOVEEND_MIRROR_MOVE
 	finishaction
 
 BattleScript_OpponentUsesXItem::
 	printstring STRINGID_EMPTYSTRING3
-	pause 1
+	pause B_WAIT_TIME_MED
 	playse SE_USE_ITEM
 	printstring STRINGID_TRAINER1USEDITEM
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	useitemonopponent
 	printfromtable gStatUpStringIds
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	moveendcase MOVEEND_MIRROR_MOVE
 	finishaction
 
 BattleScript_OpponentUsesGuardSpec::
 	printstring STRINGID_EMPTYSTRING3
-	pause 1
+	pause B_WAIT_TIME_MED
 	playse SE_USE_ITEM
 	printstring STRINGID_TRAINER1USEDITEM
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	useitemonopponent
 	printfromtable gMistUsedStringIds
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	moveendcase MOVEEND_MIRROR_MOVE
 	finishaction
 
@@ -174,29 +174,29 @@ BattleScript_RunByUsingItem::
 
 BattleScript_ActionWatchesCarefully:
 	printstring STRINGID_PKMNWATCHINGCAREFULLY
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	end2
 
 BattleScript_ActionGetNear:
 	printfromtable gSafariGetNearStringIds
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	end2
 
 BattleScript_ActionThrowPokeblock:
 	printstring STRINGID_THREWPOKEBLOCKATPKMN
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	playanimation BS_ATTACKER, B_ANIM_POKEBLOCK_THROW, NULL
 	printfromtable gSafariPokeblockResultStringIds
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	end2
 
 BattleScript_ActionWallyThrow:
 	printstring STRINGID_RETURNMON
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	returnatktoball
 	waitstate
 	trainerslidein BS_TARGET
 	waitstate
 	printstring STRINGID_YOUTHROWABALLNOWRIGHT
-	waitmessage 1
+	waitmessage B_WAIT_TIME_LONG
 	end2

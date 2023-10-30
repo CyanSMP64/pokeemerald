@@ -358,6 +358,9 @@ LilycoveCity_EventScript_MayBattleFrontier::
 LilycoveCity_EventScript_DefeatedBrendan::
 	msgbox LilycoveCity_Text_BrendanGoingBackToLittleroot, MSGBOX_DEFAULT
 	setvar VAR_RESULT, FALSE
+	call_if_set FLAG_BADGE06_GET, LilycoveCity_EventScript_CheckFinalBadge
+	call_if_eq VAR_RESULT, FALSE, LilycoveCity_EventScript_BrendanCollectBadges
+	call_if_eq VAR_RESULT, TRUE, LilycoveCity_EventScript_BrendanPokemonLeague
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_SWABLU_DOLL
 	goto LilycoveCity_EventScript_RivalFlyAway
@@ -480,28 +483,37 @@ LilycoveCity_Text_MayYouGoingToBattleFrontier:
 	.string "See you!$"
 
 LilycoveCity_Text_BrendanShoppingLetsBattle:
-	.string "BRENDAN: What up, nerd.\n"
-	.string "I'm ready to thrash you.\l"
-	.string "How about you?$"
+	.string "BRENDAN: Oh, hey, it's {PLAYER}.\p"
+	.string "I'm running an errand for my dad.\n"
+	.string "No, I'm not buying any DOLLS.\p"
+	.string "Anyways, it's been a while.\p"
+	.string "Want to have a battle to see who's been\n"
+	.string "raising POKéMON better?$"
 
 LilycoveCity_Text_BrendanNoConfidence:
-	.string "BRENDAN: Oh, boo-hoo.$"
+	.string "BRENDAN: Oh, what's the matter?\n"
+	.string "Don't have the confidence?$"
 
 LilycoveCity_Text_BrendanBattleMe:
-	.string "BRENDAN: Fight me, nerd.$"
+	.string "BRENDAN: Want to battle to see who's\n"
+	.string "been raising POKéMON better?$"
 
 LilycoveCity_Text_BrendanWontBeBeaten:
-	.string "BRENDAN: It's about time I kicked\n"
-	.string "your miserable ass.$"
+	.string "BRENDAN: Aww, but you know I'm not\n"
+	.string "going to lose to no {PLAYER}.$"
 
 LilycoveCity_Text_BrendanDefeat:
-	.string "Humph…$"
+	.string "Humph…\n"
+	.string "You've done a lot of raising.\p"
+	.string "That stings a bit--I had a head start\n"
+	.string "on you as a TRAINER…$"
 
 LilycoveCity_Text_BrendanGoingBackToLittleroot:
 	.string "BRENDAN: I…\n"
-	.string "I hope I never see you again!\l"
-	.string "Hahaha!\p"
-	.string "So long, nerd.$"
+	.string "I plan on going home to LITTLEROOT.\p"
+	.string "You know I'm helping out my dad on his\n"
+	.string "POKéDEX. It's coming together pretty\l"
+	.string "decently, so I should go show him.$"
 
 LilycoveCity_Text_BrendanYouGoingToCollectBadges:
 	.string "{PLAYER}, what are you going to do?\p"

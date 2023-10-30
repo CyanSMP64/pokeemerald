@@ -137,6 +137,7 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_HOUNDOUR]              = {{EVO_LEVEL, 24, SPECIES_HOUNDOOM}},
     [SPECIES_PHANPY]                = {{EVO_LEVEL, 25, SPECIES_DONPHAN}},
     [SPECIES_PORYGON2]              = {{EVO_LEVEL, 42, SPECIES_PORYGON_Z}},
+    [SPECIES_STANTLER]              = {{EVO_LEVEL, 41, SPECIES_WYRDEER}},
     [SPECIES_TYROGUE]               = {{EVO_LEVEL_ATK_LT_DEF, 20, SPECIES_HITMONCHAN},
                                        {EVO_LEVEL_ATK_GT_DEF, 20, SPECIES_HITMONLEE},
                                        {EVO_LEVEL_ATK_EQ_DEF, 20, SPECIES_HITMONTOP}},

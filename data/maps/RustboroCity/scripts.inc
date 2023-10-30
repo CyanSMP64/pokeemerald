@@ -1035,10 +1035,15 @@ RustboroCity_Text_MayImNotGoingToLose:
 	.string "Fight me, nerd.$"
 
 RustboroCity_Text_MayDefeat:
-	.string "Booooooo!$"
+	.string "Yikes!\n"
+	.string "You're better than I expected!$"
 
 RustboroCity_Text_MayMrBrineyHint:
-	.string "Get out of my sight.$"
+	.string "MAY: Oh, by the way, MR. BRINEY, who\n"
+	.string "I just passed…\p"
+	.string "{PLAYER}{KUN}, you just moved here so you\n"
+	.string "might not know this, but MR. BRINEY\l"
+	.string "was once a revered seafarer.$"
 
 RustboroCity_Text_BrendanHiLetsRegister:
 	.string "BRENDAN: Oh, hey, nerd!$"
@@ -1063,10 +1068,15 @@ RustboroCity_Text_BrendanIWontGoEasy:
 	.string "Fight me, nerd.$"
 
 RustboroCity_Text_BrendanDefeat:
-	.string "Booooooo!$"
+	.string "Hmm…\n"
+	.string "You're pretty good.$"
 
 RustboroCity_Text_BrendanMrBrineyHint:
-	.string "Get out of my sight.$"
+	.string "BRENDAN: By the way, you know\n"
+	.string "MR. BRINEY? The guy I just passed?\p"
+	.string "I bet you didn't know this, since you\n"
+	.string "just moved here, {PLAYER}, but\l"
+	.string "MR. BRINEY was once a great sailor.$"
 
 RustboroCity_Text_TunnelNearingCompletion:
 	.string "“Timesaving tunnel nearing\n"

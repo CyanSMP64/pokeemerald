@@ -224,11 +224,30 @@ EverGrandeCity_ChampionsRoom_Movement_BirchArrives:
 	step_end
 
 EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
-	.string "{FONT_NARROW}dolphinDumper dolphinDumper dolphinDumper\n"
-	.string "dolphinDumper dolphinDumper dolphinDumper{FONT_NORMAL}$"
+	.string "WALLACE: Welcome, {PLAYER}{KUN}.\p"
+	.string "That incident in SOOTOPOLIS CITY…\n"
+	.string "That was superb work, putting an end\l"
+	.string "to that crisis all by yourself.\p"
+	.string "Oops!\p"
+	.string "It wouldn't be fair to say that you\n"
+	.string "alone ended the crisis.\p"
+	.string "You overcame that difficult situation\n"
+	.string "by working as one with your POKéMON.\p"
+	.string "We TRAINERS raise POKéMON by giving\n"
+	.string "them items and by teaching them new\l"
+	.string "techniques for battle.\p"
+	.string "But we ourselves also learn many\n"
+	.string "things from POKéMON.\p"
+	.string "And this is where your achievements\n"
+	.string "are put to the test against what\l"
+	.string "others like you have achieved.\p"
+	.string "Now!\p"
+	.string "Who can most elegantly dance with\n"
+	.string "their POKéMON in HOENN?\p"
+	.string "Show me right here and now!$"
 
 EverGrandeCity_ChampionsRoom_Text_Defeat:
-	.string "I've dolphin'd my last Dumper…\p"
+	.string "I, the CHAMPION, fall in defeat…\p"
 	.string "That was wonderful work.\n"
 	.string "You were elegant, infuriatingly so.\l"
 	.string "And yet it was utterly glorious!\p"
@@ -264,13 +283,14 @@ EverGrandeCity_ChampionsRoom_Text_MayItsAlreadyOver:
 	.string "It's already over?$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanAdvice:
-	.string "BRENDAN: Fight me, n…$"
+	.string "BRENDAN: {PLAYER}!\p"
+	.string "How would you like some advice before\n"
+	.string "you challenge the CHAMPION?…$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanYouveWon:
-	.string "BRENDAN: Oh… you've beaten the\n"
-	.string "CHAMPION.\p"
-	.string "I only wanted to kick your ass,\n"
-	.string "but you'd just kick mine instead.$"
+	.string "BRENDAN: {PLAYER}…\p"
+	.string "Are you trying to tell me…\n"
+	.string "You've beaten the CHAMPION?$"
 
 EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex:
 	.string "PROF. BIRCH: See?\n"
@@ -316,9 +336,9 @@ EverGrandeCity_ChampionsRoom_Text_MayCongratulations:
 	.string "Honestly, congratulations!$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations:
-	.string "BRENDAN: … … … … …\p"
-	.string "Yeah, whatever.\n"
-	.string "Not like I wanted to stick around\l"
-	.string "with this nerd anyway.\p"
-	.string "Get out of my sight already.$"
+	.string "BRENDAN: Whaaaat?! … … … … …\n"
+	.string "… … … … … … … …\p"
+	.string "It can't be helped if that's the rule.\p"
+	.string "{PLAYER}, way to go!\n"
+	.string "Congratulations!$"
 
