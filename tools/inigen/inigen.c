@@ -741,23 +741,23 @@ int main(int argc, char ** argv)
  * hard-coded linker addresses to make sure the following symbols have their
  * addresses unchanged from vanilla Emerald:
  * 
- * src/pokemon.o(ewram_data)                   - 0x020244e8 (random statics)
+ * src/pokemon.o(ewram_data)
  *         gEnemyParty                         - 0x02024744 (random statics)
  * 
- * gflib/text.o(.text)                         - 0x080045a4 (instant text)
+ * gflib/text.o(.text)
  *         RunTextPrinters                     - 0x08004778 (instant text)
  * 
- * src/battle_controllers.o(.text)             - 0x08032654 (random statics)
+ * src/battle_controllers.o(.text)
  *         SetUpBattleVarsAndBirchZigzagoon    - 0x0803269c (random statics)
  * 
- * src/pokemon.o(.text)                        - 0x08067a74 (random statics)
+ * src/pokemon.o(.text)
  *         CreateMon                           - 0x08067b4c (random statics)
  *         SetMonData                          - 0x0806acac (random statics)
  * 
- * src/battle_setup.o(.text)                   - 0x080b05f0 (fix music)
+ * src/battle_setup.o(.text)
  *         BattleSetup_StartLegendaryBattle    - 0x080b0934 (fix music)
  * 
- * src/menu.o(.rodata)                         - 0x0860f074 (instant text)
+ * src/menu.o(.rodata)
  *         sTextSpeedFrameDelays               - 0x0860f094 (instant text)
  * 
  * Also please make sure no data is written to the following addresses:
@@ -776,19 +776,19 @@ int main(int argc, char ** argv)
  * List of ROM addresses read by IronMON Tracker:
  * (use `make syms` to generate .sym file)
  * 
- * src/battle_main.o(.text)                             - 0x08036760
+ * src/battle_main.o(.text)
  *         BattleIntroDrawPartySummaryScreens           - 0x0803af80
  *         BattleIntroOpponent1SendsOutMonAnimation     - 0x0803b25c
  *         HandleTurnActionSelectionState               - 0x0803be74
  *         ReturnFromBattleToOverworld                  - 0x0803df70
  * 
- * src/pokemon.o(.text)                                 - 0x08067a74
+ * src/pokemon.o(.text)
  *         GetEvolutionTargetSpecies                    - 0x0806d098
  * 
- * src/evolution_scene.o(.text)                         - 0x0813d9b0
+ * src/evolution_scene.o(.text)
  *         Task_EvolutionScene                          - 0x0813e570
  * 
- * data/battle_scripts_1.o(script_data)                 - 0x082d86a8
+ * data/battle_scripts_1.o(script_data)
  *         BattleScript_CantMakeAsleep                  - 0x082d8acf
  *         BattleScript_AbsorbUpdateHp                  - 0x082d8b2e
  *         BattleScript_RestCantSleep                   - 0x082d8fc6
@@ -842,12 +842,12 @@ int main(int argc, char ** argv)
  *         BattleScript_CuteCharmActivates              - 0x082db66f
  *         BattleScript_MoveUsedLoafingAround           - 0x082db6ad
  * 
- * src/pokemon.o(.rodata)                               - 0x0831c898
+ * src/pokemon.o(.rodata)
  *         gBattleMoves                                 - 0x0831c898
  *         gExperienceTables                            - 0x0831f72c        // changed the addresses internally
  *         gSpeciesInfo                                 - 0x083203cc        // changed the addresses internally
  * 
- * src/party_menu.o(.rodata)                            - 0x0861500c
+ * src/party_menu.o(.rodata)
  *         sTMHMMoves                                   - 0x08616040
  * 
 ******************************************************************************/

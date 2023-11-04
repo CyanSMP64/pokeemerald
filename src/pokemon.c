@@ -9542,6 +9542,11 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
     shinyValue = GET_SHINY_VALUE(otId, personality);
     if (shinyValue < SHINY_ODDS)
     {
+        if ((personality % 0x100) < 0x1F)
+        {
+            if (species == SPECIES_COMBEE)
+                return gMonShinyPaletteTable[SPECIES_COMBEE_FEMALE].data;
+        }
         if ((personality % 0x100) < 0x7F)
         {
             if (species == SPECIES_FRILLISH)
@@ -9663,6 +9668,11 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
     }
     else
     {
+        if ((personality % 0x100) < 0x1F)
+        {
+            if (species == SPECIES_COMBEE)
+                return gMonPaletteTable[SPECIES_COMBEE_FEMALE].data;
+        }
         if ((personality % 0x100) < 0x7F)
         {
             if (species == SPECIES_FRILLISH)
@@ -9800,6 +9810,11 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
     shinyValue = GET_SHINY_VALUE(otId, personality);
     if (shinyValue < SHINY_ODDS)
     {
+        if ((personality % 0x100) < 0x1F)
+        {
+            if (species == SPECIES_COMBEE)
+                return &gMonShinyPaletteTable[SPECIES_COMBEE_FEMALE];
+        }
         if ((personality % 0x100) < 0x7F)
         {
             if (species == SPECIES_FRILLISH)
@@ -9921,6 +9936,11 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
     }
     else
     {
+        if ((personality % 0x100) < 0x1F)
+        {
+            if (species == SPECIES_COMBEE)
+                return &gMonPaletteTable[SPECIES_COMBEE_FEMALE];
+        }
         if ((personality % 0x100) < 0x7F)
         {
             if (species == SPECIES_FRILLISH)

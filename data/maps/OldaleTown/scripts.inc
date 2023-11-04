@@ -281,6 +281,8 @@ OldaleTown_EventScript_RivalFinish::
 	removeobject LOCALID_RIVAL
 	setvar VAR_OLDALE_RIVAL_STATE, 2
 	setflag FLAG_HIDE_OLDALE_TOWN_RIVAL
+	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 6, 5
+	waitstate
 	releaseall
 	end
 

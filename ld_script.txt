@@ -113,20 +113,20 @@ SECTIONS {
         src/battle_controller_link_opponent.o(.text);
         src/pokeball.o(.text);
         src/overworld.o(.text);
-        src/task.o(.text);
+        src/util.o(.text);
     } =0
 
     .text_4 0x08067a74 :
     ALIGN(4)
     {
         src/pokemon.o(.text);
+        src/task.o(.text);
         src/battle_util2.o(.text);
         src/battle_controller_opponent.o(.text);
         src/battle_ai_switch_items.o(.text);
         src/digit_obj_util.o(.text);
         src/battle_bg.o(.text);
         src/trig.o(.text);
-        src/util.o(.text);
         src/daycare.o(.text);
         src/egg_hatch.o(.text);
         src/battle_interface.o(.text);

@@ -83,10 +83,14 @@ Route103_EventScript_StartBrendanBattleMudkip::
 	end
 
 Route103_EventScript_AfterMayBattle::
+	specialvar VAR_RESULT, IsPoisonInParty
+	goto_if_eq VAR_RESULT, TRUE, Route103_EventScript_RivalExit
 	goto Route103_EventScript_RivalEnd
 	end
 
 Route103_EventScript_AfterBrendanBattle::
+	specialvar VAR_RESULT, IsPoisonInParty
+	goto_if_eq VAR_RESULT, TRUE, Route103_EventScript_RivalExit
 	goto Route103_EventScript_RivalEnd
 	end
 
@@ -105,7 +109,7 @@ Route103_EventScript_RivalExitFacingNorth::
 	playse SE_LEDGE
 	applymovement LOCALID_RIVAL, Route103_Movement_RivalExitFacingNorth2
 	waitmovement 0
-	goto Route103_EventScript_RivalEnd
+	goto Route103_EventScript_RivalEnd2
 	end
 
 Route103_EventScript_RivalExitFacingEastOrWest::
@@ -115,7 +119,7 @@ Route103_EventScript_RivalExitFacingEastOrWest::
 	playse SE_LEDGE
 	applymovement LOCALID_RIVAL, Route103_Movement_RivalExit2
 	waitmovement 0
-	goto Route103_EventScript_RivalEnd
+	goto Route103_EventScript_RivalEnd2
 	end
 
 Route103_EventScript_RivalExitFacingSouth::
@@ -124,7 +128,19 @@ Route103_EventScript_RivalExitFacingSouth::
 	playse SE_LEDGE
 	applymovement LOCALID_RIVAL, Route103_Movement_RivalExit2
 	waitmovement 0
-	goto Route103_EventScript_RivalEnd
+	goto Route103_EventScript_RivalEnd2
+	end
+
+Route103_EventScript_RivalEnd2::
+	removeobject LOCALID_RIVAL
+	setvar VAR_BIRCH_LAB_STATE, 4
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL
+	setflag FLAG_DEFEATED_RIVAL_ROUTE103
+	setvar VAR_OLDALE_RIVAL_STATE, 1
+	clearflag FLAG_HIDE_OLDALE_TOWN_RIVAL
+	savebgm MUS_DUMMY
+	fadedefaultbgm
+	releaseall
 	end
 
 Route103_EventScript_RivalEnd::
