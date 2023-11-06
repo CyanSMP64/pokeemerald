@@ -186,11 +186,11 @@ void LoadSpecialPokePic(const struct CompressedSpriteSheet *src, void *dest, s32
         }
         else if (species == SPECIES_ALCREMIE)
         {
-            i = (personality >> 8) % 9;
+            i = (personality >> 8) % 63;
             if (!i)
                 i = species;
             else
-                i += SPECIES_ALCREMIE_RUBY_CREAM - 1;
+                i += SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
         }
         else if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
         {
@@ -558,11 +558,11 @@ void LoadSpecialPokePic_2(const struct CompressedSpriteSheet *src, void *dest, s
         }
         else if (species == SPECIES_ALCREMIE)
         {
-            i = (personality >> 8) % 9;
+            i = (personality >> 8) % 63;
             if (!i)
                 i = species;
             else
-                i += SPECIES_ALCREMIE_RUBY_CREAM - 1;
+                i += SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
         }
         else if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
         {
@@ -766,11 +766,11 @@ void LoadSpecialPokePic_DontHandleDeoxys(const struct CompressedSpriteSheet *src
         }
         else if (species == SPECIES_ALCREMIE)
         {
-            i = (personality >> 8) % 9;
+            i = (personality >> 8) % 63;
             if (!i)
                 i = species;
             else
-                i += SPECIES_ALCREMIE_RUBY_CREAM - 1;
+                i += SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
         }
         else if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
         {

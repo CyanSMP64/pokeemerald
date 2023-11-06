@@ -2871,11 +2871,11 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
         }
         else if (species == SPECIES_ALCREMIE)
         {
-            unownForm = (personalityValue >> 8) % 9;
+            unownForm = (personalityValue >> 8) % 63;
             if (!unownForm)
                 unownSpecies = species;
             else
-                unownSpecies = unownForm + SPECIES_ALCREMIE_RUBY_CREAM - 1;
+                unownSpecies = unownForm + SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
         }
         else if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
         {

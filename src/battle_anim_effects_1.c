@@ -45,7 +45,6 @@ static void AnimRazorLeafParticle_Step2(struct Sprite *);
 static void AnimLeechSeed(struct Sprite *);
 static void AnimLeechSeed_Step(struct Sprite *);
 static void AnimLeechSeedSprouts(struct Sprite *);
-static void AnimTranslateLinearSingleSineWave(struct Sprite *);
 static void AnimTranslateLinearSingleSineWave_Step(struct Sprite *);
 static void AnimConstrictBinding(struct Sprite *);
 static void AnimConstrictBinding_Step1(struct Sprite *);
@@ -2639,7 +2638,7 @@ static void AnimRazorLeafParticle_Step2(struct Sprite *sprite)
 // arg 4: translation duration
 // arg 5: wave amplitude
 // arg 6: target between double battle opponents (boolean)
-static void AnimTranslateLinearSingleSineWave(struct Sprite *sprite)
+void AnimTranslateLinearSingleSineWave(struct Sprite *sprite)
 {
     InitSpritePosToAnimAttacker(sprite, TRUE);
     if (GetBattlerSide(gBattleAnimAttacker) != B_SIDE_PLAYER)

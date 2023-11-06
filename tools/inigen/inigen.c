@@ -778,7 +778,7 @@ int main(int argc, char ** argv)
  * 
  * src/battle_main.o(.text)
  *         BattleIntroDrawPartySummaryScreens           - 0x0803af80
- *         BattleIntroOpponent1SendsOutMonAnimation     - 0x0803b25c
+ *         BattleIntroRecordMonsToDex                   - 0x0803b314
  *         HandleTurnActionSelectionState               - 0x0803be74
  *         ReturnFromBattleToOverworld                  - 0x0803df70
  * 

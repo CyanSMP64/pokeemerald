@@ -9643,11 +9643,11 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
         }
         if (species == SPECIES_ALCREMIE)
         {
-            form = (personality >> 8) % 9;
+            form = (personality >> 8) % 63;
             if (!form)
                 form += species;
             else
-                form += SPECIES_ALCREMIE_RUBY_CREAM - 1;
+                form += SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
             return gMonShinyPaletteTable[form].data;
         }
         if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
@@ -9769,11 +9769,11 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
         }
         if (species == SPECIES_ALCREMIE)
         {
-            form = (personality >> 8) % 9;
+            form = (personality >> 8) % 63;
             if (!form)
                 form += species;
             else
-                form += SPECIES_ALCREMIE_RUBY_CREAM - 1;
+                form += SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
             return gMonPaletteTable[form].data;
         }
         if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
@@ -9911,11 +9911,11 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
         }
         if (species == SPECIES_ALCREMIE)
         {
-            form = (personality >> 8) % 9;
+            form = (personality >> 8) % 63;
             if (!form)
                 form += species;
             else
-                form += SPECIES_ALCREMIE_RUBY_CREAM - 1;
+                form += SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
             return &gMonShinyPaletteTable[form];
         }
         if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
@@ -10037,11 +10037,11 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
         }
         if (species == SPECIES_ALCREMIE)
         {
-            form = (personality >> 8) % 9;
+            form = (personality >> 8) % 63;
             if (!form)
                 form += species;
             else
-                form += SPECIES_ALCREMIE_RUBY_CREAM - 1;
+                form += SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
             return &gMonPaletteTable[form];
         }
         if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)

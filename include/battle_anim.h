@@ -291,4 +291,11 @@ extern const union AnimCmd *const gAnims_SmallBubblePair[];
 extern const union AnimCmd *const gAnims_WaterBubble[];
 extern const union AffineAnimCmd *const gAffineAnims_Bite[];
 
+// battle_anim_new.c
+void CoreEnforcerLoadBeamTarget(struct Sprite *sprite);
+void SpriteCB_RandomCentredHits(struct Sprite *sprite);
+
+extern const union AffineAnimCmd *const gSwiftStarAffineAnimTable[];
+void AnimTranslateLinearSingleSineWave(struct Sprite *);
+
 #endif // GUARD_BATTLE_ANIM_H

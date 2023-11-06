@@ -1048,6 +1048,7 @@ gCryTable::
     cry Cry_Munkidori
     cry Cry_Fezandipiti
     cry Cry_Ogerpon
+    cry Cry_UrsalunaBloodmoon
 
 	.align 2
 gCryTable_Reverse::
@@ -2099,3 +2100,4 @@ gCryTable_Reverse::
     cry_reverse Cry_Munkidori
     cry_reverse Cry_Fezandipiti
     cry_reverse Cry_Ogerpon
+    cry_reverse Cry_UrsalunaBloodmoon

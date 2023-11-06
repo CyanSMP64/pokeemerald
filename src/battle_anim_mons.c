@@ -293,11 +293,11 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
             }
             else if (species == SPECIES_ALCREMIE)
             {
-                letter = (personality >> 8) % 9;
+                letter = (personality >> 8) % 63;
                 if (!letter)
                     coordSpecies = species;
                 else
-                    coordSpecies = letter + SPECIES_ALCREMIE_RUBY_CREAM - 1;
+                    coordSpecies = letter + SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
             }
             else if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
             {
@@ -471,11 +471,11 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
             }
             else if (species == SPECIES_ALCREMIE)
             {
-                letter = (personality >> 8) % 9;
+                letter = (personality >> 8) % 63;
                 if (!letter)
                     coordSpecies = species;
                 else
-                    coordSpecies = letter + SPECIES_ALCREMIE_RUBY_CREAM - 1;
+                    coordSpecies = letter + SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
             }
             else if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
             {
@@ -2574,11 +2574,11 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
             }
             else if (species == SPECIES_ALCREMIE)
             {
-                letter = (personality >> 8) % 9;
+                letter = (personality >> 8) % 63;
                 if (!letter)
                     unownSpecies = species;
                 else
-                    unownSpecies = letter + SPECIES_ALCREMIE_RUBY_CREAM - 1;
+                    unownSpecies = letter + SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
             }
             else if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
             {
@@ -2761,11 +2761,11 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                 }
                 else if (species == SPECIES_ALCREMIE)
                 {
-                    letter = (personality >> 8) % 9;
+                    letter = (personality >> 8) % 63;
                     if (!letter)
                         unownSpecies = species;
                     else
-                        unownSpecies = letter + SPECIES_ALCREMIE_RUBY_CREAM - 1;
+                        unownSpecies = letter + SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
                 }
                 else if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
                 {
@@ -2942,11 +2942,11 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                 }
                 else if (species == SPECIES_ALCREMIE)
                 {
-                    letter = (personality >> 8) % 9;
+                    letter = (personality >> 8) % 63;
                     if (!letter)
                         unownSpecies = species;
                     else
-                        unownSpecies = letter + SPECIES_ALCREMIE_RUBY_CREAM - 1;
+                        unownSpecies = letter + SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
                 }
                 else if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
                 {

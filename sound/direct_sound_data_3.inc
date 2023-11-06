@@ -3033,3 +3033,7 @@ Cry_Fezandipiti::
     .align 2
 Cry_Ogerpon::
     .incbin "sound/direct_sound_samples/cries/ogerpon.bin"
+
+    .align 2
+Cry_UrsalunaBloodmoon::
+    .incbin "sound/direct_sound_samples/cries/ursaluna_bloodmoon.bin"
