@@ -22031,6 +22031,7 @@ static const u16 sElectrodeHisuianLevelUpLearnset[] = {
     LEVEL_UP_MOVE(41, MOVE_POUND),
     LEVEL_UP_MOVE(46, MOVE_POUND),
     LEVEL_UP_MOVE(50, MOVE_POUND),
+    LEVEL_UP_END
 };
 
 static const u16 sTyphlosionHisuianLevelUpLearnset[] = {

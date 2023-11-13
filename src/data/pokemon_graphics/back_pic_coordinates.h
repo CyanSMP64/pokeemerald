@@ -1183,7 +1183,7 @@ const struct MonCoords gMonBackPicCoords[] =
     [SPECIES_VOLTORB_HISUIAN]              = { .size = MON_COORDS_SIZE(48, 32), .y_offset = 10 },
     [SPECIES_ELECTRODE_HISUIAN]            = { .size = MON_COORDS_SIZE(64, 40), .y_offset =  7 },
     [SPECIES_TYPHLOSION_HISUIAN]           = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  2 },
-    [SPECIES_QWILFISH_HISUIAN]             = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  6 },
+    [SPECIES_QWILFISH_HISUIAN]             = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  8 },
     [SPECIES_SNEASEL_HISUIAN]              = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  3 },
     [SPECIES_SAMUROTT_HISUIAN]             = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  8 },
     [SPECIES_LILLIGANT_HISUIAN]            = { .size = MON_COORDS_SIZE(56, 56), .y_offset =  5 },

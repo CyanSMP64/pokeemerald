@@ -5,12 +5,12 @@
 
 OldaleTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, OldaleTown_OnTransition
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, OldaleTown_OnFrame
+@	map_script MAP_SCRIPT_ON_FRAME_TABLE, OldaleTown_OnFrame
 	.byte 0
 
-OldaleTown_OnFrame:
-	map_script_2 VAR_OLDALE_TOWN_STATE, 2, OldaleTown_EventScript_Accuser
-	.2byte 0
+@OldaleTown_OnFrame:
+@	map_script_2 VAR_OLDALE_TOWN_STATE, 2, OldaleTown_EventScript_Accuser
+@	.2byte 0
 
 OldaleTown_OnTransition:
 	call Common_EventScript_SetupRivalGfxId

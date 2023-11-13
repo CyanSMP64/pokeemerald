@@ -446,9 +446,8 @@ Route116_Text_TrainerTipsBToStopEvolution:
 	.string "TRAINER TIPS\p"
 	.string "If you want to stop a POKéMON from\n"
 	.string "evolving, press the B Button while it\l"
-	.string "is trying to evolve.\l"
-	.string "The startled POKéMON will stop.\p"
-	.string "This is called an evolution cancel.$"
+	.string "is trying to evolve.\p"
+	.string "Wait. That's illegal.$"
 
 Route116_Text_TrainerTipsBagHasPockets:
 	.string "TRAINER TIPS\p"

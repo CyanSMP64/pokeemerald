@@ -1,7 +1,8 @@
 const u8 gDummyPokedexText[] = _(
     "Submit a custom entry for this Pokémon!\n"
-    "DM me at cyansixfour on Discord to get\n"
-    "your entry in for the next patch!");
+    "Ping Cyan or fill in this form to get\n"
+    "your entry in for the next patch!\n"
+    "https://forms.gle/ELaS2bohRAaqgFpt6");
 
 const u8 gBulbasaurPokedexText[] = _(
     "BULBASAUR can be seen napping in bright\n"
@@ -34,10 +35,7 @@ const u8 gCharmeleonPokedexText[] = _(
     "tail flares with a bluish white color.");
 
 const u8 gCharizardPokedexText[] = _(
-    "A CHARIZARD flies about in search of\n"
-    "strong opponents. It breathes intense\n"
-    "flames that can melt any material. However,\n"
-    "it will never torch a weaker foe.");
+    "AKingJR");
 
 const u8 gSquirtlePokedexText[] = _(
     "Its shell is not just for protection.\n"
@@ -799,10 +797,10 @@ const u8 gEeveePokedexText[] = _(
     "STONES causes this POKéMON to evolve.");
 
 const u8 gVaporeonPokedexText[] = _(
-    "VAPOREON underwent a spontaneous\n"
-    "mutation and grew fins and gills that\n"
-    "allow them to live underwater. They have\n"
-    "the ability to freely control water.");
+    "The subject of great internet scrutiny\n"
+    "and horrible memes, this pokemon tries\n"
+    "hard to avoid people seeking validation\n"
+    "of said memes.");
 
 const u8 gJolteonPokedexText[] = _(
     "Its cells generate weak power that is\n"
@@ -823,16 +821,14 @@ const u8 gPorygonPokedexText[] = _(
     "protected so it cannot be duplicated.");
 
 const u8 gOmanytePokedexText[] = _(
-    "One of the ancient and long-since-extinct\n"
-    "POKéMON that have been regenerated\n"
-    "from fossils by humans. If attacked,\n"
-    "it withdraws into its hard shell.");
+    "Be blessed my child for our Lord Helix\n"
+    "has graced you in his physical form. Go\n"
+    "now, knowing your journey has his backing");
 
 const u8 gOmastarPokedexText[] = _(
-    "An OMASTAR uses its tentacles to capture\n"
-    "its prey. It is believed to have become\n"
-    "extinct because its shell grew too large,\n"
-    "making its movements slow and ponderous.");
+    "Lord Helix has granted you the presence\n"
+    "of his final form. May your journey take\n"
+    "you all the way to the Hall of Fame");
 
 const u8 gKabutoPokedexText[] = _(
     "It is a POKéMON that has been regenerated\n"
@@ -955,10 +951,7 @@ const u8 gCroconawPokedexText[] = _(
     "they become irremovably embedded.");
 
 const u8 gFeraligatrPokedexText[] = _(
-    "It opens its huge mouth to intimidate\n"
-    "enemies. In battle, it runs using its thick\n"
-    "and powerful hind legs to charge the\n"
-    "foe with incredible speed.");
+    "pieThiccc");
 
 const u8 gSentretPokedexText[] = _(
     "They take turns standing guard when it\n"
@@ -1375,10 +1368,9 @@ const u8 gHoundoomPokedexText[] = _(
     "among themselves.");
 
 const u8 gKingdraPokedexText[] = _(
-    "It sleeps quietly, deep on the seafloor.\n"
-    "When it comes up to the surface, it\n"
-    "creates a huge whirlpool that can swallow\n"
-    "even ships.");
+    "I see you're trying to get a win in this\n"
+    "game with… a Kingdra?! Like, can't you\n"
+    "really think of anything more original?");
 
 const u8 gPhanpyPokedexText[] = _(
     "PHANPY's big ears serve as broad fans.\n"
@@ -1753,22 +1745,15 @@ const u8 gShedinjaPokedexText[] = _(
     "utterly dark.");
 
 const u8 gWhismurPokedexText[] = _(
-    "Its cries equal a jet plane in volume.\n"
-    "It inhales through its ear canals. Because\n"
-    "of this system, it can cry continually\n"
-    "without having to catch its breath.");
+    "a");
 
 const u8 gLoudredPokedexText[] = _(
-    "It positions the round speakers on its\n"
-    "head to assail foes with ultrasonic waves\n"
-    "at massive volume. It builds power by\n"
-    "stomping the ground.");
+    "Aaaaaaaaa");
 
 const u8 gExploudPokedexText[] = _(
-    "It has sound-generating organs all over\n"
-    "its body. It communicates with others by\n"
-    "adjusting the tone and volume of the cries\n"
-    "it emits.");
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n"
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n"
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 
 const u8 gMakuhitaPokedexText[] = _(
     "It loves to toughen up its body above all\n"
@@ -2173,10 +2158,9 @@ const u8 gGlaliePokedexText[] = _(
     "crystals forms around its body.");
 
 const u8 gSphealPokedexText[] = _(
-    "It is completely covered with plushy fur.\n"
-    "As a result, it never feels the cold even\n"
-    "when it is rolling about on ice floes or\n"
-    "diving in the sea.");
+    "It's so spherical! The blorbiest blorb to\n"
+    "have ever blorbed. Watch as it rolls\n"
+    "around without a care in the world");
 
 const u8 gSealeoPokedexText[] = _(
     "SEALEO live in herds on ice floes. Using its\n"
@@ -2257,10 +2241,9 @@ const u8 gMetagrossPokedexText[] = _(
     "a supercomputer.");
 
 const u8 gRegirockPokedexText[] = _(
-    "A POKéMON that is made entirely of rocks\n"
-    "and boulders. If parts of its body chip off\n"
-    "in battle, REGIROCK repairs itself by\n"
-    "adding new rocks.");
+    "The patron spirit of Arm Day. Those who\n"
+    "worship Regirock are gifted sick gains.\n"
+    "Leg Day is always skipped.");
 
 const u8 gRegicePokedexText[] = _(
     "Its entire body is made of Antarctic ice.\n"
@@ -2315,3 +2298,61 @@ const u8 gDeoxysPokedexText[] = _(
     "extraterrestrial virus exposed to a laser\n"
     "beam. Its body is configured for superior\n"
     "agility and speed.");
+
+const u8 gBidoofPokedexText[] = _(
+    "The ultimate Pokemon that even Arceus\n"
+    "bows to. Behold the splendor of their\n"
+    "fluffiness and tremble at their might!");
+
+const u8 gDrifloonPokedexText[] = _(
+    "steals you steals you steals you steals\n"
+    "you steals you steals you steals you\n"
+    "steals you steals you steals you steals\n"
+    "you");
+
+const u8 gChatotPokedexText[] = _(
+    "how y'all mfs look when you kaizoChatter");
+
+const u8 gPopplioPokedexText[] = _(
+    "Look at this fellow just a cute little\n"
+    "blub-ball with the boop nose… Oh the\n"
+    "boop nose how it goes boop schmoop I\n"
+    "love this lad how can you not");
+
+const u8 gCosmogPokedexText[] = _(      // Sparkle
+    "GET IN THE BAG!!!!!!");
+
+const u8 gRegidragoPokedexText[] = _(
+    "Ancient texts mention gathering seven of\n"
+    "these pokemon together to summon Mega\n"
+    "Rayquaza and granting the trainer a wish.");
+
+const u8 gBelliboltPokedexText[] = _(
+    "A happy little friend who wobbles about\n"
+    "and discharges electricity. Rumored to be\n"
+    "a staunch rival of Brawly.");
+
+const u8 gScovillainPokedexText[] = _(      // SandyBeach_IRL
+    "this pokemon looks cool :)");
+
+const u8 gPalafinPokedexText[] = _(
+    "dolphinDumper");
+
+const u8 gClodsirePokedexText[] = _(
+    "The definition of a friend, look at that\n"
+    "smile and tell me it doesn't make your\n"
+    "day better. Give it a hug and relax.");
+
+const u8 gDudunsparcePokedexText[] = _(
+    "Look out for the rare Three-Segment\n"
+    "Dudunsparce. If you see a trainer use\n"
+    "one, ping Cyan for a cookie.");
+
+const u8 gIronLeavesPokedexText[] = _(
+    "This Pokemon was inspired by the\n"
+    "punchline “make like a tree and leave”");
+
+const u8 gThundurusTPokedexText[] = _(
+    "The Wording in a book has led people to\n"
+    "believe that Thundurus-Therian was the\n"
+    "first to conquer an impossible test.");
