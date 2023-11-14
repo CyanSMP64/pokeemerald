@@ -9629,7 +9629,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Junkivore"),
         .height = 55,
         .weight = 8880,
-        .description = gDummyPokedexText,
+        .description = gGuzzlordPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 721,
@@ -11894,7 +11894,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_FLUTTER_MANE] =
     {
-        .description = gDummyPokedexText,
+        .description = gFlutterManePokedexText,
         .categoryName = _("Paradox"),
         .pokemonScale = 356,
         .pokemonOffset = 17,

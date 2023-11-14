@@ -2322,6 +2322,10 @@ const u8 gPopplioPokedexText[] = _(
 const u8 gCosmogPokedexText[] = _(      // Sparkle
     "GET IN THE BAG!!!!!!");
 
+const u8 gGuzzlordPokedexText[] = _(
+    "AAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH\n"
+    "HH!!!!!!");
+
 const u8 gRegidragoPokedexText[] = _(
     "Ancient texts mention gathering seven of\n"
     "these pokemon together to summon Mega\n"
@@ -2347,6 +2351,9 @@ const u8 gDudunsparcePokedexText[] = _(
     "Look out for the rare Three-Segment\n"
     "Dudunsparce. If you see a trainer use\n"
     "one, ping Cyan for a cookie.");
+
+const u8 gFlutterManePokedexText[] = _(
+    "So anyway, I started moonblasting.");
 
 const u8 gIronLeavesPokedexText[] = _(
     "This Pokemon was inspired by the\n"
