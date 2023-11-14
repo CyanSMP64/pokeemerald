@@ -4397,7 +4397,7 @@ const struct PokedexEntry gPokedexEntries[] =
         .categoryName = _("Clap"),
         .height = 8,
         .weight = 395,
-        .description = gDummyPokedexText,
+        .description = gSphealPokedexText,
         .pokemonScale = 315,
         .pokemonOffset = 16,
         .trainerScale = 256,
@@ -11810,7 +11810,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_CLODSIRE] =
     {
-        .description = gDummyPokedexText,
+        .description = gClodsirePokedexText,
         .categoryName = _("Spiny Fish"),
         .pokemonScale = 356,
         .pokemonOffset = 17,
@@ -12170,7 +12170,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_IRON_LEAVES] =
     {
-        .description = gDummyPokedexText,
+        .description = gIronLeavesPokedexText,
         .categoryName = _("Paradox"),
         .pokemonScale = 356,
         .pokemonOffset = 17,
