@@ -663,6 +663,8 @@ Route110_TrickHousePuzzle_EventScript_FoundScroll::
 
 Route110_TrickHouseEntrance_EventScript_TrickMasterHiding::
 	lockall
+@	special IsLeadMon550BST
+@	goto_if_eq VAR_RESULT, TRUE, Route110_TrickHouseEntrance_EventScript_OverBSTLimit
 	msgbox Route110_TrickHouseEntrance_Text_YoureBeingWatched, MSGBOX_DEFAULT
 	releaseall
 	call_if_eq VAR_TRICK_HOUSE_LEVEL, 0, Route110_TrickHouseEntrance_EventScript_DoHidingSpotSparkle1
@@ -695,6 +697,26 @@ Route110_TrickHouseEntrance_EventScript_DoHidingSpotSparkle::
 	waitfieldeffect FLDEFF_SPARKLE
 	delay 10
 	return
+
+Route110_TrickHouseEntrance_EventScript_OverBSTLimit::
+	msgbox Route110_TrickHouseEntrance_Text_KaizoOrSurvival, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, Route110_TrickHouseEntrance_EventScript_ThenLeave
+	msgbox Route110_TrickHouseEntrance_Text_GoOnThrough, MSGBOX_DEFAULT
+	closemessage
+	releaseall
+	call_if_eq VAR_TRICK_HOUSE_LEVEL, 0, Route110_TrickHouseEntrance_EventScript_DoHidingSpotSparkle1
+	call_if_eq VAR_TRICK_HOUSE_LEVEL, 1, Route110_TrickHouseEntrance_EventScript_DoHidingSpotSparkle2
+	call_if_eq VAR_TRICK_HOUSE_LEVEL, 2, Route110_TrickHouseEntrance_EventScript_DoHidingSpotSparkle3
+	setvar VAR_TRICK_HOUSE_BEING_WATCHED_STATE, 1
+	end
+
+Route110_TrickHouseEntrance_EventScript_ThenLeave::
+	msgbox Route110_TrickHouseEntrance_Text_ThenLeave, MSGBOX_DEFAULT
+	closemessage
+	warp MAP_ROUTE110, 11, 67
+	waitstate
+	releaseall
+	end
 
 Route110_TrickHouseEntrance_Text_YoureBeingWatched:
 	.string "You're being watched…$"
@@ -824,3 +846,20 @@ Route110_TrickHouseEntrance_Text_DoorLockedWriteSecretCodeHere:
 	.string "The door is locked.\p"
 	.string "…On closer inspection, this is written\n"
 	.string "on it: “Write the secret code here.”$"
+
+Route110_TrickHouseEntrance_Text_KaizoOrSurvival:
+	.string "Pssst! Are you playing either\n"
+	.string "Kaizo or Survival?{PAUSE 60}$"
+
+Route110_TrickHouseEntrance_Text_GoOnThrough:
+	.string "Then, go on through!\n"
+	.string "(You're being watched…)$"
+
+Route110_TrickHouseEntrance_Text_ThenLeave:
+	.string "Then, leave!\n"
+	.string "(Pokémon 550 BST or more are not\l"
+	.string "allowed in the Trick House.)\p"
+	.string "(If you are playing Doubles, and the\n"
+	.string "sum of your team's BST is under 1100,\l"
+	.string "re-enter and answer “No”.)$"
+

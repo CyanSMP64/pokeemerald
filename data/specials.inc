@@ -538,3 +538,4 @@ gSpecials::
 	def_special DaisyMassageServices
 	def_special IsPoisonInParty
 	def_special ChoosePartyMonFRLG
+	def_special IsLeadMon550BST

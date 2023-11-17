@@ -252,7 +252,7 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_ENTEI]                        = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
     [SPECIES_SUICUNE]                      = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  3 },
     [SPECIES_LARVITAR]                     = { .size = MON_COORDS_SIZE(40, 48), .y_offset = 10 },
-    [SPECIES_PUPITAR]                      = { .size = MON_COORDS_SIZE(40, 48), .y_offset =  9 },
+    [SPECIES_PUPITAR]                      = { .size = MON_COORDS_SIZE(40, 48), .y_offset = 11 },
     [SPECIES_TYRANITAR]                    = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_LUGIA]                        = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_HO_OH]                        = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },

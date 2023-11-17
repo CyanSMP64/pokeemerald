@@ -4283,3 +4283,25 @@ void DaisyMassageServices(void)
 {
     AdjustFriendship(&gPlayerParty[gSpecialVar_0x8004], FRIENDSHIP_EVENT_MASSAGE);
 }
+
+void IsLeadMon550BST(void)
+{
+    u16 species;
+    struct Pokemon *pokemon;
+    pokemon = &gPlayerParty[GetLeadMonIndex()];
+    if (GetMonData(pokemon, MON_DATA_SANITY_HAS_SPECIES) && !GetMonData(pokemon, MON_DATA_IS_EGG))
+    {
+        species = GetMonData(pokemon, MON_DATA_SPECIES);
+        if ((gSpeciesInfo[species].baseHP
+           + gSpeciesInfo[species].baseAttack
+           + gSpeciesInfo[species].baseDefense
+           + gSpeciesInfo[species].baseSpeed
+           + gSpeciesInfo[species].baseSpAttack
+           + gSpeciesInfo[species].baseSpDefense) >= 549)
+        {
+            gSpecialVar_Result = TRUE;
+            return;
+        }
+    }
+    gSpecialVar_Result = FALSE;
+}
