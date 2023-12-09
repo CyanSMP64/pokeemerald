@@ -1,8 +1,7 @@
 const u8 gDummyPokedexText[] = _(
     "Submit a custom entry for this Pokémon!\n"
-    "Ping Cyan or fill in this form to get\n"
-    "your entry in for the next patch!\n"
-    "https://forms.gle/ELaS2bohRAaqgFpt6");
+    "\n"
+    "https://tinyurl.com/NatDexEntry");
 
 const u8 gBulbasaurPokedexText[] = _(
     "BULBASAUR can be seen napping in bright\n"
@@ -1751,9 +1750,8 @@ const u8 gLoudredPokedexText[] = _(
     "Aaaaaaaaa");
 
 const u8 gExploudPokedexText[] = _(
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n"
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n"
-    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    "Twitch Chatters when you don't play their\n"
+    "way AHHHHHHHHHHHHHHHHH!!!!!!!");
 
 const u8 gMakuhitaPokedexText[] = _(
     "It loves to toughen up its body above all\n"
@@ -1900,10 +1898,7 @@ const u8 gSharpedoPokedexText[] = _(
     "75 miles per hour.");
 
 const u8 gWailmerPokedexText[] = _(
-    "While this POKéMON usually lives in the sea,\n"
-    "it can survive on land, although not too\n"
-    "long. It loses vitality if its body becomes\n"
-    "dried out.");
+    "tmajorWail's in the chat yall");
 
 const u8 gWailordPokedexText[] = _(
     "It breathes through nostrils that it\n"
@@ -2315,9 +2310,18 @@ const u8 gChatotPokedexText[] = _(
 
 const u8 gPopplioPokedexText[] = _(
     "Look at this fellow just a cute little\n"
-    "blub-ball with the boop nose… Oh the\n"
+    "blub-ball with the boop nose... Oh the\n"
     "boop nose how it goes boop schmoop I\n"
     "love this lad how can you not");
+
+const u8 gWimpodPokedexText[] = _(
+    "I was a wimp before I got these Anchor\n"
+    "Arms, but now I'm... still a wimp and I\n"
+    "can't hide.");
+
+const u8 gGolisopodPokedexText[] = _(
+    "Gotta get back, back to the lab Samurai\n"
+    "Pod - WATCH OUT");
 
 const u8 gCosmogPokedexText[] = _(      // Sparkle
     "GET IN THE BAG!!!!!!");
@@ -2330,6 +2334,9 @@ const u8 gRegidragoPokedexText[] = _(
     "Ancient texts mention gathering seven of\n"
     "these pokemon together to summon Mega\n"
     "Rayquaza and granting the trainer a wish.");
+
+const u8 gOinkolognePokedexText[] = _(      // aco
+    "why oinkologne when we can oink together");
 
 const u8 gBelliboltPokedexText[] = _(
     "A happy little friend who wobbles about\n"
@@ -2359,7 +2366,19 @@ const u8 gIronLeavesPokedexText[] = _(
     "This Pokemon was inspired by the\n"
     "punchline “make like a tree and leave”");
 
+const u8 gPonytaGPokedexText[] = _(
+    "Dear Princess Rapidash, today I learned\n"
+    "that friendship doesn't win the run.");
+
+const u8 gRapidashGPokedexText[] = _(
+    "They said that Pokemon was for kids, BUT\n"
+    "I DIDN'T LISTEN!");
+
 const u8 gThundurusTPokedexText[] = _(
     "The Wording in a book has led people to\n"
     "believe that Thundurus-Therian was the\n"
     "first to conquer an impossible test.");
+
+const u8 gFloetteEPokedexText[] = _(
+    "It's been 3000 years but we can finally\n"
+    "use this in Ironmon.");

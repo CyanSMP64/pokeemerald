@@ -5,12 +5,12 @@
 
 OldaleTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, OldaleTown_OnTransition
-@	map_script MAP_SCRIPT_ON_FRAME_TABLE, OldaleTown_OnFrame
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, OldaleTown_OnFrame
 	.byte 0
 
-@OldaleTown_OnFrame:
-@	map_script_2 VAR_OLDALE_TOWN_STATE, 2, OldaleTown_EventScript_Accuser
-@	.2byte 0
+OldaleTown_OnFrame:
+	map_script_2 VAR_OLDALE_TOWN_STATE, 2, OldaleTown_EventScript_Accuser
+	.2byte 0
 
 OldaleTown_OnTransition:
 	call Common_EventScript_SetupRivalGfxId
@@ -281,8 +281,6 @@ OldaleTown_EventScript_RivalFinish::
 	removeobject LOCALID_RIVAL
 	setvar VAR_OLDALE_RIVAL_STATE, 2
 	setflag FLAG_HIDE_OLDALE_TOWN_RIVAL
-	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 6, 5
-	waitstate
 	releaseall
 	end
 
@@ -502,7 +500,7 @@ OldaleTown_Text_Accuser1:
 	.string "Well, well, how d'ya do, young 'un?\p"
 	.string "Huh? Y'don't know me?\n"
 	.string "Who am I, y'ask?\p"
-	.string "Why, I'm the ACCUSER!\n"
+	.string "Why, I'm the KAIZO POLICE!\n"
 	.string "And I'm here to tell ya somethin'.\p"
 	.string "Your run…{PAUSE 30}\n"
 	.string "is officially…{PAUSE 30} {PLAY_SE SE_VINEBOOM}cursed!\p"
@@ -511,11 +509,10 @@ OldaleTown_Text_Accuser1:
 	.string "reset!\p"
 	.string "They will flood the chat with\n"
 	.string "asterisks!\p"
-	.string "And laugh at the streamer! KEKW\p"
+	.string "And laugh at the streamer KEKW\p"
 	.string "Y'understand the consequences of\n"
 	.string "cheatin', right?\p"
-	.string "Go touch grass or somethin',\n"
-	.string "run around for a while!\l"
+	.string "Go run around for a while!\n"
 	.string "That oughta teach y'all a lesson!\p"
 	.string "Y'best remember to reset the run!\n"
 	.string "Or don't! Haha! Be seein' ya later!$"

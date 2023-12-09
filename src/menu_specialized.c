@@ -127,9 +127,9 @@ static const struct WindowTemplate sMoveRelearnerWindowTemplates[] =
     },
     [RELEARNERWIN_MOVE_LIST] = {
         .bg = 1,
-        .tilemapLeft = 19,
+        .tilemapLeft = 18,
         .tilemapTop = 1,
-        .width = 10,
+        .width = 11,
         .height = 12,
         .paletteNum = 15,
         .baseBlock = 0x18A
@@ -141,7 +141,7 @@ static const struct WindowTemplate sMoveRelearnerWindowTemplates[] =
         .width = 22,
         .height = 4,
         .paletteNum = 15,
-        .baseBlock = 0x202
+        .baseBlock = 0x20E
     },
     // Unused. Identical to sMoveRelearnerYesNoMenuTemplate
     [RELEARNERWIN_YESNO] = {
@@ -151,7 +151,7 @@ static const struct WindowTemplate sMoveRelearnerWindowTemplates[] =
         .width = 5,
         .height = 4,
         .paletteNum = 15,
-        .baseBlock = 0x25A
+        .baseBlock = 0x266
     },
     DUMMY_WIN_TEMPLATE
 };
@@ -164,7 +164,7 @@ static const struct WindowTemplate sMoveRelearnerYesNoMenuTemplate =
     .width = 5,
     .height = 4,
     .paletteNum = 15,
-    .baseBlock = 0x25A
+    .baseBlock = 0x266
 };
 
 
@@ -186,7 +186,7 @@ static const struct ListMenuTemplate sMoveRelearnerMovesListTemplate =
     .lettersSpacing = 0,
     .itemVerticalPadding = 0,
     .scrollMultiple = LIST_NO_MULTIPLE_SCROLL,
-    .fontId = FONT_NORMAL,
+    .fontId = FONT_NARROW,
     .cursorKind = CURSOR_BLACK_ARROW
 };
 

@@ -274,5 +274,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_HIDE_ACCUSER
+	setflag FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM
 	call EventScript_ResetAllBerries
 	end

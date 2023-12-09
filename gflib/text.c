@@ -74,9 +74,9 @@ static const u8 sUnusedFRLGBlankedDownArrow[] = INCBIN_U8("graphics/fonts/unused
 static const u8 sUnusedFRLGDownArrow[] = INCBIN_U8("graphics/fonts/unused_frlg_down_arrow.4bpp");
 static const u8 sDownArrowYCoords[] = { 0, 1, 2, 1 };
 static const u8 sWindowVerticalScrollSpeeds[] = {
-    [OPTIONS_TEXT_SPEED_SLOW] = 1,
-    [OPTIONS_TEXT_SPEED_MID] = 2,
-    [OPTIONS_TEXT_SPEED_FAST] = 4,
+    [OPTIONS_TEXT_SPEED_SLOW] = 4,
+    [OPTIONS_TEXT_SPEED_MID] = 8,
+    [OPTIONS_TEXT_SPEED_FAST] = 255,
 };
 
 static const struct GlyphWidthFunc sGlyphWidthFuncs[] =
@@ -968,10 +968,10 @@ static u16 RenderText(struct TextPrinter *textPrinter)
 				repeats = 1;
 				break;
 			case OPTIONS_TEXT_SPEED_MID:
-				repeats = 1;
+				repeats = 3;
 				break;
 			case OPTIONS_TEXT_SPEED_FAST:
-				repeats = 3;
+				repeats = 255;
 				break;
 		}
 		

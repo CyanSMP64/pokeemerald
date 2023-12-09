@@ -680,7 +680,8 @@ static void Task_EvolutionScene(u8 taskId)
     case EVOSTATE_INTRO_SOUND:
         if (IsCryFinished())
         {
-            PlaySE(MUS_EVOLUTION_INTRO);
+            if (gSaveBlock2Ptr->optionsBGM == TRUE)
+                PlaySE(MUS_EVOLUTION_INTRO);
             gTasks[taskId].tState++;
         }
         break;
