@@ -12,6 +12,7 @@ EventScript_RepelWoreOff::
 	bufferitemname 1, VAR_REPEL_LAST_USED
 	removeitem VAR_REPEL_LAST_USED, 1
 	playse SE_REPEL
+	waitse
 	msgbox Text_PlayerUsedRepel, MSGBOX_DEFAULT
 	closemessage
 	releaseall

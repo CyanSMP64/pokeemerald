@@ -517,7 +517,6 @@ void BattleSetup_StartLegendaryBattle(void)
 
     switch (GetMonData(&gEnemyParty[0], MON_DATA_SPECIES, NULL))
     {
-    default:
     case SPECIES_GROUDON:
         gBattleTypeFlags |= BATTLE_TYPE_GROUDON;
         CreateBattleStartTask(B_TRANSITION_GROUDON, 0);
@@ -533,6 +532,7 @@ void BattleSetup_StartLegendaryBattle(void)
     case SPECIES_DEOXYS:
     case SPECIES_LUGIA:
     case SPECIES_HO_OH:
+    default:
         CreateBattleStartTask(B_TRANSITION_BLUR, 0);
         break;
     case SPECIES_MEW:

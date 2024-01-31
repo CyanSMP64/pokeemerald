@@ -2266,7 +2266,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     {
         .effect = EFFECT_CURSE,
         .power = 0,
-        .type = TYPE_MYSTERY,
+        .type = TYPE_GHOST,
         .accuracy = 0,
         .pp = 10,
         .secondaryEffectChance = 0,

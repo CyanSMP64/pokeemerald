@@ -9807,6 +9807,9 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
     u32 shinyValue;
     u16 form;
 
+    if (species > NUM_SPECIES)
+        return &gMonPaletteTable[SPECIES_NONE];
+
     shinyValue = GET_SHINY_VALUE(otId, personality);
     if (shinyValue < SHINY_ODDS)
     {
@@ -10348,23 +10351,7 @@ void DoMonFrontSpriteAnimation(struct Sprite *sprite, u16 species, bool8 noCry, 
 
 void PokemonSummaryDoMonAnimation(struct Sprite *sprite, u16 species, bool8 oneFrame)
 {
-    if (!oneFrame && HasTwoFramesAnimation(species))
-        StartSpriteAnim(sprite, 1);
-    if (sMonAnimationDelayTable[species - 1] != 0)
-    {
-        // Animation has delay, start delay task
-        u8 taskId = CreateTask(Task_PokemonSummaryAnimateAfterDelay, 0);
-        STORE_PTR_IN_TASK(sprite, taskId, 0);
-        gTasks[taskId].sAnimId = sMonFrontAnimIdsTable[species - 1];
-        gTasks[taskId].sAnimDelay = sMonAnimationDelayTable[species - 1];
-        SummaryScreen_SetAnimDelayTaskId(taskId);
-        SetSpriteCB_MonAnimDummy(sprite);
-    }
-    else
-    {
-        // No delay, start animation
-        StartMonSummaryAnimation(sprite, sMonFrontAnimIdsTable[species - 1]);
-    }
+    sprite->callback = SpriteCallbackDummy;
 }
 
 void StopPokemonAnimationDelayTask(void)

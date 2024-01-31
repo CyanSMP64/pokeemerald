@@ -1154,8 +1154,8 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_GOODRA_HISUIAN] = _("GoodraH"),
     [SPECIES_AVALUGG_HISUIAN] = _("AvaluggH"),
     [SPECIES_DECIDUEYE_HISUIAN] = _("DecidueyeH"),
-    [SPECIES_WOOPER_PALDEAN] = _("WooperP"),
     [SPECIES_TAUROS_PALDEAN] = _("TaurosP"),
+    [SPECIES_WOOPER_PALDEAN] = _("WooperP"),
     // Tauros-Paldea
     [SPECIES_TAUROS_PALDEAN_BLAZE_BREED] = _("TaurosPF"),
     [SPECIES_TAUROS_PALDEAN_AQUA_BREED] = _("TaurosPW"),
@@ -1175,10 +1175,10 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_WORMADAM_TRASH_CLOAK] = _("WormadamT"),
     // Rotom
     [SPECIES_ROTOM_HEAT] = _("RotomH"),
-    [SPECIES_ROTOM_FAN] = _("RotomFa"),
-    [SPECIES_ROTOM_FROST] = _("RotomFr"),
-    [SPECIES_ROTOM_MOW] = _("RotomM"),
     [SPECIES_ROTOM_WASH] = _("RotomW"),
+    [SPECIES_ROTOM_FROST] = _("RotomFr"),
+    [SPECIES_ROTOM_FAN] = _("RotomFa"),
+    [SPECIES_ROTOM_MOW] = _("RotomM"),
     // Origin Forme
     [SPECIES_DIALGA_ORIGIN] = _("DialgaO"),
     [SPECIES_PALKIA_ORIGIN] = _("PalkiaO"),

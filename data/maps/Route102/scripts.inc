@@ -81,8 +81,10 @@ Route102_EventScript_Nurse::
 	end
 
 Route102_EventScript_NurseHeal::
+	closemessage
 	special HealPlayerParty
 	playse SE_USE_ITEM
+	waitse
 	msgbox Route102_Text_PokemonHealed, MSGBOX_DEFAULT
 	release
 	end

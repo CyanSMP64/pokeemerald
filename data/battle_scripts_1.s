@@ -3050,7 +3050,7 @@ BattleScript_FrontierTrainerBattleWon_End:
 BattleScript_SmokeBallEscape::
 	playanimation BS_ATTACKER, B_ANIM_SMOKEBALL_ESCAPE
 	printstring STRINGID_PKMNFLEDUSINGITS
-	waitmessage B_WAIT_TIME_LONG
+	waitmessage 0
 	end2
 
 BattleScript_RanAwayUsingMonAbility::

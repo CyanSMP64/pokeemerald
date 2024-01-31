@@ -189,6 +189,9 @@ static void MoveBattleBarGraphically(u8, u8);
 static u8 CalcBarFilledPixels(s32, s32, s32, s32 *, u8 *, u8);
 static void Debug_TestHealthBar_Helper(struct TestingBar *, s32 *, u16 *);
 
+static void SpriteCb_AbilityPopUp(struct Sprite *);
+static void Task_FreeAbilityPopUpGfx(u8);
+
 static const struct OamData sOamData_64x32 =
 {
     .y = 0,

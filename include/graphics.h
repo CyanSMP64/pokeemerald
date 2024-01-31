@@ -8161,25 +8161,6 @@ extern const u16 gWallClockFemale_Pal[];
 extern const u32 gWallClockStart_Tilemap[];
 extern const u32 gWallClockView_Tilemap[];
 
-extern const u32 gBerryFixGameboy_Gfx[];
-extern const u32 gBerryFixGameboy_Tilemap[];
-extern const u16 gBerryFixGameboy_Pal[];
-extern const u32 gBerryFixGameboyLogo_Gfx[];
-extern const u32 gBerryFixGameboyLogo_Tilemap[];
-extern const u16 gBerryFixGameboyLogo_Pal[];
-extern const u32 gBerryFixGbaTransfer_Gfx[];
-extern const u32 gBerryFixGbaTransfer_Tilemap[];
-extern const u16 gBerryFixGbaTransfer_Pal[];
-extern const u32 gBerryFixGbaTransferHighlight_Gfx[];
-extern const u32 gBerryFixGbaTransferHighlight_Tilemap[];
-extern const u16 gBerryFixGbaTransferHighlight_Pal[];
-extern const u32 gBerryFixGbaTransferError_Gfx[];
-extern const u32 gBerryFixGbaTransferError_Tilemap[];
-extern const u16 gBerryFixGbaTransferError_Pal[];
-extern const u32 gBerryFixWindow_Gfx[];
-extern const u32 gBerryFixWindow_Tilemap[];
-extern const u16 gBerryFixWindow_Pal[];
-
 extern const u32 gBattleTextboxTiles[];
 extern const u32 gBattleTextboxTilemap[];
 extern const u32 gBattleTextboxPalette[];
@@ -8863,9 +8844,6 @@ extern const u32 gIntroSparkle_Gfx[];
 extern const u32 gIntroFlygonSilhouette_Gfx[];
 extern const u32 gIntroLightning_Gfx[];
 extern const u16 gIntroLightning_Pal[];
-extern const u32 gIntroCopyright_Gfx[];
-extern const u32 gIntroCopyright_Tilemap[];
-extern const u16 gIntroCopyright_Pal[16];
 extern const u32 gIntroVolbeat_Gfx[];
 extern const u16 gIntroVolbeat_Pal[];
 extern const u32 gIntroTorchic_Gfx[];
@@ -10053,5 +10031,9 @@ extern const u8 gMailTilemap_Retro[];
 
 extern const u8 gMonMarkingsMenu_Gfx[];
 extern const u16 gMonMarkingsMenu_Pal[];
+
+extern const u32 gIntroCopyright_Gfx[];
+extern const u32 gIntroCopyright_Tilemap[];
+extern const u16 gIntroCopyright_Pal[16];
 
 #endif //GUARD_GRAPHICS_H
