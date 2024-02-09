@@ -1257,9 +1257,9 @@ EventScript_CloseMossdeepGameCornerBarrier::
 	setmetatile 5, 3, METATILE_MossdeepGameCorner_CounterClosed_Bottom, TRUE
 	return
 
-CableClub_OnResume:
-	special InitUnionRoom
-	end
+@CableClub_OnResume:
+@	special InitUnionRoom
+@	end
 
 MossdeepCity_GameCorner_1F_EventScript_InfoMan2::
 	lock

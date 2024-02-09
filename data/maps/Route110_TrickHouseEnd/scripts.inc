@@ -161,6 +161,8 @@ Route110_TrickHouseEnd_EventScript_CompletedPuzzle8::
 	msgbox Route110_TrickHouseEnd_Text_LeavingOnJourney, MSGBOX_DEFAULT
 	call Route110_TrickHouseEnd_EventScript_TrickMasterExit
 	special ResetTrickHouseNuggetFlag
+	dofieldeffectsparkle 4, 5, 0
+	setvar VAR_TEMP_00, 1
 	release
 	end
 

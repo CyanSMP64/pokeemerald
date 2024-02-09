@@ -42,12 +42,8 @@ AbandonedShip_HiddenFloorRooms_EventScript_InUpperRoomRow::
 	return
 
 AbandonedShip_HiddenFloorRooms_EventScript_EnterRm1::
-	delay 20
-	dofieldeffectsparkle 10, 10, 0
 	specialvar VAR_RESULT, FoundAbandonedShipRoom4Key
 	call_if_eq VAR_RESULT, FALSE, AbandonedShip_HiddenFloorRooms_EventScript_Rm4KeySparkle
-	waitfieldeffect FLDEFF_SPARKLE
-	delay 10
 	end
 
 AbandonedShip_HiddenFloorRooms_EventScript_EnterRm2::
@@ -66,24 +62,13 @@ AbandonedShip_HiddenFloorRooms_EventScript_Rm3NoSparkle::
 	end
 
 AbandonedShip_HiddenFloorRooms_EventScript_EnterRm4::
-	delay 20
-	dofieldeffectsparkle 8, 5, 0
-	dofieldeffectsparkle 11, 3, 0
 	specialvar VAR_RESULT, FoundAbandonedShipRoom6Key
 	call_if_eq VAR_RESULT, FALSE, AbandonedShip_HiddenFloorRooms_EventScript_Rm6KeySparkle
-	waitfieldeffect FLDEFF_SPARKLE
-	delay 10
 	end
 
 AbandonedShip_HiddenFloorRooms_EventScript_EnterRm5::
-	delay 20
-	dofieldeffectsparkle 16, 3, 0
-	dofieldeffectsparkle 25, 2, 0
-	dofieldeffectsparkle 24, 6, 0
 	specialvar VAR_RESULT, FoundAbandonedShipRoom2Key
 	call_if_eq VAR_RESULT, FALSE, AbandonedShip_HiddenFloorRooms_EventScript_Rm2KeySparkle
-	waitfieldeffect FLDEFF_SPARKLE
-	delay 10
 	end
 
 AbandonedShip_HiddenFloorRooms_EventScript_EnterRm6::
@@ -94,15 +79,24 @@ AbandonedShip_HiddenFloorRooms_EventScript_Rm1KeySparkle::
 	return
 
 AbandonedShip_HiddenFloorRooms_EventScript_Rm2KeySparkle::
+	delay 20
 	dofieldeffectsparkle 20, 5, 0
+	waitfieldeffect FLDEFF_SPARKLE
+	delay 10
 	return
 
 AbandonedShip_HiddenFloorRooms_EventScript_Rm4KeySparkle::
+	delay 20
 	dofieldeffectsparkle 1, 12, 0
+	waitfieldeffect FLDEFF_SPARKLE
+	delay 10
 	return
 
 AbandonedShip_HiddenFloorRooms_EventScript_Rm6KeySparkle::
+	delay 20
 	dofieldeffectsparkle 1, 2, 0
+	waitfieldeffect FLDEFF_SPARKLE
+	delay 10
 	return
 
 AbandonedShip_HiddenFloorRooms_EventScript_Trash::
