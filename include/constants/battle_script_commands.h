@@ -29,6 +29,8 @@
 #define sWINDOWS_TYPE                (gBattleScripting + 0x24) // windowsType
 #define sMULTIPLAYER_ID              (gBattleScripting + 0x25) // multiplayerId
 #define sSPECIAL_TRAINER_BATTLE_TYPE (gBattleScripting + 0x26) // specialTrainerBattleType
+#define sFIXED_ABILITY_POPUP         (gBattleScripting + 0x27) // fixedPopup
+#define sABILITY_OVERWRITE           (gBattleScripting + 0x28) // abilityPopupOverwrite
 
 // Array entries for battle communication
 #define MULTIUSE_STATE          0
@@ -63,6 +65,7 @@
 #define BS_OPPONENT1                12
 #define BS_PLAYER2                  13 // for Cmd_updatestatusicon
 #define BS_OPPONENT2                14
+#define BS_ABILITY_BATTLER          15
 
 // Cmd_accuracycheck
 #define NO_ACC_CALC 0xFFFE
@@ -105,6 +108,9 @@
 #define VARIOUS_PALACE_TRY_ESCAPE_STATUS        24
 #define VARIOUS_SET_TELEPORT_OUTCOME            25
 #define VARIOUS_PLAY_TRAINER_DEFEATED_MUSIC     26
+#define VARIOUS_ABILITY_POPUP                   27
+#define VARIOUS_UPDATE_ABILITY_POPUP            28
+#define VARIOUS_DESTROY_ABILITY_POPUP           29
 
 // Cmd_manipulatedmg
 #define DMG_CHANGE_SIGN            0

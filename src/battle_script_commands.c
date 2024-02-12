@@ -3090,6 +3090,7 @@ static void Cmd_jumpifability(void)
             gBattlescriptCurrInstr = jumpPtr;
             RecordAbilityBattle(battlerId - 1, gLastUsedAbility);
             gBattleScripting.battlerWithAbility = battlerId - 1;
+            gBattlerAbility = battlerId - 1;
         }
         else
             gBattlescriptCurrInstr += 7;
@@ -3103,6 +3104,7 @@ static void Cmd_jumpifability(void)
             gBattlescriptCurrInstr = jumpPtr;
             RecordAbilityBattle(battlerId - 1, gLastUsedAbility);
             gBattleScripting.battlerWithAbility = battlerId - 1;
+            gBattlerAbility = battlerId - 1;
         }
         else
             gBattlescriptCurrInstr += 7;
@@ -3116,6 +3118,7 @@ static void Cmd_jumpifability(void)
             gBattlescriptCurrInstr = jumpPtr;
             RecordAbilityBattle(battlerId, gLastUsedAbility);
             gBattleScripting.battlerWithAbility = battlerId;
+            gBattlerAbility = battlerId;
         }
         else
             gBattlescriptCurrInstr += 7;
@@ -6195,15 +6198,9 @@ static void Cmd_makevisible(void)
 
 static void Cmd_recordlastability(void)
 {
-    gActiveBattler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
-    RecordAbilityBattle(gActiveBattler, gLastUsedAbility);
-
-#ifdef BUGFIX
-    // This command occupies two bytes (one for the command id, and one for the battler id parameter).
+    u8 battler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
+    RecordAbilityBattle(battler, gBattleMons[battler].ability);
     gBattlescriptCurrInstr += 2;
-#else
-    gBattlescriptCurrInstr += 1;
-#endif
 }
 
 void BufferMoveToLearnIntoBattleTextBuff2(void)
@@ -6463,6 +6460,15 @@ static void Cmd_various(void)
     case VARIOUS_PLAY_TRAINER_DEFEATED_MUSIC:
         BtlController_EmitPlayFanfareOrBGM(BUFFER_A, MUS_VICTORY_TRAINER, TRUE);
         MarkBattlerForControllerExec(gActiveBattler);
+        break;
+    case VARIOUS_ABILITY_POPUP:
+        CreateAbilityPopUp(gActiveBattler, gBattleMons[gActiveBattler].ability, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
+        break;
+    case VARIOUS_UPDATE_ABILITY_POPUP:
+        UpdateAbilityPopup(gActiveBattler);
+        break;
+    case VARIOUS_DESTROY_ABILITY_POPUP:
+        DestroyAbilityPopUp(gActiveBattler);
         break;
     }
 

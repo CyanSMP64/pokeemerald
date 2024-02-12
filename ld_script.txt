@@ -113,13 +113,14 @@ SECTIONS {
         src/battle_controller_link_opponent.o(.text);
         src/pokeball.o(.text);
         src/overworld.o(.text);
-        src/util.o(.text);
+        src/new_game.o(.text);
     } =0
 
     .text_4 0x08067a74 :
     ALIGN(4)
     {
         src/pokemon.o(.text);
+        src/util.o(.text);
         src/task.o(.text);
         src/battle_util2.o(.text);
         src/battle_controller_opponent.o(.text);
@@ -135,7 +136,6 @@ SECTIONS {
         src/trade.o(.text);
         src/berry_blender.o(.text);
         src/play_time.o(.text);
-        src/new_game.o(.text);
         src/fieldmap.o(.text);
         src/metatile_behavior.o(.text);
         src/field_door.o(.text);

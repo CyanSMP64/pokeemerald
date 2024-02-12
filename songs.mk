@@ -1057,7 +1057,7 @@ $(MID_SUBDIR)/se_ice_crack.s: %.s: %.mid
 	$(MID) $< $@ -E -G127 -V100 -P4
 
 $(MID_SUBDIR)/se_ice_stairs.s: %.s: %.mid
-	$(MID) $< $@ -E -G128 -V090 -P4
+	$(MID) $< $@ -E -G128 -V090 -P5
 
 $(MID_SUBDIR)/se_ice_break.s: %.s: %.mid
 	$(MID) $< $@ -E -G128 -V100 -P4
