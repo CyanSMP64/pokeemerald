@@ -3992,6 +3992,7 @@ BattleScript_TraceActivates::
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNTRACED
 	waitmessage B_WAIT_TIME_LONG
+	settracedability BS_SCRIPTING
 	end3
 
 BattleScript_RainDishActivates::

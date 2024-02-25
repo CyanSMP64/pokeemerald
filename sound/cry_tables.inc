@@ -1049,6 +1049,58 @@ gCryTable::
     cry Cry_Fezandipiti
     cry Cry_Ogerpon
     cry Cry_UrsalunaBloodmoon
+	cry Cry_PumpkabooSuper
+	cry Cry_GourgeistSuper
+	cry Cry_VenusaurMega
+	cry Cry_CharizardMegaX
+	cry Cry_CharizardMegaY
+	cry Cry_BlastoiseMega
+	cry Cry_BeedrillMega
+	cry Cry_PidgeotMega
+	cry Cry_AlakazamMega
+	cry Cry_SlowbroMega
+	cry Cry_GengarMega
+	cry Cry_KangaskhanMega
+	cry Cry_PinsirMega
+	cry Cry_GyaradosMega
+	cry Cry_AerodactylMega
+	cry Cry_MewtwoMegaX
+	cry Cry_MewtwoMegaY
+	cry Cry_AmpharosMega
+	cry Cry_SteelixMega
+	cry Cry_ScizorMega
+	cry Cry_HeracrossMega
+	cry Cry_HoundoomMega
+	cry Cry_TyranitarMega
+	cry Cry_SceptileMega
+	cry Cry_BlazikenMega
+	cry Cry_SwampertMega
+	cry Cry_GardevoirMega
+	cry Cry_SableyeMega
+	cry Cry_MawileMega
+	cry Cry_AggronMega
+	cry Cry_MedichamMega
+	cry Cry_ManectricMega
+	cry Cry_SharpedoMega
+	cry Cry_CameruptMega
+	cry Cry_AltariaMega
+	cry Cry_BanetteMega
+	cry Cry_AbsolMega
+	cry Cry_GlalieMega
+	cry Cry_SalamenceMega
+	cry Cry_MetagrossMega
+	cry Cry_LatiasMega
+	cry Cry_LatiosMega
+	cry Cry_LopunnyMega
+	cry Cry_GarchompMega
+	cry Cry_LucarioMega
+	cry Cry_AbomasnowMega
+	cry Cry_GalladeMega
+	cry Cry_AudinoMega
+	cry Cry_DiancieMega
+	cry Cry_RayquazaMega
+	cry Cry_KyogrePrimal
+	cry Cry_GroudonPrimal
 
 	.align 2
 gCryTable_Reverse::
@@ -2101,3 +2153,55 @@ gCryTable_Reverse::
     cry_reverse Cry_Fezandipiti
     cry_reverse Cry_Ogerpon
     cry_reverse Cry_UrsalunaBloodmoon
+	cry_reverse Cry_PumpkabooSuper
+	cry_reverse Cry_GourgeistSuper
+	cry_reverse Cry_VenusaurMega
+	cry_reverse Cry_CharizardMegaX
+	cry_reverse Cry_CharizardMegaY
+	cry_reverse Cry_BlastoiseMega
+	cry_reverse Cry_BeedrillMega
+	cry_reverse Cry_PidgeotMega
+	cry_reverse Cry_AlakazamMega
+	cry_reverse Cry_SlowbroMega
+	cry_reverse Cry_GengarMega
+	cry_reverse Cry_KangaskhanMega
+	cry_reverse Cry_PinsirMega
+	cry_reverse Cry_GyaradosMega
+	cry_reverse Cry_AerodactylMega
+	cry_reverse Cry_MewtwoMegaX
+	cry_reverse Cry_MewtwoMegaY
+	cry_reverse Cry_AmpharosMega
+	cry_reverse Cry_SteelixMega
+	cry_reverse Cry_ScizorMega
+	cry_reverse Cry_HeracrossMega
+	cry_reverse Cry_HoundoomMega
+	cry_reverse Cry_TyranitarMega
+	cry_reverse Cry_SceptileMega
+	cry_reverse Cry_BlazikenMega
+	cry_reverse Cry_SwampertMega
+	cry_reverse Cry_GardevoirMega
+	cry_reverse Cry_SableyeMega
+	cry_reverse Cry_MawileMega
+	cry_reverse Cry_AggronMega
+	cry_reverse Cry_MedichamMega
+	cry_reverse Cry_ManectricMega
+	cry_reverse Cry_SharpedoMega
+	cry_reverse Cry_CameruptMega
+	cry_reverse Cry_AltariaMega
+	cry_reverse Cry_BanetteMega
+	cry_reverse Cry_AbsolMega
+	cry_reverse Cry_GlalieMega
+	cry_reverse Cry_SalamenceMega
+	cry_reverse Cry_MetagrossMega
+	cry_reverse Cry_LatiasMega
+	cry_reverse Cry_LatiosMega
+	cry_reverse Cry_LopunnyMega
+	cry_reverse Cry_GarchompMega
+	cry_reverse Cry_LucarioMega
+	cry_reverse Cry_AbomasnowMega
+	cry_reverse Cry_GalladeMega
+	cry_reverse Cry_AudinoMega
+	cry_reverse Cry_DiancieMega
+	cry_reverse Cry_RayquazaMega
+	cry_reverse Cry_KyogrePrimal
+	cry_reverse Cry_GroudonPrimal

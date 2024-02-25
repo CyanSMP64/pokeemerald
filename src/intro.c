@@ -1039,7 +1039,10 @@ static void MainCB2_Intro(void)
     AnimateSprites();
     BuildOamBuffer();
     UpdatePaletteFade();
-    SetMainCallback2(MainCB2_EndIntro);
+    if (gMain.newKeys != 0 && !gPaletteFade.active)
+        SetMainCallback2(MainCB2_EndIntro);
+    else if (gIntroFrameCounter != -1)
+        gIntroFrameCounter++;
 }
 
 static void MainCB2_EndIntro(void)
@@ -1098,7 +1101,7 @@ static u8 SetUpCopyrightScreen(void)
         gMain.state++;
         GameCubeMultiBoot_Main(&gMultibootProgramStruct);
         break;
-    case 40:
+    case 50:
         GameCubeMultiBoot_Main(&gMultibootProgramStruct);
         if (gMultibootProgramStruct.gcmb_field_2 != 1)
         {
@@ -1106,7 +1109,7 @@ static u8 SetUpCopyrightScreen(void)
             gMain.state++;
         }
         break;
-    case 41:
+    case 51:
         if (UpdatePaletteFade())
             break;
         CreateTask(Task_Scene1_Load, 0);

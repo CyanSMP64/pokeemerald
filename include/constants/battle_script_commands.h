@@ -111,6 +111,7 @@
 #define VARIOUS_ABILITY_POPUP                   27
 #define VARIOUS_UPDATE_ABILITY_POPUP            28
 #define VARIOUS_DESTROY_ABILITY_POPUP           29
+#define VARIOUS_TRACE_ABILITY                   30
 
 // Cmd_manipulatedmg
 #define DMG_CHANGE_SIGN            0

@@ -2031,6 +2031,8 @@ static void Cmd_resultmessage(void)
 
     if (gMoveResultFlags & MOVE_RESULT_MISSED && (!(gMoveResultFlags & MOVE_RESULT_DOESNT_AFFECT_FOE) || gBattleCommunication[MISS_TYPE] > B_MSG_AVOIDED_ATK))
     {
+        if (gBattleCommunication[MISS_TYPE] > B_MSG_AVOIDED_ATK) // Wonder Guard or Levitate - show the ability pop-up
+            CreateAbilityPopUp(gBattlerTarget, gBattleMons[gBattlerTarget].ability, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
         stringId = gMissStringIds[gBattleCommunication[MISS_TYPE]];
         gBattleCommunication[MSG_DISPLAY] = 1;
     }
@@ -2523,6 +2525,7 @@ void SetMoveEffect(bool8 primary, u8 certain)
                     if (primary == TRUE || certain == MOVE_EFFECT_CERTAIN)
                     {
                         gLastUsedAbility = ABILITY_INNER_FOCUS;
+                        gBattlerAbility = gEffectBattler;
                         RecordAbilityBattle(gEffectBattler, ABILITY_INNER_FOCUS);
                         gBattlescriptCurrInstr = BattleScript_FlinchPrevention;
                     }
@@ -6282,6 +6285,12 @@ static void Cmd_useitemonopponent(void)
     gBattlescriptCurrInstr++;
 }
 
+bool32 CanPoisonType(u8 battlerAttacker, u8 battlerTarget)
+{
+    return /*GetBattlerAbility(battlerAttacker) == ABILITY_CORROSION
+        || */(!IS_BATTLER_OF_TYPE(battlerTarget, TYPE_STEEL) && !IS_BATTLER_OF_TYPE(battlerTarget, TYPE_POISON));
+}
+
 static void Cmd_various(void)
 {
     u8 side;
@@ -6462,13 +6471,16 @@ static void Cmd_various(void)
         MarkBattlerForControllerExec(gActiveBattler);
         break;
     case VARIOUS_ABILITY_POPUP:
-        CreateAbilityPopUp(gActiveBattler, gBattleMons[gActiveBattler].ability, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
+        CreateAbilityPopUp(gBattlerAbility, gBattleMons[gBattlerAbility].ability, (gBattleTypeFlags & BATTLE_TYPE_DOUBLE) != 0);
         break;
     case VARIOUS_UPDATE_ABILITY_POPUP:
-        UpdateAbilityPopup(gActiveBattler);
+        UpdateAbilityPopup(gBattlerAbility);
         break;
     case VARIOUS_DESTROY_ABILITY_POPUP:
-        DestroyAbilityPopUp(gActiveBattler);
+        DestroyAbilityPopUp(gBattlerAbility);
+        break;
+    case VARIOUS_TRACE_ABILITY:
+        gBattleMons[gBattlerAbility].ability = gLastUsedAbility;
         break;
     }
 
