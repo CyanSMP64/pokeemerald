@@ -481,30 +481,42 @@ SECTIONS {
         src/main.o(.rodata);
         gflib/bg.o(.rodata);
         gflib/window.o(.rodata);
-        gflib/text.o(.rodata);
         gflib/sprite.o(.rodata);
         gflib/io_reg.o(.rodata);
         gflib/string_util.o(.rodata);
+        src/link_rfu_2.o(.rodata);
+        src/link_rfu_2.o(.rodata.str1.4);
+    } =0
+
+    .rodata_1 0x082f6968 :    /* modify this address when new mons are added - gTrainers must be aligned to 0x08310030 */
+    ALIGN(4)
+    {
+        src/data.o(.rodata);
+        gflib/text.o(.rodata);
         src/link.o(.rodata);
         src/link.o(.rodata.str1.4);
         src/AgbRfu_LinkManager.o(.rodata);
         src/link_rfu_3.o(.rodata);
-        src/link_rfu_2.o(.rodata);
-        src/link_rfu_2.o(.rodata.str1.4);
-        src/union_room.o(.rodata);
         src/mystery_gift_menu.o(.rodata);
         src/union_room_player_avatar.o(.rodata);
-        src/wireless_communication_status_screen.o(.rodata);
         src/union_room_battle.o(.rodata);
         src/mystery_gift.o(.rodata);
-        src/mystery_gift_view.o(.rodata);
         src/mystery_gift_server.o(.rodata);
         src/mystery_gift_client.o(.rodata);
+        src/berry_powder.o(.rodata);
+    } =0
+
+    .rodata_2 0x0831c898 :
+    ALIGN(4)
+    {
+        src/pokemon.o(.rodata);
+        src/union_room.o(.rodata);
+        src/wireless_communication_status_screen.o(.rodata);
+        src/mystery_gift_view.o(.rodata);
         src/mystery_gift_scripts.o(.rodata);
         src/wonder_news.o(.rodata);
         src/union_room_chat.o(.rodata);
         src/berry_crush.o(.rodata);
-        src/berry_powder.o(.rodata);
         src/dodrio_berry_picking.o(.rodata);
         src/pokemon_jump.o(.rodata);
         src/minigame_countdown.o(.rodata);
@@ -524,13 +536,6 @@ SECTIONS {
         src/trade.o(.rodata);
         src/pokemon_size_record.o(.rodata)
         src/roamer.o(.rodata);
-    } =0
-
-    .rodata_1 0x0831c898 :
-    ALIGN(4)
-    {
-        src/pokemon.o(.rodata);
-        src/data.o(.rodata);
         src/trig.o(.rodata);
         src/util.o(.rodata);
         src/daycare.o(.rodata);
@@ -656,7 +661,7 @@ SECTIONS {
         src/field_region_map.o(.rodata);
     } =0
 
-    .rodata_2 0x0860f074 :
+    .rodata_3 0x0860f074 :
     ALIGN(4)
     {
         src/menu.o(.rodata);
@@ -683,7 +688,7 @@ SECTIONS {
         src/rotating_tile_puzzle.o(.rodata);
     } =0
 
-    .rodata_3 0x0861500c :
+    .rodata_4 0x0861500c :
     ALIGN(4)
     {
         src/party_menu.o(.rodata);

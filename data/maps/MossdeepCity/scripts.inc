@@ -260,11 +260,14 @@ MossdeepCity_EventScript_Scott::
 	faceplayer
 	msgbox MossdeepCity_Text_ScottSomethingWrongWithTown, MSGBOX_DEFAULT
 	closemessage
+	fadeoutbgm 1
 	delay 69 // nice
 	addvar VAR_SCOTT_STATE, 1
 	removeobject LOCALID_SCOTT
 	playse SE_UTVANISH
 	waitse
+	delay 25
+	fadeinbgm 1
 	release
 	end
 

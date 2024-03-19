@@ -308,9 +308,9 @@
 #define BATTLE_TERRAIN_BUILDING     8
 #define BATTLE_TERRAIN_PLAIN        9
 
-#define B_WAIT_TIME_LONG  30
-#define B_WAIT_TIME_MED   30
-#define B_WAIT_TIME_SHORT 30
+#define B_WAIT_TIME_LONG  31
+#define B_WAIT_TIME_MED   31
+#define B_WAIT_TIME_SHORT 31
 
 #define CASTFORM_NORMAL     0
 #define CASTFORM_FIRE       1
