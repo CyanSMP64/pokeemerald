@@ -100,10 +100,10 @@
 #define ITEM_REPEL 86
 #define ITEM_057 87
 #define ITEM_058 88
-#define ITEM_059 89
-#define ITEM_05A 90
-#define ITEM_05B 91
-#define ITEM_05C 92
+#define ITEM_DUBIOUS_DISC 89
+#define ITEM_RAZOR_CLAW 90
+#define ITEM_RAZOR_FANG 91
+#define ITEM_LINKING_CORD 92
 #define ITEM_SUN_STONE 93
 #define ITEM_MOON_STONE 94
 #define ITEM_FIRE_STONE 95
@@ -536,6 +536,6 @@
 #define ITEM_B_USE_OTHER    2
 
 // Check if the item is one that can be used on a Pokemon.
-#define ITEM_HAS_EFFECT(item) ((item) >= ITEM_POTION && (item) <= MAX_BERRY_INDEX)
+#define ITEM_HAS_EFFECT(item) (((item) >= ITEM_POTION && (item) <= MAX_BERRY_INDEX) || (item) == ITEM_KINGS_ROCK || (item) == ITEM_METAL_COAT || (item) == ITEM_DEEP_SEA_TOOTH || (item) == ITEM_DEEP_SEA_SCALE || (item) == ITEM_DRAGON_SCALE || (item) == ITEM_UP_GRADE)
 
 #endif  // GUARD_CONSTANTS_ITEMS_H

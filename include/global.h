@@ -360,7 +360,6 @@ struct BattleFrontier
     /*0x64C*/ struct EmeraldBattleTowerRecord towerPlayer;
     /*0x738*/ struct EmeraldBattleTowerRecord towerRecords[BATTLE_TOWER_RECORD_COUNT]; // From record mixing.
     /*0xBEB*/ struct BattleTowerInterview towerInterview;
-    /*0xBEC*/ struct BattleTowerEReaderTrainer ereaderTrainer;
     /*0xCA8*/ u8 challengeStatus;
     /*0xCA9*/ u8 lvlMode:2;
               u8 challengePaused:1;
@@ -515,11 +514,9 @@ struct SaveBlock2
     /*0x2A8*/ struct BerryCrush berryCrush;
     /*0x2B8*/ struct PokemonJumpRecords pokeJump;
     /*0x2C8*/ struct BerryPickingResults berryPick;
-    /*0x2D8*/ struct RankingHall1P hallRecords1P[HALL_FACILITIES_COUNT][FRONTIER_LVL_MODE_COUNT][HALL_RECORDS_COUNT]; // From record mixing.
-    /*0x638*/ struct RankingHall2P hallRecords2P[FRONTIER_LVL_MODE_COUNT][HALL_RECORDS_COUNT]; // From record mixing.
-    /*0x6E0*/ u16 contestLinkResults[CONTEST_CATEGORIES_COUNT][CONTESTANT_COUNT];
-    /*0x708*/ struct BattleFrontier frontier;
-}; // sizeof=0xFE8
+    /*0x2D8*/ u16 contestLinkResults[CONTEST_CATEGORIES_COUNT][CONTESTANT_COUNT];
+    /*0x300*/ struct BattleFrontier frontier;
+}; // sizeof=0xB24
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
 
@@ -1037,17 +1034,15 @@ struct SaveBlock1
     /*0x329B*/ struct ExternalEventFlags externalEventFlags;
     /*0x32B0*/ struct Roamer roamer;
     /*0x32CC*/ struct EnigmaBerry enigmaBerry;
-    /*0x3300*/ struct MysteryGiftSave mysteryGift;
-    /*0x366C*/ u32 trainerHillTimes[NUM_TRAINER_HILL_MODES];
-    /*0x367C*/ struct RamScript ramScript;
-    /*0x3A68*/ struct RecordMixingGift recordMixingGift;
-    /*0x3A78*/ u8 seen2[NUM_DEX_FLAG_BYTES];
-    /*0x3B10*/ LilycoveLady lilycoveLady;
-    /*0x3B50*/ struct TrainerNameRecord trainerNameRecords[20];
-    /*0x3C40*/ u8 registeredTexts[UNION_ROOM_KB_ROW_COUNT][21];
-    /*0x3D14*/ struct TrainerHillSave trainerHill;
-    /*0x3D20*/ struct WaldaPhrase waldaPhrase;
-    // sizeof: 0x3D38
+    /*0x3300*/ u32 trainerHillTimes[NUM_TRAINER_HILL_MODES];
+    /*0x3310*/ struct RecordMixingGift recordMixingGift;
+    /*0x3320*/ u8 seen2[NUM_DEX_FLAG_BYTES];
+    /*0x33B8*/ LilycoveLady lilycoveLady;
+    /*0x33F8*/ struct TrainerNameRecord trainerNameRecords[20];
+    /*0x34E8*/ u8 registeredTexts[UNION_ROOM_KB_ROW_COUNT][21];
+    /*0x35BC*/ struct TrainerHillSave trainerHill;
+    /*0x35C8*/ struct WaldaPhrase waldaPhrase;
+    // sizeof: 0x35E0
 };
 
 extern struct SaveBlock1* gSaveBlock1Ptr;
