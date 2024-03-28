@@ -3245,3 +3245,51 @@ Cry_KyogrePrimal::
 	.align 2
 Cry_GroudonPrimal::
 	.incbin "sound/direct_sound_samples/cries/primal_groudon.bin"
+
+	.align 2
+Cry_ToxtricityLowKey::
+	.incbin "sound/direct_sound_samples/cries/toxtricity-lowkey.bin"
+
+	.align 2
+Cry_MorpekoHangry::
+	.incbin "sound/direct_sound_samples/cries/morpeko-hangry.bin"
+
+	.align 2
+Cry_EternatusEternamax::
+	.incbin "sound/direct_sound_samples/cries/eternatus-eternamax.bin"
+
+	.align 2
+Cry_Archaludon::
+	.incbin "sound/direct_sound_samples/cries/archaludon.bin"
+
+	.align 2
+Cry_Hydrapple::
+	.incbin "sound/direct_sound_samples/cries/hydrapple.bin"
+
+	.align 2
+Cry_GougingFire::
+	.incbin "sound/direct_sound_samples/cries/gougingfire.bin"
+
+	.align 2
+Cry_RagingBolt::
+	.incbin "sound/direct_sound_samples/cries/ragingbolt.bin"
+
+	.align 2
+Cry_IronBoulder::
+	.incbin "sound/direct_sound_samples/cries/ironboulder.bin"
+
+	.align 2
+Cry_IronCrown::
+	.incbin "sound/direct_sound_samples/cries/ironcrown.bin"
+
+	.align 2
+Cry_Terapagos::
+	.incbin "sound/direct_sound_samples/cries/terapagos.bin"
+
+	.align 2
+Cry_Pecharunt::
+	.incbin "sound/direct_sound_samples/cries/pecharunt.bin"
+
+	.align 2
+Cry_GimmighoulRoaming::
+	.incbin "sound/direct_sound_samples/cries/gimmighoul-roaming.bin"

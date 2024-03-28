@@ -1101,6 +1101,18 @@ gCryTable::
 	cry Cry_RayquazaMega
 	cry Cry_KyogrePrimal
 	cry Cry_GroudonPrimal
+	cry Cry_ToxtricityLowKey
+	cry Cry_MorpekoHangry
+	cry Cry_EternatusEternamax
+	cry Cry_Archaludon
+	cry Cry_Hydrapple
+	cry Cry_GougingFire
+	cry Cry_RagingBolt
+	cry Cry_IronBoulder
+	cry Cry_IronCrown
+	cry Cry_Terapagos
+	cry Cry_Pecharunt
+	cry Cry_GimmighoulRoaming
 
 	.align 2
 gCryTable_Reverse::
@@ -2205,3 +2217,15 @@ gCryTable_Reverse::
 	cry_reverse Cry_RayquazaMega
 	cry_reverse Cry_KyogrePrimal
 	cry_reverse Cry_GroudonPrimal
+	cry_reverse Cry_ToxtricityLowKey
+	cry_reverse Cry_MorpekoHangry
+	cry_reverse Cry_EternatusEternamax
+	cry_reverse Cry_Archaludon
+	cry_reverse Cry_Hydrapple
+	cry_reverse Cry_GougingFire
+	cry_reverse Cry_RagingBolt
+	cry_reverse Cry_IronBoulder
+	cry_reverse Cry_IronCrown
+	cry_reverse Cry_Terapagos
+	cry_reverse Cry_Pecharunt
+	cry_reverse Cry_GimmighoulRoaming

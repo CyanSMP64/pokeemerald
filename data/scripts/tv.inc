@@ -31,7 +31,7 @@ EventScript_MomDadMightLikeThis1::
 
 EventScript_PlayersHouseMovie::
 	msgbox PlayersHouse_1F_Text_TheresAMovieOnTV, MSGBOX_DEFAULT
-	special FlagsVars_PokedexFlags_All	@ debug
+	@special FlagsVars_PokedexFlags_All	@ debug
 	releaseall
 	end
 

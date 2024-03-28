@@ -1080,6 +1080,14 @@ const u8 *const gMonIconTable[] =
     [SPECIES_MUNKIDORI] = gMonIcon_Munkidori,
     [SPECIES_FEZANDIPITI] = gMonIcon_Fezandipiti,
     [SPECIES_OGERPON] = gMonIcon_Ogerpon,
+    [SPECIES_ARCHALUDON] = gMonIcon_Archaludon,
+    [SPECIES_HYDRAPPLE] = gMonIcon_Hydrapple,
+    [SPECIES_GOUGING_FIRE] = gMonIcon_GougingFire,
+    [SPECIES_RAGING_BOLT] = gMonIcon_RagingBolt,
+    [SPECIES_IRON_BOULDER] = gMonIcon_IronBoulder,
+    [SPECIES_IRON_CROWN] = gMonIcon_QuestionMark,
+    [SPECIES_TERAPAGOS] = gMonIcon_Terapagos,
+    [SPECIES_PECHARUNT] = gMonIcon_QuestionMark,
     [SPECIES_VENUSAUR_MEGA] = gMonIcon_VenusaurMega,
     [SPECIES_CHARIZARD_MEGA_X] = gMonIcon_CharizardMegaX,
     [SPECIES_CHARIZARD_MEGA_Y] = gMonIcon_CharizardMegaY,
@@ -1362,6 +1370,43 @@ const u8 *const gMonIconTable[] =
     [SPECIES_FRILLISH_FEMALE] = gMonIcon_FrillishF,
     [SPECIES_JELLICENT_FEMALE] = gMonIcon_JellicentF,
     [SPECIES_PYROAR_FEMALE] = gMonIcon_PyroarF,
+    [SPECIES_PIKACHU_CAP] = gMonIcon_PikachuC_M1,
+    [SPECIES_PIKACHU_PARTNER] = gMonIcon_PikachuPartner,
+    [SPECIES_EEVEE_PARTNER] = gMonIcon_EeveePartner,
+    [SPECIES_PICHU_SPIKY_EARED] = gMonIcon_PichuSpiky,
+    [SPECIES_CHERRIM_SUNSHINE] = gMonIcon_CherrimSunshine,
+    [SPECIES_MORPEKO_HANGRY] = gMonIcon_MorpekoHangry,
+    [SPECIES_ETERNATUS_ETERNAMAX] = gMonIcon_EternatusEternamax,
+    [SPECIES_GIMMIGHOUL_ROAMING] = gMonIcon_GimmighoulRoaming,
+    [SPECIES_TERAPAGOS_TERASTAL] = gMonIcon_TerapagosTerastal,
+    [SPECIES_TERAPAGOS_STELLAR] = gMonIcon_TerapagosStellar,
+    [SPECIES_PIKACHU_CAP_2] = gMonIcon_PikachuC_M2,
+    [SPECIES_PIKACHU_CAP_3] = gMonIcon_PikachuC_M3,
+    [SPECIES_PIKACHU_CAP_4] = gMonIcon_PikachuC_M4,
+    [SPECIES_PIKACHU_CAP_5] = gMonIcon_PikachuC_M5,
+    [SPECIES_PIKACHU_CAP_6] = gMonIcon_PikachuC_M6,
+    [SPECIES_PIKACHU_CAP_7] = gMonIcon_PikachuC_M7,
+    [SPECIES_PIKACHU_CAP_8] = gMonIcon_PikachuC_M8,
+    [SPECIES_PIKACHU_COSPLAY_1] = gMonIcon_PikachuC_F1,
+    [SPECIES_PIKACHU_COSPLAY_2] = gMonIcon_PikachuC_F2,
+    [SPECIES_PIKACHU_COSPLAY_3] = gMonIcon_PikachuC_F3,
+    [SPECIES_PIKACHU_COSPLAY_4] = gMonIcon_PikachuC_F4,
+    [SPECIES_PIKACHU_COSPLAY_5] = gMonIcon_PikachuC_F5,
+    [SPECIES_PIKACHU_COSPLAY_6] = gMonIcon_PikachuC_F6,
+    [SPECIES_KELDEO_RESOLUTE] = gMonIcon_KeldeoResolute,
+    [SPECIES_FURFROU_TRIM_1] = gMonIcon_FurfrouC_1,
+    [SPECIES_FURFROU_TRIM_2] = gMonIcon_FurfrouC_2,
+    [SPECIES_FURFROU_TRIM_3] = gMonIcon_FurfrouC_3,
+    [SPECIES_FURFROU_TRIM_4] = gMonIcon_FurfrouC_4,
+    [SPECIES_FURFROU_TRIM_5] = gMonIcon_FurfrouC_5,
+    [SPECIES_FURFROU_TRIM_6] = gMonIcon_FurfrouC_6,
+    [SPECIES_FURFROU_TRIM_7] = gMonIcon_FurfrouC_7,
+    [SPECIES_FURFROU_TRIM_8] = gMonIcon_FurfrouC_8,
+    [SPECIES_FURFROU_TRIM_9] = gMonIcon_FurfrouC_9,
+    [SPECIES_MAGEARNA_ORIGINAL_COLOR] = gMonIcon_MagearnaOriginal,
+    [SPECIES_CRAMORANT_GULPING] = gMonIcon_CramorantGulping,
+    [SPECIES_CRAMORANT_GORGING] = gMonIcon_CramorantGorging,
+    [SPECIES_ZARUDE_DADA] = gMonIcon_ZarudeDada,
     [SPECIES_EGG] = gMonIcon_Egg,
     [SPECIES_UNOWN_B] = gMonIcon_UnownB,
     [SPECIES_UNOWN_C] = gMonIcon_UnownC,
@@ -2450,6 +2495,14 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_MUNKIDORI] = 0,
     [SPECIES_FEZANDIPITI] = 0,
     [SPECIES_OGERPON] = 1,
+    [SPECIES_ARCHALUDON] = 0,
+    [SPECIES_HYDRAPPLE] = 1,
+    [SPECIES_GOUGING_FIRE] = 2,
+    [SPECIES_RAGING_BOLT] = 2,
+    [SPECIES_IRON_BOULDER] = 0,
+    [SPECIES_IRON_CROWN] = 0,
+    [SPECIES_TERAPAGOS] = 0,
+    [SPECIES_PECHARUNT] = 0,
     [SPECIES_VENUSAUR_MEGA] = 1,
     [SPECIES_CHARIZARD_MEGA_X] = 0,
     [SPECIES_CHARIZARD_MEGA_Y] = 0,
@@ -2728,6 +2781,43 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_FRILLISH_FEMALE] = 1,
     [SPECIES_JELLICENT_FEMALE] = 1,
     [SPECIES_PYROAR_FEMALE] = 2,
+    [SPECIES_PIKACHU_CAP] = 0,
+    [SPECIES_PIKACHU_PARTNER] = 1,
+    [SPECIES_EEVEE_PARTNER] = 4,
+    [SPECIES_PICHU_SPIKY_EARED] = 1,
+    [SPECIES_CHERRIM_SUNSHINE] = 1,
+    [SPECIES_MORPEKO_HANGRY] = 2,
+    [SPECIES_ETERNATUS_ETERNAMAX] = 0,
+    [SPECIES_GIMMIGHOUL_ROAMING] = 0,
+    [SPECIES_TERAPAGOS_TERASTAL] = 0,
+    [SPECIES_TERAPAGOS_STELLAR] = 0,
+    [SPECIES_PIKACHU_CAP_2] = 0,
+    [SPECIES_PIKACHU_CAP_3] = 0,
+    [SPECIES_PIKACHU_CAP_4] = 0,
+    [SPECIES_PIKACHU_CAP_5] = 0,
+    [SPECIES_PIKACHU_CAP_6] = 0,
+    [SPECIES_PIKACHU_CAP_7] = 0,
+    [SPECIES_PIKACHU_CAP_8] = 0,
+    [SPECIES_PIKACHU_COSPLAY_1] = 2,
+    [SPECIES_PIKACHU_COSPLAY_2] = 1,
+    [SPECIES_PIKACHU_COSPLAY_3] = 0,
+    [SPECIES_PIKACHU_COSPLAY_4] = 0,
+    [SPECIES_PIKACHU_COSPLAY_5] = 1,
+    [SPECIES_PIKACHU_COSPLAY_6] = 0,
+    [SPECIES_KELDEO_RESOLUTE] = 0,
+    [SPECIES_FURFROU_TRIM_1] = 0,
+    [SPECIES_FURFROU_TRIM_2] = 0,
+    [SPECIES_FURFROU_TRIM_3] = 0,
+    [SPECIES_FURFROU_TRIM_4] = 2,
+    [SPECIES_FURFROU_TRIM_5] = 2,
+    [SPECIES_FURFROU_TRIM_6] = 1,
+    [SPECIES_FURFROU_TRIM_7] = 0,
+    [SPECIES_FURFROU_TRIM_8] = 0,
+    [SPECIES_FURFROU_TRIM_9] = 0,
+    [SPECIES_MAGEARNA_ORIGINAL_COLOR] = 0,
+    [SPECIES_CRAMORANT_GULPING] = 0,
+    [SPECIES_CRAMORANT_GORGING] = 0,
+    [SPECIES_ZARUDE_DADA] = 1,
     [SPECIES_EGG] = 1,
     [SPECIES_UNOWN_B] = 0,
     [SPECIES_UNOWN_C] = 0,
@@ -2893,10 +2983,6 @@ u8 CreateMonIcon(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u
 
     if ((species == SPECIES_FRILLISH || species == SPECIES_JELLICENT) && (personality % 0x100) < 0x7F)
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_FRILLISH_FEMALE];
-    if (species == SPECIES_BASCULEGION && (personality % 0x100) < 0x7F)
-        iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_BASCULEGION_FEMALE];
-    if (species == SPECIES_OINKOLOGNE && (personality % 0x100) < 0x7F)
-        iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_OINKOLOGNE_FEMALE];
     if (species == SPECIES_SQUAWKABILLY && ((personality >> 8) % 4 == 1 || (personality >> 8) % 4 == 3))
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_SQUAWKABILLY_BLUE_PLUMAGE];
     if (species == SPECIES_DEERLING && (personality >> 8) % 4 == 2)
@@ -2907,6 +2993,14 @@ u8 CreateMonIcon(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_VIVILLON_CONTINENTAL];
     if (species == SPECIES_VIVILLON && (((personality >> 8) % 20 == 4) || ((personality >> 8) % 20 == 11) || ((personality >> 8) % 20 == 18)))
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_VIVILLON_GARDEN];
+    if (species == SPECIES_FURFROU && (((personality >> 8) % 20 == 14) || ((personality >> 8) % 20 == 15)))
+        iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_FURFROU_TRIM_4];
+    if (species == SPECIES_FURFROU && (((personality >> 8) % 20 == 16)))
+        iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_FURFROU_TRIM_6];
+    if (species == SPECIES_PIKACHU_CAP && (((personality >> 8) % 6 == 0) && ((personality % 0x100) < 0x7f)))
+        iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_PIKACHU_COSPLAY_1];
+    if (species == SPECIES_PIKACHU_CAP && ((((personality >> 8) % 6 == 1) || ((personality >> 8) % 6 == 4)) && ((personality % 100) < 0x7f)))
+        iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_PIKACHU_COSPLAY_2];
     if ((species == SPECIES_FLABEBE || species == SPECIES_FLOETTE) && (((personality >> 8) % 5 == 2) || ((personality >> 8) % 5 == 3)))
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_FLABEBE_ORANGE_FLOWER];
     if (species == SPECIES_FLORGES && (personality >> 8) % 5 == 1)
@@ -2915,10 +3009,6 @@ u8 CreateMonIcon(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_MINIOR_CORE_GREEN];
     if (species == SPECIES_MINIOR_CORE_RED && (personality >> 8) % 7 == 6)
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_MINIOR_CORE_VIOLET];
-    if (species == SPECIES_BASCULIN && (personality >> 8) % 2 == 1)
-        iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_BASCULIN_BLUE_STRIPED];
-    if (species == SPECIES_LYCANROC && (personality >> 8) % 3 >= 1)
-        iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_LYCANROC_MIDNIGHT];
     if (species > NUM_SPECIES)
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG;
 
@@ -2954,12 +3044,12 @@ u16 GetIconSpecies(u16 species, u32 personality)
 {
     u16 result;
 
-    if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON || species == SPECIES_BASCULIN
-        || species == SPECIES_UNFEZANT || species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_FRILLISH || species == SPECIES_JELLICENT || species == SPECIES_VIVILLON
-        || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES || species == SPECIES_MEOWSTIC || species == SPECIES_PUMPKABOO
-        || species == SPECIES_GOURGEIST || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_TOXTRICITY || species == SPECIES_ALCREMIE || species == SPECIES_BASCULEGION
-        || species == SPECIES_OINKOLOGNE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE
-        || species == SPECIES_AEGISLASH || species == SPECIES_LYCANROC || species == SPECIES_EISCUE)
+    if (species == SPECIES_UNOWN || species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_HIPPOPOTAS || species == SPECIES_HIPPOWDON
+        || species == SPECIES_UNFEZANT || species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_FRILLISH || species == SPECIES_JELLICENT
+        || species == SPECIES_VIVILLON || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES
+        || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_ALCREMIE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY
+        || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE || species == SPECIES_KELDEO || species == SPECIES_FURFROU
+        || species == SPECIES_MAGEARNA || species == SPECIES_CRAMORANT || species == SPECIES_ZARUDE || species == SPECIES_PIKACHU_CAP)
     {
         u16 letter;
         if (species == SPECIES_UNOWN)
@@ -2970,7 +3060,7 @@ u16 GetIconSpecies(u16 species, u32 personality)
             else
                 letter += (SPECIES_UNOWN_B - 1);
         }
-        else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_BASCULIN || species == SPECIES_AEGISLASH || species == SPECIES_EISCUE)
+        else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_KELDEO || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
         {
             letter = (personality >> 8) % 2;
             if (!letter)
@@ -2979,12 +3069,12 @@ u16 GetIconSpecies(u16 species, u32 personality)
             {
                 if (species == SPECIES_SHELLOS)
                     letter = SPECIES_SHELLOS_EAST_SEA;
-                else if (species == SPECIES_BASCULIN)
-                    letter = SPECIES_BASCULIN_BLUE_STRIPED;
-                else if (species == SPECIES_AEGISLASH)
-                    letter = SPECIES_AEGISLASH_BLADE;
-                else if (species == SPECIES_EISCUE)
-                    letter = SPECIES_EISCUE_NOICE_FACE;
+                else if (species == SPECIES_KELDEO)
+                    letter = SPECIES_KELDEO_RESOLUTE;
+                else if (species == SPECIES_MAGEARNA)
+                    letter = SPECIES_MAGEARNA_ORIGINAL_COLOR;
+                else if (species == SPECIES_ZARUDE)
+                    letter = SPECIES_ZARUDE_DADA;
                 else
                     letter = SPECIES_GASTRODON_EAST_SEA;
             }
@@ -3002,7 +3092,7 @@ u16 GetIconSpecies(u16 species, u32 personality)
                     letter = SPECIES_DUDUNSPARCE_THREE_SEGMENT;
             }
         }
-        else if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_PUMPKABOO || species == SPECIES_GOURGEIST || species == SPECIES_SQUAWKABILLY)
+        else if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_SQUAWKABILLY)
         {
             letter = (personality >> 8) % 4;
             if (!letter)
@@ -3013,12 +3103,8 @@ u16 GetIconSpecies(u16 species, u32 personality)
                     letter += SPECIES_DEERLING_SUMMER - 1;
                 else if (species == SPECIES_SAWSBUCK)
                     letter += SPECIES_SAWSBUCK_SUMMER - 1;
-                else if (species == SPECIES_SQUAWKABILLY)
-                    letter += SPECIES_SQUAWKABILLY_BLUE_PLUMAGE - 1;
-                else if (species == SPECIES_PUMPKABOO)
-                    letter += SPECIES_PUMPKABOO_SMALL - 1;
                 else
-                    letter += SPECIES_GOURGEIST_SMALL - 1;
+                    letter += SPECIES_SQUAWKABILLY_BLUE_PLUMAGE - 1;
             }
         }
         else if (species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES)
@@ -3036,13 +3122,29 @@ u16 GetIconSpecies(u16 species, u32 personality)
                     letter += SPECIES_FLORGES_YELLOW_FLOWER - 1;
             }
         }
-        else if (species == SPECIES_VIVILLON)
+        else if (species == SPECIES_VIVILLON || species == SPECIES_CRAMORANT || species == SPECIES_FURFROU)
         {
             letter = (personality >> 8) % 20;
-            if (!letter)
-                letter = species;
-            else
-                letter += SPECIES_VIVILLON_POLAR - 1;
+            if (species == SPECIES_VIVILLON) {
+                if (!letter)
+                    letter = species;
+                else
+                    letter += SPECIES_VIVILLON_POLAR - 1;
+            }
+            else if (species == SPECIES_CRAMORANT) {
+                if (letter < 16)
+                    letter = species;
+                else if (letter == 19)
+                    letter = SPECIES_CRAMORANT_GORGING;
+                else
+                    letter = SPECIES_CRAMORANT_GULPING;
+            }
+            else {
+                if (letter <= 10)
+                    letter = species;
+                else
+                    letter += SPECIES_FURFROU_TRIM_1 - 11;
+            }
         }
         else if (species == SPECIES_MINIOR_CORE_RED)
         {
@@ -3060,27 +3162,13 @@ u16 GetIconSpecies(u16 species, u32 personality)
             else
                 letter += SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
         }
-        else if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
+        else if (species == SPECIES_TATSUGIRI)
         {
             letter = (personality >> 8) % 3;
             if (!letter)
                 letter = species;
             else
-            {
-                if (species == SPECIES_LYCANROC)
-                    letter += SPECIES_LYCANROC_MIDNIGHT - 1;
-                else
-                    letter += SPECIES_TATSUGIRI_DROOPY - 1;
-            }
-        }
-        else if (species == SPECIES_TOXTRICITY)
-        {
-            if ((personality % 25) == 0 || (personality % 25) == 2 || (personality % 25) == 3 || (personality % 25) == 4 ||
-            (personality % 25) == 6 || (personality % 25) == 8 || (personality % 25) == 9 || (personality % 25) == 11 || 
-            (personality % 25) == 13 || (personality % 25) == 14 || (personality % 25) == 19 || (personality % 25) == 22 || (personality % 25) == 24)
-                letter = species;
-            else
-                letter = SPECIES_TOXTRICITY_LOW_KEY;
+                letter += SPECIES_TATSUGIRI_DROOPY - 1;
         }
         else if (species == SPECIES_PYROAR)
         {
@@ -3091,8 +3179,28 @@ u16 GetIconSpecies(u16 species, u32 personality)
         }
         else
         {
-            if ((personality % 0x100) >= 0x7F)
-                letter = species;
+            if ((personality % 0x100) >= 0x7F) {
+                if (species == SPECIES_PIKACHU_CAP) {
+                    if ((personality >> 8) % 8 == 1)
+                        letter = SPECIES_PIKACHU_CAP_2;
+                    else if ((personality >> 8) % 8 == 2)
+                        letter = SPECIES_PIKACHU_CAP_3;
+                    else if ((personality >> 8) % 8 == 3)
+                        letter = SPECIES_PIKACHU_CAP_4;
+                    else if ((personality >> 8) % 8 == 4)
+                        letter = SPECIES_PIKACHU_CAP_5;
+                    else if ((personality >> 8) % 8 == 5)
+                        letter = SPECIES_PIKACHU_CAP_6;
+                    else if ((personality >> 8) % 8 == 6)
+                        letter = SPECIES_PIKACHU_CAP_7;
+                    else if ((personality >> 8) % 8 == 7)
+                        letter = SPECIES_PIKACHU_CAP_8;
+                    else
+                        letter = species;
+                }
+                else
+                    letter = species;
+            }
             else
                 if (species == SPECIES_HIPPOPOTAS)
                     letter = SPECIES_HIPPOPOTAS_FEMALE;
@@ -3100,16 +3208,24 @@ u16 GetIconSpecies(u16 species, u32 personality)
                     letter = SPECIES_HIPPOWDON_FEMALE;
                 else if (species == SPECIES_UNFEZANT)
                     letter = SPECIES_UNFEZANT_FEMALE;
+                else if (species == SPECIES_PIKACHU_CAP) {
+                    if ((personality >> 8) % 6 == 0)
+                        letter = SPECIES_PIKACHU_COSPLAY_1;
+                    else if ((personality >> 8) % 6 == 1)
+                        letter = SPECIES_PIKACHU_COSPLAY_2;
+                    else if ((personality >> 8) % 6 == 2)
+                        letter = SPECIES_PIKACHU_COSPLAY_3;
+                    else if ((personality >> 8) % 6 == 3)
+                        letter = SPECIES_PIKACHU_COSPLAY_4;
+                    else if ((personality >> 8) % 6 == 4)
+                        letter = SPECIES_PIKACHU_COSPLAY_5;
+                    else
+                        letter = SPECIES_PIKACHU_COSPLAY_6;
+                }
                 else if (species == SPECIES_FRILLISH)
                     letter = SPECIES_FRILLISH_FEMALE;
-                else if (species == SPECIES_JELLICENT)
-                    letter = SPECIES_JELLICENT_FEMALE;
-                else if (species == SPECIES_MEOWSTIC)
-                    letter = SPECIES_MEOWSTIC_FEMALE;
-                else if (species == SPECIES_OINKOLOGNE)
-                    letter = SPECIES_OINKOLOGNE_FEMALE;
                 else
-                    letter = SPECIES_BASCULEGION_FEMALE;
+                    letter = SPECIES_JELLICENT_FEMALE;
         }
         result = letter;
     }

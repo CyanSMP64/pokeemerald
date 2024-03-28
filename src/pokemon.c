@@ -1142,6 +1142,14 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(MUNKIDORI),
     SPECIES_TO_HOENN(FEZANDIPITI),
     SPECIES_TO_HOENN(OGERPON),
+    SPECIES_TO_HOENN(ARCHALUDON),
+    SPECIES_TO_HOENN(HYDRAPPLE),
+    SPECIES_TO_HOENN(GOUGING_FIRE),
+    SPECIES_TO_HOENN(RAGING_BOLT),
+    SPECIES_TO_HOENN(IRON_BOULDER),
+    SPECIES_TO_HOENN(IRON_CROWN),
+    SPECIES_TO_HOENN(TERAPAGOS),
+    SPECIES_TO_HOENN(PECHARUNT),
     SPECIES_TO_HOENN(VENUSAUR_MEGA),
     SPECIES_TO_HOENN(CHARIZARD_MEGA_X),
     SPECIES_TO_HOENN(CHARIZARD_MEGA_Y),
@@ -1238,7 +1246,6 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(SNEASEL_HISUIAN),
     SPECIES_TO_HOENN(SAMUROTT_HISUIAN),
     SPECIES_TO_HOENN(LILLIGANT_HISUIAN),
-    SPECIES_TO_HOENN(BASCULIN_WHITE_STRIPED),
     SPECIES_TO_HOENN(ZORUA_HISUIAN),
     SPECIES_TO_HOENN(ZOROARK_HISUIAN),
     SPECIES_TO_HOENN(BRAVIARY_HISUIAN),
@@ -1248,8 +1255,12 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(DECIDUEYE_HISUIAN),
     SPECIES_TO_HOENN(TAUROS_PALDEAN),
     SPECIES_TO_HOENN(WOOPER_PALDEAN),
+    SPECIES_TO_HOENN(PIKACHU_CAP),
+    SPECIES_TO_HOENN(PIKACHU_PARTNER),
     SPECIES_TO_HOENN(TAUROS_PALDEAN_BLAZE_BREED),
     SPECIES_TO_HOENN(TAUROS_PALDEAN_AQUA_BREED),
+    SPECIES_TO_HOENN(EEVEE_PARTNER),
+    SPECIES_TO_HOENN(PICHU_SPIKY_EARED),
     SPECIES_TO_HOENN(CASTFORM_SUNNY),
     SPECIES_TO_HOENN(CASTFORM_RAINY),
     SPECIES_TO_HOENN(CASTFORM_SNOWY),
@@ -1260,6 +1271,7 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(BURMY_TRASH_CLOAK),
     SPECIES_TO_HOENN(WORMADAM_SANDY_CLOAK),
     SPECIES_TO_HOENN(WORMADAM_TRASH_CLOAK),
+    SPECIES_TO_HOENN(CHERRIM_SUNSHINE),
     SPECIES_TO_HOENN(ROTOM_HEAT),
     SPECIES_TO_HOENN(ROTOM_WASH),
     SPECIES_TO_HOENN(ROTOM_FROST),
@@ -1269,39 +1281,60 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(PALKIA_ORIGIN),
     SPECIES_TO_HOENN(GIRATINA_ORIGIN),
     SPECIES_TO_HOENN(SHAYMIN_SKY),
+    SPECIES_TO_HOENN(BASCULIN_BLUE_STRIPED),
+    SPECIES_TO_HOENN(BASCULIN_WHITE_STRIPED),
     SPECIES_TO_HOENN(DARMANITAN_ZEN_MODE),
     SPECIES_TO_HOENN(DARMANITAN_ZEN_MODE_GALARIAN),
     SPECIES_TO_HOENN(TORNADUS_THERIAN),
     SPECIES_TO_HOENN(THUNDURUS_THERIAN),
     SPECIES_TO_HOENN(LANDORUS_THERIAN),
-    SPECIES_TO_HOENN(ENAMORUS_THERIAN),
     SPECIES_TO_HOENN(KYUREM_WHITE),
     SPECIES_TO_HOENN(KYUREM_BLACK),
     SPECIES_TO_HOENN(MELOETTA_PIROUETTE),
     SPECIES_TO_HOENN(GRENINJA_ASH),
     SPECIES_TO_HOENN(FLOETTE_ETERNAL_FLOWER),
+    SPECIES_TO_HOENN(MEOWSTIC_FEMALE),
+    SPECIES_TO_HOENN(AEGISLASH_BLADE),
+    SPECIES_TO_HOENN(PUMPKABOO_SMALL),
+    SPECIES_TO_HOENN(PUMPKABOO_LARGE),
+    SPECIES_TO_HOENN(PUMPKABOO_SUPER),
+    SPECIES_TO_HOENN(GOURGEIST_SMALL),
+    SPECIES_TO_HOENN(GOURGEIST_LARGE),
+    SPECIES_TO_HOENN(GOURGEIST_SUPER),
     SPECIES_TO_HOENN(ZYGARDE_10),
     SPECIES_TO_HOENN(ZYGARDE_COMPLETE),
     SPECIES_TO_HOENN(HOOPA_UNBOUND),
     SPECIES_TO_HOENN(ORICORIO_POM_POM),
     SPECIES_TO_HOENN(ORICORIO_PAU),
     SPECIES_TO_HOENN(ORICORIO_SENSU),
+    SPECIES_TO_HOENN(LYCANROC_MIDNIGHT),
+    SPECIES_TO_HOENN(LYCANROC_DUSK),
     SPECIES_TO_HOENN(WISHIWASHI_SCHOOL),
     SPECIES_TO_HOENN(MINIOR_CORE_RED),
     SPECIES_TO_HOENN(NECROZMA_DUSK_MANE),
     SPECIES_TO_HOENN(NECROZMA_DAWN_WINGS),
     SPECIES_TO_HOENN(NECROZMA_ULTRA),
+    SPECIES_TO_HOENN(TOXTRICITY_LOW_KEY),
+    SPECIES_TO_HOENN(EISCUE_NOICE_FACE),
     SPECIES_TO_HOENN(INDEEDEE_FEMALE),
+    SPECIES_TO_HOENN(MORPEKO_HANGRY),
     SPECIES_TO_HOENN(ZACIAN_CROWNED_SWORD),
     SPECIES_TO_HOENN(ZAMAZENTA_CROWNED_SHIELD),
+    SPECIES_TO_HOENN(ETERNATUS_ETERNAMAX),
     SPECIES_TO_HOENN(URSHIFU_RAPID_STRIKE_STYLE),
     SPECIES_TO_HOENN(CALYREX_ICE_RIDER),
     SPECIES_TO_HOENN(CALYREX_SHADOW_RIDER),
     SPECIES_TO_HOENN(URSALUNA_BLOODMOON),
+    SPECIES_TO_HOENN(BASCULEGION_FEMALE),
+    SPECIES_TO_HOENN(ENAMORUS_THERIAN),
+    SPECIES_TO_HOENN(OINKOLOGNE_FEMALE),
     SPECIES_TO_HOENN(PALAFIN_HERO),
+    SPECIES_TO_HOENN(GIMMIGHOUL_ROAMING),
     SPECIES_TO_HOENN(OGERPON_WELLSPRING),
     SPECIES_TO_HOENN(OGERPON_HEARTHFLAME),
     SPECIES_TO_HOENN(OGERPON_CORNERSTONE),
+    SPECIES_TO_HOENN(TERAPAGOS_TERASTAL),
+    SPECIES_TO_HOENN(TERAPAGOS_STELLAR),
 };
 
 // Assigns all species to the National Dex Index (Summary No. for National Dex)
@@ -2349,6 +2382,14 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(MUNKIDORI),
     SPECIES_TO_NATIONAL(FEZANDIPITI),
     SPECIES_TO_NATIONAL(OGERPON),
+    SPECIES_TO_NATIONAL(ARCHALUDON),
+    SPECIES_TO_NATIONAL(HYDRAPPLE),
+    SPECIES_TO_NATIONAL(GOUGING_FIRE),
+    SPECIES_TO_NATIONAL(RAGING_BOLT),
+    SPECIES_TO_NATIONAL(IRON_BOULDER),
+    SPECIES_TO_NATIONAL(IRON_CROWN),
+    SPECIES_TO_NATIONAL(TERAPAGOS),
+    SPECIES_TO_NATIONAL(PECHARUNT),
     SPECIES_TO_NATIONAL(VENUSAUR_MEGA),
     SPECIES_TO_NATIONAL(CHARIZARD_MEGA_X),
     SPECIES_TO_NATIONAL(CHARIZARD_MEGA_Y),
@@ -2445,7 +2486,6 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(SNEASEL_HISUIAN),
     SPECIES_TO_NATIONAL(SAMUROTT_HISUIAN),
     SPECIES_TO_NATIONAL(LILLIGANT_HISUIAN),
-    SPECIES_TO_NATIONAL(BASCULIN_WHITE_STRIPED),
     SPECIES_TO_NATIONAL(ZORUA_HISUIAN),
     SPECIES_TO_NATIONAL(ZOROARK_HISUIAN),
     SPECIES_TO_NATIONAL(BRAVIARY_HISUIAN),
@@ -2455,8 +2495,12 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(DECIDUEYE_HISUIAN),
     SPECIES_TO_NATIONAL(TAUROS_PALDEAN),
     SPECIES_TO_NATIONAL(WOOPER_PALDEAN),
+    SPECIES_TO_NATIONAL(PIKACHU_CAP),
+    SPECIES_TO_NATIONAL(PIKACHU_PARTNER),
     SPECIES_TO_NATIONAL(TAUROS_PALDEAN_BLAZE_BREED),
     SPECIES_TO_NATIONAL(TAUROS_PALDEAN_AQUA_BREED),
+    SPECIES_TO_NATIONAL(EEVEE_PARTNER),
+    SPECIES_TO_NATIONAL(PICHU_SPIKY_EARED),
     SPECIES_TO_NATIONAL(CASTFORM_SUNNY),
     SPECIES_TO_NATIONAL(CASTFORM_RAINY),
     SPECIES_TO_NATIONAL(CASTFORM_SNOWY),
@@ -2467,6 +2511,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(BURMY_TRASH_CLOAK),
     SPECIES_TO_NATIONAL(WORMADAM_SANDY_CLOAK),
     SPECIES_TO_NATIONAL(WORMADAM_TRASH_CLOAK),
+    SPECIES_TO_NATIONAL(CHERRIM_SUNSHINE),
     SPECIES_TO_NATIONAL(ROTOM_HEAT),
     SPECIES_TO_NATIONAL(ROTOM_WASH),
     SPECIES_TO_NATIONAL(ROTOM_FROST),
@@ -2476,39 +2521,60 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(PALKIA_ORIGIN),
     SPECIES_TO_NATIONAL(GIRATINA_ORIGIN),
     SPECIES_TO_NATIONAL(SHAYMIN_SKY),
+    SPECIES_TO_NATIONAL(BASCULIN_BLUE_STRIPED),
+    SPECIES_TO_NATIONAL(BASCULIN_WHITE_STRIPED),
     SPECIES_TO_NATIONAL(DARMANITAN_ZEN_MODE),
     SPECIES_TO_NATIONAL(DARMANITAN_ZEN_MODE_GALARIAN),
     SPECIES_TO_NATIONAL(TORNADUS_THERIAN),
     SPECIES_TO_NATIONAL(THUNDURUS_THERIAN),
     SPECIES_TO_NATIONAL(LANDORUS_THERIAN),
-    SPECIES_TO_NATIONAL(ENAMORUS_THERIAN),
     SPECIES_TO_NATIONAL(KYUREM_WHITE),
     SPECIES_TO_NATIONAL(KYUREM_BLACK),
     SPECIES_TO_NATIONAL(MELOETTA_PIROUETTE),
     SPECIES_TO_NATIONAL(GRENINJA_ASH),
     SPECIES_TO_NATIONAL(FLOETTE_ETERNAL_FLOWER),
+    SPECIES_TO_NATIONAL(MEOWSTIC_FEMALE),
+    SPECIES_TO_NATIONAL(AEGISLASH_BLADE),
+    SPECIES_TO_NATIONAL(PUMPKABOO_SMALL),
+    SPECIES_TO_NATIONAL(PUMPKABOO_LARGE),
+    SPECIES_TO_NATIONAL(PUMPKABOO_SUPER),
+    SPECIES_TO_NATIONAL(GOURGEIST_SMALL),
+    SPECIES_TO_NATIONAL(GOURGEIST_LARGE),
+    SPECIES_TO_NATIONAL(GOURGEIST_SUPER),
     SPECIES_TO_NATIONAL(ZYGARDE_10),
     SPECIES_TO_NATIONAL(ZYGARDE_COMPLETE),
     SPECIES_TO_NATIONAL(HOOPA_UNBOUND),
     SPECIES_TO_NATIONAL(ORICORIO_POM_POM),
     SPECIES_TO_NATIONAL(ORICORIO_PAU),
     SPECIES_TO_NATIONAL(ORICORIO_SENSU),
+    SPECIES_TO_NATIONAL(LYCANROC_MIDNIGHT),
+    SPECIES_TO_NATIONAL(LYCANROC_DUSK),
     SPECIES_TO_NATIONAL(WISHIWASHI_SCHOOL),
     SPECIES_TO_NATIONAL(MINIOR_CORE_RED),
     SPECIES_TO_NATIONAL(NECROZMA_DUSK_MANE),
     SPECIES_TO_NATIONAL(NECROZMA_DAWN_WINGS),
     SPECIES_TO_NATIONAL(NECROZMA_ULTRA),
+    SPECIES_TO_NATIONAL(TOXTRICITY_LOW_KEY),
+    SPECIES_TO_NATIONAL(EISCUE_NOICE_FACE),
     SPECIES_TO_NATIONAL(INDEEDEE_FEMALE),
+    SPECIES_TO_NATIONAL(MORPEKO_HANGRY),
     SPECIES_TO_NATIONAL(ZACIAN_CROWNED_SWORD),
     SPECIES_TO_NATIONAL(ZAMAZENTA_CROWNED_SHIELD),
+    SPECIES_TO_NATIONAL(ETERNATUS_ETERNAMAX),
     SPECIES_TO_NATIONAL(URSHIFU_RAPID_STRIKE_STYLE),
     SPECIES_TO_NATIONAL(CALYREX_ICE_RIDER),
     SPECIES_TO_NATIONAL(CALYREX_SHADOW_RIDER),
     SPECIES_TO_NATIONAL(URSALUNA_BLOODMOON),
+    SPECIES_TO_NATIONAL(BASCULEGION_FEMALE),
+    SPECIES_TO_NATIONAL(ENAMORUS_THERIAN),
+    SPECIES_TO_NATIONAL(OINKOLOGNE_FEMALE),
     SPECIES_TO_NATIONAL(PALAFIN_HERO),
+    SPECIES_TO_NATIONAL(GIMMIGHOUL_ROAMING),
     SPECIES_TO_NATIONAL(OGERPON_WELLSPRING),
     SPECIES_TO_NATIONAL(OGERPON_HEARTHFLAME),
     SPECIES_TO_NATIONAL(OGERPON_CORNERSTONE),
+    SPECIES_TO_NATIONAL(TERAPAGOS_TERASTAL),
+    SPECIES_TO_NATIONAL(TERAPAGOS_STELLAR),
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
@@ -3556,6 +3622,14 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(MUNKIDORI),
     HOENN_TO_NATIONAL(FEZANDIPITI),
     HOENN_TO_NATIONAL(OGERPON),
+    HOENN_TO_NATIONAL(ARCHALUDON),
+    HOENN_TO_NATIONAL(HYDRAPPLE),
+    HOENN_TO_NATIONAL(GOUGING_FIRE),
+    HOENN_TO_NATIONAL(RAGING_BOLT),
+    HOENN_TO_NATIONAL(IRON_BOULDER),
+    HOENN_TO_NATIONAL(IRON_CROWN),
+    HOENN_TO_NATIONAL(TERAPAGOS),
+    HOENN_TO_NATIONAL(PECHARUNT),
     HOENN_TO_NATIONAL(VENUSAUR_MEGA),
     HOENN_TO_NATIONAL(CHARIZARD_MEGA_X),
     HOENN_TO_NATIONAL(CHARIZARD_MEGA_Y),
@@ -3652,7 +3726,6 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(SNEASEL_HISUIAN),
     HOENN_TO_NATIONAL(SAMUROTT_HISUIAN),
     HOENN_TO_NATIONAL(LILLIGANT_HISUIAN),
-    HOENN_TO_NATIONAL(BASCULIN_WHITE_STRIPED),
     HOENN_TO_NATIONAL(ZORUA_HISUIAN),
     HOENN_TO_NATIONAL(ZOROARK_HISUIAN),
     HOENN_TO_NATIONAL(BRAVIARY_HISUIAN),
@@ -3662,8 +3735,12 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(DECIDUEYE_HISUIAN),
     HOENN_TO_NATIONAL(TAUROS_PALDEAN),
     HOENN_TO_NATIONAL(WOOPER_PALDEAN),
+    HOENN_TO_NATIONAL(PIKACHU_CAP),
+    HOENN_TO_NATIONAL(PIKACHU_PARTNER),
     HOENN_TO_NATIONAL(TAUROS_PALDEAN_BLAZE_BREED),
     HOENN_TO_NATIONAL(TAUROS_PALDEAN_AQUA_BREED),
+    HOENN_TO_NATIONAL(EEVEE_PARTNER),
+    HOENN_TO_NATIONAL(PICHU_SPIKY_EARED),
     HOENN_TO_NATIONAL(CASTFORM_SUNNY),
     HOENN_TO_NATIONAL(CASTFORM_RAINY),
     HOENN_TO_NATIONAL(CASTFORM_SNOWY),
@@ -3674,6 +3751,7 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(BURMY_TRASH_CLOAK),
     HOENN_TO_NATIONAL(WORMADAM_SANDY_CLOAK),
     HOENN_TO_NATIONAL(WORMADAM_TRASH_CLOAK),
+    HOENN_TO_NATIONAL(CHERRIM_SUNSHINE),
     HOENN_TO_NATIONAL(ROTOM_HEAT),
     HOENN_TO_NATIONAL(ROTOM_WASH),
     HOENN_TO_NATIONAL(ROTOM_FROST),
@@ -3683,39 +3761,60 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(PALKIA_ORIGIN),
     HOENN_TO_NATIONAL(GIRATINA_ORIGIN),
     HOENN_TO_NATIONAL(SHAYMIN_SKY),
+    HOENN_TO_NATIONAL(BASCULIN_BLUE_STRIPED),
+    HOENN_TO_NATIONAL(BASCULIN_WHITE_STRIPED),
     HOENN_TO_NATIONAL(DARMANITAN_ZEN_MODE),
     HOENN_TO_NATIONAL(DARMANITAN_ZEN_MODE_GALARIAN),
     HOENN_TO_NATIONAL(TORNADUS_THERIAN),
     HOENN_TO_NATIONAL(THUNDURUS_THERIAN),
     HOENN_TO_NATIONAL(LANDORUS_THERIAN),
-    HOENN_TO_NATIONAL(ENAMORUS_THERIAN),
     HOENN_TO_NATIONAL(KYUREM_WHITE),
     HOENN_TO_NATIONAL(KYUREM_BLACK),
     HOENN_TO_NATIONAL(MELOETTA_PIROUETTE),
     HOENN_TO_NATIONAL(GRENINJA_ASH),
     HOENN_TO_NATIONAL(FLOETTE_ETERNAL_FLOWER),
+    HOENN_TO_NATIONAL(MEOWSTIC_FEMALE),
+    HOENN_TO_NATIONAL(AEGISLASH_BLADE),
+    HOENN_TO_NATIONAL(PUMPKABOO_SMALL),
+    HOENN_TO_NATIONAL(PUMPKABOO_LARGE),
+    HOENN_TO_NATIONAL(PUMPKABOO_SUPER),
+    HOENN_TO_NATIONAL(GOURGEIST_SMALL),
+    HOENN_TO_NATIONAL(GOURGEIST_LARGE),
+    HOENN_TO_NATIONAL(GOURGEIST_SUPER),
     HOENN_TO_NATIONAL(ZYGARDE_10),
     HOENN_TO_NATIONAL(ZYGARDE_COMPLETE),
     HOENN_TO_NATIONAL(HOOPA_UNBOUND),
     HOENN_TO_NATIONAL(ORICORIO_POM_POM),
     HOENN_TO_NATIONAL(ORICORIO_PAU),
     HOENN_TO_NATIONAL(ORICORIO_SENSU),
+    HOENN_TO_NATIONAL(LYCANROC_MIDNIGHT),
+    HOENN_TO_NATIONAL(LYCANROC_DUSK),
     HOENN_TO_NATIONAL(WISHIWASHI_SCHOOL),
     HOENN_TO_NATIONAL(MINIOR_CORE_RED),
     HOENN_TO_NATIONAL(NECROZMA_DUSK_MANE),
     HOENN_TO_NATIONAL(NECROZMA_DAWN_WINGS),
     HOENN_TO_NATIONAL(NECROZMA_ULTRA),
+    HOENN_TO_NATIONAL(TOXTRICITY_LOW_KEY),
+    HOENN_TO_NATIONAL(EISCUE_NOICE_FACE),
     HOENN_TO_NATIONAL(INDEEDEE_FEMALE),
+    HOENN_TO_NATIONAL(MORPEKO_HANGRY),
     HOENN_TO_NATIONAL(ZACIAN_CROWNED_SWORD),
     HOENN_TO_NATIONAL(ZAMAZENTA_CROWNED_SHIELD),
+    HOENN_TO_NATIONAL(ETERNATUS_ETERNAMAX),
     HOENN_TO_NATIONAL(URSHIFU_RAPID_STRIKE_STYLE),
     HOENN_TO_NATIONAL(CALYREX_ICE_RIDER),
     HOENN_TO_NATIONAL(CALYREX_SHADOW_RIDER),
     HOENN_TO_NATIONAL(URSALUNA_BLOODMOON),
+    HOENN_TO_NATIONAL(BASCULEGION_FEMALE),
+    HOENN_TO_NATIONAL(ENAMORUS_THERIAN),
+    HOENN_TO_NATIONAL(OINKOLOGNE_FEMALE),
     HOENN_TO_NATIONAL(PALAFIN_HERO),
+    HOENN_TO_NATIONAL(GIMMIGHOUL_ROAMING),
     HOENN_TO_NATIONAL(OGERPON_WELLSPRING),
     HOENN_TO_NATIONAL(OGERPON_HEARTHFLAME),
     HOENN_TO_NATIONAL(OGERPON_CORNERSTONE),
+    HOENN_TO_NATIONAL(TERAPAGOS_TERASTAL),
+    HOENN_TO_NATIONAL(TERAPAGOS_STELLAR),
 };
 
 const struct SpindaSpot gSpindaSpotGraphics[] =
@@ -9565,23 +9664,41 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
                 return gMonShinyPaletteTable[SPECIES_HIPPOPOTAS_FEMALE].data;
             else if (species == SPECIES_HIPPOWDON)
                 return gMonShinyPaletteTable[SPECIES_HIPPOWDON_FEMALE].data;
+            else if (species == SPECIES_PIKACHU_CAP) {
+                if ((personality >> 8) % 6 == 0)
+                    return gMonShinyPaletteTable[SPECIES_PIKACHU_COSPLAY_1].data;
+                else if ((personality >> 8) % 6 == 1)
+                    return gMonShinyPaletteTable[SPECIES_PIKACHU_COSPLAY_2].data;
+                else if ((personality >> 8) % 6 == 2)
+                    return gMonShinyPaletteTable[SPECIES_PIKACHU_COSPLAY_3].data;
+                else if ((personality >> 8) % 6 == 3)
+                    return gMonShinyPaletteTable[SPECIES_PIKACHU_COSPLAY_4].data;
+                else if ((personality >> 8) % 6 == 4)
+                    return gMonShinyPaletteTable[SPECIES_PIKACHU_COSPLAY_5].data;
+                else
+                    return gMonShinyPaletteTable[SPECIES_PIKACHU_COSPLAY_6].data;
+            }
             else if (species == SPECIES_UNFEZANT)
                 return gMonShinyPaletteTable[SPECIES_UNFEZANT_FEMALE].data;
-            else if (species == SPECIES_MEOWSTIC)
-                return gMonShinyPaletteTable[SPECIES_MEOWSTIC_FEMALE].data;
-            else if (species == SPECIES_OINKOLOGNE)
-                return gMonShinyPaletteTable[SPECIES_OINKOLOGNE_FEMALE].data;
-            else if (species == SPECIES_BASCULEGION)
-                return gMonShinyPaletteTable[SPECIES_BASCULEGION_FEMALE].data;
         }
-        if (species == SPECIES_TOXTRICITY)
+        else
         {
-            if ((personality % 25) == 0 || (personality % 25) == 2 || (personality % 25) == 3 || (personality % 25) == 4 || (personality % 25) == 6 ||
-                (personality % 25) == 8 || (personality % 25) == 9 || (personality % 25) == 11 || (personality % 25) == 13 ||
-                (personality % 25) == 14 || (personality % 25) == 19 || (personality % 25) == 22 || (personality % 25) == 24)
-                return gMonShinyPaletteTable[SPECIES_TOXTRICITY].data;
-            else
-                return gMonShinyPaletteTable[SPECIES_TOXTRICITY_LOW_KEY].data;
+            if (species == SPECIES_PIKACHU_CAP) {
+                if ((personality >> 8) % 8 == 1)
+                    return gMonShinyPaletteTable[SPECIES_PIKACHU_CAP_2].data;
+                else if ((personality >> 8) % 8 == 2)
+                    return gMonShinyPaletteTable[SPECIES_PIKACHU_CAP_3].data;
+                else if ((personality >> 8) % 8 == 3)
+                    return gMonShinyPaletteTable[SPECIES_PIKACHU_CAP_4].data;
+                else if ((personality >> 8) % 8 == 4)
+                    return gMonShinyPaletteTable[SPECIES_PIKACHU_CAP_5].data;
+                else if ((personality >> 8) % 8 == 5)
+                    return gMonShinyPaletteTable[SPECIES_PIKACHU_CAP_6].data;
+                else if ((personality >> 8) % 8 == 6)
+                    return gMonShinyPaletteTable[SPECIES_PIKACHU_CAP_7].data;
+                else if ((personality >> 8) % 8 == 7)
+                    return gMonShinyPaletteTable[SPECIES_PIKACHU_CAP_8].data;
+            }
         }
         if (species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES)
         {
@@ -9615,29 +9732,45 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
             }
             return gMonShinyPaletteTable[form].data;
         }
-        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_BASCULIN || species == SPECIES_AEGISLASH || species == SPECIES_EISCUE)
+        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_KELDEO || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
         {
             if ((personality % 0x200) >= 0x100)
             {
                 if (species == SPECIES_SHELLOS)
                     return gMonShinyPaletteTable[SPECIES_SHELLOS_EAST_SEA].data;
-                else if (species == SPECIES_BASCULIN)
-                    return gMonShinyPaletteTable[SPECIES_BASCULIN_BLUE_STRIPED].data;
-                else if (species == SPECIES_AEGISLASH)
-                    return gMonShinyPaletteTable[SPECIES_AEGISLASH_BLADE].data;
-                else if (species == SPECIES_EISCUE)
-                    return gMonShinyPaletteTable[SPECIES_EISCUE_NOICE_FACE].data;
+                else if (species == SPECIES_KELDEO)
+                    return gMonShinyPaletteTable[SPECIES_KELDEO_RESOLUTE].data;
+                else if (species == SPECIES_MAGEARNA)
+                    return gMonShinyPaletteTable[SPECIES_MAGEARNA_ORIGINAL_COLOR].data;
+                else if (species == SPECIES_ZARUDE)
+                    return gMonShinyPaletteTable[SPECIES_ZARUDE_DADA].data;
                 else
                     return gMonShinyPaletteTable[SPECIES_GASTRODON_EAST_SEA].data;
             }
         }
-        if (species == SPECIES_VIVILLON)
+        if (species == SPECIES_VIVILLON || species == SPECIES_CRAMORANT || species == SPECIES_FURFROU)
         {
             form = (personality >> 8) % 20;
-            if (!form)
-                form += species;
-            else
-                form += SPECIES_VIVILLON_POLAR - 1;
+            if (species == SPECIES_VIVILLON) {
+                if (!form)
+                    form = species;
+                else
+                    form += SPECIES_VIVILLON_POLAR - 1;
+            }
+            else if (species == SPECIES_CRAMORANT) {
+                if (form < 16)
+                    form = species;
+                else if (form == 19)
+                    form = SPECIES_CRAMORANT_GORGING;
+                else
+                    form = SPECIES_CRAMORANT_GULPING;
+            }
+            else {
+                if (form <= 10)
+                    form = species;
+                else
+                    form += SPECIES_FURFROU_TRIM_1 - 11;
+            }
             return gMonShinyPaletteTable[form].data;
         }
         if (species == SPECIES_MINIOR_CORE_RED)
@@ -9658,18 +9791,13 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
                 form += SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
             return gMonShinyPaletteTable[form].data;
         }
-        if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
+        if (species == SPECIES_TATSUGIRI)
         {
             form = (personality >> 8) % 3;
             if (!form)
                 form += species;
             else
-            {
-                if (species == SPECIES_LYCANROC)
-                    form += SPECIES_LYCANROC_MIDNIGHT - 1;
-                else
-                    form += SPECIES_TATSUGIRI_DROOPY - 1;
-            }
+                form += SPECIES_TATSUGIRI_DROOPY - 1;
             return gMonShinyPaletteTable[form].data;
         }
         return gMonShinyPaletteTable[species].data;
@@ -9691,23 +9819,41 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
                 return gMonPaletteTable[SPECIES_HIPPOPOTAS_FEMALE].data;
             else if (species == SPECIES_HIPPOWDON)
                 return gMonPaletteTable[SPECIES_HIPPOWDON_FEMALE].data;
+            else if (species == SPECIES_PIKACHU_CAP) {
+                if ((personality >> 8) % 6 == 0)
+                    return gMonPaletteTable[SPECIES_PIKACHU_COSPLAY_1].data;
+                else if ((personality >> 8) % 6 == 1)
+                    return gMonPaletteTable[SPECIES_PIKACHU_COSPLAY_2].data;
+                else if ((personality >> 8) % 6 == 2)
+                    return gMonPaletteTable[SPECIES_PIKACHU_COSPLAY_3].data;
+                else if ((personality >> 8) % 6 == 3)
+                    return gMonPaletteTable[SPECIES_PIKACHU_COSPLAY_4].data;
+                else if ((personality >> 8) % 6 == 4)
+                    return gMonPaletteTable[SPECIES_PIKACHU_COSPLAY_5].data;
+                else
+                    return gMonPaletteTable[SPECIES_PIKACHU_COSPLAY_6].data;
+            }
             else if (species == SPECIES_UNFEZANT)
                 return gMonPaletteTable[SPECIES_UNFEZANT_FEMALE].data;
-            else if (species == SPECIES_MEOWSTIC)
-                return gMonPaletteTable[SPECIES_MEOWSTIC_FEMALE].data;
-            else if (species == SPECIES_OINKOLOGNE)
-                return gMonPaletteTable[SPECIES_OINKOLOGNE_FEMALE].data;
-            else if (species == SPECIES_BASCULEGION)
-                return gMonPaletteTable[SPECIES_BASCULEGION_FEMALE].data;
         }
-        if (species == SPECIES_TOXTRICITY)
+        else
         {
-            if ((personality % 25) == 0 || (personality % 25) == 2 || (personality % 25) == 3 || (personality % 25) == 4 || (personality % 25) == 6 ||
-                (personality % 25) == 8 || (personality % 25) == 9 || (personality % 25) == 11 || (personality % 25) == 13 ||
-                (personality % 25) == 14 || (personality % 25) == 19 || (personality % 25) == 22 || (personality % 25) == 24)
-                return gMonPaletteTable[SPECIES_TOXTRICITY].data;
-            else
-                return gMonPaletteTable[SPECIES_TOXTRICITY_LOW_KEY].data;
+            if (species == SPECIES_PIKACHU_CAP) {
+                if ((personality >> 8) % 8 == 1)
+                    return gMonPaletteTable[SPECIES_PIKACHU_CAP_2].data;
+                else if ((personality >> 8) % 8 == 2)
+                    return gMonPaletteTable[SPECIES_PIKACHU_CAP_3].data;
+                else if ((personality >> 8) % 8 == 3)
+                    return gMonPaletteTable[SPECIES_PIKACHU_CAP_4].data;
+                else if ((personality >> 8) % 8 == 4)
+                    return gMonPaletteTable[SPECIES_PIKACHU_CAP_5].data;
+                else if ((personality >> 8) % 8 == 5)
+                    return gMonPaletteTable[SPECIES_PIKACHU_CAP_6].data;
+                else if ((personality >> 8) % 8 == 6)
+                    return gMonPaletteTable[SPECIES_PIKACHU_CAP_7].data;
+                else if ((personality >> 8) % 8 == 7)
+                    return gMonPaletteTable[SPECIES_PIKACHU_CAP_8].data;
+            }
         }
         if (species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES)
         {
@@ -9741,29 +9887,45 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
             }
             return gMonPaletteTable[form].data;
         }
-        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_BASCULIN || species == SPECIES_AEGISLASH || species == SPECIES_EISCUE)
+        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_KELDEO || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
         {
             if ((personality % 0x200) >= 0x100)
             {
                 if (species == SPECIES_SHELLOS)
                     return gMonPaletteTable[SPECIES_SHELLOS_EAST_SEA].data;
-                else if (species == SPECIES_BASCULIN)
-                    return gMonPaletteTable[SPECIES_BASCULIN_BLUE_STRIPED].data;
-                else if (species == SPECIES_AEGISLASH)
-                    return gMonPaletteTable[SPECIES_AEGISLASH_BLADE].data;
-                else if (species == SPECIES_EISCUE)
-                    return gMonPaletteTable[SPECIES_EISCUE_NOICE_FACE].data;
+                else if (species == SPECIES_KELDEO)
+                    return gMonPaletteTable[SPECIES_KELDEO_RESOLUTE].data;
+                else if (species == SPECIES_MAGEARNA)
+                    return gMonPaletteTable[SPECIES_MAGEARNA_ORIGINAL_COLOR].data;
+                else if (species == SPECIES_ZARUDE)
+                    return gMonPaletteTable[SPECIES_ZARUDE_DADA].data;
                 else
                     return gMonPaletteTable[SPECIES_GASTRODON_EAST_SEA].data;
             }
         }
-        if (species == SPECIES_VIVILLON)
+        if (species == SPECIES_VIVILLON || species == SPECIES_CRAMORANT || species == SPECIES_FURFROU)
         {
             form = (personality >> 8) % 20;
-            if (!form)
-                form += species;
-            else
-                form += SPECIES_VIVILLON_POLAR - 1;
+            if (species == SPECIES_VIVILLON) {
+                if (!form)
+                    form = species;
+                else
+                    form += SPECIES_VIVILLON_POLAR - 1;
+            }
+            else if (species == SPECIES_CRAMORANT) {
+                if (form < 16)
+                    form = species;
+                else if (form == 19)
+                    form = SPECIES_CRAMORANT_GORGING;
+                else
+                    form = SPECIES_CRAMORANT_GULPING;
+            }
+            else {
+                if (form <= 10)
+                    form = species;
+                else
+                    form += SPECIES_FURFROU_TRIM_1 - 11;
+            }
             return gMonPaletteTable[form].data;
         }
         if (species == SPECIES_MINIOR_CORE_RED)
@@ -9784,18 +9946,13 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
                 form += SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
             return gMonPaletteTable[form].data;
         }
-        if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
+        if (species == SPECIES_TATSUGIRI)
         {
             form = (personality >> 8) % 3;
             if (!form)
                 form += species;
             else
-            {
-                if (species == SPECIES_LYCANROC)
-                    form += SPECIES_LYCANROC_MIDNIGHT - 1;
-                else
-                    form += SPECIES_TATSUGIRI_DROOPY - 1;
-            }
+                form += SPECIES_TATSUGIRI_DROOPY - 1;
             return gMonPaletteTable[form].data;
         }
         return gMonPaletteTable[species].data;
@@ -9836,23 +9993,41 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
                 return &gMonShinyPaletteTable[SPECIES_HIPPOPOTAS_FEMALE];
             else if (species == SPECIES_HIPPOWDON)
                 return &gMonShinyPaletteTable[SPECIES_HIPPOWDON_FEMALE];
+            else if (species == SPECIES_PIKACHU_CAP) {
+                if ((personality >> 8) % 6 == 0)
+                    return &gMonShinyPaletteTable[SPECIES_PIKACHU_COSPLAY_1];
+                else if ((personality >> 8) % 6 == 1)
+                    return &gMonShinyPaletteTable[SPECIES_PIKACHU_COSPLAY_2];
+                else if ((personality >> 8) % 6 == 2)
+                    return &gMonShinyPaletteTable[SPECIES_PIKACHU_COSPLAY_3];
+                else if ((personality >> 8) % 6 == 3)
+                    return &gMonShinyPaletteTable[SPECIES_PIKACHU_COSPLAY_4];
+                else if ((personality >> 8) % 6 == 4)
+                    return &gMonShinyPaletteTable[SPECIES_PIKACHU_COSPLAY_5];
+                else
+                    return &gMonShinyPaletteTable[SPECIES_PIKACHU_COSPLAY_6];
+            }
             else if (species == SPECIES_UNFEZANT)
                 return &gMonShinyPaletteTable[SPECIES_UNFEZANT_FEMALE];
-            else if (species == SPECIES_MEOWSTIC)
-                return &gMonShinyPaletteTable[SPECIES_MEOWSTIC_FEMALE];
-            else if (species == SPECIES_OINKOLOGNE)
-                return &gMonShinyPaletteTable[SPECIES_OINKOLOGNE_FEMALE];
-            else if (species == SPECIES_BASCULEGION)
-                return &gMonShinyPaletteTable[SPECIES_BASCULEGION_FEMALE];
         }
-        if (species == SPECIES_TOXTRICITY)
+        else
         {
-            if ((personality % 25) == 0 || (personality % 25) == 2 || (personality % 25) == 3 || (personality % 25) == 4 || (personality % 25) == 6 ||
-                (personality % 25) == 8 || (personality % 25) == 9 || (personality % 25) == 11 || (personality % 25) == 13 ||
-                (personality % 25) == 14 || (personality % 25) == 19 || (personality % 25) == 22 || (personality % 25) == 24)
-                return &gMonShinyPaletteTable[SPECIES_TOXTRICITY];
-            else
-                return &gMonShinyPaletteTable[SPECIES_TOXTRICITY_LOW_KEY];
+            if (species == SPECIES_PIKACHU_CAP) {
+                if ((personality >> 8) % 8 == 1)
+                    return &gMonShinyPaletteTable[SPECIES_PIKACHU_CAP_2];
+                else if ((personality >> 8) % 8 == 2)
+                    return &gMonShinyPaletteTable[SPECIES_PIKACHU_CAP_3];
+                else if ((personality >> 8) % 8 == 3)
+                    return &gMonShinyPaletteTable[SPECIES_PIKACHU_CAP_4];
+                else if ((personality >> 8) % 8 == 4)
+                    return &gMonShinyPaletteTable[SPECIES_PIKACHU_CAP_5];
+                else if ((personality >> 8) % 8 == 5)
+                    return &gMonShinyPaletteTable[SPECIES_PIKACHU_CAP_6];
+                else if ((personality >> 8) % 8 == 6)
+                    return &gMonShinyPaletteTable[SPECIES_PIKACHU_CAP_7];
+                else if ((personality >> 8) % 8 == 7)
+                    return &gMonShinyPaletteTable[SPECIES_PIKACHU_CAP_8];
+            }
         }
         if (species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES)
         {
@@ -9886,29 +10061,45 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
             }
             return &gMonShinyPaletteTable[form];
         }
-        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_BASCULIN || species == SPECIES_AEGISLASH || species == SPECIES_EISCUE)
+        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_KELDEO || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
         {
             if ((personality % 0x200) >= 0x100)
             {
                 if (species == SPECIES_SHELLOS)
                     return &gMonShinyPaletteTable[SPECIES_SHELLOS_EAST_SEA];
-                else if (species == SPECIES_BASCULIN)
-                    return &gMonShinyPaletteTable[SPECIES_BASCULIN_BLUE_STRIPED];
-                else if (species == SPECIES_AEGISLASH)
-                    return &gMonShinyPaletteTable[SPECIES_AEGISLASH_BLADE];
-                else if (species == SPECIES_EISCUE)
-                    return &gMonShinyPaletteTable[SPECIES_EISCUE_NOICE_FACE];
+                else if (species == SPECIES_KELDEO)
+                    return &gMonShinyPaletteTable[SPECIES_KELDEO_RESOLUTE];
+                else if (species == SPECIES_MAGEARNA)
+                    return &gMonShinyPaletteTable[SPECIES_MAGEARNA_ORIGINAL_COLOR];
+                else if (species == SPECIES_ZARUDE)
+                    return &gMonShinyPaletteTable[SPECIES_ZARUDE_DADA];
                 else
                     return &gMonShinyPaletteTable[SPECIES_GASTRODON_EAST_SEA];
             }
         }
-        if (species == SPECIES_VIVILLON)
+        if (species == SPECIES_VIVILLON || species == SPECIES_CRAMORANT || species == SPECIES_FURFROU)
         {
             form = (personality >> 8) % 20;
-            if (!form)
-                form += species;
-            else
-                form += SPECIES_VIVILLON_POLAR - 1;
+            if (species == SPECIES_VIVILLON) {
+                if (!form)
+                    form = species;
+                else
+                    form += SPECIES_VIVILLON_POLAR - 1;
+            }
+            else if (species == SPECIES_CRAMORANT) {
+                if (form < 16)
+                    form = species;
+                else if (form == 19)
+                    form = SPECIES_CRAMORANT_GORGING;
+                else
+                    form = SPECIES_CRAMORANT_GULPING;
+            }
+            else {
+                if (form <= 10)
+                    form = species;
+                else
+                    form += SPECIES_FURFROU_TRIM_1 - 11;
+            }
             return &gMonShinyPaletteTable[form];
         }
         if (species == SPECIES_MINIOR_CORE_RED)
@@ -9929,18 +10120,13 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
                 form += SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
             return &gMonShinyPaletteTable[form];
         }
-        if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
+        if (species == SPECIES_TATSUGIRI)
         {
             form = (personality >> 8) % 3;
             if (!form)
                 form += species;
             else
-            {
-                if (species == SPECIES_LYCANROC)
-                    form += SPECIES_LYCANROC_MIDNIGHT - 1;
-                else
-                    form += SPECIES_TATSUGIRI_DROOPY - 1;
-            }
+                form += SPECIES_TATSUGIRI_DROOPY - 1;
             return &gMonShinyPaletteTable[form];
         }
         return &gMonShinyPaletteTable[species];
@@ -9962,23 +10148,41 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
                 return &gMonPaletteTable[SPECIES_HIPPOPOTAS_FEMALE];
             else if (species == SPECIES_HIPPOWDON)
                 return &gMonPaletteTable[SPECIES_HIPPOWDON_FEMALE];
+            else if (species == SPECIES_PIKACHU_CAP) {
+                if ((personality >> 8) % 6 == 0)
+                    return &gMonPaletteTable[SPECIES_PIKACHU_COSPLAY_1];
+                else if ((personality >> 8) % 6 == 1)
+                    return &gMonPaletteTable[SPECIES_PIKACHU_COSPLAY_2];
+                else if ((personality >> 8) % 6 == 2)
+                    return &gMonPaletteTable[SPECIES_PIKACHU_COSPLAY_3];
+                else if ((personality >> 8) % 6 == 3)
+                    return &gMonPaletteTable[SPECIES_PIKACHU_COSPLAY_4];
+                else if ((personality >> 8) % 6 == 4)
+                    return &gMonPaletteTable[SPECIES_PIKACHU_COSPLAY_5];
+                else
+                    return &gMonPaletteTable[SPECIES_PIKACHU_COSPLAY_6];
+            }
             else if (species == SPECIES_UNFEZANT)
                 return &gMonPaletteTable[SPECIES_UNFEZANT_FEMALE];
-            else if (species == SPECIES_MEOWSTIC)
-                return &gMonPaletteTable[SPECIES_MEOWSTIC_FEMALE];
-            else if (species == SPECIES_OINKOLOGNE)
-                return &gMonPaletteTable[SPECIES_OINKOLOGNE_FEMALE];
-            else if (species == SPECIES_BASCULEGION)
-                return &gMonPaletteTable[SPECIES_BASCULEGION_FEMALE];
         }
-        if (species == SPECIES_TOXTRICITY)
+        else
         {
-            if ((personality % 25) == 0 || (personality % 25) == 2 || (personality % 25) == 3 || (personality % 25) == 4 || (personality % 25) == 6 ||
-                (personality % 25) == 8 || (personality % 25) == 9 || (personality % 25) == 11 || (personality % 25) == 13 ||
-                (personality % 25) == 14 || (personality % 25) == 19 || (personality % 25) == 22 || (personality % 25) == 24)
-                return &gMonPaletteTable[SPECIES_TOXTRICITY];
-            else
-                return &gMonPaletteTable[SPECIES_TOXTRICITY_LOW_KEY];
+            if (species == SPECIES_PIKACHU_CAP) {
+                if ((personality >> 8) % 8 == 1)
+                    return &gMonPaletteTable[SPECIES_PIKACHU_CAP_2];
+                else if ((personality >> 8) % 8 == 2)
+                    return &gMonPaletteTable[SPECIES_PIKACHU_CAP_3];
+                else if ((personality >> 8) % 8 == 3)
+                    return &gMonPaletteTable[SPECIES_PIKACHU_CAP_4];
+                else if ((personality >> 8) % 8 == 4)
+                    return &gMonPaletteTable[SPECIES_PIKACHU_CAP_5];
+                else if ((personality >> 8) % 8 == 5)
+                    return &gMonPaletteTable[SPECIES_PIKACHU_CAP_6];
+                else if ((personality >> 8) % 8 == 6)
+                    return &gMonPaletteTable[SPECIES_PIKACHU_CAP_7];
+                else if ((personality >> 8) % 8 == 7)
+                    return &gMonPaletteTable[SPECIES_PIKACHU_CAP_8];
+            }
         }
         if (species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES)
         {
@@ -10012,29 +10216,45 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
             }
             return &gMonPaletteTable[form];
         }
-        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_BASCULIN || species == SPECIES_AEGISLASH || species == SPECIES_EISCUE)
+        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_KELDEO || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
         {
             if ((personality % 0x200) >= 0x100)
             {
                 if (species == SPECIES_SHELLOS)
                     return &gMonPaletteTable[SPECIES_SHELLOS_EAST_SEA];
-                else if (species == SPECIES_BASCULIN)
-                    return &gMonPaletteTable[SPECIES_BASCULIN_BLUE_STRIPED];
-                else if (species == SPECIES_AEGISLASH)
-                    return &gMonPaletteTable[SPECIES_AEGISLASH_BLADE];
-                else if (species == SPECIES_EISCUE)
-                    return &gMonPaletteTable[SPECIES_EISCUE_NOICE_FACE];
+                else if (species == SPECIES_KELDEO)
+                    return &gMonPaletteTable[SPECIES_KELDEO_RESOLUTE];
+                else if (species == SPECIES_MAGEARNA)
+                    return &gMonPaletteTable[SPECIES_MAGEARNA_ORIGINAL_COLOR];
+                else if (species == SPECIES_ZARUDE)
+                    return &gMonPaletteTable[SPECIES_ZARUDE_DADA];
                 else
                     return &gMonPaletteTable[SPECIES_GASTRODON_EAST_SEA];
             }
         }
-        if (species == SPECIES_VIVILLON)
+        if (species == SPECIES_VIVILLON || species == SPECIES_CRAMORANT || species == SPECIES_FURFROU)
         {
             form = (personality >> 8) % 20;
-            if (!form)
-                form += species;
-            else
-                form += SPECIES_VIVILLON_POLAR - 1;
+            if (species == SPECIES_VIVILLON) {
+                if (!form)
+                    form = species;
+                else
+                    form += SPECIES_VIVILLON_POLAR - 1;
+            }
+            else if (species == SPECIES_CRAMORANT) {
+                if (form < 16)
+                    form = species;
+                else if (form == 19)
+                    form = SPECIES_CRAMORANT_GORGING;
+                else
+                    form = SPECIES_CRAMORANT_GULPING;
+            }
+            else {
+                if (form <= 10)
+                    form = species;
+                else
+                    form += SPECIES_FURFROU_TRIM_1 - 11;
+            }
             return &gMonPaletteTable[form];
         }
         if (species == SPECIES_MINIOR_CORE_RED)
@@ -10055,18 +10275,13 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
                 form += SPECIES_ALCREMIE_STRAWBERRY_RUBY_CREAM - 1;
             return &gMonPaletteTable[form];
         }
-        if (species == SPECIES_TATSUGIRI || species == SPECIES_LYCANROC)
+        if (species == SPECIES_TATSUGIRI)
         {
             form = (personality >> 8) % 3;
             if (!form)
                 form += species;
             else
-            {
-                if (species == SPECIES_LYCANROC)
-                    form += SPECIES_LYCANROC_MIDNIGHT - 1;
-                else
-                    form += SPECIES_TATSUGIRI_DROOPY - 1;
-            }
+                form += SPECIES_TATSUGIRI_DROOPY - 1;
             return &gMonPaletteTable[form];
         }
         return &gMonPaletteTable[species];

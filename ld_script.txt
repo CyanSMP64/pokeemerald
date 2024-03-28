@@ -427,10 +427,8 @@ SECTIONS {
         *libgcc.a:_fixunssfsi.o(.text);
         *libgcc.a:_modsi3.o(.text);
         *libgcc.a:_muldi3.o(.text);
-        *libgcc.a:_udivdi3.o(.text);
         *libgcc.a:_udivsi3.o(.text);
         *libgcc.a:_umodsi3.o(.text);
-        *libgcc.a:dp-bit.o(.text);
         *libgcc.a:fp-bit.o(.text);
         *libgcc.a:_lshrdi3.o(.text);
         *libgcc.a:_negdi2.o(.text);
@@ -473,22 +471,7 @@ SECTIONS {
         *libc.a:readr.o(.text);
     } =0
 
-    .rodata :
-    ALIGN(4)
-    {
-        src/rom_header.o(.rodata);
-        src/rom_header_gf.o(.rodata);
-        src/main.o(.rodata);
-        gflib/bg.o(.rodata);
-        gflib/window.o(.rodata);
-        gflib/sprite.o(.rodata);
-        gflib/io_reg.o(.rodata);
-        gflib/string_util.o(.rodata);
-        src/link_rfu_2.o(.rodata);
-        src/link_rfu_2.o(.rodata.str1.4);
-    } =0
-
-    .rodata_1 0x082f6968 :    /* modify this address when new mons are added - gTrainers must be aligned to 0x08310030 */
+    .rodata_1 0x082f52f0 :    /* modify this address when new mons are added - gTrainers must be aligned to 0x08310030 */
     ALIGN(4)
     {
         src/data.o(.rodata);
@@ -504,12 +487,24 @@ SECTIONS {
         src/mystery_gift_server.o(.rodata);
         src/mystery_gift_client.o(.rodata);
         src/berry_powder.o(.rodata);
+        src/rom_header.o(.rodata);
+        src/rom_header_gf.o(.rodata);
+        src/main.o(.rodata);
+        gflib/bg.o(.rodata);
+        gflib/window.o(.rodata);
+        gflib/io_reg.o(.rodata);
+        gflib/string_util.o(.rodata);
     } =0
 
     .rodata_2 0x0831c898 :
     ALIGN(4)
     {
         src/pokemon.o(.rodata);
+        gflib/sprite.o(.rodata);
+        src/link_rfu_2.o(.rodata);
+        src/link_rfu_2.o(.rodata.str1.4);
+        *libgcc.a:_udivdi3.o(.text);
+        *libgcc.a:dp-bit.o(.text);
         src/union_room.o(.rodata);
         src/wireless_communication_status_screen.o(.rodata);
         src/mystery_gift_view.o(.rodata);
@@ -822,7 +817,7 @@ SECTIONS {
         src/graphics.o(.rodata);
     } =0
 
-    new_sound :
+    new_sound 0x08e50000 : /* debug */
     ALIGN(4)
     {
         data/sound_data_2.o(.rodata);
