@@ -2461,7 +2461,7 @@ u8 CreateAdditionalMonSpriteForMoveAnim(u16 species, bool8 isBackpic, u8 id, s16
                                                 personality,
                                                 TRUE);
         else
-            LoadSpecialPokePic_2(&gMonFrontPicTable[species],
+            LoadSpecialPokePic(&gMonFrontPicTable[species],
                                  gMonSpritesGfxPtr->buffer,
                                  species,
                                  personality,
@@ -2477,7 +2477,7 @@ u8 CreateAdditionalMonSpriteForMoveAnim(u16 species, bool8 isBackpic, u8 id, s16
                                                 personality,
                                                 FALSE);
         else
-            LoadSpecialPokePic_2(&gMonBackPicTable[species],
+            LoadSpecialPokePic(&gMonBackPicTable[species],
                                  gMonSpritesGfxPtr->buffer,
                                  species,
                                  personality,

@@ -105,7 +105,7 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_MUNNA] = 9,
     [SPECIES_MUSHARNA] = 5,
     [SPECIES_WOOBAT] = 19,
-    [SPECIES_SWOOBAT] = 12,
+    [SPECIES_SWOOBAT] = 9,
     [SPECIES_SIGILYPH] = 7,
     [SPECIES_YAMASK] = 10,
     [SPECIES_ARCHEOPS] = 8,
@@ -198,7 +198,7 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_CHI_YU] = 8,
     [SPECIES_POLTCHAGEIST] = 11,
     [SPECIES_SINISTCHA] = 9,
-    [SPECIES_PECHARUNT] = 12,
+    [SPECIES_PECHARUNT] = 16,
     // Alolan Forms
     [SPECIES_RAICHU_ALOLAN] = 4,
     // Galarian Forms

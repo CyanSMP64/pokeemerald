@@ -2473,7 +2473,6 @@ BattleScript_EffectYawn::
 BattleScript_PrintBankAbilityMadeIneffective::
 	copybyte sBATTLER, sBATTLER_WITH_ABILITY
 BattleScript_PrintAbilityMadeIneffective::
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNSXMADEITINEFFECTIVE
 	waitmessage B_WAIT_TIME_LONG
@@ -3963,10 +3962,10 @@ BattleScript_ItemSteal::
 	return
 
 BattleScript_DrizzleActivates::
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNMADEITRAIN
 	waitstate
+	pause B_WAIT_TIME_SHORT
 	playanimation BS_BATTLER_0, B_ANIM_RAIN_CONTINUES
 	call BattleScript_WeatherFormChanges
 	end3
@@ -3988,7 +3987,6 @@ BattleScript_SpeedBoostActivates::
 	end3
 
 BattleScript_TraceActivates::
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNTRACED
 	waitmessage B_WAIT_TIME_LONG
@@ -4005,10 +4003,10 @@ BattleScript_RainDishActivates::
 	end3
 
 BattleScript_SandstreamActivates::
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNSXWHIPPEDUPSANDSTORM
 	waitstate
+	pause B_WAIT_TIME_SHORT
 	playanimation BS_BATTLER_0, B_ANIM_SANDSTORM_CONTINUES
 	call BattleScript_WeatherFormChanges
 	end3
@@ -4046,7 +4044,6 @@ BattleScript_IntimidateActivatesEnd3::
 	end3
 
 BattleScript_PauseIntimidateActivates:
-	pause B_WAIT_TIME_SHORT
 BattleScript_IntimidateActivates::
 	setbyte gBattlerTarget, 0
 	call BattleScript_AbilityPopUp
@@ -4069,23 +4066,23 @@ BattleScript_IntimidateActivatesLoopIncrement:
 BattleScript_IntimidateActivatesReturn:
 	return
 BattleScript_IntimidatePrevented:
-	pause B_WAIT_TIME_SHORT
+	pause 42
+	call BattleScript_AbilityPopUp
 	printstring STRINGID_PREVENTEDFROMWORKING
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_IntimidateActivatesLoopIncrement
 
 BattleScript_DroughtActivates::
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNSXINTENSIFIEDSUN
 	waitstate
+	pause B_WAIT_TIME_SHORT
 	playanimation BS_BATTLER_0, B_ANIM_SUN_CONTINUES
 	call BattleScript_WeatherFormChanges
 	end3
 
 BattleScript_TookAttack::
 	attackstring
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNSXTOOKATTACK
 	waitmessage B_WAIT_TIME_LONG
@@ -4093,14 +4090,12 @@ BattleScript_TookAttack::
 	return
 
 BattleScript_SturdyPreventsOHKO::
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNPROTECTEDBY
 	pause B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
 BattleScript_DampStopsExplosion::
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNPREVENTSUSAGE
 	pause B_WAIT_TIME_LONG
@@ -4110,7 +4105,6 @@ BattleScript_MoveHPDrain_PPLoss::
 	ppreduce
 BattleScript_MoveHPDrain::
 	attackstring
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
 	healthbarupdate BS_TARGET
@@ -4124,7 +4118,6 @@ BattleScript_MonMadeMoveUseless_PPLoss::
 	ppreduce
 BattleScript_MonMadeMoveUseless::
 	attackstring
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNSXMADEYUSELESS
 	waitmessage B_WAIT_TIME_LONG
@@ -4135,60 +4128,75 @@ BattleScript_FlashFireBoost_PPLoss::
 	ppreduce
 BattleScript_FlashFireBoost::
 	attackstring
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printfromtable gFlashFireStringIds
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
 BattleScript_AbilityPreventsPhasingOut::
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNANCHORSITSELFWITH
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
 BattleScript_AbilityNoStatLoss::
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNPREVENTSSTATLOSSWITH
 	waitmessage B_WAIT_TIME_LONG
 	return
 
+BattleScript_BRNPreventionPopUp::
+	jumpifability BS_TARGET, ABILITY_SYNCHRONIZE, BattleScript_BRNPreventionPopUpSynchronize
+BattleScript_BRNPreventionPopUp2::
+	call BattleScript_AbilityPopUp
 BattleScript_BRNPrevention::
-	pause B_WAIT_TIME_SHORT
 	printfromtable gBRNPreventionStringIds
 	waitmessage B_WAIT_TIME_LONG
 	return
+BattleScript_BRNPreventionPopUpSynchronize::
+	pause 42
+	jumpifability BS_ATTACKER, ABILITY_WATER_VEIL, BattleScript_BRNPreventionPopUp2
+	goto BattleScript_BRNPreventionPopUp2
 
+BattleScript_PRLZPreventionPopUp::
+	jumpifability BS_TARGET, ABILITY_SYNCHRONIZE, BattleScript_PRLZPreventionPopUpSynchronize
+BattleScript_PRLZPreventionPopUp2::
+	call BattleScript_AbilityPopUp
 BattleScript_PRLZPrevention::
-	pause B_WAIT_TIME_SHORT
 	printfromtable gPRLZPreventionStringIds
 	waitmessage B_WAIT_TIME_LONG
 	return
+BattleScript_PRLZPreventionPopUpSynchronize::
+	pause 42
+	jumpifability BS_ATTACKER, ABILITY_LIMBER, BattleScript_PRLZPreventionPopUp2
+	goto BattleScript_PRLZPreventionPopUp2
 
+BattleScript_PSNPreventionPopUp::
+	jumpifability BS_TARGET, ABILITY_SYNCHRONIZE, BattleScript_PSNPreventionPopUpSynchronize
+BattleScript_PSNPreventionPopUp2::
+	call BattleScript_AbilityPopUp
 BattleScript_PSNPrevention::
-	pause B_WAIT_TIME_SHORT
 	printfromtable gPSNPreventionStringIds
 	waitmessage B_WAIT_TIME_LONG
 	return
+BattleScript_PSNPreventionPopUpSynchronize::
+	pause 42
+	jumpifability BS_ATTACKER, ABILITY_IMMUNITY, BattleScript_PSNPreventionPopUp2
+	goto BattleScript_PSNPreventionPopUp2
 
 BattleScript_ObliviousPreventsAttraction::
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNPREVENTSROMANCEWITH
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
 BattleScript_FlinchPrevention::
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNSXPREVENTSFLINCHING
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
 BattleScript_OwnTempoPrevents::
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNPREVENTSCONFUSIONWITH
 	waitmessage B_WAIT_TIME_LONG
@@ -4197,14 +4205,12 @@ BattleScript_OwnTempoPrevents::
 BattleScript_SoundproofProtected::
 	attackstring
 	ppreduce
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNSXBLOCKSY
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
 BattleScript_AbilityNoSpecificStatLoss::
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNSXPREVENTSYLOSS
 	waitmessage B_WAIT_TIME_LONG
@@ -4212,7 +4218,6 @@ BattleScript_AbilityNoSpecificStatLoss::
 	return
 
 BattleScript_StickyHoldActivates::
-	pause B_WAIT_TIME_SHORT
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNSXMADEYINEFFECTIVE
 	waitmessage B_WAIT_TIME_LONG

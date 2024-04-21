@@ -62,11 +62,6 @@ SECTIONS {
         gflib/bg.o(.text);
         gflib/blit.o(.text);
         gflib/window.o(.text);
-    } =0
-
-    .text_1 0x080045a4 :
-    ALIGN(4)
-    {
         gflib/text.o(.text);
         gflib/sprite.o(.text);
         gflib/string_util.o(.text);
@@ -111,14 +106,15 @@ SECTIONS {
         src/battle_controller_player.o(.text);
         src/battle_gfx_sfx_util.o(.text);
         src/battle_controller_link_opponent.o(.text);
-        src/pokeball.o(.text);
         src/overworld.o(.text);
+        src/field_screen_effect.o(.text);
     } =0
 
     .text_4 0x08067a74 :
     ALIGN(4)
     {
         src/pokemon.o(.text);
+        src/pokeball.o(.text);
         src/new_game.o(.text);
         src/util.o(.text);
         src/task.o(.text);
@@ -158,7 +154,6 @@ SECTIONS {
         src/battle_anim_status_effects.o(.text);
         src/field_weather.o(.text);
         src/field_weather_effect.o(.text);
-        src/field_screen_effect.o(.text);
         src/mail_data.o(.text);
         src/pokemon_icon.o(.text);
     } =0
@@ -654,11 +649,6 @@ SECTIONS {
         src/move_relearner.o(.rodata);
         src/use_pokeblock.o(.rodata);
         src/field_region_map.o(.rodata);
-    } =0
-
-    .rodata_3 0x0860f074 :
-    ALIGN(4)
-    {
         src/menu.o(.rodata);
         src/battle_controller_wally.o(.rodata);
         src/player_pc.o(.rodata);
@@ -817,7 +807,7 @@ SECTIONS {
         src/graphics.o(.rodata);
     } =0
 
-    new_sound 0x08e50000 : /* debug */
+    new_sound 0x08e70000 : /* debug */
     ALIGN(4)
     {
         data/sound_data_2.o(.rodata);
