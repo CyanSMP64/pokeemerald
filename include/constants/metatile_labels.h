@@ -723,8 +723,12 @@
 #define METATILE_Shop_Laptop2_Normal  0x2A5
 
 // gTileset_Slateport
-#define METATILE_Slateport_Door             0x2DC
-#define METATILE_Slateport_Door_BattleTent  0x393
+#define METATILE_Slateport_Door                    0x2DC
+#define METATILE_Slateport_Door_BattleTent         0x393
+#define METATILE_Slateport_seashoreHouseLocked1    0x2CC
+#define METATILE_Slateport_seashoreHouseLocked2    0x2DF
+#define METATILE_Slateport_seashoreHouseUnlocked1  0x2D3
+#define METATILE_Slateport_seashoreHouseUnlocked2  0x2DB
 
 // gTileset_SootopolisGym
 #define METATILE_SootopolisGym_Ice_Broken   0x206
@@ -800,5 +804,41 @@
 #define METATILE_Unused1_ForReal3  0x222
 #define METATILE_Unused1_ForReal4  0x223
 #define METATILE_Unused1_ForReal5  0x21B
+#define METATILE_Unused1_TheEnd28  0x202
+#define METATILE_Unused1_TheEnd29  0x20A
+#define METATILE_Unused1_TheEnd2A  0x212
+#define METATILE_Unused1_TheEnd38  0x203
+#define METATILE_Unused1_TheEnd39  0x20B
+#define METATILE_Unused1_TheEnd3A  0x213
+#define METATILE_Unused1_TheEnd48  0x204
+#define METATILE_Unused1_TheEnd49  0x20C
+#define METATILE_Unused1_TheEnd4A  0x214
+#define METATILE_Unused1_TheEnd58  0x205
+#define METATILE_Unused1_TheEnd59  0x20D
+#define METATILE_Unused1_TheEnd5A  0x215
+#define METATILE_Unused1_TheEnd68  0x206
+#define METATILE_Unused1_TheEnd69  0x20E
+#define METATILE_Unused1_TheEnd6A  0x216
+#define METATILE_Unused1_TheEnd78  0x207
+#define METATILE_Unused1_TheEnd79  0x20F
+#define METATILE_Unused1_TheEnd7A  0x217
+#define METATILE_Unused1_TheEnd98  0x21C
+#define METATILE_Unused1_TheEnd99  0x224
+#define METATILE_Unused1_TheEnd9A  0x22C
+#define METATILE_Unused1_TheEndA8  0x21D
+#define METATILE_Unused1_TheEndA9  0x225
+#define METATILE_Unused1_TheEndAA  0x22D
+#define METATILE_Unused1_TheEndB8  0x208
+#define METATILE_Unused1_TheEndB9  0x210
+#define METATILE_Unused1_TheEndBA  0x218
+#define METATILE_Unused1_TheEndC8  0x209
+#define METATILE_Unused1_TheEndC9  0x211
+#define METATILE_Unused1_TheEndCA  0x219
+#define METATILE_Unused1_TheEndD8  0x21E
+#define METATILE_Unused1_TheEndD9  0x226
+#define METATILE_Unused1_TheEndDA  0x22E
+#define METATILE_Unused1_TheEndE8  0x21F
+#define METATILE_Unused1_TheEndE9  0x227
+#define METATILE_Unused1_TheEndEA  0x22F
 
 #endif // GUARD_METATILE_LABELS_H

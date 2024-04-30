@@ -27,6 +27,12 @@ Std_MsgboxYesNo:
 	yesnobox 20, 8
 	return
 
+Std_MsgboxYesNoAlt:
+	message NULL
+	waitmessage
+	noyesbox 20, 8
+	return
+
 Std_MsgboxGetPoints:
 	message NULL
 	playfanfare MUS_OBTAIN_B_POINTS

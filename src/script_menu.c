@@ -213,6 +213,23 @@ bool8 ScriptMenu_YesNo(u8 left, u8 top)
     }
 }
 
+bool8 ScriptMenu_NoYes(u8 left, u8 top)
+{
+    u8 taskId;
+
+    if (FuncIsActiveTask(Task_HandleYesNoInput) == TRUE)
+    {
+        return FALSE;
+    }
+    else
+    {
+        gSpecialVar_Result = 0xFF;
+        DisplayYesNoMenuWithDefault(1);
+        taskId = CreateTask(Task_HandleYesNoInput, 0x50);
+        return TRUE;
+    }
+}
+
 // Unused
 bool8 IsScriptActive(void)
 {

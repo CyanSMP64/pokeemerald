@@ -923,9 +923,11 @@
 	.byte \ignoreBPress
 	.endm
 
-	@ Nopped in Emerald.
-	.macro drawbox
+	@ Repurposed for nat dex. same as yesnobox but default option is NO
+	.macro noyesbox x:req, y:req
 	.byte 0x72
+	.byte \x
+	.byte \y
 	.endm
 
 	@ Nopped in Emerald, but still consumes parameters.
@@ -1875,6 +1877,7 @@
 	MSGBOX_AUTOCLOSE = 6
 	MSGBOX_GETPOINTS = 9
 	MSGBOX_POKENAV = 10
+	MSGBOX_NOYES = 11
 
 	YES = 1
 	NO  = 0

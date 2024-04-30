@@ -1387,15 +1387,20 @@ bool8 ScrCmd_multichoicedefault(struct ScriptContext *ctx)
     }
 }
 
-bool8 ScrCmd_drawbox(struct ScriptContext *ctx)
+bool8 ScrCmd_noyesbox(struct ScriptContext *ctx)
 {
-    /*u8 left = ScriptReadByte(ctx);
+    u8 left = ScriptReadByte(ctx);
     u8 top = ScriptReadByte(ctx);
-    u8 right = ScriptReadByte(ctx);
-    u8 bottom = ScriptReadByte(ctx);
 
-    MenuDrawTextWindow(left, top, right, bottom);*/
-    return FALSE;
+    if (ScriptMenu_NoYes(left, top) == TRUE)
+    {
+        ScriptContext_Stop();
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
 }
 
 bool8 ScrCmd_multichoicegrid(struct ScriptContext *ctx)

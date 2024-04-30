@@ -1285,10 +1285,10 @@ $(MID_SUBDIR)/se_dinkdonk.s: %.s: %.mid
 	$(MID) $< $@ -E -G128 -V127 -P5
 
 $(MID_SUBDIR)/mus_b2_vs_champion_hoenn.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G349 -V111
+	$(MID) $< $@ -E -R0 -G349 -V101
 
 $(MID_SUBDIR)/mus_b2_victory_pwt.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G351 -V127
+	$(MID) $< $@ -E -R0 -G351 -V117
 
 $(MID_SUBDIR)/se_utvanish.s: %.s: %.mid
 	$(MID) $< $@ -E -G128 -V127 -P5
