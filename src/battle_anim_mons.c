@@ -62,10 +62,10 @@ const struct MonCoords gCastformFrontSpriteCoords[NUM_CASTFORM_FORMS] =
 
 static const u8 sCastformElevations[NUM_CASTFORM_FORMS] =
 {
-    [CASTFORM_NORMAL] = 13,
-    [CASTFORM_FIRE]   = 14,
-    [CASTFORM_WATER]  = 13,
-    [CASTFORM_ICE]    = 13,
+    [CASTFORM_NORMAL] = 14,
+    [CASTFORM_FIRE]   = 11,
+    [CASTFORM_WATER]  = 10,
+    [CASTFORM_ICE]    = 8,
 };
 
 // Y position of the backsprite for each of the four Castform forms.
