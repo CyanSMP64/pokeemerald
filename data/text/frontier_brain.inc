@@ -75,7 +75,7 @@ gText_GretaDefeatGold::
 
 @ Battle Palace
 gText_SpenserWonSilver::
-	.string "Your POKéMON are wimpy because\n"
+	.string "Your Pokémon are wimpy because\n"
 	.string "you're wimpy as a TRAINER!$"
 
 gText_SpenserDefeatSilver::

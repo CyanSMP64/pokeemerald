@@ -214,7 +214,7 @@ BattleFrontier_ScottsHouse_EventScript_ScottFaceAwayWest::
 BattleFrontier_ScottsHouse_Text_WelcomeToBattleFrontier:
 	.string "SCOTT: Well, hello and welcome!\n"
 	.string "Heheh… Sorry about the cramped space.\p"
-	.string "Anyway, {PLAYER}{KUN}, let me formally\n"
+	.string "Anyway, {PLAYER}, let me formally\n"
 	.string "welcome you to the BATTLE FRONTIER.\p"
 	.string "This is my dream come true.\n"
 	.string "It took me years and years, but I've\l"
@@ -233,7 +233,7 @@ BattleFrontier_ScottsHouse_Text_HaveThisAsMementoOfOurPathsCrossing:
 	.string "No point dwelling on that!\p"
 	.string "All I want for you is to enjoy battling\n"
 	.string "to your heart's content here.\p"
-	.string "{PLAYER}{KUN}, I want you to have this\n"
+	.string "{PLAYER}, I want you to have this\n"
 	.string "as a memento for all the time our\l"
 	.string "paths crossed on our journeys.$"
 
@@ -279,9 +279,9 @@ BattleFrontier_ScottsHouse_Text_MayFindWildMonsInFrontier:
 	.string "SCOTT: You don't just train for battle,\n"
 	.string "right?\p"
 	.string "I think I remember you working on\n"
-	.string "a POKéDEX as well.\p"
+	.string "a Pokédex as well.\p"
 	.string "Well, guess what?\p"
-	.string "You may run into wild POKéMON in\n"
+	.string "You may run into wild Pokémon in\n"
 	.string "the BATTLE FRONTIER somewhere…\l"
 	.string "Fufufu!$"
 

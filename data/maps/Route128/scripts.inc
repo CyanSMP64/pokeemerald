@@ -273,12 +273,12 @@ Route128_Text_MaxieResposibilityFallsToArchieAndMe:
 
 Route128_Text_MaxieThisDefiesBelief:
 	.string "MAXIE: This defies belief…\p"
-	.string "Those super-ancient POKéMON…\p"
+	.string "Those super-ancient Pokémon…\p"
 	.string "Their power is unbelievable.\n"
 	.string "They've upset the balance of nature…$"
 
 Route128_Text_StevenWhatIsHappening:
-	.string "STEVEN: {PLAYER}{KUN}!\n"
+	.string "STEVEN: {PLAYER}!\n"
 	.string "What is happening?$"
 
 Route128_Text_StevenWholeWorldWillDrown:
@@ -294,7 +294,7 @@ Route128_Text_StevenWholeWorldWillDrown:
 	.string "SOOTOPOLIS might provide answers…$"
 
 Route128_Text_StevenImGoingToSootopolis:
-	.string "{PLAYER}{KUN}…\n"
+	.string "{PLAYER}…\n"
 	.string "I don't know what you intend to do,\l"
 	.string "but don't do anything reckless.\p"
 	.string "Okay.\n"

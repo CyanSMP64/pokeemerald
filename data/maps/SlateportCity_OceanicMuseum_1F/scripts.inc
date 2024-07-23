@@ -243,7 +243,7 @@ SlateportCity_OceanicMuseum_1F_Text_CatchUpWithYourGroup:
 	.string "You'd better go catch up to them!$"
 
 SlateportCity_OceanicMuseum_1F_Text_AquaExistForGoodOfAll:
-	.string "We, TEAM AQUA, exist for the good\n"
+	.string "We, Team Aqua, exist for the good\n"
 	.string "of all!$"
 
 SlateportCity_OceanicMuseum_1F_Text_OurBossIsntHere:
@@ -280,18 +280,18 @@ SlateportCity_OceanicMuseum_1F_Text_SternIsRoleModel:
 SlateportCity_OceanicMuseum_1F_Text_MustBePokemonWeDontKnow:
 	.string "The sea is vast without end, and\n"
 	.string "infinitely deep…\p"
-	.string "There must be many POKéMON that\n"
+	.string "There must be many Pokémon that\n"
 	.string "we don't know about.$"
 
 SlateportCity_OceanicMuseum_1F_Text_WantSeaPokemon:
-	.string "I want a sea POKéMON.\p"
+	.string "I want a sea Pokémon.\p"
 	.string "I think it would feel cool and nice\n"
 	.string "to hug.$"
 
 SlateportCity_OceanicMuseum_1F_Text_RememberMeTakeThis:
 	.string "Aiyeeeh!\n"
 	.string "What are you doing here?\p"
-	.string "Me? I'm the TEAM AQUA member\n"
+	.string "Me? I'm the Team Aqua member\n"
 	.string "you thumped before, remember?\l"
 	.string "Back in RUSTURF TUNNEL?\p"
 	.string "Here, take this!\n"

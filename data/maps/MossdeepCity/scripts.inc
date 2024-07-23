@@ -353,11 +353,11 @@ MossdeepCity_Text_SpaceCenterLaunchingRockets:
 
 MossdeepCity_Text_MossdeepTargetedByMagma:
 	.string "I heard from a SAILOR buddy that\n"
-	.string "TEAM AQUA set up shop in LILYCOVE.\p"
+	.string "Team Aqua set up shop in LILYCOVE.\p"
 	.string "I also heard that someone came along\n"
 	.string "and wiped the floor with them!\p"
 	.string "But MOSSDEEP here's been targeted\n"
-	.string "by that TEAM MAGMA.\p"
+	.string "by that Team Magma.\p"
 	.string "If you want to know what they're up to,\n"
 	.string "go visit the SPACE CENTER.$"
 
@@ -383,7 +383,7 @@ MossdeepCity_Text_LifeNeedsSeaToLive:
 
 MossdeepCity_Text_SurfExhilarating:
 	.string "A voyage on a ship is fine.\p"
-	.string "But crossing the sea with POKéMON\n"
+	.string "But crossing the sea with Pokémon\n"
 	.string "using SURF…\p"
 	.string "Now that's an exhilarating trip!\n"
 	.string "Wouldn't you agree, youngster?$"
@@ -402,13 +402,13 @@ MossdeepCity_Text_ItsAWhiteRock:
 	.string "It's a white rock.$"
 
 MossdeepCity_Text_GymSign:
-	.string "MOSSDEEP CITY POKéMON GYM\n"
+	.string "MOSSDEEP CITY Pokémon GYM\n"
 	.string "LEADERS: LIZA & TATE\p"
 	.string "“The mystic combination!”$"
 
 MossdeepCity_Text_CitySign:
 	.string "MOSSDEEP CITY\n"
-	.string "“Our slogan: Cherish POKéMON!”$"
+	.string "“Our slogan: Cherish Pokémon!”$"
 
 MossdeepCity_Text_SpaceCenterSign:
 	.string "MOSSDEEP SPACE CENTER\n"

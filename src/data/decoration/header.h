@@ -27,7 +27,7 @@ const struct Decoration gDecorations[] =
     [DECOR_POKEMON_DESK] =
     {
         .id = DECOR_POKEMON_DESK,
-        .name = _("POKéMON DESK"),
+        .name = _("Pokémon DESK"),
         .permission = DECORPERM_SOLID_FLOOR,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DESK,
@@ -135,7 +135,7 @@ const struct Decoration gDecorations[] =
     [DECOR_POKEMON_CHAIR] =
     {
         .id = DECOR_POKEMON_CHAIR,
-        .name = _("POKéMON CHAIR"),
+        .name = _("Pokémon CHAIR"),
         .permission = DECORPERM_PASS_FLOOR,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_CHAIR,

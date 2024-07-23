@@ -86,7 +86,7 @@ FallarborTown_PokemonCenter_1F_Text_LanetteGreeting:
 	.string "Aaaaaaah!$"
 
 FallarborTown_PokemonCenter_1F_Text_FossilManiacEdgeOfTown:
-	.string "I wonder what POKéMON looked like\n"
+	.string "I wonder what Pokémon looked like\n"
 	.string "long, long ago?\p"
 	.string "Maybe the FOSSIL MANIAC at the edge\n"
 	.string "of town will know.$"

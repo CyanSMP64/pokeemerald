@@ -54,7 +54,7 @@ const struct Item gItems[] =
 
     [ITEM_POKE_BALL] =
     {
-        .name = _("POKé BALL"),
+        .name = _("Poké Ball"),
         .itemId = ITEM_POKE_BALL,
         .price = 200,
         .description = sPokeBallDesc,
@@ -1007,7 +1007,7 @@ const struct Item gItems[] =
 
     [ITEM_POKE_DOLL] =
     {
-        .name = _("POKé DOLL"),
+        .name = _("Poké Doll"),
         .itemId = ITEM_POKE_DOLL,
         .price = 1000,
         .description = sPokeDollDesc,
@@ -4202,7 +4202,7 @@ const struct Item gItems[] =
 
     [ITEM_POKE_FLUTE] =
     {
-        .name = _("POKé FLUTE"),
+        .name = _("Poké Flute"),
         .itemId = ITEM_POKE_FLUTE,
         .price = 0,
         .description = sPokeFluteDesc,

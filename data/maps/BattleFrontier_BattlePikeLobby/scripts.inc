@@ -308,8 +308,8 @@ BattleFrontier_BattlePikeLobby_Text_WhichChallengeMode:
 BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLv50:
 	.string "I beg your pardon, but…\p"
 	.string "You do not have three eligible\n"
-	.string "POKéMON for the Battle Choice event.\p"
-	.string "You must have three different POKéMON\n"
+	.string "Pokémon for the Battle Choice event.\p"
+	.string "You must have three different Pokémon\n"
 	.string "of Level 50 or less to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
@@ -320,9 +320,9 @@ BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLv50:
 BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLvOpen:
 	.string "I beg your pardon, but…\p"
 	.string "You do not have three eligible\n"
-	.string "POKéMON for the Battle Choice event.\p"
+	.string "Pokémon for the Battle Choice event.\p"
 	.string "You must have three different\n"
-	.string "POKéMON to enter.\p"
+	.string "Pokémon to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
 	.string "EGGS{STR_VAR_1} ineligible.\p"
@@ -330,7 +330,7 @@ BattleFrontier_BattlePikeLobby_Text_NotEnoughValidMonsLvOpen:
 	.string "you are ready…$"
 
 BattleFrontier_BattlePikeLobby_Text_PleaseChooseThreeMons:
-	.string "Please choose the three POKéMON\n"
+	.string "Please choose the three Pokémon\n"
 	.string "you wish to enter in the challenge…$"
 
 BattleFrontier_BattlePikeLobby_Text_SaveBeforeChallenge:
@@ -398,7 +398,7 @@ BattleFrontier_BattlePikeLobby_Text_NeverHadToBattleTrainer:
 BattleFrontier_BattlePikeLobby_Text_ThinkAbilitiesUsefulHere:
 	.string "Listen! Listen!\p"
 	.string "Don't you think that the special\n"
-	.string "abilities of POKéMON will be useful\l"
+	.string "abilities of Pokémon will be useful\l"
 	.string "here?$"
 
 @ Unused
@@ -416,17 +416,17 @@ BattleFrontier_BattlePikeLobby_Text_ReadWhichHeading:
 	.string "Which heading do you want to read?$"
 
 BattleFrontier_BattlePikeLobby_Text_ExplainPokenavBagRules:
-	.string "The BAG and POKéNAV may not be used\n"
+	.string "The BAG and PokéNav may not be used\n"
 	.string "during a Battle Choice challenge.$"
 
 BattleFrontier_BattlePikeLobby_Text_ExplainHeldItemRules:
 	.string "During a Battle Choice challenge,\n"
-	.string "any BERRY or HERB held by POKéMON\l"
+	.string "any BERRY or HERB held by Pokémon\l"
 	.string "will be effective only once.$"
 
 BattleFrontier_BattlePikeLobby_Text_ExplainMonOrderRules:
 	.string "During a Battle Choice challenge,\n"
-	.string "the sequence of POKéMON cannot be\l"
+	.string "the sequence of Pokémon cannot be\l"
 	.string "changed.\p"
 	.string "The sequence must be set before\n"
 	.string "starting your challenge.$"

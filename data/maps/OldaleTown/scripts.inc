@@ -447,14 +447,14 @@ OldaleTown_Text_SavingMyProgress:
 
 OldaleTown_Text_IWorkAtPokemonMart:
 	.string "Hi!\n"
-	.string "I work at a POKéMON MART.\p"
+	.string "I work at a Pokémon Mart.\p"
 	.string "Can I get you to come with me?$"
 
 OldaleTown_Text_ThisIsAPokemonMart:
-	.string "This is a POKéMON MART.\n"
+	.string "This is a Pokémon Mart.\n"
 	.string "Just look for our blue roof.\p"
 	.string "We sell a variety of goods including\n"
-	.string "POKé BALLS for catching POKéMON.\p"
+	.string "Poké Balls for catching Pokémon.\p"
 	.string "Here, I'd like you to have this as\n"
 	.string "a promotional item.$"
 
@@ -466,24 +466,24 @@ OldaleTown_Text_WaitDontComeInHere:
 	.string "Aaaaah! Wait!\n"
 	.string "Please don't come in here.\p"
 	.string "I just discovered the footprints of\n"
-	.string "a rare POKéMON!\p"
+	.string "a rare Pokémon!\p"
 	.string "Wait until I finish sketching\n"
 	.string "them, okay?$"
 
 OldaleTown_Text_DiscoveredFootprints:
 	.string "I just discovered the footprints of\n"
-	.string "a rare POKéMON!\p"
+	.string "a rare Pokémon!\p"
 	.string "Wait until I finish sketching\n"
 	.string "them, okay?$"
 
 OldaleTown_Text_FinishedSketchingFootprints:
 	.string "I finished sketching the footprints of\n"
-	.string "a rare POKéMON.\p"
+	.string "a rare Pokémon.\p"
 	.string "But it turns out they were only my\n"
 	.string "own footprints…$"
 
 OldaleTown_Text_MayLetsGoBack:
-	.string "MAY: {PLAYER}{KUN}!\n"
+	.string "MAY: {PLAYER}!\n"
 	.string "Over here!\l"
 	.string "Let's hurry home!$"
 

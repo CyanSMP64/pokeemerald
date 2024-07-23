@@ -208,11 +208,11 @@ RustboroCity_DevonCorp_3F_Text_MrStoneWantYouToHaveThis:
 	.string "That's why I want you to have this!$"
 
 RustboroCity_DevonCorp_3F_Text_ReceivedPokenav:
-	.string "{PLAYER} received a POKéNAV.$"
+	.string "{PLAYER} received a PokéNav.$"
 
 RustboroCity_DevonCorp_3F_Text_MrStoneExplainPokenavRestUp:
 	.string "MR. STONE: That device…\p"
-	.string "It's a POKéMON NAVIGATOR, or POKéNAV\n"
+	.string "It's a Pokémon NAVIGATOR, or PokéNav\n"
 	.string "for short.\p"
 	.string "It's an indispensable tool for any\n"
 	.string "TRAINER on an adventure.\p"
@@ -226,7 +226,7 @@ RustboroCity_DevonCorp_3F_Text_MrStoneExplainPokenavRestUp:
 	.string "up before you go on your way.$"
 
 RustboroCity_DevonCorp_3F_Text_MrStoneGoWithCautionAndCare:
-	.string "MR. STONE: Well, then, {PLAYER}{KUN},\n"
+	.string "MR. STONE: Well, then, {PLAYER},\n"
 	.string "go with caution and care!$"
 
 RustboroCity_DevonCorp_3F_Text_CountingOnYou:
@@ -239,13 +239,13 @@ RustboroCity_DevonCorp_3F_Text_ThankYouForDeliveringLetter:
 	.string "It should help you, a TRAINER.$"
 
 RustboroCity_DevonCorp_3F_Text_ExplainExpShare:
-	.string "MR. STONE: A POKéMON holding that\n"
+	.string "MR. STONE: A Pokémon holding that\n"
 	.string "EXP. SHARE will be given some of the\l"
 	.string "EXP Points from battle.\p"
 	.string "It will get EXP Points even if it didn't\n"
 	.string "actually battle.\p"
 	.string "I would say EXP. SHARE is quite useful\n"
-	.string "for raising weak POKéMON.$"
+	.string "for raising weak Pokémon.$"
 
 RustboroCity_DevonCorp_3F_Text_NotFamiliarWithTrends:
 	.string "MR. STONE: Since my youth, I've immersed\n"
@@ -253,7 +253,7 @@ RustboroCity_DevonCorp_3F_Text_NotFamiliarWithTrends:
 	.string "Consequently, I'm not familiar with\n"
 	.string "trends and that sort of thing.\p"
 	.string "But do young people all want to be\n"
-	.string "TRAINERS in the POKéMON LEAGUE?$"
+	.string "TRAINERS in the Pokémon LEAGUE?$"
 
 RustboroCity_DevonCorp_3F_Text_ThisIs3rdFloorWaitHere:
 	.string "This is the DEVON CORPORATION's\n"

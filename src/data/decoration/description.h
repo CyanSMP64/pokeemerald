@@ -49,7 +49,7 @@ const u8 DecorDesc_SMALL_CHAIR[] = _(
 const u8 DecorDesc_POKEMON_CHAIR[] = _(
     "A small chair built\n"
         "in the shape of a\n"
-        "POKé BALL.");
+        "Poké Ball.");
 
 const u8 DecorDesc_HEAVY_CHAIR[] = _(
     "A small chair made\n"
