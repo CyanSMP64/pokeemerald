@@ -1095,7 +1095,7 @@ const struct MonCoords gMonBackPicCoords[] =
     [SPECIES_IRON_CROWN]                = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
     [SPECIES_TERAPAGOS]                 = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  7 },
     [SPECIES_TERAPAGOS_TERASTAL]        = { .size = MON_COORDS_SIZE(64, 64), .y_offset = 16 },
-    [SPECIES_TERAPAGOS_STELLAR]         = { .size = MON_COORDS_SIZE(64, 64), .y_offset = 16 },
+    [SPECIES_TERAPAGOS_STELLAR]         = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_PECHARUNT]                 = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  5 },
     [SPECIES_PIKACHU_CAP]               = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
     [SPECIES_PIKACHU_PARTNER]           = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  4 },
