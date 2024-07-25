@@ -278,7 +278,7 @@ DewfordTown_Gym_EventScript_GymStatue::
 DewfordTown_Gym_Text_GymGuideAdvice:
 	.string "Hey, how's it going, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
-	.string "DEWFORD's GYM LEADER BRAWLY commands\n"
+	.string "DEWFORD's Gym Leader BRAWLY commands\n"
 	.string "FIGHTING-type Pokémon.\p"
 	.string "Going against him with NORMAL-type\n"
 	.string "Pokémon is asking for trouble.\p"
@@ -318,7 +318,7 @@ DewfordTown_Gym_Text_JocelynDefeat:
 DewfordTown_Gym_Text_JocelynPostBattle:
 	.string "I'm not going to waste this loss.\n"
 	.string "I'll use it to motivate me to train!\p"
-	.string "One day I'll become a GYM LEADER…\p"
+	.string "One day I'll become a Gym Leader…\p"
 	.string "No, I'll become the Pokémon LEAGUE\n"
 	.string "CHAMPION!$"
 
@@ -358,7 +358,7 @@ DewfordTown_Gym_Text_BrendenDefeat:
 
 DewfordTown_Gym_Text_BrendenPostBattle:
 	.string "Oh, aye! You're worthy of seeing\n"
-	.string "our GYM LEADER.$"
+	.string "our Gym Leader.$"
 
 DewfordTown_Gym_Text_CristianIntro:
 	.string "If you mean to pass, it has to be\n"
@@ -401,7 +401,7 @@ DewfordTown_Gym_Text_ExplainBulkUp:
 	.string "and DEFENSE stats.$"
 
 DewfordTown_Gym_Text_RegisteredBrawly:
-	.string "Registered GYM LEADER BRAWLY\n"
+	.string "Registered Gym Leader BRAWLY\n"
 	.string "in the PokéNav.$"
 
 DewfordTown_Gym_Text_BrawlyPostBattle:

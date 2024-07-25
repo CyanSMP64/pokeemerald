@@ -696,7 +696,7 @@ Route110_Text_WeCantTalkAboutAquaActivities:
 	.string "We can't talk about them yet.$"
 
 Route110_Text_KickUpARuckus:
-	.string "I want to get going to SLATEPORT and\n"
+	.string "I want to get going to Slateport and\n"
 	.string "kick up a ruckus!$"
 
 Route110_Text_MyFirstJobInAqua:
@@ -708,7 +708,7 @@ Route110_Text_AquaActionsBringSmiles:
 	.string "smiles to people's faces!$"
 
 Route110_Text_MayLetsBattle:
-	.string "MAY: Hi, {PLAYER}, long time no see!\p"
+	.string "May: Hi, {PLAYER}, long time no see!\p"
 	.string "While I was searching for other\n"
 	.string "Pokémon, my Pokémon grew stronger.\p"
 	.string "So…\n"
@@ -719,13 +719,13 @@ Route110_Text_MayDefeated:
 	.string "You're better than I expected!$"
 
 Route110_Text_MayTakeThis:
-	.string "MAY: {PLAYER}, you've been busy\n"
+	.string "May: {PLAYER}, you've been busy\n"
 	.string "training, too, haven't you?\p"
 	.string "I think you deserve a reward!\n"
 	.string "This is from me!$"
 
 Route110_Text_MayExplainItemfinder:
-	.string "MAY: That's an ITEMFINDER.\p"
+	.string "May: That's a Dowsing Machine.\p"
 	.string "Try it out. If there is an item that's\n"
 	.string "not visible, it emits a sound.\p"
 	.string "Okay, {PLAYER}, let's meet again!\p"
@@ -734,7 +734,7 @@ Route110_Text_MayExplainItemfinder:
 	.string "harder for the next time.$"
 
 Route110_Text_BrendanLetsBattle:
-	.string "BRENDAN: Hey, {PLAYER}.\n"
+	.string "Brendan: Hey, {PLAYER}.\n"
 	.string "So this is where you were.\l"
 	.string "How's it going?\p"
 	.string "Have you been raising your Pokémon?\n"
@@ -745,13 +745,13 @@ Route110_Text_BrendanDefeated:
 	.string "You're pretty good.$"
 
 Route110_Text_BrendanTakeThis:
-	.string "BRENDAN: {PLAYER}, you've trained\n"
+	.string "Brendan: {PLAYER}, you've trained\n"
 	.string "without me noticing…\p"
 	.string "Good enough!\n"
 	.string "Here, take this.$"
 
 Route110_Text_BrendanExplainItemfinder:
-	.string "BRENDAN: That's an ITEMFINDER.\p"
+	.string "Brendan: That's a Dowsing Machine.\p"
 	.string "Use it to root around for items that\n"
 	.string "aren't visible.\p"
 	.string "If it senses something, it emits\n"
@@ -760,8 +760,8 @@ Route110_Text_BrendanExplainItemfinder:
 	.string "Pokémon.$"
 
 Route110_Text_RideBikeAtFullSpeed:
-	.string "Wouldn't it be great to ride a BIKE\n"
-	.string "at full speed on CYCLING ROAD?$"
+	.string "Wouldn't it be great to ride a Bike\n"
+	.string "at full speed on Cycling Road?$"
 
 Route110_Text_HairStreamsBehindMe:
 	.string "How do you like the way my raven-\n"
@@ -769,18 +769,18 @@ Route110_Text_HairStreamsBehindMe:
 	.string "I grew my hair out just for that.$"
 
 Route110_Text_YouGotBikeFromRydel:
-	.string "Oh, hey, you got that BIKE from RYDEL!\p"
+	.string "Oh, hey, you got that Bike from Rydel!\p"
 	.string "Oh, it's glaringly obvious.\n"
 	.string "It says right on your bike…\p"
-	.string "RYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\n"
-	.string "RYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\p"
-	.string "RYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\n"
-	.string "RYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\p"
-	.string "RYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\n"
-	.string "RYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\p"
-	.string "RYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\n"
-	.string "RYDEL, RYDEL, RYDEL, RYDEL, RYDEL,\p"
-	.string "RYDEL, RYDEL, RYDEL, RYDEL, RYDEL…\n"
+	.string "Rydel, Rydel, Rydel, Rydel, Rydel,\n"
+	.string "Rydel, Rydel, Rydel, Rydel, Rydel,\p"
+	.string "Rydel, Rydel, Rydel, Rydel, Rydel,\n"
+	.string "Rydel, Rydel, Rydel, Rydel, Rydel,\p"
+	.string "Rydel, Rydel, Rydel, Rydel, Rydel,\n"
+	.string "Rydel, Rydel, Rydel, Rydel, Rydel,\p"
+	.string "Rydel, Rydel, Rydel, Rydel, Rydel,\n"
+	.string "Rydel, Rydel, Rydel, Rydel, Rydel,\p"
+	.string "Rydel, Rydel, Rydel, Rydel, Rydel…\n"
 	.string "That name's everywhere.\p"
 	.string "You should ride it around all over\n"
 	.string "the place--it's good advertising!$"
@@ -791,19 +791,19 @@ Route110_Text_TwoRoads:
 	.string "Perhaps that is right and fair.$"
 
 Route110_Text_WalkOnTheLowRoad:
-	.string "I don't have a BIKE, so I'll take\n"
+	.string "I don't have a Bike, so I'll take\n"
 	.string "a leisurely walk on the low road.$"
 
 Route110_Text_BikeTechniques:
-	.string "Learning techniques will make BIKE\n"
+	.string "Learning techniques will make Bike\n"
 	.string "riding even more fun.\p"
 	.string "There are some places that you can\n"
-	.string "reach only by using a BIKE technique.$"
+	.string "reach only by using a Bike technique.$"
 
 Route110_Text_WhichShouldIChoose:
 	.string "Which should I choose?\p"
-	.string "Make a beeline for MAUVILLE on\n"
-	.string "CYCLING ROAD, or take the low road\l"
+	.string "Make a beeline for Mauville on\n"
+	.string "Cycling Road, or take the low road\l"
 	.string "and look for Pokémon?$"
 
 Route110_Text_CyclingChallengeResultSummary:
@@ -840,12 +840,12 @@ Route110_Text_ChallengeReactionWorst:
 	.string "You're perhaps not cut out for this\n"
 	.string "unfortunate cycling business.\p"
 	.string "You ought to give serious thought to\n"
-	.string "returning that BIKE to RYDEL.$"
+	.string "returning that Bike to Rydel.$"
 
 Route110_Text_RatedForNumberOfCollisions:
-	.string "This is CYCLING ROAD.\p"
-	.string "If you were to ride from MAUVILLE to\n"
-	.string "SLATEPORT on a MACH BIKE, you would\l"
+	.string "This is Cycling Road.\p"
+	.string "If you were to ride from Mauville to\n"
+	.string "Slateport on a Mach Bike, you would\l"
 	.string "be rated for the number of collisions\l"
 	.string "and your total time.$"
 
@@ -855,18 +855,18 @@ Route110_Text_AlwaysAimHigher:
 	.string "Always aim higher!$"
 
 Route110_Text_AcroBikesDoNotQualify:
-	.string "On this CYCLING ROAD, those riding\n"
-	.string "MACH BIKES are rated for their number\l"
+	.string "On this Cycling Road, those riding\n"
+	.string "Mach Bikes are rated for their number\l"
 	.string "of collisions and their total times.\p"
-	.string "ACRO BIKES do not qualify for rating.\n"
+	.string "Acro Bikes do not qualify for rating.\n"
 	.string "They are easy to turn, so it's not fair.$"
 
 Route110_Text_SlateportCitySign:
-	.string "ROUTE 110\n"
-	.string "{DOWN_ARROW} SLATEPORT CITY$"
+	.string "Route 110\n"
+	.string "{DOWN_ARROW} Slateport City$"
 
 Route110_Text_CyclingRoadSign:
-	.string "SEASIDE CYCLING ROAD$"
+	.string "Seaside Cycling Road$"
 
 Route110_Text_AquaWasHere:
 	.string "“Team Aqua was here!”\p"
@@ -876,39 +876,39 @@ Route110_Text_AquaWasHere:
 	.string "says now.$"
 
 Route110_Text_Route103Sign:
-	.string "ROUTE 110\n"
-	.string "{LEFT_ARROW} ROUTE 103$"
+	.string "Route 110\n"
+	.string "{LEFT_ARROW} Route 103$"
 
 Route110_Text_SeasideParkingSign:
-	.string "SEASIDE PARKING$"
+	.string "Seaside Parking$"
 
 Route110_Text_MauvilleCitySign:
-	.string "ROUTE 110\n"
-	.string "{UP_ARROW} MAUVILLE CITY$"
+	.string "Route 110\n"
+	.string "{UP_ARROW} Mauville City$"
 
 Route110_Text_TrainerTipsPrlzSleep:
-	.string "TRAINER TIPS\p"
+	.string "Trainer Tips\p"
 	.string "The foe can be made helpless by\n"
 	.string "paralyzing it or causing it to sleep.\p"
 	.string "It is an important technique for\n"
 	.string "Pokémon battles.$"
 
 Route110_Text_TrainerTipsRegisterItems:
-	.string "TRAINER TIPS\p"
-	.string "The items in the BAG can be reorganized\n"
-	.string "by pressing SELECT.$"
+	.string "Trainer Tips\p"
+	.string "The items in the Bag can be reorganized\n"
+	.string "by pressing Select.$"
 
 Route110_Text_TrickHouseSign:
 	.string "“Three steps {RIGHT_ARROW} and two steps {UP_ARROW}\n"
-	.string "to reach the wondrous TRICK HOUSE.”$"
+	.string "to reach the wondrous Trick House.”$"
 
 Route110_Text_BestRecord:
-	.string "THE BEST RECORD TO DATE…\p"
+	.string "The best record to date…\p"
 	.string "No. of collisions: {STR_VAR_1}\p"
 	.string "Elapsed time: {STR_VAR_2}$"
 
 Route110_Text_ThereIsNoRecord:
-	.string "THE BEST RECORD TO DATE…\p"
+	.string "The best record to date…\p"
 	.string "No one seems to have taken the\n"
 	.string "challenge. There is no record…$"
 
@@ -922,7 +922,7 @@ Route110_Text_HeardYouInstallMatchCall:
 	.string "You two are running separately.\l"
 	.string "Well, that's fine.\p"
 	.string "Oh, yes, I heard that your PokéNav\n"
-	.string "had the MATCH CALL system installed.\p"
+	.string "had the Match Call system installed.\p"
 	.string "Well, then, I should register you in\n"
 	.string "my PokéNav as well.\p"
 	.string "That way, even when we're apart,\n"

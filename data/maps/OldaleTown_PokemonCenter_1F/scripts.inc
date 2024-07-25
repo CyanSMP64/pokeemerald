@@ -46,7 +46,7 @@ OldaleTown_PokemonCenter_1F_Text_TrainersCanUsePC:
 	.string "to use it, too.$"
 
 OldaleTown_PokemonCenter_1F_Text_PokemonCentersAreGreat:
-	.string "Pokémon CenterS are great!\p"
+	.string "Pokémon Centers are great!\p"
 	.string "You can use their services as much\n"
 	.string "as you like, and it's all for free.\l"
 	.string "You never have to worry!$"

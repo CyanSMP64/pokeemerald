@@ -144,27 +144,27 @@ const struct StaticPokemon gRoamingPokemon[][9] = {
 
 const struct TMText gTMTexts[] = {
     { 3, 15,  0,  1,  0x93, "[move] is the ultimate technique."},
-    { 4, 14,  0,  1,  0xA2, "TATE: That TM04 contains... LIZA: [move]!\\pTATE: It’s a move that’s perfect... LIZA: For any Pokémon!"},
+    { 4, 14,  0,  1,  0xA2, "Tate: That TM04 contains... Liza: [move]!\\pTate: It’s a move that’s perfect... Liza: For any Pokémon!"},
     { 5,  0, 29, 12,  0x0D, "All my Pokémon does is [move]... No one dares to come near me...\\pSigh... If you would, please take this TM away..."},
     { 5,  0, 29, 12,  0x2F, "TM05 contains [move]."},
     { 8,  3,  3,  1,  0x96, "That TM08 contains [move]."},
     { 9,  0, 19, 31,  0x0D, "I like filling my mouth with seeds, then spitting them out fast!\\pI like you, so you can have this!\\pUse it on a Pokémon, and it will learn [move].\\pWhat does that have to do with firing seeds? Well, nothing!"},
-    {24,  0,  2,  8,  0x4C, "WATTSON: Wahahahaha!\\pI knew it, \\v01\\v05! I knew I’d made the right choice asking you!\\pThis is my thanks - a TM containing [move]!\\pGo on, you’ve earned it!"},
+    {24,  0,  2,  8,  0x4C, "Wattson: Wahahahaha!\\pI knew it, \\v01\\v05! I knew I’d made the right choice asking you!\\pThis is my thanks - a TM containing [move]!\\pGo on, you’ve earned it!"},
     {31, 15,  5,  1,  0x2F, "TM31 contains [move]! It’s a move so horrible that I can’t describe it."},
     {34, 10,  0,  1,  0xA5, "That TM34 there contains [move]. You can count on it!"},
     {39, 11,  3,  1,  0x8F, "That TM39 contains [move].\\pIf you use a TM, it instantly teaches the move to a Pokémon.\\pRemember, a TM can be used only once, so think before you use it."},
     {40, 12,  1,  1,  0x81, "TM40 contains [move]."},
     {41,  9,  2,  2,  0x2F, "That’s, like, TM41, you know? Hey, it’s [move], you hearing me?\\pHey, now, you listen here, like, I’m not laying a torment on you!"},
-    {42,  8,  1,  1, 0x4FD, "DAD: TM42 contains [move].\\pIt might be able to turn a bad situation into an advantage."},
-    {47, 24, 10,  1,  0x19, "STEVEN: Okay, thank you.\\pYou went through all this trouble to deliver that. I need to thank you.\\pLet me see... I’ll give you this TM.\\pIt contains my favorite move, [move]."},
+    {42,  8,  1,  1, 0x4FD, "Dad: TM42 contains [move].\\pIt might be able to turn a bad situation into an advantage."},
+    {47, 24, 10,  1,  0x19, "Steven: Okay, thank you.\\pYou went through all this trouble to deliver that. I need to thank you.\\pLet me see... I’ll give you this TM.\\pIt contains my favorite move, [move]."},
     {50,  4,  1,  1,  0x94, "That TM50 contains [move]."}
 };
 
 const struct TMText gMoveTutorTexts[] = {
-    { 4, 15,  2,  4, 0x0D, "Sigh…\\pSOOTOPOLIS’s GYM LEADER is really lovably admirable.\\pBut that also means I have many rivals for his attention.\\pHe’s got appeal with a [move]. I couldn’t even catch his eye.\\pPlease, let me teach your Pokémon the move [move]!"},
+    { 4, 15,  2,  4, 0x0D, "Sigh…\\pSootopolis’s Gym Leader is really lovably admirable.\\pBut that also means I have many rivals for his attention.\\pHe’s got appeal with a [move]. I couldn’t even catch his eye.\\pPlease, let me teach your Pokémon the move [move]!"},
     { 4, 15,  2,  4, 0x30, "Okay, which Pokémon should I teach [move]?"},
-    {15,  0,  6, 15, 0x0D, "I can’t do this anymore!\\pIt’s utterly hopeless!\\pI’m a FIGHTING-type TRAINER, so I can’t win at the MOSSDEEP GYM no matter how hard I try!\\pArgh! Punch! Punch! Punch! Punch! Punch! Punch!\\pWhat, don’t look at me that way! I’m only hitting the ground!\\pOr do you want me to teach your Pokémon [move]?"},
-    {15,  0,  6, 15, 0x60, "I want you to win at the MOSSDEEP GYM using that [move]!"},
+    {15,  0,  6, 15, 0x0D, "I can’t do this anymore!\\pIt’s utterly hopeless!\\pI’m a Fighting-type Trainer, so I can’t win at the Mossdeep Gym no matter how hard I try!\\pArgh! Punch! Punch! Punch! Punch! Punch! Punch!\\pWhat, don’t look at me that way! I’m only hitting the ground!\\pOr do you want me to teach your Pokémon [move]?"},
+    {15,  0,  6, 15, 0x60, "I want you to win at the Mossdeep Gym using that [move]!"},
     {12,  7,  0,  5, 0x0D, "I don’t intend to be going nowhere fast in the sticks like this forever.\\pYou watch me, I’ll get out to the city and become a huge hit.\\pSeriously, I’m going to cause a huge explosion of popularity!\\pIf you overheard that, I’ll happily teach [move] to your Pokémon!"},
     {12,  7,  0,  5, 0x30, "Fine! [move] it is! Which Pokémon wants to learn it?"},
     {12,  7,  0,  5, 0x60, "For a long time, I’ve taught Pokémon how to use [move], but I’ve yet to ignite my own explosion…\\pMaybe it’s because deep down, I would rather stay here…"},
@@ -175,12 +175,12 @@ const struct TMText gMoveTutorTexts[] = {
     { 7,  4,  3,  3, 0x60, "[move] is a move of great depth.\\pCould you execute it to perfection as well as me…?"},
     { 7,  4,  3,  3, 0x56, "Oh, boo! I wanted to teach [move] to your Pokémon!"},
     {16,  0,  2, 10, 0x0D, "Did you know that you can go from here a long way in that direction without changing direction?\\pI might even be able to roll that way.\\pDo you think your Pokémon will want to roll, too?\\pI can teach one the move [move] if you’d like."},
-    {24, 12,  5,  2, 0x0D, "Humph! My wife relies on HIDDEN POWER to stay awake.\\pShe should just take a nap like I do.\\pI can teach your Pokémon how to [move]. Interested?"},
+    {24, 12,  5,  2, 0x0D, "Humph! My wife relies on Hidden Power to stay awake.\\pShe should just take a nap like I do.\\pI can teach your Pokémon how to [move]. Interested?"},
     {24, 12,  5,  2, 0x60, "I’ve never once gotten my wife’s coin trick right.\\pI would be happy if I got it right even as I teach [move]…"},
     {14, 13, 21,  4, 0x0D, "When I see the wide world from up here on the roof…\\pI think about how nice it would be if there were more than just one me so I could enjoy all sorts of lives.\\pOf course it’s not possible. Giggle…\\pI know! Would you be interested in having a Pokémon learn [move]?"},
     {14, 13, 21,  4, 0x30, "Giggle… Which Pokémon do you want me to teach [move]?"},
     {14, 13, 21,  4, 0x56, "Oh, no?\\pA Pokémon can do well in a battle using it, you know."},
-    {25,  9,  6,  9, 0x0D, "Heh! My Pokémon totally rules! It’s cooler than any Pokémon!\\pI was lipping off with a swagger in my step like that when the CHAIRMAN chewed me out.\\pThat took the swagger out of my step.\\pIf you’d like, I’ll teach the move [move] to a Pokémon of yours."},
+    {25,  9,  6,  9, 0x0D, "Heh! My Pokémon totally rules! It’s cooler than any Pokémon!\\pI was lipping off with a swagger in my step like that when the Chairman chewed me out.\\pThat took the swagger out of my step.\\pIf you’d like, I’ll teach the move [move] to a Pokémon of yours."},
     {25,  9,  6,  9, 0x30, "All right, which Pokémon wants to learn how to [move]?"},
     {25,  9,  6,  9, 0x60, "I’ll just praise my Pokémon from now on without the [move]."}
 };

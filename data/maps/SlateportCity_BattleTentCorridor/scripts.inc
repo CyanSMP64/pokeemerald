@@ -170,7 +170,7 @@ SlateportCity_ContestHall_Text_AdviceForContests:
 SlateportCity_ContestHall_Text_MyPapaIsContestJudge:
 	.string "My papa, he's a CONTEST JUDGE.\p"
 	.string "I wonder what I should be when I\n"
-	.string "grow up, a JUDGE or a GYM LEADER?$"
+	.string "grow up, a JUDGE or a Gym Leader?$"
 
 @ Unused
 SlateportCity_ContestHall_Text_ImLikeMajorlyCheesed:

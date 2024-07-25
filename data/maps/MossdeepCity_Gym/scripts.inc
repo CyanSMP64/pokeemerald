@@ -360,7 +360,7 @@ MossdeepCity_Gym_EventScript_RedFloorSwitch::
 MossdeepCity_Gym_Text_GymGuideAdvice:
 	.string "Yo, how's it going, CHAMPION-bound\n"
 	.string "{PLAYER}?\p"
-	.string "The GYM LEADERS here use\n"
+	.string "The Gym Leaders here use\n"
 	.string "PSYCHIC-type Pokémon.\p"
 	.string "If you go up against them with\n"
 	.string "FIGHTING- or POISON-type Pokémon,\l"
@@ -395,7 +395,7 @@ MossdeepCity_Gym_Text_VirgilDefeat:
 
 MossdeepCity_Gym_Text_VirgilPostBattle:
 	.string "If there are prodigies in the world,\n"
-	.string "then our GYM LEADERS are them!\p"
+	.string "then our Gym Leaders are them!\p"
 	.string "However, you may be even more talented\n"
 	.string "than them…$"
 
@@ -444,7 +444,7 @@ MossdeepCity_Gym_Text_SamanthaDefeat:
 
 MossdeepCity_Gym_Text_SamanthaPostBattle:
 	.string "You will wage a terrifically intense\n"
-	.string "battle with our GYM LEADERS…\p"
+	.string "battle with our Gym Leaders…\p"
 	.string "The result…\n"
 	.string "You won't hear it from me!$"
 
@@ -541,8 +541,8 @@ MossdeepCity_Gym_Text_NicholasPostBattle:
 MossdeepCity_Gym_Text_TateAndLizaIntro:
 	.string "TATE: Hehehe… Were you surprised?\p"
 	.string "LIZA: Fufufu… Were you surprised?\p"
-	.string "TATE: That there are two GYM LEADERS?\n"
-	.string "LIZA: That there are two GYM LEADERS?\p"
+	.string "TATE: That there are two Gym Leaders?\n"
+	.string "LIZA: That there are two Gym Leaders?\p"
 	.string "TATE: We're twins!\n"
 	.string "LIZA: We're twins!\p"
 	.string "TATE: We don't need to talk because…\n"
@@ -578,7 +578,7 @@ MossdeepCity_Gym_Text_ExplainCalmMind:
 	.string "LIZA: For PSYCHIC Pokémon!$"
 
 MossdeepCity_Gym_Text_RegisteredTateAndLiza:
-	.string "Registered GYM LEADERS TATE & LIZA\n"
+	.string "Registered Gym Leaders TATE & LIZA\n"
 	.string "in the PokéNav.$"
 
 MossdeepCity_Gym_Text_TateAndLizaPostBattle:
@@ -590,7 +590,7 @@ MossdeepCity_Gym_Text_TateAndLizaPostBattle:
 
 MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons:
 	.string "TATE: Hehehe… Were you surprised?\p"
-	.string "LIZA: That there are two GYM LEADERS?\p"
+	.string "LIZA: That there are two Gym Leaders?\p"
 	.string "TATE: Oops, you have only one…\n"
 	.string "LIZA: Pokémon that can battle.\p"
 	.string "TATE: We can't battle that way!\p"

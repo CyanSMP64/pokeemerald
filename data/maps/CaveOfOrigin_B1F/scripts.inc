@@ -65,7 +65,7 @@ CaveOfOrigin_B1F_Text_WallaceStory:
 	.string "Ah, so you are {PLAYER}?\n"
 	.string "I've heard tales of your exploits.\p"
 	.string "My name is WALLACE.\p"
-	.string "I was once the GYM LEADER of\n"
+	.string "I was once the Gym Leader of\n"
 	.string "SOOTOPOLIS, but something came up.\p"
 	.string "So now, I've entrusted my mentor JUAN\n"
 	.string "with the GYM's operation.\p"
