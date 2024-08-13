@@ -752,7 +752,7 @@
       "type": "trigger",
       "x": 0,
       "y": 83,
-      "elevation": 0,
+      "elevation": 4,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route120_EventScript_Sparkle_RareCandy2"
@@ -761,7 +761,7 @@
       "type": "trigger",
       "x": 1,
       "y": 83,
-      "elevation": 0,
+      "elevation": 4,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route120_EventScript_Sparkle_RareCandy2"
@@ -770,7 +770,7 @@
       "type": "trigger",
       "x": 2,
       "y": 84,
-      "elevation": 0,
+      "elevation": 4,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route120_EventScript_Sparkle_RareCandy2"
@@ -779,7 +779,7 @@
       "type": "trigger",
       "x": 3,
       "y": 85,
-      "elevation": 0,
+      "elevation": 4,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route120_EventScript_Sparkle_RareCandy2"
@@ -788,7 +788,7 @@
       "type": "trigger",
       "x": 3,
       "y": 86,
-      "elevation": 0,
+      "elevation": 4,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route120_EventScript_Sparkle_RareCandy2"
