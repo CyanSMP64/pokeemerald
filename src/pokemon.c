@@ -5945,18 +5945,6 @@ u8 GetLevelFromMonExp(struct Pokemon *mon)
     return level - 1;
 }
 
-u8 GetLevelFromBoxMonExp(struct BoxPokemon *boxMon)
-{
-    u16 species = GetBoxMonData(boxMon, MON_DATA_SPECIES, NULL);
-    u32 exp = GetBoxMonData(boxMon, MON_DATA_EXP, NULL);
-    s32 level = 1;
-
-    while (level <= MAX_LEVEL && gExperienceTables[gSpeciesInfo[species].growthRate][level] <= exp)
-        level++;
-
-    return level - 1;
-}
-
 u16 GiveMoveToMon(struct Pokemon *mon, u16 move)
 {
     return GiveMoveToBoxMon(&mon->box, move);
@@ -7102,6 +7090,25 @@ void GetSpeciesName(u8 *name, u16 species)
     name[i] = EOS;
 }
 
+u8 GetMonsStateToDoubles_2(void)
+{
+    s32 aliveCount = 0;
+    s32 i;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        u32 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG, NULL);
+        if (species != SPECIES_EGG && species != SPECIES_NONE
+         && GetMonData(&gPlayerParty[i], MON_DATA_HP, NULL) != 0)
+            aliveCount++;
+    }
+
+    if (aliveCount == 1)
+        return PLAYER_HAS_ONE_MON; // may have more than one, but only one is alive
+
+    return (aliveCount > 1) ? PLAYER_HAS_TWO_USABLE_MONS : PLAYER_HAS_ONE_USABLE_MON;
+}
+
 void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
 {
     const u8 *data = dataArg;
@@ -7144,6 +7151,18 @@ void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
         SetBoxMonData(&mon->box, field, data);
         break;
     }
+}
+
+u8 GetLevelFromBoxMonExp(struct BoxPokemon *boxMon)
+{
+    u16 species = GetBoxMonData(boxMon, MON_DATA_SPECIES, NULL);
+    u32 exp = GetBoxMonData(boxMon, MON_DATA_EXP, NULL);
+    s32 level = 1;
+
+    while (level <= MAX_LEVEL && gExperienceTables[gSpeciesInfo[species].growthRate][level] <= exp)
+        level++;
+
+    return level - 1;
 }
 
 u8 GetGenderFromSpeciesAndPersonality(u16 species, u32 personality)
@@ -7536,25 +7555,6 @@ u8 GetMonsStateToDoubles(void)
          && GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG, NULL) != SPECIES_NONE)
             aliveCount++;
     }
-
-    return (aliveCount > 1) ? PLAYER_HAS_TWO_USABLE_MONS : PLAYER_HAS_ONE_USABLE_MON;
-}
-
-u8 GetMonsStateToDoubles_2(void)
-{
-    s32 aliveCount = 0;
-    s32 i;
-
-    for (i = 0; i < PARTY_SIZE; i++)
-    {
-        u32 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG, NULL);
-        if (species != SPECIES_EGG && species != SPECIES_NONE
-         && GetMonData(&gPlayerParty[i], MON_DATA_HP, NULL) != 0)
-            aliveCount++;
-    }
-
-    if (aliveCount == 1)
-        return PLAYER_HAS_ONE_MON; // may have more than one, but only one is alive
 
     return (aliveCount > 1) ? PLAYER_HAS_TWO_USABLE_MONS : PLAYER_HAS_ONE_USABLE_MON;
 }
