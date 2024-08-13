@@ -299,7 +299,7 @@ RustboroCity_PokemonSchool_Text_StudentsNotes:
 	.string "with them.\p"
 	.string "A Trainer's mission is to defeat\n"
 	.string "the strong Trainers who await\l"
-	.string "challengers in Pokémon GYMS.$"
+	.string "challengers in Pokémon Gyms.$"
 
 RustboroCity_PokemonSchool_Text_ScottMetAlreadyCut:
 	.string "Hello? Didn't we meet before?\n"

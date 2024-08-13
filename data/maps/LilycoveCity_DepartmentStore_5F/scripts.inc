@@ -159,7 +159,7 @@ LilycoveCity_DepartmentStore_5F_Text_PlaceFullOfCuteDolls:
 
 LilycoveCity_DepartmentStore_5F_Text_GettingDollInsteadOfPokemon:
 	.string "I'm not big enough to raise Pokémon,\n"
-	.string "so I'm getting a cute DOLL instead.$"
+	.string "so I'm getting a cute Doll instead.$"
 
 LilycoveCity_DepartmentStore_5F_Text_SellManyCuteMatsHere:
 	.string "They sell many cute MATS here.\p"

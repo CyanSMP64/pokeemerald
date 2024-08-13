@@ -89,7 +89,7 @@ VerdanturfTown_Text_AirCleanHere:
 VerdanturfTown_Text_MakeBattleTentDebut:
 	.string "My Pokémon and I, we've been riding\n"
 	.string "a hot winning streak.\p"
-	.string "So I decided to make my BATTLE TENT\n"
+	.string "So I decided to make my Battle Tent\n"
 	.string "debut in this town.$"
 
 VerdanturfTown_Text_GuyTryingToBustThroughCave:
@@ -99,29 +99,29 @@ VerdanturfTown_Text_GuyTryingToBustThroughCave:
 	.string "bust up boulders so he can bust out\l"
 	.string "through to the other side.\p"
 	.string "It'd be great if we could go through…\n"
-	.string "It'll make it easy to visit RUSTBORO.$"
+	.string "It'll make it easy to visit Rustboro.$"
 
 VerdanturfTown_Text_EasyToGetToRustboroNow:
 	.string "That cave next to the Pokémon Mart\n"
 	.string "is now a tunnel to the other side.\p"
 	.string "It's great--it's easy to go shop for\n"
-	.string "new DEVON products in RUSTBORO now.$"
+	.string "new Devon products in Rustboro now.$"
 
 VerdanturfTown_Text_TownSign:
-	.string "VERDANTURF TOWN\p"
+	.string "Verdanturf Town\p"
 	.string "“The windswept highlands with the\n"
 	.string "sweet fragrance of grass.”$"
 
 VerdanturfTown_Text_WandasHouse:
-	.string "WANDA'S HOUSE$"
+	.string "Wanda's house$"
 
 VerdanturfTown_Text_BattleTentSign:
-	.string "BATTLE TENT VERDANTURF SITE\n"
+	.string "Battle Tent Verdanturf Site\n"
 	.string "“Feast Your Eyes on Battles!”$"
 
 VerdanturfTown_Text_RusturfTunnelSign:
-	.string "RUSTURF TUNNEL\n"
-	.string "“Linking RUSTBORO and VERDANTURF\p"
+	.string "Rusturf Tunnel\n"
+	.string "“Linking Rustboro and Verdanturf\p"
 	.string "“The tunnel project has been\n"
 	.string "canceled.”$"
 

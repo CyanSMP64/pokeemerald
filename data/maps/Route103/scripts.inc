@@ -289,7 +289,7 @@ Route103_EventScript_Isabelle::
 
 Route103_Text_MayRoute103Pokemon:
 	.string "MAY: Let's see… The Pokémon found\n"
-	.string "on ROUTE 103 include…$"
+	.string "on Route 103 include…$"
 
 Route103_Text_MayLetsBattle:
 	.string "Fight me, nerd.$"
@@ -305,11 +305,11 @@ Route103_Text_MayTimeToHeadBack:
 	.string "You might be able to befriend any\n"
 	.string "kind of Pokémon easily.\p"
 	.string "Well, it's time to head back to\n"
-	.string "the LAB.$"
+	.string "the Lab.$"
 
 Route103_Text_BrendanRoute103Pokemon:
 	.string "BRENDAN: Okay, so it's this one and\n"
-	.string "that one that live on ROUTE 103…$"
+	.string "that one that live on Route 103…$"
 
 Route103_Text_BrendanLetsBattle:
 	.string "Fight me, nerd.$"
@@ -325,18 +325,18 @@ Route103_Text_BrendanTimeToHeadBack:
 	.string "even though you just got it.\p"
 	.string "{PLAYER}, I get the feeling that you\n"
 	.string "could befriend any Pokémon with ease.\p"
-	.string "We should head back to the LAB.$"
+	.string "We should head back to the Lab.$"
 
 Route103_Text_ShouldHaveBroughtPotion:
 	.string "My Pokémon is staggeringly tired…\n"
-	.string "I should have brought a POTION…$"
+	.string "I should have brought a Potion…$"
 
 Route103_Text_ShortcutToOldale:
 	.string "If you cross the sea from here,\n"
-	.string "it'll be a shortcut to OLDALE TOWN.\p"
+	.string "it'll be a shortcut to Oldale Town.\p"
 	.string "Fufufu, that's useful, isn't it?$"
 
 Route103_Text_RouteSign:
-	.string "ROUTE 103\n"
-	.string "{DOWN_ARROW} OLDALE TOWN$"
+	.string "Route 103\n"
+	.string "{DOWN_ARROW} Oldale Town$"
 

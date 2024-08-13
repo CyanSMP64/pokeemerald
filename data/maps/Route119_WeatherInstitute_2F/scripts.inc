@@ -275,12 +275,12 @@ Route119_WeatherInstitute_2F_Text_TeamMagmaJustPassedBy:
 	.string "A Team Magma mob just passed\n"
 	.string "the WEATHER INSTITUTE.\p"
 	.string "They appear to be headed for\n"
-	.string "MT. PYRE!$"
+	.string "Mt. Pyre!$"
 
 Route119_WeatherInstitute_2F_Text_WeHaveToHurryToMtPyre:
 	.string "What?!\p"
 	.string "We can't waste any more time here!\n"
-	.string "We have to hurry to MT. PYRE, too!\p"
+	.string "We have to hurry to Mt. Pyre, too!\p"
 	.string "Ahahahaha!\n"
 	.string "Team Magma, just you wait!$"
 
@@ -311,7 +311,7 @@ Route119_WeatherInstitute_2F_Text_ChangingWeatherRidiculous:
 
 Route119_WeatherInstitute_2F_Text_GroudonWeather:
 	.string "I track weather patterns over\n"
-	.string "the HOENN region.\p"
+	.string "the Hoenn region.\p"
 	.string "Presently, a drought has been recorded\n"
 	.string "in {STR_VAR_1}.\p"
 	.string "Could that mean, somewhere near\n"
@@ -319,7 +319,7 @@ Route119_WeatherInstitute_2F_Text_GroudonWeather:
 
 Route119_WeatherInstitute_2F_Text_KyogreWeather:
 	.string "I track weather patterns over\n"
-	.string "the HOENN region.\p"
+	.string "the Hoenn region.\p"
 	.string "Presently, heavy rainfall has been\n"
 	.string "recorded over {STR_VAR_1}.\p"
 	.string "Could that mean, somewhere near\n"

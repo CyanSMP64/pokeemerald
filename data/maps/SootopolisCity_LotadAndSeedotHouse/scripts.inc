@@ -105,7 +105,7 @@ SootopolisCity_LotadAndSeedotHouse_EventScript_LotadSizeRecord::
 
 SootopolisCity_LotadAndSeedotHouse_Text_PleaseShowMeBigSeedot:
 	.string "Do you know the Pokémon SEEDOT?\n"
-	.string "It's hardly ever seen in SOOTOPOLIS.\p"
+	.string "It's hardly ever seen in Sootopolis.\p"
 	.string "Anyway, I love big SEEDOT.\n"
 	.string "The bigger the better.\p"
 	.string "But my younger brother, he says that\n"
@@ -125,11 +125,11 @@ SootopolisCity_LotadAndSeedotHouse_Text_GoshMightBeBiggerThanLotad:
 
 @ Unused
 SootopolisCity_LotadAndSeedotHouse_Text_ReceivedPotion1:
-	.string "{PLAYER} received a POTION.$"
+	.string "{PLAYER} received a Potion.$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_BagCrammedFull1:
 	.string "Hunh?\n"
-	.string "Your BAG is crammed full.$"
+	.string "Your Bag is crammed full.$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_SeenBiggerSeedot:
 	.string "{STR_VAR_2} inches, is it?\p"
@@ -154,7 +154,7 @@ SootopolisCity_LotadAndSeedotHouse_Text_BiggestSeedotInHistory:
 
 SootopolisCity_LotadAndSeedotHouse_Text_PleaseShowMeBigLotad:
 	.string "Do you know the Pokémon LOTAD?\n"
-	.string "It's rarely seen in SOOTOPOLIS.\p"
+	.string "It's rarely seen in Sootopolis.\p"
 	.string "I love, I mean love, big LOTAD!\p"
 	.string "My big brother says that SEEDOT is\n"
 	.string "bigger.\p"
@@ -173,11 +173,11 @@ SootopolisCity_LotadAndSeedotHouse_Text_WowMightBeBiggerThanSeedot:
 
 @ Unused
 SootopolisCity_LotadAndSeedotHouse_Text_ReceivedPotion2:
-	.string "{PLAYER} received a POTION.$"
+	.string "{PLAYER} received a Potion.$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_BagCrammedFull2:
 	.string "Hunh?\n"
-	.string "Your BAG is crammed full.$"
+	.string "Your Bag is crammed full.$"
 
 SootopolisCity_LotadAndSeedotHouse_Text_SeenBiggerLotad:
 	.string "{STR_VAR_2} inches?\p"

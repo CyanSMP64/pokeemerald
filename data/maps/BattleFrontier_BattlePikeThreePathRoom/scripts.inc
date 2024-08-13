@@ -346,7 +346,7 @@ BattleFrontier_BattlePikeThreePathRoom_Text_AromaOfPokemon:
 	.string "of Pokémon wafting around it…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_PresenceOfPeople:
-	.string "Is it… A TRAINER?\n"
+	.string "Is it… A Trainer?\n"
 	.string "I sense the presence of people…$"
 
 BattleFrontier_BattlePikeThreePathRoom_Text_HeardWhispering:

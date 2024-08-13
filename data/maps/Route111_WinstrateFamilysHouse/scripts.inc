@@ -62,11 +62,11 @@ Route111_WinstrateFamilysHouse_EventScript_FaceOriginalDirection::
 	end
 
 Route111_WinstrateFamilysHouse_Text_MySonIsStrongerThanYou:
-	.string "You're the first TRAINER I've seen who\n"
+	.string "You're the first Trainer I've seen who\n"
 	.string "deploys Pokémon so masterfully.\p"
 	.string "But, I should tell you--my son is\n"
 	.string "stronger than you.\p"
-	.string "He even took the Pokémon LEAGUE\n"
+	.string "He even took the Pokémon League\n"
 	.string "challenge, I'll have you know.$"
 
 Route111_WinstrateFamilysHouse_Text_LikeYouToHaveMachoBrace:
@@ -92,16 +92,16 @@ Route111_WinstrateFamilysHouse_Text_GrandsonStrong:
 	.string "There's no question that you're strong.\p"
 	.string "But if you were to battle my grandson,\n"
 	.string "you'd end up crying in frustration.\p"
-	.string "He's much stronger than any TRAINER\n"
+	.string "He's much stronger than any Trainer\n"
 	.string "our family knows.\p"
 	.string "He must be challenging the Pokémon\n"
-	.string "LEAGUE CHAMPION by now.\p"
+	.string "League Champion by now.\p"
 	.string "Knowing my grandson, he could be the\n"
-	.string "CHAMPION already!$"
+	.string "Champion already!$"
 
 Route111_WinstrateFamilysHouse_Text_GrandsonStrongShort:
 	.string "My grandson must be challenging the\n"
-	.string "Pokémon LEAGUE CHAMPION by now.\p"
+	.string "Pokémon League Champion by now.\p"
 	.string "Knowing my grandson, he could be the\n"
-	.string "CHAMPION already!$"
+	.string "Champion already!$"
 

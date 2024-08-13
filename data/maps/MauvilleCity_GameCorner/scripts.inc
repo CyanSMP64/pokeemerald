@@ -627,7 +627,7 @@ MauvilleCity_GameCorner_EventScript_NoCoinCase::
 	end
 
 MauvilleCity_GameCorner_Text_ThisIsMauvilleGameCorner:
-	.string "This is MAUVILLE GAME CORNER.$"
+	.string "This is Mauville Game Corner.$"
 
 MauvilleCity_GameCorner_Text_NeedCoinCaseForCoins:
 	.string "Okay, you wanted some COINS for\n"
@@ -727,9 +727,9 @@ MauvilleCity_GameCorner_Text_LuckOnlyLastSoLongTakeCoins:
 	.string "Here, take some COINS!$"
 
 MauvilleCity_GameCorner_Text_MauvilleSomethingForEveryone:
-	.string "MAUVILLE has something for\n"
+	.string "Mauville has something for\n"
 	.string "everyone.\p"
-	.string "For me, it's the GAME CORNER.$"
+	.string "For me, it's the Game Corner.$"
 
 MauvilleCity_GameCorner_Text_RouletteTablesDifferentRates:
 	.string "The ROULETTE tables have different\n"
@@ -743,7 +743,7 @@ MauvilleCity_GameCorner_Text_EasyToLoseTrackOfTime:
 
 MauvilleCity_GameCorner_Text_CoinsAreNeededToPlay:
 	.string "COINS are needed to play here\n"
-	.string "in the GAME CORNER.$"
+	.string "in the Game Corner.$"
 
 MauvilleCity_GameCorner_Text_RouletteOnlyLuck:
 	.string "This ROULETTE thing…\n"
@@ -757,16 +757,16 @@ MauvilleCity_GameCorner_Text_UpTo3CoinsCanBeUsed:
 MauvilleCity_GameCorner_Text_DifficultToStopOn7:
 	.string "It's very difficult to make it stop\n"
 	.string "right on “7.”\p"
-	.string "If it stops on “7” during the REEL TIME\n"
+	.string "If it stops on “7” during the Reel Time\n"
 	.string "bonus game, you'll receive extra COINS.$"
 
 MauvilleCity_GameCorner_Text_HeresSomeSlotsInfo:
 	.string "Here's some information for you\n"
 	.string "about the SLOTS.\p"
 	.string "The more lightning bolts you stock,\n"
-	.string "the more REEL TIME chances you get.\p"
+	.string "the more Reel Time chances you get.\p"
 	.string "In a game with the maximum five\n"
-	.string "REEL TIME chances…\p"
+	.string "Reel Time chances…\p"
 	.string "It is possible to receive four regular\n"
 	.string "bonuses, then a big bonus.\p"
 	.string "That would total 660 COINS, but it's\n"

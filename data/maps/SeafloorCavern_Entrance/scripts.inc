@@ -70,7 +70,7 @@ SeafloorCavern_Entrance_Text_HearMagmaNearMossdeep:
 	.string "You're a perfect fit for the likes of\n"
 	.string "Team Magma!\p"
 	.string "Speaking of Team Magma, I hear they\n"
-	.string "were spotted near MOSSDEEP.\p"
+	.string "were spotted near Mossdeep.\p"
 	.string "That bunch of goons, they sure don't\n"
 	.string "look good near the sea!$"
 
@@ -82,7 +82,7 @@ SeafloorCavern_Entrance_Text_HearMagmaNearMossdeepShort:
 	.string "You're a perfect fit for the likes of\n"
 	.string "Team Magma!\p"
 	.string "Speaking of Team Magma, I hear they\n"
-	.string "were spotted near MOSSDEEP.\p"
+	.string "were spotted near Mossdeep.\p"
 	.string "That bunch of goons, they sure don't\n"
 	.string "look good near the sea!$"
 

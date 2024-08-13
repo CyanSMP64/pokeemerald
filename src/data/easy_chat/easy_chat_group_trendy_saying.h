@@ -28,7 +28,7 @@ const u8 gEasyChatWord_Fever[] = _("FEVER");
 const u8 gEasyChatWord_Wannabe[] = _("WANNABE");
 const u8 gEasyChatWord_Baby[] = _("BABY");
 const u8 gEasyChatWord_Heart[] = _("HEART");
-const u8 gEasyChatWord_Old[] = _("OLD");
+const u8 gEasyChatWord_Old[] = _("Old");
 const u8 gEasyChatWord_Young[] = _("YOUNG");
 const u8 gEasyChatWord_Ugly[] = _("UGLY");
 

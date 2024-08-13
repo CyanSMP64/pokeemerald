@@ -317,7 +317,7 @@ Route113_GlassWorkshop_Text_NotEnoughAshNeedX:
 	.string "I can't make glass with this, huff-puff.\p"
 	.string "Let's see… {STR_VAR_1} is the number of steps\n"
 	.string "you'll need to walk for me to make you\l"
-	.string "a BLUE FLUTE, huff-puff.$"
+	.string "a Blue FLUTE, huff-puff.$"
 
 Route113_GlassWorkshop_Text_WhichGlassItemWoudYouLike:
 	.string "Oh!\n"
@@ -357,7 +357,7 @@ Route113_GlassWorkshop_Text_IveFinishedGlassItem:
 
 Route113_GlassWorkshop_Text_NoRoomInBag:
 	.string "Oh?\n"
-	.string "You've no room in your BAG, huff-puff.\p"
+	.string "You've no room in your Bag, huff-puff.\p"
 	.string "I'll hold on to it, so come back later,\n"
 	.string "huff-puff.$"
 

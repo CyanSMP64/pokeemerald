@@ -43,7 +43,7 @@ MtPyre_2F_EventScript_Zander::
 	end
 
 MtPyre_2F_Text_MemoriesOfSkitty:
-	.string "Memories of my darling SKITTY…\n"
+	.string "Memories of my darling Skitty…\n"
 	.string "My eyes overflow thinking about it.$"
 
 MtPyre_2F_Text_TumbledFromFloorAbove:
@@ -115,7 +115,7 @@ MtPyre_2F_Text_LeahDefeat:
 	.string "You're durable.$"
 
 MtPyre_2F_Text_LeahPostBattle:
-	.string "Our family has been TRAINERS here\n"
+	.string "Our family has been Trainers here\n"
 	.string "since my great-grandmother's time…\p"
 	.string "It is my duty to protect this\n"
 	.string "mountain…$"

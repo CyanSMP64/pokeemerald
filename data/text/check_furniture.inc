@@ -6,9 +6,9 @@ Text_BookShelf:
 
 Text_PokemonCenterBookShelf:
 	.string "Pokémon magazines!\n"
-	.string "Pokémon PAL…\p"
-	.string "Pokémon HANDBOOK…\n"
-	.string "ADORABLE Pokémon…$"
+	.string "Pokémon Pal…\p"
+	.string "Pokémon Handbook…\n"
+	.string "Adorable Pokémon…$"
 
 Text_Vase:
 	.string "This vase looks expensive…\n"

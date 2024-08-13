@@ -30,7 +30,7 @@ MagmaHideout_2F_2R_Text_Grunt15Defeat:
 
 MagmaHideout_2F_2R_Text_Grunt15PostBattle:
 	.string "We dug up something beyond belief!\n"
-	.string "And, we got the BLUE ORB!\p"
+	.string "And, we got the Blue Orb!\p"
 	.string "All that's left is for our leader to…\n"
 	.string "Fufufu… Fwahahaha!$"
 
@@ -65,7 +65,7 @@ MagmaHideout_2F_2R_Text_Grunt7PostBattle:
 
 MagmaHideout_2F_2R_Text_Grunt8Intro:
 	.string "One of our guys was freaking out that\n"
-	.string "he lost his MAGMA EMBLEM…\p"
+	.string "he lost his Magma Emblem…\p"
 	.string "Wait a minute!\n"
 	.string "Was it you who found it?$"
 

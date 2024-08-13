@@ -336,7 +336,7 @@ RivalsHouse_1F_Text_LikeChildLikeFather:
 	.string "Like child, like father.\p"
 	.string "My husband is as wild about Pokémon\n"
 	.string "as our child.\p"
-	.string "If he's not at his LAB, he's likely\n"
+	.string "If he's not at his Lab, he's likely\n"
 	.string "scrabbling about in grassy places.$"
 
 RivalsHouse_1F_Text_TooBusyToNoticeVisit:
@@ -346,7 +346,7 @@ RivalsHouse_1F_Text_TooBusyToNoticeVisit:
 	.string "to visit, {PLAYER}.$"
 
 RivalsHouse_1F_Text_WentOutToRoute103:
-	.string "Oh, {RIVAL} went out to ROUTE 103\n"
+	.string "Oh, {RIVAL} went out to Route 103\n"
 	.string "just a little while ago.\p"
 	.string "Like father, like child.\n"
 	.string "{RIVAL} can't stay quietly at home.$"

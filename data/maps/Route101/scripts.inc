@@ -257,7 +257,7 @@ Route101_Text_HelpMe:
 Route101_Text_PleaseHelp:
 	.string "Hello! You over there!\n"
 	.string "Please! Help!\p"
-	.string "In my BAG!\n"
+	.string "In my Bag!\n"
 	.string "There's a Poké Ball!$"
 
 Route101_Text_DontLeaveMe:
@@ -270,8 +270,8 @@ Route101_Text_YouSavedMe:
 Route101_Text_TakeTiredPokemonToPokeCenter:
 	.string "If Pokémon get tired, take them to\n"
 	.string "a Pokémon Center.\p"
-	.string "There's a Pokémon Center in OLDALE\n"
-	.string "TOWN right close by.$"
+	.string "There's a Pokémon Center in Oldale\n"
+	.string "Town right close by.$"
 
 Route101_Text_WildPokemonInTallGrass:
 	.string "Wild Pokémon will jump out at you in\n"
@@ -280,6 +280,6 @@ Route101_Text_WildPokemonInTallGrass:
 	.string "to go into the tall grass and search.$"
 
 Route101_Text_RouteSign:
-	.string "ROUTE 101\n"
-	.string "{UP_ARROW} OLDALE TOWN$"
+	.string "Route 101\n"
+	.string "{UP_ARROW} Oldale Town$"
 

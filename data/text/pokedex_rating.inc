@@ -52,7 +52,7 @@ gBirchDexRatingText_LessThan90::
 	.string "Your talent is remarkable!$"
 
 gBirchDexRatingText_LessThan100::
-	.string "Have you visited the SAFARI ZONE?\p"
+	.string "Have you visited the Safari Zone?\p"
 	.string "I hear there are some Pokémon that\n"
 	.string "can only be caught there.$"
 
@@ -63,7 +63,7 @@ gBirchDexRatingText_LessThan110::
 
 gBirchDexRatingText_LessThan120::
 	.string "There might be Pokémon that can be\n"
-	.string "found using ROCK SMASH.$"
+	.string "found using Rock Smash.$"
 
 gBirchDexRatingText_LessThan130::
 	.string "You should get some more Pokémon\n"
@@ -72,11 +72,11 @@ gBirchDexRatingText_LessThan130::
 gBirchDexRatingText_LessThan140::
 	.string "I've heard of Pokémon that evolve\n"
 	.string "when they come to fully love their\l"
-	.string "TRAINERS.$"
+	.string "Trainers.$"
 
 gBirchDexRatingText_LessThan150::
 	.string "I had no idea that there were so\n"
-	.string "many Pokémon species in the HOENN\l"
+	.string "many Pokémon species in the Hoenn\l"
 	.string "region.$"
 
 gBirchDexRatingText_LessThan160::
@@ -87,7 +87,7 @@ gBirchDexRatingText_LessThan160::
 
 gBirchDexRatingText_LessThan170::
 	.string "One can get a very good idea about\n"
-	.string "the Pokémon of the HOENN region\l"
+	.string "the Pokémon of the Hoenn region\l"
 	.string "by looking through your Pokédex.$"
 
 gBirchDexRatingText_LessThan180::

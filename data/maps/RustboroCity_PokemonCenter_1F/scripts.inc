@@ -31,8 +31,8 @@ RustboroCity_PokemonCenter_1F_EventScript_Girl::
 	end
 
 RustboroCity_PokemonCenter_1F_Text_PokemonHavePersonalities:
-	.string "My Pokémon has a NAIVE nature, and my\n"
-	.string "friend's has a JOLLY nature.\p"
+	.string "My Pokémon has a Naive nature, and my\n"
+	.string "friend's has a Jolly nature.\p"
 	.string "It's fascinating how Pokémon have\n"
 	.string "personalities!$"
 
@@ -45,5 +45,5 @@ RustboroCity_PokemonCenter_1F_Text_MaleAndFemalePokemon:
 RustboroCity_PokemonCenter_1F_Text_HMCutNextDoor:
 	.string "The man next door gave me an HM!\p"
 	.string "I used it to teach my Pokémon how to\n"
-	.string "CUT down skinny trees.$"
+	.string "Cut down skinny trees.$"
 

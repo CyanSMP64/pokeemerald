@@ -82,7 +82,7 @@ AquaHideout_1F_Text_BossIsOnRoute122:
 	.string "What? What? What do you want with \n"
 	.string "Team Aqua?\p"
 	.string "Our BOSS isn't here! He's on his way to\n"
-	.string "MT. PYRE on ROUTE 122!\p"
+	.string "Mt. Pyre on Route 122!\p"
 	.string "… …\n"
 	.string "Why did he go?\p"
 	.string "Wahaha! Do you really think I'd tell\n"
@@ -92,14 +92,14 @@ AquaHideout_1F_Text_TeamMagmaAtMtChimney:
 	.string "What? What?\n"
 	.string "Are you a Team Magma grunt?\p"
 	.string "I hear that Team Magma is after\n"
-	.string "an awesome Pokémon at MT. CHIMNEY.\p"
+	.string "an awesome Pokémon at Mt. Chimney.\p"
 	.string "But what is that Pokémon like?$"
 
 AquaHideout_1F_Text_BossIsInSlateportCity:
 	.string "What? What? What do you want with\n"
 	.string "Team Aqua?\p"
 	.string "Our BOSS isn't here!\n"
-	.string "He's on his way to SLATEPORT CITY!\p"
+	.string "He's on his way to Slateport City!\p"
 	.string "… …\n"
 	.string "Why did he go?\p"
 	.string "Wahaha! Do you really think I'd tell\n"
@@ -114,6 +114,6 @@ AquaHideout_1F_Text_Grunt1Defeat:
 	.string "I lost it!$"
 
 AquaHideout_1F_Text_Grunt1PostBattle:
-	.string "I took the loss for the TEAM,\n"
+	.string "I took the loss for the Team,\n"
 	.string "but I did my job…$"
 

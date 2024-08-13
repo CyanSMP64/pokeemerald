@@ -67,8 +67,8 @@ SSTidalRooms_Text_TakeRestOnBed:
 	.string "Let's take a rest.$"
 
 SSTidalRooms_Text_ColtonIntro:
-	.string "I often sail to LILYCOVE CITY.\p"
-	.string "I enjoy attending CONTESTS,\n"
+	.string "I often sail to Lilycove City.\p"
+	.string "I enjoy attending Contests,\n"
 	.string "you see.$"
 
 SSTidalRooms_Text_ColtonDefeat:
@@ -77,7 +77,7 @@ SSTidalRooms_Text_ColtonDefeat:
 SSTidalRooms_Text_ColtonPostBattle:
 	.string "I get so excited imagining what kinds\n"
 	.string "of Pokémon I'll get to see in the next\l"
-	.string "CONTEST. The anticipation of it thrills!$"
+	.string "Contest. The anticipation of it thrills!$"
 
 SSTidalRooms_Text_MicahIntro:
 	.string "Are your friends strong?$"
@@ -111,7 +111,7 @@ SSTidalRooms_Text_JedDefeat:
 SSTidalRooms_Text_JedPostBattle:
 	.string "JED: It's the first time that our lovey-\n"
 	.string "dovey power couldn't prevail!\l"
-	.string "You must be an awesome TRAINER!$"
+	.string "You must be an awesome Trainer!$"
 
 SSTidalRooms_Text_JedNotEnoughMons:
 	.string "JED: You only have one Pokémon?\n"
@@ -127,7 +127,7 @@ SSTidalRooms_Text_LeaDefeat:
 SSTidalRooms_Text_LeaPostBattle:
 	.string "LEA: I can't believe it!\n"
 	.string "Our lovey-dovey power failed…\l"
-	.string "You must be an awesome TRAINER!$"
+	.string "You must be an awesome Trainer!$"
 
 SSTidalRooms_Text_LeaNotEnoughMons:
 	.string "LEA: I wanted to battle…\n"
@@ -147,7 +147,7 @@ SSTidalRooms_Text_GarretPostBattle:
 	.string "A yacht for me and Pokémon!$"
 
 SSTidalRooms_Text_NaomiIntro:
-	.string "Oh, you're such an adorable TRAINER.\n"
+	.string "Oh, you're such an adorable Trainer.\n"
 	.string "Would you like to have tea?\l"
 	.string "Or would you rather battle?$"
 
@@ -159,7 +159,7 @@ SSTidalRooms_Text_NaomiPostBattle:
 	.string "A world cruise on a luxury liner has its\n"
 	.string "charms, I must say…\p"
 	.string "But, I will admit there is an appealing\n"
-	.string "side to touring HOENN by ferry.$"
+	.string "side to touring Hoenn by ferry.$"
 
 SSTidalRooms_Text_NotSuspiciousTakeThis:
 	.string "Uh… Hi! I… I'm not acting suspicious!\n"

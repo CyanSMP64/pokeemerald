@@ -280,7 +280,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_EventScript_Partner8::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PleaseFindPartner:
 	.string "Please find a partner from out of\n"
-	.string "the TRAINERS gathered here.$"
+	.string "the Trainers gathered here.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_QuitLookingForPartner:
 	.string "{PLAYER}, you have not found a partner\n"
@@ -290,12 +290,12 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_QuitLookingForPartner:
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PleaseFindPartner2:
 	.string "Then, please find a partner from\n"
-	.string "the TRAINERS gathered here.$"
+	.string "the Trainers gathered here.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ThankYouForChoosingPartner::
 	.string "Thank you for choosing a partner.\p"
 	.string "I will now show you to your\n"
-	.string "MULTI BATTLE ROOM.$"
+	.string "Multi Battle Room.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_UnusedApprentice1Intro::
 	.string "I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice.\n"
@@ -589,7 +589,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice10Reject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice11Intro::
 	.string "Hey! There's big trouble! This is\n"
-	.string "the BATTLE TOWER's last day!\p"
+	.string "the Battle Tower's last day!\p"
 	.string "… … … … … …\n"
 	.string "I'm only joking!\p"
 	.string "People call me {STR_VAR_3} and I do, too!\n"
@@ -615,7 +615,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice11Accept::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice11Reject::
 	.string "Oh, that's so cold! I'll have to wreck\n"
-	.string "the BATTLE TOWER for that!\p"
+	.string "the Battle Tower for that!\p"
 	.string "Of course I won't!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_Apprentice12Intro::
@@ -816,7 +816,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_HikerReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyIntro::
 	.string "Hello!\n"
-	.string "I'm {STR_VAR_1}, and I'm a BEAUTY!$"
+	.string "I'm {STR_VAR_1}, and I'm a Beauty!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BeautyMon1::
 	.string "Do you know what I've been raising?\n"
@@ -860,7 +860,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_FishermanReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LadyIntro::
 	.string "Glad to make your acquaintance.\n"
-	.string "I am {STR_VAR_1}, a LADY.$"
+	.string "I am {STR_VAR_1}, a Lady.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_LadyMon1::
 	.string "I am accompanied by a team of\n"
@@ -902,7 +902,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_CyclingTriathleteFReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherIntro::
 	.string "Hiya!\n"
-	.string "I'm BUG CATCHER {STR_VAR_1}!$"
+	.string "I'm Bug CATCHER {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherMon1::
 	.string "Check out what I have!\n"
@@ -924,7 +924,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugCatcherReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidMIntro::
 	.string "Good day!\n"
-	.string "I'm SCHOOL KID {STR_VAR_1}!$"
+	.string "I'm School Kid {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidMMon1::
 	.string "What I've been raising are one\n"
@@ -947,7 +947,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidMReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyIntro::
 	.string "Yo! Let me tell you who I am!\n"
-	.string "I'm RICH BOY {STR_VAR_1}!$"
+	.string "I'm Rich Boy {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RichBoyMon1::
 	.string "Guess what I got!\n"
@@ -1011,7 +1011,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_TuberFReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HexManiacIntro::
 	.string "Greetings…\n"
-	.string "I am HEX MANIAC {STR_VAR_1}…$"
+	.string "I am Hex Maniac {STR_VAR_1}…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_HexManiacMon1::
 	.string "I bear with me one {STR_VAR_1}-using\n"
@@ -1095,7 +1095,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_RunningTriathleteMReject::
 	.string "tag-team partner…$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BattleGirlIntro::
-	.string "I'm BATTLE GIRL {STR_VAR_1}!$"
+	.string "I'm Battle Girl {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BattleGirlMon1::
 	.string "I've been toughening up one\n"
@@ -1265,7 +1265,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_ExpertFReject::
 	.string "time we meet.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerIntro::
-	.string "I'm DRAGON TAMER {STR_VAR_1}!$"
+	.string "I'm Dragon Tamer {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_DragonTamerMon1::
 	.string "The team I've been toughening up is\n"
@@ -1305,7 +1305,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_BirdKeeperReject::
 	.string "What a letdown.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_NinjaBoyIntro::
-	.string "I'm NINJA BOY {STR_VAR_1}!$"
+	.string "I'm Ninja Boy {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_NinjaBoyMon1::
 	.string "My Pokémon team consists of one\n"
@@ -1325,7 +1325,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_NinjaBoyReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ParasolLadyIntro::
 	.string "Hello!\n"
-	.string "I'm PARASOL LADY {STR_VAR_1}!$"
+	.string "I'm Parasol Lady {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_ParasolLadyMon1::
 	.string "Escorting me now are my {STR_VAR_2}\n"
@@ -1348,7 +1348,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_ParasolLadyReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugManiacIntro::
 	.string "Hello.\n"
-	.string "I'm {STR_VAR_1}, and I'm a BUG MANIAC!$"
+	.string "I'm {STR_VAR_1}, and I'm a Bug Maniac!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_BugManiacMon1::
 	.string "I have found my Pokémon, yes.\n"
@@ -1456,7 +1456,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PkmnRangerFReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_AromaLadyIntro::
 	.string "Pleased to meet you. I'm {STR_VAR_1}.\n"
-	.string "I consider myself an AROMA LADY.$"
+	.string "I consider myself an Aroma Lady.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_AromaLadyMon1::
 	.string "I travel with one {STR_VAR_2}\n"
@@ -1478,7 +1478,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_AromaLadyReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RuinManiacIntro::
 	.string "Want to know who I am?\n"
-	.string "I'm {STR_VAR_1}, the RUIN MANIAC!$"
+	.string "I'm {STR_VAR_1}, the Ruin Maniac!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_RuinManiacMon1::
 	.string "The Pokémon that I have with me are\n"
@@ -1623,7 +1623,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PicnickerReject::
 	.string "some other time.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicMIntro::
-	.string "I'm PSYCHIC {STR_VAR_1}!$"
+	.string "I'm Psychic {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicMMon1::
 	.string "The twosome I've been raising are\n"
@@ -1644,7 +1644,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicMReject::
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFIntro::
 	.string "I'm {STR_VAR_1}.\n"
-	.string "I'm a PSYCHIC.$"
+	.string "I'm a Psychic.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFMon1::
 	.string "One {STR_VAR_2} with {STR_VAR_1} and$"
@@ -1664,7 +1664,7 @@ BattleFrontier_BattleTowerMultiPartnerRoom_Text_PsychicFReject::
 	.string "to forge an alliance.$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidFIntro::
-	.string "I'm SCHOOL KID {STR_VAR_1}!$"
+	.string "I'm School Kid {STR_VAR_1}!$"
 
 BattleFrontier_BattleTowerMultiPartnerRoom_Text_SchoolKidFMon1::
 	.string "One {STR_VAR_1}-using {STR_VAR_2}$"

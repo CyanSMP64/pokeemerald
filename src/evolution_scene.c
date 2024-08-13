@@ -617,7 +617,6 @@ enum {
 // States for the switch in EVOSTATE_REPLACE_MOVE
 enum {
     MVSTATE_INTRO_MSG_1,
-    MVSTATE_INTRO_MSG_2,
     MVSTATE_INTRO_MSG_3,
     MVSTATE_PRINT_YES_NO,
     MVSTATE_HANDLE_YES_NO,
@@ -883,15 +882,6 @@ static void Task_EvolutionScene(u8 taskId)
                 gTasks[taskId].tLearnMoveState++;
             }
             break;
-        case MVSTATE_INTRO_MSG_2:
-            if (!IsTextPrinterActive(0) && !IsSEPlaying())
-            {
-                // "But, {mon} can't learn more than four moves"
-                BattleStringExpandPlaceholdersToDisplayedString(gBattleStringsTable[STRINGID_TRYTOLEARNMOVE2 - BATTLESTRINGS_TABLE_START]);
-                BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MSG);
-                gTasks[taskId].tLearnMoveState++;
-            }
-            break;
         case MVSTATE_INTRO_MSG_3:
             if (!IsTextPrinterActive(0) && !IsSEPlaying())
             {
@@ -1070,7 +1060,6 @@ enum {
 // States for the switch in T_EVOSTATE_REPLACE_MOVE
 enum {
     T_MVSTATE_INTRO_MSG_1,
-    T_MVSTATE_INTRO_MSG_2,
     T_MVSTATE_INTRO_MSG_3,
     T_MVSTATE_PRINT_YES_NO,
     T_MVSTATE_HANDLE_YES_NO,
@@ -1281,15 +1270,6 @@ static void Task_TradeEvolutionScene(u8 taskId)
                 // "{mon} is trying to learn {move}"
                 BufferMoveToLearnIntoBattleTextBuff2();
                 BattleStringExpandPlaceholdersToDisplayedString(gBattleStringsTable[STRINGID_TRYTOLEARNMOVE1 - BATTLESTRINGS_TABLE_START]);
-                DrawTextOnTradeWindow(0, gDisplayedStringBattle, 1);
-                gTasks[taskId].tLearnMoveState++;
-            }
-            break;
-        case T_MVSTATE_INTRO_MSG_2:
-            if (!IsTextPrinterActive(0) && !IsSEPlaying())
-            {
-                // "But, {mon} can't learn more than four moves"
-                BattleStringExpandPlaceholdersToDisplayedString(gBattleStringsTable[STRINGID_TRYTOLEARNMOVE2 - BATTLESTRINGS_TABLE_START]);
                 DrawTextOnTradeWindow(0, gDisplayedStringBattle, 1);
                 gTasks[taskId].tLearnMoveState++;
             }

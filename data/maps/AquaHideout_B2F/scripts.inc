@@ -114,7 +114,7 @@ AquaHideout_B2F_Text_MattPostBattle:
 	.string "some cave under the sea!\p"
 	.string "If you're going to give chase, you'd\n"
 	.string "better search the big, wide sea beyond\l"
-	.string "LILYCOVE.\p"
+	.string "Lilycove.\p"
 	.string "But will you find it then?\n"
 	.string "Hehehe!$"
 
@@ -144,7 +144,7 @@ AquaHideout_B2F_Text_Grunt6Defeat:
 
 AquaHideout_B2F_Text_Grunt6PostBattle:
 	.string "That reminds me… I can't remember\n"
-	.string "where I put the MASTER BALL.\p"
+	.string "where I put the Master Ball.\p"
 	.string "If I fail to guard it, our BOSS will\n"
 	.string "chew me out…$"
 

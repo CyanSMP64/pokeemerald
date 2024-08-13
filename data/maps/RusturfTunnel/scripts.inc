@@ -435,7 +435,7 @@ RusturfTunnel_Text_GruntTakePackage:
 	.string "The BOSS told me this would be a\n"
 	.string "slick-and-easy job to pull.\p"
 	.string "All I had to do was steal some package\n"
-	.string "from DEVON.\p"
+	.string "from Devon.\p"
 	.string "Tch!\n"
 	.string "You want it back that badly, take it!$"
 
@@ -451,18 +451,18 @@ RusturfTunnel_Text_WhyCantTheyKeepDigging:
 	.string "… …\p"
 	.string "Why can't they keep digging?\n"
 	.string "Is the bedrock too hard?\p"
-	.string "My beloved awaits me in VERDANTURF\n"
-	.string "TOWN just beyond here…\p"
-	.string "If RUSTBORO and VERDANTURF were\n"
+	.string "My beloved awaits me in Verdanturf\n"
+	.string "Town just beyond here…\p"
+	.string "If Rustboro and Verdanturf were\n"
 	.string "joined by this tunnel, I could visit\l"
 	.string "her every day…\p"
 	.string "But this…\n"
 	.string "What am I to do?$"
 
 RusturfTunnel_Text_ToGetToVerdanturf:
-	.string "To get from RUSTBORO to VERDANTURF,\n"
-	.string "you need to go to DEWFORD, then pass\l"
-	.string "through SLATEPORT and MAUVILLE…$"
+	.string "To get from Rustboro to Verdanturf,\n"
+	.string "you need to go to Dewford, then pass\l"
+	.string "through Slateport and Mauville…$"
 
 RusturfTunnel_Text_YouShatteredBoulderTakeHM:
 	.string "Wow! You shattered that boulder\n"
@@ -471,7 +471,7 @@ RusturfTunnel_Text_YouShatteredBoulderTakeHM:
 	.string "I'd like you to have this HM.$"
 
 RusturfTunnel_Text_ExplainStrength:
-	.string "That HM contains STRENGTH.\p"
+	.string "That HM contains Strength.\p"
 	.string "If a muscular Pokémon were to learn\n"
 	.string "that, it would be able to move even\l"
 	.string "large boulders.$"

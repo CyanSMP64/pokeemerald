@@ -224,8 +224,8 @@ EverGrandeCity_ChampionsRoom_Movement_BirchArrives:
 	step_end
 
 EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
-	.string "WALLACE: Welcome, {PLAYER}.\p"
-	.string "That incident in SOOTOPOLIS CITY…\n"
+	.string "Wallace: Welcome, {PLAYER}.\p"
+	.string "That incident in Sootopolis City…\n"
 	.string "That was superb work, putting an end\l"
 	.string "to that crisis all by yourself.\p"
 	.string "Oops!\p"
@@ -233,7 +233,7 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
 	.string "alone ended the crisis.\p"
 	.string "You overcame that difficult situation\n"
 	.string "by working as one with your Pokémon.\p"
-	.string "We TRAINERS raise Pokémon by giving\n"
+	.string "We Trainers raise Pokémon by giving\n"
 	.string "them items and by teaching them new\l"
 	.string "techniques for battle.\p"
 	.string "But we ourselves also learn many\n"
@@ -243,20 +243,20 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
 	.string "others like you have achieved.\p"
 	.string "Now!\p"
 	.string "Who can most elegantly dance with\n"
-	.string "their Pokémon in HOENN?\p"
+	.string "their Pokémon in Hoenn?\p"
 	.string "Show me right here and now!$"
 
 EverGrandeCity_ChampionsRoom_Text_Defeat:
-	.string "I, the CHAMPION, fall in defeat…\p"
+	.string "I, the Champion, fall in defeat…\p"
 	.string "That was wonderful work.\n"
 	.string "You were elegant, infuriatingly so.\l"
 	.string "And yet it was utterly glorious!\p"
 	.string "Kudos to you, {PLAYER}!\p"
 	.string "You are a truly noble Pokémon\n"
-	.string "TRAINER!$"
+	.string "Trainer!$"
 
 EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech:
-	.string "WALLACE: The Pokémon you sent into\n"
+	.string "Wallace: The Pokémon you sent into\n"
 	.string "battle…\p"
 	.string "At times they danced like a spring\n"
 	.string "breeze, and at times they struck\l"
@@ -266,14 +266,14 @@ EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech:
 	.string "Even I felt bedazzled by your\n"
 	.string "masterful performance!\p"
 	.string "You now stand at the glorious peak\n"
-	.string "of the Pokémon LEAGUE.\p"
+	.string "of the Pokémon League.\p"
 	.string "I now proclaim you to be the new\n"
-	.string "HOENN region…$"
+	.string "Hoenn region…$"
 
 EverGrandeCity_ChampionsRoom_Text_MayAdvice:
 	.string "MAY: {PLAYER}!\p"
 	.string "Here's some advice before you challenge\n"
-	.string "the CHAMPION…$"
+	.string "the Champion…$"
 
 EverGrandeCity_ChampionsRoom_Text_MayItsAlreadyOver:
 	.string "MAY: Huh?\n"
@@ -285,12 +285,12 @@ EverGrandeCity_ChampionsRoom_Text_MayItsAlreadyOver:
 EverGrandeCity_ChampionsRoom_Text_BrendanAdvice:
 	.string "BRENDAN: {PLAYER}!\p"
 	.string "How would you like some advice before\n"
-	.string "you challenge the CHAMPION?…$"
+	.string "you challenge the Champion?…$"
 
 EverGrandeCity_ChampionsRoom_Text_BrendanYouveWon:
 	.string "BRENDAN: {PLAYER}…\p"
 	.string "Are you trying to tell me…\n"
-	.string "You've beaten the CHAMPION?$"
+	.string "You've beaten the Champion?$"
 
 EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex:
 	.string "Prof. Birch: See?\n"
@@ -300,10 +300,10 @@ EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex:
 	.string "… … … … … … … …\n"
 	.string "{PLAYER}, you've finally done it.\p"
 	.string "When I heard that you defeated your\n"
-	.string "own father at the PETALBURG GYM,\l"
+	.string "own father at the Petalburg Gym,\l"
 	.string "I thought perhaps you had a chance…\p"
 	.string "But to think you've actually become\n"
-	.string "the CHAMPION!\p"
+	.string "the Champion!\p"
 	.string "Ah, yes!\p"
 	.string "What became of your Pokédex?\n"
 	.string "Here, let me see.$"
@@ -314,15 +314,15 @@ EverGrandeCity_ChampionsRoom_Text_BirchCongratulations:
 	.string "Now, go proudly into the final room!$"
 
 EverGrandeCity_ChampionsRoom_Text_WallaceComeWithMe:
-	.string "WALLACE: {PLAYER}…\p"
+	.string "Wallace: {PLAYER}…\p"
 	.string "No, let me rephrase that properly.\p"
-	.string "The new CHAMPION!\p"
+	.string "The new Champion!\p"
 	.string "Come with me.$"
 
 EverGrandeCity_ChampionsRoom_Text_WallaceWaitOutside:
-	.string "WALLACE: I'm sorry, but…\p"
-	.string "From here on, only those TRAINERS who\n"
-	.string "have become CHAMPIONS may enter.\p"
+	.string "Wallace: I'm sorry, but…\p"
+	.string "From here on, only those Trainers who\n"
+	.string "have become Champions may enter.\p"
 	.string "You'll have to wait outside with\n"
 	.string "Prof. Birch.$"
 

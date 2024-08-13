@@ -50,9 +50,9 @@ MoveTutor_Text_RolloutTaught:
 MoveTutor_Text_FuryCutterTeach:
 	.string "There's a move that gets stronger\n"
 	.string "when you keep using it in a row.\p"
-	.string "It's a BUG-type move, and it is\n"
+	.string "It's a Bug-type move, and it is\n"
 	.string "wickedly cool.\p"
-	.string "It's called FURY CUTTER.\n"
+	.string "It's called Fury Cutter.\n"
 	.string "Want me to teach it to a Pokémon?$"
 
 MoveTutor_Text_FuryCutterDeclined:
@@ -116,8 +116,8 @@ MoveTutor_Text_MetronomeTaught:
 	.string "use it, too?$"
 
 MoveTutor_Text_SleepTalkTeach:
-	.string "Humph! My wife relies on HIDDEN\n"
-	.string "POWER to stay awake.\p"
+	.string "Humph! My wife relies on Hidden\n"
+	.string "Power to stay awake.\p"
 	.string "She should just take a nap like I do,\n"
 	.string "and SLEEP TALK.\p"
 	.string "I can teach your Pokémon how to\n"
@@ -166,7 +166,7 @@ MoveTutor_Text_SubstituteTaught:
 MoveTutor_Text_DynamicPunchTeach:
 	.string "I can't do this anymore!\p"
 	.string "It's utterly hopeless!\p"
-	.string "I'm a FIGHTING-type TRAINER,\n"
+	.string "I'm a Fighting-type Trainer,\n"
 	.string "so I can't win at the Mossdeep Gym\l"
 	.string "no matter how hard I try!\p"
 	.string "Argh! Punch! Punch! Punch!\n"
@@ -190,14 +190,14 @@ MoveTutor_Text_DynamicPunchTaught:
 
 MoveTutor_Text_DoubleEdgeTeach:
 	.string "Sigh…\p"
-	.string "SOOTOPOLIS's Gym Leader is really\n"
+	.string "Sootopolis's Gym Leader is really\n"
 	.string "lovably admirable.\p"
 	.string "But that also means I have many\n"
 	.string "rivals for his attention.\p"
-	.string "He's got appeal with a DOUBLE-EDGE.\n"
+	.string "He's got appeal with a Double-Edge.\n"
 	.string "I couldn't even catch his eye.\p"
 	.string "Please, let me teach your Pokémon\n"
-	.string "the move DOUBLE-EDGE!$"
+	.string "the move Double-Edge!$"
 
 MoveTutor_Text_DoubleEdgeDeclined:
 	.string "Oh…\n"
@@ -205,7 +205,7 @@ MoveTutor_Text_DoubleEdgeDeclined:
 
 MoveTutor_Text_DoubleEdgeWhichMon:
 	.string "Okay, which Pokémon should I teach\n"
-	.string "DOUBLE-EDGE?$"
+	.string "Double-Edge?$"
 
 MoveTutor_Text_DoubleEdgeTaught:
 	.string "I won't live for love anymore!\n"

@@ -157,7 +157,7 @@ SlateportCity_BattleTentCorridor_Movement_AttendantExit:
 @ Unused
 SlateportCity_ContestHall_Text_AdviceForContests:
 	.string "Want a tasty little bit of advice\n"
-	.string "for CONTESTS?\p"
+	.string "for Contests?\p"
 	.string "Using a certain move after another\n"
 	.string "certain kind of move sometimes gets\l"
 	.string "you extra attention.\p"
@@ -168,9 +168,9 @@ SlateportCity_ContestHall_Text_AdviceForContests:
 
 @ Unused
 SlateportCity_ContestHall_Text_MyPapaIsContestJudge:
-	.string "My papa, he's a CONTEST JUDGE.\p"
+	.string "My papa, he's a Contest Judge.\p"
 	.string "I wonder what I should be when I\n"
-	.string "grow up, a JUDGE or a Gym Leader?$"
+	.string "grow up, a Judge or a Gym Leader?$"
 
 @ Unused
 SlateportCity_ContestHall_Text_ImLikeMajorlyCheesed:
@@ -178,7 +178,7 @@ SlateportCity_ContestHall_Text_ImLikeMajorlyCheesed:
 	.string "you know. Like, you know, I just\l"
 	.string "wanted to know why my Pokémon\l"
 	.string "never won, you know, like, hey?\p"
-	.string "So, like, I gave the JUDGE my two\n"
+	.string "So, like, I gave the Judge my two\n"
 	.string "cents, you know, they're free.\p"
 	.string "And he wouldn't hear me out, like, hey!\n"
 	.string "So, like, total bummer, man!\p"
@@ -199,18 +199,18 @@ SlateportCity_ContestHall_Text_MCStepUpTakePartInContest:
 	.string "MC: Oh, my, my!\n"
 	.string "Now isn't that a dandy of a Pokémon?\p"
 	.string "Please! Do step right up and take\n"
-	.string "part in our splendid CONTESTS!\p"
+	.string "part in our splendid Contests!\p"
 	.string "You'll do well! I'm sure of it!\n"
 	.string "My eyes have never failed me!$"
 
 @ Unused
 SlateportCity_ContestHall_Text_JudgeWouldntDoToMissContest:
-	.string "JUDGE: Well, hello there!\n"
-	.string "I see that you're a TRAINER!\p"
+	.string "Judge: Well, hello there!\n"
+	.string "I see that you're a Trainer!\p"
 	.string "Then, it just wouldn't do for you\n"
-	.string "to miss a Pokémon CONTEST!\p"
-	.string "Get a CONTEST PASS in VERDANTURF\n"
-	.string "CITY and enter anytime!$"
+	.string "to miss a Pokémon Contest!\p"
+	.string "Get a Contest Pass in Verdanturf\n"
+	.string "City and enter anytime!$"
 
 @ Unused
 SlateportCity_ContestHall_Text_ItsAppealTime:
@@ -221,7 +221,7 @@ SlateportCity_ContestHall_Text_ItsAppealTime:
 SlateportCity_ContestHall_Text_DidntPayAttentionToAppeal:
 	.string "They didn't pay much attention to\n"
 	.string "my Pokémon's appeal…\p"
-	.string "Humph, that JUDGE, he doesn't know\n"
+	.string "Humph, that Judge, he doesn't know\n"
 	.string "a good thing when he sees it.$"
 
 @ Unused
@@ -245,7 +245,7 @@ SlateportCity_ContestHall_Text_MoreFreakedOutThanMon:
 
 @ Unused
 SlateportCity_ContestHall_Text_BattleAndContestAlike:
-	.string "A battle and a CONTEST aren't the\n"
+	.string "A battle and a Contest aren't the\n"
 	.string "same, but they are alike, too.\p"
 	.string "You need to work hard and believe\n"
 	.string "in the Pokémon you've raised.$"
@@ -272,6 +272,6 @@ SlateportCity_ContestHall_Text_GetUrgeToMoveWithMon:
 
 @ Unused
 SlateportCity_ContestHall_Text_HyperRankStage:
-	.string "Pokémon CONTESTS\n"
-	.string "HYPER RANK STAGE!$"
+	.string "Pokémon Contests\n"
+	.string "Hyper Rank Stage!$"
 

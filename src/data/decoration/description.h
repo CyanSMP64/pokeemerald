@@ -5,7 +5,7 @@ const u8 DecorDesc_SMALL_DESK[] = _(
 const u8 DecorDesc_POKEMON_DESK[] = _(
     "A small desk built in\n"
         "the shape of a POKé\n"
-        "BALL.");
+        "Ball.");
 
 const u8 DecorDesc_HEAVY_DESK[] = _(
     "A large desk made\n"
@@ -189,12 +189,12 @@ const u8 DecorDesc_SAND_ORNAMENT[] = _(
 const u8 DecorDesc_SILVER_SHIELD[] = _(
     "Awarded for 50\n"
         "straight wins at\n"
-        "the BATTLE TOWER.");
+        "the Battle Tower.");
 
 const u8 DecorDesc_GOLD_SHIELD[] = _(
     "Awarded for 100\n"
         "straight wins at\n"
-        "the BATTLE TOWER.");
+        "the Battle Tower.");
 
 const u8 DecorDesc_GLASS_ORNAMENT[] = _(
     "A glass replica of\n"
@@ -213,7 +213,7 @@ const u8 DecorDesc_ROUND_TV[] = _(
 const u8 DecorDesc_CUTE_TV[] = _(
     "A toy TV modeled\n"
         "in the image of a\n"
-        "SKITTY.");
+        "Skitty.");
 
 const u8 DecorDesc_GLITTER_MAT[] = _(
     "An odd mat that\n"
@@ -272,43 +272,43 @@ const u8 DecorDesc_C_HIGH_NOTE_MAT[] = _(
 
 const u8 DecorDesc_SURF_MAT[] = _(
     "A mat designed with\n"
-        "a SURF image.\n"
+        "a Surf image.\n"
         "Put items on top.");
 
 const u8 DecorDesc_THUNDER_MAT[] = _(
     "A mat designed with\n"
-        "a THUNDER image.\n"
+        "a Thunder image.\n"
         "Put items on top.");
 
 const u8 DecorDesc_FIRE_BLAST_MAT[] = _(
     "A mat designed with\n"
-        "a FIRE BLAST image.\n"
+        "a Fire Blast image.\n"
         "Put items on top.");
 
 const u8 DecorDesc_POWDER_SNOW_MAT[] = _(
-    "A mat with a POWDER\n"
-        "SNOW image design.\n"
+    "A mat with a Powder\n"
+        "Snow image design.\n"
         "Put items on top.");
 
 const u8 DecorDesc_ATTRACT_MAT[] = _(
     "A mat designed with\n"
-        "an ATTRACT image.\n"
+        "an Attract image.\n"
         "Put items on top.");
 
 const u8 DecorDesc_FISSURE_MAT[] = _(
     "A mat designed with\n"
-        "a FISSURE image.\n"
+        "a Fissure image.\n"
         "Put items on top.");
 
 const u8 DecorDesc_SPIKES_MAT[] = _(
     "A mat designed with\n"
-        "a SPIKES image.\n"
+        "a Spikes image.\n"
         "Put items on top.");
 
 const u8 DecorDesc_BALL_POSTER[] = _(
     "A small poster\n"
         "printed with POKé\n"
-        "BALLS.");
+        "Balls.");
 
 const u8 DecorDesc_GREEN_POSTER[] = _(
     "A small poster with\n"
@@ -328,12 +328,12 @@ const u8 DecorDesc_CUTE_POSTER[] = _(
 
 const u8 DecorDesc_PIKA_POSTER[] = _(
     "A large poster with\n"
-        "a PIKACHU and\n"
+        "a Pikachu and\n"
         "PICHU print.");
 
 const u8 DecorDesc_LONG_POSTER[] = _(
     "A large poster with\n"
-        "a SEVIPER print.");
+        "a Seviper print.");
 
 const u8 DecorDesc_SEA_POSTER[] = _(
     "A large poster with\n"
@@ -353,7 +353,7 @@ const u8 DecorDesc_PICHU_DOLL[] = _(
         "or a desk.");
 
 const u8 DecorDesc_PIKACHU_DOLL[] = _(
-    "A PIKACHU doll.\n"
+    "A Pikachu doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
@@ -448,7 +448,7 @@ const u8 DecorDesc_AZURILL_DOLL[] = _(
         "or a desk.");
 
 const u8 DecorDesc_SKITTY_DOLL[] = _(
-    "A SKITTY doll.\n"
+    "A Skitty doll.\n"
         "Place it on a mat\n"
         "or a desk.");
 
@@ -473,7 +473,7 @@ const u8 DecorDesc_SEEDOT_DOLL[] = _(
         "or a desk.");
 
 const u8 DecorDesc_PIKA_CUSHION[] = _(
-    "A PIKACHU cushion.\n"
+    "A Pikachu cushion.\n"
         "Place it on a mat\n"
         "or a desk.");
 
@@ -503,7 +503,7 @@ const u8 DecorDesc_DIAMOND_CUSHION[] = _(
         "or a desk.");
 
 const u8 DecorDesc_BALL_CUSHION[] = _(
-    "A BALL cushion.\n"
+    "A Ball cushion.\n"
         "Place it on a mat\n"
         "or a desk.");
 

@@ -1,5 +1,5 @@
 gText_Birch_Welcome::
-	.string "Hi! My name is BIRCH.\n"
+	.string "Hi! My name is Birch.\n"
 	.string "Welcome to the world of IronMON!\p"
 	.string "$"
 

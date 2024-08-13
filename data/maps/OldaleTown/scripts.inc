@@ -459,7 +459,7 @@ OldaleTown_Text_ThisIsAPokemonMart:
 	.string "a promotional item.$"
 
 OldaleTown_Text_PotionExplanation:
-	.string "A POTION can be used only in battles.\n"
+	.string "A Potion can be used only in battles.\n"
 	.string "Don't be a filthy cheater.$"
 
 OldaleTown_Text_WaitDontComeInHere:
@@ -489,11 +489,11 @@ OldaleTown_Text_MayLetsGoBack:
 
 OldaleTown_Text_BrendanLetsGoBack:
 	.string "BRENDAN: I'm heading back to my dad's\n"
-	.string "LAB now.\l"
+	.string "Lab now.\l"
 	.string "{PLAYER}, you should hustle back, too.$"
 
 OldaleTown_Text_TownSign:
-	.string "OLDALE TOWN\n"
+	.string "Oldale Town\n"
 	.string "“Where things start off scarce.”$"
 
 OldaleTown_Text_Accuser1:

@@ -34,7 +34,7 @@ MagmaHideout_1F_Text_Grunt1PostBattle:
 
 MagmaHideout_1F_Text_Grunt2Intro:
 	.string "Our leader told us to dig into\n"
-	.string "MT. CHIMNEY, so we dug and dug.\p"
+	.string "Mt. Chimney, so we dug and dug.\p"
 	.string "And in the course of digging, we came\n"
 	.string "across something that blew our minds!\p"
 	.string "What did we find?\p"

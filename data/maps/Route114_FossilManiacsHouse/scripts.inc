@@ -31,7 +31,7 @@ Route114_FossilManiacsHouse_EventScript_Bookshelf::
 	end
 
 Route114_FossilManiacsHouse_Text_HaveThisToDigLikeMyBrother:
-	.string "My big brother's the FOSSIL MANIAC…\n"
+	.string "My big brother's the Fossil Maniac…\n"
 	.string "He's a nice guy who loves FOSSILS…\p"
 	.string "He loves digging holes, too…\n"
 	.string "He dug this hole by himself…\p"
@@ -47,8 +47,8 @@ Route114_FossilManiacsHouse_Text_RocksFillDisplayCase:
 	.string "the display case…$"
 
 Route114_FossilManiacsHouse_Text_CrammedWithBooks:
-	.string "THE COMPOSITION OF STRATA…\n"
-	.string "HOW RAIN SHAPES THE LAND…\l"
-	.string "STONES, SOIL, AND ROCK…\p"
+	.string "The Composition of Strata…\n"
+	.string "How Rain Shapes the Land…\l"
+	.string "Stones, Soil, and Rock…\p"
 	.string "It's crammed with books.$"
 

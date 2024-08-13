@@ -127,11 +127,11 @@ LilycoveCity_House3_Text_ExplainPokeblocks:
 	.string "{POKEBLOCK}s than ordinary ones, too.\p"
 	.string "And this is important.\p"
 	.string "If you want to make smooth {POKEBLOCK}s,\n"
-	.string "use different kinds of BERRIES.\p"
-	.string "Don't be stingy--the kinds of BERRIES\n"
+	.string "use different kinds of Berries.\p"
+	.string "Don't be stingy--the kinds of Berries\n"
 	.string "affect the smoothness of {POKEBLOCK}s.\p"
 	.string "And another thing.\p"
-	.string "The more people blending BERRIES,\n"
+	.string "The more people blending Berries,\n"
 	.string "the smoother the {POKEBLOCK}s.\p"
 	.string "That's why you should talk to other\n"
 	.string "people and make {POKEBLOCK}s together.\p"
@@ -149,20 +149,20 @@ LilycoveCity_House3_Text_HappyToHaveQuadruplets:
 	.string "it makes me happy.$"
 
 LilycoveCity_House3_Text_GoingToWinMultiBattles:
-	.string "We're having MULTI BATTLES, but I know\n"
+	.string "We're having Multi Battles, but I know\n"
 	.string "I'm going to win.$"
 
 LilycoveCity_House3_Text_LikeMixingAtRecordCorner:
 	.string "We like mixing stuff at\n"
-	.string "the RECORD CORNER.\p"
+	.string "the Record Corner.\p"
 	.string "But what gets mixed up?$"
 
 LilycoveCity_House3_Text_MakePokeblocksWithBerryBlender:
 	.string "We're going to make super {POKEBLOCK}s\n"
-	.string "with a BERRY BLENDER!$"
+	.string "with a Berry Blender!$"
 
 LilycoveCity_House3_Text_GoingToEnterContest:
 	.string "I want to brag about how tough my\n"
 	.string "Pokémon is, so we're going to enter\l"
-	.string "a CONTEST together.$"
+	.string "a Contest together.$"
 

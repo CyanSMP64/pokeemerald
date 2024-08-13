@@ -4,37 +4,37 @@ gContestHallPaintingCaption::
 
 @ Unused
 gContestPaintingContest::
-	.string "CONTEST$"
+	.string "Contest$"
 
 gContestRankNormal::
-	.string "NORMAL RANK$"
+	.string "Normal Rank$"
 
 gContestRankSuper::
-	.string "SUPER RANK$"
+	.string "Super Rank$"
 
 gContestRankHyper::
-	.string "HYPER RANK$"
+	.string "Hyper Rank$"
 
 gContestRankMaster::
-	.string "MASTER RANK$"
+	.string "Master Rank$"
 
 gContestLink::
-	.string "LINK$"
+	.string "Link$"
 
 gContestCoolness::
-	.string "COOLNESS$"
+	.string "Coolness$"
 
 gContestBeauty::
-	.string "BEAUTY$"
+	.string "Beauty$"
 
 gContestCuteness::
-	.string "CUTENESS$"
+	.string "Cuteness$"
 
 gContestSmartness::
-	.string "SMARTNESS$"
+	.string "Smartness$"
 
 gContestToughness::
-	.string "TOUGHNESS$"
+	.string "Toughness$"
 
 gContestPaintingCool1::
 	.string "Nonstop supercool--\n"

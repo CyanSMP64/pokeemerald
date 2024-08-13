@@ -309,7 +309,7 @@ MossdeepCity_SpaceCenter_1F_Text_RocketLaunchDemandsPerfection:
 	.string "Why? It's a dream that never ends.$"
 
 MossdeepCity_SpaceCenter_1F_Text_MagmaHaveSightsOnSpaceCenter:
-	.string "Those MAGMA thugs have their sights\n"
+	.string "Those Magma thugs have their sights\n"
 	.string "set on our SPACE CENTER.\p"
 	.string "But we can't allow anything that minor\n"
 	.string "to interfere with our rocket launch!$"
@@ -321,7 +321,7 @@ MossdeepCity_SpaceCenter_1F_Text_FoundThisYouCanHaveIt:
 	.string "have it.$"
 
 MossdeepCity_SpaceCenter_1F_Text_HoennFamousForMeteorShowers:
-	.string "The HOENN region has been famous for \n"
+	.string "The Hoenn region has been famous for \n"
 	.string "its meteor showers for a long time.$"
 
 MossdeepCity_SpaceCenter_1F_Text_MagmaCantStealFuelTakeThis:
@@ -357,7 +357,7 @@ MossdeepCity_SpaceCenter_1F_Text_MagmaWantsToSpoilMyDream:
 	.string "I'm not having any of that!$"
 
 MossdeepCity_SpaceCenter_1F_Text_StevenMagmaCantBeAllowedToTakeFuel:
-	.string "STEVEN: {PLAYER}, have you read that\n"
+	.string "Steven: {PLAYER}, have you read that\n"
 	.string "proclamation already?\p"
 	.string "Team Magma is coming after the rocket\n"
 	.string "fuel on this island.\p"

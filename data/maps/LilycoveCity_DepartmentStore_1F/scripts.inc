@@ -141,7 +141,7 @@ LilycoveCity_DepartmentStore_1F_EventScript_FloorNamesSign::
 	end
 
 LilycoveCity_DepartmentStore_1F_Text_WelcomeToDeptStore:
-	.string "Welcome to LILYCOVE DEPARTMENT STORE.$"
+	.string "Welcome to Lilycove DEPARTMENT STORE.$"
 
 LilycoveCity_DepartmentStore_1F_Text_IBuyAllSortsOfThings:
 	.string "Whenever I come to the DEPARTMENT\n"
@@ -154,18 +154,18 @@ LilycoveCity_DepartmentStore_1F_Text_MomBuyingMeFurniture:
 
 LilycoveCity_DepartmentStore_1F_Text_BuyingSomethingForAzumarill:
 	.string "I'm buying something for my AZUMARILL\n"
-	.string "as a reward for winning a CONTEST.$"
+	.string "as a reward for winning a Contest.$"
 
 LilycoveCity_DepartmentStore_1F_Text_Azumarill:
 	.string "AZUMARILL: Maririroo!$"
 
 LilycoveCity_DepartmentStore_1F_Text_FloorNamesSign:
-	.string "1F: SERVICE COUNTER\n"
-	.string "    LOTTERY CORNER\p"
-	.string "2F: TRAINER'S ZONE\p"
-	.string "3F: BATTLE COLLECTION\p"
-	.string "4F: TM CORNER\p"
-	.string "5F: Poké Doll FLOOR\p"
+	.string "1F: Service Counter\n"
+	.string "    Lottery Corner\p"
+	.string "2F: Trainer's Zone\p"
+	.string "3F: Battle Collection\p"
+	.string "4F: TM Corner\p"
+	.string "5F: Poké Doll Floor\p"
 	.string "ROOFTOP: ROOFTOP PLAZA$"
 
 @ Unused

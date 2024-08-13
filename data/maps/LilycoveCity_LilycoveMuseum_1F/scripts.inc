@@ -162,7 +162,7 @@ LilycoveCity_LilycoveMuseum_1F_EventScript_FatMan::
 	end
 
 LilycoveCity_LilycoveMuseum_1F_Text_WelcomeToLilycoveMuseum:
-	.string "Welcome to LILYCOVE MUSEUM.\p"
+	.string "Welcome to Lilycove MUSEUM.\p"
 	.string "Please take the time to enjoy our\n"
 	.string "collection of fantastic artwork\l"
 	.string "featuring Pokémon.$"
@@ -181,7 +181,7 @@ LilycoveCity_LilycoveMuseum_1F_Text_NotDisturbYouTakeYourTime:
 
 LilycoveCity_LilycoveMuseum_1F_Text_HaveYouAnInterestInPaintings:
 	.string "Oh? I do believe that you seem to\n"
-	.string "be a Pokémon TRAINER.\p"
+	.string "be a Pokémon Trainer.\p"
 	.string "Have you an interest in paintings,\n"
 	.string "too?$"
 
@@ -214,14 +214,14 @@ LilycoveCity_LilycoveMuseum_1F_Text_PaintingOfLegendaryPokemon:
 	.string "imagination.$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_PaintingOfGrassPokemon:
-	.string "It's a painting of GRASS Pokémon\n"
+	.string "It's a painting of Grass Pokémon\n"
 	.string "swaying in a breeze.\p"
 	.string "They appear to be enjoying the wind's\n"
 	.string "gentle caress.$"
 
 LilycoveCity_LilycoveMuseum_1F_Text_PaintingOfBerries:
 	.string "It's a delicious-looking painting\n"
-	.string "of BERRIES.\p"
+	.string "of Berries.\p"
 	.string "This painting could make you hungry!$"
 
 LilycoveCity_LilycoveMuseum_Text_BirdPokemonSculptureReplica:
@@ -287,8 +287,8 @@ LilycoveCity_LilycoveMuseum_1F_Text_AimToSeeGreatPaintings:
 LilycoveCity_LilycoveMuseum_1F_Text_MuseumTouristDestination:
 	.string "The ART MUSEUM has become a favorite\n"
 	.string "tourist destination.\p"
-	.string "It's great for LILYCOVE…\n"
-	.string "No, great for the HOENN region!\p"
-	.string "This is what I've heard--a lone TRAINER\n"
+	.string "It's great for Lilycove…\n"
+	.string "No, great for the Hoenn region!\p"
+	.string "This is what I've heard--a lone Trainer\n"
 	.string "procured all the paintings upstairs.$"
 

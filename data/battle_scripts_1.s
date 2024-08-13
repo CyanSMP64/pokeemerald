@@ -3170,7 +3170,6 @@ BattleScript_TryLearnMoveLoop::
 BattleScript_AskToLearnMove::
 	buffermovetolearn
 	printstring STRINGID_TRYTOLEARNMOVE1
-	printstring STRINGID_TRYTOLEARNMOVE2
 	printstring STRINGID_TRYTOLEARNMOVE3
 	waitstate
 	setbyte sLEARNMOVE_STATE, 0
@@ -3183,12 +3182,11 @@ BattleScript_AskToLearnMove::
 	goto BattleScript_TryLearnMoveLoop
 BattleScript_ForgotAndLearnedNewMove::
 	printstring STRINGID_123POOF
-	printstring STRINGID_PKMNFORGOTMOVE
-	printstring STRINGID_ANDELLIPSIS
+	printstring STRINGID_PKMNMADEITRAIN
 BattleScript_LearnedNewMove::
 	buffermovetolearn
 	fanfare MUS_LEVEL_UP
-	printstring STRINGID_PKMNLEARNEDMOVE
+	printstring STRINGID_MONFORGOTANDLEARNEDINSTEAD
 	waitmessage B_WAIT_TIME_LONG
 	updatechoicemoveonlvlup BS_ATTACKER
 	goto BattleScript_TryLearnMoveLoop
@@ -3963,7 +3961,7 @@ BattleScript_ItemSteal::
 
 BattleScript_DrizzleActivates::
 	call BattleScript_AbilityPopUp
-	printstring STRINGID_PKMNMADEITRAIN
+	printstring STRINGID_STARTEDTORAIN
 	waitstate
 	pause B_WAIT_TIME_SHORT
 	playanimation BS_BATTLER_0, B_ANIM_RAIN_CONTINUES
@@ -4004,7 +4002,7 @@ BattleScript_RainDishActivates::
 
 BattleScript_SandstreamActivates::
 	call BattleScript_AbilityPopUp
-	printstring STRINGID_PKMNSXWHIPPEDUPSANDSTORM
+	printstring STRINGID_SANDSTORMBREWED
 	waitstate
 	pause B_WAIT_TIME_SHORT
 	playanimation BS_BATTLER_0, B_ANIM_SANDSTORM_CONTINUES
@@ -4074,7 +4072,7 @@ BattleScript_IntimidatePrevented:
 
 BattleScript_DroughtActivates::
 	call BattleScript_AbilityPopUp
-	printstring STRINGID_PKMNSXINTENSIFIEDSUN
+	printstring STRINGID_SUNLIGHTGOTBRIGHT
 	waitstate
 	pause B_WAIT_TIME_SHORT
 	playanimation BS_BATTLER_0, B_ANIM_SUN_CONTINUES
@@ -4109,7 +4107,7 @@ BattleScript_MoveHPDrain::
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
-	printstring STRINGID_PKMNRESTOREDHPUSING
+	printstring STRINGID_PKMNREGAINEDHEALTH
 	waitmessage B_WAIT_TIME_LONG
 	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
 	goto BattleScript_MoveEnd
@@ -4119,7 +4117,7 @@ BattleScript_MonMadeMoveUseless_PPLoss::
 BattleScript_MonMadeMoveUseless::
 	attackstring
 	call BattleScript_AbilityPopUp
-	printstring STRINGID_PKMNSXMADEYUSELESS
+	printstring STRINGID_ITDOESNTAFFECT
 	waitmessage B_WAIT_TIME_LONG
 	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
 	goto BattleScript_MoveEnd

@@ -460,8 +460,8 @@ MtPyre_Summit_Text_Grunt2PostBattle:
 
 MtPyre_Summit_Text_Grunt3Intro:
 	.string "You…\n"
-	.string "We saw you at MT. CHIMNEY.\p"
-	.string "You don't belong to either TEAM,\n"
+	.string "We saw you at Mt. Chimney.\p"
+	.string "You don't belong to either Team,\n"
 	.string "so why would you be here?$"
 
 MtPyre_Summit_Text_Grunt3Defeat:
@@ -490,28 +490,28 @@ MtPyre_Summit_Text_Grunt4PostBattle:
 	.string "with us members and our leader.$"
 
 MtPyre_Summit_Text_ArchieWeGotTheOrbLetsGo:
-	.string "ARCHIE: Team Magma's MAXIE got ahead\n"
+	.string "Archie: Team Magma's Maxie got ahead\n"
 	.string "of us, but we also got what we wanted.\p"
-	.string "The RED ORB preserved at MT. PYRE…\n"
-	.string "I, ARCHIE, now have it in my possession!\p"
+	.string "The Red Orb preserved at Mt. Pyre…\n"
+	.string "I, Archie, now have it in my possession!\p"
 	.string "Fufufu… Now we can bring our ultimate\n"
 	.string "objective to fruition!\p"
-	.string "Okay, TEAM!\n"
+	.string "Okay, Team!\n"
 	.string "We're pulling out!$"
 
 MtPyre_Summit_Text_BothOrbsTakenMagmaLeftThis:
 	.string "Oh, no…\n"
 	.string "This cannot happen…\p"
-	.string "Not only the BLUE ORB, but even\n"
-	.string "the RED ORB has been taken…\p"
-	.string "The BLUE ORB and RED ORB must never\n"
+	.string "Not only the Blue Orb, but even\n"
+	.string "the Red Orb has been taken…\p"
+	.string "The Blue Orb and Red Orb must never\n"
 	.string "be separated. They belong together.\p"
 	.string "What are those men trying to do with\n"
 	.string "the two ORBS?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "Oh, yes. Was it Team Magma who came\n"
-	.string "and took the BLUE ORB first?\p"
+	.string "and took the Blue Orb first?\p"
 	.string "Well, in their haste, they left this\n"
 	.string "behind.\p"
 	.string "I couldn't imagine what exactly it\n"
@@ -520,17 +520,17 @@ MtPyre_Summit_Text_BothOrbsTakenMagmaLeftThis:
 	.string "Perhaps it will be useful in some way.$"
 
 MtPyre_Summit_Text_OrbsHaveBeenTaken:
-	.string "The BLUE ORB and RED ORB taken by\n"
+	.string "The Blue Orb and Red Orb taken by\n"
 	.string "those sinister men…\p"
 	.string "They must never be apart…\n"
 	.string "I fear something terrible will happen…$"
 
 MtPyre_Summit_Text_GroudonKyogreAwakened:
 	.string "Oh, my goodness…\p"
-	.string "You say that both GROUDON and KYOGRE\n"
+	.string "You say that both Groudon and Kyogre\n"
 	.string "have been awakened?\p"
-	.string "It is said that the BLUE ORB and\n"
-	.string "the RED ORB quelled the rage of\l"
+	.string "It is said that the Blue Orb and\n"
+	.string "the Red Orb quelled the rage of\l"
 	.string "the two Pokémon…\p"
 	.string "It is also said that the true owner\n"
 	.string "of the ORBS still exists.\p"
@@ -557,15 +557,15 @@ MtPyre_Summit_Text_SuperAncientPokemonTaughtUs:
 	.string "taught us that…$"
 
 MtPyre_Summit_Text_WillYouHearOutMyTale:
-	.string "MT. PYRE is where we calm the spirits\n"
+	.string "Mt. Pyre is where we calm the spirits\n"
 	.string "of Pokémon that have passed on…\p"
 	.string "This is a high place where one can\n"
-	.string "see all of HOENN…\p"
+	.string "see all of Hoenn…\p"
 	.string "The disembodied spirits of Pokémon\n"
 	.string "must find solace here…\p"
 	.string "Is it coincidence that you are here…\p"
 	.string "Will you hear out my tale? A tale long\n"
-	.string "told in the HOENN region?$"
+	.string "told in the Hoenn region?$"
 
 MtPyre_Summit_Text_GroudonKyogreTale:
 	.string "It happened long, long ago…\p"
@@ -579,7 +579,7 @@ MtPyre_Summit_Text_GroudonKyogreTale:
 	.string "Their fierce duel raged without end.\p"
 	.string "The world was engulfed in massive\n"
 	.string "infernos and vicious storms.\p"
-	.string "The BLUE ORB and the RED ORB brought\n"
+	.string "The Blue Orb and the Red Orb brought\n"
 	.string "an end to the calamity.\p"
 	.string "Light poured from the two ORBS and\n"
 	.string "becalmed the enraged adversaries.\p"
@@ -592,17 +592,17 @@ MtPyre_Summit_Text_WellThatTooIsFine:
 	.string "Well, that, too, is fine…$"
 
 MtPyre_Summit_Text_MaxieSilence:
-	.string "MAXIE: {PLAYER}…\p"
+	.string "Maxie: {PLAYER}…\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …$"
 
 MtPyre_Summit_Text_HearTheNewLegendOfHoenn:
 	.string "It is my role to pass on the legends\n"
-	.string "of HOENN to future generations.\p"
+	.string "of Hoenn to future generations.\p"
 	.string "And the crisis that just ended in\n"
-	.string "SOOTOPOLIS rewrote a legend…\p"
+	.string "Sootopolis rewrote a legend…\p"
 	.string "Have you the time to hear the new\n"
-	.string "legend of HOENN?$"
+	.string "legend of Hoenn?$"
 
 MtPyre_Summit_Text_HoennTrioTale:
 	.string "It happened long, long ago…\p"

@@ -92,10 +92,10 @@ ProfileMan_EventScript_Ret::
 	return
 
 ProfileMan_Text_CollectTrainerProfiles:
-	.string "Hello there, TRAINER!\n"
+	.string "Hello there, Trainer!\n"
 	.string "You've got a wonderful smile, there.\p"
 	.string "I have a hobby--collecting the profiles\n"
-	.string "of Pokémon TRAINERS.$"
+	.string "of Pokémon Trainers.$"
 
 ProfileMan_Text_MayISeeYourProfile:
 	.string "So, how about it?\n"
@@ -134,7 +134,7 @@ ProfileMan_Text_NotIntoItRightNow:
 	.string "Well, anytime is good by me!$"
 
 ProfileMan_Text_YouHaveWonderfulSmile:
-	.string "Hello there, TRAINER!\n"
+	.string "Hello there, Trainer!\n"
 	.string "You've got a wonderful smile.$"
 
 ProfileMan_Text_MayISeeYourNewProfile:
@@ -163,4 +163,4 @@ ProfileMan_Text_YouKnowSecretSaying:
 	.string "Oh?\n"
 	.string "You know the secret saying!\p"
 	.string "That means you're now a fellow member\n"
-	.string "of the MYSTERY EVENT CLUB!$"
+	.string "of the MYSTERY EVENT Club!$"
