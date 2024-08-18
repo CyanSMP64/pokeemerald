@@ -1267,9 +1267,9 @@ u8 DoFieldEndTurnEffects(void)
                 if (gSideTimers[side].mistTimer != 0 && --gSideTimers[side].mistTimer == 0)
                 {
                     gSideStatuses[side] &= ~SIDE_STATUS_MIST;
-                    BattleScriptExecute(BattleScript_SideStatusWoreOff);
+                    BattleScriptExecute(BattleScript_SafeguardEnds);
                     gBattleCommunication[MULTISTRING_CHOOSER] = side;
-                    PREPARE_MOVE_BUFFER(gBattleTextBuff1, MOVE_MIST);
+                    PREPARE_STRING_BUFFER(gBattleTextBuff1, STRINGID_MIST);
                     effect++;
                 }
                 gBattleStruct->turnSideTracker++;
@@ -1293,6 +1293,8 @@ u8 DoFieldEndTurnEffects(void)
                     {
                         gSideStatuses[side] &= ~SIDE_STATUS_SAFEGUARD;
                         BattleScriptExecute(BattleScript_SafeguardEnds);
+                        gBattleCommunication[MULTISTRING_CHOOSER] = side;
+                        PREPARE_MOVE_BUFFER(gBattleTextBuff1, MOVE_SAFEGUARD);
                         effect++;
                     }
                 }

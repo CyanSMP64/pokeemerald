@@ -3255,13 +3255,11 @@ BattleScript_SideStatusWoreOff::
 	end2
 
 BattleScript_SafeguardProtected::
-	pause B_WAIT_TIME_SHORT
 	printstring STRINGID_PKMNUSEDSAFEGUARD
 	waitmessage B_WAIT_TIME_LONG
 	end2
 
 BattleScript_SafeguardEnds::
-	pause B_WAIT_TIME_SHORT
 	printstring STRINGID_PKMNSAFEGUARDEXPIRED
 	waitmessage B_WAIT_TIME_LONG
 	end2
@@ -4089,7 +4087,7 @@ BattleScript_TookAttack::
 
 BattleScript_SturdyPreventsOHKO::
 	call BattleScript_AbilityPopUp
-	printstring STRINGID_PKMNPROTECTEDBY
+	printstring STRINGID_ITDOESNTAFFECT
 	pause B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 

@@ -1,6 +1,6 @@
 const u8 gEasyChatWord_Wandering[] = _("WANDERING");
 const u8 gEasyChatWord_Rickety[] = _("RICKETY");
-const u8 gEasyChatWord_RockSolid[] = _("Rock-Solid");
+const u8 gEasyChatWord_RockSolid[] = _("ROCK-SOLID");
 const u8 gEasyChatWord_Hungry[] = _("HUNGRY");
 const u8 gEasyChatWord_Tight[] = _("TIGHT");
 const u8 gEasyChatWord_Ticklish[] = _("TICKLISH");
@@ -18,7 +18,7 @@ const u8 gEasyChatWord_Thick[] = _("THICK");
 const u8 gEasyChatWord_Smooth[] = _("SMOOTH");
 const u8 gEasyChatWord_Slimy[] = _("SLIMY");
 const u8 gEasyChatWord_Thin[] = _("THIN");
-const u8 gEasyChatWord_Break[] = _("Break");
+const u8 gEasyChatWord_Break[] = _("BREAK");
 const u8 gEasyChatWord_Voracious[] = _("VORACIOUS");
 const u8 gEasyChatWord_Scatter[] = _("SCATTER");
 const u8 gEasyChatWord_Awesome[] = _("AWESOME");
