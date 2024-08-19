@@ -59,10 +59,10 @@ LilycoveCity_PokemonCenter_1F_Text_HowManyKindsOfPokemon:
 LilycoveCity_PokemonCenter_1F_Text_HeardAboutRottenScoundrels:
 	.string "I've been hearing about some rotten\n"
 	.string "scoundrels who steal Pokémon and rip\l"
-	.string "off METEORITES.$"
+	.string "off Meteorites.$"
 
 LilycoveCity_PokemonCenter_1F_Text_HaventSeenRottenScoundrels:
 	.string "Those rotten scoundrels who steal\n"
-	.string "Pokémon and rip off METEORITES…\p"
+	.string "Pokémon and rip off Meteorites…\p"
 	.string "I haven't seen them around recently.$"
 

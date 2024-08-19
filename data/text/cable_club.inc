@@ -1,5 +1,5 @@
 CableClub_Text_WelcomeWhichCableClubService:
-	.string "Welcome to the Pokémon CABLE\n"
+	.string "Welcome to the Pokémon Cable\n"
 	.string "Club.\p"
 	.string "Which of our services do you wish\n"
 	.string "to use?$"
@@ -207,7 +207,7 @@ CableClub_Text_GuideToVariousServices:
 	.string "various services.$"
 
 CableClub_Text_CancelSelectedItem::
-	.string "Cancels the selected MENU item.$"
+	.string "Cancels the selected Menu item.$"
 
 @ Unused
 CableClub_Text_WhichBattleMode:
@@ -218,7 +218,7 @@ CableClub_Text_ReturnsToPreviousStep:
 	.string "Returns to the previous step.$"
 
 CableClub_Text_NeedBerryForBerryCrush:
-	.string "To use the Berry CRUSH service,\n"
+	.string "To use the Berry Crush service,\n"
 	.string "you must have at least one Berry.$"
 
 CableClub_Text_NeedTwoMonsForUnionRoom:
@@ -253,7 +253,7 @@ MossdeepCity_GameCorner_1F_Text_DescribeWhichGame:
 
 MossdeepCity_GameCorner_1F_Text_PokemonJumpInfo:
 	.string "“Pokémon Jump”\p"
-	.string "Make your Pokémon skip the VINE WHIP\n"
+	.string "Make your Pokémon skip the Vine Whip\n"
 	.string "rope with the A Button.\p"
 	.string "Only mini Pokémon around 28 inches\n"
 	.string "or less may participate.\p"
@@ -265,13 +265,13 @@ MossdeepCity_GameCorner_1F_Text_PokemonJumpInfo:
 	.string "jumps in time.$"
 
 MossdeepCity_GameCorner_1F_Text_DodrioBerryPickingInfo:
-	.string "“DODRIO Berry-PICKING”\p"
-	.string "Command DODRIO's three heads to\n"
+	.string "“Dodrio Berry-Picking”\p"
+	.string "Command Dodrio's three heads to\n"
 	.string "catch falling Berries.\p"
 	.string "Press right, up, or left on the\n"
 	.string "{PLUS} Control Pad to move the heads.\p"
 	.string "To play this game, you must have\n"
-	.string "a DODRIO.$"
+	.string "a Dodrio.$"
 
 MossdeepCity_GameCorner_1F_Text_TalkToOldManToPlay:
 	.string "If you want to play a game,\n"
@@ -323,8 +323,8 @@ MossdeepCity_GameCorner_1F_Text_ShortJumpingPokemonAllowed:
 	.string "That's all you need to know.$"
 
 MossdeepCity_GameCorner_1F_Text_OnlyDodrioAllowed:
-	.string "DODRIO Berry-PICKING is a game that \n"
-	.string "only DODRIO may enter.$"
+	.string "Dodrio Berry-Picking is a game that \n"
+	.string "only Dodrio may enter.$"
 
 @ Unused
 MossdeepCity_GameCorner_1F_Text_RetryPlease:
@@ -352,7 +352,7 @@ CableClub_Text_AccessRecordCorner:
 
 CableClub_Text_UseBerryCrush:
 	.string "Would you like to use the\n"
-	.string "Berry CRUSH System?$"
+	.string "Berry Crush System?$"
 
 CableClub_Text_ExplainBattleModes:
 	.string "There are three Battle Modes.\p"
@@ -373,19 +373,19 @@ CableClub_Text_ChooseGroupLeaderOfTwo:
 	.string "Please decide which of you two\n"
 	.string "will become the Leader.\p"
 	.string "The other player must then choose\n"
-	.string "“JOIN GROUP.”$"
+	.string "“Join Group.”$"
 
 CableClub_Text_ChooseGroupLeaderOfFour:
 	.string "Please decide which of you four\n"
-	.string "will become the GROUP Leader.\p"
+	.string "will become the Group Leader.\p"
 	.string "The other players must then choose\n"
-	.string "“JOIN GROUP.”$"
+	.string "“Join Group.”$"
 
 CableClub_Text_ChooseGroupLeader:
 	.string "Please decide which of you will\n"
-	.string "become the GROUP Leader.\p"
+	.string "become the Group Leader.\p"
 	.string "The other players must then choose\n"
-	.string "“JOIN GROUP.”$"
+	.string "“Join Group.”$"
 
 CableClub_Text_WelcomeUnionRoomEnter:
 	.string "Welcome to the Pokémon Wireless\n"
@@ -415,7 +415,7 @@ CableClub_Text_EnjoyUnionRoom:
 
 CableClub_Text_FirstTimeRightThisWay:
 	.string "Hello!\n"
-	.string "My name is TEALA.\p"
+	.string "My name is Teala.\p"
 	.string "This must be your first time\n"
 	.string "up here.\p"
 	.string "I'll show you how the Wireless\n"
@@ -448,8 +448,8 @@ CableClub_Text_ExplainWirelessClubFirstTime:
 
 CableClub_Text_AskAboutLinking:
 	.string "Hello, {PLAYER}!\p"
-	.string "It's me, TEALA, the Pokémon\n"
-	.string "CENTER 2F attendant.\p"
+	.string "It's me, Teala, the Pokémon\n"
+	.string "Center 2F attendant.\p"
 	.string "Is there something you needed to\n"
 	.string "ask me about linking?$"
 

@@ -70,20 +70,20 @@ SafariZone_EventScript_PokeblockPresent::
 	end
 
 SafariZone_Text_WouldYouLikeToExit:
-	.string "Would you like to exit the SAFARI\n"
+	.string "Would you like to exit the Safari\n"
 	.string "Zone right now?$"
 
 SafariZone_Text_TimesUp:
 	.string "Ding-dong! Time's up!\n"
-	.string "Your SAFARI Game is over.$"
+	.string "Your Safari Game is over.$"
 
 SafariZone_Text_OutOfBalls:
-	.string "You've run out of SAFARI Balls.\n"
-	.string "Your SAFARI Game is over.$"
+	.string "You've run out of Safari Balls.\n"
+	.string "Your Safari Game is over.$"
 
 SafariZone_Text_PlacePokeblockOnFeeder:
 	.string "Would you like to place a {POKEBLOCK}\n"
-	.string "on the {POKEBLOCK} FEEDER?$"
+	.string "on the {POKEBLOCK} Feeder?$"
 
 SafariZone_Text_PokeblockStillHere:
 	.string "The {STR_VAR_1} you left\n"
@@ -91,7 +91,7 @@ SafariZone_Text_PokeblockStillHere:
 
 SafariZone_Text_PokeblockWasPlaced:
 	.string "The {STR_VAR_1} was placed\n"
-	.string "on the {POKEBLOCK} FEEDER.$"
+	.string "on the {POKEBLOCK} Feeder.$"
 
 Route121_SafariZoneEntrance_Text_WelcomeToSafariZone:
 	.string "Welcome to the Safari Zone!\p"
@@ -114,17 +114,17 @@ Route121_SafariZoneEntrance_Text_ComeInAndEnjoy:
 
 Route121_SafariZoneEntrance_Text_FirstTimeInfo:
 	.string "When you enter the Safari Zone, you\n"
-	.string "start with 30 SAFARI Balls for\l"
+	.string "start with 30 Safari Balls for\l"
 	.string "catching Pokémon.\p"
-	.string "The SAFARI Game is over when you run\n"
-	.string "out of SAFARI Balls, or when you've\l"
+	.string "The Safari Game is over when you run\n"
+	.string "out of Safari Balls, or when you've\l"
 	.string "walked 9999 steps.\p"
 	.string "Come in and enjoy the Safari Zone!$"
 
 Route121_SafariZoneEntrance_Text_WouldYouLikeToPlay:
 	.string "Welcome to the Safari Zone!\p"
 	.string "All you can catch for just ¥500!\n"
-	.string "Would you like to play a SAFARI Game?$"
+	.string "Would you like to play a Safari Game?$"
 
 Route121_SafariZoneEntrance_Text_PlayAnotherTime:
 	.string "Okay.\n"
@@ -138,10 +138,10 @@ Route121_SafariZoneEntrance_Text_ThatWillBe500Please:
 	.string "That will be ¥500, please.$"
 
 Route121_SafariZoneEntrance_Text_HereAreYourSafariBalls:
-	.string "Here are your SAFARI Balls.$"
+	.string "Here are your Safari Balls.$"
 
 Route121_SafariZoneEntrance_Text_Received30SafariBalls:
-	.string "{PLAYER} received 30 SAFARI Balls.$"
+	.string "{PLAYER} received 30 Safari Balls.$"
 
 Route121_SafariZoneEntrance_Text_PleaseEnjoyYourself:
 	.string "We'll let you know when your game\n"
@@ -155,11 +155,11 @@ Route121_SafariZoneEntrance_Text_PCIsFull:
 
 Route121_SafariZoneEntrance_Text_YouNeedPokeblockCase:
 	.string "Excuse me!\n"
-	.string "You seem to be without a {POKEBLOCK} CASE.\p"
-	.string "Your SAFARI Game will be much more\n"
+	.string "You seem to be without a {POKEBLOCK} Case.\p"
+	.string "Your Safari Game will be much more\n"
 	.string "fruitful if you use {POKEBLOCK}s.\p"
-	.string "Please come back with a {POKEBLOCK} CASE.\p"
-	.string "You may obtain a {POKEBLOCK} CASE from\n"
+	.string "Please come back with a {POKEBLOCK} Case.\p"
+	.string "You may obtain a {POKEBLOCK} Case from\n"
 	.string "the Lilycove Contest Hall.$"
 
 SafariZone_South_Text_StillHaveTimeExit:
@@ -172,7 +172,7 @@ SafariZone_South_Text_EnjoyTheRestOfYourAdventure:
 
 SafariZone_South_Text_ExitEarlyThankYouForPlaying:
 	.string "Okay.\p"
-	.string "I'll take back your remaining SAFARI\n"
+	.string "I'll take back your remaining Safari\n"
 	.string "Balls.\p"
 	.string "Thank you for playing.\n"
 	.string "We hope to see you again.$"
@@ -215,7 +215,7 @@ SafariZone_North_Text_Man:
 	.string "here and trade them with my friends!$"
 
 SafariZone_South_Text_Youngster:
-	.string "I put a {POKEBLOCK} on the {POKEBLOCK} FEEDER.\n"
+	.string "I put a {POKEBLOCK} on the {POKEBLOCK} Feeder.\n"
 	.string "But it seems to have disappeared.\p"
 	.string "I guess Pokémon must have eaten it\n"
 	.string "without me noticing.$"
@@ -234,7 +234,7 @@ SafariZone_RestHouse_Text_Youngster:
 	.string "a good number of Pokémon.\p"
 	.string "You can improve your chances of making\n"
 	.string "a catch by getting closer to them\l"
-	.string "before throwing a SAFARI Ball.$"
+	.string "before throwing a Safari Ball.$"
 
 SafariZone_RestHouse_Text_PsychicM:
 	.string "If you use {POKEBLOCK}s, wild Pokémon won't\n"
@@ -243,7 +243,7 @@ SafariZone_RestHouse_Text_PsychicM:
 	.string "Pokémon that don't flee easily.$"
 
 SafariZone_RestHouse_Text_FatMan:
-	.string "If you put a {POKEBLOCK} on the FEEDER,\n"
+	.string "If you put a {POKEBLOCK} on the Feeder,\n"
 	.string "Pokémon are attracted to it.\p"
 	.string "I think Pokémon with the same sort of\n"
 	.string "nature are drawn by a certain {POKEBLOCK}.$"
@@ -276,7 +276,7 @@ SafariZone_Southeast_Text_RichBoy:
 	.string "from somewhere other than Hoenn.$"
 
 SafariZone_Northeast_Text_Boy:
-	.string "I only have a couple SAFARI Balls left.\p"
+	.string "I only have a couple Safari Balls left.\p"
 	.string "I'm having a hard time trying to\n"
 	.string "decide what I should catch.$"
 

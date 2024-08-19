@@ -20,7 +20,7 @@ FortreeCity_House5_EventScript_Zigzagoon::
 	end
 
 FortreeCity_House5_Text_TreeHousesAreGreat:
-	.string "The tree houses of FORTREE are great!\p"
+	.string "The tree houses of Fortree are great!\p"
 	.string "I think it's the number one town for\n"
 	.string "living together with Pokémon.$"
 
@@ -31,5 +31,5 @@ FortreeCity_House5_Text_AdaptedToNature:
 	.string "conform to the way we want to live.$"
 
 FortreeCity_House5_Text_Zigzagoon:
-	.string "ZIGZAGOON: Bufuu!$"
+	.string "Zigzagoon: Bufuu!$"
 

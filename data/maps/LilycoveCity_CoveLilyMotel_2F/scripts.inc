@@ -86,20 +86,20 @@ LilycoveCity_CoveLilyMotel_2F_Text_FilledPokedexGiveYouThis:
 
 LilycoveCity_CoveLilyMotel_2F_Text_ImTheProgrammer:
 	.string "Me? You're talking to me?\n"
-	.string "I'm the PROGRAMMER.\p"
-	.string "I wonder what the SLOTS are\n"
+	.string "I'm the Programmer.\p"
+	.string "I wonder what the Slots are\n"
 	.string "like here.$"
 
 LilycoveCity_CoveLilyMotel_2F_Text_ImTheGraphicArtist:
-	.string "I'm the GRAPHIC ARTIST! Aren't the\n"
+	.string "I'm the Graphic Artist! Aren't the\n"
 	.string "Pokémon of Hoenn interesting?$"
 
 LilycoveCity_CoveLilyMotel_2F_Text_GirlsAreCute:
-	.string "The girl TUBERS, they're cute, hey?\n"
-	.string "To battle against a cute TUBER…\p"
+	.string "The girl Tubers, they're cute, hey?\n"
+	.string "To battle against a cute Tuber…\p"
 	.string "Whoop, it's so awesome!\p"
-	.string "And the TWINS! Aren't they cute?\n"
-	.string "A 2-on-2 battle with TWINS…\p"
+	.string "And the Twins! Aren't they cute?\n"
+	.string "A 2-on-2 battle with Twins…\p"
 	.string "Whoop, it's unbearably fun!$"
 
 LilycoveCity_CoveLilyMotel_2F_Text_SeaBreezeTicklesHeart:

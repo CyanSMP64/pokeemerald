@@ -288,10 +288,10 @@ PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
 
 PlayersHouse_2F_Text_Notebook:
 	.string "{PLAYER} flipped open the notebook.\p"
-	.string "ADVENTURE RULE NO. 1\n"
-	.string "Open the MENU with START.\p"
-	.string "ADVENTURE RULE NO. 2\n"
-	.string "Record your progress with SAVE.\p"
+	.string "Adventure Rule No. 1\n"
+	.string "Open the Menu with Start.\p"
+	.string "Adventure Rule No. 2\n"
+	.string "Record your progress with Save.\p"
 	.string "The remaining pages are blank…$"
 
 Common_Text_LookCloserAtMap:

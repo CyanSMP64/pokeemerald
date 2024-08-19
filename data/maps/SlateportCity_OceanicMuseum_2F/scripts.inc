@@ -268,7 +268,7 @@ SlateportCity_OceanicMuseum_2F_Text_SternWhoAreYou:
 
 SlateportCity_OceanicMuseum_2F_Text_WereTeamAqua:
 	.string "We're Team Aqua!\p"
-	.string "Our BOSS wants those parts!\n"
+	.string "Our Boss wants those parts!\n"
 	.string "Shut your yap and fork them over!$"
 
 SlateportCity_OceanicMuseum_2F_Text_Grunt1Defeat:
@@ -277,7 +277,7 @@ SlateportCity_OceanicMuseum_2F_Text_Grunt1Defeat:
 
 SlateportCity_OceanicMuseum_2F_Text_BossGoingToBeFurious:
 	.string "Oh, man, what a disaster…\n"
-	.string "The BOSS is going to be furious…$"
+	.string "The Boss is going to be furious…$"
 
 SlateportCity_OceanicMuseum_2F_Text_LetMeTakeCareOfThis:
 	.string "Humph, sniveling wimp!\n"
@@ -350,20 +350,20 @@ SlateportCity_OceanicMuseum_2F_Text_RemindsMeOfAbandonedShip:
 
 SlateportCity_OceanicMuseum_2F_Text_DontRunInMuseum:
 	.string "Don't you dare run around inside\n"
-	.string "the MUSEUM!$"
+	.string "the Museum!$"
 
 SlateportCity_OceanicMuseum_2F_Text_WantToRideSubmarine:
 	.string "Wow, the submarine's awesome!\n"
 	.string "I want to go for a ride!$"
 
 SlateportCity_OceanicMuseum_2F_Text_WaterQualitySample1:
-	.string "“Water QUALITY SAMPLE 1,” the\n"
+	.string "“Water Quality Sample 1,” the\n"
 	.string "label says.\p"
 	.string "The sea is all connected, but the\n"
 	.string "water seems to differ by region.$"
 
 SlateportCity_OceanicMuseum_2F_Text_WaterQualitySample2:
-	.string "“Water QUALITY SAMPLE 2,” the\n"
+	.string "“Water Quality Sample 2,” the\n"
 	.string "label says.\p"
 	.string "Does the saltiness of seawater differ\n"
 	.string "by region, too?$"
@@ -397,17 +397,17 @@ SlateportCity_OceanicMuseum_2F_Text_SurfaceSeawaterDisplay:
 	.string "as currents driven by the winds.”$"
 
 SlateportCity_OceanicMuseum_2F_Text_SSTidalReplica:
-	.string "“THE FERRY S.S. TIDAL\p"
+	.string "“The Ferry S.S. Tidal\p"
 	.string "“A scale replica of the ship under\n"
 	.string "construction at Stern's Shipyard.”$"
 
 SlateportCity_OceanicMuseum_2F_Text_SubmarineReplica:
-	.string "“SUBMARINE EXPLORER 1\p"
+	.string "“Submarine Explorer 1\p"
 	.string "“A replica of the high-performance\n"
 	.string "ocean floor exploration submarine.”$"
 
 SlateportCity_OceanicMuseum_2F_Text_SumbersibleReplica:
-	.string "“SUBMERSIBLE POD\p"
+	.string "“Submersible Pod\p"
 	.string "“A replica of a compact, unmanned\n"
 	.string "pod for seafloor exploration.”$"
 

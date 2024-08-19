@@ -332,7 +332,7 @@ VerdanturfTown_BattleTentLobby_Text_MonsReluctantToUseDislikedMoves:
 	.string "a Pokémon will be reluctant to use it.\p"
 	.string "It doesn't matter how strong it is,\n"
 	.string "either.\p"
-	.string "For example, a Pokémon with a GENTLE\n"
+	.string "For example, a Pokémon with a Gentle\n"
 	.string "nature probably won't enjoy hurting\l"
 	.string "its opponents.\p"
 	.string "If it can't seem to live up to its\n"

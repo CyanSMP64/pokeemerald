@@ -408,7 +408,7 @@ BattleFrontier_BattleArenaLobby_Text_NotEnoughValidMonsLvOpen:
 	.string "different kinds of Pokémon.\p"
 	.string "They also must not hold the same\n"
 	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
+	.string "Eggs{STR_VAR_1} ineligible.\p"
 	.string "When you have made your preparations,\n"
 	.string "please do return.$"
 
@@ -422,7 +422,7 @@ BattleFrontier_BattleArenaLobby_Text_NotEnoughValidMonsLv50:
 	.string "must all be Level 50 or lower.\p"
 	.string "They also must not hold the same\n"
 	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
+	.string "Eggs{STR_VAR_1} ineligible.\p"
 	.string "When you have made your preparations,\n"
 	.string "please do return.$"
 
@@ -550,9 +550,9 @@ BattleFrontier_BattleArenaLobby_Text_ExplainSkillRules:
 	.string "effective” and goes down if it was\l"
 	.string "“not very effective.”\p"
 	.string "The Skill rating will not go up for\n"
-	.string "moves such as PROTECT and DETECT.\p"
-	.string "If the opponent used PROTECT or\n"
-	.string "DETECT, and your Pokémon failed to\l"
+	.string "moves such as Protect and Detect.\p"
+	.string "If the opponent used Protect or\n"
+	.string "Detect, and your Pokémon failed to\l"
 	.string "hit with a move, its Skill rating will not\l"
 	.string "go down.$"
 

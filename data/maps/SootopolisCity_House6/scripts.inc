@@ -49,5 +49,5 @@ SootopolisCity_House6_Text_DontWantThisDoll:
 	.string "You don't want this Doll?$"
 
 SootopolisCity_House6_Text_LovePlushDolls:
-	.string "I love plush DOLLS!$"
+	.string "I love plush Dolls!$"
 

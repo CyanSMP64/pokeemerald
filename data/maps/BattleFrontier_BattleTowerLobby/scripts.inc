@@ -978,12 +978,12 @@ BattleFrontier_BattleTowerLobby_Text_AboutToFace50thTrainer:
 	.string "Good luck!$"
 
 BattleFrontier_BattleTowerLobby_Text_HereAreSomeRibbons:
-	.string "Here are some RIBBONS for beating\n"
+	.string "Here are some Ribbons for beating\n"
 	.string "seven tough Trainers in a row.\p"
-	.string "{PLAYER} received some RIBBONS!$"
+	.string "{PLAYER} received some Ribbons!$"
 
 BattleFrontier_BattleTowerLobby_Text_PutRibbonOnMons:
-	.string "{PLAYER} put the RIBBONS on\n"
+	.string "{PLAYER} put the Ribbons on\n"
 	.string "the challenger Pokémon.$"
 
 BattleFrontier_BattleTowerLobby_Text_DescribeFeelingsAboutBattleTower:
@@ -1083,7 +1083,7 @@ BattleFrontier_BattleTowerLobby_Text_NotEnoughValidMonsLv50:
 	.string "of Level 50 or less to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
+	.string "Eggs{STR_VAR_1} ineligible.\p"
 	.string "Please come see me when you are ready.$"
 
 @ Unused
@@ -1094,7 +1094,7 @@ BattleFrontier_BattleTowerLobby_Text_NotEnoughValidMonsLvOpen:
 	.string "to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
+	.string "Eggs{STR_VAR_1} ineligible.\p"
 	.string "Please come see me when you are ready.$"
 
 BattleFrontier_BattleTowerLobby_Text_NotEnoughValidMonsLv50Singles:
@@ -1104,7 +1104,7 @@ BattleFrontier_BattleTowerLobby_Text_NotEnoughValidMonsLv50Singles:
 	.string "of Level 50 or less to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
+	.string "Eggs{STR_VAR_1} ineligible.\p"
 	.string "Please come see me when you are ready.$"
 
 BattleFrontier_BattleTowerLobby_Text_NotEnoughValidMonsLvOpenSingles:
@@ -1114,7 +1114,7 @@ BattleFrontier_BattleTowerLobby_Text_NotEnoughValidMonsLvOpenSingles:
 	.string "to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
+	.string "Eggs{STR_VAR_1} ineligible.\p"
 	.string "Please come see me when you are ready.$"
 
 BattleFrontier_BattleTowerLobby_Text_NotEnoughValidMonsLv50Doubles:
@@ -1124,7 +1124,7 @@ BattleFrontier_BattleTowerLobby_Text_NotEnoughValidMonsLv50Doubles:
 	.string "of Level 50 or less to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
+	.string "Eggs{STR_VAR_1} ineligible.\p"
 	.string "Please come see me when you are ready.$"
 
 BattleFrontier_BattleTowerLobby_Text_NotEnoughValidMonsLvOpenDoubles:
@@ -1134,7 +1134,7 @@ BattleFrontier_BattleTowerLobby_Text_NotEnoughValidMonsLvOpenDoubles:
 	.string "to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
+	.string "Eggs{STR_VAR_1} ineligible.\p"
 	.string "Please come see me when you are ready.$"
 
 BattleFrontier_BattleTowerLobby_Text_NotEnoughValidMonsLv50Multis:
@@ -1144,7 +1144,7 @@ BattleFrontier_BattleTowerLobby_Text_NotEnoughValidMonsLv50Multis:
 	.string "of Level 50 or less to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
+	.string "Eggs{STR_VAR_1} ineligible.\p"
 	.string "Please come see me when you are ready.$"
 
 BattleFrontier_BattleTowerLobby_Text_NotEnoughValidMonsLvOpenMultis:
@@ -1154,7 +1154,7 @@ BattleFrontier_BattleTowerLobby_Text_NotEnoughValidMonsLvOpenMultis:
 	.string "to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
+	.string "Eggs{STR_VAR_1} ineligible.\p"
 	.string "Please come see me when you are ready.$"
 
 BattleFrontier_BattleTowerLobby_Text_WelcomSingleBattle:

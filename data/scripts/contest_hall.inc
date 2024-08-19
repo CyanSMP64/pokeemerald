@@ -1376,7 +1376,7 @@ LilycoveCity_ContestLobby_Text_ReceptionDontHavePokeblockCase:
 	.string "This is the reception counter for\n"
 	.string "Pokémon Contests.\p"
 	.string "Oh? It appears that you don't have\n"
-	.string "a {POKEBLOCK} CASE yet.\p"
+	.string "a {POKEBLOCK} Case yet.\p"
 	.string "In that case, we need to provide you\n"
 	.string "with this!$"
 
@@ -1464,7 +1464,7 @@ LilycoveCity_ContestLobby_Text_MonNotQualifiedForRank:
 	.string "Rank yet…$"
 
 LilycoveCity_ContestLobby_Text_EggCannotTakePart:
-	.string "I'm sorry, but an EGG cannot take part\n"
+	.string "I'm sorry, but an Egg cannot take part\n"
 	.string "in a Pokémon Contest.$"
 
 LilycoveCity_ContestLobby_Text_MonInNoConditionForContest:
@@ -1685,7 +1685,7 @@ LilycoveCity_ContestLobby_Text_MonInNoCondition2:
 	.string "condition to take part in a Contest…$"
 
 LilycoveCity_ContestLobby_Text_EggCannotTakePart2:
-	.string "I'm sorry, but an EGG cannot take part\n"
+	.string "I'm sorry, but an Egg cannot take part\n"
 	.string "in a Pokémon Contest.$"
 
 LilycoveCity_ContestLobby_Text_EnterWhichPokemon3:
@@ -1693,9 +1693,9 @@ LilycoveCity_ContestLobby_Text_EnterWhichPokemon3:
 
 LilycoveCity_ContestLobby_Text_PleaseDecideLinkLeader:
 	.string "Please decide which of you will\n"
-	.string "become the GROUP Leader.\p"
+	.string "become the Group Leader.\p"
 	.string "The other players must then choose\n"
-	.string "“JOIN GROUP.”$"
+	.string "“Join Group.”$"
 
 LilycoveCity_ContestLobby_Text_PlayerAt4PCounterUseGMode:
 	.string "At least one player has entered using\n"

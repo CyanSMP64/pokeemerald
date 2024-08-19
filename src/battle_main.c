@@ -2509,7 +2509,7 @@ static void AskRecordBattle(void)
     case STATE_ASK_RECORD:
         if (!gPaletteFade.active)
         {
-            // "Would you like to record your battle on your FRONTIER PASS?"
+            // "Would you like to record your battle on your Frontier Pass?"
             BattlePutTextOnWindow(gText_RecordBattleToPass, B_WIN_MSG);
             gBattleCommunication[MULTIUSE_STATE]++;
         }

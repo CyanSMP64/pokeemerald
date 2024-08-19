@@ -39,5 +39,5 @@ SootopolisCity_House1_Text_ExplainBrickBreak:
 	.string "so horrible that I can't describe it.$"
 
 SootopolisCity_House1_Text_Kecleon:
-	.string "KECLEON: Puu puhyaah.$"
+	.string "Kecleon: Puu puhyaah.$"
 

@@ -53,7 +53,7 @@ AquaHideout_1F_EventScript_Grunt1Defeated::
 AquaHideout_1F_Text_OurBossIsSnatchingSomething:
 	.string "What? What? What do you want with \n"
 	.string "Team Aqua?\p"
-	.string "Our BOSS isn't here! He's gone off to\n"
+	.string "Our Boss isn't here! He's gone off to\n"
 	.string "snatch something important!\p"
 	.string "… …\n"
 	.string "Where did he go?\p"
@@ -65,13 +65,13 @@ AquaHideout_1F_Text_WhereMightMagmaHideoutBe:
 	.string "Are you a Team Magma grunt?\p"
 	.string "I hear that Team Magma is trying to\n"
 	.string "awaken an awesome Pokémon at their\l"
-	.string "HIDEOUT.\p"
-	.string "But where might their HIDEOUT be?$"
+	.string "Hideout.\p"
+	.string "But where might their Hideout be?$"
 
 AquaHideout_1F_Text_BossWentToJackASubmarine:
 	.string "What? What? What do you want with \n"
 	.string "Team Aqua?\p"
-	.string "Our BOSS isn't here!\n"
+	.string "Our Boss isn't here!\n"
 	.string "He's gone off to jack a submarine!\p"
 	.string "… …\n"
 	.string "Where did he go?\p"
@@ -81,7 +81,7 @@ AquaHideout_1F_Text_BossWentToJackASubmarine:
 AquaHideout_1F_Text_BossIsOnRoute122:
 	.string "What? What? What do you want with \n"
 	.string "Team Aqua?\p"
-	.string "Our BOSS isn't here! He's on his way to\n"
+	.string "Our Boss isn't here! He's on his way to\n"
 	.string "Mt. Pyre on Route 122!\p"
 	.string "… …\n"
 	.string "Why did he go?\p"
@@ -98,7 +98,7 @@ AquaHideout_1F_Text_TeamMagmaAtMtChimney:
 AquaHideout_1F_Text_BossIsInSlateportCity:
 	.string "What? What? What do you want with\n"
 	.string "Team Aqua?\p"
-	.string "Our BOSS isn't here!\n"
+	.string "Our Boss isn't here!\n"
 	.string "He's on his way to Slateport City!\p"
 	.string "… …\n"
 	.string "Why did he go?\p"

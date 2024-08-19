@@ -660,22 +660,22 @@ Route104_Text_LandedInDewfordDeliverLetter:
 	.string "Mr. Briney: Ahoy!\n"
 	.string "We've hit land in Dewford.\p"
 	.string "I suppose you're off to deliver that\n"
-	.string "LETTER to, who was it now, Steven!$"
+	.string "Letter to, who was it now, Steven!$"
 
 DewfordTown_Text_SetSailBackToPetalburg:
 	.string "Mr. Briney: Have you delivered your\n"
-	.string "LETTER?\p"
+	.string "Letter?\p"
 	.string "Or were you meaning to sail back to\n"
 	.string "Petalburg?$"
 
 DewfordTown_Text_PetalburgWereSettingSail2:
 	.string "Mr. Briney: Petalburg it is, then!\p"
 	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
+	.string "Peeko, we're setting sail, my darling!$"
 
 DewfordTown_Text_GoDeliverIllBeWaiting:
 	.string "Mr. Briney: Then you go on and deliver\n"
-	.string "the LETTER. I'll be waiting.$"
+	.string "the Letter. I'll be waiting.$"
 
 DewfordTown_Text_BrineyLandedInDewford:
 	.string "Mr. Briney: Ahoy!\n"
@@ -691,12 +691,12 @@ DewfordTown_Text_WhereAreWeBound:
 DewfordTown_Text_PetalburgWereSettingSail:
 	.string "Mr. Briney: Petalburg, is it?\p"
 	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
+	.string "Peeko, we're setting sail, my darling!$"
 
 DewfordTown_Text_SlateportWereSettingSail:
 	.string "Mr. Briney: Slateport, is it?\p"
 	.string "Anchors aweigh!\n"
-	.string "PEEKO, we're setting sail, my darling!$"
+	.string "Peeko, we're setting sail, my darling!$"
 
 DewfordTown_Text_JustTellMeWhenYouNeedToSetSail:
 	.string "Mr. Briney: You just tell me whenever\n"
@@ -709,7 +709,7 @@ DewfordTown_Text_GettingItchToFish:
 DewfordTown_Text_GiveYouOneOfMyRods:
 	.string "I hear you, and I like what\n"
 	.string "you're saying!\p"
-	.string "I'll give you one of my fishing RODS.$"
+	.string "I'll give you one of my fishing Rods.$"
 
 DewfordTown_Text_ThrowInFishingAdvice:
 	.string "And, as an added bonus, I'll even throw\n"

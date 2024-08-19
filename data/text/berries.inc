@@ -35,12 +35,12 @@ Route111_Text_WhatColorBerriesToLookForToday:
 	.string "for today?$"
 
 Route114_Text_LoveUsingBerryCrushShareBerry:
-	.string "I love using the Berry CRUSH machine,\n"
+	.string "I love using the Berry Crush machine,\n"
 	.string "so I'm collecting Berries.\p"
 	.string "I'll share one with you, if you'd like.$"
 
 Route114_Text_TryBerryCrushWithFriends:
-	.string "You should try the Berry CRUSH\n"
+	.string "You should try the Berry Crush\n"
 	.string "machine with your friends.$"
 
 Route114_Text_FunToThinkAboutBerries:
@@ -203,14 +203,14 @@ SootopolisCity_Text_NameIsKiriHaveOneOfThese:
 	.string "Hi, what's your name?\p"
 	.string "… … …  … … …  … … …\n"
 	.string "Okay. That's nice!\p"
-	.string "My name is KIRI.\p"
+	.string "My name is Kiri.\p"
 	.string "My mommy and daddy named me that so\n"
 	.string "I would grow healthy and warmhearted.\l"
 	.string "That's what they wished.\p"
 	.string "You can have one of these.$"
 
 SootopolisCity_Text_GiveYouThisBerryToo:
-	.string "KIRI will give you this Berry, too!\n"
+	.string "Kiri will give you this Berry, too!\n"
 	.string "I really like it lots!$"
 
 SootopolisCity_Text_WhatKindOfWishInYourName:
@@ -224,7 +224,7 @@ SootopolisCity_Text_LikeSeasonBornIn:
 	.string "summer, do you like the summer?$"
 
 SootopolisCity_Text_ThenILoveAutumn:
-	.string "Then KIRI was born in the autumn,\n"
+	.string "Then Kiri was born in the autumn,\n"
 	.string "so I love the autumn!\p"
 	.string "Which season do you like?$"
 

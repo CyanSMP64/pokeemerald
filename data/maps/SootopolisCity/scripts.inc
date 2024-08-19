@@ -1540,7 +1540,7 @@ SootopolisCity_Text_LeadSuperiorTrainerToCave:
 	.string "experience of many kinds of Pokémon…\p"
 	.string "If such a person were to appear, I was\n"
 	.string "instructed by Wallace to lead that\l"
-	.string "Trainer to this CAVE.$"
+	.string "Trainer to this Cave.$"
 
 SootopolisCity_Text_AwakenedPokemonClash:
 	.string "Oh, my…\p"
@@ -1673,7 +1673,7 @@ SootopolisCity_Text_NeverBeenToSkyPillar:
 	.string "I wonder where it could be?$"
 
 SootopolisCity_Text_SoThatsRayquaza:
-	.string "Steven: So that's RAYQUAZA…\p"
+	.string "Steven: So that's Rayquaza…\p"
 	.string "It's incredible how the two rampaging\n"
 	.string "Pokémon would flee from it in fear…$"
 
@@ -1681,7 +1681,7 @@ SootopolisCity_Text_MaxieArchieLeft:
 	.string "Steven: It looks like both Maxie and\n"
 	.string "Archie have gone away somewhere.\p"
 	.string "Perhaps they've gone to Mt. Pyre to\n"
-	.string "return those ORBS…$"
+	.string "return those Orbs…$"
 
 SootopolisCity_Text_HaventYouScaledSkyPillar:
 	.string "Wallace: Oh?\n"
@@ -1709,7 +1709,7 @@ SootopolisCity_Text_ThankYouForHelpAcceptThis:
 
 SootopolisCity_Text_ExplainWaterfallGoToGym:
 	.string "That Hidden Machine contains\n"
-	.string "WATERFALL.\p"
+	.string "Waterfall.\p"
 	.string "If you have the Rain Badge, a Pokémon\n"
 	.string "that has learned that HM move can\l"
 	.string "force its way up waterfalls.\p"

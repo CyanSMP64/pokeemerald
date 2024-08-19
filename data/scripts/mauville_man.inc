@@ -955,7 +955,7 @@ MauvilleCity_PokemonCenter_1F_Text_IllSingThisSongForAWhile:
 	.string "I'll sing this song for a while.$"
 
 MauvilleCity_PokemonCenter_1F_Text_TeachWhatsHipAndHappening:
-	.string "Hey, yo! They call me the HIPSTER.\n"
+	.string "Hey, yo! They call me the Hipster.\n"
 	.string "I'll teach you what's hip and happening.$"
 
 MauvilleCity_PokemonCenter_1F_Text_IAlreadyTaughtYou:

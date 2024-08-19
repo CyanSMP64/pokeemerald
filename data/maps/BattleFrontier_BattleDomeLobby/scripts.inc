@@ -485,7 +485,7 @@ BattleFrontier_BattleDomeLobby_Text_NotEnoughValidMonsLvOpen:
 	.string "You don't have three eligible Pokémon.\p"
 	.string "Also, the Pokémon must be holding\n"
 	.string "different kinds of items.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
+	.string "Eggs{STR_VAR_1} ineligible.\p"
 	.string "Please come see me when you are ready.$"
 
 BattleFrontier_BattleDomeLobby_Text_NotEnoughValidMonsLv50:
@@ -495,7 +495,7 @@ BattleFrontier_BattleDomeLobby_Text_NotEnoughValidMonsLv50:
 	.string "of Level 50 or less to enter.\p"
 	.string "They also must be holding different\n"
 	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
+	.string "Eggs{STR_VAR_1} ineligible.\p"
 	.string "Please come see me when you are ready.$"
 
 BattleFrontier_BattleDomeLobby_Text_ShowYouToBattleDome:
@@ -677,5 +677,5 @@ BattleFrontier_BattleDomeLobby_Text_ExplainTourneyTree:
 BattleFrontier_BattleDomeLobby_Text_ExplainDoubleKORules:
 	.string "If battling Pokémon faint at the same\n"
 	.string "time--a double KO--in a tournament\l"
-	.string "match, the REFEREES will review\l"
+	.string "match, the Referees will review\l"
 	.string "the match and declare the winner.$"

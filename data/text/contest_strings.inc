@@ -197,16 +197,16 @@ gText_RainDance::
 	.string "Rain Dance$"
 
 gText_Rage::
-	.string "RAGE$"
+	.string "Rage$"
 
 gText_FocusEnergy::
-	.string "FOCUS ENERGY$"
+	.string "Focus Energy$"
 
 gText_Hypnosis::
 	.string "Hypnosis$"
 
 gText_Softboiled::
-	.string "SOFTBOILED$"
+	.string "Soft-Boiled$"
 
 gText_HornAttack::
 	.string "Horn Attack$"
@@ -215,22 +215,22 @@ gText_SwordsDance::
 	.string "Swords Dance$"
 
 gText_Conversion::
-	.string "CONVERSION$"
+	.string "Conversion$"
 
 gText_SunnyDay::
-	.string "SUNNY DAY$"
+	.string "Sunny Day$"
 
 gText_Rest2::
 	.string "Rest$"
 
 gText_Vicegrip::
-	.string "VICEGRIP$"
+	.string "Vise Grip$"
 
 gText_DefenseCurl::
 	.string "Defense Curl$"
 
 gText_LockOn::
-	.string "LOCK-ON$"
+	.string "Lock-On$"
 
 @ Contest type names
 
@@ -751,7 +751,7 @@ gText_Contest_Toughness::
 
 @ Unused
 gText_Tension::
-	.string "TENSION$"
+	.string "Tension$"
 
 gText_CoolMove::
 	.string "Cool Move$"

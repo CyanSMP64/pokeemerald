@@ -46,13 +46,13 @@ BerryBlender_Text_BlendMasterLetsBerryBlender:
 BerryBlender_Text_BlendMasterNoPokeblockCase:
 	.string "Hmmm!\p"
 	.string "You don't appear to have gotten\n"
-	.string "the {POKEBLOCK} CASE!\p"
+	.string "the {POKEBLOCK} Case!\p"
 	.string "I shall be here all day!\n"
-	.string "Obtain the {POKEBLOCK} CASE and hurry back!$"
+	.string "Obtain the {POKEBLOCK} Case and hurry back!$"
 
 BerryBlender_Text_BlendMasterPokeblockCaseFull:
 	.string "Hmmm!\p"
-	.string "Your {POKEBLOCK} CASE appears to be full!\p"
+	.string "Your {POKEBLOCK} Case appears to be full!\p"
 	.string "I shall be here all day!\n"
 	.string "Use some {POKEBLOCK}s and hurry back!$"
 

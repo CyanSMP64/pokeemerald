@@ -903,7 +903,7 @@ SlateportCity_EventScript_BerryCrushRankingsSign::
 	end
 
 SlateportCity_Text_EnergyGuruSellWhatYouNeed:
-	.string "I'm the ENERGY GURU! I'll go for it and\n"
+	.string "I'm the Energy Guru! I'll go for it and\n"
 	.string "sell you what you need!$"
 
 SlateportCity_Text_OhYourPokemon:
@@ -957,10 +957,10 @@ SlateportCity_Text_SlateportWonderfulPlace:
 	.string "Slateport is such a wonderful place!$"
 
 SlateportCity_Text_BuyBricksSoDecorWontGetDirty:
-	.string "If you put DOLLS or CUSHIONS on\n"
+	.string "If you put Dolls or Cushions on\n"
 	.string "the floor, they'll get dirty.\p"
-	.string "I'm going to buy some BRICKS so my\n"
-	.string "DOLLS and CUSHIONS won't get dirty\l"
+	.string "I'm going to buy some Bricks so my\n"
+	.string "Dolls and Cushions won't get dirty\l"
 	.string "when I leave them out.$"
 
 SlateportCity_Text_GoingToCompeteInBattleTent:
@@ -978,7 +978,7 @@ SlateportCity_Text_BushedHikingFromMauville:
 
 SlateportCity_Text_EveryoneCallsHimCaptStern:
 	.string "Stern, the fellow who built the\n"
-	.string "MUSEUM, also happens to be the leader\l"
+	.string "Museum, also happens to be the leader\l"
 	.string "of an undersea exploration team.\p"
 	.string "So, everyone calls him Capt. Stern.$"
 
@@ -988,7 +988,7 @@ SlateportCity_Text_WhatsLongLineOverThere:
 
 SlateportCity_Text_VisitedMuseumOften:
 	.string "When I was a child, I visited\n"
-	.string "the MUSEUM often.\p"
+	.string "the Museum often.\p"
 	.string "I used to dream about the mysteries of\n"
 	.string "the sea after seeing the exhibits.$"
 
@@ -1002,18 +1002,18 @@ SlateportCity_Text_AquaHasPolicy:
 	.string "the operation site.$"
 
 SlateportCity_Text_BossIsBrilliant:
-	.string "Our BOSS is brilliant.\p"
+	.string "Our Boss is brilliant.\p"
 	.string "What would he want to do with\n"
-	.string "a MUSEUM now?$"
+	.string "a Museum now?$"
 
 SlateportCity_Text_WhatsNewSchemeIWonder:
 	.string "What's the new scheme, I wonder?\p"
-	.string "Our BOSS is scary when he's mad, so\n"
+	.string "Our Boss is scary when he's mad, so\n"
 	.string "I'd better not screw things up…$"
 
 SlateportCity_Text_ShouldTakeItAll:
 	.string "If there's something we need in\n"
-	.string "the MUSEUM, we should take it all!$"
+	.string "the Museum, we should take it all!$"
 
 SlateportCity_Text_DontButtIn:
 	.string "Hey, you there!\n"
@@ -1072,8 +1072,8 @@ SlateportCity_Text_BuyTooMuch:
 
 SlateportCity_Text_GetNameRaterToHelpYou:
 	.string "If you want to change your Pokémon's\n"
-	.string "nickname, you'll have to get the NAME\l"
-	.string "RATER to help you.$"
+	.string "nickname, you'll have to get the Name\l"
+	.string "Rater to help you.$"
 
 SlateportCity_Text_CantChangeTradeMonName:
 	.string "Any Pokémon you get in a trade,\n"
@@ -1172,7 +1172,7 @@ SlateportCity_Text_SternWhatWasAllThat:
 	.string "Where did it come from?$"
 
 SlateportCity_Text_FromHarborTryingToTakeSub:
-	.string "It's from the HARBOR!\p"
+	.string "It's from the Harbor!\p"
 	.string "The submarine!\n"
 	.string "They're trying to take it!$"
 
@@ -1191,15 +1191,15 @@ SlateportCity_Text_SternsShipyardWantedSign:
 
 SlateportCity_Text_SternsShipyardNearsCompletion:
 	.string "Stern's Shipyard\p"
-	.string "“The ferry S.S. TIDAL nears\n"
+	.string "“The ferry S.S. Tidal nears\n"
 	.string "completion for serving the ports of\l"
 	.string "Slateport and Lilycove.”$"
 
 SlateportCity_Text_SternsShipyardFerryComplete:
 	.string "Stern's Shipyard\p"
 	.string "“Boarding of the Slateport-Lilycove\n"
-	.string "ferry S.S. TIDAL is handled at the\l"
-	.string "HARBOR.”$"
+	.string "ferry S.S. Tidal is handled at the\l"
+	.string "Harbor.”$"
 
 SlateportCity_Text_PokemonFanClubSign:
 	.string "Pokémon Fan Club\n"
@@ -1208,7 +1208,7 @@ SlateportCity_Text_PokemonFanClubSign:
 SlateportCity_Text_OceanicMuseumSign:
 	.string "“The endless sea sustains\n"
 	.string "all life.”\p"
-	.string "OCEANIC MUSEUM$"
+	.string "Oceanic Museum$"
 
 SlateportCity_Text_CitySign:
 	.string "Slateport City\p"
@@ -1216,20 +1216,20 @@ SlateportCity_Text_CitySign:
 	.string "cross paths.”$"
 
 SlateportCity_Text_MarketSign:
-	.string "Slateport MARKET\n"
+	.string "Slateport Market\n"
 	.string "“Unique items found nowhere else!”$"
 
 SlateportCity_Text_HarborFerryUnderConstruction:
-	.string "Slateport HARBOR\p"
-	.string "“The ferry S.S. TIDAL is under\n"
+	.string "Slateport Harbor\p"
+	.string "“The ferry S.S. Tidal is under\n"
 	.string "construction in the Shipyard.\p"
 	.string "“Service is scheduled to begin\n"
 	.string "shortly.”$"
 
 SlateportCity_Text_HarborSign:
-	.string "Slateport HARBOR\p"
+	.string "Slateport Harbor\p"
 	.string "“Enjoy a delightful cruise on\n"
-	.string "the ferry S.S. TIDAL.”$"
+	.string "the ferry S.S. Tidal.”$"
 
 SlateportCity_Text_NameRatersHouseSign:
 	.string "Name Rater's house\n"
@@ -1253,7 +1253,7 @@ SlateportCity_Text_ExplainBerries:
 SlateportCity_Text_ExplainBerryPowder:
 	.string "I recently had machines installed at\n"
 	.string "Pokémon Centers for crushing Berries.\p"
-	.string "The Berry CRUSH machines are at\n"
+	.string "The Berry Crush machines are at\n"
 	.string "the Direct Corner upstairs.\p"
 	.string "Did you know?\p"
 	.string "Could you make Berry Powder for\n"

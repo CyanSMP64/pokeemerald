@@ -483,12 +483,12 @@ OldaleTown_Text_FinishedSketchingFootprints:
 	.string "own footprints…$"
 
 OldaleTown_Text_MayLetsGoBack:
-	.string "MAY: {PLAYER}!\n"
+	.string "May: {PLAYER}!\n"
 	.string "Over here!\l"
 	.string "Let's hurry home!$"
 
 OldaleTown_Text_BrendanLetsGoBack:
-	.string "BRENDAN: I'm heading back to my dad's\n"
+	.string "Brendan: I'm heading back to my dad's\n"
 	.string "Lab now.\l"
 	.string "{PLAYER}, you should hustle back, too.$"
 
@@ -500,7 +500,7 @@ OldaleTown_Text_Accuser1:
 	.string "Well, well, how d'ya do, young 'un?\p"
 	.string "Huh? Y'don't know me?\n"
 	.string "Who am I, y'ask?\p"
-	.string "Why, I'm the KAIZO POLICE!\n"
+	.string "Why, I'm the Kaizo Police!\n"
 	.string "And I'm here to tell ya somethin'.\p"
 	.string "Your run…{PAUSE 30}\n"
 	.string "is officially…{PAUSE 30} {PLAY_SE SE_VINEBOOM}cursed!\p"

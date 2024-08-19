@@ -961,7 +961,7 @@ BattleFrontier_BattleDomeBattleRoom_Text_RefereeDecisionPleaseWait:
 	.string "is under way.$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_RefereesDecidedWinnerTrainer:
-	.string "The REFEREES have reached\n"
+	.string "The Referees have reached\n"
 	.string "a decision!\p"
 	.string "The winner is…\n"
 	.string "Oh, my goodness!\l"
@@ -969,7 +969,7 @@ BattleFrontier_BattleDomeBattleRoom_Text_RefereesDecidedWinnerTrainer:
 	.string "Congratulations!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_RefereesDecidedWinnerPlayer:
-	.string "The REFEREES have reached\n"
+	.string "The Referees have reached\n"
 	.string "a decision!\p"
 	.string "The winner is…\n"
 	.string "Oh, my goodness!\l"
@@ -1170,7 +1170,7 @@ BattleFrontier_BattleDomeBattleRoom_Text_PlayerVersusTucker:
 	.string "Let the battle begin!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_RefereesDecidedWinnerTucker:
-	.string "The REFEREES have reached\n"
+	.string "The Referees have reached\n"
 	.string "a decision!\p"
 	.string "The winner is…\n"
 	.string "Oh, my goodness!\l"

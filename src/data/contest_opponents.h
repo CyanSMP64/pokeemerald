@@ -172,7 +172,7 @@ const struct ContestWinner gDefaultContestWinners[] =
         .trainerId = 0xFFFF,
         .species = SPECIES_PLUSLE,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
-        .monName = _("PULSE"),
+        .monName = _("Pulse"),
         .trainerName = _("BAILY"),
         .contestRank = CONTEST_RANK_MASTER
     },
@@ -1311,7 +1311,7 @@ const struct ContestPokemon gContestOpponents[] =
     [CONTEST_OPPONENT_LUKE] = {
         .species = SPECIES_SLOWBRO,
         .nickname = _("BROWLO"),
-        .trainerName = _("LUKE"),
+        .trainerName = _("Luke"),
         .trainerGfxId = OBJ_EVENT_GFX_FAT_MAN,
         .aiFlags = CONTEST_AI_SET_1,
         .whichRank = CONTEST_RANK_SUPER,

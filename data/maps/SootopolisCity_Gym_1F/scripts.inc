@@ -234,14 +234,14 @@ SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis:
 	.string "the full obedience of all your Pokémon\l"
 	.string "to your every command.\p"
 	.string "The Rain Badge also allows the use\n"
-	.string "of the HM move WATERFALL to scale\l"
+	.string "of the HM move Waterfall to scale\l"
 	.string "walls of cascading water.\p"
 	.string "And, so that you never forget the\n"
 	.string "battle we shared, take this…$"
 
 SootopolisCity_Gym_1F_Text_ExplainWaterPulse:
 	.string "The Technical Machine I handed you\n"
-	.string "contains Water PULSE.\p"
+	.string "contains Water Pulse.\p"
 	.string "In use, it will occasionally confuse\n"
 	.string "the target with ultrasonic waves.\p"
 	.string "… … … … … …$"
@@ -256,7 +256,7 @@ SootopolisCity_Gym_1F_Text_JuanPostBattle:
 	.string "way to the ultimate destination.\p"
 	.string "The Pokémon League.\p"
 	.string "Travel to the easternmost reaches\n"
-	.string "of Hoenn, to the island EVER GRANDE.\p"
+	.string "of Hoenn, to the island Ever Grande.\p"
 	.string "There, you shall find the Pokémon\n"
 	.string "League.$"
 
@@ -265,7 +265,7 @@ SootopolisCity_Gym_1F_Text_GoGetFortreeBadge:
 	.string "obtain in Hoenn.\p"
 	.string "If you wish to challenge the Pokémon\n"
 	.string "League, you must obtain the last\l"
-	.string "Badge from the Gym in FORTREE.$"
+	.string "Badge from the Gym in Fortree.$"
 
 SootopolisCity_Gym_1F_Text_GymStatue:
 	.string "Sootopolis City Pokémon Gym$"

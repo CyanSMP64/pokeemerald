@@ -400,7 +400,7 @@ MossdeepCity_Gym_Text_VirgilPostBattle:
 	.string "than them…$"
 
 MossdeepCity_Gym_Text_BlakeIntro:
-	.string "Fufufufu… Watch me levitate a POKé\n"
+	.string "Fufufufu… Watch me levitate a Poké\n"
 	.string "Ball telekinetically!\p"
 	.string "Wrooooooooaaaar!\n"
 	.string "… … … … … … …\p"
@@ -559,11 +559,11 @@ MossdeepCity_Gym_Text_TateAndLizaDefeat:
 	.string "Liza: So, in recognition, take this.$"
 
 MossdeepCity_Gym_Text_ReceivedMindBadge:
-	.string "{PLAYER} received the MIND Badge\n"
+	.string "{PLAYER} received the Mind Badge\n"
 	.string "from Tate and Liza.$"
 
 MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis:
-	.string "Tate: The MIND Badge enhances the\n"
+	.string "Tate: The Mind Badge enhances the\n"
 	.string "Sp. Atk and Sp. Def of Pokémon.\p"
 	.string "Liza: It also lets you use the HM move\n"
 	.string "Dive outside of battle.\p"
@@ -571,7 +571,7 @@ MossdeepCity_Gym_Text_ExplainMindBadgeTakeThis:
 
 MossdeepCity_Gym_Text_ExplainCalmMind:
 	.string "Tate: That TM04 contains…\n"
-	.string "Liza: CALM MIND!\p"
+	.string "Liza: Calm Mind!\p"
 	.string "Tate: It raises Sp. Atk and…\n"
 	.string "Liza: It raises Sp. Def!\p"
 	.string "Tate: It's a move that's perfect…\n"

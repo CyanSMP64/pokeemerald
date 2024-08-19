@@ -1181,7 +1181,7 @@ PetalburgCity_Gym_Text_DadPlayerGoWithWally:
 
 PetalburgCity_Gym_Text_IllLoanYouMyZigzagoon:
 	.string "Wally, here, I'll loan you my Pokémon.\p"
-	.string "Wally received a ZIGZAGOON!$"
+	.string "Wally received a Zigzagoon!$"
 
 PetalburgCity_Gym_Text_WallyThankYouAndDadGivesPokeBall:
 	.string "Wally: Oh, wow!\n"
@@ -1279,7 +1279,7 @@ PetalburgCity_Gym_Text_NormanDefeat:
 	.string "Here, take this.$"
 
 PetalburgCity_Gym_Text_ReceivedBalanceBadge:
-	.string "{PLAYER} received the BALANCE Badge\n"
+	.string "{PLAYER} received the Balance Badge\n"
 	.string "from Dad!$"
 
 PetalburgCity_Gym_Text_ExplainBalanceBadgeTakeThis:

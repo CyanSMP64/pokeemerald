@@ -153,7 +153,7 @@ BattleFrontier_Lounge1_EventScript_Boy2::
 BattleFrontier_Lounge1_Text_PokemonBreederIntro:
 	.string "For 70 years I have raised Pokémon!\n"
 	.string "I am the man they revere as\l"
-	.string "the legendary top Pokémon BREEDER!\p"
+	.string "the legendary top Pokémon Breeder!\p"
 	.string "If you ever become as seasoned as me,\n"
 	.string "you'll see the abilities of Pokémon\l"
 	.string "at a glance.\p"

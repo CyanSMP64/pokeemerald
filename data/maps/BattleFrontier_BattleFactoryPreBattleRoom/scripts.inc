@@ -557,7 +557,7 @@ BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInDragonType:
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInDarkType:
 	.string "The Trainer is apparently skilled\n"
-	.string "in the handling of the DARK type.$"
+	.string "in the handling of the Dark type.$"
 
 BattleFrontier_BattleFactoryPreBattleRoom_Text_TrainerSkilledInSteelType:
 	.string "The Trainer is apparently skilled\n"

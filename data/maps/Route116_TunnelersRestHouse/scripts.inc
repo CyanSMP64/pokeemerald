@@ -50,12 +50,12 @@ Route116_TunnelersRestHouse_Text_ManDiggingHisWayToVerdanturf:
 
 Route116_TunnelersRestHouse_Text_GetToVerdanturfWithoutTunnel:
 	.string "To get to Verdanturf without using\n"
-	.string "this TUNNEL, you'd have to cross the\l"
+	.string "this Tunnel, you'd have to cross the\l"
 	.string "sea to Dewford, sail on to Slateport,\l"
 	.string "then travel through Mauville.$"
 
 Route116_TunnelersRestHouse_Text_TunnelHasGoneThrough:
-	.string "Did you hear? The TUNNEL to Verdanturf\n"
+	.string "Did you hear? The Tunnel to Verdanturf\n"
 	.string "has gone through!\p"
 	.string "Sometimes, if you hope strongly enough,\n"
 	.string "dreams do come true.$"

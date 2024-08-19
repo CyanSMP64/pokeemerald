@@ -11,7 +11,7 @@ MagmaHideout_3F_2R_Text_Grunt10Intro:
 	.string "says. But you know what?\p"
 	.string "Doing stuff like digging up a super-\n"
 	.string "ancient Pokémon and ripping off\l"
-	.string "someone's METEORITE…\p"
+	.string "someone's Meteorite…\p"
 	.string "I think we're going a little too far.\n"
 	.string "What do you think?$"
 

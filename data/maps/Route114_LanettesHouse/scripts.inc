@@ -56,13 +56,13 @@ Route114_LanettesHouse_Text_EverythingClutteredKeepThis:
 Route114_LanettesHouse_Text_OrganizeYourBoxes:
 	.string "May I offer advice about my Pokémon\n"
 	.string "Storage System?\p"
-	.string "You should organize your BOXES so you\n"
+	.string "You should organize your Boxes so you\n"
 	.string "can tell which Pokémon are in them.$"
 
 Route114_LanettesHouse_Text_ResearchNotesPage1:
 	.string "It's Lanette's research notes.\n"
-	.string "There's information about BOXES.\p"
-	.string "Design BOXES to hold 30 Pokémon each.\p"
+	.string "There's information about Boxes.\p"
+	.string "Design Boxes to hold 30 Pokémon each.\p"
 	.string "Each Trainer should be able to store\n"
 	.string "300 Pokémon on the PC system.\p"
 	.string "Keep reading?$"
@@ -99,6 +99,6 @@ Route114_LanettesHouse_Text_EmailFromBill:
 	.string "a part in its development.\p"
 	.string "“Here's hoping that you'll continue\n"
 	.string "research in Storage Systems.\p"
-	.string "“From BILL\n"
+	.string "“From Bill\n"
 	.string "… … … … … … … …”$"
 

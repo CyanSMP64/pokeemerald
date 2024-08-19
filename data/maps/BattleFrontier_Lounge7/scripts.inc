@@ -341,7 +341,7 @@ BattleFrontier_Lounge7_Text_RightTutorIntro:
 	.string "I know it's hard to see now, but I used\n"
 	.string "to be one fantastic Trainer.\p"
 	.string "I had a reputation as the most\n"
-	.string "invincible SWIMMER around, I tell you!\p"
+	.string "invincible Swimmer around, I tell you!\p"
 	.string "… … … … … …\p"
 	.string "What's wrong?\n"
 	.string "You don't believe me.\p"
@@ -367,7 +367,7 @@ BattleFrontier_Lounge7_Text_ThinkLadiesDontGetAlong:
 	.string "stay out here together, would they?$"
 
 BattleFrontier_Lounge7_Text_LadiesWereStrongAndBeautiful:
-	.string "When I was just a wee YOUNGSTER,\n"
+	.string "When I was just a wee Youngster,\n"
 	.string "those ladies were strong and beautiful.\p"
 	.string "They were idols among us Trainers.\p"
 	.string "Even now, age hasn't dulled their\n"

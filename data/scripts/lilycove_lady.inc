@@ -731,7 +731,7 @@ LilycoveCity_PokemonCenter_1F_Text_DontHaveAPokeblockCase:
 	.string "Please, may I have one {POKEBLOCK}?\n"
 	.string "All I'm asking for is one!\p"
 	.string "…Oh, but…\n"
-	.string "Don't you have a {POKEBLOCK} CASE?\l"
+	.string "Don't you have a {POKEBLOCK} Case?\l"
 	.string "That's no good. Next time, then!$"
 
 LilycoveCity_PokemonCenter_1F_Text_AskingForOnePokeblock:

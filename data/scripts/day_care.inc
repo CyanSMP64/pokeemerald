@@ -283,7 +283,7 @@ Route117_Text_DoYouWantEgg:
 	.string "Ah, it's you!\p"
 	.string "We were raising your Pokémon,\n"
 	.string "and my goodness, were we surprised!\p"
-	.string "Your Pokémon had an EGG!\p"
+	.string "Your Pokémon had an Egg!\p"
 	.string "We don't know how it got there,\n"
 	.string "but your Pokémon had it.\p"
 	.string "You do want it, yes?$"
@@ -301,7 +301,7 @@ Route117_Text_YouHaveNoRoomForIt:
 	.string "Come back when you've made room.$"
 
 Route117_Text_ReceivedEgg:
-	.string "{PLAYER} received the EGG from\n"
+	.string "{PLAYER} received the Egg from\n"
 	.string "the Day-Care Man.$"
 
 Route117_Text_TakeGoodCareOfIt:
@@ -312,7 +312,7 @@ Route117_Text_FriendlyWithOtherTrainersMon:
 	.string "it seemed to be friendly with\l"
 	.string "{STR_VAR_2}'s {STR_VAR_3}.\p"
 	.string "I may even have seen it receiving\n"
-	.string "a piece of MAIL.$"
+	.string "a piece of Mail.$"
 
 @ Unused
 Route117_Text_SeeWifeIfYouWantToPickUpMon:

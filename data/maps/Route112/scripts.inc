@@ -113,7 +113,7 @@ Route112_Text_LeaderGoingToAwakenThing:
 
 Route112_Text_YeahWeNeedMeteorite:
 	.string "Sounds like it, yeah. But I heard\n"
-	.string "we need a METEORITE to do it.$"
+	.string "we need a Meteorite to do it.$"
 
 Route112_Text_OhThatsWhyCrewWentToFallarbor:
 	.string "Oh, I get it now. That's why the rest\n"
@@ -126,16 +126,16 @@ Route112_Text_CantLetAnyonePassUntilTheyreBack:
 Route112_Text_NotEasyToGetBackToLavaridge:
 	.string "Eh, I'd like to get to Mauville, but if\n"
 	.string "I went down these ledges, it'd be no\l"
-	.string "easy matter to get back to LAVARIDGE.$"
+	.string "easy matter to get back to Lavaridge.$"
 
 Route112_Text_MtChimneyCableCarSign:
-	.string "Mt. Chimney CABLE CAR\n"
+	.string "Mt. Chimney Cable Car\n"
 	.string "“A short walk {UP_ARROW} way!”$"
 
 Route112_Text_MtChimneySign:
 	.string "Mt. Chimney\p"
 	.string "“For Lavaridge Town or the summit,\n"
-	.string "please take the CABLE CAR.”$"
+	.string "please take the Cable Car.”$"
 
 Route112_Text_RouteSignLavaridge:
 	.string "Route 112\n"

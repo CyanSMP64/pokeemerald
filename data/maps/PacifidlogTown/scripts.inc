@@ -28,7 +28,7 @@ PacifidlogTown_EventScript_TownSign::
 	end
 
 PacifidlogTown_Text_FastRunningCurrent:
-	.string "The sea between PACIFIDLOG and\n"
+	.string "The sea between Pacifidlog and\n"
 	.string "Slateport has a fast-running tide.\p"
 	.string "If you decide to Surf, you could end\n"
 	.string "up swept away somewhere else.$"
@@ -44,7 +44,7 @@ PacifidlogTown_Text_SkyPillarTooScary:
 	.string "tower a little further out.\p"
 	.string "If you asked me, I wouldn't climb it.\n"
 	.string "It's too scary to get up that high.\p"
-	.string "Life at sea level in PACIFIDLOG,\n"
+	.string "Life at sea level in Pacifidlog,\n"
 	.string "that suits me fine.$"
 
 PacifidlogTown_Text_TownSign:

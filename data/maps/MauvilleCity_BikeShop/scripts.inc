@@ -181,22 +181,22 @@ MauvilleCity_BikeShop_Text_DidYouComeFromFarAway:
 MauvilleCity_BikeShop_Text_GuessYouDontNeedBike:
 	.string "Rydel: Is that right?\p"
 	.string "Then, I guess you have no need for\n"
-	.string "any of my BIKES.$"
+	.string "any of my Bikes.$"
 
 MauvilleCity_BikeShop_Text_ExplainBikesChooseWhichOne:
 	.string "Rydel: Hm, hm… … … … …\p"
 	.string "You're saying that you came all this\n"
-	.string "way from LITTLEROOT?\p"
+	.string "way from Littleroot?\p"
 	.string "My goodness!\n"
 	.string "That's ridiculously far!\p"
-	.string "If you had one of my BIKES, you could\n"
+	.string "If you had one of my Bikes, you could\n"
 	.string "go anywhere easily while feeling the\l"
 	.string "gentle caress of the wind!\p"
 	.string "I'll tell you what!\n"
 	.string "I'll give you a Bike!\p"
 	.string "Oh, wait a second!\p"
 	.string "I forgot to tell you that there are\n"
-	.string "two kinds of BIKES!\p"
+	.string "two kinds of Bikes!\p"
 	.string "They are the Mach Bike and\n"
 	.string "the Acro Bike!\p"
 	.string "The Mach Bike is for cyclists who want\n"
@@ -217,11 +217,11 @@ MauvilleCity_BikeShop_Text_ComeBackToSwitchBikes:
 
 MauvilleCity_BikeShop_Text_WantToSwitchBikes:
 	.string "Rydel: Oh? Were you thinking about\n"
-	.string "switching BIKES?$"
+	.string "switching Bikes?$"
 
 MauvilleCity_BikeShop_Text_IllSwitchBikes:
 	.string "Rydel: Okay, no problem!\n"
-	.string "I'll switch BIKES for you!$"
+	.string "I'll switch Bikes for you!$"
 
 MauvilleCity_BikeShop_Text_ExchangedMachForAcro:
 	.string "{PLAYER} got the Mach Bike exchanged\n"
@@ -245,7 +245,7 @@ MauvilleCity_BikeShop_Text_OhYourBikeIsInPC:
 	.string "on your adventure!$"
 
 MauvilleCity_BikeShop_Text_HandbooksAreInBack:
-	.string "I'm learning about BIKES while\n"
+	.string "I'm learning about Bikes while\n"
 	.string "I work here.\p"
 	.string "If you need advice on how to ride your\n"
 	.string "Bike, there're a couple handbooks in\l"

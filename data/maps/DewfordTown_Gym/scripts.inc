@@ -383,11 +383,11 @@ DewfordTown_Gym_Text_BrawlyDefeat:
 	.string "Take this Gym Badge!$"
 
 DewfordTown_Gym_Text_ReceivedKnuckleBadge:
-	.string "{PLAYER} received the KNUCKLE Badge\n"
+	.string "{PLAYER} received the Knuckle Badge\n"
 	.string "from Brawly.$"
 
 DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis:
-	.string "The KNUCKLE Badge makes all Pokémon\n"
+	.string "The Knuckle Badge makes all Pokémon\n"
 	.string "up to Level 30, even those you get in\l"
 	.string "trades, obey without question.\p"
 	.string "And, you'll be able to use the HM move\n"
@@ -396,7 +396,7 @@ DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis:
 	.string "Machine, too.$"
 
 DewfordTown_Gym_Text_ExplainBulkUp:
-	.string "That TM08 contains BULK UP.\p"
+	.string "That TM08 contains Bulk Up.\p"
 	.string "It's a move that raises both Attack\n"
 	.string "and Defense stats.$"
 

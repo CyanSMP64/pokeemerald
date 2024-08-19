@@ -446,7 +446,7 @@ BattleFrontier_OutsideWest_Text_DomeIsHereGrandpa:
 
 BattleFrontier_OutsideWest_Text_WontLetGentlemenBeatMe:
 	.string "Ah, so this here is the Battle Dome?\n"
-	.string "I won't let GENTLEMEN beat me!\p"
+	.string "I won't let Gentlemen beat me!\p"
 	.string "But where is the entrance?$"
 
 BattleFrontier_OutsideWest_Text_NothingHereNotLongAgo:

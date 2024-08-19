@@ -253,9 +253,9 @@ SlateportCity_PokemonFanClub_EventScript_Azumarill::
 	end
 
 SlateportCity_PokemonFanClub_Text_MeetChairman:
-	.string "Er-hem! I am the CHAIRMAN of the\n"
+	.string "Er-hem! I am the Chairman of the\n"
 	.string "Pokémon Fan Club!\p"
-	.string "Being the CHAIRMAN, I am naturally\n"
+	.string "Being the Chairman, I am naturally\n"
 	.string "the most important!\p"
 	.string "No one can best me when it comes\n"
 	.string "to raising Pokémon. No one!\p"
@@ -393,8 +393,8 @@ SlateportCity_PokemonFanClub_Text_Skitty:
 	.string "Skitty: Fffnyaaaah…$"
 
 SlateportCity_PokemonFanClub_Text_Zigzagoon:
-	.string "ZIGZAGOON: Kyuuu…$"
+	.string "Zigzagoon: Kyuuu…$"
 
 SlateportCity_PokemonFanClub_Text_Azumarill:
-	.string "AZUMARILL: Marimari?$"
+	.string "Azumarill: Marimari?$"
 

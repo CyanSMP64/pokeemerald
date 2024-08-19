@@ -310,7 +310,7 @@ MossdeepCity_SpaceCenter_1F_Text_RocketLaunchDemandsPerfection:
 
 MossdeepCity_SpaceCenter_1F_Text_MagmaHaveSightsOnSpaceCenter:
 	.string "Those Magma thugs have their sights\n"
-	.string "set on our SPACE CENTER.\p"
+	.string "set on our Space Center.\p"
 	.string "But we can't allow anything that minor\n"
 	.string "to interfere with our rocket launch!$"
 
@@ -392,7 +392,7 @@ MossdeepCity_SpaceCenter_1F_Text_Grunt1PostBattle:
 	.string "we'll come unannounced.$"
 
 MossdeepCity_SpaceCenter_1F_Text_Grunt4Intro:
-	.string "The rocket fuel the SPACE CENTER has\n"
+	.string "The rocket fuel the Space Center has\n"
 	.string "in storage--that's what we're after.\p"
 	.string "We mean to take every last bit of it!$"
 
@@ -421,7 +421,7 @@ MossdeepCity_SpaceCenter_1F_Text_Grunt2PostBattle:
 MossdeepCity_SpaceCenter_1F_Text_MagmaIntentToStealNotice:
 	.string "This is…\n"
 	.string "An intent-to-steal notice?\p"
-	.string "“To the staff of the SPACE CENTER:\n"
+	.string "“To the staff of the Space Center:\n"
 	.string "How are you? We are doing fine.\p"
 	.string "“We will soon visit you to take your\n"
 	.string "rocket fuel.\p"

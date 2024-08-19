@@ -181,7 +181,7 @@ LavaridgeTown_Gym_1F_EventScript_GymStatue::
 LavaridgeTown_Gym_1F_Text_GymGuideAdvice:
 	.string "Hey, how's it going, Champion-\n"
 	.string "bound {PLAYER}?\p"
-	.string "LAVARIDGE's Gym Leader Flannery\n"
+	.string "Lavaridge's Gym Leader Flannery\n"
 	.string "uses Fire-type Pokémon.\p"
 	.string "Her passion for Pokémon burns stronger\n"
 	.string "and hotter than a volcano.\p"
@@ -324,11 +324,11 @@ LavaridgeTown_Gym_1F_Text_FlanneryDefeat:
 	.string "For that, you deserve this.$"
 
 LavaridgeTown_Gym_1F_Text_ReceivedHeatBadge:
-	.string "{PLAYER} received the HEAT Badge\n"
+	.string "{PLAYER} received the Heat Badge\n"
 	.string "from Flannery.$"
 
 LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis:
-	.string "If you have a HEAT Badge, all Pokémon\n"
+	.string "If you have a Heat Badge, all Pokémon\n"
 	.string "up to Level 50, even those you get in\l"
 	.string "trades from other people, will obey\l"
 	.string "you completely.\p"
@@ -338,7 +338,7 @@ LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis:
 	.string "Don't be shy about taking it!$"
 
 LavaridgeTown_Gym_1F_Text_ExplainOverheat:
-	.string "That TM50 contains OVERHEAT.\p"
+	.string "That TM50 contains Overheat.\p"
 	.string "That move inflicts serious damage on\n"
 	.string "the opponent.\p"
 	.string "But it also sharply cuts the Sp. Atk\n"

@@ -24,8 +24,8 @@ MysteryGiftScript_BattleCardInfo:
 	end
 
 sText_MysteryGiftBattleCountCard:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.\p"
+	.string "Thank you for using the Mystery\n"
+	.string "Gift System.\p"
 	.string "Your Battle Count Card keeps\n"
 	.string "track of your battle record against\l"
 	.string "Trainers with the same Card.\p"
@@ -36,8 +36,8 @@ sText_MysteryGiftBattleCountCard:
 	.string "Please do give it a try!$"
 
 sText_MysteryGiftBattleCountCard_WonPrize:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.\p"
+	.string "Thank you for using the Mystery\n"
+	.string "Gift System.\p"
 	.string "Congratulations!\p"
 	.string "You have won a prize for winning\n"
 	.string "three battles!\p"

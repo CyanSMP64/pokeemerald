@@ -86,7 +86,7 @@ VerdanturfTown_WandasHouse_Text_StrongerSpeech:
 	.string "Wally: I lost to you, {PLAYER}, but I'm\n"
 	.string "not feeling down anymore.\p"
 	.string "Because I have a new purpose in life.\n"
-	.string "Together with my RALTS, I'm going\l"
+	.string "Together with my Ralts, I'm going\l"
 	.string "to challenge Pokémon Gyms and become\l"
 	.string "a great Trainer.\p"
 	.string "Please watch me, {PLAYER}.\n"
@@ -101,7 +101,7 @@ VerdanturfTown_WandasHouse_Text_StrongerSpeechShort:
 	.string "to another battle.$"
 
 VerdanturfTown_WandasHouse_Text_WallysNextDoor:
-	.string "UNCLE: Oh! {PLAYER}!\n"
+	.string "Uncle: Oh! {PLAYER}!\n"
 	.string "Wally's next door.\p"
 	.string "But, boy, there's something I have to\n"
 	.string "tell you.\p"
@@ -116,14 +116,14 @@ VerdanturfTown_WandasHouse_Text_WallySlippedOff:
 	.string "He slipped off on his own…$"
 
 VerdanturfTown_WandasHouse_Text_WallyGoneThatFar:
-	.string "UNCLE: Is that right?\n"
+	.string "Uncle: Is that right?\n"
 	.string "Wally's gone away that far all by\l"
 	.string "himself…\p"
 	.string "Well, I have to give him credit--he is\n"
 	.string "my little brother's son.$"
 
 VerdanturfTown_WandasHouse_Text_MeetWanda:
-	.string "WANDA: You are?\n"
+	.string "Wanda: You are?\n"
 	.string "Oh, right, I get it!\p"
 	.string "You're the {PLAYER} who Wally was\n"
 	.string "telling me about.\p"
@@ -133,7 +133,7 @@ VerdanturfTown_WandasHouse_Text_MeetWanda:
 	.string "and healthy since he came here.$"
 
 VerdanturfTown_WandasHouse_Text_DontWorryAboutWally:
-	.string "WANDA: Don't worry about Wally.\n"
+	.string "Wanda: Don't worry about Wally.\n"
 	.string "He'll be just fine.\p"
 	.string "I know my little cousin, and he has\n"
 	.string "Pokémon with him, too.$"
@@ -162,7 +162,7 @@ VerdanturfTown_WandasHouse_Text_IfAnythingHappenedToWally:
 	.string "parents in Petalburg in the eye…$"
 
 VerdanturfTown_WandasHouse_Text_WallyWasInEverGrande:
-	.string "Wally was in EVER GRANDE?\p"
+	.string "Wally was in Ever Grande?\p"
 	.string "His parents in Petalburg would be\n"
 	.string "astonished to hear that!$"
 

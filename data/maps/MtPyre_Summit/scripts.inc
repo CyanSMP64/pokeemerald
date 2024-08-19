@@ -435,7 +435,7 @@ MtPyre_Summit_Text_Grunt1Intro:
 	.string "We can't fall behind!$"
 
 MtPyre_Summit_Text_Grunt1Defeat:
-	.string "I thought you were one of the MAGMAS\n"
+	.string "I thought you were one of the Magmas\n"
 	.string "who happened to come back…$"
 
 MtPyre_Summit_Text_Grunt1PostBattle:
@@ -471,7 +471,7 @@ MtPyre_Summit_Text_Grunt3Defeat:
 MtPyre_Summit_Text_Grunt3PostBattle:
 	.string "Heh, it doesn't matter!\n"
 	.string "We bought ourselves some time!\p"
-	.string "The BOSS should have snatched what\n"
+	.string "The Boss should have snatched what\n"
 	.string "he was after!$"
 
 MtPyre_Summit_Text_Grunt4Intro:
@@ -507,7 +507,7 @@ MtPyre_Summit_Text_BothOrbsTakenMagmaLeftThis:
 	.string "The Blue Orb and Red Orb must never\n"
 	.string "be separated. They belong together.\p"
 	.string "What are those men trying to do with\n"
-	.string "the two ORBS?\p"
+	.string "the two Orbs?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
 	.string "Oh, yes. Was it Team Magma who came\n"
@@ -533,14 +533,14 @@ MtPyre_Summit_Text_GroudonKyogreAwakened:
 	.string "the Red Orb quelled the rage of\l"
 	.string "the two Pokémon…\p"
 	.string "It is also said that the true owner\n"
-	.string "of the ORBS still exists.\p"
+	.string "of the Orbs still exists.\p"
 	.string "However, no one knows who, or what\n"
-	.string "exactly, the ORBS belong to.\p"
+	.string "exactly, the Orbs belong to.\p"
 	.string "It could be a human, or perhaps\n"
 	.string "a Pokémon, but no one knows.$"
 
 MtPyre_Summit_Text_ThoseTwoMenReturnedOrbs:
-	.string "The two men who took the ORBS came\n"
+	.string "The two men who took the Orbs came\n"
 	.string "back to return them on their own.\p"
 	.string "Those men…\n"
 	.string "Perhaps they are not so evil after all…$"
@@ -581,7 +581,7 @@ MtPyre_Summit_Text_GroudonKyogreTale:
 	.string "infernos and vicious storms.\p"
 	.string "The Blue Orb and the Red Orb brought\n"
 	.string "an end to the calamity.\p"
-	.string "Light poured from the two ORBS and\n"
+	.string "Light poured from the two Orbs and\n"
 	.string "becalmed the enraged adversaries.\p"
 	.string "The pair, made docile, dove deep into\n"
 	.string "the sea where eventually they\l"

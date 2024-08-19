@@ -720,7 +720,7 @@ SecretBase_Text_ToyTV:
 	.string "mistaken for the real thing.$"
 
 SecretBase_Text_SeedotTV:
-	.string "A toy TV shaped like a SEEDOT.\n"
+	.string "A toy TV shaped like a Seedot.\n"
 	.string "It looks ready to roll away on its own…$"
 
 SecretBase_Text_SkittyTV:
@@ -730,7 +730,7 @@ SecretBase_Text_SkittyTV:
 SecretBase_Text_WouldYouLikeToMoveBases:
 	.string "You may only make one Secret Base.\p"
 	.string "Would you like to move from the Secret\n"
-	.string "BASE near {STR_VAR_1}?$"
+	.string "Base near {STR_VAR_1}?$"
 
 SecretBase_Text_MovingCompletedUseSecretPower:
 	.string "Moving completed.\p"

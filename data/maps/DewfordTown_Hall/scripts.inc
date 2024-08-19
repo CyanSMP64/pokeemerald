@@ -327,7 +327,7 @@ DewfordTown_Hall_Text_BooksAboutTrend:
 	.string "The Link Between\n"
 	.string "“{STR_VAR_1}” and\l"
 	.string "Pokémon…\p"
-	.string "USEFUL\n"
+	.string "Useful\n"
 	.string "“{STR_VAR_1}”…\p"
 	.string "It's neatly jammed with books about\n"
 	.string "“{STR_VAR_1}.”$"

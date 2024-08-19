@@ -36,8 +36,8 @@ MysticTicket_Obtained:
 	end
 
 sText_MysticTicketForYou:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.\p"
+	.string "Thank you for using the Mystery\n"
+	.string "Gift System.\p"
 	.string "You must be {PLAYER}.\n"
 	.string "There is a ticket here for you.$"
 
@@ -48,8 +48,8 @@ sText_MysticTicketUseAtPort:
 	.string "it is about?$"
 
 sText_MysticTicketThankYou:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.$"
+	.string "Thank you for using the Mystery\n"
+	.string "Gift System.$"
 
 sText_MysticTicketBagFull:
 	.string "Oh, I'm sorry, {PLAYER}.\n"

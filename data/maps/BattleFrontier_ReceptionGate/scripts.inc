@@ -454,7 +454,7 @@ BattleFrontier_ReceptionGate_Text_OpenLevelInfo:
 BattleFrontier_ReceptionGate_Text_MonEntryInfo:
 	.string "Virtually any kind of Pokémon may take\n"
 	.string "on the challenges at all facilities.\p"
-	.string "EGGS and certain kinds of Pokémon,\n"
+	.string "Eggs and certain kinds of Pokémon,\n"
 	.string "however, are not permitted.\p"
 	.string "The numbers of Pokémon required for\n"
 	.string "challenges will depend on the facility.\p"

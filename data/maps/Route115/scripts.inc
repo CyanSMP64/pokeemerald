@@ -135,5 +135,5 @@ Route115_Text_RouteSignRustboro:
 
 Route115_Text_MeteorFallsSign:
 	.string "Meteor Falls\n"
-	.string "Fallarbor Town THROUGH HERE$"
+	.string "Fallarbor Town Through Here$"
 

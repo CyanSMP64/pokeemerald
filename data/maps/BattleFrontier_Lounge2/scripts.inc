@@ -228,7 +228,7 @@ BattleFrontier_Lounge2_Text_PikeQueenSilverMons::
 	.string "she uses these three Pokémon:\p"
 	.string "A Poison-type Fang Snake Pokémon,\n"
 	.string "a Bug & Rock Mold Pokémon,\l"
-	.string "and a Water-type TENDER Pokémon.$"
+	.string "and a Water-type Tender Pokémon.$"
 
 BattleFrontier_Lounge2_Text_PikeQueenGoldMons::
 	.string "Have you battled the Pike Queen\n"
@@ -253,7 +253,7 @@ BattleFrontier_Lounge2_Text_ArenaTycoonSilverMons::
 	.string "When she's assessing the foe's ability,\n"
 	.string "she supposedly uses these Pokémon:\p"
 	.string "A Bug & Fighting Single Horn Pokémon,\n"
-	.string "a DARK-type MOONLIGHT Pokémon,\l"
+	.string "a Dark-type Moonlight Pokémon,\l"
 	.string "and a Bug & Ghost Shed Pokémon.$"
 
 BattleFrontier_Lounge2_Text_ArenaTycoonGoldMons::
@@ -261,10 +261,10 @@ BattleFrontier_Lounge2_Text_ArenaTycoonGoldMons::
 	.string "when she's serious?\p"
 	.string "When she battles for keeps,\n"
 	.string "she supposedly uses these Pokémon:\p"
-	.string "A DARK-type MOONLIGHT Pokémon,\n"
+	.string "A Dark-type Moonlight Pokémon,\n"
 	.string "a Ghost & Poison Shadow Pokémon\l"
 	.string "and a Grass- & Fighting-type\l"
-	.string "MUSHROOM Pokémon.$"
+	.string "Mushroom Pokémon.$"
 
 BattleFrontier_Lounge2_Text_PalaceMavenIsThere::
 	.string "Bet you didn't know this!\p"

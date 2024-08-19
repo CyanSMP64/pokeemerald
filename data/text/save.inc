@@ -14,7 +14,7 @@ gText_PlayerSavedGame::
 	.string "{PLAYER} saved the game.$"
 
 gText_DifferentSaveFile::
-	.string "WARNING!\p"
+	.string "Warning!\p"
 	.string "There is a different game file that\n"
 	.string "is already saved.\p"
 	.string "If you save now, the other file's\n"

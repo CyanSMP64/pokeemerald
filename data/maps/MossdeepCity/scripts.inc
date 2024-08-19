@@ -338,31 +338,31 @@ MossdeepCity_Text_WailmerWatching:
 	.string "Wailmer.\p"
 	.string "It's called, uh…\n"
 	.string "What was it now…\p"
-	.string "WAI, WAI, WAI…\p"
+	.string "Wai, Wai, Wai…\p"
 	.string "Wailmer watching!$"
 
 MossdeepCity_Text_SpaceCenterReceivedLetter:
-	.string "The island's SPACE CENTER has been\n"
+	.string "The island's Space Center has been\n"
 	.string "launching huge rockets.\p"
 	.string "There's been some kind of an uproar\n"
 	.string "over a letter they received recently.$"
 
 MossdeepCity_Text_SpaceCenterLaunchingRockets:
-	.string "The island's SPACE CENTER has been\n"
+	.string "The island's Space Center has been\n"
 	.string "launching huge rockets.$"
 
 MossdeepCity_Text_MossdeepTargetedByMagma:
-	.string "I heard from a SAILOR buddy that\n"
+	.string "I heard from a Sailor buddy that\n"
 	.string "Team Aqua set up shop in Lilycove.\p"
 	.string "I also heard that someone came along\n"
 	.string "and wiped the floor with them!\p"
 	.string "But Mossdeep here's been targeted\n"
 	.string "by that Team Magma.\p"
 	.string "If you want to know what they're up to,\n"
-	.string "go visit the SPACE CENTER.$"
+	.string "go visit the Space Center.$"
 
 MossdeepCity_Text_FeelReliefOnLand:
-	.string "I'm a SAILOR, so the sea's obviously\n"
+	.string "I'm a Sailor, so the sea's obviously\n"
 	.string "more important to me.\p"
 	.string "But you know? When I get back on land\n"
 	.string "after a long voyage, I do feel relief!$"
@@ -390,7 +390,7 @@ MossdeepCity_Text_SurfExhilarating:
 
 MossdeepCity_Text_SpecialSpaceCenterRock:
 	.string "This rock has a special meaning to\n"
-	.string "the people at the SPACE CENTER.\p"
+	.string "the people at the Space Center.\p"
 	.string "They put it here as their wish for\n"
 	.string "their rockets to fly safely.\p"
 	.string "When you make a wish, what do you use?\n"
@@ -411,7 +411,7 @@ MossdeepCity_Text_CitySign:
 	.string "“Our slogan: Cherish Pokémon!”$"
 
 MossdeepCity_Text_SpaceCenterSign:
-	.string "Mossdeep SPACE CENTER\n"
+	.string "Mossdeep Space Center\n"
 	.string "“The closest place to space.”$"
 
 MossdeepCity_Text_ScottSomethingWrongWithTown:

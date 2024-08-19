@@ -24,7 +24,7 @@ gText_PkmnTransferredLanettesPCBoxFull::
 
 gText_NoMoreRoomForPokemon::
 	.string "There's no more room for Pokémon!\p"
-	.string "The Pokémon BOXES are full and\n"
+	.string "The Pokémon Boxes are full and\n"
 	.string "can't accept any more!$"
 
 gText_NicknameThisPokemon::

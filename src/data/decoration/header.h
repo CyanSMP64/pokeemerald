@@ -939,7 +939,7 @@ const struct Decoration gDecorations[] =
     [DECOR_MARILL_DOLL] =
     {
         .id = DECOR_MARILL_DOLL,
-        .name = _("MARILL Doll"),
+        .name = _("Marill Doll"),
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
@@ -963,7 +963,7 @@ const struct Decoration gDecorations[] =
     [DECOR_CYNDAQUIL_DOLL] =
     {
         .id = DECOR_CYNDAQUIL_DOLL,
-        .name = _("CYNDAQUIL Doll"),
+        .name = _("Cyndaquil Doll"),
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
@@ -975,7 +975,7 @@ const struct Decoration gDecorations[] =
     [DECOR_CHIKORITA_DOLL] =
     {
         .id = DECOR_CHIKORITA_DOLL,
-        .name = _("CHIKORITA Doll"),
+        .name = _("Chikorita Doll"),
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
@@ -987,7 +987,7 @@ const struct Decoration gDecorations[] =
     [DECOR_TOTODILE_DOLL] =
     {
         .id = DECOR_TOTODILE_DOLL,
-        .name = _("TOTODILE Doll"),
+        .name = _("Totodile Doll"),
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
@@ -1059,7 +1059,7 @@ const struct Decoration gDecorations[] =
     [DECOR_TREECKO_DOLL] =
     {
         .id = DECOR_TREECKO_DOLL,
-        .name = _("TREECKO Doll"),
+        .name = _("Treecko Doll"),
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
@@ -1071,7 +1071,7 @@ const struct Decoration gDecorations[] =
     [DECOR_TORCHIC_DOLL] =
     {
         .id = DECOR_TORCHIC_DOLL,
-        .name = _("TORCHIC Doll"),
+        .name = _("Torchic Doll"),
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
@@ -1083,7 +1083,7 @@ const struct Decoration gDecorations[] =
     [DECOR_MUDKIP_DOLL] =
     {
         .id = DECOR_MUDKIP_DOLL,
-        .name = _("MUDKIP Doll"),
+        .name = _("Mudkip Doll"),
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
@@ -1131,7 +1131,7 @@ const struct Decoration gDecorations[] =
     [DECOR_KECLEON_DOLL] =
     {
         .id = DECOR_KECLEON_DOLL,
-        .name = _("KECLEON Doll"),
+        .name = _("Kecleon Doll"),
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
@@ -1143,7 +1143,7 @@ const struct Decoration gDecorations[] =
     [DECOR_AZURILL_DOLL] =
     {
         .id = DECOR_AZURILL_DOLL,
-        .name = _("AZURILL Doll"),
+        .name = _("Azurill Doll"),
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
@@ -1191,7 +1191,7 @@ const struct Decoration gDecorations[] =
     [DECOR_LOTAD_DOLL] =
     {
         .id = DECOR_LOTAD_DOLL,
-        .name = _("LOTAD Doll"),
+        .name = _("Lotad Doll"),
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,
@@ -1203,7 +1203,7 @@ const struct Decoration gDecorations[] =
     [DECOR_SEEDOT_DOLL] =
     {
         .id = DECOR_SEEDOT_DOLL,
-        .name = _("SEEDOT Doll"),
+        .name = _("Seedot Doll"),
         .permission = DECORPERM_SPRITE,
         .shape = DECORSHAPE_1x1,
         .category = DECORCAT_DOLL,

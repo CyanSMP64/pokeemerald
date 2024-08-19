@@ -188,7 +188,7 @@ SlateportCity_ContestHall_Text_ImLikeMajorlyCheesed:
 @ Unused
 SlateportCity_ContestHall_Text_ExplainTorment:
 	.string "That's, like, TM41, you know?\n"
-	.string "Hey, it's TORMENT, you hearing me?\p"
+	.string "Hey, it's Torment, you hearing me?\p"
 	.string "Like, it won't let the other guy\n"
 	.string "use the same move twice in a row, see?\p"
 	.string "Hey, now, you listen here, like,\n"

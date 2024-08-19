@@ -345,11 +345,11 @@ MauvilleCity_Gym_Text_WattsonDefeat:
 	.string "Take this Badge!$"
 
 MauvilleCity_Gym_Text_ReceivedDynamoBadge:
-	.string "{PLAYER} received the DYNAMO Badge\n"
+	.string "{PLAYER} received the Dynamo Badge\n"
 	.string "from Wattson.$"
 
 MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis:
-	.string "With the DYNAMO Badge, Pokémon can\n"
+	.string "With the Dynamo Badge, Pokémon can\n"
 	.string "use Rock Smash out of battle.\p"
 	.string "And, it will make your Pokémon a little\n"
 	.string "bit faster, too.\p"

@@ -68,8 +68,8 @@ FallarborTown_CozmosHouse_Text_MeteoriteWillNeverBeMineNow:
 	.string "Prof. Cozmo: Oh…\n"
 	.string "I never should have let myself be\l"
 	.string "conned into telling Team Magma where\l"
-	.string "you can find METEORITES…\p"
-	.string "That METEORITE from Meteor Falls…\n"
+	.string "you can find Meteorites…\p"
+	.string "That Meteorite from Meteor Falls…\n"
 	.string "It's never going to be mine now…$"
 
 FallarborTown_CozmosHouse_Text_IsThatMeteoriteMayIHaveIt:
@@ -77,7 +77,7 @@ FallarborTown_CozmosHouse_Text_IsThatMeteoriteMayIHaveIt:
 	.string "Hah?\p"
 	.string "That item…\p"
 	.string "Could it be?\p"
-	.string "Is it the METEORITE that Team Magma\n"
+	.string "Is it the Meteorite that Team Magma\n"
 	.string "took from Meteor Falls?\p"
 	.string "Please, may I have it?\p"
 	.string "I'm not asking for it for free.\n"
@@ -99,7 +99,7 @@ FallarborTown_CozmosHouse_Text_CrushedWithDisappointment:
 
 FallarborTown_CozmosHouse_Text_MayIHaveMeteorite:
 	.string "Prof. Cozmo: Please, may I have that\n"
-	.string "METEORITE?\p"
+	.string "Meteorite?\p"
 	.string "I'm not asking for it for free.\n"
 	.string "How about in exchange for this TM?$"
 

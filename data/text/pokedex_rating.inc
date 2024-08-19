@@ -35,7 +35,7 @@ gBirchDexRatingText_LessThan50::
 	.string "Keep up the effort.$"
 
 gBirchDexRatingText_LessThan60::
-	.string "Are you using any RODS?\n"
+	.string "Are you using any Rods?\n"
 	.string "There are many Pokémon in the sea.$"
 
 gBirchDexRatingText_LessThan70::
@@ -92,7 +92,7 @@ gBirchDexRatingText_LessThan170::
 
 gBirchDexRatingText_LessThan180::
 	.string "I would say you already qualify as\n"
-	.string "a Pokémon PROFESSOR, and a good\l"
+	.string "a Pokémon Professor, and a good\l"
 	.string "one, too!$"
 
 gBirchDexRatingText_LessThan190::

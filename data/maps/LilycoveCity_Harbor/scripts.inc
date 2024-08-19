@@ -585,7 +585,7 @@ LilycoveCity_Harbor_Text_SailorFerryUnavailable:
 	.string "at the Shipyard in Slateport.$"
 
 LilycoveCity_Harbor_Text_SailorFerryAvailable:
-	.string "The ferry S.S. TIDAL is finally in\n"
+	.string "The ferry S.S. Tidal is finally in\n"
 	.string "operation.\p"
 	.string "The folks at the Shipyard in Slateport\n"
 	.string "must've worked extra hard.\p"

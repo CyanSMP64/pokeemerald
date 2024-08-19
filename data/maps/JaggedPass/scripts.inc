@@ -226,7 +226,7 @@ JaggedPass_Text_GruntIntro:
 
 JaggedPass_Text_GruntDefeat:
 	.string "Urrrgh…\p"
-	.string "I should've ducked into our HIDEOUT\n"
+	.string "I should've ducked into our Hideout\n"
 	.string "right away…$"
 
 JaggedPass_Text_GoWhereverYouWant:

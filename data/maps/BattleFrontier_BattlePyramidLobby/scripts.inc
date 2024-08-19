@@ -572,7 +572,7 @@ BattleFrontier_BattlePyramidLobby_Text_NotEnoughValidMonsLvOpen:
 	.string "Pokémon qualified for the challenge.\p"
 	.string "Please also remember to take all\n"
 	.string "items from your Pokémon.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
+	.string "Eggs{STR_VAR_1} ineligible.\p"
 	.string "When you are ready, please have\n"
 	.string "a word with me.$"
 
@@ -584,7 +584,7 @@ BattleFrontier_BattlePyramidLobby_Text_NotEnoughValidMonsLv50:
 	.string "and each no higher than Level 50.\p"
 	.string "Please also remember to take all\n"
 	.string "items from your Pokémon.\p"
-	.string "EGGS{STR_VAR_1} ineligible.\p"
+	.string "Eggs{STR_VAR_1} ineligible.\p"
 	.string "When you are ready, please have\n"
 	.string "a word with me.$"
 
@@ -740,7 +740,7 @@ BattleFrontier_BattlePyramidLobby_Text_HintPPWaste:
 	.string "It is a curse…\p"
 	.string "…And, I see your Pokémon drained of\n"
 	.string "Power Points and having no recourse\l"
-	.string "but to use STRUGGLE…$"
+	.string "but to use Struggle…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintLevitate:
 	.string "I see Pokémon loftily airborne…\p"
@@ -793,9 +793,9 @@ BattleFrontier_BattlePyramidLobby_Text_HintBug:
 	.string "from different kinds of attacks…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintDark:
-	.string "I see DARK-type Pokémon…\p"
+	.string "I see Dark-type Pokémon…\p"
 	.string "…And, I see your Pokémon suffering\n"
-	.string "from DARK-type moves…$"
+	.string "from Dark-type moves…$"
 
 BattleFrontier_BattlePyramidLobby_Text_HintWater:
 	.string "I see Water-type Pokémon…\p"

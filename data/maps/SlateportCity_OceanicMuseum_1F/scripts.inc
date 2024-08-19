@@ -225,7 +225,7 @@ SlateportCity_OceanicMuseum_1F_Movement_FamiliarGruntExitNorth:
 	step_end
 
 SlateportCity_OceanicMuseum_1F_Text_WouldYouLikeToEnter:
-	.string "Welcome to the OCEANIC MUSEUM.\p"
+	.string "Welcome to the Oceanic Museum.\p"
 	.string "The entrance fee is ¥50.\n"
 	.string "Would you like to enter?$"
 
@@ -249,7 +249,7 @@ SlateportCity_OceanicMuseum_1F_Text_AquaExistForGoodOfAll:
 SlateportCity_OceanicMuseum_1F_Text_OurBossIsntHere:
 	.string "We were told to assemble here,\n"
 	.string "so we did, but…\p"
-	.string "Our BOSS, the linchpin, isn't here.$"
+	.string "Our Boss, the linchpin, isn't here.$"
 
 SlateportCity_OceanicMuseum_1F_Text_WouldStuffHereMakeMeRich:
 	.string "If I ripped off the stuff here,\n"
@@ -311,13 +311,13 @@ SlateportCity_OceanicMuseum_1F_Text_WhirlpoolExperiment:
 	.string "A blue fluid is spiraling inside\n"
 	.string "a glass vessel.\p"
 	.string "“This is an experiment to create a\n"
-	.string "WHIRLPOOL artificially using wind.”$"
+	.string "Whirlpool artificially using wind.”$"
 
 SlateportCity_OceanicMuseum_1F_Text_WaterfallExperiment:
 	.string "A red ball is bobbing up and down\n"
 	.string "inside a glass vessel.\p"
 	.string "“This is an experiment simulating a\n"
-	.string "WATERFALL using the ball's buoyancy.”$"
+	.string "Waterfall using the ball's buoyancy.”$"
 
 SlateportCity_OceanicMuseum_1F_Text_OceanSoilDisplay:
 	.string "It's a sample of soil from the ocean\n"
@@ -337,7 +337,7 @@ SlateportCity_OceanicMuseum_1F_Text_BeachSandDisplay:
 	.string "up as sand on beaches.”$"
 
 SlateportCity_OceanicMuseum_1F_Text_OceanicMinifact1:
-	.string "“OCEANIC MINIFACT 1\n"
+	.string "“Oceanic Minifact 1\n"
 	.string "Why is seawater blue?\p"
 	.string "“Light is composed of many colors.\p"
 	.string "“When light passes through water,\n"
@@ -346,7 +346,7 @@ SlateportCity_OceanicMuseum_1F_Text_OceanicMinifact1:
 	.string "color, making the sea appear blue.”$"
 
 SlateportCity_OceanicMuseum_1F_Text_OceanicMinifact2:
-	.string "“OCEANIC MINIFACT 2\n"
+	.string "“Oceanic Minifact 2\n"
 	.string "Why is the sea salty?\p"
 	.string "“Seawater contains dissolved salt in\n"
 	.string "the form of sodium and chlorine ions.\p"
@@ -356,7 +356,7 @@ SlateportCity_OceanicMuseum_1F_Text_OceanicMinifact2:
 	.string "makes the sea salty.”$"
 
 SlateportCity_OceanicMuseum_1F_Text_OceanicMinifact3:
-	.string "“OCEANIC MINIFACT 3\n"
+	.string "“Oceanic Minifact 3\n"
 	.string "Which is bigger? The sea or land?\p"
 	.string "“The sea covers about 70% of\n"
 	.string "the planet, and the rest is land.\p"

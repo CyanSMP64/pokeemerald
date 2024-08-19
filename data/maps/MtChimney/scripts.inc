@@ -530,7 +530,7 @@ MtChimney_EventScript_SawyerRematch::
 	end
 
 MtChimney_Text_MeteoriteWillActivateVolcano:
-	.string "The power contained in the METEORITE…\p"
+	.string "The power contained in the Meteorite…\p"
 	.string "By amplifying its power with this\n"
 	.string "machine, Mt. Chimney's volcanic\l"
 	.string "activity will instantly intensify…\p"
@@ -576,15 +576,15 @@ MtChimney_Text_MaxieYouHaventSeenLastOfMagma:
 	.string "But don't think that this is the last\n"
 	.string "you've seen of Team Magma.\p"
 	.string "Fufufu…\p"
-	.string "Even without the METEORITE, if we\n"
+	.string "Even without the Meteorite, if we\n"
 	.string "obtain that Orb… Fufufu…$"
 
 MtChimney_Text_TabithaIntro:
 	.string "Hehehe!\p"
 	.string "So you've come all the way here!\p"
 	.string "But you're too late!\n"
-	.string "I've already delivered the METEORITE\l"
-	.string "from Meteor Falls to the BOSS!$"
+	.string "I've already delivered the Meteorite\l"
+	.string "from Meteor Falls to the Boss!$"
 
 MtChimney_Text_TabithaDefeat:
 	.string "Hehehe…\p"
@@ -592,8 +592,8 @@ MtChimney_Text_TabithaDefeat:
 	.string "awakens that thing…$"
 
 MtChimney_Text_TabithaPostBattle:
-	.string "BOSS, hurry!\n"
-	.string "Give it the METEORITE's energy!\p"
+	.string "Boss, hurry!\n"
+	.string "Give it the Meteorite's energy!\p"
 	.string "Hehehe…$"
 
 MtChimney_Text_Grunt2Intro:
@@ -608,7 +608,7 @@ MtChimney_Text_Grunt2Defeat:
 	.string "What do you mean I lost?$"
 
 MtChimney_Text_Grunt2PostBattle:
-	.string "Our BOSS says, “It will make everyone\n"
+	.string "Our Boss says, “It will make everyone\n"
 	.string "happy.”\p"
 	.string "But why does everyone keep getting\n"
 	.string "in our way?$"
@@ -630,7 +630,7 @@ MtChimney_Text_TeamAquaAlwaysMessingWithPlans:
 	.string "They always mess with our plans!$"
 
 MtChimney_Text_MeteoritesPackAmazingPower:
-	.string "METEORITES pack amazing power!$"
+	.string "Meteorites pack amazing power!$"
 
 MtChimney_Text_YouBetterNotMessWithUs:
 	.string "You'd better not mess with us!\p"
@@ -659,7 +659,7 @@ MtChimney_Text_ArchieGoStopTeamMagma:
 	.string "See for yourself what the fanatics\n"
 	.string "of Team Magma are up to!\p"
 	.string "They're trying to inject the stolen\n"
-	.string "METEORITE's power into the volcano!\p"
+	.string "Meteorite's power into the volcano!\p"
 	.string "Doing something like that will cause\n"
 	.string "the volcano's eruption!$"
 
@@ -700,7 +700,7 @@ MtChimney_Text_Bushaa:
 	.string "Bushaa!$"
 
 MtChimney_Text_LavaCookiesJust200:
-	.string "LAVA COOKIES are Mt. Chimney's local\n"
+	.string "Lava Cookies are Mt. Chimney's local\n"
 	.string "specialty.\p"
 	.string "Try one. It's just ¥200.$"
 
@@ -715,22 +715,22 @@ MtChimney_Text_OhFineThen:
 	.string "Oh, fine then.$"
 
 MtChimney_Text_MetoriteFittedOnMachine:
-	.string "A METEORITE is fitted on a mysterious\n"
+	.string "A Meteorite is fitted on a mysterious\n"
 	.string "machine…\p"
 	.string "The machine seems to be storing\n"
-	.string "energy in the METEORITE.$"
+	.string "energy in the Meteorite.$"
 
 MtChimney_Text_RemoveTheMeteorite:
-	.string "A METEORITE is fitted on a mysterious\n"
+	.string "A Meteorite is fitted on a mysterious\n"
 	.string "machine…\p"
-	.string "Do you want to remove the METEORITE?$"
+	.string "Do you want to remove the Meteorite?$"
 
 MtChimney_Text_PlayerRemovedMeteorite:
-	.string "{PLAYER} removed the METEORITE from\n"
+	.string "{PLAYER} removed the Meteorite from\n"
 	.string "the mysterious machine.$"
 
 MtChimney_Text_PlayerLeftMeteorite:
-	.string "{PLAYER} left the METEORITE where\n"
+	.string "{PLAYER} left the Meteorite where\n"
 	.string "it was.$"
 
 MtChimney_Text_MachineMakesNoResponse:
@@ -738,8 +738,8 @@ MtChimney_Text_MachineMakesNoResponse:
 	.string "It makes no response whatsoever.$"
 
 MtChimney_Text_RouteSign:
-	.string "{DOWN_ARROW} JAGGED PATH\n"
-	.string "Lavaridge Town AHEAD$"
+	.string "{DOWN_ARROW} Jagged Path\n"
+	.string "Lavaridge Town Ahead$"
 
 MtChimney_Text_ShelbyIntro:
 	.string "I've been to the hot springs and\n"
@@ -752,7 +752,7 @@ MtChimney_Text_ShelbyDefeat:
 
 MtChimney_Text_ShelbyPostBattle:
 	.string "Well, well, I've lost. I can't call\n"
-	.string "myself an EXPERT now, can I?$"
+	.string "myself an Expert now, can I?$"
 
 MtChimney_Text_ShelbyRegister:
 	.string "Thank you, child. It was fun, as if\n"
@@ -797,7 +797,7 @@ MtChimney_Text_SheilaPostBattle:
 	.string "Mt. Chimney. It would be a shame if\l"
 	.string "I only do a little sightseeing…\p"
 	.string "I want to get in some battles and buy\n"
-	.string "COOKIES as souvenirs.$"
+	.string "Cookies as souvenirs.$"
 
 MtChimney_Text_ShirleyIntro:
 	.string "Since I bathed in the hot springs,\n"
@@ -821,8 +821,8 @@ MtChimney_Text_SawyerDefeat:
 	.string "Oh, you're a real firebrand, too!$"
 
 MtChimney_Text_SawyerPostBattle:
-	.string "I think I need a dip in LAVARIDGE\n"
-	.string "HOT SPRING with the locals!$"
+	.string "I think I need a dip in Lavaridge\n"
+	.string "Hot Spring with the locals!$"
 
 MtChimney_Text_SawyerRegister:
 	.string "I like little fireballs like you.\n"

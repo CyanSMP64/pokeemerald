@@ -198,7 +198,7 @@ RustboroCity_DevonCorp_3F_Text_MrStoneIHaveFavor:
 	.string "Well, on the way, could you stop off in\n"
 	.string "Dewford Town?\p"
 	.string "I was hoping that you'd deliver a\n"
-	.string "LETTER to Steven in Dewford.$"
+	.string "Letter to Steven in Dewford.$"
 
 RustboroCity_DevonCorp_3F_Text_MrStoneWantYouToHaveThis:
 	.string "Mr. Stone: Now, you should know that\n"
@@ -212,7 +212,7 @@ RustboroCity_DevonCorp_3F_Text_ReceivedPokenav:
 
 RustboroCity_DevonCorp_3F_Text_MrStoneExplainPokenavRestUp:
 	.string "Mr. Stone: That device…\p"
-	.string "It's a Pokémon NAVIGATOR, or PokéNav\n"
+	.string "It's a Pokémon Navigator, or PokéNav\n"
 	.string "for short.\p"
 	.string "It's an indispensable tool for any\n"
 	.string "Trainer on an adventure.\p"
@@ -233,7 +233,7 @@ RustboroCity_DevonCorp_3F_Text_CountingOnYou:
 	.string "Mr. Stone: I'm counting on you!$"
 
 RustboroCity_DevonCorp_3F_Text_ThankYouForDeliveringLetter:
-	.string "Mr. Stone: You delivered my LETTER?\n"
+	.string "Mr. Stone: You delivered my Letter?\n"
 	.string "Thank you kindly!\p"
 	.string "This is my way of thanking you.\n"
 	.string "It should help you, a Trainer.$"
@@ -241,8 +241,8 @@ RustboroCity_DevonCorp_3F_Text_ThankYouForDeliveringLetter:
 RustboroCity_DevonCorp_3F_Text_ExplainExpShare:
 	.string "Mr. Stone: A Pokémon holding that\n"
 	.string "Exp. Share will be given some of the\l"
-	.string "EXP Points from battle.\p"
-	.string "It will get EXP Points even if it didn't\n"
+	.string "Exp. points from battle.\p"
+	.string "It will get Exp. points even if it didn't\n"
 	.string "actually battle.\p"
 	.string "I would say Exp. Share is quite useful\n"
 	.string "for raising weak Pokémon.$"
@@ -286,8 +286,8 @@ RustboroCity_DevonCorp_3F_Text_VisitCaptSternShipyard:
 	.string "you should go see Capt. Stern.$"
 
 RustboroCity_DevonCorp_3F_Text_RepeatAndTimerHugelyPopular:
-	.string "Devon's new products, the REPEAT Ball\n"
-	.string "and TIMER Ball, have become hugely\l"
+	.string "Devon's new products, the Repeat Ball\n"
+	.string "and Timer Ball, have become hugely\l"
 	.string "popular among Trainers.$"
 
 RustboroCity_DevonCorp_3F_Text_RareRocksDisplay:

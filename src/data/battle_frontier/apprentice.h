@@ -377,7 +377,7 @@ const struct ApprenticeTrainer gApprentices[NUM_APPRENTICES] =
         .speechLost = {EC_WORD_WE, EC_WORD_WERE, EC_WORD_JUST, EC_WORD_SHREDDED, EC_WORD_ELLIPSIS, EC_EMPTY_WORD},
     },
     {
-        .name = {_("トウゾウ"), _("DALLAS"), _("BRUNO"), _("LEARCO"), _("ANSGAR"), _("MANOLO")},
+        .name = {_("トウゾウ"), _("DALLAS"), _("Bruno"), _("LEARCO"), _("ANSGAR"), _("MANOLO")},
         .otId = 0x71FC,
         .facilityClass = FACILITY_CLASS_FISHERMAN,
         .species = {SPECIES_SEAKING, SPECIES_STARMIE, SPECIES_GOLDUCK, SPECIES_TENTACRUEL, SPECIES_OCTILLERY, SPECIES_GOREBYSS, SPECIES_GLALIE, SPECIES_WAILORD, SPECIES_SHARPEDO, SPECIES_KINGDRA},
