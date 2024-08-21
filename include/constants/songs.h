@@ -277,7 +277,9 @@
 #define SE_PIKE_CURTAIN_OPEN        268 // SE_CURTAIN1
 #define SE_SUDOWOODO_SHAKE          269 // SE_USSOKI
 
+#define END_SE SE_SUDOWOODO_SHAKE
 
+#define START_MUS (END_SE + 1)
 // Custom music
 #define SE_VINEBOOM                     270
 #define MUS_DP_VS_DIALGA_PALKIA         275
@@ -564,6 +566,8 @@
 #define PH_NURSE_BLEND              607
 #define PH_NURSE_HELD               608
 #define PH_NURSE_SOLO               609
+
+#define END_MUS PH_NURSE_SOLO
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

@@ -869,7 +869,13 @@ static bool8 HandleMainMenuInput(u8 taskId)
 
     if (JOY_NEW(A_BUTTON))
     {
-        PlaySE(SE_SELECT);
+        if (JOY_HELD(R_BUTTON) && tMenuType != HAS_NO_SAVED_GAME && tCurrItem == 0) {
+            PlaySE(SE_POKENAV_ON);
+            FlagSet(FLAG_SYS_DEBUG_MODE);
+        }
+        else {
+            PlaySE(SE_SELECT);
+        }
         IsWirelessAdapterConnected();   // why bother calling this here? debug? Task_HandleMainMenuAPressed will check too
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
         gTasks[taskId].func = Task_HandleMainMenuAPressed;

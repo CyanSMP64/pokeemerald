@@ -30,6 +30,7 @@ const u8 gText_MainMenuMysteryEvents[] = _("Mystery Events");
 const u8 gText_WirelessNotConnected[] = _("The Wireless Adapter is not\nconnected.");
 const u8 gText_MysteryGiftCantUse[] = _("Mystery Gift can't be used while\nthe Wireless Adapter is attached.");
 const u8 gText_MysteryEventsCantUse[] = _("Mystery Events can't be used while\nthe Wireless Adapter is attached.");
+const u8 gText_DebugModeActivated[] = _("Debug mode activated.");
 const u8 gText_UpdatingSaveExternalData[] = _("Updating save file using external\ndata. Please wait."); // Unused
 const u8 gText_SaveFileUpdated[] = _("The save file has been updated."); // Unused
 const u8 gText_SaveFileCorrupted[] = _("The save file is corrupted. The\nprevious save file will be loaded.");

@@ -38,11 +38,13 @@
 #include "pokemon_summary_screen.h"
 #include "pokenav.h"
 #include "menu_specialized.h"
+#include "debug.h"
 #include "data.h"
 #include "constants/abilities.h"
 #include "constants/battle_anim.h"
 #include "constants/battle_move_effects.h"
 #include "constants/battle_string_ids.h"
+#include "constants/flags.h"
 #include "constants/hold_effects.h"
 #include "constants/items.h"
 #include "constants/map_types.h"
@@ -1802,6 +1804,12 @@ static void Cmd_waitanimation(void)
 
 static void Cmd_healthbarupdate(void)
 {
+    u8 side = GetBattlerSide(gBattlerTarget);
+    if (FlagGet(FLAG_SYS_NO_BATTLE_DMG) && side == B_SIDE_PLAYER)
+    {
+        gMoveResultFlags |= MOVE_RESULT_NO_EFFECT;
+    }
+
     if (gBattleControllerExecFlags)
         return;
 

@@ -3,6 +3,7 @@
 #include "bike.h"
 #include "coord_event_weather.h"
 #include "daycare.h"
+#include "debug.h"
 #include "faraway_island.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -129,6 +130,15 @@ void FieldGetPlayerInput(struct FieldInput *input, u16 newKeys, u16 heldKeys)
         input->dpadDirection = DIR_WEST;
     else if (heldKeys & DPAD_RIGHT)
         input->dpadDirection = DIR_EAST;
+
+    // debug mode
+    if ((heldKeys & R_BUTTON) 
+      && input->pressedStartButton 
+      && FlagGet(FLAG_SYS_DEBUG_MODE))
+    {
+        input->input_field_1_2 = TRUE;
+        input->pressedStartButton = FALSE;
+    }
 }
 
 int ProcessPlayerFieldInput(struct FieldInput *input)
@@ -187,6 +197,15 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
     }
     if (input->pressedSelectButton && UseRegisteredKeyItemOnField() == TRUE)
         return TRUE;
+
+    // debug mode
+    if (input->input_field_1_2)
+    {
+        PlaySE(SE_WIN_OPEN);
+        FreezeObjectEvents();
+        Debug_ShowMainMenu();
+        return TRUE;
+    }
 
     return FALSE;
 }
@@ -680,6 +699,9 @@ void RestartWildEncounterImmunitySteps(void)
 
 static bool8 CheckStandardWildEncounter(u16 metatileBehavior)
 {
+    if (FlagGet(FLAG_SYS_NO_ENCOUNTER))
+        return FALSE;
+
     if (sWildEncounterImmunitySteps < 4)
     {
         sWildEncounterImmunitySteps++;

@@ -142,7 +142,6 @@ SECTIONS {
         src/text_window.o(.text);
         src/script.o(.text);
         src/field_control_avatar.o(.text);
-        src/coord_event_weather.o(.text);
         src/field_tasks.o(.text);
         src/clock.o(.text);
         src/tileset_anims.o(.text);
@@ -162,6 +161,7 @@ SECTIONS {
     ALIGN(4)
     {
         src/battle_setup.o(.text);
+        src/coord_event_weather.o(.text);
         src/reset_rtc_screen.o(.text);
         src/field_camera.o(.text);
         src/event_data.o(.text);
@@ -364,6 +364,8 @@ SECTIONS {
         src/battle_transition_frontier.o(.text);
         src/international_string_util.o(.text);
         src/battle_anim_new.o(.text);
+        src/debug.o(.text);
+        src/debug_pokemon_creator.o(.text);
     } =0
 
     script_data :
@@ -373,7 +375,6 @@ SECTIONS {
         data/field_effect_scripts.o(script_data);
         data/battle_scripts_2.o(script_data);
         data/battle_ai_scripts.o(script_data);
-        data/contest_ai_scripts.o(script_data);
         data/mystery_event_script_cmd_table.o(script_data);
     } =0
 
@@ -381,6 +382,7 @@ SECTIONS {
     ALIGN(4)
     {
         data/battle_scripts_1.o(script_data);
+        data/contest_ai_scripts.o(script_data);
         data/battle_anim_scripts.o(script_data);
     } =0
 
@@ -740,6 +742,8 @@ SECTIONS {
         src/m4a_tables.o(.rodata);
         data/sound_data.o(.rodata);
         src/battle_anim_new.o(.rodata);
+        src/debug.o(.rodata);
+        src/debug_pokemon_creator.o(.rodata);
     } =0
 
     lib_rodata :

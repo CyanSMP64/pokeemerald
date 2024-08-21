@@ -5,6 +5,7 @@
 #include "battle_factory.h"
 #include "battle_setup.h"
 #include "data.h"
+#include "debug.h"
 #include "item.h"
 #include "pokemon.h"
 #include "random.h"
@@ -387,6 +388,9 @@ void BattleAI_SetupAIData(u8 defaultScoreMoves)
         else
             AI_THINKING_STRUCT->aiFlags = gTrainers[gTrainerBattleOpponent_A].aiFlags;
     }
+
+    if (gIsDebugBattle)
+        AI_THINKING_STRUCT->aiFlags = gDebugAIFlags;
 
     if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
         AI_THINKING_STRUCT->aiFlags |= AI_SCRIPT_DOUBLE_BATTLE; // act smart in doubles and don't attack your partner
