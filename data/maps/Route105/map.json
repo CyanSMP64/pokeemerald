@@ -149,7 +149,7 @@
       "type": "trigger",
       "x": 16,
       "y": 65,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_HeartScale"
@@ -158,7 +158,7 @@
       "type": "trigger",
       "x": 17,
       "y": 66,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_HeartScale"
@@ -167,7 +167,7 @@
       "type": "trigger",
       "x": 18,
       "y": 67,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_HeartScale"
@@ -176,7 +176,7 @@
       "type": "trigger",
       "x": 18,
       "y": 68,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_HeartScale"
@@ -185,7 +185,7 @@
       "type": "trigger",
       "x": 18,
       "y": 69,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_HeartScale"
@@ -194,7 +194,7 @@
       "type": "trigger",
       "x": 17,
       "y": 70,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_HeartScale"
@@ -203,7 +203,7 @@
       "type": "trigger",
       "x": 16,
       "y": 71,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_HeartScale"
@@ -212,7 +212,7 @@
       "type": "trigger",
       "x": 15,
       "y": 71,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_HeartScale"
@@ -221,7 +221,7 @@
       "type": "trigger",
       "x": 14,
       "y": 71,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_HeartScale"
@@ -230,7 +230,7 @@
       "type": "trigger",
       "x": 13,
       "y": 70,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_HeartScale"
@@ -239,7 +239,7 @@
       "type": "trigger",
       "x": 12,
       "y": 69,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_HeartScale"
@@ -248,7 +248,7 @@
       "type": "trigger",
       "x": 4,
       "y": 59,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_01",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_BigPearl"
@@ -257,7 +257,7 @@
       "type": "trigger",
       "x": 3,
       "y": 58,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_01",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_BigPearl"
@@ -266,7 +266,7 @@
       "type": "trigger",
       "x": 3,
       "y": 54,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_01",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_BigPearl"
@@ -275,7 +275,7 @@
       "type": "trigger",
       "x": 6,
       "y": 53,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_01",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_BigPearl"
@@ -284,7 +284,7 @@
       "type": "trigger",
       "x": 7,
       "y": 54,
-      "elevation": 4,
+      "elevation": 0,
       "var": "VAR_TEMP_01",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_BigPearl"
@@ -293,7 +293,7 @@
       "type": "trigger",
       "x": 8,
       "y": 55,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_01",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_BigPearl"
@@ -302,7 +302,7 @@
       "type": "trigger",
       "x": 8,
       "y": 56,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_01",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_BigPearl"
@@ -311,7 +311,7 @@
       "type": "trigger",
       "x": 8,
       "y": 57,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_01",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_BigPearl"
@@ -320,7 +320,7 @@
       "type": "trigger",
       "x": 7,
       "y": 58,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_01",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_BigPearl"
@@ -328,11 +328,38 @@
     {
       "type": "trigger",
       "x": 6,
-      "y": 59,
-      "elevation": 4,
+      "y": 54,
+      "elevation": 0,
       "var": "VAR_TEMP_01",
       "var_value": "0",
       "script": "Route105_EventScript_Sparkle_BigPearl"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 55,
+      "elevation": 0,
+      "var": "VAR_TEMP_01",
+      "var_value": "0",
+      "script": "Route105_EventScript_Sparkle_BigPearl"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 70,
+      "elevation": 1,
+      "var": "VAR_TEMP_00",
+      "var_value": "0",
+      "script": "Route105_EventScript_Sparkle_HeartScale"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 69,
+      "elevation": 1,
+      "var": "VAR_TEMP_00",
+      "var_value": "0",
+      "script": "Route105_EventScript_Sparkle_HeartScale"
     }
   ],
   "bg_events": [

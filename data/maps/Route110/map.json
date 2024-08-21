@@ -719,7 +719,7 @@
       "type": "trigger",
       "x": 30,
       "y": 46,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route110_EventScript_Sparkle_GreatBall"
@@ -728,7 +728,7 @@
       "type": "trigger",
       "x": 30,
       "y": 45,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route110_EventScript_Sparkle_GreatBall"
@@ -737,7 +737,7 @@
       "type": "trigger",
       "x": 30,
       "y": 44,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_00",
       "var_value": "0",
       "script": "Route110_EventScript_Sparkle_GreatBall"
@@ -782,7 +782,7 @@
       "type": "trigger",
       "x": 36,
       "y": 36,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_01",
       "var_value": "0",
       "script": "Route110_EventScript_Sparkle_Revive"
@@ -791,7 +791,7 @@
       "type": "trigger",
       "x": 35,
       "y": 36,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_01",
       "var_value": "0",
       "script": "Route110_EventScript_Sparkle_Revive"
@@ -800,7 +800,7 @@
       "type": "trigger",
       "x": 34,
       "y": 36,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_01",
       "var_value": "0",
       "script": "Route110_EventScript_Sparkle_Revive"
@@ -809,7 +809,7 @@
       "type": "trigger",
       "x": 33,
       "y": 37,
-      "elevation": 4,
+      "elevation": 1,
       "var": "VAR_TEMP_01",
       "var_value": "0",
       "script": "Route110_EventScript_Sparkle_Revive"
