@@ -686,7 +686,7 @@ const struct MonCoords gMonBackPicCoords[] =
     [SPECIES_BRAVIARY]                     = { .size = MON_COORDS_SIZE(64, 48), .y_offset = 10 },
     [SPECIES_VULLABY]                      = { .size = MON_COORDS_SIZE(64, 48), .y_offset = 14 },
     [SPECIES_MANDIBUZZ]                    = { .size = MON_COORDS_SIZE(64, 48), .y_offset = 10 },
-    [SPECIES_HEATMOR]                      = { .size = MON_COORDS_SIZE(64, 24), .y_offset = 21 },
+    [SPECIES_HEATMOR]                      = { .size = MON_COORDS_SIZE(64, 24), .y_offset =  8 },
     [SPECIES_DURANT]                       = { .size = MON_COORDS_SIZE(64, 32), .y_offset = 17 },
     [SPECIES_DEINO]                        = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 14 },
     [SPECIES_ZWEILOUS]                     = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  9 },
