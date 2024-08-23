@@ -2354,10 +2354,20 @@ BattleScript_EffectRolePlay::
 	attackstring
 	ppreduce
 	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
-	trycopyability BattleScript_ButItFailed
+	trycopyability BS_ATTACKER, BattleScript_ButItFailed
 	attackanimation
 	waitanimation
+	copybyte gBattlerAbility, gBattlerAttacker
+	setbyte sFIXED_ABILITY_POPUP, TRUE
+//	showabilitypopup BS_ATTACKER
+//	pause 48
+//	destroyabilitypopup
+//	pause 20
+	sethword sABILITY_OVERWRITE, 0
+	showabilitypopup BS_ATTACKER
+	pause B_WAIT_TIME_SHORT
 	printstring STRINGID_PKMNCOPIEDFOE
+	destroyabilitypopup
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 

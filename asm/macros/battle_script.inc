@@ -1078,8 +1078,9 @@
 	.4byte \ptr
 	.endm
 
-	.macro trycopyability ptr:req
+	.macro trycopyability battler:req, ptr:req
 	.byte 0xd3
+	.byte \battler
 	.4byte \ptr
 	.endm
 
