@@ -3993,10 +3993,18 @@ BattleScript_SpeedBoostActivates::
 	end3
 
 BattleScript_TraceActivates::
-	call BattleScript_AbilityPopUp
-	printstring STRINGID_PKMNTRACED
-	waitmessage B_WAIT_TIME_LONG
+	setbyte sFIXED_ABILITY_POPUP, TRUE
+	showabilitypopup BS_SCRIPTING
+	pause 48
+	destroyabilitypopup
+	pause 20
 	settracedability BS_SCRIPTING
+	sethword sABILITY_OVERWRITE, 0
+	showabilitypopup BS_SCRIPTING
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_PKMNTRACED
+	destroyabilitypopup
+	waitmessage B_WAIT_TIME_LONG
 	end3
 
 BattleScript_RainDishActivates::
