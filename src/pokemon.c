@@ -5114,7 +5114,7 @@ static const u8 sGetMonDataEVConstants[] =
 // For stat-raising items
 static const u8 sStatsToRaise[] =
 {
-    STAT_ATK, STAT_ATK, STAT_SPEED, STAT_DEF, STAT_SPATK, STAT_ACC
+    STAT_ATK, STAT_SPDEF, STAT_SPEED, STAT_DEF, STAT_SPATK, STAT_ACC
 };
 
 // 3 modifiers each for how much to change friendship for different ranges
@@ -7902,6 +7902,16 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                     gBattleMons[gActiveBattler].statStages[STAT_SPATK] = MAX_STAT_STAGE;
                 retVal = FALSE;
             }
+
+            // X Sp Defense
+            if ((itemEffect[i] & ITEM2_X_SPDEF)
+             && gBattleMons[gActiveBattler].statStages[STAT_SPDEF] < MAX_STAT_STAGE)
+            {
+                gBattleMons[gActiveBattler].statStages[STAT_SPDEF] += (itemEffect[i] & ITEM2_X_SPDEF) >> 7;
+                if (gBattleMons[gActiveBattler].statStages[STAT_SPDEF] > MAX_STAT_STAGE)
+                    gBattleMons[gActiveBattler].statStages[STAT_SPDEF] = MAX_STAT_STAGE;
+                retVal = FALSE;
+            }
             break;
 
         // Handle ITEM3 effects (Guard Spec, Rare Candy, cure status)
@@ -8478,6 +8488,9 @@ u8 *UseStatIncreaseItem(u16 itemId)
             }
         }
     }
+
+    if (itemEffect[2] & (ITEM2_X_SPDEF))
+        BufferStatRoseMessage(i - 2);
 
     if (itemEffect[3] & ITEM3_GUARD_SPEC)
     {

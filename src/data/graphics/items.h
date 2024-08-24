@@ -161,6 +161,7 @@ const u32 gItemIconPalette_XDefend[] = INCBIN_U32("graphics/items/icon_palettes/
 const u32 gItemIconPalette_XSpeed[] = INCBIN_U32("graphics/items/icon_palettes/x_speed.gbapal.lz");
 const u32 gItemIconPalette_XAccuracy[] = INCBIN_U32("graphics/items/icon_palettes/x_accuracy.gbapal.lz");
 const u32 gItemIconPalette_XSpecial[] = INCBIN_U32("graphics/items/icon_palettes/x_special.gbapal.lz");
+const u32 gItemIconPalette_XSpDef[] = INCBIN_U32("graphics/items/icon_palettes/x_sp_def.gbapal.lz");
 
 const u32 gItemIcon_PokeDoll[] = INCBIN_U32("graphics/items/icons/poke_doll.4bpp.lz");
 const u32 gItemIconPalette_PokeDoll[] = INCBIN_U32("graphics/items/icon_palettes/poke_doll.gbapal.lz");

@@ -272,6 +272,12 @@ const u8 gItemEffect_XSpecial[8] = {
     STAT_BOOST_FRIENDSHIP_CHANGE,
 };
 
+const u8 gItemEffect_XSpDef[8] = {
+    [2] = 1 << 7, // ITEM2_X_SPDEF
+    [5] = ITEM5_FRIENDSHIP_LOW | ITEM5_FRIENDSHIP_MID,
+    STAT_BOOST_FRIENDSHIP_CHANGE,
+};
+
 const u8 gItemEffect_SunStone[6] = {
     [4] = ITEM4_EVO_STONE,
 };
@@ -431,6 +437,7 @@ const u8 *const gItemEffectTable[] =
     [ITEM_X_SPEED - ITEM_POTION]       = gItemEffect_XSpeed,
     [ITEM_X_ACCURACY - ITEM_POTION]    = gItemEffect_XAccuracy,
     [ITEM_X_SPECIAL - ITEM_POTION]     = gItemEffect_XSpecial,
+    [ITEM_X_SP_DEF - ITEM_POTION]      = gItemEffect_XSpDef,
     [ITEM_SUN_STONE - ITEM_POTION]     = gItemEffect_SunStone,
     [ITEM_MOON_STONE - ITEM_POTION]    = gItemEffect_MoonStone,
     [ITEM_FIRE_STONE - ITEM_POTION]    = gItemEffect_FireStone,

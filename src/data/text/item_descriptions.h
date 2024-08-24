@@ -342,6 +342,11 @@ static const u8 sFluffyTailDesc[] = _(
     "any battle with\n"
     "a wild Pokémon.");
 
+static const u8 sXSpDefDesc[] = _(
+    "Raises the stat\n"
+    "Sp. Def during one\n"
+    "battle.");
+
 // Field items
 static const u8 sSuperRepelDesc[] = _(
     "Repels weak wild\n"

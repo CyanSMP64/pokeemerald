@@ -89,8 +89,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_X_SPECIAL] = {gItemIcon_BattleStatItem, gItemIconPalette_XSpecial},
     [ITEM_POKE_DOLL] = {gItemIcon_PokeDoll, gItemIconPalette_PokeDoll},
     [ITEM_FLUFFY_TAIL] = {gItemIcon_FluffyTail, gItemIconPalette_FluffyTail},
-    // ????????
-    [ITEM_052] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_X_SP_DEF] = {gItemIcon_BattleStatItem, gItemIconPalette_XSpDef},
     // Field items
     [ITEM_SUPER_REPEL] = {gItemIcon_Repel, gItemIconPalette_SuperRepel},
     [ITEM_MAX_REPEL] = {gItemIcon_Repel, gItemIconPalette_MaxRepel},

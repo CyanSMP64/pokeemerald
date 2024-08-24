@@ -13,7 +13,8 @@
 
 // field 2 masks
 #define ITEM2_X_SPATK           0x0F
-#define ITEM2_X_ACCURACY        0xF0
+#define ITEM2_X_ACCURACY        0x70
+#define ITEM2_X_SPDEF           0x80
 
 // field 3 masks
 #define ITEM3_CONFUSION         0x1
