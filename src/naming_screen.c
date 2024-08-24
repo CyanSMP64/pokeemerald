@@ -282,13 +282,13 @@ static const u8 sKeyboardChars[KBPAGE_COUNT][KBROW_COUNT][KBCOL_COUNT] = {
         __("abcdef ."),
         __("ghijkl ,"),
         __("mnopqrs "),
-        __("tuvwxyz "),
+        __("tuvwxyzé"),
     },
     [KEYBOARD_LETTERS_UPPER] = {
         __("ABCDEF ."),
         __("GHIJKL ,"),
         __("MNOPQRS "),
-        __("TUVWXYZ "),
+        __("TUVWXYZÉ"),
     },
     [KEYBOARD_SYMBOLS] = {
         __("01234(  "),
