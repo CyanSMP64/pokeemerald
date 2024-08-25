@@ -452,21 +452,6 @@ static void DoStandardWildBattle(void)
     TryUpdateGymLeaderRematchFromWild();
 }
 
-void DoStandardWildBattle_Debug(void)
-{
-    LockPlayerFieldControls();
-    FreezeObjectEvents();
-    StopPlayerAvatar();
-    gMain.savedCallback = CB2_EndWildBattle;
-    gBattleTypeFlags = 0;
-    if (InBattlePyramid())
-    {
-        VarSet(VAR_TEMP_E, 0);
-        gBattleTypeFlags |= BATTLE_TYPE_PYRAMID;
-    }
-    CreateBattleStartTask_Debug(GetWildBattleTransition(), 0);
-}
-
 void BattleSetup_StartRoamerBattle(void)
 {
     LockPlayerFieldControls();
@@ -505,14 +490,6 @@ static void DoBattlePikeWildBattle(void)
     TryUpdateGymLeaderRematchFromWild();
 }
 
-static void DoTrainerBattle(void)
-{
-    CreateBattleStartTask(GetTrainerBattleTransition(), 0);
-    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
-    IncrementGameStat(GAME_STAT_TRAINER_BATTLES);
-    TryUpdateGymLeaderRematchFromTrainer();
-}
-
 static void DoBattlePyramidTrainerHillBattle(void)
 {
     if (InBattlePyramid())
@@ -525,33 +502,11 @@ static void DoBattlePyramidTrainerHillBattle(void)
     TryUpdateGymLeaderRematchFromTrainer();
 }
 
-// Initiates battle where Wally catches Ralts
-void StartWallyTutorialBattle(void)
-{
-    CreateMaleMon(&gEnemyParty[0], SPECIES_RALTS, 5);
-    LockPlayerFieldControls();
-    gMain.savedCallback = CB2_ReturnToFieldContinueScriptPlayMapMusic;
-    gBattleTypeFlags = BATTLE_TYPE_WALLY_TUTORIAL;
-    CreateBattleStartTask(B_TRANSITION_SLICE, 0);
-}
-
 void BattleSetup_StartScriptedWildBattle(void)
 {
     LockPlayerFieldControls();
     gMain.savedCallback = CB2_EndScriptedWildBattle;
     gBattleTypeFlags = 0;
-    CreateBattleStartTask(GetWildBattleTransition(), 0);
-    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
-    IncrementGameStat(GAME_STAT_WILD_BATTLES);
-    IncrementDailyWildBattles();
-    TryUpdateGymLeaderRematchFromWild();
-}
-
-void BattleSetup_StartLatiBattle(void)
-{
-    LockPlayerFieldControls();
-    gMain.savedCallback = CB2_EndScriptedWildBattle;
-    gBattleTypeFlags = BATTLE_TYPE_LEGENDARY;
     CreateBattleStartTask(GetWildBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
@@ -590,6 +545,51 @@ void BattleSetup_StartLegendaryBattle(void)
         break;
     }
 
+    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
+    IncrementGameStat(GAME_STAT_WILD_BATTLES);
+    IncrementDailyWildBattles();
+    TryUpdateGymLeaderRematchFromWild();
+}
+
+void DoStandardWildBattle_Debug(void)
+{
+    LockPlayerFieldControls();
+    FreezeObjectEvents();
+    StopPlayerAvatar();
+    gMain.savedCallback = CB2_EndWildBattle;
+    gBattleTypeFlags = 0;
+    if (InBattlePyramid())
+    {
+        VarSet(VAR_TEMP_E, 0);
+        gBattleTypeFlags |= BATTLE_TYPE_PYRAMID;
+    }
+    CreateBattleStartTask_Debug(GetWildBattleTransition(), 0);
+}
+
+static void DoTrainerBattle(void)
+{
+    CreateBattleStartTask(GetTrainerBattleTransition(), 0);
+    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
+    IncrementGameStat(GAME_STAT_TRAINER_BATTLES);
+    TryUpdateGymLeaderRematchFromTrainer();
+}
+
+// Initiates battle where Wally catches Ralts
+void StartWallyTutorialBattle(void)
+{
+    CreateMaleMon(&gEnemyParty[0], SPECIES_RALTS, 5);
+    LockPlayerFieldControls();
+    gMain.savedCallback = CB2_ReturnToFieldContinueScriptPlayMapMusic;
+    gBattleTypeFlags = BATTLE_TYPE_WALLY_TUTORIAL;
+    CreateBattleStartTask(B_TRANSITION_SLICE, 0);
+}
+
+void BattleSetup_StartLatiBattle(void)
+{
+    LockPlayerFieldControls();
+    gMain.savedCallback = CB2_EndScriptedWildBattle;
+    gBattleTypeFlags = BATTLE_TYPE_LEGENDARY;
+    CreateBattleStartTask(GetWildBattleTransition(), 0);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
     IncrementDailyWildBattles();

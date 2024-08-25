@@ -7090,23 +7090,17 @@ void GetSpeciesName(u8 *name, u16 species)
     name[i] = EOS;
 }
 
-u8 GetMonsStateToDoubles_2(void)
+u8 CalculatePlayerPartyCount(void)
 {
-    s32 aliveCount = 0;
-    s32 i;
+    gPlayerPartyCount = 0;
 
-    for (i = 0; i < PARTY_SIZE; i++)
+    while (gPlayerPartyCount < PARTY_SIZE
+        && GetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_SPECIES, NULL) != SPECIES_NONE)
     {
-        u32 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG, NULL);
-        if (species != SPECIES_EGG && species != SPECIES_NONE
-         && GetMonData(&gPlayerParty[i], MON_DATA_HP, NULL) != 0)
-            aliveCount++;
+        gPlayerPartyCount++;
     }
 
-    if (aliveCount == 1)
-        return PLAYER_HAS_ONE_MON; // may have more than one, but only one is alive
-
-    return (aliveCount > 1) ? PLAYER_HAS_TWO_USABLE_MONS : PLAYER_HAS_ONE_USABLE_MON;
+    return gPlayerPartyCount;
 }
 
 void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
@@ -7151,6 +7145,25 @@ void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
         SetBoxMonData(&mon->box, field, data);
         break;
     }
+}
+
+u8 GetMonsStateToDoubles_2(void)
+{
+    s32 aliveCount = 0;
+    s32 i;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        u32 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG, NULL);
+        if (species != SPECIES_EGG && species != SPECIES_NONE
+         && GetMonData(&gPlayerParty[i], MON_DATA_HP, NULL) != 0)
+            aliveCount++;
+    }
+
+    if (aliveCount == 1)
+        return PLAYER_HAS_ONE_MON; // may have more than one, but only one is alive
+
+    return (aliveCount > 1) ? PLAYER_HAS_TWO_USABLE_MONS : PLAYER_HAS_ONE_USABLE_MON;
 }
 
 u8 GetLevelFromBoxMonExp(struct BoxPokemon *boxMon)
@@ -7511,19 +7524,6 @@ u8 SendMonToPC(struct Pokemon* mon)
     } while (boxNo != StorageGetCurrentBox());
 
     return MON_CANT_GIVE;
-}
-
-u8 CalculatePlayerPartyCount(void)
-{
-    gPlayerPartyCount = 0;
-
-    while (gPlayerPartyCount < PARTY_SIZE
-        && GetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_SPECIES, NULL) != SPECIES_NONE)
-    {
-        gPlayerPartyCount++;
-    }
-
-    return gPlayerPartyCount;
 }
 
 u8 CalculateEnemyPartyCount(void)
