@@ -9360,7 +9360,7 @@ u8 GetMoveRelearnerMoves(struct Pokemon *mon, u16 *moves)
             for (j = 0; j < MAX_MON_MOVES && learnedMoves[j] != (gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_ID); j++)
                 ;
 
-            if (j == MAX_MON_MOVES)
+            if (j == MAX_MON_MOVES && (gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_ID) != MOVE_NONE)
             {
                 for (k = 0; k < numMoves && moves[k] != (gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_ID); k++)
                     ;
@@ -9414,7 +9414,7 @@ u8 GetNumberOfRelearnableMoves(struct Pokemon *mon)
             for (j = 0; j < MAX_MON_MOVES && learnedMoves[j] != (gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_ID); j++)
                 ;
 
-            if (j == MAX_MON_MOVES)
+            if (j == MAX_MON_MOVES && (gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_ID) != MOVE_NONE)
             {
                 for (k = 0; k < numMoves && moves[k] != (gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_ID); k++)
                     ;
