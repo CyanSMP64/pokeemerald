@@ -67,7 +67,8 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_VOLTORB]               = {{EVO_LEVEL, 30, SPECIES_ELECTRODE}},
     [SPECIES_EXEGGCUTE]             = {{EVO_ITEM, ITEM_LEAF_STONE, SPECIES_EXEGGUTOR},
                                        {EVO_ITEM_FEMALE, ITEM_LEAF_STONE, SPECIES_EXEGGUTOR_ALOLAN}},
-    [SPECIES_CUBONE]                = {{EVO_LEVEL, 28, SPECIES_MAROWAK}},
+    [SPECIES_CUBONE]                = {{EVO_LEVEL, 28, SPECIES_MAROWAK}
+                                       {EVO_LEVEL_FEMALE, 28, SPECIES_MAROWAK_ALOLAN}},
     [SPECIES_LICKITUNG]             = {{EVO_LEVEL, 33, SPECIES_LICKILICKY}},
     [SPECIES_KOFFING]               = {{EVO_LEVEL, 35, SPECIES_WEEZING},
                                        {EVO_LEVEL_FEMALE, 35, SPECIES_WEEZING_GALARIAN}},
@@ -331,7 +332,8 @@ const struct Evolution gEvolutionTable[NUM_SPECIES][EVOS_PER_MON] =
     [SPECIES_GOLETT]                = {{EVO_LEVEL, 43, SPECIES_GOLURK}},
     [SPECIES_PAWNIARD]              = {{EVO_LEVEL, 52, SPECIES_BISHARP}},
     [SPECIES_BISHARP]               = {{EVO_LEVEL, 62, SPECIES_KINGAMBIT}},
-    [SPECIES_RUFFLET]               = {{EVO_LEVEL, 54, SPECIES_BRAVIARY}},
+    [SPECIES_RUFFLET]               = {{EVO_LEVEL, 54, SPECIES_BRAVIARY}
+                                       {EVO_LEVEL_CASCOON, 54, SPECIES_BRAVIARY_HISUIAN}},
     [SPECIES_VULLABY]               = {{EVO_LEVEL, 54, SPECIES_MANDIBUZZ}},
     [SPECIES_DEINO]                 = {{EVO_LEVEL, 50, SPECIES_ZWEILOUS}},
     [SPECIES_ZWEILOUS]              = {{EVO_LEVEL, 64, SPECIES_HYDREIGON}},
