@@ -627,7 +627,11 @@ ArtisanCave_B1F_EventScript_ItemHPUp::
 	end
 
 ArtisanCave_1F_EventScript_ItemCarbos::
-	finditem ITEM_POTION   @ moved to route 101
+	finditem ITEM_CARBOS
+	end
+
+Route101_EventScript_ItemPotion::
+	finditem ITEM_POTION
 	end
 
 MagmaHideout_1F_EventScript_ItemRareCandy::
