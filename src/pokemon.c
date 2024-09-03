@@ -6525,17 +6525,6 @@ void SetMultiuseSpriteTemplateToTrainerBack(u16 trainerPicId, u8 battlerPosition
     }
 }
 
-void SetMultiuseSpriteTemplateToTrainerFront(u16 trainerPicId, u8 battlerPosition)
-{
-    if (gMonSpritesGfxPtr != NULL)
-        gMultiuseSpriteTemplate = gMonSpritesGfxPtr->templates[battlerPosition];
-    else
-        gMultiuseSpriteTemplate = gBattlerSpriteTemplates[battlerPosition];
-
-    gMultiuseSpriteTemplate.paletteTag = trainerPicId;
-    gMultiuseSpriteTemplate.anims = gTrainerFrontAnimsPtrTable[trainerPicId];
-}
-
 static void EncryptBoxMon(struct BoxPokemon *boxMon)
 {
     u32 i;
@@ -7105,6 +7094,18 @@ u8 CalculatePlayerPartyCount(void)
     return gPlayerPartyCount;
 }
 
+u8 GetLevelFromBoxMonExp(struct BoxPokemon *boxMon)
+{
+    u16 species = GetBoxMonData(boxMon, MON_DATA_SPECIES, NULL);
+    u32 exp = GetBoxMonData(boxMon, MON_DATA_EXP, NULL);
+    s32 level = 1;
+
+    while (level <= MAX_LEVEL && gExperienceTables[gSpeciesInfo[species].growthRate][level] <= exp)
+        level++;
+
+    return level - 1;
+}
+
 void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
 {
     const u8 *data = dataArg;
@@ -7149,6 +7150,17 @@ void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
     }
 }
 
+void SetMultiuseSpriteTemplateToTrainerFront(u16 trainerPicId, u8 battlerPosition)
+{
+    if (gMonSpritesGfxPtr != NULL)
+        gMultiuseSpriteTemplate = gMonSpritesGfxPtr->templates[battlerPosition];
+    else
+        gMultiuseSpriteTemplate = gBattlerSpriteTemplates[battlerPosition];
+
+    gMultiuseSpriteTemplate.paletteTag = trainerPicId;
+    gMultiuseSpriteTemplate.anims = gTrainerFrontAnimsPtrTable[trainerPicId];
+}
+
 u8 GetMonsStateToDoubles_2(void)
 {
     s32 aliveCount = 0;
@@ -7166,18 +7178,6 @@ u8 GetMonsStateToDoubles_2(void)
         return PLAYER_HAS_ONE_MON; // may have more than one, but only one is alive
 
     return (aliveCount > 1) ? PLAYER_HAS_TWO_USABLE_MONS : PLAYER_HAS_ONE_USABLE_MON;
-}
-
-u8 GetLevelFromBoxMonExp(struct BoxPokemon *boxMon)
-{
-    u16 species = GetBoxMonData(boxMon, MON_DATA_SPECIES, NULL);
-    u32 exp = GetBoxMonData(boxMon, MON_DATA_EXP, NULL);
-    s32 level = 1;
-
-    while (level <= MAX_LEVEL && gExperienceTables[gSpeciesInfo[species].growthRate][level] <= exp)
-        level++;
-
-    return level - 1;
 }
 
 u8 GetGenderFromSpeciesAndPersonality(u16 species, u32 personality)
