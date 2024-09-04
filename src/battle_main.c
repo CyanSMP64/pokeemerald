@@ -2031,13 +2031,13 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
 
                 if (gTrainers[trainerNum].doubleBattle == TRUE)
-                    personalityValue += ((((personalityValue & 0x0003c000) >> 14) | ((personalityValue & 0x00001e00) >> 5)));
+                    personalityValue += ((gTrainers[trainerNum].trainerName[0] & 0x0F) | ((gSpeciesNames[partyData[i].species][0] & 0x0F) << 4));
                 else if (gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
                     // Use personality more likely to result in a female Pokémon
-                    personalityValue += ((((personalityValue & 0x0003c000) >> 14) | ((personalityValue & 0x00001c00) >> 6)));
+                    personalityValue += ((gTrainers[trainerNum].trainerName[0] & 0x0F) | ((gSpeciesNames[partyData[i].species][0] & 0x07) << 4));
                 else
                     // Use personality more likely to result in a male Pokémon
-                    personalityValue += ((((personalityValue & 0x0003c000) >> 14) | ((personalityValue & 0x00001c00) >> 6)) + 0x80);
+                    personalityValue += (((gTrainers[trainerNum].trainerName[0] & 0x0F) | ((gSpeciesNames[partyData[i].species][0] & 0x07) << 4)) + 0x80);
                 
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_PLAYER_ID, 0);
                 break;
@@ -2053,13 +2053,13 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
 
                 if (gTrainers[trainerNum].doubleBattle == TRUE)
-                    personalityValue += ((((personalityValue & 0x0003c000) >> 14) | ((personalityValue & 0x00001e00) >> 5)));
+                    personalityValue += ((gTrainers[trainerNum].trainerName[0] & 0x0F) | ((gSpeciesNames[partyData[i].species][0] & 0x0F) << 4));
                 else if (gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
                     // Use personality more likely to result in a female Pokémon
-                    personalityValue += ((((personalityValue & 0x0003c000) >> 14) | ((personalityValue & 0x00001c00) >> 6)));
+                    personalityValue += ((gTrainers[trainerNum].trainerName[0] & 0x0F) | ((gSpeciesNames[partyData[i].species][0] & 0x07) << 4));
                 else
                     // Use personality more likely to result in a male Pokémon
-                    personalityValue += ((((personalityValue & 0x0003c000) >> 14) | ((personalityValue & 0x00001c00) >> 6)) + 0x80);
+                    personalityValue += (((gTrainers[trainerNum].trainerName[0] & 0x0F) | ((gSpeciesNames[partyData[i].species][0] & 0x07) << 4)) + 0x80);
                 
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_PLAYER_ID, 0);
 
@@ -2081,13 +2081,13 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
 
                 if (gTrainers[trainerNum].doubleBattle == TRUE)
-                    personalityValue += ((((personalityValue & 0x0003c000) >> 14) | ((personalityValue & 0x00001e00) >> 5)));
+                    personalityValue += ((gTrainers[trainerNum].trainerName[0] & 0x0F) | ((gSpeciesNames[partyData[i].species][0] & 0x0F) << 4));
                 else if (gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
                     // Use personality more likely to result in a female Pokémon
-                    personalityValue += ((((personalityValue & 0x0003c000) >> 14) | ((personalityValue & 0x00001c00) >> 6)));
+                    personalityValue += ((gTrainers[trainerNum].trainerName[0] & 0x0F) | ((gSpeciesNames[partyData[i].species][0] & 0x07) << 4));
                 else
                     // Use personality more likely to result in a male Pokémon
-                    personalityValue += ((((personalityValue & 0x0003c000) >> 14) | ((personalityValue & 0x00001c00) >> 6)) + 0x80);
+                    personalityValue += (((gTrainers[trainerNum].trainerName[0] & 0x0F) | ((gSpeciesNames[partyData[i].species][0] & 0x07) << 4)) + 0x80);
                 
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_PLAYER_ID, 0);
 
@@ -2105,13 +2105,13 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
 
                 if (gTrainers[trainerNum].doubleBattle == TRUE)
-                    personalityValue += ((((personalityValue & 0x0003c000) >> 14) | ((personalityValue & 0x00001e00) >> 5)));
+                    personalityValue += ((gTrainers[trainerNum].trainerName[0] & 0x0F) | ((gSpeciesNames[partyData[i].species][0] & 0x0F) << 4));
                 else if (gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
                     // Use personality more likely to result in a female Pokémon
-                    personalityValue += ((((personalityValue & 0x0003c000) >> 14) | ((personalityValue & 0x00001c00) >> 6)));
+                    personalityValue += ((gTrainers[trainerNum].trainerName[0] & 0x0F) | ((gSpeciesNames[partyData[i].species][0] & 0x07) << 4));
                 else
                     // Use personality more likely to result in a male Pokémon
-                    personalityValue += ((((personalityValue & 0x0003c000) >> 14) | ((personalityValue & 0x00001c00) >> 6)) + 0x80);
+                    personalityValue += (((gTrainers[trainerNum].trainerName[0] & 0x0F) | ((gSpeciesNames[partyData[i].species][0] & 0x07) << 4)) + 0x80);
                 
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_PLAYER_ID, 0);
 
