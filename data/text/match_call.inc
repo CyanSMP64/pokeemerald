@@ -2852,19 +2852,8 @@ MatchCall_Text_UnusedProfBirch:
 	.string "Pokémon becomes more fun, eh?$"
 
 MatchCall_Text_MrStone1::
-	.string "Mr. Stone: Oh? {PLAYER}!\p"
-	.string "Since you called me, the PokéNav\n"
-	.string "must be working properly!\p"
-	.string "Other people will be registered,\n"
-	.string "so try calling them up, too!\p"
-	.string "Good! Good!\n"
-	.string "You seem to be quite happy!\p"
-	.string "Hm…\n"
-	.string "How could I know that?\p"
-	.string "It's because I'm looking down at\n"
-	.string "you from my office window!\p"
-	.string "Wahahaha!\n"
-	.string "See you again!$"
+	.string "Mr. Stone: Who gave you this number?\n"
+	.string "Stop calling me.$"
 
 MatchCall_Text_MrStone2::
 	.string "Mr. Stone: Oh? {PLAYER}!\p"

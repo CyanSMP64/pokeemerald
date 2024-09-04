@@ -255,6 +255,8 @@ PetalburgWoods_EventScript_TryRegisterJames::
 	end
 
 PetalburgWoods_EventScript_RegisterJames::
+	msgbox PetalburgWoods_Text_IWantRematch1, MSGBOX_DEFAULT
+	register_matchcall TRAINER_JAMES_1
 	release
 	end
 
@@ -265,6 +267,8 @@ PetalburgWoods_EventScript_TryRegisterJames2::
 	end
 
 PetalburgWoods_EventScript_RegisterJames2::
+	msgbox PetalburgWoods_Text_IWantRematch2, MSGBOX_DEFAULT
+	register_matchcall TRAINER_JAMES_1
 	release
 	end
 

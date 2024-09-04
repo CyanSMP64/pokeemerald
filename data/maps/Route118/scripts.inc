@@ -188,6 +188,8 @@ Route118_EventScript_Rose::
 Route118_EventScript_RegisterRose::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
+	msgbox Route118_Text_RoseRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_ROSE_1
 	release
 	end
 
@@ -217,6 +219,8 @@ Route118_EventScript_Dalton::
 Route118_EventScript_RegisterDalton::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
+	msgbox Route118_Text_DaltonRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_DALTON_1
 	release
 	end
 

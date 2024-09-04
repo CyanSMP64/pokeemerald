@@ -104,7 +104,9 @@ Route104_MrBrineysHouse_Text_ItsYouLetsSailToDewford:
 	.string "We'll set sail for Dewford.$"
 
 Route104_MrBrineysHouse_Text_SetSailForDewford:
-	.string "Nyoooooooom!$"
+	.string "Mr. Briney: Dewford it is, then!\p"
+	.string "Anchors aweigh!\n"
+	.string "Peeko, we're setting sail, my darling!$"
 
 Route104_MrBrineysHouse_Text_DeclineDeliverySail:
 	.string "Oh…$"

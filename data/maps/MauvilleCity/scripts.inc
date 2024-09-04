@@ -414,7 +414,16 @@ MauvilleCity_EventScript_ReceivedThunderbolt::
 	end
 
 MauvilleCity_EventScript_RegisterWallyCall::
+	lockall
+	pokenavcall MauvilleCity_Text_WallyPokenavCall
+	waitmessage
+	playfanfare MUS_REGISTER_MATCH_CALL
+	msgbox MauvilleCity_Text_RegisteredWally, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	setflag FLAG_ENABLE_WALLY_MATCH_CALL
 	clearflag FLAG_ENABLE_FIRST_WALLY_POKENAV_CALL
+	releaseall
 	end
 
 MauvilleCity_Text_UncleHesTooPeppy:

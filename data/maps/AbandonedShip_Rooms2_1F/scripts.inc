@@ -10,6 +10,8 @@ AbandonedShip_Rooms2_1F_EventScript_Dan::
 	end
 
 AbandonedShip_Rooms2_1F_EventScript_RegisterDan::
+	msgbox AbandonedShip_Rooms2_1F_Text_KiraRegister, MSGBOX_DEFAULT  @ Kira speaks for both when registering KiraAndDan
+	register_matchcall TRAINER_KIRA_AND_DAN_1
 	release
 	end
 
@@ -27,6 +29,8 @@ AbandonedShip_Rooms2_1F_EventScript_Kira::
 	end
 
 AbandonedShip_Rooms2_1F_EventScript_RegisterKira::
+	msgbox AbandonedShip_Rooms2_1F_Text_KiraRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_KIRA_AND_DAN_1
 	release
 	end
 

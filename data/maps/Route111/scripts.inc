@@ -467,6 +467,8 @@ Route111_EventScript_Dusty::
 Route111_EventScript_RegisterDusty::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
+	msgbox Route111_Text_DustyRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_DUSTY_1
 	release
 	end
 
@@ -501,6 +503,8 @@ Route111_EventScript_Wilton::
 Route111_EventScript_RegisterWilton::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
+	msgbox Route111_Text_WiltonRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_WILTON_1
 	release
 	end
 
@@ -520,6 +524,8 @@ Route111_EventScript_Brooke::
 Route111_EventScript_RegisterBrooke::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
+	msgbox Route111_Text_BrookeRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_BROOKE_1
 	release
 	end
 

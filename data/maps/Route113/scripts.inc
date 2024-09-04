@@ -67,6 +67,8 @@ Route113_EventScript_Madeline::
 Route113_EventScript_RegisterMadeline::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
+	msgbox Route113_Text_MadelineRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_MADELINE_1
 	release
 	end
 
@@ -86,6 +88,8 @@ Route113_EventScript_Lao::
 Route113_EventScript_RegisterLao::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
+	msgbox Route113_Text_LaoRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_LAO_1
 	release
 	end
 

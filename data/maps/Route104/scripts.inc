@@ -354,7 +354,8 @@ Route104_EventScript_SailToDewford::
 	waitmovement 0
 	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_ROUTE104
 	call Common_EventScript_PlayBrineysBoatMusic
-	goto Route104_EventScript_SailToDewfordNoCall
+	goto_if_set FLAG_ENABLE_NORMAN_MATCH_CALL, Route104_EventScript_SailToDewfordNoCall
+	goto_if_unset FLAG_ENABLE_NORMAN_MATCH_CALL, Route104_EventScript_SailToDewfordDadCalls
 	end
 
 Route104_EventScript_SailToDewfordNoCall::
@@ -869,6 +870,8 @@ Route104_EventScript_TryRegisterHaleyAfterBattle::
 	end
 
 Route104_EventScript_RegisterHaleyAfterBattle::
+	msgbox Route104_Text_HaleyRegister2, MSGBOX_DEFAULT
+	register_matchcall TRAINER_HALEY_1
 	release
 	end
 
@@ -879,6 +882,8 @@ Route104_EventScript_TryRegisterHaley::
 	end
 
 Route104_EventScript_RegisterHaley::
+	msgbox Route104_Text_HaleyRegister1, MSGBOX_DEFAULT
+	register_matchcall TRAINER_HALEY_1
 	release
 	end
 
@@ -906,6 +911,8 @@ Route104_EventScript_TryRegisterWinstonAfterBattle::
 	end
 
 Route104_EventScript_RegisterWinstonAfterBattle::
+	msgbox Route104_Text_WinstonRegister2, MSGBOX_DEFAULT
+	register_matchcall TRAINER_WINSTON_1
 	release
 	end
 
@@ -916,6 +923,8 @@ Route104_EventScript_TryRegisterWinston::
 	end
 
 Route104_EventScript_RegisterWinston::
+	msgbox Route104_Text_WinstonRegister1, MSGBOX_DEFAULT
+	register_matchcall TRAINER_WINSTON_1
 	release
 	end
 
@@ -943,6 +952,8 @@ Route104_EventScript_TryRegisterCindyAfterBattle::
 	end
 
 Route104_EventScript_RegisterCindyAfterBattle::
+	msgbox Route104_Text_CindyRegister2, MSGBOX_DEFAULT
+	register_matchcall TRAINER_CINDY_1
 	release
 	end
 
@@ -953,6 +964,8 @@ Route104_EventScript_TryRegisterCindy::
 	end
 
 Route104_EventScript_RegisterCindy::
+	msgbox Route104_Text_CindyRegister1, MSGBOX_DEFAULT
+	register_matchcall TRAINER_CINDY_1
 	release
 	end
 

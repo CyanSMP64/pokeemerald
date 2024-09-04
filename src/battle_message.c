@@ -75,7 +75,7 @@ static const u8 sText_AttackerFainted[] = _("{B_ATK_NAME_WITH_PREFIX}\nfainted!\
 static const u8 sText_TargetFainted[] = _("{B_DEF_NAME_WITH_PREFIX}\nfainted!\p");
 static const u8 sText_PlayerGotMoney[] = _("You got ¥{B_BUFF1} in prize money!\p");
 static const u8 sText_PlayerWhiteout[] = _("You have no more Pokémon that can\nfight!\p");
-static const u8 sText_PlayerWhiteout2[] = _("You panicked and dropped\n¥{B_BUFF1}…\pYou were overwhelmed by your\ndefeat!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PlayerWhiteout2[] = _("You panicked and dropped\n¥{B_BUFF1}…\pBack to the truck!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_PreventsEscape[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} prevents\nescape with {B_SCR_ACTIVE_ABILITY}!\p");
 static const u8 sText_CantEscape2[] = _("You couldn't get away!\p");
 static const u8 sText_AttackerCantEscape[] = _("{B_ATK_NAME_WITH_PREFIX} can't escape!");
@@ -500,7 +500,7 @@ static const u8 sText_PkmnHungOnWithX[] = _("{B_DEF_NAME_WITH_PREFIX} hung on\nu
 const u8 gText_EmptyString3[] = _("");
 static const u8 sText_YouThrowABallNowRight[] = _("You throw a Ball now, right?\nI… I'll do my best!");
 static const u8 sText_PlayerLostToEnemyTrainer[] = _("You have no more Pokémon that can\nfight!{PAUSE_UNTIL_PRESS}");
-static const u8 sText_PlayerPaidPrizeMoney[] = _("You gave ¥{B_BUFF1} to the winner…\pYou were overwhelmed by your\ndefeat!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PlayerPaidPrizeMoney[] = _("You gave ¥{B_BUFF1} to the winner…\pBack to the truck!{PAUSE_UNTIL_PRESS}");
 
 // early declaration of strings
 static const u8 sText_PkmnIncapableOfPower[];

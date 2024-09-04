@@ -12,6 +12,8 @@ MtPyre_6F_EventScript_Valerie::
 MtPyre_6F_EventScript_RegisterValerie::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
+	msgbox MtPyre_6F_Text_ValerieRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_VALERIE_1
 	release
 	end
 

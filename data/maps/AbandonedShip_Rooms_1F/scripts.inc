@@ -21,6 +21,8 @@ AbandonedShip_Rooms_1F_EventScript_Thalia::
 AbandonedShip_Rooms_1F_EventScript_RegisterThalia::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
+	msgbox AbandonedShip_Rooms_1F_Text_ThaliaRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_THALIA_1
 	release
 	end
 

@@ -11,6 +11,11 @@ GraniteCave_StevensRoom_EventScript_Steven::
 	setflag FLAG_DELIVERED_STEVEN_LETTER
 	giveitem ITEM_TM47
 	call_if_eq VAR_RESULT, FALSE, GraniteCave_StevensRoom_EventScript_BagFull
+	playfanfare MUS_REGISTER_MATCH_CALL
+	msgbox GraniteCave_StevensRoom_Text_RegisteredSteven, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	setflag FLAG_REGISTERED_STEVEN_POKENAV
 	closemessage
 	call_if_eq VAR_FACING, DIR_NORTH, GraniteCave_StevensRoom_EventScript_StevenExitNorth
 	call_if_eq VAR_FACING, DIR_SOUTH, GraniteCave_StevensRoom_EventScript_StevenExitSouth
