@@ -546,18 +546,10 @@ MossdeepCity_Gym_Text_NicholasPostBattle:
 	.string "invincible Pokémon power next.$"
 
 MossdeepCity_Gym_Text_TateAndLizaIntro:
-	.string "Tate: Hehehe… Were you surprised?\p"
-	.string "Liza: Fufufu… Were you surprised?\p"
-	.string "Tate: That there are two Gym Leaders?\n"
-	.string "Liza: That there are two Gym Leaders?\p"
-	.string "Tate: We're twins!\n"
-	.string "Liza: We're twins!\p"
-	.string "Tate: We don't need to talk because…\n"
-	.string "Liza: We can each determine what…\p"
-	.string "Tate: The other is thinking…\n"
-	.string "Liza: All in our minds!\p"
-	.string "Tate: This combination of ours…\n"
-	.string "Liza: Can you beat it?$"
+	.string "Tate: So, we heard…\n"
+	.string "Liza: You like VGC?\p"
+	.string "Tate: :)\n"
+	.string "Liza: :)$"
 
 MossdeepCity_Gym_Text_TateAndLizaDefeat:
 	.string "Tate: What?! Our combination…\n"
