@@ -5226,6 +5226,17 @@ void CreateMon(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 hasFix
 {
     u32 mail;
     ZeroMonData(mon);
+    // make all geodude shiny for salty
+//    if (species == SPECIES_GEODUDE || species == SPECIES_GEODUDE_ALOLAN)
+//    {
+//        u32 value = gSaveBlock2Ptr->playerTrainerId[0]
+//              | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
+//              | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
+//              | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
+//
+//        CreateBoxMon(&mon->box, species, level, fixedIV, TRUE, value, otIdType, fixedOtId);
+//    }
+//    else
     CreateBoxMon(&mon->box, species, level, fixedIV, hasFixedPersonality, fixedPersonality, otIdType, fixedOtId);
     SetMonData(mon, MON_DATA_LEVEL, &level);
     mail = MAIL_NONE;

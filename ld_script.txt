@@ -143,7 +143,6 @@ SECTIONS {
         src/script.o(.text);
         src/field_control_avatar.o(.text);
         src/field_tasks.o(.text);
-        src/clock.o(.text);
         src/tileset_anims.o(.text);
         src/palette.o(.text);
         src/sound.o(.text);
@@ -161,6 +160,7 @@ SECTIONS {
     ALIGN(4)
     {
         src/battle_setup.o(.text);
+        src/clock.o(.text);
         src/coord_event_weather.o(.text);
         src/reset_rtc_screen.o(.text);
         src/field_camera.o(.text);
