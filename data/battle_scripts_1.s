@@ -3203,10 +3203,15 @@ BattleScript_AskToLearnMove::
 BattleScript_ForgotAndLearnedNewMove::
 	printstring STRINGID_123POOF
 	printstring STRINGID_PKMNMADEITRAIN
-BattleScript_LearnedNewMove::
 	buffermovetolearn
 	fanfare MUS_LEVEL_UP
 	printstring STRINGID_MONFORGOTANDLEARNEDINSTEAD
+	goto BattleScript_ForgotAndLearnedNewMove_continue
+BattleScript_LearnedNewMove::
+	buffermovetolearn
+	fanfare MUS_LEVEL_UP
+	printstring STRINGID_PKMNLEARNEDMOVE
+BattleScript_ForgotAndLearnedNewMove_continue::
 	waitmessage B_WAIT_TIME_LONG
 	updatechoicemoveonlvlup BS_ATTACKER
 	goto BattleScript_TryLearnMoveLoop
