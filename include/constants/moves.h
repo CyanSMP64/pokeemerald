@@ -362,8 +362,13 @@
 #define MOVE_FAIRY_WIND 358
 #define MOVE_MOONBLAST 359
 #define MOVE_DAZZLING_GLEAM 360
+#define MOVE_AIR_SLASH 361
+#define MOVE_SHADOW_SNEAK 362
+#define MOVE_LEAF_STORM 363
+#define MOVE_STRUGGLE_BUG 364
+#define MOVE_PLAY_NICE 365
 
-#define MOVES_COUNT 361
+#define MOVES_COUNT 366
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

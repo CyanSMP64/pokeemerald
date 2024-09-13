@@ -361,4 +361,9 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_FAIRY_WIND] = _("Fairy Wind"),
     [MOVE_MOONBLAST] = _("Moonblast"),
     [MOVE_DAZZLING_GLEAM] = _("Dazzling Gleam"),
+    [MOVE_AIR_SLASH] = _("Air Slash"),
+    [MOVE_SHADOW_SNEAK] = _("Shadow Sneak"),
+    [MOVE_LEAF_STORM] = _("Leaf Storm"),
+    [MOVE_STRUGGLE_BUG] = _("Struggle Bug"),
+    [MOVE_PLAY_NICE] = _("Play Nice"),
 };

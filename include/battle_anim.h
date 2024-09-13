@@ -290,6 +290,10 @@ extern const union AffineAnimCmd *const gAffineAnims_Droplet[];
 extern const union AnimCmd *const gAnims_SmallBubblePair[];
 extern const union AnimCmd *const gAnims_WaterBubble[];
 extern const union AffineAnimCmd *const gAffineAnims_Bite[];
+extern const union AnimCmd *const gRazorLeafParticleAnimTable[];
+extern const union AffineAnimCmd *const gAffineAnims_PoisonProjectile[];
+
+void AnimNeedleArmSpike(struct Sprite *sprite);
 
 // battle_anim_new.c
 void CoreEnforcerLoadBeamTarget(struct Sprite *sprite);

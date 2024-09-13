@@ -811,7 +811,7 @@ SECTIONS {
         src/graphics.o(.rodata);
     } =0
 
-    new_sound 0x08e70000 : /* debug */
+    new_sound :
     ALIGN(4)
     {
         data/sound_data_2.o(.rodata);

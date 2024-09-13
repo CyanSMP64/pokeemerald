@@ -43,4 +43,3 @@ const struct SpriteTemplate gFairyWindCloudTemplate =
     .affineAnims = gSwiftStarAffineAnimTable,
     .callback = AnimTranslateLinearSingleSineWave
 };
-

@@ -1441,6 +1441,26 @@ static const u8 sDazzlingGleamDescription[] = _(
     "Damages foes by emitting\n"
     "a bright flash.");
 
+static const u8 sAirSlashDescription[] = _(
+    "Attacks with a blade of\n"
+    "air. May cause flinching.");
+
+static const u8 sShadowSneakDescription[] = _(
+    "Extends the user's shadow\n"
+    "to strike first.");
+
+static const u8 sLeafStormDescription[] = _(
+    "Whips up a storm of leaves,\n"
+    "Harshly lowers Sp. Atk.");
+
+static const u8 sStruggleBugDescription[] = _(
+    "Resisting, the user attacks\n"
+    "the foe. Lowers Sp. Atk.");
+
+static const u8 sPlayNiceDescription[] = _(
+    "Befriends the foe, lowering\n"
+    "its Attack without fail.");
+
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 {
@@ -1804,4 +1824,9 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_FAIRY_WIND - 1] = sFairyWindDescription,
     [MOVE_MOONBLAST - 1] = sMoonblastDescription,
     [MOVE_DAZZLING_GLEAM - 1] = sDazzlingGleamDescription,
+    [MOVE_AIR_SLASH - 1] = sAirSlashDescription,
+    [MOVE_SHADOW_SNEAK - 1] = sShadowSneakDescription,
+    [MOVE_LEAF_STORM - 1] = sLeafStormDescription,
+    [MOVE_STRUGGLE_BUG - 1] = sStruggleBugDescription,
+    [MOVE_PLAY_NICE - 1] = sPlayNiceDescription,
 };

@@ -4913,11 +4913,11 @@ const u8 gStatStageRatios[MAX_STAT_STAGE + 1][2] =
 static const u16 sDeoxysBaseStats[] =
 {
     [STAT_HP]    = 50,
-    [STAT_ATK]   = 95,
-    [STAT_DEF]   = 90,
-    [STAT_SPEED] = 180,
-    [STAT_SPATK] = 95,
-    [STAT_SPDEF] = 90,
+    [STAT_ATK]   = 150,
+    [STAT_DEF]   = 50,
+    [STAT_SPEED] = 150,
+    [STAT_SPATK] = 150,
+    [STAT_SPDEF] = 50,
 };
 
 // The classes used by other players in the Union Room.
@@ -7081,19 +7081,6 @@ void GetSpeciesName(u8 *name, u16 species)
     name[i] = EOS;
 }
 
-u8 CalculatePlayerPartyCount(void)
-{
-    gPlayerPartyCount = 0;
-
-    while (gPlayerPartyCount < PARTY_SIZE
-        && GetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_SPECIES, NULL) != SPECIES_NONE)
-    {
-        gPlayerPartyCount++;
-    }
-
-    return gPlayerPartyCount;
-}
-
 u8 GetLevelFromBoxMonExp(struct BoxPokemon *boxMon)
 {
     u16 species = GetBoxMonData(boxMon, MON_DATA_SPECIES, NULL);
@@ -7104,6 +7091,22 @@ u8 GetLevelFromBoxMonExp(struct BoxPokemon *boxMon)
         level++;
 
     return level - 1;
+}
+
+u8 GetGenderFromSpeciesAndPersonality(u16 species, u32 personality)
+{
+    switch (gSpeciesInfo[species].genderRatio)
+    {
+    case MON_MALE:
+    case MON_FEMALE:
+    case MON_GENDERLESS:
+        return gSpeciesInfo[species].genderRatio;
+    }
+
+    if (gSpeciesInfo[species].genderRatio > (personality & 0xFF))
+        return MON_FEMALE;
+    else
+        return MON_MALE;
 }
 
 void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
@@ -7150,6 +7153,19 @@ void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
     }
 }
 
+u8 CalculatePlayerPartyCount(void)
+{
+    gPlayerPartyCount = 0;
+
+    while (gPlayerPartyCount < PARTY_SIZE
+        && GetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_SPECIES, NULL) != SPECIES_NONE)
+    {
+        gPlayerPartyCount++;
+    }
+
+    return gPlayerPartyCount;
+}
+
 void SetMultiuseSpriteTemplateToTrainerFront(u16 trainerPicId, u8 battlerPosition)
 {
     if (gMonSpritesGfxPtr != NULL)
@@ -7178,22 +7194,6 @@ u8 GetMonsStateToDoubles_2(void)
         return PLAYER_HAS_ONE_MON; // may have more than one, but only one is alive
 
     return (aliveCount > 1) ? PLAYER_HAS_TWO_USABLE_MONS : PLAYER_HAS_ONE_USABLE_MON;
-}
-
-u8 GetGenderFromSpeciesAndPersonality(u16 species, u32 personality)
-{
-    switch (gSpeciesInfo[species].genderRatio)
-    {
-    case MON_MALE:
-    case MON_FEMALE:
-    case MON_GENDERLESS:
-        return gSpeciesInfo[species].genderRatio;
-    }
-
-    if (gSpeciesInfo[species].genderRatio > (personality & 0xFF))
-        return MON_FEMALE;
-    else
-        return MON_MALE;
 }
 
 void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
