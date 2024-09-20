@@ -107,13 +107,14 @@ SECTIONS {
         src/battle_gfx_sfx_util.o(.text);
         src/battle_controller_link_opponent.o(.text);
         src/overworld.o(.text);
-        src/field_screen_effect.o(.text);
+        src/battle_bg.o(.text);
     } =0
 
     .text_4 0x08067a74 :
     ALIGN(4)
     {
         src/pokemon.o(.text);
+        src/field_screen_effect.o(.text);
         src/pokeball.o(.text);
         src/new_game.o(.text);
         src/util.o(.text);
@@ -122,7 +123,6 @@ SECTIONS {
         src/battle_controller_opponent.o(.text);
         src/battle_ai_switch_items.o(.text);
         src/digit_obj_util.o(.text);
-        src/battle_bg.o(.text);
         src/trig.o(.text);
         src/daycare.o(.text);
         src/egg_hatch.o(.text);
@@ -152,7 +152,6 @@ SECTIONS {
         src/battle_anim_status_effects.o(.text);
         src/field_weather.o(.text);
         src/field_weather_effect.o(.text);
-        src/mail_data.o(.text);
         src/pokemon_icon.o(.text);
     } =0
 
@@ -160,6 +159,7 @@ SECTIONS {
     ALIGN(4)
     {
         src/battle_setup.o(.text);
+        src/mail_data.o(.text);
         src/clock.o(.text);
         src/coord_event_weather.o(.text);
         src/reset_rtc_screen.o(.text);
@@ -239,7 +239,6 @@ SECTIONS {
         src/trader.o(.text);
         src/starter_choose.o(.text);
         src/wallclock.o(.text);
-        src/fldeff_rocksmash.o(.text);
         src/pokeblock.o(.text);
         src/post_battle_event_funcs.o(.text);
         src/time_events.o(.text);
@@ -253,6 +252,7 @@ SECTIONS {
     ALIGN(4)
     {
         src/evolution_scene.o(.text);
+        src/fldeff_rocksmash.o(.text);
         src/fldeff_flash.o(.text);
         src/battle_records.o(.text);
         src/birch_pc.o(.text);
@@ -372,13 +372,13 @@ SECTIONS {
     ALIGN(4)
     {
         data/event_scripts.o(script_data);
-        data/battle_ai_scripts.o(script_data);
     } =0
 
     script_data_1 0x082d86a8 :
     ALIGN(4)
     {
         data/battle_scripts_1.o(script_data);
+        data/battle_ai_scripts.o(script_data);
         data/field_effect_scripts.o(script_data);
         data/battle_scripts_2.o(script_data);
         data/mystery_event_script_cmd_table.o(script_data);
@@ -474,13 +474,18 @@ SECTIONS {
     ALIGN(4)
     {
         src/main.o(.rodata);
-        src/data.o(.rodata);
+        src/berry_crush.o(.rodata);
+        src/dodrio_berry_picking.o(.rodata);
+        src/pokemon_jump.o(.rodata);
+        src/minigame_countdown.o(.rodata);
+        src/trade.o(.rodata);
     } =0
 
     .rodata_2 0x0831c898 :
     ALIGN(4)
     {
         src/pokemon.o(.rodata);
+        src/data.o(.rodata);
         gflib/text.o(.rodata);
         src/link.o(.rodata);
         src/link.o(.rodata.str1.4);
@@ -508,10 +513,6 @@ SECTIONS {
         src/mystery_gift_scripts.o(.rodata);
         src/wonder_news.o(.rodata);
         src/union_room_chat.o(.rodata);
-        src/berry_crush.o(.rodata);
-        src/dodrio_berry_picking.o(.rodata);
-        src/pokemon_jump.o(.rodata);
-        src/minigame_countdown.o(.rodata);
         src/rtc.o(.rodata);
         src/main_menu.o(.rodata);
         src/battle_controllers.o(.rodata);
@@ -525,7 +526,6 @@ SECTIONS {
         src/battle_controller_opponent.o(.rodata);
         src/battle_ai_switch_items.o(.rodata);
         src/battle_controller_link_opponent.o(.rodata);
-        src/trade.o(.rodata);
         src/pokemon_size_record.o(.rodata)
         src/roamer.o(.rodata);
         src/trig.o(.rodata);
@@ -623,10 +623,6 @@ SECTIONS {
         src/mail.o(.rodata);
         src/menu_helpers.o(.rodata);
         src/heal_location.o(.rodata);
-        src/region_map.o(.rodata);
-        src/image_processing_effects.o(.rodata);
-        src/decoration.o(.rodata);
-        src/slot_machine.o(.rodata);
         src/battle_ai_script_commands.o(.rodata);
         src/trader.o(.rodata);
         src/starter_choose.o(.rodata);
@@ -679,6 +675,10 @@ SECTIONS {
     ALIGN(4)
     {
         src/party_menu.o(.rodata);
+        src/region_map.o(.rodata);
+        src/image_processing_effects.o(.rodata);
+        src/decoration.o(.rodata);
+        src/slot_machine.o(.rodata);
         src/bard_music.o(.rodata);
         src/battle_palace.o(.rodata);
         src/match_call.o(.rodata);

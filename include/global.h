@@ -282,7 +282,7 @@ struct BattleTowerPokemon
     u32 gap:1;
     u32 abilityNum:1;
     u32 personality;
-    u8 nickname[POKEMON_NAME_LENGTH + 1];
+    u8 nickname[VANILLA_POKEMON_NAME_LENGTH + 1];
     u8 friendship;
 };
 
@@ -307,7 +307,7 @@ struct BattleTowerInterview
     u16 playerSpecies;
     u16 opponentSpecies;
     u8 opponentName[PLAYER_NAME_LENGTH + 1];
-    u8 opponentMonNickname[POKEMON_NAME_LENGTH + 1];
+    u8 opponentMonNickname[VANILLA_POKEMON_NAME_LENGTH + 1];
     u8 opponentLanguage;
 };
 
@@ -732,7 +732,7 @@ struct ContestWinner
     u32 trainerId;
     u16 species;
     u8 contestCategory;
-    u8 monName[POKEMON_NAME_LENGTH + 1];
+    u8 monName[VANILLA_POKEMON_NAME_LENGTH + 1];
     u8 trainerName[PLAYER_NAME_LENGTH + 1];
     u8 contestRank;
     //u8 padding;
@@ -751,7 +751,7 @@ struct DaycareMail
 {
     struct Mail message;
     u8 otName[PLAYER_NAME_LENGTH + 1];
-    u8 monName[POKEMON_NAME_LENGTH + 1];
+    u8 monName[VANILLA_POKEMON_NAME_LENGTH + 1];
     u8 gameLanguage:4;
     u8 monLanguage:4;
 };

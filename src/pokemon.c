@@ -5668,7 +5668,7 @@ void ConvertPokemonToBattleTowerPokemon(struct Pokemon *mon, struct BattleTowerP
     dest->spDefenseIV  = GetMonData(mon, MON_DATA_SPDEF_IV, NULL);
     dest->abilityNum = GetMonData(mon, MON_DATA_ABILITY_NUM, NULL);
     dest->personality = GetMonData(mon, MON_DATA_PERSONALITY, NULL);
-    GetMonData(mon, MON_DATA_NICKNAME, dest->nickname);
+    GetMonData(mon, MON_DATA_NICKNAME10, dest->nickname);
 }
 
 static void CreateEventMon(struct Pokemon *mon, u16 species, u8 level, u8 fixedIV, u8 hasFixedPersonality, u32 fixedPersonality, u8 otIdType, u32 fixedOtId)
@@ -6742,6 +6742,7 @@ u32 GetBoxMonData(struct BoxPokemon *boxMon, s32 field, u8 *data)
         retVal = boxMon->otId;
         break;
     case MON_DATA_NICKNAME:
+    case MON_DATA_NICKNAME10:
     {
         if (boxMon->isBadEgg)
         {
@@ -6771,9 +6772,15 @@ u32 GetBoxMonData(struct BoxPokemon *boxMon, s32 field, u8 *data)
         }
         else
         {
-            for (retVal = 0;
-                retVal < POKEMON_NAME_LENGTH;
-                data[retVal] = boxMon->nickname[retVal], retVal++){}
+            if (field != MON_DATA_NICKNAME10) {
+                for (retVal = 0;
+                    retVal < POKEMON_NAME_LENGTH;
+                    data[retVal] = boxMon->nickname[retVal], retVal++){}
+            } else {
+                for (retVal = 0;
+                    retVal < VANILLA_POKEMON_NAME_LENGTH;
+                    data[retVal] = boxMon->nickname[retVal], retVal++){}
+            }
 
             data[retVal] = EOS;
         }
@@ -7092,6 +7099,11 @@ void GetSpeciesName(u8 *name, u16 species)
     name[i] = EOS;
 }
 
+const u8 *GetSpeciesName_exp(u16 species)
+{
+    return gSpeciesNames[species];
+}
+
 u8 GetLevelFromBoxMonExp(struct BoxPokemon *boxMon)
 {
     u16 species = GetBoxMonData(boxMon, MON_DATA_SPECIES, NULL);
@@ -7102,22 +7114,6 @@ u8 GetLevelFromBoxMonExp(struct BoxPokemon *boxMon)
         level++;
 
     return level - 1;
-}
-
-u8 GetGenderFromSpeciesAndPersonality(u16 species, u32 personality)
-{
-    switch (gSpeciesInfo[species].genderRatio)
-    {
-    case MON_MALE:
-    case MON_FEMALE:
-    case MON_GENDERLESS:
-        return gSpeciesInfo[species].genderRatio;
-    }
-
-    if (gSpeciesInfo[species].genderRatio > (personality & 0xFF))
-        return MON_FEMALE;
-    else
-        return MON_MALE;
 }
 
 void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
@@ -7162,6 +7158,22 @@ void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
         SetBoxMonData(&mon->box, field, data);
         break;
     }
+}
+
+u8 GetGenderFromSpeciesAndPersonality(u16 species, u32 personality)
+{
+    switch (gSpeciesInfo[species].genderRatio)
+    {
+    case MON_MALE:
+    case MON_FEMALE:
+    case MON_GENDERLESS:
+        return gSpeciesInfo[species].genderRatio;
+    }
+
+    if (gSpeciesInfo[species].genderRatio > (personality & 0xFF))
+        return MON_FEMALE;
+    else
+        return MON_MALE;
 }
 
 u8 CalculatePlayerPartyCount(void)
@@ -7244,11 +7256,23 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
         SET32(boxMon->otId);
         break;
     case MON_DATA_NICKNAME:
+    case MON_DATA_NICKNAME10:
     {
-        s32 i;
-        for (i = 0; i < POKEMON_NAME_LENGTH; i++)
-            boxMon->nickname[i] = data[i];
-        break;
+        if (field != MON_DATA_NICKNAME10) {
+            s32 i;
+            for (i = 0; i < POKEMON_NAME_LENGTH; i++)
+                boxMon->nickname[i] = data[i];
+            break;
+        }
+        else {
+            s32 i;
+            for (i = 0; i < VANILLA_POKEMON_NAME_LENGTH; i++) {
+                boxMon->nickname[i] = data[i];
+                boxMon->nickname[10] = EOS;
+                boxMon->nickname[11] = EOS;
+            }
+            break;
+        }
     }
     case MON_DATA_LANGUAGE:
         SET8(boxMon->language);

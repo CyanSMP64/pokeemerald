@@ -5564,7 +5564,7 @@ bool8 SaveContestWinner(u8 rank)
         gSaveBlock1Ptr->contestWinners[id].personality = gContestMons[i].personality;
         gSaveBlock1Ptr->contestWinners[id].species = gContestMons[i].species;
         gSaveBlock1Ptr->contestWinners[id].trainerId = gContestMons[i].otId;
-        StringCopy(gSaveBlock1Ptr->contestWinners[id].monName, gContestMons[i].nickname);
+        StringCopyN(gSaveBlock1Ptr->contestWinners[id].monName, gContestMons[i].nickname, VANILLA_POKEMON_NAME_LENGTH);
         StringCopy(gSaveBlock1Ptr->contestWinners[id].trainerName, gContestMons[i].trainerName);
         if(gLinkContestFlags & LINK_CONTEST_FLAG_IS_LINK)
             gSaveBlock1Ptr->contestWinners[id].contestRank = CONTEST_RANK_LINK;
@@ -5582,7 +5582,7 @@ bool8 SaveContestWinner(u8 rank)
         gCurContestWinner.personality = gContestMons[i].personality;
         gCurContestWinner.trainerId = gContestMons[i].otId;
         gCurContestWinner.species = gContestMons[i].species;
-        StringCopy(gCurContestWinner.monName, gContestMons[i].nickname);
+        StringCopyN(gCurContestWinner.monName, gContestMons[i].nickname, VANILLA_POKEMON_NAME_LENGTH);
         StringCopy(gCurContestWinner.trainerName, gContestMons[i].trainerName);
         gCurContestWinner.contestCategory = captionId;
     }
