@@ -300,31 +300,29 @@ static void HandleInputChooseAction(void)
             ActionSelectionCreateCursorAt(gActionSelectionCursor[gActiveBattler], 0);
         }
     }
-    else if (JOY_NEW(B_BUTTON) || gPlayerDpadHoldFrames > 59)
-    {
-        if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
+    else if ((JOY_NEW(B_BUTTON) || gPlayerDpadHoldFrames > 59)
+         && (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
          && GetBattlerPosition(gActiveBattler) == B_POSITION_PLAYER_RIGHT
          && !(gAbsentBattlerFlags & gBitTable[GetBattlerAtPosition(B_POSITION_PLAYER_LEFT)])
          && !(gBattleTypeFlags & BATTLE_TYPE_MULTI))
+    {
+        if (gBattleBufferA[gActiveBattler][1] == B_ACTION_USE_ITEM)
         {
-            if (gBattleBufferA[gActiveBattler][1] == B_ACTION_USE_ITEM)
-            {
-                // Add item to bag if it is a ball
-                if (itemId <= LAST_BALL)
-                    AddBagItem(itemId, 1);
-                else
-                    return;
-            }
-            PlaySE(SE_SELECT);
-            BtlController_EmitTwoReturnValues(BUFFER_B, B_ACTION_CANCEL_PARTNER, 0);
-            PlayerBufferExecCompleted();
+            // Add item to bag if it is a ball
+            if (itemId <= LAST_BALL)
+                AddBagItem(itemId, 1);
+            else
+                return;
         }
+        PlaySE(SE_SELECT);
+        BtlController_EmitTwoReturnValues(BUFFER_B, B_ACTION_CANCEL_PARTNER, 0);
+        PlayerBufferExecCompleted();
     }
     else if (JOY_NEW(START_BUTTON))
     {
         SwapHpBarsWithHpText();
     }
-    else if (JOY_HELD(R_BUTTON))
+    else if (JOY_NEW(B_BUTTON))
     {
         PlaySE(SE_SELECT);
         BtlController_EmitTwoReturnValues(BUFFER_B, B_ACTION_RUN, 0);
