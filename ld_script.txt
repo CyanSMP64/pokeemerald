@@ -149,7 +149,6 @@ SECTIONS {
         src/battle_anim.o(.text);
         src/battle_anim_mons.o(.text);
         src/reshow_battle_screen.o(.text);
-        src/battle_anim_status_effects.o(.text);
         src/field_weather.o(.text);
         src/field_weather_effect.o(.text);
         src/pokemon_icon.o(.text);
@@ -159,6 +158,7 @@ SECTIONS {
     ALIGN(4)
     {
         src/battle_setup.o(.text);
+        src/battle_anim_status_effects.o(.text);
         src/mail_data.o(.text);
         src/clock.o(.text);
         src/coord_event_weather.o(.text);
@@ -238,7 +238,6 @@ SECTIONS {
         src/battle_ai_script_commands.o(.text);
         src/trader.o(.text);
         src/starter_choose.o(.text);
-        src/wallclock.o(.text);
         src/pokeblock.o(.text);
         src/post_battle_event_funcs.o(.text);
         src/time_events.o(.text);
@@ -252,6 +251,7 @@ SECTIONS {
     ALIGN(4)
     {
         src/evolution_scene.o(.text);
+        src/wallclock.o(.text);
         src/fldeff_rocksmash.o(.text);
         src/fldeff_flash.o(.text);
         src/battle_records.o(.text);

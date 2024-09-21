@@ -626,6 +626,7 @@ int main(int argc, char ** argv)
     config_set("IntroCryOffset", get_instr_addr(elfFile, "Task_NewGameBirchSpeechSub_InitPokeBall", IsIntroLotadForCry) & 0x1FFFFFF);
     config_set("IntroSpriteOffset", get_instr_addr(elfFile, "NewGameBirchSpeech_CreateLotadSprite", IsIntroLotadForPic) & 0x1FFFFFF);
     print("ItemBallPic=%d\n", OBJ_EVENT_GFX_ITEM_BALL);
+    print("TMBallPic=%d\n", OBJ_EVENT_GFX_UNUSED_NATU_DOLL);
     config_sym("TradeTableOffset", "sIngameTrades");
     Elf32_Sym * Em_gIngameTrades = GetSymbolByName("sIngameTrades");
     print("TradeTableSize=%d\n", Em_gIngameTrades->st_size / 60); // hardcoded for now
