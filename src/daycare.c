@@ -785,13 +785,126 @@ static u16 DetermineEggSpeciesAndParentSlots(struct DayCare *daycare, u8 *parent
 
     eggSpecies = GetEggSpecies(species[parentSlots[0]]);
     if (eggSpecies == SPECIES_NIDORAN_F && daycare->offspringPersonality & EGG_GENDER_MALE)
-    {
         eggSpecies = SPECIES_NIDORAN_M;
-    }
-    if (eggSpecies == SPECIES_ILLUMISE && daycare->offspringPersonality & EGG_GENDER_MALE)
-    {
+    else if (eggSpecies == SPECIES_ILLUMISE && daycare->offspringPersonality & EGG_GENDER_MALE)
         eggSpecies = SPECIES_VOLBEAT;
-    }
+    else if (eggSpecies == SPECIES_NIDORAN_M && !(daycare->offspringPersonality & EGG_GENDER_MALE))
+        eggSpecies = SPECIES_NIDORAN_F;
+    else if (eggSpecies == SPECIES_VOLBEAT && !(daycare->offspringPersonality & EGG_GENDER_MALE))
+        eggSpecies = SPECIES_ILLUMISE;
+    else if (eggSpecies == SPECIES_INDEEDEE_FEMALE && daycare->offspringPersonality & EGG_GENDER_MALE)
+        eggSpecies = SPECIES_INDEEDEE;
+    else if (eggSpecies == SPECIES_INDEEDEE && !(daycare->offspringPersonality & EGG_GENDER_MALE))
+        eggSpecies = SPECIES_INDEEDEE_FEMALE;
+    else if (eggSpecies == SPECIES_MANAPHY)
+        eggSpecies = SPECIES_PHIONE;
+    else if (eggSpecies >= SPECIES_ROTOM_HEAT
+          && eggSpecies <= SPECIES_ROTOM_MOW)
+        eggSpecies = SPECIES_ROTOM;
+    else if (eggSpecies == SPECIES_VENUSAUR_MEGA)
+        eggSpecies = SPECIES_BULBASAUR;
+    else if (eggSpecies == SPECIES_CHARIZARD_MEGA_X
+          || eggSpecies == SPECIES_CHARIZARD_MEGA_Y)
+        eggSpecies = SPECIES_CHARMANDER;
+    else if (eggSpecies == SPECIES_BLASTOISE_MEGA)
+        eggSpecies = SPECIES_SQUIRTLE;
+    else if (eggSpecies == SPECIES_BEEDRILL_MEGA)
+        eggSpecies = SPECIES_WEEDLE;
+    else if (eggSpecies == SPECIES_PIDGEOT_MEGA)
+        eggSpecies = SPECIES_PIDGEY;
+    else if (eggSpecies == SPECIES_ALAKAZAM_MEGA)
+        eggSpecies = SPECIES_ABRA;
+    else if (eggSpecies == SPECIES_SLOWBRO_MEGA)
+        eggSpecies = SPECIES_SLOWPOKE;
+    else if (eggSpecies == SPECIES_GENGAR_MEGA)
+        eggSpecies = SPECIES_GASTLY;
+    else if (eggSpecies == SPECIES_KANGASKHAN_MEGA)
+        eggSpecies = SPECIES_KANGASKHAN;
+    else if (eggSpecies == SPECIES_PINSIR_MEGA)
+        eggSpecies = SPECIES_PINSIR;
+    else if (eggSpecies == SPECIES_GYARADOS_MEGA)
+        eggSpecies = SPECIES_MAGIKARP;
+    else if (eggSpecies == SPECIES_AERODACTYL_MEGA)
+        eggSpecies = SPECIES_AERODACTYL;
+    else if (eggSpecies == SPECIES_AMPHAROS_MEGA)
+        eggSpecies = SPECIES_MAREEP;
+    else if (eggSpecies == SPECIES_STEELIX_MEGA)
+        eggSpecies = SPECIES_ONIX;
+    else if (eggSpecies == SPECIES_SCIZOR_MEGA)
+        eggSpecies = SPECIES_SCYTHER;
+    else if (eggSpecies == SPECIES_HERACROSS_MEGA)
+        eggSpecies = SPECIES_HERACROSS;
+    else if (eggSpecies == SPECIES_HOUNDOOM_MEGA)
+        eggSpecies = SPECIES_HOUNDOUR;
+    else if (eggSpecies == SPECIES_TYRANITAR_MEGA)
+        eggSpecies = SPECIES_LARVITAR;
+    else if (eggSpecies == SPECIES_SCEPTILE_MEGA)
+        eggSpecies = SPECIES_TREECKO;
+    else if (eggSpecies == SPECIES_BLAZIKEN_MEGA)
+        eggSpecies = SPECIES_TORCHIC;
+    else if (eggSpecies == SPECIES_SWAMPERT_MEGA)
+        eggSpecies = SPECIES_MUDKIP;
+    else if (eggSpecies == SPECIES_GARDEVOIR_MEGA
+          || eggSpecies == SPECIES_GALLADE_MEGA)
+        eggSpecies = SPECIES_RALTS;
+    else if (eggSpecies == SPECIES_SABLEYE_MEGA)
+        eggSpecies = SPECIES_SABLEYE;
+    else if (eggSpecies == SPECIES_MAWILE_MEGA)
+        eggSpecies = SPECIES_MAWILE;
+    else if (eggSpecies == SPECIES_AGGRON_MEGA)
+        eggSpecies = SPECIES_ARON;
+    else if (eggSpecies == SPECIES_MEDICHAM_MEGA)
+        eggSpecies = SPECIES_MEDITITE;
+    else if (eggSpecies == SPECIES_MANECTRIC_MEGA)
+        eggSpecies = SPECIES_ELECTRIKE;
+    else if (eggSpecies == SPECIES_SHARPEDO_MEGA)
+        eggSpecies = SPECIES_CARVANHA;
+    else if (eggSpecies == SPECIES_CAMERUPT_MEGA)
+        eggSpecies = SPECIES_NUMEL;
+    else if (eggSpecies == SPECIES_ALTARIA_MEGA)
+        eggSpecies = SPECIES_SWABLU;
+    else if (eggSpecies == SPECIES_BANETTE_MEGA)
+        eggSpecies = SPECIES_SHUPPET;
+    else if (eggSpecies == SPECIES_ABSOL_MEGA)
+        eggSpecies = SPECIES_ABSOL;
+    else if (eggSpecies == SPECIES_GLALIE_MEGA)
+        eggSpecies = SPECIES_SNORUNT;
+    else if (eggSpecies == SPECIES_SALAMENCE_MEGA)
+        eggSpecies = SPECIES_BAGON;
+    else if (eggSpecies == SPECIES_METAGROSS_MEGA)
+        eggSpecies = SPECIES_BELDUM;
+    else if (eggSpecies == SPECIES_LOPUNNY_MEGA)
+        eggSpecies = SPECIES_BUNEARY;
+    else if (eggSpecies == SPECIES_GARCHOMP_MEGA)
+        eggSpecies = SPECIES_GIBLE;
+    else if (eggSpecies == SPECIES_LUCARIO_MEGA)
+        eggSpecies = SPECIES_RIOLU;
+    else if (eggSpecies == SPECIES_ABOMASNOW_MEGA)
+        eggSpecies = SPECIES_SNOVER;
+    else if (eggSpecies == SPECIES_AUDINO_MEGA)
+        eggSpecies = SPECIES_AUDINO;
+    else if (eggSpecies == SPECIES_CHERRIM_SUNSHINE)
+        eggSpecies = SPECIES_CHERUBI;
+    else if (eggSpecies == SPECIES_DARMANITAN_ZEN_MODE)
+        eggSpecies = SPECIES_DARUMAKA;
+    else if (eggSpecies == SPECIES_DARMANITAN_ZEN_MODE_GALARIAN)
+        eggSpecies = SPECIES_DARUMAKA_GALARIAN;
+    else if (eggSpecies == SPECIES_WISHIWASHI_SCHOOL)
+        eggSpecies = SPECIES_WISHIWASHI;
+    else if (eggSpecies >= SPECIES_CASTFORM_SUNNY
+          && eggSpecies <= SPECIES_CASTFORM_SNOWY)
+        eggSpecies = SPECIES_CASTFORM;
+    else if (eggSpecies >= SPECIES_BURMY_SANDY_CLOAK
+          && eggSpecies <= SPECIES_WORMADAM_TRASH_CLOAK)
+        eggSpecies = SPECIES_BURMY;
+    else if (eggSpecies == SPECIES_EISCUE_NOICE_FACE)
+        eggSpecies = SPECIES_EISCUE;
+    else if (eggSpecies == SPECIES_MORPEKO_HANGRY)
+        eggSpecies = SPECIES_MORPEKO;
+    else if (eggSpecies == SPECIES_URSALUNA_BLOODMOON)
+        eggSpecies = SPECIES_TEDDIURSA;
+    else if (eggSpecies == SPECIES_PALAFIN_HERO)
+        eggSpecies = SPECIES_FINIZEN;
 
     // Make Ditto the "mother" slot if the other daycare mon is male.
     if (species[parentSlots[1]] == SPECIES_DITTO && GetBoxMonGender(&daycare->mons[parentSlots[0]].mon) != MON_FEMALE)
