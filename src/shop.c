@@ -993,6 +993,10 @@ static void Task_BuyMenu(u8 taskId)
             {
                 BuyMenuDisplayMessage(taskId, gText_YouDontHaveMoney, BuyMenuReturnToItemList);
             }
+            else if (ItemId_GetPocket(itemId) == POCKET_TM_HM && CheckBagHasItem(itemId, 1))
+            {
+                BuyMenuDisplayMessage(taskId, gText_YouAlreadyHaveThis, BuyMenuReturnToItemList);
+            }
             else
             {
                 if (sMartInfo.martType == MART_TYPE_NORMAL)
@@ -1043,6 +1047,9 @@ static void Task_BuyHowManyDialogueInit(u8 taskId)
     ScheduleBgCopyTilemapToVram(0);
 
     maxQuantity = GetMoney(&gSaveBlock1Ptr->money) / sShopData->totalCost;
+
+    if (ItemId_GetPocket(tItemId) == POCKET_TM_HM)
+        maxQuantity = 1;
 
     if (maxQuantity > MAX_BAG_ITEM_CAPACITY)
         sShopData->maxQuantity = MAX_BAG_ITEM_CAPACITY;
