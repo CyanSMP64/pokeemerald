@@ -1064,3 +1064,4 @@ EventScript_ReleaseEnd::
 	end
 
 	.include "data/scripts/hidden_item_sparkles.inc"
+	.include "data/scripts/hm_menu.inc"

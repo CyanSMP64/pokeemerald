@@ -10,6 +10,11 @@ Debug_CheatStart::
 	end
 
 Debug_Script_1::
+	lock
+	buffernumberstring STR_VAR_1, VAR_LAST_TALKED
+	msgbox Debug_Message_LastTalked_STR_VAR_1, MSGBOX_DEFAULT
+	closemessage
+	release
 	end
 
 Debug_Script_2::
@@ -35,3 +40,6 @@ Debug_Script_8::
 
 Debug_Message_Test::
     .string "Test message!$"
+
+Debug_Message_LastTalked_STR_VAR_1::
+    .string "VAR-LAST-TALKED is {STR_VAR_1}.$"

@@ -1,10 +1,12 @@
 @ Interact with cuttable tree
 EventScript_CutTree::
 	lockall
+	checkitem ITEM_HM01
+    goto_if_eq VAR_RESULT, FALSE, EventScript_CheckTreeCantCut
 	goto_if_unset FLAG_BADGE01_GET, EventScript_CheckTreeCantCut
-	checkpartymove MOVE_CUT
-	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CheckTreeCantCut
-	setfieldeffectargument 0, VAR_RESULT
+@	checkpartymove MOVE_CUT
+@	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CheckTreeCantCut
+	setfieldeffectargument 0, 0
 	dofieldeffect FLDEFF_USE_CUT_ON_TREE
 	waitstate
 	goto EventScript_CutTreeDown
@@ -16,6 +18,15 @@ EventScript_UseCut::
 	dofieldeffect FLDEFF_USE_CUT_ON_TREE
 	waitstate
 	goto EventScript_CutTreeDown
+	end
+
+@ Use cut from hm menu
+EventScript_UseCutOnGrass::
+	lockall
+    callnative SetUpFieldMove_Cut_grass
+	dofieldeffect FLDEFF_USE_CUT_ON_GRASS
+	waitstate
+	releaseall
 	end
 
 EventScript_CutTreeDown::

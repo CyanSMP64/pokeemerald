@@ -62,7 +62,8 @@ enum
     MENU_ACTION_PLAYER_LINK,
     MENU_ACTION_REST_FRONTIER,
     MENU_ACTION_RETIRE_FRONTIER,
-    MENU_ACTION_PYRAMID_BAG
+    MENU_ACTION_PYRAMID_BAG,
+    MENU_ACTION_HM
 };
 
 // Save status
@@ -82,7 +83,7 @@ EWRAM_DATA static u8 sSafariBallsWindowId = 0;
 EWRAM_DATA static u8 sBattlePyramidFloorWindowId = 0;
 EWRAM_DATA static u8 sStartMenuCursorPos = 0;
 EWRAM_DATA static u8 sNumStartMenuActions = 0;
-EWRAM_DATA static u8 sCurrentStartMenuActions[9] = {0};
+EWRAM_DATA static u8 sCurrentStartMenuActions[10] = {0};
 EWRAM_DATA static u8 sInitStartMenuData[2] = {0};
 
 EWRAM_DATA static u8 (*sSaveDialogCallback)(void) = NULL;
@@ -103,6 +104,7 @@ static bool8 StartMenuSafariZoneRetireCallback(void);
 static bool8 StartMenuLinkModePlayerNameCallback(void);
 static bool8 StartMenuBattlePyramidRetireCallback(void);
 static bool8 StartMenuBattlePyramidBagCallback(void);
+static bool8 StartMenuHMCallback(void);
 
 // Menu callbacks
 static bool8 SaveStartCallback(void);
@@ -137,6 +139,10 @@ static void Task_SaveAfterLinkBattle(u8 taskId);
 static void Task_WaitForBattleTowerLinkSave(u8 taskId);
 static bool8 FieldCB_ReturnToFieldStartMenu(void);
 
+static void RunHMMoveScript(void);
+extern const u8 HMMenu_EventScript_ShowHMMenu[];
+
+
 static const struct WindowTemplate sSafariBallsWindowTemplate = {0, 1, 1, 9, 4, 0xF, 8};
 
 static const u8 *const sPyramidFloorNames[FRONTIER_STAGES_PER_CHALLENGE + 1] =
@@ -168,7 +174,8 @@ static const struct MenuAction sStartMenuItems[] =
     [MENU_ACTION_PLAYER_LINK]     = {gText_MenuPlayer,  {.u8_void = StartMenuLinkModePlayerNameCallback}},
     [MENU_ACTION_REST_FRONTIER]   = {gText_MenuRest,    {.u8_void = StartMenuSaveCallback}},
     [MENU_ACTION_RETIRE_FRONTIER] = {gText_MenuRetire,  {.u8_void = StartMenuBattlePyramidRetireCallback}},
-    [MENU_ACTION_PYRAMID_BAG]     = {gText_MenuBag,     {.u8_void = StartMenuBattlePyramidBagCallback}}
+    [MENU_ACTION_PYRAMID_BAG]     = {gText_MenuBag,     {.u8_void = StartMenuBattlePyramidBagCallback}},
+    [MENU_ACTION_HM]              = {gText_MenuHM,      {.u8_void = StartMenuHMCallback}},
 };
 
 static const struct BgTemplate sBgTemplates_LinkBattleSave[] =
@@ -297,6 +304,16 @@ static void BuildNormalStartMenu(void)
     {
         AddStartMenuAction(MENU_ACTION_POKEMON);
     }
+    if (FlagGet(FLAG_RECEIVED_HM01)
+     || FlagGet(FLAG_RECEIVED_HM02)
+     || FlagGet(FLAG_RECEIVED_HM03)
+     || FlagGet(FLAG_RECEIVED_HM04)
+     || FlagGet(FLAG_RECEIVED_HM05)
+     || FlagGet(FLAG_RECEIVED_HM06)
+     || FlagGet(FLAG_RECEIVED_HM07)
+     || FlagGet(FLAG_RECEIVED_HM08) == TRUE) {
+        AddStartMenuAction(MENU_ACTION_HM);
+    }
 
     AddStartMenuAction(MENU_ACTION_BAG);
 
@@ -316,6 +333,7 @@ static void BuildSafariZoneStartMenu(void)
     AddStartMenuAction(MENU_ACTION_RETIRE_SAFARI);
     AddStartMenuAction(MENU_ACTION_POKEDEX);
     AddStartMenuAction(MENU_ACTION_POKEMON);
+    AddStartMenuAction(MENU_ACTION_HM);
     AddStartMenuAction(MENU_ACTION_BAG);
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_OPTION);
@@ -429,12 +447,12 @@ static bool32 PrintStartMenuActions(s8 *pIndex, u32 count)
     {
         if (sStartMenuItems[sCurrentStartMenuActions[index]].func.u8_void == StartMenuPlayerNameCallback)
         {
-            PrintPlayerNameOnWindow(GetStartMenuWindowId(), sStartMenuItems[sCurrentStartMenuActions[index]].text, 8, (index << 4) + 9);
+            PrintPlayerNameOnWindow(GetStartMenuWindowId(), sStartMenuItems[sCurrentStartMenuActions[index]].text, 8, (index << 4) + 1);
         }
         else
         {
             StringExpandPlaceholders(gStringVar4, sStartMenuItems[sCurrentStartMenuActions[index]].text);
-            AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_NORMAL, gStringVar4, 8, (index << 4) + 9, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_NORMAL, gStringVar4, 8, (index << 4) + 1, TEXT_SKIP_DRAW, NULL);
         }
 
         index++;
@@ -483,7 +501,7 @@ static bool32 InitStartMenuStep(void)
             sInitStartMenuData[0]++;
         break;
     case 5:
-        sStartMenuCursorPos = InitMenuNormal(GetStartMenuWindowId(), FONT_NORMAL, 0, 9, 16, sNumStartMenuActions, sStartMenuCursorPos);
+        sStartMenuCursorPos = InitMenuNormal(GetStartMenuWindowId(), FONT_NORMAL, 0, 1, 16, sNumStartMenuActions, sStartMenuCursorPos);
         CopyWindowToVram(GetStartMenuWindowId(), COPYWIN_MAP);
         return TRUE;
     }
@@ -593,7 +611,8 @@ static bool8 HandleStartMenuInput(void)
         if (gMenuCallback != StartMenuSaveCallback
             && gMenuCallback != StartMenuExitCallback
             && gMenuCallback != StartMenuSafariZoneRetireCallback
-            && gMenuCallback != StartMenuBattlePyramidRetireCallback)
+            && gMenuCallback != StartMenuBattlePyramidRetireCallback
+            && gMenuCallback != StartMenuHMCallback)
         {
            FadeScreen(FADE_TO_BLACK, 0);
         }
@@ -755,6 +774,20 @@ static bool8 StartMenuBattlePyramidRetireCallback(void)
     gMenuCallback = BattlePyramidRetireStartCallback; // Confirm retire
 
     return FALSE;
+}
+
+static void RunHMMoveScript(void)
+{
+    ScriptContext_SetupScript(HMMenu_EventScript_ShowHMMenu);
+}
+
+static bool8 StartMenuHMCallback(void)
+{
+    RemoveExtraStartMenuWindows();
+    HideStartMenu();
+    RunHMMoveScript();
+
+    return TRUE;
 }
 
 // Functionally unused

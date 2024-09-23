@@ -3,6 +3,7 @@
 
 // cut
 bool8 SetUpFieldMove_Cut(void);
+bool8 SetUpFieldMove_Cut_grass(void);
 bool8 FldEff_UseCutOnGrass(void);
 bool8 FldEff_UseCutOnTree(void);
 bool8 FldEff_CutGrass(void);
