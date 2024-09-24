@@ -71,6 +71,11 @@ HMMenu_EventScript_TryUseHM06RockSmash::
 	checkitem ITEM_HM06
     goto_if_eq VAR_RESULT, FALSE, HMMenu_EventScript_YouDontHaveThisHMYet
     goto_if_unset FLAG_BADGE03_GET, HMMenu_EventScript_CantBeUsedUntilBadge
+    callnative SetUpFieldMove_RockSmash_scr
+    goto_if_eq VAR_RESULT, TRUE, EventScript_RockSmash
+    callnative SetUpFieldMove_RockSmash_scr_Regi
+    goto_if_eq VAR_RESULT, TRUE, HMMenu_EventScript_UseRockSmash_Regi
+    msgbox HMMenu_Text_CantUseThat, MSGBOX_DEFAULT
     releaseall
     end
 
@@ -99,6 +104,11 @@ HMMenu_EventScript_UseFlash::
 
 HMMenu_EventScript_UseFlash_Regi::
     callnative SetUpPuzzleEffectRegisteel
+    releaseall
+    end
+
+HMMenu_EventScript_UseRockSmash_Regi::
+    callnative SetUpPuzzleEffectRegirock
     releaseall
     end
 

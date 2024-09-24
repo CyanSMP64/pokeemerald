@@ -164,3 +164,19 @@ static void FieldMove_RockSmash(void)
     FieldEffectActiveListRemove(FLDEFF_USE_ROCK_SMASH);
     ScriptContext_Enable();
 }
+
+void SetUpFieldMove_RockSmash_scr()
+{
+    if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_BREAKABLE_ROCK) == TRUE)
+        gSpecialVar_Result = TRUE;
+    else
+        gSpecialVar_Result = FALSE;
+}
+
+void SetUpFieldMove_RockSmash_scr_Regi()
+{
+    if (ShouldDoBrailleRegirockEffect())
+        gSpecialVar_Result = TRUE;
+    else
+        gSpecialVar_Result = FALSE;
+}
