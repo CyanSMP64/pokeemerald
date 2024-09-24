@@ -25,7 +25,6 @@ struct FlashStruct
     void (*func)(void);
 };
 
-static void FieldCallback_Flash(void);
 static void FldEff_UseFlash(void);
 static bool8 TryDoMapTransition(void);
 static void DoExitCaveTransition(void);
@@ -90,7 +89,7 @@ bool8 SetUpFieldMove_Flash(void)
     return FALSE;
 }
 
-static void FieldCallback_Flash(void)
+void FieldCallback_Flash(void)
 {
     u8 taskId = CreateFieldMoveTask();
     gFieldEffectArguments[0] = GetCursorSelectionMonId();
@@ -362,4 +361,20 @@ static void Task_EnterCaveTransition4(u8 taskId)
         LoadPalette(sCaveTransitionPalette_Black, BG_PLTT_ID(0), PLTT_SIZE_4BPP);
         SetMainCallback2(gMain.savedCallback);
     }
+}
+
+void SetUpFieldMove_Flash_scr()
+{
+    if (gMapHeader.cave == TRUE && !FlagGet(FLAG_SYS_USE_FLASH))
+        gSpecialVar_Result = TRUE;
+    else
+        gSpecialVar_Result = FALSE;
+}
+
+void SetUpFieldMove_Flash_scr_Regi()
+{
+    if (ShouldDoBrailleRegisteelEffect())
+        gSpecialVar_Result = TRUE;
+    else
+        gSpecialVar_Result = FALSE;
 }

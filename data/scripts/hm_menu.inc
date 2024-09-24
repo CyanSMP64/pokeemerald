@@ -59,6 +59,11 @@ HMMenu_EventScript_TryUseHM05Flash::
 	checkitem ITEM_HM05
     goto_if_eq VAR_RESULT, FALSE, HMMenu_EventScript_YouDontHaveThisHMYet
     goto_if_unset FLAG_BADGE02_GET, HMMenu_EventScript_CantBeUsedUntilBadge
+    callnative SetUpFieldMove_Flash_scr
+    goto_if_eq VAR_RESULT, TRUE, HMMenu_EventScript_UseFlash
+    callnative SetUpFieldMove_Flash_scr_Regi
+    goto_if_eq VAR_RESULT, TRUE, HMMenu_EventScript_UseFlash_Regi
+    msgbox HMMenu_Text_CantUseThat, MSGBOX_DEFAULT
     releaseall
     end
 
@@ -84,6 +89,16 @@ HMMenu_EventScript_TryUseHM08Dive::
     end
 
 HMMenu_EventScript_Cancel::
+    releaseall
+    end
+
+HMMenu_EventScript_UseFlash::
+    callnative FieldCallback_Flash
+    releaseall
+    end
+
+HMMenu_EventScript_UseFlash_Regi::
+    callnative SetUpPuzzleEffectRegisteel
     releaseall
     end
 
