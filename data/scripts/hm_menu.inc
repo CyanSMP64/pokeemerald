@@ -26,12 +26,59 @@ HMMenu_EventScript_TryUseHM01Cut::
     end
 
 HMMenu_EventScript_TryUseHM02Fly::
+	checkitem ITEM_HM02
+    goto_if_eq VAR_RESULT, FALSE, HMMenu_EventScript_YouDontHaveThisHMYet
+    goto_if_unset FLAG_BADGE06_GET, HMMenu_EventScript_CantBeUsedUntilBadge
+    callnative SetUpFieldMove_Fly_scr
+    goto_if_eq VAR_RESULT, FALSE, HMMenu_EventScript_CantUseThat
+    fadescreen FADE_TO_BLACK
+    special FieldUseFly
+    waitstate
+    releaseall
+    end
+
 HMMenu_EventScript_TryUseHM03Surf::
+	checkitem ITEM_HM03
+    goto_if_eq VAR_RESULT, FALSE, HMMenu_EventScript_YouDontHaveThisHMYet
+    goto_if_unset FLAG_BADGE05_GET, HMMenu_EventScript_CantBeUsedUntilBadge
+    releaseall
+    end
+
 HMMenu_EventScript_TryUseHM04Strength::
+	checkitem ITEM_HM04
+    goto_if_eq VAR_RESULT, FALSE, HMMenu_EventScript_YouDontHaveThisHMYet
+    goto_if_unset FLAG_BADGE04_GET, HMMenu_EventScript_CantBeUsedUntilBadge
+    releaseall
+    end
+
 HMMenu_EventScript_TryUseHM05Flash::
+	checkitem ITEM_HM05
+    goto_if_eq VAR_RESULT, FALSE, HMMenu_EventScript_YouDontHaveThisHMYet
+    goto_if_unset FLAG_BADGE02_GET, HMMenu_EventScript_CantBeUsedUntilBadge
+    releaseall
+    end
+
 HMMenu_EventScript_TryUseHM06RockSmash::
+	checkitem ITEM_HM06
+    goto_if_eq VAR_RESULT, FALSE, HMMenu_EventScript_YouDontHaveThisHMYet
+    goto_if_unset FLAG_BADGE03_GET, HMMenu_EventScript_CantBeUsedUntilBadge
+    releaseall
+    end
+
 HMMenu_EventScript_TryUseHM07Waterfall::
+	checkitem ITEM_HM07
+    goto_if_eq VAR_RESULT, FALSE, HMMenu_EventScript_YouDontHaveThisHMYet
+    goto_if_unset FLAG_BADGE08_GET, HMMenu_EventScript_CantBeUsedUntilBadge
+    releaseall
+    end
+
 HMMenu_EventScript_TryUseHM08Dive::
+	checkitem ITEM_HM08
+    goto_if_eq VAR_RESULT, FALSE, HMMenu_EventScript_YouDontHaveThisHMYet
+    goto_if_unset FLAG_BADGE07_GET, HMMenu_EventScript_CantBeUsedUntilBadge
+    releaseall
+    end
+
 HMMenu_EventScript_Cancel::
     releaseall
     end
@@ -46,6 +93,11 @@ HMMenu_EventScript_CantBeUsedUntilBadge::
     releaseall
     end
 
+HMMenu_EventScript_CantUseThat::
+    msgbox HMMenu_Text_CantUseThat, MSGBOX_DEFAULT
+    releaseall
+    end
+
 HMMenu_Text_YouDontHaveThisHMYet:
     .string "You don't have this HM yet.$"
 
@@ -55,3 +107,6 @@ HMMenu_Text_CantBeUsedUntilBadge:
 
 HMMenu_Text_TheresNothingToCut:
     .string "There's nothing to Cut.$"
+
+HMMenu_Text_CantUseThat:
+    .string "Can't use that here.$"

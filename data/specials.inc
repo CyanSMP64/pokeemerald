@@ -539,4 +539,4 @@ gSpecials::
 	def_special IsPoisonInParty
 	def_special ChoosePartyMonFRLG
 	def_special IsLeadMon550BST
-	def_special FlagsVars_PokedexFlags_All @ debug
+	def_special FieldUseFly

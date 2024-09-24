@@ -977,6 +977,11 @@ void FieldShowRegionMap(void)
     SetMainCallback2(CB2_FieldShowRegionMap);
 }
 
+void FieldUseFly(void)
+{
+    SetMainCallback2(CB2_OpenFlyMap);
+}
+
 // Task data for Task_PCTurnOnEffect and Task_LotteryCornerComputerEffect
 #define tPaused       data[0] // Never set
 #define tTaskId       data[1]
