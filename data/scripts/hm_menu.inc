@@ -51,6 +51,7 @@ HMMenu_EventScript_TryUseHM04Strength::
 	checkitem ITEM_HM04
     goto_if_eq VAR_RESULT, FALSE, HMMenu_EventScript_YouDontHaveThisHMYet
     goto_if_unset FLAG_BADGE04_GET, HMMenu_EventScript_CantBeUsedUntilBadge
+    goto EventScript_UseStrength
     releaseall
     end
 
