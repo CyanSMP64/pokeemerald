@@ -41,6 +41,9 @@ HMMenu_EventScript_TryUseHM03Surf::
 	checkitem ITEM_HM03
     goto_if_eq VAR_RESULT, FALSE, HMMenu_EventScript_YouDontHaveThisHMYet
     goto_if_unset FLAG_BADGE05_GET, HMMenu_EventScript_CantBeUsedUntilBadge
+    callnative SetUpFieldMove_Surf_scr
+    goto_if_eq VAR_RESULT, TRUE, EventScript_UseSurf
+    msgbox HMMenu_Text_CantSurfHere, MSGBOX_DEFAULT
     releaseall
     end
 
@@ -110,3 +113,6 @@ HMMenu_Text_TheresNothingToCut:
 
 HMMenu_Text_CantUseThat:
     .string "Can't use that here.$"
+
+HMMenu_Text_CantSurfHere:
+    .string "You can't Surf here.$"

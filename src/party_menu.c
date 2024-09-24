@@ -3868,7 +3868,7 @@ static void FieldCallback_Surf(void)
 
 static bool8 SetUpFieldMove_Surf(void)
 {
-    if (PartyHasMonWithSurf() == TRUE && IsPlayerFacingSurfableFishableWater() == TRUE)
+    if (IsPlayerFacingSurfableFishableWater() == TRUE)
     {
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FieldCallback_Surf;
@@ -6465,6 +6465,14 @@ void IsLastMonThatKnowsSurf(void)
 void SetUpFieldMove_Fly_scr()
 {
     if (Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
+        gSpecialVar_Result = TRUE;
+    else
+        gSpecialVar_Result = FALSE;
+}
+
+void SetUpFieldMove_Surf_scr()
+{
+    if (IsPlayerFacingSurfableFishableWater() == TRUE)
         gSpecialVar_Result = TRUE;
     else
         gSpecialVar_Result = FALSE;
