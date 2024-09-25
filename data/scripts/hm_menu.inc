@@ -83,6 +83,9 @@ HMMenu_EventScript_TryUseHM07Waterfall::
 	checkitem ITEM_HM07
     goto_if_eq VAR_RESULT, FALSE, HMMenu_EventScript_YouDontHaveThisHMYet
     goto_if_unset FLAG_BADGE08_GET, HMMenu_EventScript_CantBeUsedUntilBadge
+    callnative SetUpFieldMove_Waterfall_scr
+    goto_if_eq VAR_RESULT, TRUE, EventScript_UseWaterfall
+    msgbox HMMenu_Text_CantUseThat, MSGBOX_DEFAULT
     releaseall
     end
 

@@ -6477,3 +6477,14 @@ void SetUpFieldMove_Surf_scr()
     else
         gSpecialVar_Result = FALSE;
 }
+
+void SetUpFieldMove_Waterfall_scr()
+{
+    s16 x, y;
+
+    GetXYCoordsOneStepInFrontOfPlayer(&x, &y);
+    if (MetatileBehavior_IsWaterfall(MapGridGetMetatileBehaviorAt(x, y)) == TRUE && IsPlayerSurfingNorth() == TRUE)
+        gSpecialVar_Result = TRUE;
+    else
+        gSpecialVar_Result = FALSE;
+}
