@@ -93,6 +93,11 @@ HMMenu_EventScript_TryUseHM08Dive::
 	checkitem ITEM_HM08
     goto_if_eq VAR_RESULT, FALSE, HMMenu_EventScript_YouDontHaveThisHMYet
     goto_if_unset FLAG_BADGE07_GET, HMMenu_EventScript_CantBeUsedUntilBadge
+    callnative TrySetupDiveDownScript_scr
+    goto_if_eq VAR_RESULT, TRUE, EventScript_UseDiveHMMenu
+    callnative TrySetupDiveEmergeScript_scr
+    goto_if_eq VAR_RESULT, TRUE, EventScript_UseDiveHMMenuSurface
+    msgbox HMMenu_Text_CantUseThat, MSGBOX_DEFAULT
     releaseall
     end
 

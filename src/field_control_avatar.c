@@ -495,7 +495,7 @@ static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metati
 
 static bool32 TrySetupDiveDownScript(void)
 {
-    if (FlagGet(FLAG_BADGE07_GET) && TrySetDiveWarp() == 2)
+    if (FlagGet(FLAG_BADGE07_GET) && CheckBagHasItem(ITEM_HM08, 1) && TrySetDiveWarp() == 2)
     {
         ScriptContext_SetupScript(EventScript_UseDive);
         return TRUE;
@@ -505,7 +505,7 @@ static bool32 TrySetupDiveDownScript(void)
 
 static bool32 TrySetupDiveEmergeScript(void)
 {
-    if (FlagGet(FLAG_BADGE07_GET) && gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetDiveWarp() == 1)
+    if (FlagGet(FLAG_BADGE07_GET) && CheckBagHasItem(ITEM_HM08, 1) && gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetDiveWarp() == 1)
     {
         ScriptContext_SetupScript(EventScript_UseDiveUnderwater);
         return TRUE;

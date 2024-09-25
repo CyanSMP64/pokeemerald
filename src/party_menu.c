@@ -68,6 +68,7 @@
 #include "constants/field_effects.h"
 #include "constants/item_effects.h"
 #include "constants/items.h"
+#include "constants/map_types.h"
 #include "constants/moves.h"
 #include "constants/party_menu.h"
 #include "constants/rgb.h"
@@ -6487,4 +6488,20 @@ void SetUpFieldMove_Waterfall_scr()
         gSpecialVar_Result = TRUE;
     else
         gSpecialVar_Result = FALSE;
+}
+
+void TrySetupDiveDownScript_scr()
+{
+    if (TrySetDiveWarp() == 2)
+        gSpecialVar_Result =  TRUE;
+    else
+        gSpecialVar_Result =  FALSE;
+}
+
+void TrySetupDiveEmergeScript_scr()
+{
+    if (gMapHeader.mapType == MAP_TYPE_UNDERWATER && TrySetDiveWarp() == 1)
+        gSpecialVar_Result =  TRUE;
+    else
+        gSpecialVar_Result =  FALSE;
 }
