@@ -172,6 +172,22 @@ Route121_EventScript_RematchCristin::
 	msgbox Route121_Text_CristinPostRematch, MSGBOX_AUTOCLOSE
 	end
 
+Route121_EventScript_TwoMonsTrigger::
+	setvar VAR_TEMP_0, 1
+	specialvar VAR_RESULT, CalculatePlayerPartyCount
+	goto_if_le VAR_RESULT, 1, Route121_EventScript_NeedTwoMons
+	end
+
+Route121_EventScript_NeedTwoMons::
+	lockall
+	msgbox Route121_Text_NeedTwoMons, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	setvar VAR_TEMP_0, 0
+	releaseall
+	end
+
 Route121_Text_OkayMoveOutToMtPyre:
 	.string "Okay!\n"
 	.string "We're to move out to Mt. Pyre!$"
@@ -190,3 +206,6 @@ Route121_Text_SafariZoneSign:
 	.string "“Filled with rare Pokémon!”\n"
 	.string "Safari Zone$"
 
+Route121_Text_NeedTwoMons:
+	.string "You need at least two Pokémon to\n"
+	.string "enter Route 122.$"

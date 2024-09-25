@@ -286,6 +286,15 @@
       "var": "VAR_TEMP_01",
       "var_value": "0",
       "script": "JaggedPass_EventScript_Sparkle_FullHeal"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "JaggedPass_EventScript_TwoMonsTrigger"
     }
   ],
   "bg_events": [

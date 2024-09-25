@@ -149,6 +149,24 @@ JaggedPass_EventScript_Autumn::
 	msgbox JaggedPass_Text_AutumnPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+JaggedPass_EventScript_TwoMonsTrigger::
+	setvar VAR_TEMP_0, 1
+	goto_if_ne VAR_JAGGED_PASS_STATE, 2, JaggedPass_EventScript_End
+	specialvar VAR_RESULT, CalculatePlayerPartyCount
+	goto_if_le VAR_RESULT, 1, JaggedPass_EventScript_NeedTwoMons
+JaggedPass_EventScript_End::
+	end
+
+JaggedPass_EventScript_NeedTwoMons::
+	lockall
+	msgbox JaggedPass_Text_NeedTwoMons, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, BattleFrontier_BattlePikeRoomNormal_Movement_NPCApproachMon
+	waitmovement 0
+	setvar VAR_TEMP_0, 0
+	releaseall
+	end
+
 JaggedPass_Text_EricIntro:
 	.string "Mt. Chimney's Jagged Pass…\p"
 	.string "Now this is what I've always wanted\n"
@@ -266,3 +284,6 @@ JaggedPass_Text_AutumnPostBattle:
 	.string "What is that odd rock protrusion\n"
 	.string "a little up the hill from here?$"
 
+JaggedPass_Text_NeedTwoMons:
+	.string "You need at least two Pokémon to\n"
+	.string "enter Magma Hideout.$"

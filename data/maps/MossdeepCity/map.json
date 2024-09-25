@@ -33,7 +33,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
       "x": 38,
-      "y": 12,
+      "y": 14,
       "elevation": 5,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -57,17 +57,17 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_POKEFAN_F",
-      "x": 32,
-      "y": 12,
+      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
+      "x": 38,
+      "y": 10,
       "elevation": 5,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MossdeepCity_EventScript_PokefanF",
-      "flag": "0"
+      "flag": "FLAG_HIDE_MOSSDEEP_CITY_GYM_GUIDE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
@@ -414,6 +414,42 @@
       "var": "VAR_MOSSDEEP_CITY_STATE",
       "var_value": "1",
       "script": "MossdeepCity_EventScript_TeamMagmaEnterSpaceCenter"
+    },
+    {
+      "type": "trigger",
+      "x": 25,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "MossdeepCity_EventScript_CheckPkmnCount2"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "MossdeepCity_EventScript_CheckPkmnCount2"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "MossdeepCity_EventScript_CheckPkmnCount2"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "MossdeepCity_EventScript_CheckPkmnCount2"
     }
   ],
   "bg_events": [

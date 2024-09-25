@@ -4,6 +4,7 @@
 .set LOCALID_GRUNT_4, 13
 .set LOCALID_MAXIE, 14
 .set LOCALID_SCOTT, 16
+.set LOCALID_GYM_GUIDE, 3
 
 MossdeepCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MossdeepCity_OnTransition
@@ -15,19 +16,32 @@ MossdeepCity_OnTransition:
 	clearflag FLAG_MOSSDEEP_GYM_SWITCH_3
 	clearflag FLAG_MOSSDEEP_GYM_SWITCH_4
 	call_if_set FLAG_SYS_WEATHER_CTRL, Common_EventScript_SetAbnormalWeather
+	call MossdeepCity_EventScript_CheckPkmnCount
+	end
+
+MossdeepCity_EventScript_CheckPkmnCount::
+	specialvar VAR_RESULT, CalculatePlayerPartyCount
+	goto_if_gt VAR_RESULT, 1, MossdeepCity_EventScript_HideGymGuide
+	clearflag FLAG_HIDE_MOSSDEEP_CITY_GYM_GUIDE
+	return
+MossdeepCity_EventScript_HideGymGuide::
+	removeobject LOCALID_GYM_GUIDE
+	setflag FLAG_HIDE_MOSSDEEP_CITY_GYM_GUIDE
+	return
+
+MossdeepCity_EventScript_CheckPkmnCount2::
+	setvar VAR_TEMP_0, 1
+	specialvar VAR_RESULT, CalculatePlayerPartyCount
+	goto_if_gt VAR_RESULT, 1, MossdeepCity_EventScript_HideGymGuide2
+	clearflag FLAG_HIDE_MOSSDEEP_CITY_GYM_GUIDE
+	end
+MossdeepCity_EventScript_HideGymGuide2::
+	removeobject LOCALID_GYM_GUIDE
+	setflag FLAG_HIDE_MOSSDEEP_CITY_GYM_GUIDE
 	end
 
 MossdeepCity_EventScript_PokefanF::
-	lock
-	faceplayer
-	goto_if_set FLAG_RECEIVED_HM08, MossdeepCity_EventScript_PokefanFMagmaGone
-	msgbox MossdeepCity_Text_SpaceCenterReceivedLetter, MSGBOX_DEFAULT
-	release
-	end
-
-MossdeepCity_EventScript_PokefanFMagmaGone::
-	msgbox MossdeepCity_Text_SpaceCenterLaunchingRockets, MSGBOX_DEFAULT
-	release
+	msgbox MossdeepCity_Text_SpaceCenterReceivedLetter, MSGBOX_NPC
 	end
 
 MossdeepCity_EventScript_Sailor::
@@ -78,6 +92,7 @@ MossdeepCity_EventScript_SpaceCenterSign::
 MossdeepCity_EventScript_VisitedMossdeep::
 	setflag FLAG_VISITED_MOSSDEEP_CITY
 	setvar VAR_TEMP_1, 1
+	setvar VAR_TEMP_0, 0
 	end
 
 MossdeepCity_EventScript_TeamMagmaEnterSpaceCenter::
@@ -342,14 +357,8 @@ MossdeepCity_Text_WailmerWatching:
 	.string "Wailmer watching!$"
 
 MossdeepCity_Text_SpaceCenterReceivedLetter:
-	.string "The island's Space Center has been\n"
-	.string "launching huge rockets.\p"
-	.string "There's been some kind of an uproar\n"
-	.string "over a letter they received recently.$"
-
-MossdeepCity_Text_SpaceCenterLaunchingRockets:
-	.string "The island's Space Center has been\n"
-	.string "launching huge rockets.$"
+	.string "To enter this Gym, you'll need to\n"
+	.string "have at least two Pokémon.$"
 
 MossdeepCity_Text_MossdeepTargetedByMagma:
 	.string "I heard from a Sailor buddy that\n"
