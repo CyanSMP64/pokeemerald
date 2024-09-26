@@ -8,6 +8,7 @@
 #include "field_player_avatar.h"
 #include "fieldmap.h"
 #include "fldeff.h"
+#include "item.h"
 #include "malloc.h"
 #include "metatile_behavior.h"
 #include "overworld.h"
@@ -21,6 +22,7 @@
 #include "constants/abilities.h"
 #include "constants/event_objects.h"
 #include "constants/field_effects.h"
+#include "constants/items.h"
 #include "constants/songs.h"
 #include "constants/metatile_labels.h"
 
@@ -148,9 +150,11 @@ bool8 SetUpFieldMove_Cut(void)
     if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_CUTTABLE_TREE) == TRUE)
     {
         // Standing in front of cuttable tree.
-        gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
-        gPostMenuFieldCallback = FieldCallback_CutTree;
-        return TRUE;
+        if (CheckBagHasItem(ITEM_HM01, 1)){
+            gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
+            gPostMenuFieldCallback = FieldCallback_CutTree;
+            return TRUE;
+        }
     }
     else
     {
@@ -215,8 +219,10 @@ bool8 SetUpFieldMove_Cut(void)
         {
             if (ret == TRUE)
             {
-                gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
-                gPostMenuFieldCallback = FieldCallback_CutGrass;
+                if (CheckBagHasItem(ITEM_HM01, 1)){
+                    gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
+                    gPostMenuFieldCallback = FieldCallback_CutGrass;
+                }
             }
         }
         else
@@ -263,10 +269,16 @@ bool8 SetUpFieldMove_Cut(void)
 
             if (ret == TRUE)
             {
-                gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
-                gPostMenuFieldCallback = FieldCallback_CutGrass;
+                if (CheckBagHasItem(ITEM_HM01, 1)) {
+                    gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
+                    gPostMenuFieldCallback = FieldCallback_CutGrass;
+                }
             }
         }
+        if (CheckBagHasItem(ITEM_HM01, 1))
+            ret = TRUE;
+        else
+            ret = FALSE;
 
         return ret;
     }
@@ -379,6 +391,10 @@ bool8 SetUpFieldMove_Cut_grass(void)
             }
         }
     }
+    if (CheckBagHasItem(ITEM_HM01, 1))
+        ret = TRUE;
+    else
+        ret = FALSE;
 
     return ret;
 }

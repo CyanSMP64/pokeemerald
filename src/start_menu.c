@@ -304,14 +304,15 @@ static void BuildNormalStartMenu(void)
     {
         AddStartMenuAction(MENU_ACTION_POKEMON);
     }
-    if (FlagGet(FLAG_RECEIVED_HM01)
+    if ((FlagGet(FLAG_RECEIVED_HM01)
      || FlagGet(FLAG_RECEIVED_HM02)
      || FlagGet(FLAG_RECEIVED_HM03)
      || FlagGet(FLAG_RECEIVED_HM04)
      || FlagGet(FLAG_RECEIVED_HM05)
      || FlagGet(FLAG_RECEIVED_HM06)
      || FlagGet(FLAG_RECEIVED_HM07)
-     || FlagGet(FLAG_RECEIVED_HM08) == TRUE) {
+     || FlagGet(FLAG_RECEIVED_HM08) == TRUE)
+     && gSaveBlock2Ptr->optionsHM == TRUE) {
         AddStartMenuAction(MENU_ACTION_HM);
     }
 
@@ -333,7 +334,8 @@ static void BuildSafariZoneStartMenu(void)
     AddStartMenuAction(MENU_ACTION_RETIRE_SAFARI);
     AddStartMenuAction(MENU_ACTION_POKEDEX);
     AddStartMenuAction(MENU_ACTION_POKEMON);
-    AddStartMenuAction(MENU_ACTION_HM);
+    if (gSaveBlock2Ptr->optionsHM == TRUE)
+        AddStartMenuAction(MENU_ACTION_HM);
     AddStartMenuAction(MENU_ACTION_BAG);
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_OPTION);

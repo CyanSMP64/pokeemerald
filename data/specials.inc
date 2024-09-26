@@ -540,3 +540,4 @@ gSpecials::
 	def_special ChoosePartyMonFRLG
 	def_special IsLeadMon550BST
 	def_special FieldUseFly
+	def_special GetHmModeOption

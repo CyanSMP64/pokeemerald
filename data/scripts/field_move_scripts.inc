@@ -4,10 +4,16 @@ EventScript_CutTree::
 	checkitem ITEM_HM01
     goto_if_eq VAR_RESULT, FALSE, EventScript_CheckTreeCantCut
 	goto_if_unset FLAG_BADGE01_GET, EventScript_CheckTreeCantCut
+	special GetHmModeOption
+	call_if_eq VAR_RESULT, 0, EventScript_CutTree_Classic
 	dofieldeffect FLDEFF_USE_CUT_ON_TREE
 	waitstate
 	goto EventScript_CutTreeDown
-	end
+EventScript_CutTree_Classic::
+	checkpartymove MOVE_CUT
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CheckTreeCantCut
+	setfieldeffectargument 0, VAR_RESULT
+	return
 
 @ Use cut from party menu
 EventScript_UseCut::
@@ -42,16 +48,6 @@ EventScript_CheckTreeCantCut::
 	releaseall
 	end
 
-EventScript_CancelCut::
-	closemessage
-	releaseall
-	end
-
-Text_WantToCut:
-	.string "This tree looks like it can be\n"
-	.string "Cut down!\p"
-	.string "Would you like to Cut it?$"
-
 Text_MonUsedFieldMove:
 	.string "{STR_VAR_1} used {STR_VAR_2}!$"
 
@@ -65,10 +61,16 @@ EventScript_RockSmash::
 	checkitem ITEM_HM06
     goto_if_eq VAR_RESULT, FALSE, EventScript_CantSmashRock
 	goto_if_unset FLAG_BADGE03_GET, EventScript_CantSmashRock
+	special GetHmModeOption
+	call_if_eq VAR_RESULT, 0, EventScript_RockSmash_Classic
 	dofieldeffect FLDEFF_USE_ROCK_SMASH
 	waitstate
 	goto EventScript_SmashRock
-	end
+EventScript_RockSmash_Classic::
+	checkpartymove MOVE_ROCK_SMASH
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSmashRock
+	setfieldeffectargument 0, VAR_RESULT
+	return
 
 @ Use rock smash from party menu
 EventScript_UseRockSmash::
@@ -118,12 +120,20 @@ Text_CantSmash:
 
 EventScript_StrengthBoulder::
 	lockall
+	checkitem ITEM_HM04
+    goto_if_eq VAR_RESULT, FALSE, EventScript_CantStrength
 	goto_if_unset FLAG_BADGE04_GET, EventScript_CantStrength
 	goto_if_set FLAG_SYS_USE_STRENGTH, EventScript_CheckActivatedBoulder
+	special GetHmModeOption
+	call_if_eq VAR_RESULT, 0, EventScript_StrengthBoulder_Classic
 	dofieldeffect FLDEFF_USE_STRENGTH
 	waitstate
 	goto EventScript_ActivateStrength
-	end
+EventScript_StrengthBoulder_Classic::
+	checkpartymove MOVE_STRENGTH
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantStrength
+	setfieldeffectargument 0, VAR_RESULT
+	return
 
 EventScript_UseStrength::
 	lockall
@@ -172,8 +182,15 @@ Text_StrengthActivated:
 
 EventScript_UseWaterfall::
 	lockall
+	special GetHmModeOption
+	call_if_eq VAR_RESULT, 0, EventScript_UseWaterfall_Classic
 	dofieldeffect FLDEFF_USE_WATERFALL
 	goto EventScript_EndWaterfall
+EventScript_UseWaterfall_Classic::
+	checkpartymove MOVE_WATERFALL
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantWaterfall
+	setfieldeffectargument 0, VAR_RESULT
+	return
 
 EventScript_CannotUseWaterfall::
 	lockall
@@ -198,13 +215,19 @@ Text_MonUsedWaterfall:
 
 EventScript_UseDive::
 	lockall
+	special GetHmModeOption
+	call_if_eq VAR_RESULT, 0, EventScript_UseDive_Classic
 	setfieldeffectargument 1, 1
 	msgbox Text_WantToDive, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_EndDive
 EventScript_UseDiveHMMenu::
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndDive
-	end
+EventScript_UseDive_Classic::
+	checkpartymove MOVE_DIVE
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantDive
+	setfieldeffectargument 0, VAR_RESULT
+	return
 
 EventScript_CantDive::
 	msgbox Text_CantDive, MSGBOX_DEFAULT
@@ -217,13 +240,19 @@ EventScript_EndDive::
 
 EventScript_UseDiveUnderwater::
 	lockall
+	special GetHmModeOption
+	call_if_eq VAR_RESULT, 0, EventScript_UseDiveUnderwater_Classic
 	setfieldeffectargument 1, 1
 	msgbox Text_WantToSurface, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_EndSurface
 EventScript_UseDiveHMMenuSurface::
 	dofieldeffect FLDEFF_USE_DIVE
 	goto EventScript_EndSurface
-	end
+EventScript_UseDiveUnderwater_Classic::
+	checkpartymove MOVE_DIVE
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSurface
+	setfieldeffectargument 0, VAR_RESULT
+	return
 
 EventScript_CantSurface::
 	lockall

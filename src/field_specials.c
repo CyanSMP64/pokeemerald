@@ -4321,3 +4321,10 @@ void FlagsVars_PokedexFlags_All(void)
         GetSetPokedexFlag(i + 1, FLAG_SET_SEEN);
     }
 }
+
+void GetHmModeOption(void) {
+    if (gSaveBlock2Ptr->optionsHM == TRUE) // Modern
+        gSpecialVar_Result = 1;
+    else // Classic
+        gSpecialVar_Result = 0;
+}

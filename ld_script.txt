@@ -244,13 +244,13 @@ SECTIONS {
         src/hof_pc.o(.text);
         src/field_specials.o(.text);
         src/pokedex_area_screen.o(.text);
-        src/coins.o(.text);
     } =0
 
     .text_6 0x0813d9b0 :
     ALIGN(4)
     {
         src/evolution_scene.o(.text);
+        src/coins.o(.text);
         src/wallclock.o(.text);
         src/fldeff_rocksmash.o(.text);
         src/fldeff_flash.o(.text);

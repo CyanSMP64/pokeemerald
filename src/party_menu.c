@@ -3869,8 +3869,11 @@ static void FieldCallback_Surf(void)
 
 static bool8 SetUpFieldMove_Surf(void)
 {
-    if (IsPlayerFacingSurfableFishableWater() == TRUE)
+    if (IsPlayerFacingSurfableFishableWater() == TRUE
+     && CheckBagHasItem(ITEM_HM03, 1))
     {
+        if (!PartyHasMonWithSurf() && !(gSaveBlock2Ptr->optionsHM))
+            return FALSE;
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FieldCallback_Surf;
         return TRUE;
@@ -3888,7 +3891,8 @@ static void DisplayCantUseSurfMessage(void)
 
 static bool8 SetUpFieldMove_Fly(void)
 {
-    if (Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
+    if (Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE
+     && CheckBagHasItem(ITEM_HM02, 1))
         return TRUE;
     else
         return FALSE;
@@ -3927,12 +3931,15 @@ static void FieldCallback_Dive(void)
 
 static bool8 SetUpFieldMove_Dive(void)
 {
-    gFieldEffectArguments[1] = TrySetDiveWarp();
-    if (gFieldEffectArguments[1] != 0)
-    {
-        gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
-        gPostMenuFieldCallback = FieldCallback_Dive;
-        return TRUE;
+    if (CheckBagHasItem(ITEM_HM08, 1)) {
+        gFieldEffectArguments[1] = TrySetDiveWarp();
+        if (gFieldEffectArguments[1] != 0)
+        {
+            gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
+            gPostMenuFieldCallback = FieldCallback_Dive;
+            return TRUE;
+        }
+        return FALSE;
     }
     return FALSE;
 }

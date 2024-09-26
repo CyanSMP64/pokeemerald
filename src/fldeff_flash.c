@@ -5,6 +5,7 @@
 #include "field_effect.h"
 #include "fldeff.h"
 #include "gpu_regs.h"
+#include "item.h"
 #include "main.h"
 #include "overworld.h"
 #include "palette.h"
@@ -15,6 +16,7 @@
 #include "task.h"
 #include "constants/songs.h"
 #include "constants/map_types.h"
+#include "constants/items.h"
 
 struct FlashStruct
 {
@@ -79,7 +81,7 @@ bool8 SetUpFieldMove_Flash(void)
         gPostMenuFieldCallback = SetUpPuzzleEffectRegisteel;
         return TRUE;
     }
-    else if (gMapHeader.cave == TRUE && !FlagGet(FLAG_SYS_USE_FLASH))
+    else if (gMapHeader.cave == TRUE && !FlagGet(FLAG_SYS_USE_FLASH) && CheckBagHasItem(ITEM_HM05, 1))
     {
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FieldCallback_Flash;

@@ -6,6 +6,7 @@
 #include "field_effect.h"
 #include "field_player_avatar.h"
 #include "fldeff.h"
+#include "item.h"
 #include "item_use.h"
 #include "overworld.h"
 #include "party_menu.h"
@@ -18,6 +19,7 @@
 #include "constants/field_effects.h"
 #include "constants/map_types.h"
 #include "constants/songs.h"
+#include "constants/items.h"
 
 static void Task_DoFieldMove_Init(u8 taskId);
 static void Task_DoFieldMove_ShowMonAfterPose(u8 taskId);
@@ -120,25 +122,28 @@ static void Task_DoFieldMove_RunFunc(u8 taskId)
 // For interacting with a smashable rock in the field, see EventScript_RockSmash
 bool8 SetUpFieldMove_RockSmash(void)
 {
-    // In Ruby and Sapphire, Regirock's tomb is opened by using Strength. In Emerald,
-    // it is opened by using Rock Smash.
-    if (ShouldDoBrailleRegirockEffect())
-    {
-        gSpecialVar_Result = GetCursorSelectionMonId();
-        gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
-        gPostMenuFieldCallback = SetUpPuzzleEffectRegirock;
-        return TRUE;
+    if (CheckBagHasItem(ITEM_HM06, 1)){
+        // In Ruby and Sapphire, Regirock's tomb is opened by using Strength. In Emerald,
+        // it is opened by using Rock Smash.
+        if (ShouldDoBrailleRegirockEffect())
+        {
+            gSpecialVar_Result = GetCursorSelectionMonId();
+            gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
+            gPostMenuFieldCallback = SetUpPuzzleEffectRegirock;
+            return TRUE;
+        }
+        else if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_BREAKABLE_ROCK) == TRUE)
+        {
+            gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
+            gPostMenuFieldCallback = FieldCallback_RockSmash;
+            return TRUE;
+        }
+        else
+        {
+            return FALSE;
+        }
     }
-    else if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_BREAKABLE_ROCK) == TRUE)
-    {
-        gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
-        gPostMenuFieldCallback = FieldCallback_RockSmash;
-        return TRUE;
-    }
-    else
-    {
-        return FALSE;
-    }
+    return FALSE;
 }
 
 static void FieldCallback_RockSmash(void)
