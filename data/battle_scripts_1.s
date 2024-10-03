@@ -649,6 +649,11 @@ BattleScript_MultiHitPrintStrings::
 	waitmessage B_WAIT_TIME_LONG
 	jumpifmovehadnoeffect BattleScript_MultiHitEnd
 	copyarray gBattleTextBuff1, sMULTIHIT_STRING, 6
+	jumpifbyte CMP_GREATER_THAN, sMULTIHIT_STRING + 4, 1, BattleScript_MultiHitPrintStrings_MoreThan1Time
+	printstring STRINGID_HITXTIME
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MultiHitEnd
+BattleScript_MultiHitPrintStrings_MoreThan1Time::
 	printstring STRINGID_HITXTIMES
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_MultiHitEnd::
@@ -1435,6 +1440,11 @@ BattleScript_TripleKickPrintStrings::
 	jumpifbyte CMP_EQUAL, sMULTIHIT_STRING + 4, 0, BattleScript_TripleKickEnd
 	jumpifbyte CMP_COMMON_BITS, gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE, BattleScript_TripleKickEnd
 	copyarray gBattleTextBuff1, sMULTIHIT_STRING, 6
+	jumpifbyte CMP_GREATER_THAN, sMULTIHIT_STRING + 4, 1, BattleScript_TripleKickPrintStrings_MoreThan1Time
+	printstring STRINGID_HITXTIME
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_TripleKickEnd
+BattleScript_TripleKickPrintStrings_MoreThan1Time::
 	printstring STRINGID_HITXTIMES
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_TripleKickEnd::

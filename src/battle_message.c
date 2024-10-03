@@ -79,7 +79,8 @@ static const u8 sText_PlayerWhiteout2[] = _("You panicked and dropped\n¥{B_BUFF
 static const u8 sText_PreventsEscape[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} prevents\nescape with {B_SCR_ACTIVE_ABILITY}!\p");
 static const u8 sText_CantEscape2[] = _("You couldn't get away!\p");
 static const u8 sText_AttackerCantEscape[] = _("{B_ATK_NAME_WITH_PREFIX} can't escape!");
-static const u8 sText_HitXTimes[] = _("The Pokémon was hit {B_BUFF1} time(s)!");
+static const u8 sText_HitXTimes[] = _("The Pokémon was hit {B_BUFF1} times!");
+static const u8 sText_HitXTime[] = _("The Pokémon was hit {B_BUFF1} time!");
 static const u8 sText_PkmnFellAsleep[] = _("{B_EFF_NAME_WITH_PREFIX} fell\nasleep!");
 static const u8 sText_PkmnMadeSleep[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nmade {B_EFF_NAME_WITH_PREFIX} sleep!");
 static const u8 sText_PkmnAlreadyAsleep[] = _("{B_DEF_NAME_WITH_PREFIX} is\nalready asleep!");
@@ -352,7 +353,7 @@ static const u8 sText_FailedToSpitUp[] = _("But it failed to Spit Up\na thing!")
 static const u8 sText_FailedToSwallow[] = _("But it failed to Swallow\na thing!");
 static const u8 sText_WindBecameHeatWave[] = _("The wind turned into a\nHeat Wave!");
 static const u8 sText_StatChangesGone[] = _("All stat changes were\neliminated!");
-static const u8 sText_CoinsScattered[] = _("Coins scattered everywhere!");
+static const u8 sText_CoinsScattered[] = _("Coins were scattered everywhere!");
 static const u8 sText_TooWeakForSubstitute[] = _("It was too weak to make\na Substitute!");
 static const u8 sText_SharedPain[] = _("The battlers shared\ntheir pain!");
 static const u8 sText_BellChimed[] = _("A bell chimed!");
@@ -892,6 +893,7 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_S
     [STRINGID_MIST - BATTLESTRINGS_TABLE_START] = sText_Mist,
     [STRINGID_PLAYERLOSTTOENEMYTRAINER - BATTLESTRINGS_TABLE_START] = sText_PlayerLostToEnemyTrainer,
     [STRINGID_PLAYERPAIDPRIZEMONEY - BATTLESTRINGS_TABLE_START] = sText_PlayerPaidPrizeMoney,
+    [STRINGID_HITXTIME - BATTLESTRINGS_TABLE_START] = sText_HitXTime,
 };
 
 const u16 gMissStringIds[] =
