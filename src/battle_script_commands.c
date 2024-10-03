@@ -7074,7 +7074,20 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
                 gBattleTextBuff2[1] = B_BUFF_STRING;
                 gBattleTextBuff2[2] = STRINGID_STATHARSHLY;
                 gBattleTextBuff2[3] = STRINGID_STATHARSHLY >> 8;
-                index = 4;
+                gBattleTextBuff2[4] = B_BUFF_STRING;
+                gBattleTextBuff2[5] = STRINGID_SPACE1 & 0xff;
+                gBattleTextBuff2[6] = STRINGID_SPACE1 >> 8;
+                index = 7;
+            }
+            else if (statValue <= -3)
+            {
+                gBattleTextBuff2[1] = B_BUFF_STRING;
+                gBattleTextBuff2[2] = STRINGID_STATSEVERELY & 0xff;
+                gBattleTextBuff2[3] = STRINGID_STATSEVERELY >> 8;
+                gBattleTextBuff2[4] = B_BUFF_STRING;
+                gBattleTextBuff2[5] = STRINGID_SPACE1 & 0xff;
+                gBattleTextBuff2[6] = STRINGID_SPACE1 >> 8;
+                index = 7;
             }
             gBattleTextBuff2[index++] = B_BUFF_STRING;
             gBattleTextBuff2[index++] = STRINGID_STATFELL;
@@ -7090,19 +7103,49 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
     else // stat increase
     {
         statValue = GET_STAT_BUFF_VALUE(statValue);
-        gBattleTextBuff2[0] = B_BUFF_PLACEHOLDER_BEGIN;
-        index = 1;
-        if (statValue == 2)
-        {
-            gBattleTextBuff2[1] = B_BUFF_STRING;
-            gBattleTextBuff2[2] = STRINGID_STATSHARPLY;
-            gBattleTextBuff2[3] = STRINGID_STATSHARPLY >> 8;
-            index = 4;
+        if ((gBattlescriptCurrInstr >= BattleScript_BerryStatRaiseEnd2) && (gBattlescriptCurrInstr < BattleScript_BerryStatRaiseDoStatUp)) {
+            if (statValue == 2) {
+                gBattleTextBuff2[0] = B_BUFF_PLACEHOLDER_BEGIN;
+                gBattleTextBuff2[1] = B_BUFF_STRING;
+                gBattleTextBuff2[2] = STRINGID_PKMNRAISEDDEFALITTLE & 0xff;
+                gBattleTextBuff2[3] = STRINGID_PKMNRAISEDDEFALITTLE >> 8;
+                gBattleTextBuff2[4] = B_BUFF_STRING;
+                gBattleTextBuff2[5] = STRINGID_SPACE1 & 0xff;
+                gBattleTextBuff2[6] = STRINGID_SPACE1 >> 8;
+                gBattleTextBuff2[7] = B_BUFF_STRING;
+                gBattleTextBuff2[8] = STRINGID_PKMNRAISEDSPDEFALITTLE & 0xff;
+                gBattleTextBuff2[9] = STRINGID_PKMNRAISEDSPDEFALITTLE >> 8;
+                gBattleTextBuff2[10] = EOS;
+            } else {
+                PREPARE_STRING_BUFFER(gBattleTextBuff2, STRINGID_PKMNRAISEDSPDEFALITTLE);
+            }
         }
-        gBattleTextBuff2[index++] = B_BUFF_STRING;
-        gBattleTextBuff2[index++] = STRINGID_STATROSE;
-        gBattleTextBuff2[index++] = STRINGID_STATROSE >> 8;
-        gBattleTextBuff2[index] = B_BUFF_EOS;
+        else {
+            gBattleTextBuff2[0] = B_BUFF_PLACEHOLDER_BEGIN;
+            index = 1;
+            gBattleTextBuff2[index++] = B_BUFF_STRING;
+            gBattleTextBuff2[index++] = STRINGID_STATROSE;
+            gBattleTextBuff2[index++] = STRINGID_STATROSE >> 8;
+            if (statValue == 2)
+            {
+                gBattleTextBuff2[index++] = B_BUFF_STRING;
+                gBattleTextBuff2[index++] = STRINGID_SPACE1 & 0xff;
+                gBattleTextBuff2[index++] = STRINGID_SPACE1 >> 8;
+                gBattleTextBuff2[index++] = B_BUFF_STRING;
+                gBattleTextBuff2[index++] = STRINGID_STATSHARPLY;
+                gBattleTextBuff2[index++] = STRINGID_STATSHARPLY >> 8;
+            }
+            else if (statValue >= 3)
+            {
+                gBattleTextBuff2[index++] = B_BUFF_STRING;
+                gBattleTextBuff2[index++] = STRINGID_SPACE1 & 0xff;
+                gBattleTextBuff2[index++] = STRINGID_SPACE1 >> 8;
+                gBattleTextBuff2[index++] = B_BUFF_STRING;
+                gBattleTextBuff2[index++] = STRINGID_STATDRASTICALLY & 0xff;
+                gBattleTextBuff2[index++] = STRINGID_STATDRASTICALLY >> 8;
+            }
+            gBattleTextBuff2[index] = B_BUFF_EOS;
+        }
 
         if (gBattleMons[gActiveBattler].statStages[statId] == MAX_STAT_STAGE)
             gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STAT_WONT_INCREASE;

@@ -3460,18 +3460,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                 TRY_EAT_CONFUSE_BERRY(FLAVOR_SOUR);
                 break;
             case HOLD_EFFECT_ATTACK_UP:
-                if (gBattleMons[battlerId].hp <= gBattleMons[battlerId].maxHP / battlerHoldEffectParam
-                && !moveTurn && gBattleMons[battlerId].statStages[STAT_ATK] < MAX_STAT_STAGE)
-                {
-                    PREPARE_STAT_BUFFER(gBattleTextBuff1, STAT_ATK);
-                    PREPARE_STRING_BUFFER(gBattleTextBuff2, STRINGID_STATROSE); // Only the Attack stat-up berry has this
-                    gEffectBattler = battlerId;
-                    SET_STATCHANGER(STAT_ATK, 1, FALSE);
-                    gBattleScripting.animArg1 = 14 + STAT_ATK;
-                    gBattleScripting.animArg2 = 0;
-                    BattleScriptExecute(BattleScript_BerryStatRaiseEnd2);
-                    effect = ITEM_STATS_CHANGE;
-                }
+                TRY_EAT_STAT_UP_BERRY(STAT_ATK);
                 break;
             case HOLD_EFFECT_DEFENSE_UP:
                 TRY_EAT_STAT_UP_BERRY(STAT_DEF);
@@ -3510,15 +3499,6 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                         } while (gBattleMons[battlerId].statStages[STAT_ATK + i] == MAX_STAT_STAGE);
 
                         PREPARE_STAT_BUFFER(gBattleTextBuff1, i + 1);
-
-                        gBattleTextBuff2[0] = B_BUFF_PLACEHOLDER_BEGIN;
-                        gBattleTextBuff2[1] = B_BUFF_STRING;
-                        gBattleTextBuff2[2] = STRINGID_STATSHARPLY;
-                        gBattleTextBuff2[3] = STRINGID_STATSHARPLY >> 8;
-                        gBattleTextBuff2[4] = B_BUFF_STRING;
-                        gBattleTextBuff2[5] = STRINGID_STATROSE;
-                        gBattleTextBuff2[6] = STRINGID_STATROSE >> 8;
-                        gBattleTextBuff2[7] = EOS;
 
                         gEffectBattler = battlerId;
                         SET_STATCHANGER(i + 1, 2, FALSE);

@@ -125,7 +125,7 @@ static const u8 sText_PkmnFlinched[] = _("{B_ATK_NAME_WITH_PREFIX} flinched!");
 static const u8 sText_PkmnRegainedHealth[] = _("{B_DEF_NAME_WITH_PREFIX} had its\nHP restored.");
 static const u8 sText_PkmnHPFull[] = _("{B_DEF_NAME_WITH_PREFIX}'s HP is\nfull!");
 static const u8 sText_PkmnRaisedSpDef[] = _("{B_CURRENT_MOVE} made {B_ATK_PREFIX1}\nteam stronger against special\lmoves!");
-static const u8 sText_PkmnRaisedSpDefALittle[] = _(""); // dummied
+static const u8 sText_PkmnRaisedSpDefALittle[] = _("boosted"); // dummied
 static const u8 sText_PkmnRaisedDef[] = _("{B_CURRENT_MOVE} made {B_ATK_PREFIX1}\nteam stronger against physical\lmoves!");
 static const u8 sText_PkmnRaisedDefALittle[] = _(""); // dummied
 static const u8 sText_PkmnCoveredByVeil[] = _("{B_ATK_PREFIX2} team cloaked itself in\na mystical veil!");
@@ -152,7 +152,7 @@ static const u8 sText_PkmnCrashed[] = _("{B_ATK_NAME_WITH_PREFIX} kept going\nan
 const u8 gText_PkmnShroudedInMist[] = _("{B_ATK_PREFIX2} team became shrouded\nin mist!");
 static const u8 sText_PkmnProtectedByMist[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} is protected\nby Mist!");
 const u8 gText_PkmnGettingPumped[] = _("{B_ATK_NAME_WITH_PREFIX} is getting\npumped!");
-static const u8 sText_PkmnHitWithRecoil[] = _("{B_ATK_NAME_WITH_PREFIX} was\ndamaged by the recoil!");
+static const u8 sText_PkmnHitWithRecoil[] = _("{B_ATK_NAME_WITH_PREFIX} was damaged\nby the recoil!");
 static const u8 sText_PkmnProtectedItself2[] = _("{B_ATK_NAME_WITH_PREFIX} protected\nitself!");
 static const u8 sText_PkmnBuffetedBySandstorm[] = _("{B_ATK_NAME_WITH_PREFIX} is\nbuffeted by the sandstorm!");
 static const u8 sText_PkmnPeltedByHail[] = _("{B_ATK_NAME_WITH_PREFIX} is\nbuffeted by the hail");
@@ -179,10 +179,10 @@ static const u8 sText_PkmnFatigueConfusion[] = _("{B_ATK_NAME_WITH_PREFIX} becam
 static const u8 sText_PlayerPickedUpMoney[] = _("{B_PLAYER_NAME} picked up\n¥{B_BUFF1}!\p");
 static const u8 sText_PkmnUnaffected[] = _("{B_DEF_NAME_WITH_PREFIX} is\nunaffected!");
 static const u8 sText_PkmnTransformedInto[] = _("{B_ATK_NAME_WITH_PREFIX}\ntransformed into {B_BUFF1}!");
-static const u8 sText_PkmnMadeSubstitute[] = _("{B_ATK_NAME_WITH_PREFIX} made\na Substitute!");
-static const u8 sText_PkmnHasSubstitute[] = _("{B_ATK_NAME_WITH_PREFIX} already\nhas a Substitute!");
-static const u8 sText_SubstituteDamaged[] = _("The Substitute took damage\nfor {B_DEF_NAME_WITH_PREFIX}!\p");
-static const u8 sText_PkmnSubstituteFaded[] = _("{B_DEF_NAME_WITH_PREFIX}'s\nSubstitute faded!\p");
+static const u8 sText_PkmnMadeSubstitute[] = _("{B_ATK_NAME_WITH_PREFIX} put in a\nsubstitute!");
+static const u8 sText_PkmnHasSubstitute[] = _("{B_ATK_NAME_WITH_PREFIX} already has\na substitute!");
+static const u8 sText_SubstituteDamaged[] = _("The substitute took damage for\n{B_DEF_NAME_WITH_PREFIX_LOWER}!\p");
+static const u8 sText_PkmnSubstituteFaded[] = _("{B_DEF_NAME_WITH_PREFIX}'s substitute\nfaded!\p");
 static const u8 sText_PkmnMustRecharge[] = _("{B_ATK_NAME_WITH_PREFIX} must\nrecharge!");
 static const u8 sText_PkmnRageBuilding[] = _("{B_DEF_NAME_WITH_PREFIX}'s Rage\nis building!");
 static const u8 sText_PkmnMoveWasDisabled[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1}\nwas disabled!");
@@ -298,15 +298,17 @@ static const u8 sText_PkmnsXPreventsFlinching[] = _("{B_EFF_NAME_WITH_PREFIX}'s 
 static const u8 sText_PkmnsXPreventsYsZ[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY}\nprevents {B_DEF_NAME_WITH_PREFIX}'s\l{B_DEF_ABILITY} from working!");
 static const u8 sText_PkmnsXCuredItsYProblem[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\ncured its {B_BUFF1} problem!");
 static const u8 sText_PkmnsXHadNoEffectOnY[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nhad no effect on {B_EFF_NAME_WITH_PREFIX}!");
-static const u8 sText_StatSharply[] = _("sharply ");
-const u8 gText_StatRose[] = _("rose!");
-static const u8 sText_StatHarshly[] = _("harshly ");
-static const u8 sText_StatFell[] = _("fell!");
-static const u8 sText_AttackersStatRose[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}\n{B_BUFF2}");
-const u8 gText_DefendersStatRose[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1}\n{B_BUFF2}");
-static const u8 sText_UsingItemTheStatOfPkmnRose[] = _("Using {B_LAST_ITEM}, the {B_BUFF1}\nof {B_SCR_ACTIVE_NAME_WITH_PREFIX} {B_BUFF2}");
-static const u8 sText_AttackersStatFell[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}\n{B_BUFF2}");
-static const u8 sText_DefendersStatFell[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1}\n{B_BUFF2}");
+static const u8 sText_StatSharply[] = _("sharply");
+static const u8 sText_StatDrastically[] = _("drastically");
+const u8 gText_StatRose[] = _("rose");
+static const u8 sText_StatHarshly[] = _("harshly");
+static const u8 sText_StatSeverely[] = _("severely");
+static const u8 sText_StatFell[] = _("fell");
+static const u8 sText_AttackersStatRose[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}\n{B_BUFF2}!");
+const u8 gText_DefendersStatRose[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1}\n{B_BUFF2}!");
+static const u8 sText_UsingItemTheStatOfPkmnRose[] = _("The {B_LAST_ITEM} {B_BUFF2}\n{B_SCR_ACTIVE_NAME_WITH_PREFIX_LOWER}'s {B_BUFF1}!");
+static const u8 sText_AttackersStatFell[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_BUFF1}\n{B_BUFF2}!");
+static const u8 sText_DefendersStatFell[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_BUFF1}\n{B_BUFF2}!");
 static const u8 sText_StatsWontIncrease2[] = _("{B_ATK_NAME_WITH_PREFIX}'s stats won't\ngo any higher!");
 static const u8 sText_StatsWontDecrease2[] = _("{B_DEF_NAME_WITH_PREFIX}'s stats won't\ngo any lower!");
 static const u8 sText_CriticalHit[] = _("A critical hit!");
@@ -354,7 +356,7 @@ static const u8 sText_FailedToSwallow[] = _("But it failed to Swallow\na thing!"
 static const u8 sText_WindBecameHeatWave[] = _("The wind turned into a\nHeat Wave!");
 static const u8 sText_StatChangesGone[] = _("All stat changes were\neliminated!");
 static const u8 sText_CoinsScattered[] = _("Coins were scattered everywhere!");
-static const u8 sText_TooWeakForSubstitute[] = _("It was too weak to make\na Substitute!");
+static const u8 sText_TooWeakForSubstitute[] = _("But it does not have enough HP left to\nmake a substitute!");
 static const u8 sText_SharedPain[] = _("The battlers shared\ntheir pain!");
 static const u8 sText_BellChimed[] = _("A bell chimed!");
 static const u8 sText_FaintInThree[] = _("All affected Pokémon will\nfaint in three turns!");
@@ -410,13 +412,13 @@ static const u8 sText_LinkTrainer1WithdrewPkmn[] = _("{B_LINK_OPPONENT1_NAME} wi
 static const u8 sText_LinkTrainer2WithdrewPkmn[] = _("{B_LINK_SCR_TRAINER_NAME} withdrew\n{B_BUFF1}!");
 static const u8 sText_WildPkmnPrefix[] = _("The wild ");
 static const u8 sText_FoePkmnPrefix[] = _("The opposing ");
-static const u8 sText_EmptyString8[] = _("");
+static const u8 sText_Space1[] = _(" ");
 static const u8 sText_FoePkmnPrefix2[] = _("the opposing");
 static const u8 sText_AllyPkmnPrefix[] = _("your");
 static const u8 sText_FoePkmnPrefix3[] = _("The opposing");
 static const u8 sText_AllyPkmnPrefix2[] = _("Your");
-static const u8 sText_FoePkmnPrefix4[] = _("Foe");
-static const u8 sText_AllyPkmnPrefix3[] = _("Ally");
+static const u8 sText_FoePkmnPrefixLower[] = _("the opposing ");
+static const u8 sText_WildPkmnPrefixLower[] = _("the wild ");
 static const u8 sText_AttackerUsedX[] = _("{B_ATK_NAME_WITH_PREFIX} used\n{B_BUFF2}");
 static const u8 sText_ExclamationMark[] = _("!");
 static const u8 sText_ExclamationMark2[] = _("!");
@@ -894,6 +896,9 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_S
     [STRINGID_PLAYERLOSTTOENEMYTRAINER - BATTLESTRINGS_TABLE_START] = sText_PlayerLostToEnemyTrainer,
     [STRINGID_PLAYERPAIDPRIZEMONEY - BATTLESTRINGS_TABLE_START] = sText_PlayerPaidPrizeMoney,
     [STRINGID_HITXTIME - BATTLESTRINGS_TABLE_START] = sText_HitXTime,
+    [STRINGID_STATDRASTICALLY - BATTLESTRINGS_TABLE_START] = sText_StatDrastically,
+    [STRINGID_STATSEVERELY - BATTLESTRINGS_TABLE_START] = sText_StatSeverely,
+    [STRINGID_SPACE1 - BATTLESTRINGS_TABLE_START] = sText_Space1,
 };
 
 const u16 gMissStringIds[] =
@@ -2448,6 +2453,28 @@ static const u8 *TryGetStatusString(u8 *src)
     StringGet_Nickname(text);                                           \
     toCpy = text;
 
+#define HANDLE_NICKNAME_STRING_CASE_LOWER(battlerId, monIndex)                \
+    if (GetBattlerSide(battlerId) != B_SIDE_PLAYER)                     \
+    {                                                                   \
+        if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)                     \
+            toCpy = sText_FoePkmnPrefixLower;                                \
+        else                                                            \
+            toCpy = sText_WildPkmnPrefixLower;                               \
+        while (*toCpy != EOS)                                           \
+        {                                                               \
+            dst[dstID] = *toCpy;                                        \
+            dstID++;                                                    \
+            toCpy++;                                                    \
+        }                                                               \
+        GetMonData(&gEnemyParty[monIndex], MON_DATA_NICKNAME, text);    \
+    }                                                                   \
+    else                                                                \
+    {                                                                   \
+        GetMonData(&gPlayerParty[monIndex], MON_DATA_NICKNAME, text);   \
+    }                                                                   \
+    StringGet_Nickname(text);                                           \
+    toCpy = text;
+
 u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
 {
     u32 dstID = 0; // if they used dstID, why not use srcID as well?
@@ -2583,6 +2610,21 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
                 break;
             case B_TXT_SCR_ACTIVE_NAME_WITH_PREFIX: // scripting active battlerId name with prefix
                 HANDLE_NICKNAME_STRING_CASE(gBattleScripting.battler, gBattlerPartyIndexes[gBattleScripting.battler])
+                break;
+            case B_TXT_ATK_NAME_WITH_PREFIX_LOWER: // attacker name with prefix
+                HANDLE_NICKNAME_STRING_CASE_LOWER(gBattlerAttacker, gBattlerPartyIndexes[gBattlerAttacker])
+                break;
+            case B_TXT_DEF_NAME_WITH_PREFIX_LOWER: // target name with prefix
+                HANDLE_NICKNAME_STRING_CASE_LOWER(gBattlerTarget, gBattlerPartyIndexes[gBattlerTarget])
+                break;
+            case B_TXT_EFF_NAME_WITH_PREFIX_LOWER: // effect battlerId name with prefix
+                HANDLE_NICKNAME_STRING_CASE_LOWER(gEffectBattler, gBattlerPartyIndexes[gEffectBattler])
+                break;
+            case B_TXT_ACTIVE_NAME_WITH_PREFIX_LOWER: // active battlerId name with prefix
+                HANDLE_NICKNAME_STRING_CASE_LOWER(gActiveBattler, gBattlerPartyIndexes[gActiveBattler])
+                break;
+            case B_TXT_SCR_ACTIVE_NAME_WITH_PREFIX_LOWER: // scripting active battlerId name with prefix
+                HANDLE_NICKNAME_STRING_CASE_LOWER(gBattleScripting.battler, gBattlerPartyIndexes[gBattleScripting.battler])
                 break;
             case B_TXT_CURRENT_MOVE: // current move name
                 if (gBattleMsgDataPtr->currentMove >= MOVES_COUNT)
@@ -2792,15 +2834,15 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
                 break;
             case B_TXT_ATK_PREFIX3:
                 if (GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER)
-                    toCpy = sText_AllyPkmnPrefix3;
+                    toCpy = sText_AllyPkmnPrefix2;
                 else
-                    toCpy = sText_FoePkmnPrefix4;
+                    toCpy = sText_FoePkmnPrefix3;
                 break;
             case B_TXT_DEF_PREFIX3:
                 if (GetBattlerSide(gBattlerTarget) == B_SIDE_PLAYER)
-                    toCpy = sText_AllyPkmnPrefix3;
+                    toCpy = sText_AllyPkmnPrefix2;
                 else
-                    toCpy = sText_FoePkmnPrefix4;
+                    toCpy = sText_FoePkmnPrefix3;
                 break;
             case B_TXT_TRAINER2_CLASS:
                 if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
