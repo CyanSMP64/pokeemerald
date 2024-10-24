@@ -43,5 +43,5 @@ gText_Birch_YourePlayer::
 	.string "$"
 
 gText_Birch_AreYouReady::
-	.string "Good luck on your run!\p"
+	.string "LET'S GO GAMBLING!!!!\p"
 	.string "$"
