@@ -470,10 +470,6 @@
 #define B_MSG_BRACED_ITSELF    1
 #define B_MSG_PROTECT_FAILED   2
 
-// gRestUsedStringIds
-#define B_MSG_REST           0
-#define B_MSG_REST_STATUSED  1
-
 // gWokeUpStringIds
 #define B_MSG_WOKE_UP        0
 #define B_MSG_WOKE_UP_UPROAR 1

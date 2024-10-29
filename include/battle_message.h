@@ -78,6 +78,7 @@
 #define B_BUFF_NEGATIVE_FLAVOR          8
 #define B_BUFF_ABILITY                  9
 #define B_BUFF_ITEM                     10
+#define B_BUFF_TYPE2                    11
 
 #define B_BUFF_PLACEHOLDER_BEGIN        0xFD
 #define B_BUFF_EOS                      0xFF
@@ -110,6 +111,14 @@
 {                                                                           \
     textVar[0] = B_BUFF_PLACEHOLDER_BEGIN;                                  \
     textVar[1] = B_BUFF_TYPE;                                               \
+    textVar[2] = typeId;                                                    \
+    textVar[3] = B_BUFF_EOS;                                                \
+}
+
+#define PREPARE_TYPE2_BUFFER(textVar, typeId)                               \
+{                                                                           \
+    textVar[0] = B_BUFF_PLACEHOLDER_BEGIN;                                  \
+    textVar[1] = B_BUFF_TYPE2;                                              \
     textVar[2] = typeId;                                                    \
     textVar[3] = B_BUFF_EOS;                                                \
 }
