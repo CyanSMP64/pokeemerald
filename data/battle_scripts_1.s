@@ -1321,7 +1321,7 @@ BattleScript_EffectSketch::
 	copymovepermanently BattleScript_ButItFailed
 	attackanimation
 	waitanimation
-	printstring STRINGID_PKMNSKETCHEDMOVE
+	printstring STRINGID_PKMNLEARNEDMOVE2
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 

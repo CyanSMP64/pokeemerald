@@ -8109,7 +8109,7 @@ static void Cmd_settypetorandomresistance(void)
                 && !IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_EFFECT_DEF_TYPE(i)))
             {
                 SET_BATTLER_TYPE(gBattlerAttacker, TYPE_EFFECT_DEF_TYPE(i));
-                PREPARE_TYPE_BUFFER(gBattleTextBuff1, TYPE_EFFECT_DEF_TYPE(i));
+                PREPARE_TYPE2_BUFFER(gBattleTextBuff1, TYPE_EFFECT_DEF_TYPE(i));
 
                 gBattlescriptCurrInstr += 5;
                 return;
