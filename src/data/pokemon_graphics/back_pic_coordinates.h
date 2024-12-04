@@ -1082,7 +1082,7 @@ const struct MonCoords gMonBackPicCoords[] =
     [SPECIES_SINISTCHA]                         = { .size = MON_COORDS_SIZE(64, 64), .y_offset = 13 },
     [SPECIES_OKIDOGI]                           = { .size = MON_COORDS_SIZE(64, 64), .y_offset = 12 },
     [SPECIES_MUNKIDORI]                         = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
-    [SPECIES_FEZANDIPITI]                       = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  4 },
+    [SPECIES_FEZANDIPITI]                       = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_OGERPON]                           = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  7 },
     [SPECIES_OGERPON_WELLSPRING]                = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  7 },
     [SPECIES_OGERPON_HEARTHFLAME]               = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  7 },
