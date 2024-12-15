@@ -885,6 +885,11 @@ u8 ItemId_GetImportance(u16 itemId)
     return gItems[SanitizeItemId(itemId)].importance;
 }
 
+u8 ItemId_GetGrammarAn(u16 itemId)
+{
+    return gItems[SanitizeItemId(itemId)].grammarAn;
+}
+
 // Unused
 u8 ItemId_GetRegistrability(u16 itemId)
 {

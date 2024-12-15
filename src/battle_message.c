@@ -247,7 +247,7 @@ static const u8 sText_PkmnWaitsForTarget[] = _("{B_ATK_NAME_WITH_PREFIX} waits f
 static const u8 sText_PkmnSnatchedMove[] = _("{B_DEF_NAME_WITH_PREFIX} Snatched\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s move!");
 static const u8 sText_ElectricityWeakened[] = _("Electricity's power was\nweakened!");
 static const u8 sText_FireWeakened[] = _("Fire's power was\nweakened!");
-static const u8 sText_XFoundOneY[] = _("{B_ATK_NAME_WITH_PREFIX} found a\n{B_LAST_ITEM}!");
+static const u8 sText_XFoundOneY[] = _("{B_ATK_NAME_WITH_PREFIX} found {B_A_AN_ITEM_GRAMMAR}\n{B_LAST_ITEM}!");
 static const u8 sText_SoothingAroma[] = _("A soothing aroma wafted\nthrough the area!");
 static const u8 sText_ItemsCantBeUsedNow[] = _("Items can't be used now.{PAUSE 64}");
 static const u8 sText_ForXCommaYZ[] = _("For {B_SCR_ACTIVE_NAME_WITH_PREFIX},\n{B_LAST_ITEM} {B_BUFF1}");
@@ -436,6 +436,8 @@ static const u8 sText_Accuracy[] = _("accuracy");
 static const u8 sText_Evasiveness[] = _("evasiveness");
 
 static const u8 sText_Mist[] = _("mist");
+static const u8 sText_A[] = _("a");
+static const u8 sText_An[] = _("an");
 
 const u8 * const gStatNamesTable[NUM_BATTLE_STATS] =
 {
@@ -2688,6 +2690,12 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst)
                     CopyItemName(gLastUsedItem, text);
                     toCpy = text;
                 }
+                break;
+            case B_TXT_A_AN_ITEM_GRAMMAR:
+                if (ItemId_GetGrammarAn(gLastUsedItem) == TRUE)
+                    toCpy = sText_An;
+                else
+                    toCpy = sText_A;
                 break;
             case B_TXT_LAST_ABILITY: // last used ability
                 toCpy = gAbilityNames[gLastUsedAbility];
