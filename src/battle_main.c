@@ -2057,20 +2057,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
 
-                if (gTrainers[trainerNum].doubleBattle == TRUE)
-                {
-                    personalityValue += ((gTrainers[trainerNum].trainerName[0] & 0x0C) | ((gSpeciesNames[partyData[i].species][0] & 0x0F) << 4));
-                }
-                else if (gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
-                {
-                    // Use personality more likely to result in a female Pokémon
-                    personalityValue += ((gTrainers[trainerNum].trainerName[0] & 0x0C) | ((gSpeciesNames[partyData[i].species][0] & 0x07) << 4));
-                }
-                else
-                {
-                    // Use personality more likely to result in a male Pokémon
-                    personalityValue += (((gTrainers[trainerNum].trainerName[0] & 0x0C) | ((gSpeciesNames[partyData[i].species][0] & 0x07) << 4)) + 0x80);
-                }
+                personalityValue += ((personalityValue & 0x0000f800) >> 8);
+
                 if (partyData[i].isShiny) {
                     otIdType = OT_ID_PRESET;
                     fixedOtId = HIHALF(personalityValue) ^ LOHALF(personalityValue);
@@ -2092,20 +2080,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
 
-                if (gTrainers[trainerNum].doubleBattle == TRUE)
-                {
-                    personalityValue += ((gTrainers[trainerNum].trainerName[0] & 0x0C) | ((gSpeciesNames[partyData[i].species][0] & 0x0F) << 4));
-                }
-                else if (gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
-                {
-                    // Use personality more likely to result in a female Pokémon
-                    personalityValue += ((gTrainers[trainerNum].trainerName[0] & 0x0C) | ((gSpeciesNames[partyData[i].species][0] & 0x07) << 4));
-                }
-                else
-                {
-                    // Use personality more likely to result in a male Pokémon
-                    personalityValue += (((gTrainers[trainerNum].trainerName[0] & 0x0C) | ((gSpeciesNames[partyData[i].species][0] & 0x07) << 4)) + 0x80);
-                }
+                personalityValue += ((personalityValue & 0x0000f800) >> 8);
+
                 if (partyData[i].isShiny) {
                     otIdType = OT_ID_PRESET;
                     fixedOtId = HIHALF(personalityValue) ^ LOHALF(personalityValue);
@@ -2133,20 +2109,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
 
-                if (gTrainers[trainerNum].doubleBattle == TRUE)
-                {
-                    personalityValue += ((gTrainers[trainerNum].trainerName[0] & 0x0C) | ((gSpeciesNames[partyData[i].species][0] & 0x0F) << 4));
-                }
-                else if (gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
-                {
-                    // Use personality more likely to result in a female Pokémon
-                    personalityValue += ((gTrainers[trainerNum].trainerName[0] & 0x0C) | ((gSpeciesNames[partyData[i].species][0] & 0x07) << 4));
-                }
-                else
-                {
-                    // Use personality more likely to result in a male Pokémon
-                    personalityValue += (((gTrainers[trainerNum].trainerName[0] & 0x0C) | ((gSpeciesNames[partyData[i].species][0] & 0x07) << 4)) + 0x80);
-                }
+                personalityValue += ((personalityValue & 0x0000f800) >> 8);
+
                 if (partyData[i].isShiny) {
                     otIdType = OT_ID_PRESET;
                     fixedOtId = HIHALF(personalityValue) ^ LOHALF(personalityValue);
@@ -2170,20 +2134,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
 
-                if (gTrainers[trainerNum].doubleBattle == TRUE)
-                {
-                    personalityValue += ((gTrainers[trainerNum].trainerName[0] & 0x0C) | ((gSpeciesNames[partyData[i].species][0] & 0x0F) << 4));
-                }
-                else if (gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
-                {
-                    // Use personality more likely to result in a female Pokémon
-                    personalityValue += ((gTrainers[trainerNum].trainerName[0] & 0x0C) | ((gSpeciesNames[partyData[i].species][0] & 0x07) << 4));
-                }
-                else
-                {
-                    // Use personality more likely to result in a male Pokémon
-                    personalityValue += (((gTrainers[trainerNum].trainerName[0] & 0x0C) | ((gSpeciesNames[partyData[i].species][0] & 0x07) << 4)) + 0x80);
-                }
+                personalityValue += ((personalityValue & 0x0000f800) >> 8);
+
                 if (partyData[i].isShiny) {
                     otIdType = OT_ID_PRESET;
                     fixedOtId = HIHALF(personalityValue) ^ LOHALF(personalityValue);

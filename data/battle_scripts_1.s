@@ -2461,10 +2461,6 @@ BattleScript_EffectBrickBreak::
 BattleScript_BrickBreakAnim::
 	attackanimation
 	waitanimation
-	jumpifbyte CMP_LESS_THAN, sB_ANIM_TURN, 2, BattleScript_BrickBreakDoHit
-	printstring STRINGID_THEWALLSHATTERED
-	waitmessage B_WAIT_TIME_LONG
-BattleScript_BrickBreakDoHit::
 	typecalc2
 	effectivenesssound
 	hitanimation BS_TARGET
@@ -2475,6 +2471,15 @@ BattleScript_BrickBreakDoHit::
 	waitmessage B_WAIT_TIME_LONG
 	resultmessage
 	waitmessage B_WAIT_TIME_LONG
+	jumpifbyte CMP_LESS_THAN, sB_ANIM_TURN, 2, BattleScript_BrickBreakDoHit
+	jumpifbyte CMP_EQUAL, sB_ANIM_TURN, 2, BattleScript_BrickBreakPrintLightScreen
+	printstring STRINGID_THEWALLSHATTERED
+	waitmessage B_WAIT_TIME_LONG
+	jumpifbyte CMP_EQUAL, sB_ANIM_TURN, 3, BattleScript_BrickBreakDoHit
+BattleScript_BrickBreakPrintLightScreen::
+	printstring STRINGID_PKMNMADEWISH
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_BrickBreakDoHit::
 	seteffectwithchance
 	tryfaintmon BS_TARGET
 	goto BattleScript_MoveEnd
@@ -4236,7 +4241,7 @@ BattleScript_PSNPreventionPopUpSynchronize::
 
 BattleScript_ObliviousPreventsAttraction::
 	call BattleScript_AbilityPopUp
-	printstring STRINGID_PKMNPREVENTSROMANCEWITH
+	printstring STRINGID_ITDOESNTAFFECT
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
