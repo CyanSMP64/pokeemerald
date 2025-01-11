@@ -310,8 +310,9 @@ BattleScript_WasntAffected::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
+BattleScript_CantMakeAsleepInsomnia::
+	call BattleScript_AbilityPopUp
 BattleScript_CantMakeAsleep::
-	pause B_WAIT_TIME_SHORT
 	printfromtable gUproarAwakeStringIds
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
@@ -761,9 +762,10 @@ BattleScript_EffectRest::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
+BattleScript_RestCantSleepInsomnia::
+	call BattleScript_AbilityPopUp
 BattleScript_RestCantSleep::
-	pause B_WAIT_TIME_LONG
-	printfromtable gUproarAwakeStringIds
+	printstring STRINGID_PKMNSTAYEDAWAKEUSING
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 
@@ -1953,7 +1955,7 @@ BattleScript_EffectTeleport::
 	jumpifbattletype BATTLE_TYPE_TRAINER, BattleScript_ButItFailed
 	getifcantrunfrombattle BS_ATTACKER
 	jumpifbyte CMP_EQUAL, gBattleCommunication, BATTLE_RUN_FORBIDDEN, BattleScript_ButItFailed
-	jumpifbyte CMP_EQUAL, gBattleCommunication, BATTLE_RUN_FAILURE, BattleScript_PrintAbilityMadeIneffective
+	jumpifbyte CMP_EQUAL, gBattleCommunication, BATTLE_RUN_FAILURE, BattleScript_PrintAbilityMadeIneffectiveTeleport
 	attackanimation
 	waitanimation
 	setoutcomeonteleport BS_ATTACKER
@@ -2503,6 +2505,12 @@ BattleScript_EffectYawn::
 BattleScript_PrintBankAbilityMadeIneffective::
 	copybyte sBATTLER, sBATTLER_WITH_ABILITY
 BattleScript_PrintAbilityMadeIneffective::
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_ITDOESNTAFFECT
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd
+BattleScript_PrintAbilityMadeIneffectiveTeleport::
+	copybyte gBattlerAbility, sBATTLER
 	call BattleScript_AbilityPopUp
 	printstring STRINGID_PKMNSXMADEITINEFFECTIVE
 	waitmessage B_WAIT_TIME_LONG

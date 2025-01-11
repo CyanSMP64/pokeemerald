@@ -167,12 +167,12 @@ static const u8 sText_PkmnWokeUpInUproar[] = _("{B_ATK_NAME_WITH_PREFIX} woke up
 static const u8 sText_PkmnCausedUproar[] = _("{B_ATK_NAME_WITH_PREFIX} caused an\nuproar!");
 static const u8 sText_PkmnMakingUproar[] = _("{B_ATK_NAME_WITH_PREFIX} is making an\nuproar!");
 static const u8 sText_PkmnCalmedDown[] = _("{B_ATK_NAME_WITH_PREFIX} calmed down.");
-static const u8 sText_PkmnCantSleepInUproar[] = _("But {B_DEF_NAME_WITH_PREFIX} can't\nsleep in an Uproar!");
+static const u8 sText_PkmnCantSleepInUproar[] = _(""); // dummied
 static const u8 sText_PkmnStockpiled[] = _("{B_ATK_NAME_WITH_PREFIX}\nstockpiled {B_BUFF1}!");
 static const u8 sText_PkmnCantStockpile[] = _(""); // dummied
-static const u8 sText_PkmnCantSleepInUproar2[] = _("But {B_DEF_NAME_WITH_PREFIX} can't\nsleep in an Uproar!");
+static const u8 sText_PkmnCantSleepInUproar2[] = _("But {B_DEF_NAME_WITH_PREFIX_LOWER} can't\nsleep in an uproar!");
 static const u8 sText_UproarKeptPkmnAwake[] = _("But the Uproar kept\n{B_DEF_NAME_WITH_PREFIX} awake!");
-static const u8 sText_PkmnStayedAwakeUsing[] = _("{B_DEF_NAME_WITH_PREFIX} stayed awake\nusing its {B_DEF_ABILITY}!");
+static const u8 sText_PkmnStayedAwakeUsing[] = _("{B_DEF_NAME_WITH_PREFIX} stayed\nawake!");
 static const u8 sText_PkmnStoringEnergy[] = _("{B_ATK_NAME_WITH_PREFIX} is storing\nenergy!");
 static const u8 sText_PkmnUnleashedEnergy[] = _("{B_ATK_NAME_WITH_PREFIX} unleashed\nits energy!");
 static const u8 sText_PkmnFatigueConfusion[] = _("{B_ATK_NAME_WITH_PREFIX} became\nconfused due to fatigue!");
@@ -267,7 +267,7 @@ static const u8 sText_PkmnProtectedBy[] = _("{B_DEF_NAME_WITH_PREFIX} was protec
 static const u8 sText_PkmnPreventsUsage[] = _("{B_ATK_NAME_WITH_PREFIX} cannot use\n{B_CURRENT_MOVE}!");
 static const u8 sText_PkmnRestoredHPUsing[] = _("{B_DEF_NAME_WITH_PREFIX} restored HP\nusing its {B_DEF_ABILITY}!");
 static const u8 sText_PkmnsXMadeYUseless[] = _("{B_DEF_NAME_WITH_PREFIX}'s stats were\nnot lowered!"); // dummied
-static const u8 sText_PkmnChangedTypeWith[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmade it the {B_BUFF1} type!");
+static const u8 sText_PkmnChangedTypeWith[] = _("{B_DEF_NAME_WITH_PREFIX}'s type\nchanged to {B_BUFF1}!");
 static const u8 sText_PkmnPreventsParalysisWith[] = _("{B_EFF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents paralysis!");
 static const u8 sText_PkmnPreventsRomanceWith[] = _(""); // dummied
 static const u8 sText_PkmnPreventsPoisoningWith[] = _("{B_EFF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nprevents poisoning!");
@@ -1011,7 +1011,7 @@ const u16 gUproarAwakeStringIds[] =
 {
     [B_MSG_CANT_SLEEP_UPROAR]  = STRINGID_PKMNCANTSLEEPINUPROAR2,
     [B_MSG_UPROAR_KEPT_AWAKE]  = STRINGID_UPROARKEPTPKMNAWAKE,
-    [B_MSG_STAYED_AWAKE_USING] = STRINGID_PKMNSTAYEDAWAKEUSING,
+    [B_MSG_STAYED_AWAKE_USING] = STRINGID_ITDOESNTAFFECT,
 };
 
 const u16 gStatUpStringIds[] =
