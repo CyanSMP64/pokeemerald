@@ -261,7 +261,7 @@
 #define EVO_LEVEL_MALE       17 // Pokémon reaches the specified level, is male
 #define EVO_ITEM_MALE        18 // specified item is used on a male Pokémon
 #define EVO_ITEM_FEMALE      19 // specified item is used on a female Pokémon
-#define EVO_ITEM_SILCOON     20 // specified item is used on a Pokémon with a Silcoon personality value
+#define EVO_LEVEL_LOW_KEY    20 // Pokémon reaches the specified level, it has a Lonely, Bold, Relaxed, Timid, Serious, Modest, Mild, Quiet, Bashful, Calm, Gentle, or Careful nature.
 #define EVO_ITEM_CASCOON     21 // specified item is used on a Pokémon with a Cascoon personality value
 
 #define EVOS_PER_MON 8
