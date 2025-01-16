@@ -80,6 +80,7 @@
 #define B_BUFF_ABILITY                  9
 #define B_BUFF_ITEM                     10
 #define B_BUFF_TYPE2                    11
+#define B_BUFF_MON_NICK_WITH_PREFIX_LOWER 12
 
 #define B_BUFF_PLACEHOLDER_BEGIN        0xFD
 #define B_BUFF_EOS                      0xFF
@@ -198,6 +199,15 @@
 {                                                                           \
     textVar[0] = B_BUFF_PLACEHOLDER_BEGIN;                                  \
     textVar[1] = B_BUFF_MON_NICK_WITH_PREFIX;                               \
+    textVar[2] = battler;                                                   \
+    textVar[3] = partyId;                                                   \
+    textVar[4] = B_BUFF_EOS;                                                \
+}
+
+#define PREPARE_MON_NICK_WITH_PREFIX_LOWER_BUFFER(textVar, battler, partyId) \
+{                                                                           \
+    textVar[0] = B_BUFF_PLACEHOLDER_BEGIN;                                  \
+    textVar[1] = B_BUFF_MON_NICK_WITH_PREFIX_LOWER;                         \
     textVar[2] = battler;                                                   \
     textVar[3] = partyId;                                                   \
     textVar[4] = B_BUFF_EOS;                                                \
