@@ -3106,7 +3106,8 @@ BattleScript_SmokeBallEscape::
 	end2
 
 BattleScript_RanAwayUsingMonAbility::
-	printstring STRINGID_PKMNFLEDUSING
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_GOTAWAYSAFELY
 	waitmessage 0
 	end2
 
@@ -4052,8 +4053,8 @@ BattleScript_TraceActivates::
 
 BattleScript_RainDishActivates::
 	call BattleScript_AbilityPopUp
-	printstring STRINGID_PKMNSXRESTOREDHPALITTLE2
-	waitmessage B_WAIT_TIME_LONG
+	pause B_WAIT_TIME_LONG
+	playanimation BS_ATTACKER, B_ANIM_RAIN_DISH_HEAL
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
 	healthbarupdate BS_ATTACKER
 	datahpupdate BS_ATTACKER
@@ -4269,7 +4270,7 @@ BattleScript_SoundproofProtected::
 	attackstring
 	ppreduce
 	call BattleScript_AbilityPopUp
-	printstring STRINGID_PKMNSXBLOCKSY
+	printstring STRINGID_ITDOESNTAFFECT
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_MoveEnd
 

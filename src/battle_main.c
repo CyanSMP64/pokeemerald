@@ -5323,6 +5323,7 @@ static void HandleEndTurn_RanFromBattle(void)
             gBattlescriptCurrInstr = BattleScript_SmokeBallEscape;
             break;
         case FLEE_ABILITY:
+            gBattlerAbility = gBattlerAttacker;
             gBattlescriptCurrInstr = BattleScript_RanAwayUsingMonAbility;
             break;
         }

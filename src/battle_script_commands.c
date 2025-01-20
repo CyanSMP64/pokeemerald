@@ -40,6 +40,7 @@
 #include "menu_specialized.h"
 #include "debug.h"
 #include "data.h"
+#include "battle_util.h"
 #include "constants/abilities.h"
 #include "constants/battle_anim.h"
 #include "constants/battle_move_effects.h"
@@ -9116,6 +9117,18 @@ static void Cmd_cureifburnedparalysedorpoisoned(void)
 {
     if (gBattleMons[gBattlerAttacker].status1 & (STATUS1_POISON | STATUS1_BURN | STATUS1_PARALYSIS | STATUS1_TOXIC_POISON))
     {
+        if (gBattleMons[gBattlerAttacker].status1 & (STATUS1_POISON | STATUS1_TOXIC_POISON)) {
+            StringCopy(gBattleTextBuff1, gShedSkinString_Poison1);
+            StringCopy(gBattleTextBuff2, gShedSkinString_Poison2);
+        }
+        if (gBattleMons[gBattlerAttacker].status1 & STATUS1_PARALYSIS) {
+            StringCopy(gBattleTextBuff1, gShedSkinString_Paralysis1);
+            StringCopy(gBattleTextBuff2, gShedSkinString_Paralysis2);
+        }
+        if (gBattleMons[gBattlerAttacker].status1 & STATUS1_BURN) {
+            StringCopy(gBattleTextBuff1, gShedSkinString_Burn1);
+            StringCopy(gBattleTextBuff2, gShedSkinString_Burn2);
+        }
         gBattleMons[gBattlerAttacker].status1 = 0;
         gBattlescriptCurrInstr += 5;
         gActiveBattler = gBattlerAttacker;

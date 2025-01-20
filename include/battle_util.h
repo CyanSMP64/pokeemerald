@@ -104,4 +104,15 @@ bool32 CanBeParalyzed(u32 battler);
 bool32 CanBeFrozen(u32 battler);
 bool32 CanBeConfused(u32 battler);
 
+extern const u8 gShedSkinString_Poison1[];
+extern const u8 gShedSkinString_Poison2[];
+extern const u8 gShedSkinString_Sleep1[];
+extern const u8 gShedSkinString_Sleep2[];
+extern const u8 gShedSkinString_Paralysis1[];
+extern const u8 gShedSkinString_Paralysis2[];
+extern const u8 gShedSkinString_Burn1[];
+extern const u8 gShedSkinString_Burn2[];
+extern const u8 gShedSkinString_Freeze1[];
+extern const u8 gShedSkinString_Freeze2[];
+
 #endif // GUARD_BATTLE_UTIL_H

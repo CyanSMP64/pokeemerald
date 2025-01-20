@@ -2417,6 +2417,17 @@ u8 CastformDataTypeChange(u8 battler)
     return formChange;
 }
 
+const u8 gShedSkinString_Poison1[] = _(" was cured\n");
+const u8 gShedSkinString_Poison2[] = _("of its poisoning");
+const u8 gShedSkinString_Sleep1[] = _(" woke up");
+const u8 gShedSkinString_Sleep2[] = _("");
+const u8 gShedSkinString_Paralysis1[] = _(" was cured\n");
+const u8 gShedSkinString_Paralysis2[] = _("of paralysis");
+const u8 gShedSkinString_Burn1[] = _("'s burn was\n");
+const u8 gShedSkinString_Burn2[] = _("cured");
+const u8 gShedSkinString_Freeze1[] = _(" thawed out");
+const u8 gShedSkinString_Freeze2[] = _("");
+
 u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveArg)
 {
     u8 effect = 0;
@@ -2610,16 +2621,26 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 case ABILITY_SHED_SKIN:
                     if ((gBattleMons[battler].status1 & STATUS1_ANY) && (Random() % 3) == 0)
                     {
-                        if (gBattleMons[battler].status1 & (STATUS1_POISON | STATUS1_TOXIC_POISON))
-                            StringCopy(gBattleTextBuff1, gStatusConditionString_PoisonJpn);
-                        if (gBattleMons[battler].status1 & STATUS1_SLEEP)
-                            StringCopy(gBattleTextBuff1, gStatusConditionString_SleepJpn);
-                        if (gBattleMons[battler].status1 & STATUS1_PARALYSIS)
-                            StringCopy(gBattleTextBuff1, gStatusConditionString_ParalysisJpn);
-                        if (gBattleMons[battler].status1 & STATUS1_BURN)
-                            StringCopy(gBattleTextBuff1, gStatusConditionString_BurnJpn);
-                        if (gBattleMons[battler].status1 & STATUS1_FREEZE)
-                            StringCopy(gBattleTextBuff1, gStatusConditionString_IceJpn);
+                        if (gBattleMons[battler].status1 & (STATUS1_POISON | STATUS1_TOXIC_POISON)) {
+                            StringCopy(gBattleTextBuff1, gShedSkinString_Poison1);
+                            StringCopy(gBattleTextBuff2, gShedSkinString_Poison2);
+                        }
+                        if (gBattleMons[battler].status1 & STATUS1_SLEEP) {
+                            StringCopy(gBattleTextBuff1, gShedSkinString_Sleep1);
+                            StringCopy(gBattleTextBuff2, gShedSkinString_Sleep2);
+                        }
+                        if (gBattleMons[battler].status1 & STATUS1_PARALYSIS) {
+                            StringCopy(gBattleTextBuff1, gShedSkinString_Paralysis1);
+                            StringCopy(gBattleTextBuff2, gShedSkinString_Paralysis2);
+                        }
+                        if (gBattleMons[battler].status1 & STATUS1_BURN) {
+                            StringCopy(gBattleTextBuff1, gShedSkinString_Burn1);
+                            StringCopy(gBattleTextBuff2, gShedSkinString_Burn2);
+                        }
+                        if (gBattleMons[battler].status1 & STATUS1_FREEZE) {
+                            StringCopy(gBattleTextBuff1, gShedSkinString_Freeze1);
+                            StringCopy(gBattleTextBuff2, gShedSkinString_Freeze2);
+                        }
                         gBattleMons[battler].status1 = 0;
                         gBattleMons[battler].status2 &= ~STATUS2_NIGHTMARE;  // fix nightmare glitch
                         gBattleScripting.battler = gActiveBattler = battler;
