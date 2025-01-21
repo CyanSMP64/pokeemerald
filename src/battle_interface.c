@@ -2338,6 +2338,7 @@ static s32 CalcNewBarValue(s32 maxValue, s32 oldValue, s32 receivedValue, s32 *c
 {
     s32 ret, newValue;
     scale *= 8;
+    toAdd *= 2; // nat dex: double speed
 
     if (*currValue == -32768) // first function call
     {
@@ -2366,7 +2367,8 @@ static s32 CalcNewBarValue(s32 maxValue, s32 oldValue, s32 receivedValue, s32 *c
 
     if (maxValue < scale) // handle cases of max var having less pixels than the whole bar
     {
-        s32 toAdd = Q_24_8(maxValue) / scale;
+        // nat dex: doubles speed
+        s32 toAdd = Q_24_8(maxValue) * 2 / scale;
 
         if (receivedValue < 0) // fill bar right
         {
