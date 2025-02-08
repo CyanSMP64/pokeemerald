@@ -2428,6 +2428,19 @@ const u8 gShedSkinString_Burn2[] = _("cured");
 const u8 gShedSkinString_Freeze1[] = _(" thawed out");
 const u8 gShedSkinString_Freeze2[] = _("");
 
+static const u8 gLumBerryString_Poison1[] = _("cured its poison");
+static const u8 gLumBerryString_Poison2[] = _("");
+static const u8 gLumBerryString_Sleep1[] = _("woke it up");
+static const u8 gLumBerryString_Sleep2[] = _("");
+static const u8 gLumBerryString_Paralysis1[] = _("cured its ");
+static const u8 gLumBerryString_Paralysis2[] = _("paralysis");
+static const u8 gLumBerryString_Burn1[] = _("cured its burn");
+static const u8 gLumBerryString_Burn2[] = _("");
+static const u8 gLumBerryString_Freeze1[] = _("defrosted it");
+static const u8 gLumBerryString_Freeze2[] = _("");
+static const u8 gLumBerryString_Confusion1[] = _("snapped it out ");
+static const u8 gLumBerryString_Confusion2[] = _("of its\lconfusion");
+
 u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveArg)
 {
     u8 effect = 0;
@@ -3741,27 +3754,33 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
             case HOLD_EFFECT_CURE_STATUS:
                 if (gBattleMons[battlerId].status1 & STATUS1_ANY || gBattleMons[battlerId].status2 & STATUS2_CONFUSION)
                 {
-                    if (gBattleMons[battlerId].status1 & STATUS1_PSN_ANY)
-                        StringCopy(gBattleTextBuff1, gStatusConditionString_PoisonJpn);
-
+                    if (gBattleMons[battlerId].status1 & STATUS1_PSN_ANY) {
+                        StringCopy(gBattleTextBuff1, gLumBerryString_Poison1);
+                        StringCopy(gBattleTextBuff2, gLumBerryString_Poison2);
+                    }
                     if (gBattleMons[battlerId].status1 & STATUS1_SLEEP)
                     {
-                        gBattleMons[battlerId].status2 &= ~STATUS2_NIGHTMARE;
-                        StringCopy(gBattleTextBuff1, gStatusConditionString_SleepJpn);
+                        gBattleMons[battlerId].status2 &= ~STATUS2_NIGHTMARE; {
+                            StringCopy(gBattleTextBuff1, gLumBerryString_Sleep1);
+                            StringCopy(gBattleTextBuff2, gLumBerryString_Sleep2);
+                        }
                     }
-
-                    if (gBattleMons[battlerId].status1 & STATUS1_PARALYSIS)
-                        StringCopy(gBattleTextBuff1, gStatusConditionString_ParalysisJpn);
-
-                    if (gBattleMons[battlerId].status1 & STATUS1_BURN)
-                        StringCopy(gBattleTextBuff1, gStatusConditionString_BurnJpn);
-
-                    if (gBattleMons[battlerId].status1 & STATUS1_FREEZE)
-                        StringCopy(gBattleTextBuff1, gStatusConditionString_IceJpn);
-
-                    if (gBattleMons[battlerId].status2 & STATUS2_CONFUSION)
-                        StringCopy(gBattleTextBuff1, gStatusConditionString_ConfusionJpn);
-
+                    if (gBattleMons[battlerId].status1 & STATUS1_PARALYSIS) {
+                        StringCopy(gBattleTextBuff1, gLumBerryString_Paralysis1);
+                        StringCopy(gBattleTextBuff2, gLumBerryString_Paralysis2);
+                    }
+                    if (gBattleMons[battlerId].status1 & STATUS1_BURN) {
+                        StringCopy(gBattleTextBuff1, gLumBerryString_Burn1);
+                        StringCopy(gBattleTextBuff2, gLumBerryString_Burn2);
+                    }
+                    if (gBattleMons[battlerId].status1 & STATUS1_FREEZE) {
+                        StringCopy(gBattleTextBuff1, gLumBerryString_Freeze1);
+                        StringCopy(gBattleTextBuff2, gLumBerryString_Freeze2);
+                    }
+                    if (gBattleMons[battlerId].status2 & STATUS2_CONFUSION) {
+                        StringCopy(gBattleTextBuff1, gLumBerryString_Confusion1);
+                        StringCopy(gBattleTextBuff2, gLumBerryString_Confusion2);
+                    }
                     gBattleMons[battlerId].status1 = 0;
                     gBattleMons[battlerId].status2 &= ~STATUS2_CONFUSION;
                     BattleScriptPushCursor();
