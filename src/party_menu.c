@@ -389,6 +389,7 @@ static u8 GetPartyLayoutFromBattleType(void);
 static void Task_SetSacredAshCB(u8);
 static void CB2_ReturnToBagMenu(void);
 static void Task_DisplayHPRestoredMessage(u8);
+static void Task_DisplayReviveMessage(u8 taskId);
 static u16 ItemEffectToMonEv(struct Pokemon *, u8);
 static void ItemEffectToStatString(u8, u8 *);
 static void ReturnToUseOnWhichMon(u8);
@@ -4461,9 +4462,12 @@ void ItemUseCB_Medicine(u8 taskId, TaskFunc task)
             DisplayPartyPokemonLevelCheck(mon, &sPartyMenuBoxes[gPartyMenu.slotId], 1);
         if (canHeal == TRUE)
         {
-            if (hp == 0)
+            if (hp == 0) {
                 AnimatePartySlot(gPartyMenu.slotId, 1);
-            PartyMenuModifyHP(taskId, gPartyMenu.slotId, 1, GetMonData(mon, MON_DATA_HP) - hp, Task_DisplayHPRestoredMessage);
+                PartyMenuModifyHP(taskId, gPartyMenu.slotId, 1, GetMonData(mon, MON_DATA_HP) - hp, Task_DisplayReviveMessage);
+            } else {
+                PartyMenuModifyHP(taskId, gPartyMenu.slotId, 1, GetMonData(mon, MON_DATA_HP) - hp, Task_DisplayHPRestoredMessage);
+            }
             ResetHPTaskData(taskId, 0, hp);
             return;
         }
@@ -4485,6 +4489,15 @@ static void Task_DisplayHPRestoredMessage(u8 taskId)
     DisplayPartyMenuMessage(gStringVar4, FALSE);
     ScheduleBgCopyTilemapToVram(2);
     HandleBattleLowHpMusicChange();
+    gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+}
+
+static void Task_DisplayReviveMessage(u8 taskId)
+{
+    GetMonNickname(&gPlayerParty[gPartyMenu.slotId], gStringVar1);
+    StringExpandPlaceholders(gStringVar4, gText_PkmnRecoveredFromFainting);
+    DisplayPartyMenuMessage(gStringVar4, FALSE);
+    ScheduleBgCopyTilemapToVram(2);
     gTasks[taskId].func = Task_ClosePartyMenuAfterText;
 }
 
@@ -4533,7 +4546,7 @@ void ItemUseCB_ReduceEV(u8 taskId, TaskFunc task)
         }
         else
         {
-            StringExpandPlaceholders(gStringVar4, gText_PkmnAdoresBaseVar2Fell);
+            StringExpandPlaceholders(gStringVar4, gText_PkmnFriendlyBaseVar2Fell);
         }
         DisplayPartyMenuMessage(gStringVar4, TRUE);
         ScheduleBgCopyTilemapToVram(2);
@@ -5236,7 +5249,7 @@ static void Task_SacredAshLoop(u8 taskId)
 static void Task_SacredAshDisplayHPRestored(u8 taskId)
 {
     GetMonNickname(&gPlayerParty[gPartyMenu.slotId], gStringVar1);
-    StringExpandPlaceholders(gStringVar4, gText_PkmnHPRestoredByVar2);
+    StringExpandPlaceholders(gStringVar4, gText_PkmnRecoveredFromFainting);
     DisplayPartyMenuMessage(gStringVar4, FALSE);
     ScheduleBgCopyTilemapToVram(2);
     gTasks[taskId].func = Task_SacredAshLoop;

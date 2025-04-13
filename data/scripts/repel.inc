@@ -33,9 +33,8 @@ Text_RepelWoreOff:
 	.string "Repel's effect wore off…$"
 
 Text_RepelWoreOff_UseAnother:
-	.string "Repel's effect wore off…\n"
+	.string "Repel's effect wore off!\n"
 	.string "Use another?$"
 
 Text_PlayerUsedRepel:
-	.string "{PLAYER} used the\n"
-	.string "{STR_VAR_2}.$"
+	.string "You used a {STR_VAR_2}.$"
