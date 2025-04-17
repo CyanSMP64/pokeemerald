@@ -7104,17 +7104,17 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
             if (statValue == 2) {
                 gBattleTextBuff2[0] = B_BUFF_PLACEHOLDER_BEGIN;
                 gBattleTextBuff2[1] = B_BUFF_STRING;
-                gBattleTextBuff2[2] = STRINGID_PKMNRAISEDDEFALITTLE & 0xff;
-                gBattleTextBuff2[3] = STRINGID_PKMNRAISEDDEFALITTLE >> 8;
+                gBattleTextBuff2[2] = STRINGID_PKMNTRAPPEDINFIERYVORTEX & 0xff;
+                gBattleTextBuff2[3] = STRINGID_PKMNTRAPPEDINFIERYVORTEX >> 8;
                 gBattleTextBuff2[4] = B_BUFF_STRING;
                 gBattleTextBuff2[5] = STRINGID_SPACE1 & 0xff;
                 gBattleTextBuff2[6] = STRINGID_SPACE1 >> 8;
                 gBattleTextBuff2[7] = B_BUFF_STRING;
-                gBattleTextBuff2[8] = STRINGID_PKMNRAISEDSPDEFALITTLE & 0xff;
-                gBattleTextBuff2[9] = STRINGID_PKMNRAISEDSPDEFALITTLE >> 8;
+                gBattleTextBuff2[8] = STRINGID_BOOSTED & 0xff;
+                gBattleTextBuff2[9] = STRINGID_BOOSTED >> 8;
                 gBattleTextBuff2[10] = EOS;
             } else {
-                PREPARE_STRING_BUFFER(gBattleTextBuff2, STRINGID_PKMNRAISEDSPDEFALITTLE);
+                PREPARE_STRING_BUFFER(gBattleTextBuff2, STRINGID_BOOSTED);
             }
         }
         else {

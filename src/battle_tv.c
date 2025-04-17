@@ -747,6 +747,7 @@ void BattleTv_SetDataBasedOnString(u16 stringId)
     case STRINGID_PKMNWRAPPEDBY:
     case STRINGID_PKMNCLAMPED:
     case STRINGID_PKMNTRAPPEDBYSANDTOMB:
+    case STRINGID_PKMNTRAPPEDINFIERYVORTEX:
         tvPtr->pos[defSide][defFlank].wrapMonId = gBattlerPartyIndexes[gBattlerAttacker] + 1;
         tvPtr->pos[defSide][defFlank].wrapMoveSlot = moveSlot;
         break;
@@ -885,12 +886,11 @@ void BattleTv_SetDataBasedOnString(u16 stringId)
         }
         break;
     case STRINGID_PKMNRAISEDDEF:
-    case STRINGID_PKMNRAISEDDEFALITTLE:
         tvPtr->side[atkSide].reflectMonId = gBattlerPartyIndexes[gBattlerAttacker] + 1;
         tvPtr->side[atkSide].reflectMoveSlot = moveSlot;
         break;
     case STRINGID_PKMNRAISEDSPDEF:
-    case STRINGID_PKMNRAISEDSPDEFALITTLE:
+//    case STRINGID_BOOSTED:
         tvPtr->side[atkSide].lightScreenMonId = gBattlerPartyIndexes[gBattlerAttacker] + 1;
         tvPtr->side[atkSide].lightScreenMoveSlot = moveSlot;
         break;
