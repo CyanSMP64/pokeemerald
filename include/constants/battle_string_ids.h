@@ -563,6 +563,7 @@
 // gBerryEffectStringIds
 #define B_MSG_CURED_PROBLEM     0
 #define B_MSG_NORMALIZED_STATUS 1
+#define B_MSG_CURED_INFATUATION 2
 
 // gNoEscapeStringIds
 #define B_MSG_CANT_ESCAPE          0

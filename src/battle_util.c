@@ -3643,7 +3643,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     gBattleMons[battlerId].status2 &= ~STATUS2_INFATUATION;
                     StringCopy(gBattleTextBuff1, gStatusConditionString_LoveJpn);
                     BattleScriptExecute(BattleScript_BerryCureChosenStatusEnd2);
-                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CURED_PROBLEM;
+                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CURED_INFATUATION;
                     effect = ITEM_EFFECT_OTHER;
                 }
                 break;
@@ -3746,7 +3746,7 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     gBattleMons[battlerId].status2 &= ~STATUS2_INFATUATION;
                     StringCopy(gBattleTextBuff1, gStatusConditionString_LoveJpn);
                     BattleScriptPushCursor();
-                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CURED_PROBLEM;
+                    gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_CURED_INFATUATION;
                     gBattlescriptCurrInstr = BattleScript_BerryCureChosenStatusRet;
                     effect = ITEM_EFFECT_OTHER;
                 }
