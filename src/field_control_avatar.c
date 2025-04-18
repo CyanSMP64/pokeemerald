@@ -373,8 +373,8 @@ static const u8 *GetInteractedBackgroundEventScript(struct MapPosition *position
          || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(GRANITE_CAVE_B2F)
           && (gSaveBlock1Ptr->location.mapNum == MAP_NUM(GRANITE_CAVE_B2F)
            || (gSaveBlock1Ptr->location.mapNum == MAP_NUM(PETALBURG_WOODS)
-            && gSaveBlock1Ptr->pos.x >= 25
-            && gSaveBlock1Ptr->pos.y <= 30)
+            && gSaveBlock1Ptr->pos.x <= 25
+            && gSaveBlock1Ptr->pos.y >= 30)
            || (gSaveBlock1Ptr->location.mapNum >= MAP_NUM(MT_PYRE_1F)
             && gSaveBlock1Ptr->location.mapNum <= MAP_NUM(VICTORY_ROAD_B2F))))))
         {
