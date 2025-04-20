@@ -9632,11 +9632,9 @@ u16 GetBattleBGM(void)
         case SPECIES_TORNADUS:
         case SPECIES_THUNDURUS:
         case SPECIES_LANDORUS:
-        case SPECIES_ENAMORUS:
         case SPECIES_TORNADUS_THERIAN:
         case SPECIES_THUNDURUS_THERIAN:
         case SPECIES_LANDORUS_THERIAN:
-        case SPECIES_ENAMORUS_THERIAN:
         case SPECIES_KELDEO:
         case SPECIES_MELOETTA:
         case SPECIES_MELOETTA_PIROUETTE:
