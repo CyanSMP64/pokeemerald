@@ -351,8 +351,8 @@ struct SpindaSpot
 
 struct __attribute__((packed)) LevelUpMove
 {
-    u16 move:9;
-    u16 level:7;
+    u32 move:16;
+    u32 level:16;
 };
 
 struct Evolution
@@ -382,7 +382,7 @@ extern const u8 gFacilityClassToTrainerClass[];
 extern const struct SpeciesInfo gSpeciesInfo[];
 extern const u8 *const gItemEffectTable[];
 extern const u32 gExperienceTables[][MAX_LEVEL + 1];
-extern const u16 *const gLevelUpLearnsets[];
+extern const u32 *const gLevelUpLearnsets[];
 extern const u8 gPPUpGetMask[];
 extern const u8 gPPUpClearMask[];
 extern const u8 gPPUpAddValues[];

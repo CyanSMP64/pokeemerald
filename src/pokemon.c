@@ -6021,7 +6021,7 @@ void GiveBoxMonInitialMoveset(struct BoxPokemon *boxMon)
 
     for (i = 0; gLevelUpLearnsets[species][i] != LEVEL_UP_END; i++)
     {
-        u16 moveLevel;
+        u32 moveLevel;
         u16 move;
 
         moveLevel = (gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_LV);
@@ -6029,7 +6029,7 @@ void GiveBoxMonInitialMoveset(struct BoxPokemon *boxMon)
         if (moveLevel == 0)
             continue;
 
-        if (moveLevel > (level << 9))
+        if (moveLevel > (level << 16))
             break;
 
         move = (gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_ID);
@@ -6053,7 +6053,7 @@ u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove)
     {
         sLearningMoveTableID = 0;
 
-        while ((gLevelUpLearnsets[species][sLearningMoveTableID] & LEVEL_UP_MOVE_LV) != (level << 9))
+        while ((gLevelUpLearnsets[species][sLearningMoveTableID] & LEVEL_UP_MOVE_LV) != (level << 16))
         {
             sLearningMoveTableID++;
             if (gLevelUpLearnsets[species][sLearningMoveTableID] == LEVEL_UP_END)
@@ -6061,7 +6061,7 @@ u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove)
         }
     }
 
-    if ((gLevelUpLearnsets[species][sLearningMoveTableID] & LEVEL_UP_MOVE_LV) == (level << 9))
+    if ((gLevelUpLearnsets[species][sLearningMoveTableID] & LEVEL_UP_MOVE_LV) == (level << 16))
     {
         gMoveToLearn = (gLevelUpLearnsets[species][sLearningMoveTableID] & LEVEL_UP_MOVE_ID);
         if (gMoveToLearn == MOVE_NONE || gMoveToLearn >= MOVES_COUNT)
@@ -6543,16 +6543,6 @@ static void EncryptBoxMon(struct BoxPokemon *boxMon)
     {
         boxMon->secure.raw[i] ^= boxMon->personality;
         boxMon->secure.raw[i] ^= boxMon->otId;
-    }
-}
-
-static void DecryptBoxMon(struct BoxPokemon *boxMon)
-{
-    u32 i;
-    for (i = 0; i < ARRAY_COUNT(boxMon->secure.raw); i++)
-    {
-        boxMon->secure.raw[i] ^= boxMon->otId;
-        boxMon->secure.raw[i] ^= boxMon->personality;
     }
 }
 
@@ -7069,14 +7059,6 @@ u32 GetBoxMonData(struct BoxPokemon *boxMon, s32 field, u8 *data)
     return retVal;
 }
 
-bool32 IsSpeciesInHoennDex(u16 species)
-{
-    if (SpeciesToHoennPokedexNum(species) > HOENN_DEX_COUNT)
-        return FALSE;
-    else
-        return TRUE;
-}
-
 #define SET8(lhs) (lhs) = *data
 #define SET16(lhs) (lhs) = data[0] + (data[1] << 8)
 #define SET32(lhs) (lhs) = data[0] + (data[1] << 8) + (data[2] << 16) + (data[3] << 24)
@@ -7114,6 +7096,22 @@ u8 GetLevelFromBoxMonExp(struct BoxPokemon *boxMon)
         level++;
 
     return level - 1;
+}
+
+u8 GetGenderFromSpeciesAndPersonality(u16 species, u32 personality)
+{
+    switch (gSpeciesInfo[species].genderRatio)
+    {
+    case MON_MALE:
+    case MON_FEMALE:
+    case MON_GENDERLESS:
+        return gSpeciesInfo[species].genderRatio;
+    }
+
+    if (gSpeciesInfo[species].genderRatio > (personality & 0xFF))
+        return MON_FEMALE;
+    else
+        return MON_MALE;
 }
 
 void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
@@ -7160,20 +7158,22 @@ void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
     }
 }
 
-u8 GetGenderFromSpeciesAndPersonality(u16 species, u32 personality)
+static void DecryptBoxMon(struct BoxPokemon *boxMon)
 {
-    switch (gSpeciesInfo[species].genderRatio)
+    u32 i;
+    for (i = 0; i < ARRAY_COUNT(boxMon->secure.raw); i++)
     {
-    case MON_MALE:
-    case MON_FEMALE:
-    case MON_GENDERLESS:
-        return gSpeciesInfo[species].genderRatio;
+        boxMon->secure.raw[i] ^= boxMon->otId;
+        boxMon->secure.raw[i] ^= boxMon->personality;
     }
+}
 
-    if (gSpeciesInfo[species].genderRatio > (personality & 0xFF))
-        return MON_FEMALE;
+bool32 IsSpeciesInHoennDex(u16 species)
+{
+    if (SpeciesToHoennPokedexNum(species) > HOENN_DEX_COUNT)
+        return FALSE;
     else
-        return MON_MALE;
+        return TRUE;
 }
 
 u8 CalculatePlayerPartyCount(void)
@@ -9402,14 +9402,14 @@ u8 GetMoveRelearnerMoves(struct Pokemon *mon, u16 *moves)
 
     for (i = 0; i < MAX_LEVEL_UP_MOVES; i++)
     {
-        u16 moveLevel;
+        u32 moveLevel;
 
         if (gLevelUpLearnsets[species][i] == LEVEL_UP_END)
             break;
 
         moveLevel = gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_LV;
 
-        if (moveLevel <= (level << 9))
+        if (moveLevel <= (level << 16))
         {
             for (j = 0; j < MAX_MON_MOVES && learnedMoves[j] != (gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_ID); j++)
                 ;
@@ -9456,14 +9456,14 @@ u8 GetNumberOfRelearnableMoves(struct Pokemon *mon)
 
     for (i = 0; i < MAX_LEVEL_UP_MOVES; i++)
     {
-        u16 moveLevel;
+        u32 moveLevel;
 
         if (gLevelUpLearnsets[species][i] == LEVEL_UP_END)
             break;
 
         moveLevel = gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_LV;
 
-        if (moveLevel <= (level << 9))
+        if (moveLevel <= (level << 16))
         {
             for (j = 0; j < MAX_MON_MOVES && learnedMoves[j] != (gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_ID); j++)
                 ;
@@ -10964,9 +10964,9 @@ u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove)
     }
     while(gLevelUpLearnsets[species][sLearningMoveTableID] != LEVEL_UP_END)
     {
-        u16 moveLevel;
+        u32 moveLevel;
         moveLevel = (gLevelUpLearnsets[species][sLearningMoveTableID] & LEVEL_UP_MOVE_LV);
-        while (moveLevel == 0 || moveLevel == (level << 9))
+        while (moveLevel == 0 || moveLevel == (level << 16))
         {
             gMoveToLearn = (gLevelUpLearnsets[species][sLearningMoveTableID] & LEVEL_UP_MOVE_ID);
             if (gMoveToLearn == MOVE_NONE || gMoveToLearn >= MOVES_COUNT)

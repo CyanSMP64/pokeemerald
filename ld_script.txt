@@ -152,11 +152,6 @@ SECTIONS {
         src/field_weather.o(.text);
         src/field_weather_effect.o(.text);
         src/pokemon_icon.o(.text);
-    } =0
-
-    .text_5 0x080b05f0 :
-    ALIGN(4)
-    {
         src/battle_setup.o(.text);
         src/battle_anim_status_effects.o(.text);
         src/mail_data.o(.text);
@@ -568,7 +563,6 @@ SECTIONS {
         src/cable_club.o(.rodata);
         src/trainer_see.o(.rodata);
         src/wild_encounter.o(.rodata);
-        src/field_effect.o(.rodata);
         src/scanline_effect.o(.rodata);
         src/option_menu.o(.rodata);
         src/pokedex.o(.rodata);
@@ -675,6 +669,7 @@ SECTIONS {
     ALIGN(4)
     {
         src/party_menu.o(.rodata);
+        src/field_effect.o(.rodata);
         src/region_map.o(.rodata);
         src/image_processing_effects.o(.rodata);
         src/decoration.o(.rodata);
