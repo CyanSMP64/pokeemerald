@@ -76,6 +76,7 @@ PetalburgWoods_EventScript_BagFull::
 	end
 
 PetalburgWoods_EventScript_DevonResearcherFinish::
+	closemessage
 	applymovement LOCALID_DEVON_EMPLOYEE, PetalburgWoods_Movement_DevonResearcherStartExit
 	waitmovement 0
 	return
