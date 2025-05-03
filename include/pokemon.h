@@ -328,7 +328,8 @@ struct SpeciesInfo
 
 struct BattleMove
 {
-    u16 effect;
+    u8 filler0;
+    u8 power;
     u8 type;
     u8 accuracy;
     u8 pp;
@@ -337,7 +338,8 @@ struct BattleMove
     s8 priority;
     u8 flags:6;
     u8 category:2;
-    u8 power;
+    u8 filler9;
+    u16 effect;
 };
 
 #define SPINDA_SPOT_WIDTH 16
