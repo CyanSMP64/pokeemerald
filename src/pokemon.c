@@ -7081,11 +7081,6 @@ void GetSpeciesName(u8 *name, u16 species)
     name[i] = EOS;
 }
 
-const u8 *GetSpeciesName_exp(u16 species)
-{
-    return gSpeciesNames[species];
-}
-
 u8 GetLevelFromBoxMonExp(struct BoxPokemon *boxMon)
 {
     u16 species = GetBoxMonData(boxMon, MON_DATA_SPECIES, NULL);
@@ -7112,6 +7107,19 @@ u8 GetGenderFromSpeciesAndPersonality(u16 species, u32 personality)
         return MON_FEMALE;
     else
         return MON_MALE;
+}
+
+u8 CalculatePlayerPartyCount(void)
+{
+    gPlayerPartyCount = 0;
+
+    while (gPlayerPartyCount < PARTY_SIZE
+        && GetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_SPECIES, NULL) != SPECIES_NONE)
+    {
+        gPlayerPartyCount++;
+    }
+
+    return gPlayerPartyCount;
 }
 
 void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
@@ -7158,6 +7166,11 @@ void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
     }
 }
 
+const u8 *GetSpeciesName_exp(u16 species)
+{
+    return gSpeciesNames[species];
+}
+
 static void DecryptBoxMon(struct BoxPokemon *boxMon)
 {
     u32 i;
@@ -7174,19 +7187,6 @@ bool32 IsSpeciesInHoennDex(u16 species)
         return FALSE;
     else
         return TRUE;
-}
-
-u8 CalculatePlayerPartyCount(void)
-{
-    gPlayerPartyCount = 0;
-
-    while (gPlayerPartyCount < PARTY_SIZE
-        && GetMonData(&gPlayerParty[gPlayerPartyCount], MON_DATA_SPECIES, NULL) != SPECIES_NONE)
-    {
-        gPlayerPartyCount++;
-    }
-
-    return gPlayerPartyCount;
 }
 
 void SetMultiuseSpriteTemplateToTrainerFront(u16 trainerPicId, u8 battlerPosition)
@@ -7596,7 +7596,7 @@ u8 GetMonsStateToDoubles(void)
     return (aliveCount > 1) ? PLAYER_HAS_TWO_USABLE_MONS : PLAYER_HAS_ONE_USABLE_MON;
 }
 
-u8 GetAbilityBySpecies(u16 species, u8 abilityNum)
+u16 GetAbilityBySpecies(u16 species, u8 abilityNum)
 {
     if (abilityNum)
         gLastUsedAbility = gSpeciesInfo[species].abilities[1];
@@ -7606,7 +7606,7 @@ u8 GetAbilityBySpecies(u16 species, u8 abilityNum)
     return gLastUsedAbility;
 }
 
-u8 GetMonAbility(struct Pokemon *mon)
+u16 GetMonAbility(struct Pokemon *mon)
 {
     u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
     u8 abilityNum = GetMonData(mon, MON_DATA_ABILITY_NUM, NULL);

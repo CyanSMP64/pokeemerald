@@ -3030,7 +3030,7 @@ static void DebugAction_Give_Pokemon_SelectNature(u8 taskId)
 
     if (gMain.newKeys & A_BUTTON)
     {
-        u8 abilityId;
+        u16 abilityId;
         sDebugMonData->mon_natureId = gTasks[taskId].data[3]; //NatureId
         gTasks[taskId].data[3] = 0;
         gTasks[taskId].data[4] = 0;
@@ -3054,7 +3054,7 @@ static void DebugAction_Give_Pokemon_SelectNature(u8 taskId)
 }
 static void DebugAction_Give_Pokemon_SelectAbility(u8 taskId)
 {
-    u8 abilityId;
+    u16 abilityId;
     u8 abilityCount = 2 - 1; //-1 for proper iteration
     u8 i = 0;
 
@@ -3381,7 +3381,7 @@ static void DebugAction_Give_Pokemon_ComplexCreateMon(u8 taskId) //https://githu
     u8 level        = sDebugMonData->mon_level;
     u8 isShiny      = sDebugMonData->isShiny; //Shiny: no 0, yes 1
     u8 nature       = sDebugMonData->mon_natureId;
-    u8 abilityNum   = sDebugMonData->mon_abilityNum;
+    u16 abilityNum   = sDebugMonData->mon_abilityNum;
     moves[0]        = sDebugMonData->mon_move_0;
     moves[1]        = sDebugMonData->mon_move_1;
     moves[2]        = sDebugMonData->mon_move_2;

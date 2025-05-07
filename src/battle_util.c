@@ -2441,7 +2441,7 @@ static const u8 gLumBerryString_Freeze2[] = _("");
 static const u8 gLumBerryString_Confusion1[] = _("snapped it out ");
 static const u8 gLumBerryString_Confusion2[] = _("of its\lconfusion");
 
-u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveArg)
+u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 moveArg)
 {
     u8 effect = 0;
     struct Pokemon *pokeAtk;

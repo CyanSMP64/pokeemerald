@@ -657,7 +657,7 @@ void ClearBattlerMoveHistory(u8 battlerId)
         BATTLE_HISTORY->usedMoves[battlerId].moves[i] = MOVE_NONE;
 }
 
-void RecordAbilityBattle(u8 battlerId, u8 abilityId)
+void RecordAbilityBattle(u8 battlerId, u16 abilityId)
 {
     BATTLE_HISTORY->abilities[battlerId] = abilityId;
 }

@@ -275,7 +275,7 @@ struct BattlePokemon
     /*0x17*/ u32 isEgg:1;
     /*0x17*/ u32 abilityNum:1;
     /*0x18*/ s8 statStages[NUM_BATTLE_STATS];
-    /*0x20*/ u8 ability;
+    /*0x20*/ u8 filler20;
     /*0x21*/ u8 type1;
     /*0x22*/ u8 type2;
     /*0x23*/ u8 unknown;
@@ -288,6 +288,7 @@ struct BattlePokemon
     /*0x30*/ u8 nickname[POKEMON_NAME_LENGTH + 1];
     /*0x3D*/ u8 ppBonuses;
     /*0x3E*/ u8 otName[PLAYER_NAME_LENGTH + 1];
+    /*0x46*/ u16 ability;
     /*0x48*/ u32 experience;
     /*0x4C*/ u32 personality;
     /*0x50*/ u32 status1;
@@ -319,11 +320,11 @@ struct SpeciesInfo
  /* 0x12 */ u8 friendship;
  /* 0x13 */ u8 growthRate;
  /* 0x14 */ u8 eggGroups[2];
- /* 0x16 */ u8 abilities[2];
- /* 0x18 */ u8 safariZoneFleeRate;
- /* 0x19 */ u8 bodyColor : 7;
+ /* 0x16 */ u16 abilities[3];
+ /* 0x1C */ u8 safariZoneFleeRate;
+ /* 0x1D */ u8 bodyColor : 7;
             u8 noFlip : 1;
- /* 0x1A */ u16 expYield;
+ /* 0x1E */ u16 expYield;
 };
 
 struct BattleMove
@@ -454,8 +455,8 @@ u8 CalculatePlayerPartyCount(void);
 u8 CalculateEnemyPartyCount(void);
 u8 GetMonsStateToDoubles(void);
 u8 GetMonsStateToDoubles_2(void);
-u8 GetAbilityBySpecies(u16 species, u8 abilityNum);
-u8 GetMonAbility(struct Pokemon *mon);
+u16 GetAbilityBySpecies(u16 species, u8 abilityNum);
+u16 GetMonAbility(struct Pokemon *mon);
 void CreateSecretBaseEnemyParty(struct SecretBase *secretBaseRecord);
 u8 GetSecretBaseTrainerPicIndex(void);
 u8 GetSecretBaseTrainerClass(void);

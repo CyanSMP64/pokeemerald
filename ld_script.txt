@@ -661,7 +661,6 @@ SECTIONS {
         src/battle_controller_recorded_player.o(.rodata);
         src/trainer_pokemon_sprites.o(.rodata);
         src/lilycove_lady.o(.rodata);
-        src/battle_dome.o(.rodata);
         src/rotating_tile_puzzle.o(.rodata);
     } =0
 
@@ -669,6 +668,7 @@ SECTIONS {
     ALIGN(4)
     {
         src/party_menu.o(.rodata);
+        src/battle_dome.o(.rodata);
         src/field_effect.o(.rodata);
         src/region_map.o(.rodata);
         src/image_processing_effects.o(.rodata);
