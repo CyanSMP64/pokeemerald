@@ -43,27 +43,6 @@ void *const gMPlayJumpTableTemplate[] =
     SoundMainBTM,
 };
 
-// This is a table of deltas between sample values in compressed PCM data.
-const s8 gDeltaEncodingTable[] =
-{
-      0,
-      1,
-      4,
-      9,
-     16,
-     25,
-     36,
-     49,
-    -64,
-    -49,
-    -36,
-    -25,
-    -16,
-     -9,
-     -4,
-     -1,
-};
-
 const u8 gScaleTable[] =
 {
     0xE0, 0xE1, 0xE2, 0xE3, 0xE4, 0xE5, 0xE6, 0xE7, 0xE8, 0xE9, 0xEA, 0xEB,
