@@ -568,7 +568,7 @@ do { \
 } while (0)
 
 // Reads an .aif file and produces a .pcm file containing an array of 8-bit samples.
-void aif2pcm(const char *aif_filename, const char *pcm_filename, bool compress)
+void aif2pcm(const char *aif_filename, const char *pcm_filename, bool compress, bool loop_fix)
 {
 	struct Bytes *aif = read_bytearray(aif_filename);
 	AifData aif_data = {0};
@@ -610,7 +610,12 @@ void aif2pcm(const char *aif_filename, const char *pcm_filename, bool compress)
 
 	uint32_t pitch_adjust = (uint32_t)(aif_data.sample_rate * 1024);
 	uint32_t loop_offset = (uint32_t)(aif_data.loop_offset);
-	uint32_t adjusted_num_samples = (uint32_t)(aif_data.num_samples - 1);
+	uint32_t adjusted_num_samples;
+	if (loop_fix) {
+		adjusted_num_samples = (uint32_t)(aif_data.num_samples);
+	} else {
+		adjusted_num_samples = (uint32_t)(aif_data.num_samples - 1);
+	}
 	uint32_t flags = 0;
 	if (aif_data.has_loop) flags |= 0x40000000;
 	if (compress) flags |= 1;
@@ -630,7 +635,7 @@ void aif2pcm(const char *aif_filename, const char *pcm_filename, bool compress)
 
 // Reads a .pcm file containing an array of 8-bit samples and produces an .aif file.
 // See http://www-mmsp.ece.mcgill.ca/documents/audioformats/aiff/Docs/AIFF-1.3.pdf for .aif file specification.
-void pcm2aif(const char *pcm_filename, const char *aif_filename, uint32_t base_note)
+void pcm2aif(const char *pcm_filename, const char *aif_filename, uint32_t base_note, bool loop_fix)
 {
 	struct Bytes *pcm = read_bytearray(pcm_filename);
 
@@ -771,7 +776,13 @@ void pcm2aif(const char *pcm_filename, const char *aif_filename, uint32_t base_n
 		aif->data[pos++] = 0;
 		aif->data[pos++] = (aif_data->has_loop ? 2 : 1);  // id = 2
 
-		long loop_end = aif_data->num_samples;
+		long loop_end;
+		if (loop_fix) {
+			loop_end = aif_data->num_samples - 1;
+		} else {
+			loop_end = aif_data->num_samples;
+		}
+
 		aif->data[pos++] = ((loop_end >> 24) & 0xFF);
 		aif->data[pos++] = ((loop_end >> 16) & 0xFF);
 		aif->data[pos++] = ((loop_end >> 8)  & 0xFF);
@@ -881,7 +892,7 @@ void pcm2aif(const char *pcm_filename, const char *aif_filename, uint32_t base_n
 void usage(void)
 {
 	fprintf(stderr, "Usage: aif2pcm bin_file [aif_file]\n");
-	fprintf(stderr, "       aif2pcm aif_file [bin_file] [--compress]\n");
+	fprintf(stderr, "       aif2pcm aif_file [bin_file] [--compress] [--loopfix]\n");
 }
 
 int main(int argc, char **argv)
@@ -896,6 +907,7 @@ int main(int argc, char **argv)
 	char *extension = get_file_extension(input_file);
 	char *output_file;
 	bool compressed = false;
+	bool loop_fix = false;
 
 	if (argc > 3)
 	{
@@ -905,6 +917,10 @@ int main(int argc, char **argv)
 			{
 				compressed = true;
 			}
+			else if (strcmp(argv[i], "--loopfix") == 0)
+			{
+				loop_fix = true;
+			}
 		}
 	}
 
@@ -913,12 +929,12 @@ int main(int argc, char **argv)
 		if (argc >= 3)
 		{
 			output_file = argv[2];
-			aif2pcm(input_file, output_file, compressed);
+			aif2pcm(input_file, output_file, compressed, loop_fix);
 		}
 		else
 		{
 			output_file = new_file_extension(input_file, "bin");
-			aif2pcm(input_file, output_file, compressed);
+			aif2pcm(input_file, output_file, compressed, loop_fix);
 			free(output_file);
 		}
 	}
@@ -927,12 +943,12 @@ int main(int argc, char **argv)
 		if (argc >= 3)
 		{
 			output_file = argv[2];
-			pcm2aif(input_file, output_file, 60);
+			pcm2aif(input_file, output_file, 60, loop_fix);
 		}
 		else
 		{
 			output_file = new_file_extension(input_file, "aif");
-			pcm2aif(input_file, output_file, 60);
+			pcm2aif(input_file, output_file, 60, loop_fix);
 			free(output_file);
 		}
 	}

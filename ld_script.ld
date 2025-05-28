@@ -340,6 +340,7 @@ SECTIONS {
         src/gym_leader_rematch.o(.text);
         src/battle_transition_frontier.o(.text);
         src/international_string_util.o(.text);
+        src/sound_check_menu.o(.text);
     } > ROM =0
 
     script_data :
@@ -702,6 +703,7 @@ SECTIONS {
         data/mystery_gift.o(.rodata);
         src/m4a_tables.o(.rodata);
         data/sound_data.o(.rodata);
+        src/sound_check_menu.o(.rodata);
     } > ROM =0
 
     song_data :
@@ -1237,6 +1239,11 @@ SECTIONS {
         sound/songs/midi/ph_nurse_blend.o(.rodata);
         sound/songs/midi/ph_nurse_held.o(.rodata);
         sound/songs/midi/ph_nurse_solo.o(.rodata);
+        sound/songs/midi/mus_test_1.o(.rodata);
+        sound/songs/midi/mus_test_2.o(.rodata);
+        sound/songs/midi/mus_test_3.o(.rodata);
+        sound/songs/midi/mus_test_4.o(.rodata);
+        sound/songs/midi/mus_test_5.o(.rodata);
     } > ROM =0
 
     lib_rodata :

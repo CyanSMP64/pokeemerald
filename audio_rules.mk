@@ -1,9 +1,11 @@
 # This file contains rules for making assemblies for most music in the game.
 
 CRY_SUBDIR := sound/direct_sound_samples/cries
+NEW_SUBDIR := sound/direct_sound_samples/new
 
 MID_ASM_DIR := $(MID_SUBDIR)
 CRY_BIN_DIR := $(CRY_SUBDIR)
+NEW_BIN_DIR := $(NEW_SUBDIR)
 SOUND_BIN_DIR := sound
 
 SPECIAL_OUTDIRS := $(MID_ASM_DIR) $(CRY_BIN_DIR) 
@@ -20,7 +22,11 @@ $(MID_BUILDDIR)/%.o: $(MID_ASM_DIR)/%.s
 $(CRY_BIN_DIR)/%.bin: $(CRY_SUBDIR)/%.aif 
 	$(AIF) $< $@ --compress
 
-# Uncompressed sounds
+# New uncompressed sounds
+$(NEW_BIN_DIR)/%.bin: $(NEW_SUBDIR)/%.aif
+	$(AIF) $< $@ --loopfix
+
+# Vanilla uncompressed sounds
 $(SOUND_BIN_DIR)/%.bin: sound/%.aif 
 	$(AIF) $< $@
 
