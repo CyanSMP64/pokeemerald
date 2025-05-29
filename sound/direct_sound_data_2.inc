@@ -1,8 +1,4 @@
 	.align 2
-DirectSoundWaveData_88Timpani_____1::
-	.incbin "sound/direct_sound_samples/new/88Timpani_____1.bin"
-
-	.align 2
 DirectSoundWaveData_DR55Elec_SD_::
 	.incbin "sound/direct_sound_samples/new/DR55Elec.SD_.bin"
 
@@ -459,17 +455,89 @@ DirectSoundWaveData_DR__Vib_slap::
 	.incbin "sound/direct_sound_samples/new/DR__Vib-slap.bin"
 
 	.align 2
-DirectSoundWaveData___Piano_1_____1::
-	.incbin "sound/direct_sound_samples/new/__Piano_1_____1.bin"
+DirectSoundWaveData_E_Piano_2___881::
+	.incbin "sound/direct_sound_samples/new/E_Piano_2___881.bin"
 
 	.align 2
-DirectSoundWaveData___Piano_1_____2::
-	.incbin "sound/direct_sound_samples/new/__Piano_1_____2.bin"
+DirectSoundWaveData_E_Piano_2___882::
+	.incbin "sound/direct_sound_samples/new/E_Piano_2___882.bin"
 
 	.align 2
-DirectSoundWaveData___Piano_1_____3::
-	.incbin "sound/direct_sound_samples/new/__Piano_1_____3.bin"
+DirectSoundWaveData_Fingered_Bs_8P1::
+	.incbin "sound/direct_sound_samples/new/Fingered_Bs_8P1.bin"
 
 	.align 2
-DirectSoundWaveData___Piano_1_____4::
-	.incbin "sound/direct_sound_samples/new/__Piano_1_____4.bin"
+DirectSoundWaveData_Fingered_Bs_8P2::
+	.incbin "sound/direct_sound_samples/new/Fingered_Bs_8P2.bin"
+
+	.align 2
+DirectSoundWaveData_Flute_______881::
+	.incbin "sound/direct_sound_samples/new/Flute_______881.bin"
+
+	.align 2
+DirectSoundWaveData_FrenchHorns_881::
+	.incbin "sound/direct_sound_samples/new/FrenchHorns_881.bin"
+
+	.align 2
+DirectSoundWaveData_FrenchHorns_882::
+	.incbin "sound/direct_sound_samples/new/FrenchHorns_882.bin"
+
+	.align 2
+DirectSoundWaveData_Harp________881::
+	.incbin "sound/direct_sound_samples/new/Harp________881.bin"
+
+	.align 2
+DirectSoundWaveData_Harp________882::
+	.incbin "sound/direct_sound_samples/new/Harp________882.bin"
+
+	.align 2
+DirectSoundWaveData_Harp________883::
+	.incbin "sound/direct_sound_samples/new/Harp________883.bin"
+
+	.align 2
+DirectSoundWaveData_Harp________884::
+	.incbin "sound/direct_sound_samples/new/Harp________884.bin"
+
+	.align 2
+DirectSoundWaveData_Piano_1_______1::
+	.incbin "sound/direct_sound_samples/new/Piano_1_______1.bin"
+
+	.align 2
+DirectSoundWaveData_Piano_1_______2::
+	.incbin "sound/direct_sound_samples/new/Piano_1_______2.bin"
+
+	.align 2
+DirectSoundWaveData_Piano_1_______3::
+	.incbin "sound/direct_sound_samples/new/Piano_1_______3.bin"
+
+	.align 2
+DirectSoundWaveData_Piano_1_______4::
+	.incbin "sound/direct_sound_samples/new/Piano_1_______4.bin"
+
+	.align 2
+DirectSoundWaveData_Strings_______1::
+	.incbin "sound/direct_sound_samples/new/Strings_______1.bin"
+
+	.align 2
+DirectSoundWaveData_Strings_______2::
+	.incbin "sound/direct_sound_samples/new/Strings_______2.bin"
+
+	.align 2
+DirectSoundWaveData_Strings_______3::
+	.incbin "sound/direct_sound_samples/new/Strings_______3.bin"
+
+	.align 2
+DirectSoundWaveData_Timpani_____881::
+	.incbin "sound/direct_sound_samples/new/Timpani_____881.bin"
+
+	.align 2
+DirectSoundWaveData_Trombone______1::
+	.incbin "sound/direct_sound_samples/new/Trombone______1.bin"
+
+	.align 2
+DirectSoundWaveData_Trombone______2::
+	.incbin "sound/direct_sound_samples/new/Trombone______2.bin"
+
+	.align 2
+DirectSoundWaveData_Trumpet_______1::
+	.incbin "sound/direct_sound_samples/new/Trumpet_______1.bin"

@@ -1,141 +1,168 @@
 	.align 2
 voicegroup191::
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_directsound 60, 0, DirectSoundWaveData_88Timpani_____1, 255, 244, 2, 241
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit __Piano_1_____, KeySplitTable_4oct - 5
-	voice_keysplit_all __STANDARD_1__
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit E_Piano_2___88, KeySplitTable_2oct - 12
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Fingered_Bs_8P, KeySplitTable_2oct + 22
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Harp________88, KeySplitTable_4oct - 7
+	voice_directsound 60, 0, DirectSoundWaveData_Timpani_____881, 255, 244, 2, 241
+	voice_keysplit Strings_______, KeySplitTable_3oct - 1
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_directsound 60, 0, DirectSoundWaveData_Trumpet_______1, 255, 254, 233, 163
+	voice_keysplit Trombone______, KeySplitTable_2oct - 4
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit FrenchHorns_88, KeySplitTable_2oct - 6
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_directsound 60, 0, DirectSoundWaveData_Flute_______881, 255, 253, 200, 127
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit Piano_1_______, KeySplitTable_4oct - 5
+	voice_keysplit_all STANDARD_1____
 
-__Piano_1_____::
-	voice_directsound 60, 0, DirectSoundWaveData___Piano_1_____1, 255, 253, 70, 221
-	voice_directsound 60, 0, DirectSoundWaveData___Piano_1_____2, 255, 248, 19, 211
-	voice_directsound 60, 0, DirectSoundWaveData___Piano_1_____3, 255, 248, 15, 203
-	voice_directsound 60, 0, DirectSoundWaveData___Piano_1_____4, 255, 239, 4, 200
+Piano_1_______::
+	voice_directsound 60, 0, DirectSoundWaveData_Piano_1_______1, 255, 253, 70, 221
+	voice_directsound 60, 0, DirectSoundWaveData_Piano_1_______2, 255, 248, 19, 211
+	voice_directsound 60, 0, DirectSoundWaveData_Piano_1_______3, 255, 248, 15, 203
+	voice_directsound 60, 0, DirectSoundWaveData_Piano_1_______4, 255, 239, 4, 200
 
-__STANDARD_1__::
+E_Piano_2___88::
+	voice_directsound 60, 0, DirectSoundWaveData_E_Piano_2___881, 255, 253, 55, 160
+	voice_directsound 60, 0, DirectSoundWaveData_E_Piano_2___882, 255, 253, 33, 160
+
+Fingered_Bs_8P::
+	voice_directsound 60, 0, DirectSoundWaveData_Fingered_Bs_8P1, 255, 252, 68, 127
+	voice_directsound 60, 0, DirectSoundWaveData_Fingered_Bs_8P2, 255, 252, 68, 127
+
+Harp________88::
+	voice_directsound 60, 0, DirectSoundWaveData_Harp________881, 255, 249, 0, 233
+	voice_directsound 60, 0, DirectSoundWaveData_Harp________882, 255, 247, 0, 233
+	voice_directsound 60, 0, DirectSoundWaveData_Harp________883, 255, 249, 0, 233
+	voice_directsound 60, 0, DirectSoundWaveData_Harp________884, 255, 247, 0, 233
+
+Strings_______::
+	voice_directsound 60, 0, DirectSoundWaveData_Strings_______1, 75, 255, 180, 223
+	voice_directsound 60, 0, DirectSoundWaveData_Strings_______2, 75, 255, 180, 223
+	voice_directsound 60, 0, DirectSoundWaveData_Strings_______3, 75, 255, 180, 223
+
+Trombone______::
+	voice_directsound 60, 0, DirectSoundWaveData_Trombone______1, 255, 255, 233, 163
+	voice_directsound 60, 0, DirectSoundWaveData_Trombone______2, 255, 255, 233, 163
+
+FrenchHorns_88::
+	voice_directsound 60, 0, DirectSoundWaveData_FrenchHorns_881, 255, 240, 170, 205
+	voice_directsound 60, 0, DirectSoundWaveData_FrenchHorns_882, 255, 240, 200, 205
+
+STANDARD_1____::
 	voice_directsound 60, 64, DirectSoundWaveData_DR88Std_1_K1, 255, 0, 255, 127
 	voice_directsound 60, 64, DirectSoundWaveData_DR88Std_1_K2, 255, 0, 255, 127
 	voice_directsound 60, 64, DirectSoundWaveData_DR88Std_2_K1, 255, 0, 255, 127
