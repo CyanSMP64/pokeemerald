@@ -1,6 +1,18 @@
 	.align 2
+DirectSoundWaveData_Accordion_Fr8P1::
+	.incbin "sound/direct_sound_samples/new/Accordion_Fr8P1.bin"
+
+	.align 2
+DirectSoundWaveData_Accordion_Fr8P2::
+	.incbin "sound/direct_sound_samples/new/Accordion_Fr8P2.bin"
+
+	.align 2
+DirectSoundWaveData_Accordion_Fr8P3::
+	.incbin "sound/direct_sound_samples/new/Accordion_Fr8P3.bin"
+
+	.align 2
 DirectSoundWaveData_DR55Elec_SD_::
-	.incbin "sound/direct_sound_samples/new/DR55Elec.SD_.bin"
+	.incbin "sound/direct_sound_samples/new/DR55Elec_SD_.bin"
 
 	.align 2
 DirectSoundWaveData_DR55Gated_SD::
@@ -60,19 +72,19 @@ DirectSoundWaveData_DR88Disco_S_::
 
 	.align 2
 DirectSoundWaveData_DR88Elec_K1_::
-	.incbin "sound/direct_sound_samples/new/DR88Elec.K1_.bin"
+	.incbin "sound/direct_sound_samples/new/DR88Elec_K1_.bin"
 
 	.align 2
 DirectSoundWaveData_DR88Elec_K2_::
-	.incbin "sound/direct_sound_samples/new/DR88Elec.K2_.bin"
+	.incbin "sound/direct_sound_samples/new/DR88Elec_K2_.bin"
 
 	.align 2
 DirectSoundWaveData_DR88Elec_S2_::
-	.incbin "sound/direct_sound_samples/new/DR88Elec.S2_.bin"
+	.incbin "sound/direct_sound_samples/new/DR88Elec_S2_.bin"
 
 	.align 2
 DirectSoundWaveData_DR88Elec_S3_::
-	.incbin "sound/direct_sound_samples/new/DR88Elec.S3_.bin"
+	.incbin "sound/direct_sound_samples/new/DR88Elec_S3_.bin"
 
 	.align 2
 DirectSoundWaveData_DR88House_S_::
@@ -128,35 +140,35 @@ DirectSoundWaveData_DR88Room_S2_::
 
 	.align 2
 DirectSoundWaveData_DR88Std_1_K1::
-	.incbin "sound/direct_sound_samples/new/DR88Std.1_K1.bin"
+	.incbin "sound/direct_sound_samples/new/DR88Std_1_K1.bin"
 
 	.align 2
 DirectSoundWaveData_DR88Std_1_K2::
-	.incbin "sound/direct_sound_samples/new/DR88Std.1_K2.bin"
+	.incbin "sound/direct_sound_samples/new/DR88Std_1_K2.bin"
 
 	.align 2
 DirectSoundWaveData_DR88Std_1_S1::
-	.incbin "sound/direct_sound_samples/new/DR88Std.1_S1.bin"
+	.incbin "sound/direct_sound_samples/new/DR88Std_1_S1.bin"
 
 	.align 2
 DirectSoundWaveData_DR88Std_1_S2::
-	.incbin "sound/direct_sound_samples/new/DR88Std.1_S2.bin"
+	.incbin "sound/direct_sound_samples/new/DR88Std_1_S2.bin"
 
 	.align 2
 DirectSoundWaveData_DR88Std_2_K1::
-	.incbin "sound/direct_sound_samples/new/DR88Std.2_K1.bin"
+	.incbin "sound/direct_sound_samples/new/DR88Std_2_K1.bin"
 
 	.align 2
 DirectSoundWaveData_DR88Std_2_K2::
-	.incbin "sound/direct_sound_samples/new/DR88Std.2_K2.bin"
+	.incbin "sound/direct_sound_samples/new/DR88Std_2_K2.bin"
 
 	.align 2
 DirectSoundWaveData_DR88Std_2_S1::
-	.incbin "sound/direct_sound_samples/new/DR88Std.2_S1.bin"
+	.incbin "sound/direct_sound_samples/new/DR88Std_2_S1.bin"
 
 	.align 2
 DirectSoundWaveData_DR88Std_2_S2::
-	.incbin "sound/direct_sound_samples/new/DR88Std.2_S2.bin"
+	.incbin "sound/direct_sound_samples/new/DR88Std_2_S2.bin"
 
 	.align 2
 DirectSoundWaveData_DR8P707_S1__::
@@ -176,15 +188,15 @@ DirectSoundWaveData_DR8PRapSnare::
 
 	.align 2
 DirectSoundWaveData_DR8PStd_1_S1::
-	.incbin "sound/direct_sound_samples/new/DR8PStd.1_S1.bin"
+	.incbin "sound/direct_sound_samples/new/DR8PStd_1_S1.bin"
 
 	.align 2
 DirectSoundWaveData_DR8PStd_1_S2::
-	.incbin "sound/direct_sound_samples/new/DR8PStd.1_S2.bin"
+	.incbin "sound/direct_sound_samples/new/DR8PStd_1_S2.bin"
 
 	.align 2
 DirectSoundWaveData_DR8PStd_1_S3::
-	.incbin "sound/direct_sound_samples/new/DR8PStd.1_S3.bin"
+	.incbin "sound/direct_sound_samples/new/DR8PStd_1_S3.bin"
 
 	.align 2
 DirectSoundWaveData_DR8PVoice_1_::
@@ -212,7 +224,7 @@ DirectSoundWaveData_DR__BellTree::
 
 	.align 2
 DirectSoundWaveData_DR__C_Hi_Hat::
-	.incbin "sound/direct_sound_samples/new/DR__C.Hi-Hat.bin"
+	.incbin "sound/direct_sound_samples/new/DR__C_Hi_Hat.bin"
 
 	.align 2
 DirectSoundWaveData_DR__Cabasa__::
@@ -224,7 +236,7 @@ DirectSoundWaveData_DR__Castanet::
 
 	.align 2
 DirectSoundWaveData_DR__Chin_Cym::
-	.incbin "sound/direct_sound_samples/new/DR__Chin.Cym.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Chin_Cym.bin"
 
 	.align 2
 DirectSoundWaveData_DR__Claves__::
@@ -252,15 +264,15 @@ DirectSoundWaveData_DR__FingSnp2::
 
 	.align 2
 DirectSoundWaveData_DR__Hi_Bongo::
-	.incbin "sound/direct_sound_samples/new/DR__Hi.Bongo.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Hi_Bongo.bin"
 
 	.align 2
 DirectSoundWaveData_DR__Hi_Timbl::
-	.incbin "sound/direct_sound_samples/new/DR__Hi.Timbl.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Hi_Timbl.bin"
 
 	.align 2
 DirectSoundWaveData_DR__Hi_Tom_1::
-	.incbin "sound/direct_sound_samples/new/DR__Hi.Tom_1.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Hi_Tom_1.bin"
 
 	.align 2
 DirectSoundWaveData_DR__High_Q__::
@@ -268,15 +280,15 @@ DirectSoundWaveData_DR__High_Q__::
 
 	.align 2
 DirectSoundWaveData_DR__Jng_Bell::
-	.incbin "sound/direct_sound_samples/new/DR__Jng.Bell.bin"
-
-	.align 2
-DirectSoundWaveData_DR__L_Guiro_::
-	.incbin "sound/direct_sound_samples/new/DR__L.Guiro_.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Jng_Bell.bin"
 
 	.align 2
 DirectSoundWaveData_DR__LL_Whisl::
-	.incbin "sound/direct_sound_samples/new/DR__LL.Whisl.bin"
+	.incbin "sound/direct_sound_samples/new/DR__LL_Whisl.bin"
+
+	.align 2
+DirectSoundWaveData_DR__L_Guiro_::
+	.incbin "sound/direct_sound_samples/new/DR__L_Guiro_.bin"
 
 	.align 2
 DirectSoundWaveData_DR__LowAgogo::
@@ -300,7 +312,7 @@ DirectSoundWaveData_DR__LowTom_1::
 
 	.align 2
 DirectSoundWaveData_DR__LowW_Blk::
-	.incbin "sound/direct_sound_samples/new/DR__LowW.Blk.bin"
+	.incbin "sound/direct_sound_samples/new/DR__LowW_Blk.bin"
 
 	.align 2
 DirectSoundWaveData_DR__MC_Beep1::
@@ -320,47 +332,47 @@ DirectSoundWaveData_DR__MidTom_1::
 
 	.align 2
 DirectSoundWaveData_DR__Mt_Click::
-	.incbin "sound/direct_sound_samples/new/DR__Mt.Click.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Mt_Click.bin"
 
 	.align 2
 DirectSoundWaveData_DR__Mt_Cuica::
-	.incbin "sound/direct_sound_samples/new/DR__Mt.Cuica.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Mt_Cuica.bin"
 
 	.align 2
 DirectSoundWaveData_DR__Mt_Surdo::
-	.incbin "sound/direct_sound_samples/new/DR__Mt.Surdo.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Mt_Surdo.bin"
 
 	.align 2
 DirectSoundWaveData_DR__Mt_Trigl::
-	.incbin "sound/direct_sound_samples/new/DR__Mt.Trigl.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Mt_Trigl.bin"
 
 	.align 2
 DirectSoundWaveData_DR__Mt__Bell::
-	.incbin "sound/direct_sound_samples/new/DR__Mt._Bell.bin"
-
-	.align 2
-DirectSoundWaveData_DR__O_Hi_Hat::
-	.incbin "sound/direct_sound_samples/new/DR__O.Hi-Hat.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Mt__Bell.bin"
 
 	.align 2
 DirectSoundWaveData_DR__OH_Conga::
 	.incbin "sound/direct_sound_samples/new/DR__OH_Conga.bin"
 
 	.align 2
+DirectSoundWaveData_DR__O_Hi_Hat::
+	.incbin "sound/direct_sound_samples/new/DR__O_Hi_Hat.bin"
+
+	.align 2
 DirectSoundWaveData_DR__Op_Cuica::
-	.incbin "sound/direct_sound_samples/new/DR__Op.Cuica.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Op_Cuica.bin"
 
 	.align 2
 DirectSoundWaveData_DR__Op_Surdo::
-	.incbin "sound/direct_sound_samples/new/DR__Op.Surdo.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Op_Surdo.bin"
 
 	.align 2
 DirectSoundWaveData_DR__Op_Trigl::
-	.incbin "sound/direct_sound_samples/new/DR__Op.Trigl.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Op_Trigl.bin"
 
 	.align 2
 DirectSoundWaveData_DR__P_Hi_Hat::
-	.incbin "sound/direct_sound_samples/new/DR__P.Hi-Hat.bin"
+	.incbin "sound/direct_sound_samples/new/DR__P_Hi_Hat.bin"
 
 	.align 2
 DirectSoundWaveData_DR__RideBell::
@@ -392,19 +404,19 @@ DirectSoundWaveData_DR__Room_S2_::
 
 	.align 2
 DirectSoundWaveData_DR__S_Guiro_::
-	.incbin "sound/direct_sound_samples/new/DR__S.Guiro_.bin"
+	.incbin "sound/direct_sound_samples/new/DR__S_Guiro_.bin"
 
 	.align 2
 DirectSoundWaveData_DR__Scr_Pull::
-	.incbin "sound/direct_sound_samples/new/DR__Scr.Pull.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Scr_Pull.bin"
 
 	.align 2
 DirectSoundWaveData_DR__Scr_Push::
-	.incbin "sound/direct_sound_samples/new/DR__Scr.Push.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Scr_Push.bin"
 
 	.align 2
 DirectSoundWaveData_DR__Sd_Stick::
-	.incbin "sound/direct_sound_samples/new/DR__Sd.Stick.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Sd_Stick.bin"
 
 	.align 2
 DirectSoundWaveData_DR__Shaker__::
@@ -416,7 +428,7 @@ DirectSoundWaveData_DR__Slap____::
 
 	.align 2
 DirectSoundWaveData_DR__Snr_Roll::
-	.incbin "sound/direct_sound_samples/new/DR__Snr.Roll.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Snr_Roll.bin"
 
 	.align 2
 DirectSoundWaveData_DR__SplshCym::
@@ -424,7 +436,7 @@ DirectSoundWaveData_DR__SplshCym::
 
 	.align 2
 DirectSoundWaveData_DR__Sq_Click::
-	.incbin "sound/direct_sound_samples/new/DR__Sq.Click.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Sq_Click.bin"
 
 	.align 2
 DirectSoundWaveData_DR__Std1_K1_::
@@ -452,7 +464,7 @@ DirectSoundWaveData_DR__Tambourn::
 
 	.align 2
 DirectSoundWaveData_DR__Vib_slap::
-	.incbin "sound/direct_sound_samples/new/DR__Vib-slap.bin"
+	.incbin "sound/direct_sound_samples/new/DR__Vib_slap.bin"
 
 	.align 2
 DirectSoundWaveData_E_Piano_2___881::
@@ -461,6 +473,10 @@ DirectSoundWaveData_E_Piano_2___881::
 	.align 2
 DirectSoundWaveData_E_Piano_2___882::
 	.incbin "sound/direct_sound_samples/new/E_Piano_2___882.bin"
+
+	.align 2
+DirectSoundWaveData_EnglishHorn_881::
+	.incbin "sound/direct_sound_samples/new/EnglishHorn_881.bin"
 
 	.align 2
 DirectSoundWaveData_Fingered_Bs_8P1::
@@ -499,6 +515,14 @@ DirectSoundWaveData_Harp________884::
 	.incbin "sound/direct_sound_samples/new/Harp________884.bin"
 
 	.align 2
+DirectSoundWaveData_Nylon_str_Gt8P1::
+	.incbin "sound/direct_sound_samples/new/Nylon_str_Gt8P1.bin"
+
+	.align 2
+DirectSoundWaveData_Nylon_str_Gt8P2::
+	.incbin "sound/direct_sound_samples/new/Nylon_str_Gt8P2.bin"
+
+	.align 2
 DirectSoundWaveData_Piano_1_______1::
 	.incbin "sound/direct_sound_samples/new/Piano_1_______1.bin"
 
@@ -513,6 +537,18 @@ DirectSoundWaveData_Piano_1_______3::
 	.align 2
 DirectSoundWaveData_Piano_1_______4::
 	.incbin "sound/direct_sound_samples/new/Piano_1_______4.bin"
+
+	.align 2
+DirectSoundWaveData_Piccolo_____881::
+	.incbin "sound/direct_sound_samples/new/Piccolo_____881.bin"
+
+	.align 2
+DirectSoundWaveData_Steel_str_Gt8P1::
+	.incbin "sound/direct_sound_samples/new/Steel_str_Gt8P1.bin"
+
+	.align 2
+DirectSoundWaveData_Steel_str_Gt8P2::
+	.incbin "sound/direct_sound_samples/new/Steel_str_Gt8P2.bin"
 
 	.align 2
 DirectSoundWaveData_Strings_______1::
@@ -541,3 +577,4 @@ DirectSoundWaveData_Trombone______2::
 	.align 2
 DirectSoundWaveData_Trumpet_______1::
 	.incbin "sound/direct_sound_samples/new/Trumpet_______1.bin"
+
