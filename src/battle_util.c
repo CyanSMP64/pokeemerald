@@ -3598,33 +3598,39 @@ u8 ItemBattleEffects(u8 caseID, u8 battlerId, bool8 moveTurn)
                     i = 0;
                     if (gBattleMons[battlerId].status1 & STATUS1_PSN_ANY)
                     {
-                        StringCopy(gBattleTextBuff1, gStatusConditionString_PoisonJpn);
+                        StringCopy(gBattleTextBuff1, gLumBerryString_Poison1);
+                        StringCopy(gBattleTextBuff2, gLumBerryString_Poison2);
                         i++;
                     }
                     if (gBattleMons[battlerId].status1 & STATUS1_SLEEP)
                     {
                         gBattleMons[battlerId].status2 &= ~STATUS2_NIGHTMARE;
-                        StringCopy(gBattleTextBuff1, gStatusConditionString_SleepJpn);
+                        StringCopy(gBattleTextBuff1, gLumBerryString_Sleep1);
+                        StringCopy(gBattleTextBuff2, gLumBerryString_Sleep2);
                         i++;
                     }
                     if (gBattleMons[battlerId].status1 & STATUS1_PARALYSIS)
                     {
-                        StringCopy(gBattleTextBuff1, gStatusConditionString_ParalysisJpn);
+                        StringCopy(gBattleTextBuff1, gLumBerryString_Paralysis1);
+                        StringCopy(gBattleTextBuff2, gLumBerryString_Paralysis2);
                         i++;
                     }
                     if (gBattleMons[battlerId].status1 & STATUS1_BURN)
                     {
-                        StringCopy(gBattleTextBuff1, gStatusConditionString_BurnJpn);
+                        StringCopy(gBattleTextBuff1, gLumBerryString_Burn1);
+                        StringCopy(gBattleTextBuff2, gLumBerryString_Burn2);
                         i++;
                     }
                     if (gBattleMons[battlerId].status1 & STATUS1_FREEZE)
                     {
-                        StringCopy(gBattleTextBuff1, gStatusConditionString_IceJpn);
+                        StringCopy(gBattleTextBuff1, gLumBerryString_Freeze1);
+                        StringCopy(gBattleTextBuff2, gLumBerryString_Freeze2);
                         i++;
                     }
                     if (gBattleMons[battlerId].status2 & STATUS2_CONFUSION)
                     {
-                        StringCopy(gBattleTextBuff1, gStatusConditionString_ConfusionJpn);
+                        StringCopy(gBattleTextBuff1, gLumBerryString_Confusion1);
+                        StringCopy(gBattleTextBuff2, gLumBerryString_Confusion2);
                         i++;
                     }
                     if (i <= 1)
