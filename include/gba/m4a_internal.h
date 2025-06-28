@@ -333,7 +333,9 @@ struct MusicPlayerInfo
     u8 cmd;
     u8 unk_B;
     u32 clock;
-    u8 gap[8];
+    u16 songSpeed;
+    u8 songVol;
+    u8 gap[5];
     u8 *memAccArea;
     u16 tempoD;
     u16 tempoU;
@@ -360,8 +362,9 @@ struct MusicPlayer
 struct Song
 {
     struct SongHeader *header;
-    u16 ms;
-    u16 me;
+    u8 ms;
+    u8 volume;
+    u16 speed;
 };
 
 extern const struct MusicPlayer gMPlayTable[];
@@ -417,7 +420,7 @@ void MPlayMain(struct MusicPlayerInfo *);
 void RealClearChain(void *x);
 
 void MPlayContinue(struct MusicPlayerInfo *mplayInfo);
-void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader);
+void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader, u8 volume, u16 speed);
 void m4aMPlayStop(struct MusicPlayerInfo *mplayInfo);
 void FadeOutBody(struct MusicPlayerInfo *mplayInfo);
 void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *track);

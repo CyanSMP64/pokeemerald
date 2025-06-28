@@ -1429,6 +1429,9 @@ ply_tempo:
 	ldrh r2, [r0, o_MusicPlayerInfo_tempoU]
 	muls r3, r2
 	lsrs r3, 8
+	ldrh r2, [r0, o_MusicPlayerInfo_songSpeed]
+	muls r3, r2
+	lsrs r3, 10
 	strh r3, [r0, o_MusicPlayerInfo_tempoI]
 	bx r12
 	thumb_func_end ply_tempo
@@ -1671,6 +1674,9 @@ _081DD858:
 _081DD86C:
 	ldrh r0, [r7, o_MusicPlayerInfo_tempoC]
 	ldrh r1, [r7, o_MusicPlayerInfo_tempoI]
+@	ldrh r2, [r7, o_MusicPlayerInfo_songSpeed]
+@	muls r1, r2
+@	lsrs r1, 10
 	adds r0, r1
 	b _081DD9BC
 _081DD874:

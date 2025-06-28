@@ -197,7 +197,9 @@
 	struct_field o_MusicPlayerInfo_cmd, 1
 	struct_field o_MusicPlayerInfo_unk_B, 1
 	struct_field o_MusicPlayerInfo_clock, 4
-	struct_field o_MusicPlayerInfo_gap, 8
+	struct_field o_MusicPlayerInfo_songSpeed, 2
+	struct_field o_MusicPlayerInfo_songVol, 1
+	struct_field o_MusicPlayerInfo_gap, 5
 	struct_field o_MusicPlayerInfo_memAccArea, 4
 	struct_field o_MusicPlayerInfo_tempoD, 2
 	struct_field o_MusicPlayerInfo_tempoU, 2

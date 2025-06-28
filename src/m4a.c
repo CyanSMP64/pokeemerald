@@ -112,7 +112,7 @@ void m4aSongNumStart(u16 n)
     const struct Song *song = &songTable[n];
     const struct MusicPlayer *mplay = &mplayTable[song->ms];
 
-    MPlayStart(mplay->info, song->header);
+    MPlayStart(mplay->info, song->header, song->volume, song->speed);
 }
 
 void m4aSongNumStartOrChange(u16 n)
@@ -124,14 +124,14 @@ void m4aSongNumStartOrChange(u16 n)
 
     if (mplay->info->songHeader != song->header)
     {
-        MPlayStart(mplay->info, song->header);
+        MPlayStart(mplay->info, song->header, song->volume, song->speed);
     }
     else
     {
         if ((mplay->info->status & MUSICPLAYER_STATUS_TRACK) == 0
          || (mplay->info->status & MUSICPLAYER_STATUS_PAUSE))
         {
-            MPlayStart(mplay->info, song->header);
+            MPlayStart(mplay->info, song->header, song->volume, song->speed);
         }
     }
 }
@@ -144,9 +144,9 @@ void m4aSongNumStartOrContinue(u16 n)
     const struct MusicPlayer *mplay = &mplayTable[song->ms];
 
     if (mplay->info->songHeader != song->header)
-        MPlayStart(mplay->info, song->header);
+        MPlayStart(mplay->info, song->header, song->volume, song->speed);
     else if ((mplay->info->status & MUSICPLAYER_STATUS_TRACK) == 0)
-        MPlayStart(mplay->info, song->header);
+        MPlayStart(mplay->info, song->header, song->volume, song->speed);
     else if (mplay->info->status & MUSICPLAYER_STATUS_PAUSE)
         MPlayContinue(mplay->info);
 }
@@ -609,7 +609,7 @@ void MPlayOpen(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *track
     mplayInfo->ident = ID_NUMBER;
 }
 
-void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader)
+void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader, u8 volume, u16 speed)
 {
     s32 i;
     u8 unk_B;
@@ -632,6 +632,8 @@ void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader
         mplayInfo->tone = songHeader->tone;
         mplayInfo->priority = songHeader->priority;
         mplayInfo->clock = 0;
+        mplayInfo->songSpeed = speed;
+        mplayInfo->songVol = volume;
         mplayInfo->tempoD = 150;
         mplayInfo->tempoI = 150;
         mplayInfo->tempoU = 0x100;
@@ -1238,7 +1240,7 @@ void m4aMPlayTempoControl(struct MusicPlayerInfo *mplayInfo, u16 tempo)
     {
         mplayInfo->ident++;
         mplayInfo->tempoU = tempo;
-        mplayInfo->tempoI = (mplayInfo->tempoD * mplayInfo->tempoU) >> 8;
+        mplayInfo->tempoI = ((mplayInfo->tempoD * mplayInfo->tempoU * mplayInfo->songSpeed) >> 18);
         mplayInfo->ident = ID_NUMBER;
     }
 }
@@ -1694,7 +1696,7 @@ start_song:
 
     mplayInfo->ident = ID_NUMBER;
 
-    MPlayStart(mplayInfo, (struct SongHeader *)(&gPokemonCrySongs[i]));
+    MPlayStart(mplayInfo, (struct SongHeader *)(&gPokemonCrySongs[i]), 64, 1024);
 
     return mplayInfo;
 }
