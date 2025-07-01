@@ -6,7 +6,7 @@ struct ContestMove
     u8 effect;
     u8 contestCategory:3;
     u8 comboStarterId;
-    u8 comboMoves[4];
+    u8 comboMoves[5];
 };
 
 struct ContestEffect

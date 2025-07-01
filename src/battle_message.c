@@ -131,7 +131,7 @@ static const u8 sText_PkmnTrappedInFieryVortex[] = _("{B_DEF_NAME_WITH_PREFIX} b
 static const u8 sText_PkmnCoveredByVeil[] = _("{B_ATK_PREFIX2} team cloaked itself in a\nmystical veil!");
 static const u8 sText_PkmnUsedSafeguard[] = _("{B_DEF_NAME_WITH_PREFIX}'s party is protected\nby Safeguard!");
 static const u8 sText_PkmnSafeguardExpired[] = _("{B_ATK_PREFIX2} team is no longer\nprotected by {B_BUFF1}!");
-static const u8 sText_Dummy82[] = _(""); // dummied
+static const u8 sText_PlaceholderMove[] = _("This move is not implemented yet!");
 static const u8 sText_PkmnSleptHealthy[] = _("{B_ATK_NAME_WITH_PREFIX} slept and\nrestored its HP!");
 static const u8 sText_PkmnWhippedWhirlwind[] = _("{B_ATK_NAME_WITH_PREFIX} whipped up\na whirlwind!");
 static const u8 sText_PkmnTookSunlight[] = _("{B_ATK_NAME_WITH_PREFIX} absorbed\nlight!");
@@ -596,7 +596,7 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_S
     [STRINGID_PKMNCOVEREDBYVEIL - BATTLESTRINGS_TABLE_START] = sText_PkmnCoveredByVeil,
     [STRINGID_PKMNUSEDSAFEGUARD - BATTLESTRINGS_TABLE_START] = sText_PkmnUsedSafeguard,
     [STRINGID_PKMNSAFEGUARDEXPIRED - BATTLESTRINGS_TABLE_START] = sText_PkmnSafeguardExpired,
-    [STRINGID_DUMMY_82 - BATTLESTRINGS_TABLE_START] = sText_Dummy82,
+    [STRINGID_PLACEHOLDER_MOVE - BATTLESTRINGS_TABLE_START] = sText_PlaceholderMove,
     [STRINGID_PKMNSLEPTHEALTHY - BATTLESTRINGS_TABLE_START] = sText_PkmnSleptHealthy,
     [STRINGID_PKMNWHIPPEDWHIRLWIND - BATTLESTRINGS_TABLE_START] = sText_PkmnWhippedWhirlwind,
     [STRINGID_PKMNTOOKSUNLIGHT - BATTLESTRINGS_TABLE_START] = sText_PkmnTookSunlight,

@@ -123,16 +123,16 @@
 	.4byte \param1
 	.endm
 
-	.macro if_equal param0:req, param1:req
+	.macro if_equal value:req, ptr:req
 	.byte 0x13
-	.byte \param0
-	.4byte \param1
+	.2byte \value
+	.4byte \ptr
 	.endm
 
-	.macro if_not_equal param0:req, param1:req
+	.macro if_not_equal value:req, ptr:req
 	.byte 0x14
-	.byte \param0
-	.4byte \param1
+	.2byte \value
+	.4byte \ptr
 	.endm
 
 	.macro if_less_than_ptr param0:req, param1:req
@@ -313,16 +313,16 @@
 	.byte 0x36
 	.endm
 
-	.macro if_effect param0:req, param1:req
+	.macro if_effect effect:req, ptr:req
 	.byte 0x37
-	.byte \param0
-	.4byte \param1
+	.2byte \effect
+	.4byte \ptr
 	.endm
 
-	.macro if_not_effect param0:req, param1:req
+	.macro if_not_effect effect:req, ptr:req
 	.byte 0x38
-	.byte \param0
-	.4byte \param1
+	.2byte \effect
+	.4byte \ptr
 	.endm
 
 	.macro if_stat_level_less_than battler:req, stat:req, param2:req, param3:req
@@ -381,18 +381,18 @@
 	.4byte \param2
 	.endm
 
-	.macro if_has_move_with_effect battler:req, param1:req, param2:req
+	.macro if_has_move_with_effect battler:req, effect:req, ptr:req
 	.byte 0x41
 	.byte \battler
-	.byte \param1
-	.4byte \param2
+	.2byte \effect
+	.4byte \ptr
 	.endm
 
-	.macro if_doesnt_have_move_with_effect battler:req, param1:req, param2:req
+	.macro if_doesnt_have_move_with_effect battler:req, effect:req, ptr:req
 	.byte 0x42
 	.byte \battler
-	.byte \param1
-	.4byte \param2
+	.2byte \effect
+	.4byte \ptr
 	.endm
 
 	.macro if_any_move_disabled_or_encored battler:req, param1:req, param2:req
@@ -535,7 +535,7 @@
 	.macro check_ability battler:req, ability:req
 	.byte 0x60
 	.byte \battler
-	.byte \ability
+	.2byte \ability
 	.endm
 
 	.macro if_flash_fired battler:req, param1:req

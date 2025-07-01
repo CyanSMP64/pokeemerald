@@ -627,9 +627,6 @@ SECTIONS {
         src/field_specials.o(.rodata);
         src/battle_records.o(.rodata);
         src/pokedex_area_screen.o(.rodata);
-        src/evolution_scene.o(.rodata);
-        src/roulette.o(.rodata);
-        src/landmark.o(.rodata);
         src/battle_controller_link_partner.o(.rodata);
         src/cable_car.o(.rodata);
         src/save.o(.rodata);
@@ -668,6 +665,9 @@ SECTIONS {
     ALIGN(4)
     {
         src/party_menu.o(.rodata);
+        src/evolution_scene.o(.rodata);
+        src/roulette.o(.rodata);
+        src/landmark.o(.rodata);
         src/battle_dome.o(.rodata);
         src/field_effect.o(.rodata);
         src/region_map.o(.rodata);

@@ -6448,32 +6448,6 @@ static bool8 ShouldGetStatBadgeBoost(u16 badgeFlag, u8 battlerId)
         return FALSE;
 }
 
-u8 GetDefaultMoveTarget(u8 battlerId)
-{
-    u8 opposing = BATTLE_OPPOSITE(GET_BATTLER_SIDE(battlerId));
-
-    if (!(gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
-        return GetBattlerAtPosition(opposing);
-    if (CountAliveMonsInBattle(BATTLE_ALIVE_EXCEPT_ACTIVE) > 1)
-    {
-        u8 position;
-
-        if ((Random() & 1) == 0)
-            position = BATTLE_PARTNER(opposing);
-        else
-            position = opposing;
-
-        return GetBattlerAtPosition(position);
-    }
-    else
-    {
-        if ((gAbsentBattlerFlags & gBitTable[opposing]))
-            return GetBattlerAtPosition(BATTLE_PARTNER(opposing));
-        else
-            return GetBattlerAtPosition(opposing);
-    }
-}
-
 void CopyMon(void *dest, void *src, size_t size)
 {
     memcpy(dest, src, size);
@@ -7122,6 +7096,28 @@ u8 CalculatePlayerPartyCount(void)
     return gPlayerPartyCount;
 }
 
+u8 GiveMonToPlayer(struct Pokemon *mon)
+{
+    s32 i;
+
+    SetMonData(mon, MON_DATA_OT_NAME, gSaveBlock2Ptr->playerName);
+    SetMonData(mon, MON_DATA_OT_GENDER, &gSaveBlock2Ptr->playerGender);
+    SetMonData(mon, MON_DATA_OT_ID, gSaveBlock2Ptr->playerTrainerId);
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) == SPECIES_NONE)
+            break;
+    }
+
+    if (i >= PARTY_SIZE)
+        return SendMonToPC(mon);
+
+    CopyMon(&gPlayerParty[i], mon, sizeof(*mon));
+    gPlayerPartyCount = i + 1;
+    return MON_GIVEN_TO_PARTY;
+}
+
 void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
 {
     const u8 *data = dataArg;
@@ -7163,6 +7159,32 @@ void SetMonData(struct Pokemon *mon, s32 field, const void *dataArg)
     default:
         SetBoxMonData(&mon->box, field, data);
         break;
+    }
+}
+
+u8 GetDefaultMoveTarget(u8 battlerId)
+{
+    u8 opposing = BATTLE_OPPOSITE(GET_BATTLER_SIDE(battlerId));
+
+    if (!(gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
+        return GetBattlerAtPosition(opposing);
+    if (CountAliveMonsInBattle(BATTLE_ALIVE_EXCEPT_ACTIVE) > 1)
+    {
+        u8 position;
+
+        if ((Random() & 1) == 0)
+            position = BATTLE_PARTNER(opposing);
+        else
+            position = opposing;
+
+        return GetBattlerAtPosition(position);
+    }
+    else
+    {
+        if ((gAbsentBattlerFlags & gBitTable[opposing]))
+            return GetBattlerAtPosition(BATTLE_PARTNER(opposing));
+        else
+            return GetBattlerAtPosition(opposing);
     }
 }
 
@@ -7505,28 +7527,6 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
 u8 GetMonGender(struct Pokemon *mon)
 {
     return GetBoxMonGender(&mon->box);
-}
-
-u8 GiveMonToPlayer(struct Pokemon *mon)
-{
-    s32 i;
-
-    SetMonData(mon, MON_DATA_OT_NAME, gSaveBlock2Ptr->playerName);
-    SetMonData(mon, MON_DATA_OT_GENDER, &gSaveBlock2Ptr->playerGender);
-    SetMonData(mon, MON_DATA_OT_ID, gSaveBlock2Ptr->playerTrainerId);
-
-    for (i = 0; i < PARTY_SIZE; i++)
-    {
-        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) == SPECIES_NONE)
-            break;
-    }
-
-    if (i >= PARTY_SIZE)
-        return SendMonToPC(mon);
-
-    CopyMon(&gPlayerParty[i], mon, sizeof(*mon));
-    gPlayerPartyCount = i + 1;
-    return MON_GIVEN_TO_PARTY;
 }
 
 u8 SendMonToPC(struct Pokemon* mon)

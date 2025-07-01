@@ -7911,7 +7911,8 @@ static void Cmd_metronome(void)
         s32 i;
 
         gCurrentMove = (Random() & 0x3FF) + 1;
-        if (gCurrentMove >= MOVES_COUNT)
+        if (gCurrentMove >= MOVES_COUNT
+         || gBattleMoves[gCurrentMove].effect == EFFECT_PLACEHOLDER)
             continue;
 
         for (i = 0; i < MAX_MON_MOVES; i++); // ?

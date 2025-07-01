@@ -951,18 +951,22 @@ static void Cmd_if_more_than(void)
 
 static void Cmd_if_equal(void)
 {
-    if (AI_THINKING_STRUCT->funcResult == gAIScriptPtr[1])
-        gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 2);
+    u16 value = T1_READ_16(gAIScriptPtr + 1);
+
+    if (AI_THINKING_STRUCT->funcResult == value)
+        gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 3);
     else
-        gAIScriptPtr += 6;
+        gAIScriptPtr += 7;
 }
 
 static void Cmd_if_not_equal(void)
 {
-    if (AI_THINKING_STRUCT->funcResult != gAIScriptPtr[1])
-        gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 2);
+    u16 value = T1_READ_16(gAIScriptPtr + 1);
+
+    if (AI_THINKING_STRUCT->funcResult != value)
+        gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 3);
     else
-        gAIScriptPtr += 6;
+        gAIScriptPtr += 7;
 }
 
 static void Cmd_if_less_than_ptr(void)
@@ -1424,7 +1428,7 @@ static void Cmd_get_ability(void)
 static void Cmd_check_ability(void)
 {
     u32 battlerId = BattleAI_GetWantedBattler(gAIScriptPtr[1]);
-    u32 ability = gAIScriptPtr[2];
+    u32 ability = T1_READ_16(gAIScriptPtr + 2);
 
     if (gAIScriptPtr[1] == AI_TARGET || gAIScriptPtr[1] == AI_TARGET_PARTNER)
     {
@@ -1473,12 +1477,12 @@ static void Cmd_check_ability(void)
 
     if (ability == 0)
         AI_THINKING_STRUCT->funcResult = 2; // Unable to answer.
-    else if (ability == gAIScriptPtr[2])
+    else if (ability == T1_READ_16(gAIScriptPtr + 2))
         AI_THINKING_STRUCT->funcResult = 1; // Pokemon has the ability we wanted to check.
     else
         AI_THINKING_STRUCT->funcResult = 0; // Pokemon doesn't have the ability we wanted to check.
 
-    gAIScriptPtr += 3;
+    gAIScriptPtr += 4;
 }
 
 static void Cmd_get_highest_type_effectiveness(void)
@@ -1659,18 +1663,22 @@ static void Cmd_get_weather(void)
 
 static void Cmd_if_effect(void)
 {
-    if (gBattleMoves[AI_THINKING_STRUCT->moveConsidered].effect == gAIScriptPtr[1])
-        gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 2);
+    u16 effect = T1_READ_16(gAIScriptPtr + 1);
+
+    if (gBattleMoves[AI_THINKING_STRUCT->moveConsidered].effect == effect)
+        gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 3);
     else
-        gAIScriptPtr += 6;
+        gAIScriptPtr += 7;
 }
 
 static void Cmd_if_not_effect(void)
 {
-    if (gBattleMoves[AI_THINKING_STRUCT->moveConsidered].effect != gAIScriptPtr[1])
-        gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 2);
+    u16 effect = T1_READ_16(gAIScriptPtr + 1);
+
+    if (gBattleMoves[AI_THINKING_STRUCT->moveConsidered].effect != effect)
+        gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 3);
     else
-        gAIScriptPtr += 6;
+        gAIScriptPtr += 7;
 }
 
 static void Cmd_if_stat_level_less_than(void)
@@ -1889,31 +1897,25 @@ static void Cmd_if_has_move_with_effect(void)
     case AI_USER_PARTNER:
         for (i = 0; i < MAX_MON_MOVES; i++)
         {
-            if (gBattleMons[sBattler_AI].moves[i] != 0 && gBattleMoves[gBattleMons[sBattler_AI].moves[i]].effect == gAIScriptPtr[2])
+            if (gBattleMons[sBattler_AI].moves[i] != 0 && gBattleMoves[gBattleMons[sBattler_AI].moves[i]].effect == T1_READ_16(gAIScriptPtr + 2))
                 break;
         }
         if (i == MAX_MON_MOVES)
-            gAIScriptPtr += 7;
+            gAIScriptPtr += 8;
         else
-            gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 3);
+            gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 4);
         break;
     case AI_TARGET:
     case AI_TARGET_PARTNER:
         for (i = 0; i < MAX_MON_MOVES; i++)
         {
-            // BUG: checks sBattler_AI instead of gBattlerTarget.
-            #ifndef BUGFIX
-            if (gBattleMons[sBattler_AI].moves[i] != 0 && gBattleMoves[BATTLE_HISTORY->usedMoves[gBattlerTarget].moves[i]].effect == gAIScriptPtr[2])
+            if (gBattleMons[gBattlerTarget].moves[i] != 0 && gBattleMoves[BATTLE_HISTORY->usedMoves[gBattlerTarget].moves[i]].effect == T1_READ_16(gAIScriptPtr + 2))
                 break;
-            #else
-            if (gBattleMons[gBattlerTarget].moves[i] != 0 && gBattleMoves[BATTLE_HISTORY->usedMoves[gBattlerTarget].moves[i]].effect == gAIScriptPtr[2])
-                break;
-            #endif
         }
         if (i == MAX_MON_MOVES)
-            gAIScriptPtr += 7;
+            gAIScriptPtr += 8;
         else
-            gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 3);
+            gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 4);
         break;
     }
 }
@@ -1928,25 +1930,25 @@ static void Cmd_if_doesnt_have_move_with_effect(void)
     case AI_USER_PARTNER:
         for (i = 0; i < MAX_MON_MOVES; i++)
         {
-            if(gBattleMons[sBattler_AI].moves[i] != 0 && gBattleMoves[gBattleMons[sBattler_AI].moves[i]].effect == gAIScriptPtr[2])
+            if(gBattleMons[sBattler_AI].moves[i] != 0 && gBattleMoves[gBattleMons[sBattler_AI].moves[i]].effect == T1_READ_16(gAIScriptPtr + 2))
                 break;
         }
         if (i != MAX_MON_MOVES)
-            gAIScriptPtr += 7;
+            gAIScriptPtr += 8;
         else
-            gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 3);
+            gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 4);
         break;
     case AI_TARGET:
     case AI_TARGET_PARTNER:
         for (i = 0; i < MAX_MON_MOVES; i++)
         {
-            if (BATTLE_HISTORY->usedMoves[gBattlerTarget].moves[i] && gBattleMoves[BATTLE_HISTORY->usedMoves[gBattlerTarget].moves[i]].effect == gAIScriptPtr[2])
+            if (BATTLE_HISTORY->usedMoves[gBattlerTarget].moves[i] && gBattleMoves[BATTLE_HISTORY->usedMoves[gBattlerTarget].moves[i]].effect == T1_READ_16(gAIScriptPtr + 2))
                 break;
         }
         if (i != MAX_MON_MOVES)
-            gAIScriptPtr += 7;
+            gAIScriptPtr += 8;
         else
-            gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 3);
+            gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 4);
         break;
     }
 }
