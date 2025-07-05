@@ -1,74 +1,97 @@
-	.align 2
-DirectSoundSynthData_saw::
+	.macro camelot_synth_sound type:req offset:req step:req depth:req init:req
 	.byte 0x00, 0x00, 0x00, 0x40, 0x20, 0x89, 0x05, 0x01
 	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	.byte 0x80, 0x01, 0x00, 0x00
+	.byte 0x80
+	.byte \type
+	.if \type != 0
+	.else
+	.byte \offset
+	.byte \step
+	.byte \depth
+	.byte \init
+	.endif
+	.byte 0, 0
+	.endm
+
+	.macro camelot_square_basic duty_cycle:req
+	camelot_synth_sound 0, \duty_cycle, 0, 0, 0
+	.endm
+
+	.align 2
+DirectSoundSynthData_saw::
+	camelot_synth_sound 1, 0, 0, 0, 0
 
 	.align 2
 DirectSoundSynthData_squ06::
-	.byte 0x00, 0x00, 0x00, 0x40, 0x20, 0x89, 0x05, 0x01
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	.byte 0x80, 0x00, 0x10, 0x00, 0x00, 0x80, 0x00, 0x00
+	camelot_square_basic 16
 
 	.align 2
 DirectSoundSynthData_squ12::
-	.byte 0x00, 0x00, 0x00, 0x40, 0x20, 0x89, 0x05, 0x01
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	.byte 0x80, 0x00, 0x20, 0x00, 0x00, 0x80, 0x00, 0x00
+	camelot_square_basic 32
 
 	.align 2
 DirectSoundSynthData_squ18::
-	.byte 0x00, 0x00, 0x00, 0x40, 0x20, 0x89, 0x05, 0x01
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	.byte 0x80, 0x00, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00
+	camelot_square_basic 48
 
 	.align 2
 DirectSoundSynthData_squ25::
-	.byte 0x00, 0x00, 0x00, 0x40, 0x20, 0x89, 0x05, 0x01
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	.byte 0x80, 0x00, 0x40, 0x00, 0x00, 0x80, 0x00, 0x00
+	camelot_square_basic 64
 
 	.align 2
 DirectSoundSynthData_squ31::
-	.byte 0x00, 0x00, 0x00, 0x40, 0x20, 0x89, 0x05, 0x01
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	.byte 0x80, 0x00, 0x50, 0x00, 0x00, 0x80, 0x00, 0x00
+	camelot_square_basic 80
 
 	.align 2
 DirectSoundSynthData_squ37::
-	.byte 0x00, 0x00, 0x00, 0x40, 0x20, 0x89, 0x05, 0x01
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	.byte 0x80, 0x00, 0x60, 0x00, 0x00, 0x80, 0x00, 0x00
+	camelot_square_basic 96
 
 	.align 2
 DirectSoundSynthData_squ43::
-	.byte 0x00, 0x00, 0x00, 0x40, 0x20, 0x89, 0x05, 0x01
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	.byte 0x80, 0x00, 0x70, 0x00, 0x00, 0x80, 0x00, 0x00
+	camelot_square_basic 112
 
 	.align 2
 DirectSoundSynthData_squ50::
-	.byte 0x00, 0x00, 0x00, 0x40, 0x20, 0x89, 0x05, 0x01
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	.byte 0x80, 0x00, 0x80, 0x00, 0x00, 0x80, 0x00, 0x00
+	camelot_square_basic 128
 
 	.align 2
 DirectSoundSynthData_tri::
-	.byte 0x00, 0x00, 0x00, 0x40, 0x20, 0x89, 0x05, 0x01
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	.byte 0x80, 0x02, 0x00, 0x00
+	camelot_synth_sound 2, 0, 0, 0, 0
+
+@	.align 2
+@DirectSoundWaveData_Accordion_Fr8P1::
+@	.incbin "sound/direct_sound_samples/new/Accordion_Fr8P1.bin"
+@
+@	.align 2
+@DirectSoundWaveData_Accordion_Fr8P2::
+@	.incbin "sound/direct_sound_samples/new/Accordion_Fr8P2.bin"
+@
+@	.align 2
+@DirectSoundWaveData_Accordion_Fr8P3::
+@	.incbin "sound/direct_sound_samples/new/Accordion_Fr8P3.bin"
 
 	.align 2
-DirectSoundWaveData_Accordion_Fr8P1::
-	.incbin "sound/direct_sound_samples/new/Accordion_Fr8P1.bin"
+DirectSoundWaveData_Accordion_It8P1::
+	.incbin "sound/direct_sound_samples/new/Accordion_It8P1.bin"
 
 	.align 2
-DirectSoundWaveData_Accordion_Fr8P2::
-	.incbin "sound/direct_sound_samples/new/Accordion_Fr8P2.bin"
+DirectSoundWaveData_Accordion_It8P2::
+	.incbin "sound/direct_sound_samples/new/Accordion_It8P2.bin"
 
 	.align 2
-DirectSoundWaveData_Accordion_Fr8P3::
-	.incbin "sound/direct_sound_samples/new/Accordion_Fr8P3.bin"
+DirectSoundWaveData_Accordion_It8P3::
+	.incbin "sound/direct_sound_samples/new/Accordion_It8P3.bin"
+
+	.align 2
+DirectSoundWaveData_Bandoneon___8P1::
+	.incbin "sound/direct_sound_samples/new/Bandoneon___8P1.bin"
+
+	.align 2
+DirectSoundWaveData_Bandoneon___8P2::
+	.incbin "sound/direct_sound_samples/new/Bandoneon___8P2.bin"
+
+	.align 2
+DirectSoundWaveData_Bandoneon___8P3::
+	.incbin "sound/direct_sound_samples/new/Bandoneon___8P3.bin"
 
 	.align 2
 DirectSoundWaveData_DR55Elec_SD_::
@@ -539,6 +562,30 @@ DirectSoundWaveData_EnglishHorn_881::
 	.incbin "sound/direct_sound_samples/new/EnglishHorn_881.bin"
 
 	.align 2
+DirectSoundWaveData_European_Pf_8P1::
+	.incbin "sound/direct_sound_samples/new/European_Pf_8P1.bin"
+
+	.align 2
+DirectSoundWaveData_European_Pf_8P2::
+	.incbin "sound/direct_sound_samples/new/European_Pf_8P2.bin"
+
+	.align 2
+DirectSoundWaveData_European_Pf_8P3::
+	.incbin "sound/direct_sound_samples/new/European_Pf_8P3.bin"
+
+	.align 2
+DirectSoundWaveData_European_Pf_8P4::
+	.incbin "sound/direct_sound_samples/new/European_Pf_8P4.bin"
+
+	.align 2
+DirectSoundWaveData_European_Pf_8P5::
+	.incbin "sound/direct_sound_samples/new/European_Pf_8P5.bin"
+
+	.align 2
+DirectSoundWaveData_European_Pf_8P6::
+	.incbin "sound/direct_sound_samples/new/European_Pf_8P6.bin"
+
+	.align 2
 DirectSoundWaveData_Fingered_Bs_8P1::
 	.incbin "sound/direct_sound_samples/new/Fingered_Bs_8P1.bin"
 
@@ -575,6 +622,14 @@ DirectSoundWaveData_Harp________884::
 	.incbin "sound/direct_sound_samples/new/Harp________884.bin"
 
 	.align 2
+DirectSoundWaveData_Marimba_____881::
+	.incbin "sound/direct_sound_samples/new/Marimba_____881.bin"
+
+	.align 2
+DirectSoundWaveData_Marimba_____882::
+	.incbin "sound/direct_sound_samples/new/Marimba_____882.bin"
+
+	.align 2
 DirectSoundWaveData_Nylon_str_Gt8P1::
 	.incbin "sound/direct_sound_samples/new/Nylon_str_Gt8P1.bin"
 
@@ -582,21 +637,21 @@ DirectSoundWaveData_Nylon_str_Gt8P1::
 DirectSoundWaveData_Nylon_str_Gt8P2::
 	.incbin "sound/direct_sound_samples/new/Nylon_str_Gt8P2.bin"
 
-	.align 2
-DirectSoundWaveData_Piano_1_______1::
-	.incbin "sound/direct_sound_samples/new/Piano_1_______1.bin"
-
-	.align 2
-DirectSoundWaveData_Piano_1_______2::
-	.incbin "sound/direct_sound_samples/new/Piano_1_______2.bin"
-
-	.align 2
-DirectSoundWaveData_Piano_1_______3::
-	.incbin "sound/direct_sound_samples/new/Piano_1_______3.bin"
-
-	.align 2
-DirectSoundWaveData_Piano_1_______4::
-	.incbin "sound/direct_sound_samples/new/Piano_1_______4.bin"
+@	.align 2
+@DirectSoundWaveData_Piano_1_______1::
+@	.incbin "sound/direct_sound_samples/new/Piano_1_______1.bin"
+@
+@	.align 2
+@DirectSoundWaveData_Piano_1_______2::
+@	.incbin "sound/direct_sound_samples/new/Piano_1_______2.bin"
+@
+@	.align 2
+@DirectSoundWaveData_Piano_1_______3::
+@	.incbin "sound/direct_sound_samples/new/Piano_1_______3.bin"
+@
+@	.align 2
+@DirectSoundWaveData_Piano_1_______4::
+@	.incbin "sound/direct_sound_samples/new/Piano_1_______4.bin"
 
 	.align 2
 DirectSoundWaveData_Piccolo_____881::
