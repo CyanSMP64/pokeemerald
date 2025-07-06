@@ -41,6 +41,7 @@ int g_reverb = -1;
 int g_clocksPerBeat = 1;
 bool g_exactGateTime = false;
 bool g_compressionEnabled = true;
+bool g_naturalVolumeEnabled = false;
 
 [[noreturn]] static void PrintUsage()
 {
@@ -58,6 +59,7 @@ bool g_compressionEnabled = true;
         "            -X  48 clocks/beat (default:24 clocks/beat)\n"
         "            -E  exact gate-time\n"
         "            -N  no compression\n"
+        "            -S  apply natural volume scale (linear by default)\n"
     );
     std::exit(1);
 }
@@ -171,6 +173,9 @@ int main(int argc, char** argv)
                 if (arg == nullptr)
                     PrintUsage();
                 g_reverb = std::stoi(arg);
+                break;
+            case 'S':
+                g_naturalVolumeEnabled = true;
                 break;
             case 'V':
                 arg = GetArgument(argc, argv, i);

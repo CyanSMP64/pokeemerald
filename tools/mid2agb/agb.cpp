@@ -146,7 +146,7 @@ void PrintWord(const char *format, ...)
 void PrintNote(const Event& event)
 {
     int note = event.note;
-    int velocity = g_noteVelocityLUT[event.param1];
+    int velocity = event.param1; 
     int duration = -1;
 
     if (event.param2 != -1)
@@ -354,9 +354,9 @@ void PrintControllerOp(const Event& event)
     case 0x01:
         PrintOp(event.time, "MOD   ", "%u", event.param2);
         break;
-    case 0x07:
-        PrintOp(event.time, "VOL   ", "%u*%s_mvl/mxv", event.param2, g_asmLabel.c_str());
-        break;
+    // case 0x07: // Volume
+    //     PrintOp(event.time, "VOL   ", "%u*%s_mvl/mxv", event.param2, g_asmLabel.c_str());
+    //     break;
     case 0x0A:
         PrintOp(event.time, "PAN   ", "c_v%+d", event.param2 - 64);
         break;
@@ -424,23 +424,6 @@ void PrintAgbTrack(std::vector<Event>& events)
     int loopEndBlockNum = 0;
 
     ResetTrackVars();
-
-    bool foundVolBeforeNote = false;
-
-    for (const Event& event : events)
-    {
-        if (event.type == EventType::Note)
-            break;
-
-        if (event.type == EventType::Controller && event.param1 == 0x07)
-        {
-            foundVolBeforeNote = true;
-            break;
-        }
-    }
-
-    if (!foundVolBeforeNote)
-        PrintByte("\tVOL   , 127*%s_mvl/mxv", g_asmLabel.c_str());
 
     PrintWait(g_initialWait);
     PrintByte("KEYSH , %s_key%+d", g_asmLabel.c_str(), 0);
@@ -518,6 +501,9 @@ void PrintAgbTrack(std::vector<Event>& events)
             break;
         case EventType::Controller:
             PrintControllerOp(event);
+            break;
+        case EventType::Volume:
+            PrintOp(event.time, "VOL   ", "%u*%s_mvl/mxv", event.param1, g_asmLabel.c_str());
             break;
         default:
             PrintWait(event.time);
