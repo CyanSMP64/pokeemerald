@@ -6,7 +6,7 @@ voicegroup191::
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit E_Piano_2___88, KeySplitTable_2oct - 12
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_keysplit Harpsichord___, KeySplitTable_3oct - -2
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
@@ -146,6 +146,11 @@ European_Pf_8P:: @ 6oct - 6
 E_Piano_2___88:: @ 2oct - 12
 	voice_directsound 60, 0, DirectSoundWaveData_E_Piano_2___881, 255, 253, 55, 160
 	voice_directsound 60, 0, DirectSoundWaveData_E_Piano_2___882, 255, 253, 33, 160
+
+Harpsichord___:: @ 3oct - -2
+	voice_directsound 60, 0, DirectSoundWaveData_Harpsichord___1, 255, 249, 38, 160
+	voice_directsound 60, 0, DirectSoundWaveData_Harpsichord___2, 255, 247, 22, 160
+	voice_directsound 60, 0, DirectSoundWaveData_Harpsichord___3, 255, 244, 9, 160
 
 Marimba_____88:: @ 2oct - 9
 	voice_directsound 60, 0, DirectSoundWaveData_Marimba_____881, 255, 233, 0, 216

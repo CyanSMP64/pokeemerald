@@ -622,6 +622,18 @@ DirectSoundWaveData_Harp________884::
 	.incbin "sound/direct_sound_samples/new/Harp________884.bin"
 
 	.align 2
+DirectSoundWaveData_Harpsichord___1::
+	.incbin "sound/direct_sound_samples/new/Harpsichord___1.bin"
+
+	.align 2
+DirectSoundWaveData_Harpsichord___2::
+	.incbin "sound/direct_sound_samples/new/Harpsichord___2.bin"
+
+	.align 2
+DirectSoundWaveData_Harpsichord___3::
+	.incbin "sound/direct_sound_samples/new/Harpsichord___3.bin"
+
+	.align 2
 DirectSoundWaveData_Marimba_____881::
 	.incbin "sound/direct_sound_samples/new/Marimba_____881.bin"
 
