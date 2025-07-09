@@ -22,80 +22,80 @@ se_m_confuse_ray_1:
 	.byte		VOL   , 127*se_m_confuse_ray_mvl/mxv
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N03   , As3 , v120
 	.byte	W01
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W01
-	.byte		        c_v-16
+	.byte		BEND  , c_b-(16*2)
 	.byte	W01
-	.byte		        c_v-1
+	.byte		BEND  , c_b-(1*2)
 	.byte		N12   , As2 , v127
 	.byte	W03
 	.byte		PAN   , c_v+4
-	.byte		BEND  , c_v+8
+	.byte		BEND  , c_b+(8*2)
 	.byte	W02
 	.byte		PAN   , c_v-4
-	.byte		BEND  , c_v+11
+	.byte		BEND  , c_b+(11*2)
 	.byte	W01
-	.byte		        c_v+18
+	.byte		BEND  , c_b+(18*2)
 	.byte	W01
 	.byte		PAN   , c_v+10
-	.byte		BEND  , c_v+28
+	.byte		BEND  , c_b+(28*2)
 	.byte	W02
-	.byte		        c_v+35
+	.byte		BEND  , c_b+(35*2)
 	.byte	W01
 	.byte		PAN   , c_v-10
 	.byte	W02
 	.byte		        c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N03   , As3 , v108
 	.byte	W01
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W02
-	.byte		        c_v-17
+	.byte		BEND  , c_b-(17*2)
 	.byte	W01
-	.byte		        c_v-1
+	.byte		BEND  , c_b-(1*2)
 	.byte		N12   , As2
 	.byte	W02
 	.byte		PAN   , c_v+4
-	.byte		BEND  , c_v+8
+	.byte		BEND  , c_b+(8*2)
 	.byte	W03
 	.byte		PAN   , c_v-4
-	.byte		BEND  , c_v+11
+	.byte		BEND  , c_b+(11*2)
 	.byte	W01
-	.byte		        c_v+18
+	.byte		BEND  , c_b+(18*2)
 	.byte	W01
 	.byte		PAN   , c_v+10
-	.byte		BEND  , c_v+28
+	.byte		BEND  , c_b+(28*2)
 	.byte	W01
-	.byte		        c_v+35
+	.byte		BEND  , c_b+(35*2)
 	.byte	W01
 	.byte		PAN   , c_v-10
 	.byte	W03
 	.byte		        c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N03   , As3 , v072
 	.byte	W01
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W01
-	.byte		        c_v-16
+	.byte		BEND  , c_b-(16*2)
 	.byte	W01
-	.byte		        c_v-1
+	.byte		BEND  , c_b-(1*2)
 	.byte		N12   , As2
 	.byte	W03
 	.byte		PAN   , c_v+4
-	.byte		BEND  , c_v+8
+	.byte		BEND  , c_b+(8*2)
 	.byte	W02
 	.byte		PAN   , c_v-4
-	.byte		BEND  , c_v+11
+	.byte		BEND  , c_b+(11*2)
 	.byte	W01
-	.byte		        c_v+18
+	.byte		BEND  , c_b+(18*2)
 	.byte	W02
 	.byte		PAN   , c_v+10
-	.byte		BEND  , c_v+28
+	.byte		BEND  , c_b+(28*2)
 	.byte	W01
-	.byte		        c_v+35
+	.byte		BEND  , c_b+(35*2)
 	.byte	W01
 	.byte		PAN   , c_v-10
 	.byte	W04

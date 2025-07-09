@@ -7,7 +7,8 @@
 // This is presumably short for SMASH, the developer of MKS4AGB.
 #define ID_NUMBER 0x68736D53
 
-#define C_V 0x40 // center value for PAN, BEND, and TUNE
+#define C_V 0x40 // center value for PAN and TUNE
+#define C_B 0x80 // center value for BEND
 
 #define SOUND_MODE_REVERB_VAL   0x0000007F
 #define SOUND_MODE_REVERB_SET   0x00000080

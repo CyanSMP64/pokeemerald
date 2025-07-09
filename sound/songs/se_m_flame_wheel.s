@@ -22,7 +22,7 @@ se_m_flame_wheel_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 22*se_m_flame_wheel_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N30   , Dn4 , v127
 	.byte	W01
 	.byte		VOL   , 49*se_m_flame_wheel_mvl/mxv
@@ -30,37 +30,37 @@ se_m_flame_wheel_1:
 	.byte		        71*se_m_flame_wheel_mvl/mxv
 	.byte	W01
 	.byte		        95*se_m_flame_wheel_mvl/mxv
-	.byte		BEND  , c_v+8
+	.byte		BEND  , c_b+(8*2)
 	.byte	W01
 	.byte		VOL   , 110*se_m_flame_wheel_mvl/mxv
 	.byte	W02
 	.byte		PAN   , c_v+5
-	.byte		BEND  , c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte	W01
 	.byte		VOL   , 95*se_m_flame_wheel_mvl/mxv
 	.byte	W02
 	.byte		        88*se_m_flame_wheel_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+7
+	.byte		BEND  , c_b+(7*2)
 	.byte	W01
 	.byte		VOL   , 93*se_m_flame_wheel_mvl/mxv
 	.byte	W02
 	.byte		        110*se_m_flame_wheel_mvl/mxv
 	.byte		PAN   , c_v-5
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W02
 	.byte		VOL   , 86*se_m_flame_wheel_mvl/mxv
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-9
+	.byte		BEND  , c_b-(9*2)
 	.byte	W01
 	.byte		VOL   , 63*se_m_flame_wheel_mvl/mxv
 	.byte	W02
 	.byte		        37*se_m_flame_wheel_mvl/mxv
-	.byte		BEND  , c_v-24
+	.byte		BEND  , c_b-(24*2)
 	.byte	W03
 	.byte		VOL   , 13*se_m_flame_wheel_mvl/mxv
-	.byte		BEND  , c_v-46
+	.byte		BEND  , c_b-(46*2)
 	.byte	W03
 	.byte	W03
 	.byte	W03

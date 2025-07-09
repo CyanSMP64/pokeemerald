@@ -60,7 +60,7 @@
 	.equ	VOICE,	0xbd		@ voice #
 	.equ	VOL,	0xbe		@ volume
 	.equ	PAN,	0xbf		@ panpot (c_v+??)
-	.equ	BEND,	0xc0		@ pitch bend (c_v+??)
+	.equ	BEND,	0xc0		@ pitch bend (c_b+??)
 	.equ	BENDR,	0xc1		@ bend range
 	.equ	LFOS,	0xc2		@ LFO speed
 	.equ	LFODL,	0xc3		@ LFO delay
@@ -127,9 +127,13 @@
 
 	.equ	mxv,	0x7F		@
 
-@ center value of PAN, BEND, TUNE
+@ center value of PAN, TUNE
 
 	.equ	c_v,	0x40		@ -64 ~ +63
+
+@ center value of BEND
+
+	.equ	c_b,	0x80		@ -128 ~ +127
 
 @ note for N??, TIE, EOT
 

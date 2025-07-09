@@ -1501,7 +1501,7 @@ ply_pan:
 ply_bend:
 	mov r12, lr
 	bl ld_r3_tp_adr_i
-	subs r3, C_V
+	subs r3, C_B
 	strb r3, [r1, o_MusicPlayerTrack_bend]
 	ldrb r3, [r1, o_MusicPlayerTrack_flags]
 	movs r2, MPT_FLG_PITCHG

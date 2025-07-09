@@ -22,7 +22,7 @@ se_m_rain_dance_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 20*se_m_rain_dance_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		TIE   , Gn3 , v064
 	.byte	W03
 	.byte		VOL   , 37*se_m_rain_dance_mvl/mxv

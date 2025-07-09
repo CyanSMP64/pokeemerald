@@ -22,7 +22,7 @@ se_m_hydro_pump_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 115*se_m_hydro_pump_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		TIE   , Gn2 , v127
 	.byte	W06
 	.byte		PAN   , c_v-4

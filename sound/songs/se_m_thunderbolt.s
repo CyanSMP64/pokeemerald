@@ -22,52 +22,52 @@ se_m_thunderbolt_1:
 	.byte		VOL   , 120*se_m_thunderbolt_mvl/mxv
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+32
+	.byte		BEND  , c_b+(32*2)
 	.byte		N06   , Dn3 , v127
 	.byte	W02
 	.byte		PAN   , c_v-8
 	.byte	W01
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W01
 	.byte		PAN   , c_v-16
 	.byte	W02
 	.byte		        c_v+0
-	.byte		BEND  , c_v+32
+	.byte		BEND  , c_b+(32*2)
 	.byte		N06   , Dn2 , v104
 	.byte	W02
 	.byte		PAN   , c_v+9
 	.byte	W01
-	.byte		BEND  , c_v-12
+	.byte		BEND  , c_b-(12*2)
 	.byte	W01
 	.byte		PAN   , c_v+16
 	.byte	W02
 	.byte		        c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N21   , Dn3 , v127
 	.byte	W03
 	.byte		PAN   , c_v-8
 	.byte	W03
 	.byte		        c_v-15
 	.byte	W01
-	.byte		BEND  , c_v-13
+	.byte		BEND  , c_b-(13*2)
 	.byte	W02
 	.byte		PAN   , c_v-7
 	.byte	W01
-	.byte		BEND  , c_v-23
+	.byte		BEND  , c_b-(23*2)
 	.byte	W02
 	.byte		VOL   , 100*se_m_thunderbolt_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-40
+	.byte		BEND  , c_b-(40*2)
 	.byte	W01
 	.byte		VOL   , 86*se_m_thunderbolt_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v-54
+	.byte		BEND  , c_b-(54*2)
 	.byte	W01
 	.byte		PAN   , c_v+10
 	.byte		VOL   , 68*se_m_thunderbolt_mvl/mxv
 	.byte	W02
 	.byte		        37*se_m_thunderbolt_mvl/mxv
-	.byte		BEND  , c_v-64
+	.byte		BEND  , c_b-(64*2)
 	.byte	W01
 	.byte		PAN   , c_v+16
 	.byte	W02

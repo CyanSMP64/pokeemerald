@@ -22,7 +22,7 @@ se_m_earthquake_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 110*se_m_earthquake_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N03   , Cs2 , v127
 	.byte	W03
 	.byte		PAN   , c_v+6

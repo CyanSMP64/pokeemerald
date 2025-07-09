@@ -22,7 +22,7 @@ se_m_encore2_1:
 	.byte		BENDR , 12
 	.byte		VOL   , 25*se_m_encore2_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		TIE   , Cn3 , v127
 	.byte	W01
 	.byte		PAN   , c_v+2

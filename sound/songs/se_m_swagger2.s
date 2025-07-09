@@ -22,18 +22,18 @@ se_m_swagger2_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 65*se_m_swagger2_mvl/mxv
-	.byte		BEND  , c_v+8
+	.byte		BEND  , c_b+(8*2)
 	.byte		N01   , Cs6 , v112
 	.byte	W01
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N01   , Dn6 , v100
 	.byte	W01
 	.byte		        Dn6 , v060
 	.byte	W04
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte		N01   , Ds6 , v112
 	.byte	W01
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N01   , En6 , v100
 	.byte	W01
 	.byte		        En6 , v060

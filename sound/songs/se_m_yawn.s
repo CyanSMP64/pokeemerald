@@ -22,66 +22,66 @@ se_m_yawn_1:
 	.byte		VOICE , 61
 	.byte		BENDR , 44
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N48   , Cn4 , v108
 	.byte	W02
-	.byte		BEND  , c_v-1
+	.byte		BEND  , c_b-(1*2)
 	.byte	W01
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W03
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W01
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W02
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W01
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W02
 	.byte		PAN   , c_v-4
 	.byte	W01
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W01
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W02
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W02
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W02
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W01
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W03
 	.byte		PAN   , c_v-10
-	.byte		BEND  , c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W01
-	.byte		        c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte	W02
-	.byte		        c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte	W03
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W02
-	.byte		        c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte	W01
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W03
 	.byte		PAN   , c_v-4
-	.byte		BEND  , c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W01
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W02
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W01
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W02
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W01
-	.byte		        c_v-1
+	.byte		BEND  , c_b-(1*2)
 	.byte	W01
-	.byte		        c_v-1
+	.byte		BEND  , c_b-(1*2)
 	.byte	W01
-	.byte		        c_v-3
+	.byte		BEND  , c_b-(3*2)
 	.byte	W01
-	.byte		        c_v-3
+	.byte		BEND  , c_b-(3*2)
 	.byte	W02
 	.byte	FINE
 

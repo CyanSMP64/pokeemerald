@@ -795,7 +795,7 @@ void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *tr
     {
         s32 bend = track->bend * track->bendRange;
         s32 x = (track->tune + bend)
-              * 4
+              * 2
               + (track->keyShift << 8)
               + (track->keyShiftX << 8)
               + track->pitX;

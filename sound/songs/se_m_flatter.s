@@ -22,7 +22,7 @@ se_m_flatter_1:
 	.byte		VOL   , 100*se_m_flatter_mvl/mxv
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N01   , Dn5 , v127
 	.byte	W01
 	.byte		        Gn4
@@ -39,15 +39,15 @@ se_m_flatter_1:
 	.byte	W01
 	.byte		VOL   , 71*se_m_flatter_mvl/mxv
 	.byte		PAN   , c_v-8
-	.byte		BEND  , c_v-4
+	.byte		BEND  , c_b-(4*2)
 	.byte	W01
 	.byte		VOL   , 46*se_m_flatter_mvl/mxv
 	.byte		PAN   , c_v+11
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W01
 	.byte		VOL   , 22*se_m_flatter_mvl/mxv
 	.byte		PAN   , c_v-12
-	.byte		BEND  , c_v-15
+	.byte		BEND  , c_b-(15*2)
 	.byte	W02
 	.byte	FINE
 

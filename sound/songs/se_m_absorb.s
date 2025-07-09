@@ -22,7 +22,7 @@ se_m_absorb_1:
 	.byte		VOL   , 110*se_m_absorb_mvl/mxv
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N01   , Cn6 , v127
 	.byte	W01
 	.byte		        Gn6 , v112
@@ -33,27 +33,27 @@ se_m_absorb_1:
 	.byte	W01
 	.byte		VOL   , 68*se_m_absorb_mvl/mxv
 	.byte		PAN   , c_v+8
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W01
 	.byte		VOL   , 75*se_m_absorb_mvl/mxv
 	.byte		PAN   , c_v-8
-	.byte		BEND  , c_v-48
+	.byte		BEND  , c_b-(48*2)
 	.byte	W02
 	.byte		VOL   , 83*se_m_absorb_mvl/mxv
 	.byte		PAN   , c_v+8
-	.byte		BEND  , c_v-18
+	.byte		BEND  , c_b-(18*2)
 	.byte	W01
 	.byte		VOL   , 90*se_m_absorb_mvl/mxv
 	.byte		PAN   , c_v-8
-	.byte		BEND  , c_v+10
+	.byte		BEND  , c_b+(10*2)
 	.byte	W01
 	.byte		VOL   , 101*se_m_absorb_mvl/mxv
 	.byte		PAN   , c_v+9
-	.byte		BEND  , c_v+39
+	.byte		BEND  , c_b+(39*2)
 	.byte	W01
 	.byte		VOL   , 110*se_m_absorb_mvl/mxv
 	.byte		PAN   , c_v-8
-	.byte		BEND  , c_v+63
+	.byte		BEND  , c_b+(63*2)
 	.byte	W03
 	.byte	FINE
 

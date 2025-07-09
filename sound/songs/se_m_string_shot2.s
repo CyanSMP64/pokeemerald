@@ -22,72 +22,72 @@ se_m_string_shot2_1:
 	.byte		BENDR , 12
 	.byte		VOL   , 105*se_m_string_shot2_mvl/mxv
 	.byte		PAN   , c_v-1
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N09   , En4 , v112
 	.byte	W03
-	.byte		BEND  , c_v+6
+	.byte		BEND  , c_b+(6*2)
 	.byte	W03
-	.byte		        c_v+12
+	.byte		BEND  , c_b+(12*2)
 	.byte	W05
-	.byte		        c_v+8
+	.byte		BEND  , c_b+(8*2)
 	.byte	W01
 	.byte		PAN   , c_v+16
 	.byte		N09   , Gn4
 	.byte	W03
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W03
-	.byte		        c_v-14
+	.byte		BEND  , c_b-(14*2)
 	.byte	W06
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-11
+	.byte		BEND  , c_b-(11*2)
 	.byte		N09   , En4
 	.byte	W03
-	.byte		BEND  , c_v-5
+	.byte		BEND  , c_b-(5*2)
 	.byte	W03
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W05
-	.byte		        c_v-3
+	.byte		BEND  , c_b-(3*2)
 	.byte	W01
 	.byte		PAN   , c_v-16
 	.byte		N09   , Gn4
 	.byte	W03
-	.byte		BEND  , c_v-19
+	.byte		BEND  , c_b-(19*2)
 	.byte	W03
-	.byte		        c_v-25
+	.byte		BEND  , c_b-(25*2)
 	.byte	W06
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-19
+	.byte		BEND  , c_b-(19*2)
 	.byte		N09   , En4
 	.byte	W03
-	.byte		BEND  , c_v-13
+	.byte		BEND  , c_b-(13*2)
 	.byte	W03
-	.byte		        c_v-6
+	.byte		BEND  , c_b-(6*2)
 	.byte	W05
-	.byte		        c_v-10
+	.byte		BEND  , c_b-(10*2)
 	.byte	W01
 	.byte		PAN   , c_v+16
 	.byte		N09   , Gn4 , v096
 	.byte	W03
-	.byte		BEND  , c_v-27
+	.byte		BEND  , c_b-(27*2)
 	.byte	W03
-	.byte		        c_v-32
+	.byte		BEND  , c_b-(32*2)
 	.byte	W06
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-32
+	.byte		BEND  , c_b-(32*2)
 	.byte		N09   , En4 , v084
 	.byte	W03
-	.byte		BEND  , c_v-26
+	.byte		BEND  , c_b-(26*2)
 	.byte	W03
-	.byte		        c_v-19
+	.byte		BEND  , c_b-(19*2)
 	.byte	W05
-	.byte		        c_v-23
+	.byte		BEND  , c_b-(23*2)
 	.byte	W01
 	.byte		PAN   , c_v-16
 	.byte		N09   , Gn4 , v060
 	.byte	W03
-	.byte		BEND  , c_v-40
+	.byte		BEND  , c_b-(40*2)
 	.byte	W03
-	.byte		        c_v-45
+	.byte		BEND  , c_b-(45*2)
 	.byte	W06
 	.byte	FINE
 

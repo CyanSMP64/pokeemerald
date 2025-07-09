@@ -96,7 +96,7 @@ void PrintOp(int wait, std::string name, const char *format, ...)
 
     if (format != nullptr)
     {
-        if (!g_compressionEnabled || s_lastOpName != name)
+        if (!g_compressionEnabled || name == "BEND  " || s_lastOpName != name)
         {
             std::fprintf(g_outputFile, "%s, ", name.c_str());
             s_lastOpName = name;
@@ -425,6 +425,23 @@ void PrintAgbTrack(std::vector<Event>& events)
 
     ResetTrackVars();
 
+    bool foundVolBeforeNote = false;
+
+    for (const Event& event : events)
+    {
+        if (event.type == EventType::Note)
+            break;
+
+        if (event.type == EventType::Volume)
+        {
+            foundVolBeforeNote = true;
+            break;
+        }
+    }
+
+    if (!foundVolBeforeNote)
+        PrintByte("\tVOL   , 127*%s_mvl/mxv", g_asmLabel.c_str());
+
     PrintWait(g_initialWait);
     PrintByte("KEYSH , %s_key%+d", g_asmLabel.c_str(), 0);
 
@@ -497,7 +514,7 @@ void PrintAgbTrack(std::vector<Event>& events)
             PrintOp(event.time, "VOICE ", "%u", event.param1);
             break;
         case EventType::PitchBend:
-            PrintOp(event.time, "BEND  ", "c_v%+d", event.param2 - 64);
+            PrintOp(event.time, "BEND  ", "c_b%+d", ((event.param1 >> 6) | (event.param2 << 1)) - 128);
             break;
         case EventType::Controller:
             PrintControllerOp(event);

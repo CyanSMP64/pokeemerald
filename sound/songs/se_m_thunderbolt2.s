@@ -22,7 +22,7 @@ se_m_thunderbolt2_1:
 	.byte		VOL   , 100*se_m_thunderbolt2_mvl/mxv
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N03   , Cn4 , v088
 	.byte	W06
 	.byte		PAN   , c_v-9

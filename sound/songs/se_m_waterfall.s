@@ -22,73 +22,73 @@ se_m_waterfall_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 115*se_m_waterfall_mvl/mxv
-	.byte		BEND  , c_v-18
+	.byte		BEND  , c_b-(18*2)
 	.byte		N60   , Gn2 , v127
 	.byte	W03
 	.byte		PAN   , c_v+3
-	.byte		BEND  , c_v-16
+	.byte		BEND  , c_b-(16*2)
 	.byte	W04
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v-14
+	.byte		BEND  , c_b-(14*2)
 	.byte	W03
 	.byte		PAN   , c_v+3
-	.byte		BEND  , c_v-11
+	.byte		BEND  , c_b-(11*2)
 	.byte	W02
 	.byte	W02
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W04
 	.byte		PAN   , c_v-3
-	.byte		BEND  , c_v-5
+	.byte		BEND  , c_b-(5*2)
 	.byte	W03
 	.byte		PAN   , c_v-6
-	.byte		BEND  , c_v-2
+	.byte		BEND  , c_b-(2*2)
 	.byte	W03
 	.byte	W01
 	.byte		PAN   , c_v-3
-	.byte		BEND  , c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+4
+	.byte		BEND  , c_b+(4*2)
 	.byte	W04
 	.byte		PAN   , c_v+3
-	.byte		BEND  , c_v+7
+	.byte		BEND  , c_b+(7*2)
 	.byte	W02
 	.byte		VOL   , 109*se_m_waterfall_mvl/mxv
 	.byte	W02
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+10
+	.byte		BEND  , c_b+(10*2)
 	.byte	W02
 	.byte		VOL   , 103*se_m_waterfall_mvl/mxv
 	.byte	W01
 	.byte		PAN   , c_v+3
-	.byte		BEND  , c_v+13
+	.byte		BEND  , c_b+(13*2)
 	.byte	W03
 	.byte		VOL   , 92*se_m_waterfall_mvl/mxv
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte	W03
 	.byte		VOL   , 79*se_m_waterfall_mvl/mxv
 	.byte		PAN   , c_v-3
-	.byte		BEND  , c_v+18
+	.byte		BEND  , c_b+(18*2)
 	.byte	W02
 	.byte	W02
 	.byte		VOL   , 62*se_m_waterfall_mvl/mxv
 	.byte		PAN   , c_v-6
-	.byte		BEND  , c_v+21
+	.byte		BEND  , c_b+(21*2)
 	.byte	W04
 	.byte		VOL   , 40*se_m_waterfall_mvl/mxv
 	.byte		PAN   , c_v-3
-	.byte		BEND  , c_v+26
+	.byte		BEND  , c_b+(26*2)
 	.byte	W02
 	.byte		VOL   , 22*se_m_waterfall_mvl/mxv
-	.byte		BEND  , c_v+33
+	.byte		BEND  , c_b+(33*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
 	.byte	W01
 	.byte		VOL   , 8*se_m_waterfall_mvl/mxv
-	.byte		BEND  , c_v+43
+	.byte		BEND  , c_b+(43*2)
 	.byte	W02
 	.byte	FINE
 

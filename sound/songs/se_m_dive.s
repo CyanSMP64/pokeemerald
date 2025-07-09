@@ -22,63 +22,63 @@ se_m_dive_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 105*se_m_dive_mvl/mxv
-	.byte		BEND  , c_v-18
+	.byte		BEND  , c_b-(18*2)
 	.byte		N06   , Fn2 , v127
 	.byte	W03
 	.byte		PAN   , c_v+3
-	.byte		BEND  , c_v-16
+	.byte		BEND  , c_b-(16*2)
 	.byte	W04
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v-14
+	.byte		BEND  , c_b-(14*2)
 	.byte		N04
 	.byte	W03
 	.byte		PAN   , c_v+3
-	.byte		BEND  , c_v-11
+	.byte		BEND  , c_b-(11*2)
 	.byte	W02
 	.byte		N36   , Gn3 , v092
 	.byte	W02
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W04
 	.byte		PAN   , c_v-3
-	.byte		BEND  , c_v-5
+	.byte		BEND  , c_b-(5*2)
 	.byte	W02
 	.byte		VOL   , 100*se_m_dive_mvl/mxv
 	.byte	W01
 	.byte		PAN   , c_v-6
-	.byte		BEND  , c_v-2
+	.byte		BEND  , c_b-(2*2)
 	.byte	W03
 	.byte		VOL   , 94*se_m_dive_mvl/mxv
 	.byte	W01
 	.byte		PAN   , c_v-3
-	.byte		BEND  , c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W02
 	.byte		VOL   , 84*se_m_dive_mvl/mxv
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+4
+	.byte		BEND  , c_b+(4*2)
 	.byte	W04
 	.byte		PAN   , c_v+3
 	.byte		VOL   , 72*se_m_dive_mvl/mxv
-	.byte		BEND  , c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte	W04
 	.byte		PAN   , c_v+6
 	.byte		VOL   , 57*se_m_dive_mvl/mxv
-	.byte		BEND  , c_v-3
+	.byte		BEND  , c_b-(3*2)
 	.byte	W03
 	.byte		PAN   , c_v+3
 	.byte		VOL   , 37*se_m_dive_mvl/mxv
-	.byte		BEND  , c_v-7
+	.byte		BEND  , c_b-(7*2)
 	.byte	W03
 	.byte		VOL   , 20*se_m_dive_mvl/mxv
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-11
+	.byte		BEND  , c_b-(11*2)
 	.byte	W01
 	.byte		VOL   , 7*se_m_dive_mvl/mxv
 	.byte	W02
 	.byte		PAN   , c_v-3
-	.byte		BEND  , c_v-16
+	.byte		BEND  , c_b-(16*2)
 	.byte	W02
 	.byte	FINE
 

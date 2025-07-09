@@ -7,6 +7,7 @@
 	.equiv MAX_DIRECTSOUND_CHANNELS, 15
 
 	.equiv C_V, 0x40
+	.equiv C_B, 0x80
 
 	.equiv TONEDATA_TYPE_CGB, 0x07
 	.equiv TONEDATA_TYPE_FIX, 0x08

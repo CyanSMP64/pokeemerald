@@ -20,7 +20,7 @@ se_wall_hit_1:
 	.byte	TEMPO , 220*se_wall_hit_tbs/2
 	.byte		VOICE , 89
 	.byte		VOL   , 80*se_wall_hit_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N18   , Gn1 , v127
 	.byte	W24
 	.byte	FINE

@@ -22,96 +22,96 @@ se_m_bubble_beam2_1:
 	.byte		BENDR , 2
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 26*se_m_bubble_beam2_mvl/mxv
-	.byte		BEND  , c_v-23
+	.byte		BEND  , c_b-(23*2)
 	.byte		N09   , Dn5 , v127
 	.byte	W01
 	.byte		VOL   , 34*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W01
 	.byte		VOL   , 42*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v-7
-	.byte		BEND  , c_v-16
+	.byte		BEND  , c_b-(16*2)
 	.byte	W01
 	.byte		VOL   , 52*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v+9
 	.byte	W01
 	.byte		VOL   , 72*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v-13
-	.byte		BEND  , c_v-18
+	.byte		BEND  , c_b-(18*2)
 	.byte	W02
 	.byte		VOL   , 85*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v-21
+	.byte		BEND  , c_b-(21*2)
 	.byte	W01
 	.byte		VOL   , 102*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v-6
-	.byte		BEND  , c_v-23
+	.byte		BEND  , c_b-(23*2)
 	.byte	W01
 	.byte		VOL   , 120*se_m_bubble_beam2_mvl/mxv
-	.byte		BEND  , c_v-24
+	.byte		BEND  , c_b-(24*2)
 	.byte	W02
 	.byte		VOL   , 26*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-23
+	.byte		BEND  , c_b-(23*2)
 	.byte		N09   , Dn5 , v100
 	.byte	W02
 	.byte		VOL   , 34*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W01
 	.byte		VOL   , 42*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v-7
-	.byte		BEND  , c_v-16
+	.byte		BEND  , c_b-(16*2)
 	.byte	W01
 	.byte		VOL   , 52*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v+9
 	.byte	W01
 	.byte		VOL   , 72*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v-13
-	.byte		BEND  , c_v-18
+	.byte		BEND  , c_b-(18*2)
 	.byte	W01
 	.byte		VOL   , 85*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v-21
+	.byte		BEND  , c_b-(21*2)
 	.byte	W02
 	.byte		VOL   , 102*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v-6
-	.byte		BEND  , c_v-23
+	.byte		BEND  , c_b-(23*2)
 	.byte	W01
 	.byte		VOL   , 120*se_m_bubble_beam2_mvl/mxv
-	.byte		BEND  , c_v-24
+	.byte		BEND  , c_b-(24*2)
 	.byte	W02
 	.byte		VOL   , 26*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-23
+	.byte		BEND  , c_b-(23*2)
 	.byte		N09   , Dn5 , v080
 	.byte	W01
 	.byte		VOL   , 34*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W02
 	.byte		VOL   , 42*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v-7
-	.byte		BEND  , c_v-16
+	.byte		BEND  , c_b-(16*2)
 	.byte	W01
 	.byte		VOL   , 52*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v+9
 	.byte	W01
 	.byte		VOL   , 72*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v-13
-	.byte		BEND  , c_v-18
+	.byte		BEND  , c_b-(18*2)
 	.byte	W01
 	.byte		VOL   , 85*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v-21
+	.byte		BEND  , c_b-(21*2)
 	.byte	W01
 	.byte		VOL   , 102*se_m_bubble_beam2_mvl/mxv
 	.byte		PAN   , c_v-6
-	.byte		BEND  , c_v-23
+	.byte		BEND  , c_b-(23*2)
 	.byte	W02
 	.byte		VOL   , 120*se_m_bubble_beam2_mvl/mxv
-	.byte		BEND  , c_v-24
+	.byte		BEND  , c_b-(24*2)
 	.byte	W06
 	.byte	FINE
 

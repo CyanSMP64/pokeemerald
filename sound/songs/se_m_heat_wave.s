@@ -22,7 +22,7 @@ se_m_heat_wave_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 23*se_m_heat_wave_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		TIE   , Fn4 , v127
 	.byte	W01
 	.byte		VOL   , 51*se_m_heat_wave_mvl/mxv
@@ -30,62 +30,62 @@ se_m_heat_wave_1:
 	.byte		        75*se_m_heat_wave_mvl/mxv
 	.byte	W01
 	.byte		        99*se_m_heat_wave_mvl/mxv
-	.byte		BEND  , c_v+8
+	.byte		BEND  , c_b+(8*2)
 	.byte	W01
 	.byte		VOL   , 115*se_m_heat_wave_mvl/mxv
 	.byte	W02
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte	W01
 	.byte		VOL   , 99*se_m_heat_wave_mvl/mxv
 	.byte	W02
 	.byte		        92*se_m_heat_wave_mvl/mxv
-	.byte		BEND  , c_v+7
+	.byte		BEND  , c_b+(7*2)
 	.byte	W01
 	.byte		VOL   , 97*se_m_heat_wave_mvl/mxv
 	.byte	W02
 	.byte		        105*se_m_heat_wave_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W03
 	.byte		VOL   , 110*se_m_heat_wave_mvl/mxv
-	.byte		BEND  , c_v-9
+	.byte		BEND  , c_b-(9*2)
 	.byte	W03
 	.byte		PAN   , c_v-8
-	.byte		BEND  , c_v-24
+	.byte		BEND  , c_b-(24*2)
 	.byte	W03
 	.byte		VOL   , 115*se_m_heat_wave_mvl/mxv
-	.byte		BEND  , c_v-38
+	.byte		BEND  , c_b-(38*2)
 	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-41
+	.byte		BEND  , c_b-(41*2)
 	.byte	W04
-	.byte		        c_v-45
+	.byte		BEND  , c_b-(45*2)
 	.byte	W02
 	.byte		PAN   , c_v+6
 	.byte	W02
-	.byte		BEND  , c_v-39
+	.byte		BEND  , c_b-(39*2)
 	.byte	W04
 	.byte		PAN   , c_v+0
 	.byte	W03
-	.byte		BEND  , c_v-35
+	.byte		BEND  , c_b-(35*2)
 	.byte	W03
 	.byte		PAN   , c_v-8
 	.byte	W03
-	.byte		BEND  , c_v-30
+	.byte		BEND  , c_b-(30*2)
 	.byte	W03
 	.byte		PAN   , c_v+0
 	.byte	W03
-	.byte		BEND  , c_v-26
+	.byte		BEND  , c_b-(26*2)
 	.byte	W03
 	.byte		PAN   , c_v+6
 	.byte	W01
-	.byte		BEND  , c_v-22
+	.byte		BEND  , c_b-(22*2)
 	.byte	W05
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-18
+	.byte		BEND  , c_b-(18*2)
 	.byte	W04
-	.byte		        c_v-13
+	.byte		BEND  , c_b-(13*2)
 	.byte	W02
 	.byte		PAN   , c_v-8
 	.byte	W06
@@ -93,11 +93,11 @@ se_m_heat_wave_1:
 	.byte	W06
 	.byte		        c_v+6
 	.byte	W03
-	.byte		BEND  , c_v-7
+	.byte		BEND  , c_b-(7*2)
 	.byte	W03
 	.byte		PAN   , c_v+0
 	.byte	W04
-	.byte		BEND  , c_v-3
+	.byte		BEND  , c_b-(3*2)
 	.byte	W02
 	.byte		PAN   , c_v-8
 	.byte		VOL   , 113*se_m_heat_wave_mvl/mxv
@@ -106,42 +106,42 @@ se_m_heat_wave_1:
 	.byte	W02
 	.byte		PAN   , c_v+0
 	.byte	W02
-	.byte		BEND  , c_v-7
+	.byte		BEND  , c_b-(7*2)
 	.byte	W02
 	.byte		VOL   , 105*se_m_heat_wave_mvl/mxv
 	.byte	W02
 	.byte		PAN   , c_v+6
 	.byte	W03
 	.byte		VOL   , 98*se_m_heat_wave_mvl/mxv
-	.byte		BEND  , c_v-11
+	.byte		BEND  , c_b-(11*2)
 	.byte	W03
 	.byte		PAN   , c_v+0
 	.byte	W01
 	.byte		VOL   , 91*se_m_heat_wave_mvl/mxv
 	.byte	W03
 	.byte		        81*se_m_heat_wave_mvl/mxv
-	.byte		BEND  , c_v-15
+	.byte		BEND  , c_b-(15*2)
 	.byte	W02
 	.byte		PAN   , c_v-8
 	.byte	W02
 	.byte		VOL   , 74*se_m_heat_wave_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v-22
+	.byte		BEND  , c_b-(22*2)
 	.byte	W03
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 63*se_m_heat_wave_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v-30
+	.byte		BEND  , c_b-(30*2)
 	.byte	W01
 	.byte		VOL   , 50*se_m_heat_wave_mvl/mxv
 	.byte	W02
 	.byte		        40*se_m_heat_wave_mvl/mxv
-	.byte		BEND  , c_v-39
+	.byte		BEND  , c_b-(39*2)
 	.byte	W02
 	.byte		PAN   , c_v+6
 	.byte	W01
 	.byte		VOL   , 28*se_m_heat_wave_mvl/mxv
-	.byte		BEND  , c_v-52
+	.byte		BEND  , c_b-(52*2)
 	.byte	W02
 	.byte		VOL   , 17*se_m_heat_wave_mvl/mxv
 	.byte	W03

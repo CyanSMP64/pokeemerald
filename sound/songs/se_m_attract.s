@@ -22,7 +22,7 @@ se_m_attract_1:
 	.byte		VOL   , 95*se_m_attract_mvl/mxv
 	.byte		BENDR , 2
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+15
+	.byte		BEND  , c_b+(15*2)
 	.byte	W03
 	.byte		N06   , Cn6 , v116
 	.byte	W03
@@ -73,7 +73,7 @@ se_m_attract_2:
 	.byte		BENDR , 2
 	.byte		VOL   , 43*se_m_attract_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+15
+	.byte		BEND  , c_b+(15*2)
 	.byte		N06   , Cn5 , v120
 	.byte	W03
 	.byte	W03

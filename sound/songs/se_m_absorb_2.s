@@ -22,7 +22,7 @@ se_m_absorb_2_1:
 	.byte		VOL   , 110*se_m_absorb_2_mvl/mxv
 	.byte		BENDR , 2
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+15
+	.byte		BEND  , c_b+(15*2)
 	.byte	W01
 	.byte		N02   , Dn6 , v112
 	.byte	W02
@@ -86,7 +86,7 @@ se_m_absorb_2_2:
 	.byte		VOICE , 53
 	.byte		BENDR , 2
 	.byte		VOL   , 43*se_m_absorb_2_mvl/mxv
-	.byte		BEND  , c_v+15
+	.byte		BEND  , c_b+(15*2)
 	.byte		N02   , An6 , v112
 	.byte	W02
 	.byte		        Fs6

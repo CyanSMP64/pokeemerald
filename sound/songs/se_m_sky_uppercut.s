@@ -22,7 +22,7 @@ se_m_sky_uppercut_1:
 	.byte		VOL   , 110*se_m_sky_uppercut_mvl/mxv
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N02   , Cn4 , v127
 	.byte	W03
 	.byte		VOL   , 104*se_m_sky_uppercut_mvl/mxv
@@ -38,31 +38,31 @@ se_m_sky_uppercut_1:
 	.byte		N24   , Cn4 , v060
 	.byte	W02
 	.byte	W02
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W04
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W03
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W01
 	.byte		VOL   , 105*se_m_sky_uppercut_mvl/mxv
 	.byte	W02
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W01
 	.byte		VOL   , 103*se_m_sky_uppercut_mvl/mxv
 	.byte	W02
 	.byte		        91*se_m_sky_uppercut_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W03
 	.byte		VOL   , 77*se_m_sky_uppercut_mvl/mxv
-	.byte		BEND  , c_v-1
+	.byte		BEND  , c_b-(1*2)
 	.byte	W02
 	.byte		VOL   , 61*se_m_sky_uppercut_mvl/mxv
-	.byte		BEND  , c_v-2
+	.byte		BEND  , c_b-(2*2)
 	.byte	W01
 	.byte		VOL   , 38*se_m_sky_uppercut_mvl/mxv
 	.byte	W01
 	.byte		        15*se_m_sky_uppercut_mvl/mxv
-	.byte		BEND  , c_v-3
+	.byte		BEND  , c_b-(3*2)
 	.byte	W02
 	.byte	FINE
 

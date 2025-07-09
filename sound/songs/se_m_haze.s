@@ -23,7 +23,7 @@ se_m_haze_1:
 	.byte		PAN   , c_v-47
 	.byte		VOL   , 10*se_m_haze_mvl/mxv
 	.byte		MOD   , 30
-	.byte		BEND  , c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte		TIE   , As2 , v100
 	.byte	W03
 	.byte		VOL   , 14*se_m_haze_mvl/mxv
@@ -186,7 +186,7 @@ se_m_haze_2:
 	.byte		BENDR , 8
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 110*se_m_haze_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N24   , Fn4 , v020
 	.byte	W06
 	.byte	W06

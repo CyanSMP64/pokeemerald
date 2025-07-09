@@ -22,7 +22,7 @@ se_m_sacred_fire_1:
 	.byte		BENDR , 12
 	.byte		VOL   , 110*se_m_sacred_fire_mvl/mxv
 	.byte		PAN   , c_v+5
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N04   , Cn3 , v127
 	.byte	W03
 	.byte		PAN   , c_v+0
@@ -32,28 +32,28 @@ se_m_sacred_fire_1:
 	.byte		PAN   , c_v-5
 	.byte	W01
 	.byte		VOL   , 98*se_m_sacred_fire_mvl/mxv
-	.byte		BEND  , c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte	W02
 	.byte		PAN   , c_v+0
 	.byte	W01
 	.byte		VOL   , 83*se_m_sacred_fire_mvl/mxv
-	.byte		BEND  , c_v+6
+	.byte		BEND  , c_b+(6*2)
 	.byte	W02
 	.byte		PAN   , c_v+5
 	.byte	W01
-	.byte		BEND  , c_v+9
+	.byte		BEND  , c_b+(9*2)
 	.byte	W01
 	.byte		VOL   , 63*se_m_sacred_fire_mvl/mxv
 	.byte	W01
 	.byte		PAN   , c_v+0
 	.byte	W01
-	.byte		BEND  , c_v+13
+	.byte		BEND  , c_b+(13*2)
 	.byte	W02
 	.byte		VOL   , 44*se_m_sacred_fire_mvl/mxv
 	.byte		PAN   , c_v-5
 	.byte	W02
 	.byte		VOL   , 28*se_m_sacred_fire_mvl/mxv
-	.byte		BEND  , c_v+20
+	.byte		BEND  , c_b+(20*2)
 	.byte	W01
 	.byte		PAN   , c_v-2
 	.byte	W01

@@ -22,181 +22,181 @@ se_m_psybeam2_1:
 	.byte		BENDR , 8
 	.byte		VOL   , 36*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-44
+	.byte		BEND  , c_b-(44*2)
 	.byte		N12   , Gs2 , v127
 	.byte	W01
 	.byte		VOL   , 52*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W01
 	.byte		VOL   , 67*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v-6
-	.byte		BEND  , c_v+17
+	.byte		BEND  , c_b+(17*2)
 	.byte	W01
 	.byte		VOL   , 78*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+27
+	.byte		BEND  , c_b+(27*2)
 	.byte	W01
 	.byte		VOL   , 105*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+44
+	.byte		BEND  , c_b+(44*2)
 	.byte	W02
 	.byte		PAN   , c_v-6
-	.byte		BEND  , c_v+63
+	.byte		BEND  , c_b+(63*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+44
+	.byte		BEND  , c_b+(44*2)
 	.byte	W01
 	.byte		VOL   , 86*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+28
+	.byte		BEND  , c_b+(28*2)
 	.byte	W01
 	.byte		VOL   , 55*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v-6
-	.byte		BEND  , c_v+17
+	.byte		BEND  , c_b+(17*2)
 	.byte	W01
 	.byte		VOL   , 33*se_m_psybeam2_mvl/mxv
-	.byte		BEND  , c_v+5
+	.byte		BEND  , c_b+(5*2)
 	.byte	W02
 	.byte		VOICE , 37
 	.byte		VOL   , 105*se_m_psybeam2_mvl/mxv
 	.byte		N02   , Gs3 , v080
 	.byte	W01
-	.byte		BEND  , c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte	W01
 	.byte		VOICE , 45
 	.byte		VOL   , 36*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-44
+	.byte		BEND  , c_b-(44*2)
 	.byte		N12   , As2 , v127
 	.byte	W01
 	.byte		VOL   , 52*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W01
 	.byte		VOL   , 67*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v-6
-	.byte		BEND  , c_v+17
+	.byte		BEND  , c_b+(17*2)
 	.byte	W02
 	.byte		VOL   , 78*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+27
+	.byte		BEND  , c_b+(27*2)
 	.byte	W01
 	.byte		VOL   , 105*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+11
-	.byte		BEND  , c_v+44
+	.byte		BEND  , c_b+(44*2)
 	.byte	W01
 	.byte		PAN   , c_v-11
-	.byte		BEND  , c_v+63
+	.byte		BEND  , c_b+(63*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+44
+	.byte		BEND  , c_b+(44*2)
 	.byte	W01
 	.byte		VOL   , 86*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+11
-	.byte		BEND  , c_v+28
+	.byte		BEND  , c_b+(28*2)
 	.byte	W02
 	.byte		VOL   , 55*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v-11
-	.byte		BEND  , c_v+17
+	.byte		BEND  , c_b+(17*2)
 	.byte	W01
 	.byte		VOL   , 33*se_m_psybeam2_mvl/mxv
-	.byte		BEND  , c_v+5
+	.byte		BEND  , c_b+(5*2)
 	.byte	W01
 	.byte		VOICE , 37
 	.byte		VOL   , 105*se_m_psybeam2_mvl/mxv
 	.byte		N02   , As3 , v056
 	.byte	W01
-	.byte		BEND  , c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte	W01
 	.byte		VOICE , 45
 	.byte		VOL   , 36*se_m_psybeam2_mvl/mxv
-	.byte		BEND  , c_v-44
+	.byte		BEND  , c_b-(44*2)
 	.byte		N12   , Gs2 , v080
 	.byte	W02
 	.byte		VOL   , 52*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W01
 	.byte		VOL   , 67*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+17
+	.byte		BEND  , c_b+(17*2)
 	.byte	W01
 	.byte		VOL   , 78*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v-6
-	.byte		BEND  , c_v+27
+	.byte		BEND  , c_b+(27*2)
 	.byte	W01
 	.byte		VOL   , 105*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+44
+	.byte		BEND  , c_b+(44*2)
 	.byte	W01
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+63
+	.byte		BEND  , c_b+(63*2)
 	.byte	W02
 	.byte		PAN   , c_v-6
-	.byte		BEND  , c_v+44
+	.byte		BEND  , c_b+(44*2)
 	.byte	W01
 	.byte		VOL   , 86*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+28
+	.byte		BEND  , c_b+(28*2)
 	.byte	W01
 	.byte		VOL   , 55*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+17
+	.byte		BEND  , c_b+(17*2)
 	.byte	W01
 	.byte		VOL   , 33*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v-6
-	.byte		BEND  , c_v+5
+	.byte		BEND  , c_b+(5*2)
 	.byte	W01
 	.byte		VOICE , 37
 	.byte		VOL   , 105*se_m_psybeam2_mvl/mxv
 	.byte		N02   , Gs3 , v024
 	.byte	W02
-	.byte		BEND  , c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte	W01
 	.byte		VOICE , 45
 	.byte		VOL   , 36*se_m_psybeam2_mvl/mxv
-	.byte		BEND  , c_v-44
+	.byte		BEND  , c_b-(44*2)
 	.byte		N12   , As2 , v040
 	.byte	W01
 	.byte		VOL   , 52*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W01
 	.byte		VOL   , 67*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+17
+	.byte		BEND  , c_b+(17*2)
 	.byte	W01
 	.byte		VOL   , 78*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v-6
-	.byte		BEND  , c_v+27
+	.byte		BEND  , c_b+(27*2)
 	.byte	W02
 	.byte		VOL   , 105*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+44
+	.byte		BEND  , c_b+(44*2)
 	.byte	W01
 	.byte		PAN   , c_v+11
-	.byte		BEND  , c_v+63
+	.byte		BEND  , c_b+(63*2)
 	.byte	W01
 	.byte		PAN   , c_v-11
-	.byte		BEND  , c_v+44
+	.byte		BEND  , c_b+(44*2)
 	.byte	W01
 	.byte		VOL   , 86*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+28
+	.byte		BEND  , c_b+(28*2)
 	.byte	W01
 	.byte		VOL   , 55*se_m_psybeam2_mvl/mxv
 	.byte		PAN   , c_v+11
-	.byte		BEND  , c_v+17
+	.byte		BEND  , c_b+(17*2)
 	.byte	W02
 	.byte		VOL   , 33*se_m_psybeam2_mvl/mxv
-	.byte		BEND  , c_v+5
+	.byte		BEND  , c_b+(5*2)
 	.byte	W01
 	.byte		VOICE , 37
 	.byte		VOL   , 105*se_m_psybeam2_mvl/mxv
 	.byte		N02   , As3 , v016
 	.byte	W01
-	.byte		BEND  , c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte	W04
 	.byte	FINE
 

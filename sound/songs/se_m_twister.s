@@ -22,38 +22,38 @@ se_m_twister_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 67*se_m_twister_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		TIE   , Dn2 , v127
 	.byte	W03
 	.byte		VOL   , 83*se_m_twister_mvl/mxv
-	.byte		BEND  , c_v+22
+	.byte		BEND  , c_b+(22*2)
 	.byte	W03
 	.byte		VOL   , 88*se_m_twister_mvl/mxv
 	.byte		PAN   , c_v-4
 	.byte	W03
 	.byte		VOL   , 95*se_m_twister_mvl/mxv
 	.byte	W02
-	.byte		BEND  , c_v+8
+	.byte		BEND  , c_b+(8*2)
 	.byte	W01
 	.byte		VOL   , 105*se_m_twister_mvl/mxv
 	.byte		PAN   , c_v-8
 	.byte	W03
 	.byte		VOL   , 115*se_m_twister_mvl/mxv
 	.byte	W02
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W01
 	.byte		PAN   , c_v-12
 	.byte	W06
 	.byte		        c_v-17
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W03
-	.byte		        c_v-7
+	.byte		BEND  , c_b-(7*2)
 	.byte	W03
 	.byte		PAN   , c_v-9
 	.byte	W06
 	.byte		        c_v-3
 	.byte	W01
-	.byte		BEND  , c_v-12
+	.byte		BEND  , c_b-(12*2)
 	.byte	W02
 	.byte		PAN   , c_v+6
 	.byte	W03
@@ -61,7 +61,7 @@ se_m_twister_1:
 	.byte	W06
 	.byte		        c_v+16
 	.byte	W01
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W05
 	.byte		PAN   , c_v+13
 	.byte	W06
@@ -69,7 +69,7 @@ se_m_twister_1:
 	.byte	W03
 	.byte		        c_v+0
 	.byte	W01
-	.byte		BEND  , c_v-13
+	.byte		BEND  , c_b-(13*2)
 	.byte	W02
 	.byte		PAN   , c_v-8
 	.byte	W03
@@ -77,7 +77,7 @@ se_m_twister_1:
 	.byte	W03
 	.byte		        c_v-17
 	.byte	W01
-	.byte		BEND  , c_v-6
+	.byte		BEND  , c_b-(6*2)
 	.byte	W05
 	.byte		PAN   , c_v-9
 	.byte	W06
@@ -87,7 +87,7 @@ se_m_twister_1:
 	.byte	W03
 	.byte		        c_v+10
 	.byte	W01
-	.byte		BEND  , c_v+6
+	.byte		BEND  , c_b+(6*2)
 	.byte	W05
 	.byte		PAN   , c_v+16
 	.byte	W06
@@ -96,7 +96,7 @@ se_m_twister_1:
 	.byte		        c_v+8
 	.byte	W03
 	.byte		        c_v+0
-	.byte		BEND  , c_v+11
+	.byte		BEND  , c_b+(11*2)
 	.byte	W03
 	.byte		PAN   , c_v-8
 	.byte	W03
@@ -105,7 +105,7 @@ se_m_twister_1:
 	.byte	W03
 	.byte		PAN   , c_v-17
 	.byte	W01
-	.byte		BEND  , c_v+20
+	.byte		BEND  , c_b+(20*2)
 	.byte	W05
 	.byte		PAN   , c_v-9
 	.byte	W01
@@ -113,21 +113,21 @@ se_m_twister_1:
 	.byte	W05
 	.byte		PAN   , c_v-3
 	.byte	W01
-	.byte		BEND  , c_v+12
+	.byte		BEND  , c_b+(12*2)
 	.byte	W02
 	.byte		PAN   , c_v+6
 	.byte		VOL   , 88*se_m_twister_mvl/mxv
 	.byte	W03
 	.byte		PAN   , c_v+10
 	.byte	W02
-	.byte		BEND  , c_v+7
+	.byte		BEND  , c_b+(7*2)
 	.byte	W02
 	.byte		VOL   , 79*se_m_twister_mvl/mxv
 	.byte	W02
 	.byte		PAN   , c_v+16
 	.byte	W04
 	.byte		VOL   , 62*se_m_twister_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W02
 	.byte		PAN   , c_v+13
 	.byte	W04
@@ -135,7 +135,7 @@ se_m_twister_1:
 	.byte	W02
 	.byte		PAN   , c_v+8
 	.byte	W01
-	.byte		BEND  , c_v-7
+	.byte		BEND  , c_b-(7*2)
 	.byte	W01
 	.byte		VOL   , 33*se_m_twister_mvl/mxv
 	.byte	W01

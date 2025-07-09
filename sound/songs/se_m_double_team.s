@@ -22,28 +22,28 @@ se_m_double_team_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 110*se_m_double_team_mvl/mxv
-	.byte		BEND  , c_v-18
+	.byte		BEND  , c_b-(18*2)
 	.byte		N19   , Dn3 , v108
 	.byte	W02
-	.byte		BEND  , c_v-7
+	.byte		BEND  , c_b-(7*2)
 	.byte	W01
 	.byte		VOL   , 101*se_m_double_team_mvl/mxv
 	.byte	W01
 	.byte		PAN   , c_v-9
-	.byte		BEND  , c_v+8
+	.byte		BEND  , c_b+(8*2)
 	.byte	W02
 	.byte		VOL   , 84*se_m_double_team_mvl/mxv
-	.byte		BEND  , c_v+4
+	.byte		BEND  , c_b+(4*2)
 	.byte	W02
 	.byte		PAN   , c_v+0
 	.byte	W01
 	.byte		VOL   , 64*se_m_double_team_mvl/mxv
-	.byte		BEND  , c_v-13
+	.byte		BEND  , c_b-(13*2)
 	.byte	W01
 	.byte		PAN   , c_v+8
 	.byte	W02
 	.byte		VOL   , 45*se_m_double_team_mvl/mxv
-	.byte		BEND  , c_v-31
+	.byte		BEND  , c_b-(31*2)
 	.byte	W02
 	.byte		VOL   , 32*se_m_double_team_mvl/mxv
 	.byte		PAN   , c_v+0
@@ -51,7 +51,7 @@ se_m_double_team_1:
 	.byte		VOICE , 2
 	.byte	W01
 	.byte		VOL   , 13*se_m_double_team_mvl/mxv
-	.byte		BEND  , c_v-52
+	.byte		BEND  , c_b-(52*2)
 	.byte	W08
 	.byte	FINE
 

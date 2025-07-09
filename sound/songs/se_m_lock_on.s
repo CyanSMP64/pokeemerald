@@ -22,7 +22,7 @@ se_m_lock_on_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 110*se_m_lock_on_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N01   , Cn4 , v100
 	.byte	W01
 	.byte		        Gn3 , v064
@@ -30,25 +30,25 @@ se_m_lock_on_1:
 	.byte		N03   , Bn3 , v100
 	.byte	W01
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+6
+	.byte		BEND  , c_b+(6*2)
 	.byte	W01
 	.byte		PAN   , c_v-5
-	.byte		BEND  , c_v-6
+	.byte		BEND  , c_b-(6*2)
 	.byte	W02
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+6
+	.byte		BEND  , c_b+(6*2)
 	.byte		N01   , Cn4
 	.byte	W01
 	.byte		        Gn3 , v064
 	.byte	W02
 	.byte		PAN   , c_v-5
-	.byte		BEND  , c_v-6
+	.byte		BEND  , c_b-(6*2)
 	.byte		N01   , Bn3 , v100
 	.byte	W01
 	.byte		        Gn3 , v064
 	.byte	W02
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N06   , Bn3 , v100
 	.byte	W06
 	.byte	FINE

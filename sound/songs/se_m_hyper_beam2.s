@@ -22,55 +22,55 @@ se_m_hyper_beam2_1:
 	.byte		VOL   , 110*se_m_hyper_beam2_mvl/mxv
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N03   , Gn3 , v092
 	.byte	W01
-	.byte		BEND  , c_v+11
+	.byte		BEND  , c_b+(11*2)
 	.byte	W01
-	.byte		        c_v+28
+	.byte		BEND  , c_b+(28*2)
 	.byte	W01
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N02   , Cs4
 	.byte	W01
-	.byte		BEND  , c_v+30
+	.byte		BEND  , c_b+(30*2)
 	.byte	W02
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N03   , As3
 	.byte	W01
-	.byte		BEND  , c_v+11
+	.byte		BEND  , c_b+(11*2)
 	.byte	W01
-	.byte		        c_v+28
+	.byte		BEND  , c_b+(28*2)
 	.byte	W01
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N02   , En4
 	.byte	W01
-	.byte		BEND  , c_v+30
+	.byte		BEND  , c_b+(30*2)
 	.byte	W02
 	.byte		PAN   , c_v+7
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N03   , Gn3 , v040
 	.byte	W01
-	.byte		BEND  , c_v+11
+	.byte		BEND  , c_b+(11*2)
 	.byte	W01
-	.byte		        c_v+28
+	.byte		BEND  , c_b+(28*2)
 	.byte	W01
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N02   , Cs4
 	.byte	W01
-	.byte		BEND  , c_v+30
+	.byte		BEND  , c_b+(30*2)
 	.byte	W02
 	.byte		PAN   , c_v-7
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N03   , As3 , v016
 	.byte	W01
-	.byte		BEND  , c_v+11
+	.byte		BEND  , c_b+(11*2)
 	.byte	W01
-	.byte		        c_v+28
+	.byte		BEND  , c_b+(28*2)
 	.byte	W01
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N02   , En4
 	.byte	W01
-	.byte		BEND  , c_v+30
+	.byte		BEND  , c_b+(30*2)
 	.byte	W02
 	.byte	FINE
 

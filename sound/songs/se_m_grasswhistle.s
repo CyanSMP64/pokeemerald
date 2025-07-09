@@ -23,12 +23,12 @@ se_m_grasswhistle_1:
 	.byte		LFOS  , 40
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 70*se_m_grasswhistle_mvl/mxv
-	.byte		BEND  , c_v-16
+	.byte		BEND  , c_b-(16*2)
 	.byte		N21   , Gn5 , v112
 	.byte	W03
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W03
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W03
 	.byte		MOD   , 10
 	.byte	W03
@@ -39,14 +39,14 @@ se_m_grasswhistle_1:
 	.byte	W12
 	.byte		        En5
 	.byte	W12
-	.byte		BEND  , c_v-14
+	.byte		BEND  , c_b-(14*2)
 	.byte		N66   , Gn5
 	.byte	W06
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W06
-	.byte		        c_v-4
+	.byte		BEND  , c_b-(4*2)
 	.byte	W06
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W06
 	.byte		MOD   , 10
 	.byte	W12
@@ -72,12 +72,12 @@ se_m_grasswhistle_2:
 	.byte		VOL   , 70*se_m_grasswhistle_mvl/mxv
 	.byte	W12
 	.byte		PAN   , c_v+12
-	.byte		BEND  , c_v-16
+	.byte		BEND  , c_b-(16*2)
 	.byte		N21   , Gn5 , v072
 	.byte	W03
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W03
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W03
 	.byte		MOD   , 10
 	.byte	W03
@@ -91,14 +91,14 @@ se_m_grasswhistle_2:
 	.byte		N09   , En5
 	.byte	W12
 	.byte		PAN   , c_v-15
-	.byte		BEND  , c_v-14
+	.byte		BEND  , c_b-(14*2)
 	.byte		N66   , Gn5
 	.byte	W06
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W06
-	.byte		        c_v-4
+	.byte		BEND  , c_b-(4*2)
 	.byte	W06
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W06
 	.byte		MOD   , 10
 	.byte	W12

@@ -22,56 +22,56 @@ se_m_detect_1:
 	.byte		VOL   , 100*se_m_detect_mvl/mxv
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte		N03   , As5 , v127
 	.byte	W01
 	.byte		PAN   , c_v+2
-	.byte		BEND  , c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte	W01
-	.byte		        c_v+4
+	.byte		BEND  , c_b+(4*2)
 	.byte	W01
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte		N06   , Bn5
 	.byte	W01
 	.byte		PAN   , c_v+0
 	.byte	W02
 	.byte	W03
-	.byte		BEND  , c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte		N03   , As5 , v104
 	.byte	W01
 	.byte		PAN   , c_v-2
-	.byte		BEND  , c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte	W02
-	.byte		        c_v+4
+	.byte		BEND  , c_b+(4*2)
 	.byte	W01
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte		N06   , Bn5
 	.byte	W01
 	.byte		PAN   , c_v+0
 	.byte	W04
 	.byte	W01
-	.byte		BEND  , c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte		N03   , As5 , v080
 	.byte	W01
 	.byte		PAN   , c_v+4
-	.byte		BEND  , c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte	W01
-	.byte		        c_v+4
+	.byte		BEND  , c_b+(4*2)
 	.byte	W01
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte		N06   , Bn5
 	.byte	W02
 	.byte		PAN   , c_v+0
 	.byte	W04
-	.byte		BEND  , c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte		N03   , As5 , v048
 	.byte	W02
 	.byte		PAN   , c_v-5
-	.byte		BEND  , c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte	W01
-	.byte		        c_v+4
+	.byte		BEND  , c_b+(4*2)
 	.byte	W01
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte		N06   , Bn5
 	.byte	W01
 	.byte		PAN   , c_v+0

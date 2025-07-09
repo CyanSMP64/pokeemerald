@@ -22,33 +22,33 @@ se_m_string_shot_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 110*se_m_string_shot_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N48   , Fn4 , v108
 	.byte	W03
 	.byte		PAN   , c_v+5
-	.byte		BEND  , c_v+6
+	.byte		BEND  , c_b+(6*2)
 	.byte	W03
 	.byte		PAN   , c_v+15
-	.byte		BEND  , c_v+12
+	.byte		BEND  , c_b+(12*2)
 	.byte	W03
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+21
+	.byte		BEND  , c_b+(21*2)
 	.byte	W02
-	.byte		        c_v+8
+	.byte		BEND  , c_b+(8*2)
 	.byte	W01
 	.byte		PAN   , c_v-1
 	.byte	W03
 	.byte		        c_v-9
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W03
 	.byte		PAN   , c_v-15
-	.byte		BEND  , c_v-14
+	.byte		BEND  , c_b-(14*2)
 	.byte	W03
 	.byte		PAN   , c_v-9
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W06
 	.byte		VOL   , 90*se_m_string_shot_mvl/mxv
 	.byte	W03

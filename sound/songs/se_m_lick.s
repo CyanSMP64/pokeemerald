@@ -22,94 +22,94 @@ se_m_lick_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 110*se_m_lick_mvl/mxv
-	.byte		BEND  , c_v-5
+	.byte		BEND  , c_b-(5*2)
 	.byte		N32   , Cn3 , v127
 	.byte	W01
 	.byte		PAN   , c_v+4
-	.byte		BEND  , c_v-9
+	.byte		BEND  , c_b-(9*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-13
+	.byte		BEND  , c_b-(13*2)
 	.byte	W01
 	.byte		PAN   , c_v-4
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-25
+	.byte		BEND  , c_b-(25*2)
 	.byte	W02
 	.byte		PAN   , c_v+4
-	.byte		BEND  , c_v-39
+	.byte		BEND  , c_b-(39*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-6
+	.byte		BEND  , c_b-(6*2)
 	.byte	W01
 	.byte		PAN   , c_v-4
-	.byte		BEND  , c_v-3
+	.byte		BEND  , c_b-(3*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+6
+	.byte		BEND  , c_b+(6*2)
 	.byte	W01
 	.byte		PAN   , c_v+4
-	.byte		BEND  , c_v+3
+	.byte		BEND  , c_b+(3*2)
 	.byte	W02
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+9
+	.byte		BEND  , c_b+(9*2)
 	.byte	W01
 	.byte		PAN   , c_v-4
-	.byte		BEND  , c_v+6
+	.byte		BEND  , c_b+(6*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+12
+	.byte		BEND  , c_b+(12*2)
 	.byte	W01
 	.byte		PAN   , c_v+4
-	.byte		BEND  , c_v+8
+	.byte		BEND  , c_b+(8*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte	W02
 	.byte		PAN   , c_v-4
 	.byte		VOL   , 102*se_m_lick_mvl/mxv
-	.byte		BEND  , c_v+12
+	.byte		BEND  , c_b+(12*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte	W01
 	.byte		PAN   , c_v+4
 	.byte		VOL   , 97*se_m_lick_mvl/mxv
-	.byte		BEND  , c_v+18
+	.byte		BEND  , c_b+(18*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+14
+	.byte		BEND  , c_b+(14*2)
 	.byte	W01
 	.byte		PAN   , c_v-4
 	.byte		VOL   , 92*se_m_lick_mvl/mxv
-	.byte		BEND  , c_v+18
+	.byte		BEND  , c_b+(18*2)
 	.byte	W02
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+20
+	.byte		BEND  , c_b+(20*2)
 	.byte	W01
 	.byte		PAN   , c_v+4
 	.byte		VOL   , 88*se_m_lick_mvl/mxv
-	.byte		BEND  , c_v+17
+	.byte		BEND  , c_b+(17*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+12
+	.byte		BEND  , c_b+(12*2)
 	.byte	W01
 	.byte		PAN   , c_v-4
 	.byte		VOL   , 81*se_m_lick_mvl/mxv
-	.byte		BEND  , c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 64*se_m_lick_mvl/mxv
-	.byte		BEND  , c_v+12
+	.byte		BEND  , c_b+(12*2)
 	.byte	W02
 	.byte		PAN   , c_v+4
 	.byte		VOL   , 49*se_m_lick_mvl/mxv
-	.byte		BEND  , c_v+14
+	.byte		BEND  , c_b+(14*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 25*se_m_lick_mvl/mxv
-	.byte		BEND  , c_v+11
+	.byte		BEND  , c_b+(11*2)
 	.byte	W05
 	.byte	FINE
 
