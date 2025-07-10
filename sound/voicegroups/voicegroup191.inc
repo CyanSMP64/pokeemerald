@@ -1,12 +1,12 @@
 	.align 2
 voicegroup191::
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_keysplit Piano_2_______, KeySplitTable_4oct - 9
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit E_Piano_2___88, KeySplitTable_2oct - 12
-	voice_keysplit Harpsichord___, KeySplitTable_3oct - -2
+	voice_keysplit Harpsichord___, KeySplitTable_3oct + 2
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
@@ -33,7 +33,7 @@ voicegroup191::
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit Fingered_Bs_8P, KeySplitTable_2oct - -22
+	voice_keysplit Fingered_Bs_8P, KeySplitTable_2oct + 22
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
@@ -73,7 +73,7 @@ voicegroup191::
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_Piccolo_____881, 255, 253, 150, 127
-	voice_directsound 60, 0, DirectSoundWaveData_Flute_______881, 255, 253, 200, 127
+	voice_keysplit Flute_2_____8P, KeySplitTable_2oct - 22
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
@@ -108,7 +108,7 @@ voicegroup191::
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_directsound 60, 0, DirectSoundWaveData_Kalimba_____8P1, 255, 248, 11, 221
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
@@ -143,11 +143,17 @@ European_Pf_8P:: @ 6oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_European_Pf_8P5, 255, 245, 3, 190
 	voice_directsound 60, 0, DirectSoundWaveData_European_Pf_8P6, 255, 242, 0, 214
 
+Piano_2_______:: @ 4oct - 9
+	voice_directsound 60, 0, DirectSoundWaveData_Piano_2_______1, 255, 252, 61, 212
+	voice_directsound 60, 0, DirectSoundWaveData_Piano_2_______2, 255, 247, 21, 214
+	voice_directsound 60, 0, DirectSoundWaveData_Piano_2_______3, 255, 247, 20, 218
+	voice_directsound 60, 0, DirectSoundWaveData_Piano_2_______4, 255, 241, 6, 210
+
 E_Piano_2___88:: @ 2oct - 12
 	voice_directsound 60, 0, DirectSoundWaveData_E_Piano_2___881, 255, 253, 55, 160
 	voice_directsound 60, 0, DirectSoundWaveData_E_Piano_2___882, 255, 253, 33, 160
 
-Harpsichord___:: @ 3oct - -2
+Harpsichord___:: @ 3oct + 2
 	voice_directsound 60, 0, DirectSoundWaveData_Harpsichord___1, 255, 249, 38, 160
 	voice_directsound 60, 0, DirectSoundWaveData_Harpsichord___2, 255, 247, 22, 160
 	voice_directsound 60, 0, DirectSoundWaveData_Harpsichord___3, 255, 244, 9, 160
@@ -179,7 +185,7 @@ Steel_str_Gt8P:: @ 2oct - 2
 	voice_directsound 60, 0, DirectSoundWaveData_Steel_str_Gt8P1, 255, 251, 37, 180
 	voice_directsound 60, 0, DirectSoundWaveData_Steel_str_Gt8P2, 255, 250, 26, 180
 
-Fingered_Bs_8P:: @ 2oct - -22
+Fingered_Bs_8P:: @ 2oct + 22
 	voice_directsound 60, 0, DirectSoundWaveData_Fingered_Bs_8P1, 255, 252, 68, 127
 	voice_directsound 60, 0, DirectSoundWaveData_Fingered_Bs_8P2, 255, 252, 68, 127
 
@@ -201,6 +207,12 @@ Trombone______:: @ 2oct - 4
 FrenchHorns_88:: @ 2oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_FrenchHorns_881, 255, 240, 170, 205
 	voice_directsound 60, 0, DirectSoundWaveData_FrenchHorns_882, 255, 240, 200, 205
+
+@	voice_directsound 60, 0, DirectSoundWaveData_Flute_______881, 255, 253, 200, 127
+
+Flute_2_____8P:: @ 2oct - 22
+	voice_directsound 60, 0, DirectSoundWaveData_Flute_2_____8P1, 255, 0, 255, 127
+	voice_directsound 60, 0, DirectSoundWaveData_Flute_2_____8P2, 255, 251, 235, 127
 
 STANDARD_1____::
 	voice_directsound 60, 64, DirectSoundWaveData_DR88Std_1_K1, 255, 0, 255, 200

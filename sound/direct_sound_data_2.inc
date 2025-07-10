@@ -593,8 +593,16 @@ DirectSoundWaveData_Fingered_Bs_8P2::
 	.incbin "sound/direct_sound_samples/new/Fingered_Bs_8P2.bin"
 
 	.align 2
-DirectSoundWaveData_Flute_______881::
-	.incbin "sound/direct_sound_samples/new/Flute_______881.bin"
+DirectSoundWaveData_Flute_2_____8P1::
+	.incbin "sound/direct_sound_samples/new/Flute_2_____8P1.bin"
+
+	.align 2
+DirectSoundWaveData_Flute_2_____8P2::
+	.incbin "sound/direct_sound_samples/new/Flute_2_____8P2.bin"
+
+@	.align 2
+@DirectSoundWaveData_Flute_______881::
+@	.incbin "sound/direct_sound_samples/new/Flute_______881.bin"
 
 	.align 2
 DirectSoundWaveData_FrenchHorns_881::
@@ -633,6 +641,10 @@ DirectSoundWaveData_Harpsichord___3::
 	.incbin "sound/direct_sound_samples/new/Harpsichord___3.bin"
 
 	.align 2
+DirectSoundWaveData_Kalimba_____8P1::
+	.incbin "sound/direct_sound_samples/new/Kalimba_____8P1.bin"
+
+	.align 2
 DirectSoundWaveData_Marimba_____881::
 	.incbin "sound/direct_sound_samples/new/Marimba_____881.bin"
 
@@ -663,6 +675,22 @@ DirectSoundWaveData_Nylon_str_Gt8P2::
 @	.align 2
 @DirectSoundWaveData_Piano_1_______4::
 @	.incbin "sound/direct_sound_samples/new/Piano_1_______4.bin"
+
+	.align 2
+DirectSoundWaveData_Piano_2_______1::
+	.incbin "sound/direct_sound_samples/new/Piano_2_______1.bin"
+
+	.align 2
+DirectSoundWaveData_Piano_2_______2::
+	.incbin "sound/direct_sound_samples/new/Piano_2_______2.bin"
+
+	.align 2
+DirectSoundWaveData_Piano_2_______3::
+	.incbin "sound/direct_sound_samples/new/Piano_2_______3.bin"
+
+	.align 2
+DirectSoundWaveData_Piano_2_______4::
+	.incbin "sound/direct_sound_samples/new/Piano_2_______4.bin"
 
 	.align 2
 DirectSoundWaveData_Piccolo_____881::
