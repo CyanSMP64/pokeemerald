@@ -14,7 +14,7 @@ voicegroup191::
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit Marimba_____88, KeySplitTable_2oct - 9
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_directsound 60, 0, DirectSoundWaveData_Tubular_bell__1, 255, 246, 16, 244
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
@@ -45,14 +45,14 @@ voicegroup191::
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_keysplit PizzicatoStr88, KeySplitTable_4oct - 4
 	voice_keysplit Harp________88, KeySplitTable_4oct - 7
 	voice_directsound 60, 0, DirectSoundWaveData_Timpani_____881, 255, 244, 2, 241
-	voice_keysplit Strings_______, KeySplitTable_3oct - 1
+	voice_keysplit Strings_______, KeySplitTable_3oct + 3
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_keysplit Choir_Aahs__8P, KeySplitTable_2oct - 4
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
@@ -68,9 +68,9 @@ voicegroup191::
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_keysplit Oboe__________, KeySplitTable_2oct - 18
 	voice_directsound 60, 0, DirectSoundWaveData_EnglishHorn_881, 255, 254, 160, 127
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_directsound 60, 0, DirectSoundWaveData_Bassoon_____881, 255, 254, 166, 127
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_Piccolo_____881, 255, 253, 150, 127
 	voice_keysplit Flute_2_____8P, KeySplitTable_2oct - 22
@@ -78,7 +78,7 @@ voicegroup191::
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_directsound 60, 0, DirectSoundWaveData_Whistle_____551, 255, 0, 255, 127
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
 	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
@@ -189,16 +189,26 @@ Fingered_Bs_8P:: @ 2oct + 22
 	voice_directsound 60, 0, DirectSoundWaveData_Fingered_Bs_8P1, 255, 252, 68, 127
 	voice_directsound 60, 0, DirectSoundWaveData_Fingered_Bs_8P2, 255, 252, 68, 127
 
+PizzicatoStr88:: @ 4oct - 4
+	voice_directsound 60, 0, DirectSoundWaveData_PizzicatoStr881, 255, 235, 0, 222
+	voice_directsound 60, 0, DirectSoundWaveData_PizzicatoStr882, 255, 228, 0, 229
+	voice_directsound 60, 0, DirectSoundWaveData_PizzicatoStr883, 255, 225, 0, 191
+	voice_directsound 60, 0, DirectSoundWaveData_PizzicatoStr884, 255, 223, 0, 190
+
 Harp________88:: @ 4oct - 7
 	voice_directsound 60, 0, DirectSoundWaveData_Harp________881, 255, 249, 0, 233
 	voice_directsound 60, 0, DirectSoundWaveData_Harp________882, 255, 247, 0, 233
 	voice_directsound 60, 0, DirectSoundWaveData_Harp________883, 255, 249, 0, 233
 	voice_directsound 60, 0, DirectSoundWaveData_Harp________884, 255, 247, 0, 233
 
-Strings_______:: @ 3oct - 1
-	voice_directsound 60, 0, DirectSoundWaveData_Strings_______1, 75, 255, 180, 223
-	voice_directsound 60, 0, DirectSoundWaveData_Strings_______2, 75, 255, 180, 223
-	voice_directsound 60, 0, DirectSoundWaveData_Strings_______3, 75, 255, 180, 223
+Strings_______:: @ 3oct + 3 @ alt. - 1
+	voice_directsound 60, 0, DirectSoundWaveData_Strings_______1, 128, 255, 180, 223
+	voice_directsound 60, 0, DirectSoundWaveData_Strings_______2, 128, 255, 180, 223
+	voice_directsound 60, 0, DirectSoundWaveData_Strings_______3, 128, 255, 180, 223
+
+Choir_Aahs__8P:: @ 2oct + 3 @ alt. - 4
+	voice_directsound 60, 0, DirectSoundWaveData_Choir_Aahs__8P1, 30, 255, 251, 228
+	voice_directsound 60, 0, DirectSoundWaveData_Choir_Aahs__8P2, 30, 255, 203, 228
 
 Trombone______:: @ 2oct - 4
 	voice_directsound 60, 0, DirectSoundWaveData_Trombone______1, 255, 255, 233, 163
@@ -207,6 +217,10 @@ Trombone______:: @ 2oct - 4
 FrenchHorns_88:: @ 2oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_FrenchHorns_881, 255, 240, 170, 205
 	voice_directsound 60, 0, DirectSoundWaveData_FrenchHorns_882, 255, 240, 200, 205
+
+Oboe__________:: @ 2oct - 18
+	voice_directsound 60, 0, DirectSoundWaveData_Oboe__________1, 255, 255, 202, 127
+	voice_directsound 60, 0, DirectSoundWaveData_Oboe__________2, 255, 255, 179, 127
 
 @	voice_directsound 60, 0, DirectSoundWaveData_Flute_______881, 255, 253, 200, 127
 

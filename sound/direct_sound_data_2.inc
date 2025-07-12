@@ -93,6 +93,18 @@ DirectSoundWaveData_Bandoneon___8P3::
 	.incbin "sound/direct_sound_samples/new/Bandoneon___8P3.bin"
 
 	.align 2
+DirectSoundWaveData_Bassoon_____881::
+	.incbin "sound/direct_sound_samples/new/Bassoon_____881.bin"
+
+	.align 2
+DirectSoundWaveData_Choir_Aahs__8P1::
+	.incbin "sound/direct_sound_samples/new/Choir_Aahs__8P1.bin"
+
+	.align 2
+DirectSoundWaveData_Choir_Aahs__8P2::
+	.incbin "sound/direct_sound_samples/new/Choir_Aahs__8P2.bin"
+
+	.align 2
 DirectSoundWaveData_DR55Elec_SD_::
 	.incbin "sound/direct_sound_samples/new/DR55Elec_SD_.bin"
 
@@ -660,6 +672,14 @@ DirectSoundWaveData_Nylon_str_Gt8P1::
 DirectSoundWaveData_Nylon_str_Gt8P2::
 	.incbin "sound/direct_sound_samples/new/Nylon_str_Gt8P2.bin"
 
+	.align 2
+DirectSoundWaveData_Oboe__________1::
+	.incbin "sound/direct_sound_samples/new/Oboe__________1.bin"
+
+	.align 2
+DirectSoundWaveData_Oboe__________2::
+	.incbin "sound/direct_sound_samples/new/Oboe__________2.bin"
+
 @	.align 2
 @DirectSoundWaveData_Piano_1_______1::
 @	.incbin "sound/direct_sound_samples/new/Piano_1_______1.bin"
@@ -697,6 +717,22 @@ DirectSoundWaveData_Piccolo_____881::
 	.incbin "sound/direct_sound_samples/new/Piccolo_____881.bin"
 
 	.align 2
+DirectSoundWaveData_PizzicatoStr881::
+	.incbin "sound/direct_sound_samples/new/PizzicatoStr881.bin"
+
+	.align 2
+DirectSoundWaveData_PizzicatoStr882::
+	.incbin "sound/direct_sound_samples/new/PizzicatoStr882.bin"
+
+	.align 2
+DirectSoundWaveData_PizzicatoStr883::
+	.incbin "sound/direct_sound_samples/new/PizzicatoStr883.bin"
+
+	.align 2
+DirectSoundWaveData_PizzicatoStr884::
+	.incbin "sound/direct_sound_samples/new/PizzicatoStr884.bin"
+
+	.align 2
 DirectSoundWaveData_Steel_str_Gt8P1::
 	.incbin "sound/direct_sound_samples/new/Steel_str_Gt8P1.bin"
 
@@ -732,3 +768,10 @@ DirectSoundWaveData_Trombone______2::
 DirectSoundWaveData_Trumpet_______1::
 	.incbin "sound/direct_sound_samples/new/Trumpet_______1.bin"
 
+	.align 2
+DirectSoundWaveData_Tubular_bell__1::
+	.incbin "sound/direct_sound_samples/new/Tubular_bell__1.bin"
+
+	.align 2
+DirectSoundWaveData_Whistle_____551::
+	.incbin "sound/direct_sound_samples/new/Whistle_____551.bin"
