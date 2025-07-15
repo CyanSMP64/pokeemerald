@@ -81,6 +81,14 @@ DirectSoundWaveData_Accordion_It8P3::
 	.incbin "sound/direct_sound_samples/new/Accordion_It8P3.bin"
 
 	.align 2
+DirectSoundWaveData_Acoustic_Bs___1::
+	.incbin "sound/direct_sound_samples/new/Acoustic_Bs___1.bin"
+
+	.align 2
+DirectSoundWaveData_Acoustic_Bs___2::
+	.incbin "sound/direct_sound_samples/new/Acoustic_Bs___2.bin"
+
+	.align 2
 DirectSoundWaveData_Bandoneon___8P1::
 	.incbin "sound/direct_sound_samples/new/Bandoneon___8P1.bin"
 
@@ -95,6 +103,10 @@ DirectSoundWaveData_Bandoneon___8P3::
 	.align 2
 DirectSoundWaveData_Bassoon_____881::
 	.incbin "sound/direct_sound_samples/new/Bassoon_____881.bin"
+
+	.align 2
+DirectSoundWaveData_Brightness__551::
+	.incbin "sound/direct_sound_samples/new/Brightness__551.bin"
 
 	.align 2
 DirectSoundWaveData_Choir_Aahs__8P1::
@@ -561,6 +573,18 @@ DirectSoundWaveData_DR__Vib_slap::
 	.incbin "sound/direct_sound_samples/new/DR__Vib_slap.bin"
 
 	.align 2
+DirectSoundWaveData_E_Piano_1___8P1::
+	.incbin "sound/direct_sound_samples/new/E_Piano_1___8P1.bin"
+
+	.align 2
+DirectSoundWaveData_E_Piano_1___8P2::
+	.incbin "sound/direct_sound_samples/new/E_Piano_1___8P2.bin"
+
+	.align 2
+DirectSoundWaveData_E_Piano_1___8P3::
+	.incbin "sound/direct_sound_samples/new/E_Piano_1___8P3.bin"
+
+	.align 2
 DirectSoundWaveData_E_Piano_2___881::
 	.incbin "sound/direct_sound_samples/new/E_Piano_2___881.bin"
 
@@ -663,6 +687,10 @@ DirectSoundWaveData_Marimba_____881::
 	.align 2
 DirectSoundWaveData_Marimba_____882::
 	.incbin "sound/direct_sound_samples/new/Marimba_____882.bin"
+
+	.align 2
+DirectSoundWaveData_Music_Box_____1::
+	.incbin "sound/direct_sound_samples/new/Music_Box_____1.bin"
 
 	.align 2
 DirectSoundWaveData_Nylon_str_Gt8P1::
