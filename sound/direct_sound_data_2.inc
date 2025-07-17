@@ -89,6 +89,10 @@ DirectSoundWaveData_Acoustic_Bs___2::
 	.incbin "sound/direct_sound_samples/new/Acoustic_Bs___2.bin"
 
 	.align 2
+DirectSoundWaveData_Atmosphere__551::
+	.incbin "sound/direct_sound_samples/new/Atmosphere__551.bin"
+
+	.align 2
 DirectSoundWaveData_Bandoneon___8P1::
 	.incbin "sound/direct_sound_samples/new/Bandoneon___8P1.bin"
 
@@ -589,10 +593,6 @@ DirectSoundWaveData_E_Piano_2___881::
 	.incbin "sound/direct_sound_samples/new/E_Piano_2___881.bin"
 
 	.align 2
-DirectSoundWaveData_E_Piano_2___882::
-	.incbin "sound/direct_sound_samples/new/E_Piano_2___882.bin"
-
-	.align 2
 DirectSoundWaveData_EnglishHorn_881::
 	.incbin "sound/direct_sound_samples/new/EnglishHorn_881.bin"
 
@@ -641,12 +641,8 @@ DirectSoundWaveData_Flute_2_____8P2::
 @	.incbin "sound/direct_sound_samples/new/Flute_______881.bin"
 
 	.align 2
-DirectSoundWaveData_FrenchHorns_881::
-	.incbin "sound/direct_sound_samples/new/FrenchHorns_881.bin"
-
-	.align 2
-DirectSoundWaveData_FrenchHorns_882::
-	.incbin "sound/direct_sound_samples/new/FrenchHorns_882.bin"
+DirectSoundWaveData_French_Horns881::
+	.incbin "sound/direct_sound_samples/new/French_Horns881.bin"
 
 	.align 2
 DirectSoundWaveData_Harp________881::
@@ -799,6 +795,14 @@ DirectSoundWaveData_Trumpet_______1::
 	.align 2
 DirectSoundWaveData_Tubular_bell__1::
 	.incbin "sound/direct_sound_samples/new/Tubular_bell__1.bin"
+
+	.align 2
+DirectSoundWaveData_Viola_______8P1::
+	.incbin "sound/direct_sound_samples/new/Viola_______8P1.bin"
+
+	.align 2
+DirectSoundWaveData_Viola_______8P2::
+	.incbin "sound/direct_sound_samples/new/Viola_______8P2.bin"
 
 	.align 2
 DirectSoundWaveData_Whistle_____551::
