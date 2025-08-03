@@ -56,17 +56,17 @@ voicegroup350::
 	voice_directsound 60, 104, DirectSoundWaveData_hg_battery3_rock_rack_tom1, 255, 0, 255, 178				@ 127/127/127/120/104
 	voice_directsound 60, 112, DirectSoundWaveData_hg_battery3_rock_rack_tom1, 255, 0, 255, 178				@ 127/127/127/120/112
 	voice_directsound 60, 120, DirectSoundWaveData_hg_battery3_rock_rack_tom1, 255, 0, 255, 178				@ 127/127/127/120/120
-	voice_directsound 60, 64, DirectSoundWaveData_bw_kfl_cymbals_a_due, 255, 250, 0, 216					@ 127/ 70/  0/114/ 64
-	voice_directsound 61, 64, DirectSoundWaveData_bw_kfl_cymbals_a_due, 255, 250, 0, 216					@ 127/ 70/  0/114/ 64
-	voice_directsound 62, 64, DirectSoundWaveData_bw_kfl_cymbals_a_due, 255, 250, 0, 216					@ 127/ 70/  0/114/ 64
-	voice_directsound 63, 64, DirectSoundWaveData_bw_kfl_cymbals_a_due, 255, 250, 0, 216					@ 127/ 70/  0/114/ 64
-	voice_directsound 64, 64, DirectSoundWaveData_bw_kfl_cymbals_a_due, 255, 250, 0, 216					@ 127/ 70/  0/114/ 64
-	voice_directsound 60, 64, DirectSoundWaveData_bw_battery3_rock_cymbal2, 255, 246, 0, 216				@ 127/ 90/  0/114/ 64
-	voice_directsound 61, 64, DirectSoundWaveData_bw_battery3_rock_cymbal2, 255, 246, 0, 216				@ 127/ 90/  0/114/ 64
-	voice_directsound 62, 64, DirectSoundWaveData_bw_battery3_rock_cymbal2, 255, 246, 0, 216				@ 127/ 90/  0/114/ 64
-	voice_directsound 60, 20, DirectSoundWaveData_bw_battery3_chinese_cymbal, 255, 249, 0, 225				@ 127/ 80/  0/110/ 20
-	voice_directsound 60, 20, DirectSoundWaveData_bw_battery3_rock_cymbal2, 255, 246, 0, 216				@ 127/ 90/  0/114/ 20
-	voice_directsound 60, 100, DirectSoundWaveData_bw_battery3_rock_cymbal2, 255, 246, 0, 216				@ 127/ 90/  0/114/100
-	voice_directsound 60, 100, DirectSoundWaveData_bw_battery3_chinese_cymbal, 255, 249, 0, 225				@ 127/ 80/  0/110/100
-	voice_directsound 63, 84, DirectSoundWaveData_bw_battery3_rock_cymbal2, 255, 246, 0, 216				@ 127/ 90/  0/114/ 84
-	voice_directsound 64, 44, DirectSoundWaveData_bw_battery3_rock_cymbal2, 255, 246, 0, 216				@ 127/ 90/  0/114/ 44
+	voice_directsound 60, 64, DirectSoundWaveData_hg_kfl_cymbals_a_due, 255, 250, 0, 216					@ 127/ 70/  0/114/ 64
+	voice_directsound 61, 64, DirectSoundWaveData_hg_kfl_cymbals_a_due, 255, 250, 0, 216					@ 127/ 70/  0/114/ 64
+	voice_directsound 62, 64, DirectSoundWaveData_hg_kfl_cymbals_a_due, 255, 250, 0, 216					@ 127/ 70/  0/114/ 64
+	voice_directsound 63, 64, DirectSoundWaveData_hg_kfl_cymbals_a_due, 255, 250, 0, 216					@ 127/ 70/  0/114/ 64
+	voice_directsound 64, 64, DirectSoundWaveData_hg_kfl_cymbals_a_due, 255, 250, 0, 216					@ 127/ 70/  0/114/ 64
+	voice_directsound 60, 64, DirectSoundWaveData_hg_battery3_rock_crash_cymbal2, 255, 246, 0, 216				@ 127/ 90/  0/114/ 64
+	voice_directsound 61, 64, DirectSoundWaveData_hg_battery3_rock_crash_cymbal2, 255, 246, 0, 216				@ 127/ 90/  0/114/ 64
+	voice_directsound 62, 64, DirectSoundWaveData_hg_battery3_rock_crash_cymbal2, 255, 246, 0, 216				@ 127/ 90/  0/114/ 64
+	voice_directsound 60, 20, DirectSoundWaveData_hg_battery3_chinese, 255, 249, 0, 225				@ 127/ 80/  0/110/ 20
+	voice_directsound 60, 20, DirectSoundWaveData_hg_battery3_rock_crash_cymbal2, 255, 246, 0, 216				@ 127/ 90/  0/114/ 20
+	voice_directsound 60, 100, DirectSoundWaveData_hg_battery3_rock_crash_cymbal2, 255, 246, 0, 216				@ 127/ 90/  0/114/100
+	voice_directsound 60, 100, DirectSoundWaveData_hg_battery3_chinese, 255, 249, 0, 225				@ 127/ 80/  0/110/100
+	voice_directsound 63, 84, DirectSoundWaveData_hg_battery3_rock_crash_cymbal2, 255, 246, 0, 216				@ 127/ 90/  0/114/ 84
+	voice_directsound 64, 44, DirectSoundWaveData_hg_battery3_rock_crash_cymbal2, 255, 246, 0, 216				@ 127/ 90/  0/114/ 44

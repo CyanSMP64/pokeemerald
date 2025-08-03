@@ -28,7 +28,7 @@ voicegroup281::
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_bw_plugsound_pro_elastik_36, 255, 64, 227, 178	@ 127/125/120/120/ 64
+	voice_directsound 60, 0, DirectSoundWaveData_hg_plugsound_pro_elastik_36, 255, 64, 227, 178	@ 127/125/120/120/ 64
 	voice_directsound 60, 0, DirectSoundWaveData_bw_halionone_hard_sync_solo_35, 255, 64, 227, 0	@ 127/125/120/127/ 64
 	voice_keysplit voicegroup254, KeySplitTable61	@ sampletank 2.5 xl string orchestra
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -38,7 +38,7 @@ voicegroup281::
 	voice_keysplit voicegroup267, KeySplitTable56	@ ps55 flute
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_bw_plugsound_pro_timpani_55, 255, 252, 0, 208	@ 127/ 50/  1/116/ 64
+	voice_directsound 60, 0, DirectSoundWaveData_hg_plugsound_pro_timpani_55, 255, 252, 0, 208	@ 127/ 50/  1/116/ 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_hg_kfl_trombone_ensemble_43, 255, 242, 159, 208	@ 127/100/100/116/ 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
