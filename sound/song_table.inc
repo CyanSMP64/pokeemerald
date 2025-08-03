@@ -617,6 +617,7 @@ gSongTable::
 	song mus_test_4, 0, 64, 1024
 	song mus_test_5, 0, 64, 1024
 	song mus_test_6, 0, 64, 1024
+	song mus_test_7, 0, 64, 1024
 
 	.align 2
 dummy_song_header:

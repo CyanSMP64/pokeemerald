@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_stat_increase_grp, voicegroup128
+	.equ	se_m_stat_increase_grp, voicegroup_rs_sfx_2
 	.equ	se_m_stat_increase_pri, 4
 	.equ	se_m_stat_increase_rev, 0
 	.equ	se_m_stat_increase_mvl, 127

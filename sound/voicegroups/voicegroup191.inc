@@ -1,141 +1,140 @@
-	.align 2
-voicegroup191::
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit Piano_2_______, KeySplitTable_4oct - 9
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit E_Piano_1___8P, KeySplitTable_3oct - 1
+voice_group voicegroup191
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_Piano_2_______, keysplit_4oct - 9
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_E_Piano_1___8P, keysplit_3oct - 1
 	voice_directsound 60, 0, DirectSoundWaveData_E_Piano_2___881, 255, 253, 0, 127
-	voice_keysplit Harpsichord___, KeySplitTable_3oct + 2
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_keysplit voicegroup_Harpsichord___, keysplit_3oct + 2
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_Music_Box_____1, 255, 249, 0, 240
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit Marimba_____88, KeySplitTable_2oct - 9
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_Marimba_____88, keysplit_2oct - 9
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_Tubular_bell__1, 255, 246, 0, 244
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit Accordion_It8P, KeySplitTable_3oct - 12
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit Bandoneon___8P, KeySplitTable_3oct - 1
-	voice_keysplit Nylon_str_Gt8P, KeySplitTable_2oct - 2
-	voice_keysplit Steel_str_Gt8P, KeySplitTable_2oct - 2
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit Acoustic_Bs___, KeySplitTable_2oct + 11
-	voice_keysplit Fingered_Bs_8P, KeySplitTable_2oct + 22
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit Viola_______8P, KeySplitTable_2oct - 11
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit PizzicatoStr88, KeySplitTable_4oct - 4
-	voice_keysplit Harp________88, KeySplitTable_4oct - 7
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_Accordion_It8P, keysplit_3oct - 12
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_Bandoneon___8P, keysplit_3oct - 1
+	voice_keysplit voicegroup_Nylon_str_Gt8P, keysplit_2oct - 2
+	voice_keysplit voicegroup_Steel_str_Gt8P, keysplit_2oct - 2
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_Acoustic_Bs___, keysplit_2oct + 11
+	voice_keysplit voicegroup_Fingered_Bs_8P, keysplit_2oct + 22
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_Viola_______8P, keysplit_2oct - 11
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_PizzicatoStr88, keysplit_4oct - 4
+	voice_keysplit voicegroup_Harp________88, keysplit_4oct - 7
 	voice_directsound 60, 0, DirectSoundWaveData_Timpani_____881, 255, 244, 0, 241
-	voice_keysplit Strings_______, KeySplitTable_3oct - 1
-	voice_keysplit Slow_Strings__, KeySplitTable_3oct + 5
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit Choir_Aahs__8P, KeySplitTable_2oct - 4
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_keysplit voicegroup_Strings_______, keysplit_3oct - 1
+	voice_keysplit voicegroup_Slow_Strings__, keysplit_3oct + 5
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_Choir_Aahs__8P, keysplit_2oct - 4
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_Trumpet_______1, 255, 254, 233, 163
-	voice_keysplit Trombone______, KeySplitTable_2oct - 4
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_keysplit voicegroup_Trombone______, keysplit_2oct - 4
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_French_Horns881, 255, 254, 183, 212
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit Oboe__________, KeySplitTable_2oct - 18
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_Oboe__________, keysplit_2oct - 18
 	voice_directsound 60, 0, DirectSoundWaveData_EnglishHorn_881, 255, 254, 160, 127
 	voice_directsound 60, 0, DirectSoundWaveData_Bassoon_____881, 255, 254, 166, 127
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_Piccolo_____881, 255, 253, 150, 127
-	voice_keysplit Flute_2_____8P, KeySplitTable_2oct - 22
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_keysplit voicegroup_Flute_2_____8P, keysplit_2oct - 22
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_Whistle_____551, 255, 0, 255, 127
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_Atmosphere__551, 255, 245, 114, 235
 	voice_directsound 60, 0, DirectSoundWaveData_Brightness__551, 255, 251, 31, 242
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_Kalimba_____8P1, 255, 248, 0, 221
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_DR__LowW_Blk, 255, 0, 255, 200
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit European_Pf_8P, KeySplitTable_6oct - 6
-	voice_keysplit_all STANDARD_1____
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 6
+	voice_keysplit_all voicegroup_STANDARD_1____
 
-@Piano_1_______:: @ 4oct - 5
+@voice_group Piano_1_______ @ 4oct - 5
 @	voice_directsound 60, 0, DirectSoundWaveData_Piano_1_______1, 255, 253, 0, 221
 @	voice_directsound 60, 0, DirectSoundWaveData_Piano_1_______2, 255, 248, 0, 211
 @	voice_directsound 60, 0, DirectSoundWaveData_Piano_1_______3, 255, 248, 0, 203
 @	voice_directsound 60, 0, DirectSoundWaveData_Piano_1_______4, 255, 239, 0, 200
 
-European_Pf_8P:: @ 6oct - 6
+voice_group European_Pf_8P @ 6oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_European_Pf_8P1, 255, 252, 0, 227
 	voice_directsound 60, 0, DirectSoundWaveData_European_Pf_8P2, 255, 252, 0, 221
 	voice_directsound 60, 0, DirectSoundWaveData_European_Pf_8P3, 255, 248, 0, 211
@@ -143,102 +142,102 @@ European_Pf_8P:: @ 6oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_European_Pf_8P5, 255, 245, 0, 190
 	voice_directsound 60, 0, DirectSoundWaveData_European_Pf_8P6, 255, 242, 0, 214
 
-Piano_2_______:: @ 4oct - 9
+voice_group Piano_2_______ @ 4oct - 9
 	voice_directsound 60, 0, DirectSoundWaveData_Piano_2_______1, 255, 252, 0, 212
 	voice_directsound 60, 0, DirectSoundWaveData_Piano_2_______2, 255, 247, 0, 214
 	voice_directsound 60, 0, DirectSoundWaveData_Piano_2_______3, 255, 247, 0, 218
 	voice_directsound 60, 0, DirectSoundWaveData_Piano_2_______4, 255, 241, 0, 210
 
-E_Piano_1___8P:: @ 3oct - 1
+voice_group E_Piano_1___8P @ 3oct - 1
 	voice_directsound 60, 0, DirectSoundWaveData_E_Piano_1___8P1, 255, 250, 0, 127
 	voice_directsound 60, 0, DirectSoundWaveData_E_Piano_1___8P2, 255, 251, 0, 127
 	voice_directsound 60, 0, DirectSoundWaveData_E_Piano_1___8P3, 255, 249, 0, 127
 
-Harpsichord___:: @ 3oct + 2
+voice_group Harpsichord___ @ 3oct + 2
 	voice_directsound 60, 0, DirectSoundWaveData_Harpsichord___1, 255, 249, 0, 160
 	voice_directsound 60, 0, DirectSoundWaveData_Harpsichord___2, 255, 247, 0, 160
 	voice_directsound 60, 0, DirectSoundWaveData_Harpsichord___3, 255, 244, 0, 160
 
-Marimba_____88:: @ 2oct - 9
+voice_group Marimba_____88 @ 2oct - 9
 	voice_directsound 60, 0, DirectSoundWaveData_Marimba_____881, 255, 233, 0, 216
 	voice_directsound 60, 0, DirectSoundWaveData_Marimba_____882, 255, 239, 0, 216
 
-@Accordion_Fr8P:: @ 3oct - 0
+@voice_group Accordion_Fr8P @ 3oct - 0
 @	voice_directsound 60, 0, DirectSoundWaveData_Accordion_Fr8P1, 255, 250, 160, 127
 @	voice_directsound 60, 0, DirectSoundWaveData_Accordion_Fr8P2, 255, 250, 180, 127
 @	voice_directsound 60, 0, DirectSoundWaveData_Accordion_Fr8P3, 255, 250, 200, 127
 
-Accordion_It8P:: @ 3oct - 12
+voice_group Accordion_It8P @ 3oct - 12
 	voice_directsound 60, 0, DirectSoundWaveData_Accordion_It8P1, 255, 250, 200, 127
 	voice_directsound 60, 0, DirectSoundWaveData_Accordion_It8P2, 255, 250, 200, 127
 	voice_directsound 60, 0, DirectSoundWaveData_Accordion_It8P3, 255, 250, 200, 127
 
-Bandoneon___8P:: @ 3oct - 1
+voice_group Bandoneon___8P @ 3oct - 1
 	voice_directsound 60, 0, DirectSoundWaveData_Bandoneon___8P1, 255, 254, 204, 127
 	voice_directsound 60, 0, DirectSoundWaveData_Bandoneon___8P2, 255, 253, 162, 127
 	voice_directsound 60, 0, DirectSoundWaveData_Bandoneon___8P3, 255, 253, 174, 127
 
-Nylon_str_Gt8P:: @ 2oct - 2
+voice_group Nylon_str_Gt8P @ 2oct - 2
 	voice_directsound 60, 0, DirectSoundWaveData_Nylon_str_Gt8P1, 255, 252, 0, 180
 	voice_directsound 60, 0, DirectSoundWaveData_Nylon_str_Gt8P2, 255, 252, 0, 180
 
-Steel_str_Gt8P:: @ 2oct - 2
+voice_group Steel_str_Gt8P @ 2oct - 2
 	voice_directsound 60, 0, DirectSoundWaveData_Steel_str_Gt8P1, 255, 251, 0, 180
 	voice_directsound 60, 0, DirectSoundWaveData_Steel_str_Gt8P2, 255, 250, 0, 180
 
-Acoustic_Bs___:: @ 2oct + 11
+voice_group Acoustic_Bs___ @ 2oct + 11
 	voice_directsound 60, 0, DirectSoundWaveData_Acoustic_Bs___1, 255, 250, 0, 127
 	voice_directsound 60, 0, DirectSoundWaveData_Acoustic_Bs___2, 255, 247, 0, 127
 
-Fingered_Bs_8P:: @ 2oct + 22
+voice_group Fingered_Bs_8P @ 2oct + 22
 	voice_directsound 60, 0, DirectSoundWaveData_Fingered_Bs_8P1, 255, 252, 68, 127
 	voice_directsound 60, 0, DirectSoundWaveData_Fingered_Bs_8P2, 255, 252, 68, 127
 
-Viola_______8P:: @ 2oct - 11
+voice_group Viola_______8P @ 2oct - 11
 	voice_directsound 60, 0, DirectSoundWaveData_Viola_______8P1, 255, 0, 255, 189
 	voice_directsound 60, 0, DirectSoundWaveData_Viola_______8P2, 255, 0, 255, 189
 
-PizzicatoStr88:: @ 4oct - 4
+voice_group PizzicatoStr88 @ 4oct - 4
 	voice_directsound 60, 0, DirectSoundWaveData_PizzicatoStr881, 255, 235, 0, 222
 	voice_directsound 60, 0, DirectSoundWaveData_PizzicatoStr882, 255, 228, 0, 229
 	voice_directsound 60, 0, DirectSoundWaveData_PizzicatoStr883, 255, 225, 0, 191
 	voice_directsound 60, 0, DirectSoundWaveData_PizzicatoStr884, 255, 223, 0, 190
 
-Harp________88:: @ 4oct - 7
+voice_group Harp________88 @ 4oct - 7
 	voice_directsound 60, 0, DirectSoundWaveData_Harp________881, 255, 249, 0, 233
 	voice_directsound 60, 0, DirectSoundWaveData_Harp________882, 255, 247, 0, 233
 	voice_directsound 60, 0, DirectSoundWaveData_Harp________883, 255, 249, 0, 233
 	voice_directsound 60, 0, DirectSoundWaveData_Harp________884, 255, 247, 0, 233
 
-Strings_______:: @ 3oct + 3 @ alt. - 1
+voice_group Strings_______ @ 3oct + 3 @ alt. - 1
 	voice_directsound 60, 0, DirectSoundWaveData_Strings_______1, 128, 255, 180, 223
 	voice_directsound 60, 0, DirectSoundWaveData_Strings_______2, 128, 255, 180, 223
 	voice_directsound 60, 0, DirectSoundWaveData_Strings_______3, 128, 255, 180, 223
 
-Slow_Strings__:: @ 3oct + 5
+voice_group Slow_Strings__ @ 3oct + 5
 	voice_directsound 60, 0, DirectSoundWaveData_Strings_______1, 20, 255, 230, 235
 	voice_directsound 60, 0, DirectSoundWaveData_Strings_______2, 20, 255, 230, 235
 	voice_directsound 60, 0, DirectSoundWaveData_Strings_______3, 20, 255, 230, 235
 
-Choir_Aahs__8P:: @ 2oct + 3 @ alt. - 4
+voice_group Choir_Aahs__8P @ 2oct + 3 @ alt. - 4
 	voice_directsound 60, 0, DirectSoundWaveData_Choir_Aahs__8P1, 30, 255, 251, 228
 	voice_directsound 60, 0, DirectSoundWaveData_Choir_Aahs__8P2, 30, 255, 203, 228
 
-Trombone______:: @ 2oct - 4
+voice_group Trombone______ @ 2oct - 4
 	voice_directsound 60, 0, DirectSoundWaveData_Trombone______1, 255, 255, 233, 163
 	voice_directsound 60, 0, DirectSoundWaveData_Trombone______2, 255, 255, 233, 163
 
-Oboe__________:: @ 2oct - 18
+voice_group Oboe__________ @ 2oct - 18
 	voice_directsound 60, 0, DirectSoundWaveData_Oboe__________1, 255, 255, 202, 127
 	voice_directsound 60, 0, DirectSoundWaveData_Oboe__________2, 255, 255, 179, 127
 
 @	voice_directsound 60, 0, DirectSoundWaveData_Flute_______881, 255, 253, 200, 127
 
-Flute_2_____8P:: @ 2oct - 22
+voice_group Flute_2_____8P @ 2oct - 22
 	voice_directsound 60, 0, DirectSoundWaveData_Flute_2_____8P1, 255, 0, 255, 127
 	voice_directsound 60, 0, DirectSoundWaveData_Flute_2_____8P2, 255, 251, 235, 127
 
-STANDARD_1____::
+voice_group STANDARD_1____
 	voice_directsound 60, 64, DirectSoundWaveData_DR88Std_1_K1, 255, 0, 255, 200
 	voice_directsound 60, 64, DirectSoundWaveData_DR88Std_1_K2, 255, 0, 255, 200
 	voice_directsound 60, 64, DirectSoundWaveData_DR88Std_2_K1, 255, 0, 255, 200

@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_bubble_grp, voicegroup128
+	.equ	se_m_bubble_grp, voicegroup_rs_sfx_2
 	.equ	se_m_bubble_pri, 4
 	.equ	se_m_bubble_rev, 0
 	.equ	se_m_bubble_mvl, 127

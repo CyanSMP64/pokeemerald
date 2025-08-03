@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_absorb_2_grp, voicegroup128
+	.equ	se_m_absorb_2_grp, voicegroup_rs_sfx_2
 	.equ	se_m_absorb_2_pri, 4
 	.equ	se_m_absorb_2_rev, 0
 	.equ	se_m_absorb_2_mvl, 127

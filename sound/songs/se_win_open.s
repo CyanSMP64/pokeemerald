@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_win_open_grp, voicegroup127
+	.equ	se_win_open_grp, voicegroup_rs_sfx_1
 	.equ	se_win_open_pri, 5
 	.equ	se_win_open_rev, 0
 	.equ	se_win_open_mvl, 127

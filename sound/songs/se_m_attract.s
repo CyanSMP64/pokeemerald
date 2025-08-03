@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_attract_grp, voicegroup128
+	.equ	se_m_attract_grp, voicegroup_rs_sfx_2
 	.equ	se_m_attract_pri, 4
 	.equ	se_m_attract_rev, 0
 	.equ	se_m_attract_mvl, 127

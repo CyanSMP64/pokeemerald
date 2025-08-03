@@ -1,6 +1,6 @@
 	.include "MPlayDef.s"
 
-	.equ	se_m_screech_grp, voicegroup128
+	.equ	se_m_screech_grp, voicegroup_rs_sfx_2
 	.equ	se_m_screech_pri, 4
 	.equ	se_m_screech_rev, 0
 	.equ	se_m_screech_mvl, 127
