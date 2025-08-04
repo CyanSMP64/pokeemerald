@@ -228,7 +228,7 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_IRON_MOTH] = 4,
     [SPECIES_CHI_YU] = 8,
     [SPECIES_POLTCHAGEIST] = 11,
-    [SPECIES_SINISTCHA] = 9,
+    [SPECIES_SINISTCHA] = 8,
     [SPECIES_PECHARUNT] = 16,
     // Alolan Forms
     [SPECIES_RAICHU_ALOLAN] = 6,
