@@ -9716,21 +9716,12 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
     shinyValue = GET_SHINY_VALUE(otId, personality);
     if (shinyValue < SHINY_ODDS)
     {
-        if ((personality % 0x100) < 0x1F)
-        {
-            if (species == SPECIES_COMBEE)
-                return gMonShinyPaletteTable[SPECIES_COMBEE_FEMALE].data;
-        }
         if ((personality % 0x100) < 0x7F)
         {
             if (species == SPECIES_FRILLISH)
                 return gMonShinyPaletteTable[SPECIES_FRILLISH_FEMALE].data;
             else if (species == SPECIES_JELLICENT)
                 return gMonShinyPaletteTable[SPECIES_JELLICENT_FEMALE].data;
-            else if (species == SPECIES_HIPPOPOTAS)
-                return gMonShinyPaletteTable[SPECIES_HIPPOPOTAS_FEMALE].data;
-            else if (species == SPECIES_HIPPOWDON)
-                return gMonShinyPaletteTable[SPECIES_HIPPOWDON_FEMALE].data;
             else if (species == SPECIES_PIKACHU_CAP) {
                 if ((personality >> 8) % 6 == 0)
                     return gMonShinyPaletteTable[SPECIES_PIKACHU_COSPLAY_1].data;
@@ -9871,21 +9862,12 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
     }
     else
     {
-        if ((personality % 0x100) < 0x1F)
-        {
-            if (species == SPECIES_COMBEE)
-                return gMonPaletteTable[SPECIES_COMBEE_FEMALE].data;
-        }
         if ((personality % 0x100) < 0x7F)
         {
             if (species == SPECIES_FRILLISH)
                 return gMonPaletteTable[SPECIES_FRILLISH_FEMALE].data;
             else if (species == SPECIES_JELLICENT)
                 return gMonPaletteTable[SPECIES_JELLICENT_FEMALE].data;
-            else if (species == SPECIES_HIPPOPOTAS)
-                return gMonPaletteTable[SPECIES_HIPPOPOTAS_FEMALE].data;
-            else if (species == SPECIES_HIPPOWDON)
-                return gMonPaletteTable[SPECIES_HIPPOWDON_FEMALE].data;
             else if (species == SPECIES_PIKACHU_CAP) {
                 if ((personality >> 8) % 6 == 0)
                     return gMonPaletteTable[SPECIES_PIKACHU_COSPLAY_1].data;
@@ -10045,21 +10027,12 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
     shinyValue = GET_SHINY_VALUE(otId, personality);
     if (shinyValue < SHINY_ODDS)
     {
-        if ((personality % 0x100) < 0x1F)
-        {
-            if (species == SPECIES_COMBEE)
-                return &gMonShinyPaletteTable[SPECIES_COMBEE_FEMALE];
-        }
         if ((personality % 0x100) < 0x7F)
         {
             if (species == SPECIES_FRILLISH)
                 return &gMonShinyPaletteTable[SPECIES_FRILLISH_FEMALE];
             else if (species == SPECIES_JELLICENT)
                 return &gMonShinyPaletteTable[SPECIES_JELLICENT_FEMALE];
-            else if (species == SPECIES_HIPPOPOTAS)
-                return &gMonShinyPaletteTable[SPECIES_HIPPOPOTAS_FEMALE];
-            else if (species == SPECIES_HIPPOWDON)
-                return &gMonShinyPaletteTable[SPECIES_HIPPOWDON_FEMALE];
             else if (species == SPECIES_PIKACHU_CAP) {
                 if ((personality >> 8) % 6 == 0)
                     return &gMonShinyPaletteTable[SPECIES_PIKACHU_COSPLAY_1];
@@ -10200,21 +10173,12 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
     }
     else
     {
-        if ((personality % 0x100) < 0x1F)
-        {
-            if (species == SPECIES_COMBEE)
-                return &gMonPaletteTable[SPECIES_COMBEE_FEMALE];
-        }
         if ((personality % 0x100) < 0x7F)
         {
             if (species == SPECIES_FRILLISH)
                 return &gMonPaletteTable[SPECIES_FRILLISH_FEMALE];
             else if (species == SPECIES_JELLICENT)
                 return &gMonPaletteTable[SPECIES_JELLICENT_FEMALE];
-            else if (species == SPECIES_HIPPOPOTAS)
-                return &gMonPaletteTable[SPECIES_HIPPOPOTAS_FEMALE];
-            else if (species == SPECIES_HIPPOWDON)
-                return &gMonPaletteTable[SPECIES_HIPPOWDON_FEMALE];
             else if (species == SPECIES_PIKACHU_CAP) {
                 if ((personality >> 8) % 6 == 0)
                     return &gMonPaletteTable[SPECIES_PIKACHU_COSPLAY_1];

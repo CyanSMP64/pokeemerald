@@ -1559,6 +1559,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     [SPECIES_LUXIO_FEMALE] = sAnims_None,
     [SPECIES_LUXRAY_FEMALE] = sAnims_None,
     [SPECIES_ROSERADE_FEMALE] = sAnims_None,
+    [SPECIES_PACHIRISU_FEMALE] = sAnims_None,
     [SPECIES_BUIZEL_FEMALE] = sAnims_None,
     [SPECIES_FLOATZEL_FEMALE] = sAnims_None,
     [SPECIES_AMBIPOM_FEMALE] = sAnims_None,
