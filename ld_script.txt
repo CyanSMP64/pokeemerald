@@ -82,7 +82,6 @@ SECTIONS {
         src/wonder_news.o(.text);
         src/union_room_chat.o(.text);
         src/berry_crush.o(.text);
-        src/berry_powder.o(.text);
         src/dodrio_berry_picking.o(.text);
         src/pokemon_jump.o(.text);
         src/minigame_countdown.o(.text);
@@ -94,12 +93,8 @@ SECTIONS {
     ALIGN(4)
     {
         src/battle_controllers.o(.text);
+        src/berry_powder.o(.text);
         src/decompress.o(.text);
-    } =0
-
-    .text_3 0x08036760 :
-    ALIGN(4)
-    {
         src/battle_main.o(.text);
         src/battle_util.o(.text);
         src/battle_script_commands.o(.text);
@@ -239,11 +234,6 @@ SECTIONS {
         src/hof_pc.o(.text);
         src/field_specials.o(.text);
         src/pokedex_area_screen.o(.text);
-    } =0
-
-    .text_6 0x0813d9b0 :
-    ALIGN(4)
-    {
         src/evolution_scene.o(.text);
         src/coins.o(.text);
         src/wallclock.o(.text);
@@ -367,11 +357,6 @@ SECTIONS {
     ALIGN(4)
     {
         data/event_scripts.o(script_data);
-    } =0
-
-    script_data_1 0x082d86a8 :
-    ALIGN(4)
-    {
         data/battle_scripts_1.o(script_data);
         data/battle_ai_scripts.o(script_data);
         data/field_effect_scripts.o(script_data);
@@ -474,11 +459,6 @@ SECTIONS {
         src/pokemon_jump.o(.rodata);
         src/minigame_countdown.o(.rodata);
         src/trade.o(.rodata);
-    } =0
-
-    .rodata_2 0x0831c898 :
-    ALIGN(4)
-    {
         src/pokemon.o(.rodata);
         src/data.o(.rodata);
         gflib/text.o(.rodata);
@@ -659,11 +639,6 @@ SECTIONS {
         src/trainer_pokemon_sprites.o(.rodata);
         src/lilycove_lady.o(.rodata);
         src/rotating_tile_puzzle.o(.rodata);
-    } =0
-
-    .rodata_4 0x0861500c :
-    ALIGN(4)
-    {
         src/party_menu.o(.rodata);
         src/evolution_scene.o(.rodata);
         src/roulette.o(.rodata);
@@ -794,7 +769,7 @@ SECTIONS {
         src/libisagbprn.o(.rodata);
     } =0
 
-    anim_mon_front_pic_data 0x08a000e0 :
+    anim_mon_front_pic_data :
     ALIGN(4)
     {
         src/anim_mon_front_pics.o(.rodata);
@@ -838,10 +813,9 @@ SECTIONS {
         sound/songs/midi/mus_smwend.o(.rodata);
     } =0
 
-    song_data 0x08fe0000 :
+    song_data :
     ALIGN(4)
     {
-        data/dummy_data.o(.rodata);
         sound/songs/midi/mus_dummy.o(.rodata);
         sound/songs/midi/se_use_item.o(.rodata);
         sound/songs/midi/se_pc_login.o(.rodata);
@@ -1374,9 +1348,10 @@ SECTIONS {
         sound/songs/midi/ph_nurse_solo.o(.rodata);
     } =0
 
-    new_sound_2 :
+    new_sound_2 0x08fe0000 :
     ALIGN(4)
     {
+        data/dummy_data.o(.rodata);
         data/sound_data_3.o(.rodata);
     } =0
 

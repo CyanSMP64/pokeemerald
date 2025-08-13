@@ -76,6 +76,10 @@ void RunBattleScriptCommands_PopCallbacksStack(void);
 void RunBattleScriptCommands(void);
 bool8 TryRunFromBattle(u8 battlerId);
 void SpecialStatusesClear(void);
+void BattleIntroDrawPartySummaryScreens(void);
+void BattleIntroRecordMonsToDex(void);
+void HandleTurnActionSelectionState(void);
+void ReturnFromBattleToOverworld(void);
 
 extern struct MultiPartnerMenuPokemon gMultiPartnerParty[MULTI_PARTY_SIZE];
 
@@ -98,5 +102,6 @@ extern const u8 gStatusConditionString_ConfusionJpn[8];
 extern const u8 gStatusConditionString_LoveJpn[8];
 
 extern const u8 *const gStatusConditionStringsTable[7][2];
+
 
 #endif // GUARD_BATTLE_MAIN_H

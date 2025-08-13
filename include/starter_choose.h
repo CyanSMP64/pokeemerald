@@ -9,5 +9,6 @@ extern const u32 gPokeballSelection_Gfx[];
 
 u16 GetStarterPokemon(u16 chosenStarterId);
 void CB2_ChooseStarter(void);
+void Task_HandleConfirmStarterInput(u8 taskId);
 
 #endif // GUARD_STARTER_CHOOSE_H

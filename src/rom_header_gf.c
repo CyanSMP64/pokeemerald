@@ -5,6 +5,20 @@
 #include "battle_main.h"
 #include "item.h"
 #include "pokeball.h"
+#include "battle.h"
+#include "battle_controllers.h"
+#include "event_data.h"
+#include "start_menu.h"
+#include "battle_setup.h"
+#include "evolution_scene.h"
+#include "battle_message.h"
+#include "menu.h"
+#include "item_menu.h"
+#include "pokemon_summary_screen.h"
+#include "pokemon.h"
+#include "starter_choose.h"
+#include "party_menu.h"
+#include "battle_scripts.h"
 
 // The purpose of this struct is for outside applications to be
 // able to access parts of the ROM or its save file, like a public API.
@@ -17,80 +31,207 @@
 // instead of changing this struct.
 struct GFRomHeader
 {
-    u32 version;
-    u32 language;
-    u8 gameName[32];
-    const struct CompressedSpriteSheet * monFrontPics;
-    const struct CompressedSpriteSheet * monBackPics;
-    const struct CompressedSpritePalette * monNormalPalettes;
-    const struct CompressedSpritePalette * monShinyPalettes;
-    const u8 * const * monIcons;
-    const u8 * monIconPaletteIds;
-    const struct SpritePalette * monIconPalettes;
-    const u8 (* monSpeciesNames)[];
-    const u8 (* moveNames)[];
-    const struct Decoration * decorations;
-    u32 flagsOffset;
-    u32 varsOffset;
-    u32 pokedexOffset;
-    u32 seen1Offset;
-    u32 seen2Offset;
-    u32 pokedexVar;
-    u32 pokedexFlag;
-    u32 mysteryEventFlag;
-    u32 pokedexCount;
-    u8 playerNameLength;
-    u8 trainerNameLength;
-    u8 pokemonNameLength1;
-    u8 pokemonNameLength2;
-    u8 unk5;
-    u8 unk6;
-    u8 unk7;
-    u8 unk8;
-    u8 unk9;
-    u8 unk10;
-    u8 unk11;
-    u8 unk12;
-    u8 unk13;
-    u8 unk14;
-    u8 unk15;
-    u8 unk16;
-    u8 unk17;
-    u32 saveBlock2Size;
-    u32 saveBlock1Size;
-    u32 partyCountOffset;
-    u32 partyOffset;
-    u32 warpFlagsOffset;
-    u32 trainerIdOffset;
-    u32 playerNameOffset;
-    u32 playerGenderOffset;
-    u32 frontierStatusOffset;
-    u32 frontierStatusOffset2;
-    u32 externalEventFlagsOffset;
-    u32 externalEventDataOffset;
-    u32 unk18;
-    const struct SpeciesInfo * speciesInfo;
-    const u8 (* abilityNames)[];
-    const u8 * const * abilityDescriptions;
-    const struct Item * items;
-    const struct BattleMove * moves;
-    const struct CompressedSpriteSheet * ballGfx;
-    const struct CompressedSpritePalette * ballPalettes;
-    u32 gcnLinkFlagsOffset;
-    u32 gameClearFlag;
-    u32 ribbonFlag;
-    u8 bagCountItems;
-    u8 bagCountKeyItems;
-    u8 bagCountPokeballs;
-    u8 bagCountTMHMs;
-    u8 bagCountBerries;
-    u8 pcItemsCount;
-    u32 pcItemsOffset;
-    u32 giftRibbonsOffset;
-    u32 enigmaBerryOffset;
-    u32 enigmaBerrySize;
-    const u8 * moveDescriptions;
-    u32 unk20;
+    u32 version;                                                                                // 0x100
+    u32 language;                                                                               // 0x104
+    u8 gameName[32];                                                                            // 0x108
+    const struct CompressedSpriteSheet * monFrontPics;                                          // 0x128
+    const struct CompressedSpriteSheet * monBackPics;                                           // 0x12c
+    const struct CompressedSpritePalette * monNormalPalettes;                                   // 0x130
+    const struct CompressedSpritePalette * monShinyPalettes;                                    // 0x134
+    const u8 * const * monIcons;                                                                // 0x138
+    const u8 * monIconPaletteIds;                                                               // 0x13c
+    const struct SpritePalette * monIconPalettes;                                               // 0x140
+    const u8 (* monSpeciesNames)[];                                                             // 0x144
+    const u8 (* moveNames)[];                                                                   // 0x148
+    const struct Decoration * decorations;                                                      // 0x14c
+    u32 flagsOffset;                                                                            // 0x150
+    u32 varsOffset;                                                                             // 0x154
+    u32 pokedexOffset;                                                                          // 0x158
+    u32 seen1Offset;                                                                            // 0x15c
+    u32 seen2Offset;                                                                            // 0x160
+    u32 pokedexVar;                                                                             // 0x164
+    u32 pokedexFlag;                                                                            // 0x168
+    u32 mysteryEventFlag;                                                                       // 0x16c
+    u32 pokedexCount;                                                                           // 0x170
+    u8 playerNameLength;                                                                        // 0x174
+    u8 trainerNameLength;                                                                       // 0x175
+    u8 pokemonNameLength1;                                                                      // 0x176
+    u8 pokemonNameLength2;                                                                      // 0x177
+    u8 unk5;                                                                                    // 0x178
+    u8 unk6;                                                                                    // 0x179
+    u8 unk7;                                                                                    // 0x17a
+    u8 unk8;                                                                                    // 0x17b
+    u8 unk9;                                                                                    // 0x17c
+    u8 unk10;                                                                                   // 0x17d
+    u8 unk11;                                                                                   // 0x17e
+    u8 unk12;                                                                                   // 0x17f
+    u8 unk13;                                                                                   // 0x180
+    u8 unk14;                                                                                   // 0x181
+    u8 unk15;                                                                                   // 0x182
+    u8 unk16;                                                                                   // 0x183
+    u8 unk17;                                                                                   // 0x184
+    u32 saveBlock2Size;                                                                         // 0x188
+    u32 saveBlock1Size;                                                                         // 0x18c
+    u32 partyCountOffset;                                                                       // 0x190
+    u32 partyOffset;                                                                            // 0x194
+    u32 warpFlagsOffset;                                                                        // 0x198
+    u32 trainerIdOffset;                                                                        // 0x19c
+    u32 playerNameOffset;                                                                       // 0x1a0
+    u32 playerGenderOffset;                                                                     // 0x1a4
+    u32 frontierStatusOffset;                                                                   // 0x1a8
+    u32 frontierStatusOffset2;                                                                  // 0x1ac
+    u32 externalEventFlagsOffset;                                                               // 0x1b0
+    u32 externalEventDataOffset;                                                                // 0x1b4
+    u32 unk18;                                                                                  // 0x1b8
+    const struct SpeciesInfo * speciesInfo;                                                     // 0x1bc
+    const u8 (* abilityNames)[];                                                                // 0x1c0
+    const u8 * const * abilityDescriptions;                                                     // 0x1c4
+    const struct Item * items;                                                                  // 0x1c8
+    const struct BattleMove * moves;                                                            // 0x1cc
+    const struct CompressedSpriteSheet * ballGfx;                                               // 0x1d0
+    const struct CompressedSpritePalette * ballPalettes;                                        // 0x1d4
+    u32 gcnLinkFlagsOffset;                                                                     // 0x1d8
+    u32 gameClearFlag;                                                                          // 0x1dc
+    u32 ribbonFlag;                                                                             // 0x1e0
+    u8 bagCountItems;                                                                           // 0x1e4
+    u8 bagCountKeyItems;                                                                        // 0x1e5
+    u8 bagCountPokeballs;                                                                       // 0x1e6
+    u8 bagCountTMHMs;                                                                           // 0x1e7
+    u8 bagCountBerries;                                                                         // 0x1e8
+    u8 pcItemsCount;                                                                            // 0x1e9
+    u32 pcItemsOffset;                                                                          // 0x1ec
+    u32 giftRibbonsOffset;                                                                      // 0x1f0
+    u32 enigmaBerryOffset;                                                                      // 0x1f4
+    u32 enigmaBerrySize;                                                                        // 0x1f8
+    const u8 * moveDescriptions;                                                                // 0x1fc
+    u32 unk20;                                                                                  // 0x200
+    // pointers below are to be read by nat dex tracker extension
+    const u8 * header_sBattleBuffersTransferData;                                               // 0x204
+    const u8 * header_gBattleTextBuff1;                                                         // 0x208
+    const u32 * header_gBattleTypeFlags;                                                        // 0x20c
+    const u8 * header_gBattleTerrain;                                                           // 0x210
+    const u32 * header_gBattleControllerExecFlags;                                              // 0x214
+    const u8 * header_gBattlersCount;                                                           // 0x218
+    const u16 * header_gBattlerPartyIndexes;                                                    // 0x21c
+    const u8 * header_gActionsByTurnOrder;                                                      // 0x220
+    const u8 * header_gCurrentTurnActionNumber;                                                 // 0x224
+    const struct BattlePokemon * header_gBattleMons;                                            // 0x228
+    const s32 * header_gTakenDmg;                                                               // 0x22c
+    const u8 * header_gBattlerAttacker;                                                         // 0x230
+    const u8 * header_gBattlerTarget;                                                           // 0x234
+    const u8 * const * header_gBattlescriptCurrInstr;                                           // 0x238
+    const u16 * header_gLockedMoves;                                                            // 0x23c
+    const u8 * header_gMoveResultFlags;                                                         // 0x240
+    const u32 * header_gHitMarker;                                                              // 0x244
+    const u16 * header_gSideStatuses;                                                           // 0x248
+    const struct SideTimer * header_gSideTimers;                                                // 0x24c
+    const u32 * header_gStatuses3;                                                              // 0x250
+    const struct DisableStruct * header_gDisableStructs;                                        // 0x254
+    const u16 * header_gPaydayMoney;                                                            // 0x258
+    const u8 * header_gBattleCommunication;                                                     // 0x25c
+    const u8 * header_gBattleOutcome;                                                           // 0x260
+    const u16 * header_gBattleWeather;                                                          // 0x264
+    const struct WishFutureKnock * header_gWishFutureKnock;                                     // 0x268
+    const struct BattleScripting * header_gBattleScripting;                                     // 0x26c
+    struct BattleStruct ** header_gBattleStruct;                                                // 0x270
+    const u16 * header_gMoveToLearn;                                                            // 0x274
+    const u8 * header_gPlayerPartyCount;                                                        // 0x278
+    const struct Pokemon * header_gPlayerParty;                                                 // 0x27c
+    const struct Pokemon * header_gEnemyParty;                                                  // 0x280
+    const struct MapHeader * header_gMapHeader;                                                 // 0x284
+    const u16 * header_gSpecialVar_Result;                                                      // 0x288
+    const u8 * header_sSpecialFlags;                                                            // 0x28c
+    const u8 * header_sSaveDialogTimer;                                                         // 0x290
+    const u16 * header_gTrainerBattleOpponent_A;                                                // 0x294
+    const u16 * header_gTrainerBattleOpponent_B;                                                // 0x298
+    struct EvoInfo ** header_sEvoStructPtr;                                                     // 0x29c
+    const u16 * header_sBattlerAbilities;                                                       // 0x2a0
+    const u8 * header_sStartMenuWindowId;                                                       // 0x2a4
+    const u16 * header_gSpecialVar_ItemId;                                                      // 0x2a8
+    struct PokemonSummaryScreenData ** header_sMonSummaryScreen;                                // 0x2ac
+    u32 registeredItemOffset;                                                                   // 0x2b0
+    u32 gameStatsOffset;                                                                        // 0x2b4
+    u32 badgeOffset;                                                                            // 0x2b8
+    u32 bagItemsOffset;                                                                         // 0x2bc
+    u32 bagKeyItemsOffset;                                                                      // 0x2c0
+    u32 bagPokeBallsOffset;                                                                     // 0x2c4
+    u32 bagTMHMOffset;                                                                          // 0x2c8
+    u32 bagBerryOffset;                                                                         // 0x2cc
+    u32 encryptionKeyOffset;                                                                    // 0x2d0
+    // iwram
+    void (**header_gBattleMainFunc)(void);                                                      // 0x2d4
+    const struct BattleResults * header_gBattleResults;                                         // 0x2d8
+    const u8 * header_gMultiUsePlayerCursor;                                                    // 0x2dc
+    struct SaveBlock1 ** header_gSaveBlock1Ptr;                                                 // 0x2e0
+    struct SaveBlock2 ** header_gSaveBlock2Ptr;                                                 // 0x2e4
+    const struct Task * header_gTasks;                                                          // 0x2e8
+    // rom
+    void (*header_BattleIntroDrawPartySummaryScreens)(void);                                    // 0x2ec
+    void (*header_BattleIntroRecordMonsToDex)(void);                                            // 0x2f0
+    void (*header_HandleTurnActionSelectionState)(void);                                        // 0x2f4
+    void (*header_ReturnFromBattleToOverworld)(void);                                           // 0x2f8
+    u16 (*header_GetEvolutionTargetSpecies)(struct Pokemon *mon, u8 type, u16 evolutionItem);   // 0x2fc
+    void (*header_Task_HandleConfirmStarterInput)(u8 taskId);                                   // 0x300
+    void (*header_Task_EvolutionScene)(u8 taskId);                                              // 0x304
+    const u32 (* header_gExperienceTables)[];                                                   // 0x308
+    const u32 * const * header_gLevelUpLearnsets;                                               // 0x30c
+    const u8 (* header_gTrainerClassNames)[];                                                   // 0x310
+    const struct Trainer * header_gTrainers;                                                    // 0x314
+    const u16 * header_sTMHMMoves;                                                              // 0x318
+    // battle scripts
+    const u8 * header_BattleScript_RanAwayUsingMonAbility;                                      // 0x31c
+    const u8 * header_BattleScript_TryLearnMoveLoop;                                            // 0x320
+    const u8 * header_BattleScript_LearnMoveReturn;                                             // 0x324
+    const u8 * header_BattleScript_SnatchedMove;                                                // 0x328
+    const u8 * header_BattleScript_FocusPunchSetUp;                                             // 0x32c
+    const u8 * header_BattleScript_MoveUsedWokeUp;                                              // 0x330
+    const u8 * header_BattleScript_MoveUsedIsFrozen;                                            // 0x334
+    const u8 * header_BattleScript_MoveUsedUnfroze;                                             // 0x338
+    const u8 * header_BattleScript_MoveUsedIsConfused;                                          // 0x33c
+    const u8 * header_BattleScript_MoveUsedIsConfusedNoMore;                                    // 0x340
+    const u8 * header_BattleScript_MoveUsedIsInLove;                                            // 0x344
+    // ability battle scripts
+    const u8 * header_BattleScript_CantMakeAsleep;                                              // 0x348
+    const u8 * header_BattleScript_AbsorbUpdateHp;                                              // 0x34c
+    const u8 * header_BattleScript_RestCantSleep;                                               // 0x350
+    const u8 * header_BattleScript_EffectHealBell;                                              // 0x354
+    const u8 * header_BattleScript_PerishSongNotAffected;                                       // 0x358
+    const u8 * header_BattleScript_PrintAbilityMadeIneffective;                                 // 0x35c
+    const u8 * header_BattleScript_LeechSeedTurnPrintAndUpdateHp;                               // 0x360
+    const u8 * header_BattleScript_MoveEffectSleep;                                             // 0x364
+    const u8 * header_BattleScript_MoveEffectPoison;                                            // 0x368
+    const u8 * header_BattleScript_MoveEffectBurn;                                              // 0x36c
+    const u8 * header_BattleScript_MoveEffectParalysis;                                         // 0x370
+    const u8 * header_BattleScript_DrizzleActivates;                                            // 0x374
+    const u8 * header_BattleScript_SpeedBoostActivates;                                         // 0x378
+    const u8 * header_BattleScript_TraceActivates;                                              // 0x37c
+    const u8 * header_BattleScript_RainDishActivates;                                           // 0x380
+    const u8 * header_BattleScript_SandstreamActivates;                                         // 0x384
+    const u8 * header_BattleScript_ShedSkinActivates;                                           // 0x388
+    const u8 * header_BattleScript_IntimidateActivatesLoop;                                     // 0x38c
+    const u8 * header_BattleScript_IntimidatePrevented_End;                                     // 0x390
+    const u8 * header_BattleScript_DroughtActivates;                                            // 0x394
+    const u8 * header_BattleScript_TookAttack;                                                  // 0x398
+    const u8 * header_BattleScript_SturdyPreventsOHKO;                                          // 0x39c
+    const u8 * header_BattleScript_DampStopsExplosion;                                          // 0x3a0
+    const u8 * header_BattleScript_MoveHPDrain;                                                 // 0x3a4
+    const u8 * header_BattleScript_MonMadeMoveUseless;                                          // 0x3a8
+    const u8 * header_BattleScript_FlashFireBoost;                                              // 0x3ac
+    const u8 * header_BattleScript_AbilityPreventsPhasingOut;                                   // 0x3b0
+    const u8 * header_BattleScript_AbilityNoStatLoss;                                           // 0x3b4
+    const u8 * header_BattleScript_BRNPrevention;                                               // 0x3b8
+    const u8 * header_BattleScript_PRLZPrevention;                                              // 0x3bc
+    const u8 * header_BattleScript_PSNPrevention;                                               // 0x3c0
+    const u8 * header_BattleScript_ObliviousPreventsAttraction;                                 // 0x3c4
+    const u8 * header_BattleScript_FlinchPrevention;                                            // 0x3c8
+    const u8 * header_BattleScript_OwnTempoPrevents;                                            // 0x3cc
+    const u8 * header_BattleScript_SoundproofProtected;                                         // 0x3d0
+    const u8 * header_BattleScript_AbilityNoSpecificStatLoss;                                   // 0x3d4
+    const u8 * header_BattleScript_StickyHoldActivates;                                         // 0x3d8
+    const u8 * header_BattleScript_ColorChangeActivates;                                        // 0x3dc
+    const u8 * header_BattleScript_RoughSkinActivates;                                          // 0x3e0
+    const u8 * header_BattleScript_CuteCharmActivates;                                          // 0x3e4
+    const u8 * header_BattleScript_MoveUsedLoafingAroundMsg;                                    // 0x3e8
 };
 
 // This seems to need to be in the text section for some reason.
@@ -172,4 +313,131 @@ static const struct GFRomHeader sGFRomHeader = {
     .enigmaBerrySize = sizeof(struct EnigmaBerry),
     .moveDescriptions = NULL,
     .unk20 = 0x00000000, // 0xFFFFFFFF in FRLG
+    // pointers below are to be read by nat dex tracker extension
+    .header_sBattleBuffersTransferData =                    sBattleBuffersTransferData,
+    .header_gBattleTextBuff1 =                              gBattleTextBuff1,
+    .header_gBattleTypeFlags =                              &gBattleTypeFlags,
+    .header_gBattleTerrain =                                &gBattleTerrain,
+    .header_gBattleControllerExecFlags =                    &gBattleControllerExecFlags,
+    .header_gBattlersCount =                                &gBattlersCount,
+    .header_gBattlerPartyIndexes =                          gBattlerPartyIndexes,
+    .header_gActionsByTurnOrder =                           gActionsByTurnOrder,
+    .header_gCurrentTurnActionNumber =                      &gCurrentTurnActionNumber,
+    .header_gBattleMons =                                   gBattleMons,
+    .header_gTakenDmg =                                     gTakenDmg,
+    .header_gBattlerAttacker =                              &gBattlerAttacker,
+    .header_gBattlerTarget =                                &gBattlerTarget,
+    .header_gBattlescriptCurrInstr =                        &gBattlescriptCurrInstr,
+    .header_gLockedMoves =                                  gLockedMoves,
+    .header_gMoveResultFlags =                              &gMoveResultFlags,
+    .header_gHitMarker =                                    &gHitMarker,
+    .header_gSideStatuses =                                 gSideStatuses,
+    .header_gSideTimers =                                   gSideTimers,
+    .header_gStatuses3 =                                    gStatuses3,
+    .header_gDisableStructs =                               gDisableStructs,
+    .header_gPaydayMoney =                                  &gPaydayMoney,
+    .header_gBattleCommunication =                          gBattleCommunication,
+    .header_gBattleOutcome =                                &gBattleOutcome,
+    .header_gBattleWeather =                                &gBattleWeather,
+    .header_gWishFutureKnock =                              &gWishFutureKnock,
+    .header_gBattleScripting =                              &gBattleScripting,
+    .header_gBattleStruct =                                 &gBattleStruct,
+    .header_gMoveToLearn =                                  &gMoveToLearn,
+    .header_gPlayerPartyCount =                             &gPlayerPartyCount,
+    .header_gPlayerParty =                                  gPlayerParty,
+    .header_gEnemyParty =                                   gEnemyParty,
+    .header_gMapHeader =                                    &gMapHeader,
+    .header_gSpecialVar_Result =                            &gSpecialVar_Result,
+    .header_sSpecialFlags =                                 sSpecialFlags,
+    .header_sSaveDialogTimer =                              &sSaveDialogTimer,
+    .header_gTrainerBattleOpponent_A =                      &gTrainerBattleOpponent_A,
+    .header_gTrainerBattleOpponent_B =                      &gTrainerBattleOpponent_B,
+    .header_sEvoStructPtr =                                 &sEvoStructPtr,
+    .header_sBattlerAbilities =                             sBattlerAbilities,
+    .header_sStartMenuWindowId =                            &sStartMenuWindowId,
+    .header_gSpecialVar_ItemId =                            &gSpecialVar_ItemId,
+    .header_sMonSummaryScreen =                             &sMonSummaryScreen,
+    .registeredItemOffset =                                 offsetof(struct SaveBlock1, registeredItem),
+    .gameStatsOffset =                                      offsetof(struct SaveBlock1, gameStats),
+    .badgeOffset =                                          (offsetof(struct SaveBlock1, flags) + (FLAG_BADGE01_GET / 8)),
+    .bagItemsOffset =                                       offsetof(struct SaveBlock1, bagPocket_Items),
+    .bagKeyItemsOffset =                                    offsetof(struct SaveBlock1, bagPocket_KeyItems),
+    .bagPokeBallsOffset =                                   offsetof(struct SaveBlock1, bagPocket_PokeBalls),
+    .bagTMHMOffset =                                        offsetof(struct SaveBlock1, bagPocket_TMHM),
+    .bagBerryOffset =                                       offsetof(struct SaveBlock1, bagPocket_Berries),
+    .encryptionKeyOffset =                                  offsetof(struct SaveBlock2, encryptionKey),
+    // iwram
+    .header_gBattleMainFunc =                               &gBattleMainFunc,
+    .header_gBattleResults =                                &gBattleResults,
+    .header_gMultiUsePlayerCursor =                         &gMultiUsePlayerCursor,
+    .header_gSaveBlock1Ptr =                                &gSaveBlock1Ptr,
+    .header_gSaveBlock2Ptr =                                &gSaveBlock2Ptr,
+    .header_gTasks =                                        gTasks,
+    // rom
+    .header_BattleIntroDrawPartySummaryScreens =            BattleIntroDrawPartySummaryScreens,
+    .header_BattleIntroRecordMonsToDex =                    BattleIntroRecordMonsToDex,
+    .header_HandleTurnActionSelectionState =                HandleTurnActionSelectionState,
+    .header_ReturnFromBattleToOverworld =                   ReturnFromBattleToOverworld,
+    .header_GetEvolutionTargetSpecies =                     GetEvolutionTargetSpecies,
+    .header_Task_HandleConfirmStarterInput =                Task_HandleConfirmStarterInput,
+    .header_Task_EvolutionScene =                           Task_EvolutionScene,
+    .header_gExperienceTables =                             gExperienceTables,
+    .header_gLevelUpLearnsets =                             gLevelUpLearnsets,
+    .header_gTrainerClassNames =                            gTrainerClassNames,
+    .header_gTrainers =                                     gTrainers,
+    .header_sTMHMMoves =                                    sTMHMMoves,
+    // battle scripts
+    .header_BattleScript_RanAwayUsingMonAbility =           BattleScript_RanAwayUsingMonAbility,
+    .header_BattleScript_TryLearnMoveLoop =                 BattleScript_TryLearnMoveLoop,
+    .header_BattleScript_LearnMoveReturn =                  BattleScript_LearnMoveReturn,
+    .header_BattleScript_SnatchedMove =                     BattleScript_SnatchedMove,
+    .header_BattleScript_FocusPunchSetUp =                  BattleScript_FocusPunchSetUp,
+    .header_BattleScript_MoveUsedWokeUp =                   BattleScript_MoveUsedWokeUp,
+    .header_BattleScript_MoveUsedIsFrozen =                 BattleScript_MoveUsedIsFrozen,
+    .header_BattleScript_MoveUsedUnfroze =                  BattleScript_MoveUsedUnfroze,
+    .header_BattleScript_MoveUsedIsConfused =               BattleScript_MoveUsedIsConfused,
+    .header_BattleScript_MoveUsedIsConfusedNoMore =         BattleScript_MoveUsedIsConfusedNoMore,
+    .header_BattleScript_MoveUsedIsInLove =                 BattleScript_MoveUsedIsInLove,
+    // ability battle scripts
+    .header_BattleScript_CantMakeAsleep =                   BattleScript_CantMakeAsleep,
+    .header_BattleScript_AbsorbUpdateHp =                   BattleScript_AbsorbUpdateHp,
+    .header_BattleScript_RestCantSleep =                    BattleScript_RestCantSleep,
+    .header_BattleScript_EffectHealBell =                   BattleScript_EffectHealBell,
+    .header_BattleScript_PerishSongNotAffected =            BattleScript_PerishSongNotAffected,
+    .header_BattleScript_PrintAbilityMadeIneffective =      BattleScript_PrintAbilityMadeIneffective,
+    .header_BattleScript_LeechSeedTurnPrintAndUpdateHp =    BattleScript_LeechSeedTurnPrintAndUpdateHp,
+    .header_BattleScript_MoveEffectSleep =                  BattleScript_MoveEffectSleep,
+    .header_BattleScript_MoveEffectPoison =                 BattleScript_MoveEffectPoison,
+    .header_BattleScript_MoveEffectBurn =                   BattleScript_MoveEffectBurn,
+    .header_BattleScript_MoveEffectParalysis =              BattleScript_MoveEffectParalysis,
+    .header_BattleScript_DrizzleActivates =                 BattleScript_DrizzleActivates,
+    .header_BattleScript_SpeedBoostActivates =              BattleScript_SpeedBoostActivates,
+    .header_BattleScript_TraceActivates =                   BattleScript_TraceActivates,
+    .header_BattleScript_RainDishActivates =                BattleScript_RainDishActivates,
+    .header_BattleScript_SandstreamActivates =              BattleScript_SandstreamActivates,
+    .header_BattleScript_ShedSkinActivates =                BattleScript_ShedSkinActivates,
+    .header_BattleScript_IntimidateActivatesLoop =          BattleScript_IntimidateActivatesLoop,
+    .header_BattleScript_IntimidatePrevented_End =          BattleScript_IntimidatePrevented_End,
+    .header_BattleScript_DroughtActivates =                 BattleScript_DroughtActivates,
+    .header_BattleScript_TookAttack =                       BattleScript_TookAttack,
+    .header_BattleScript_SturdyPreventsOHKO =               BattleScript_SturdyPreventsOHKO,
+    .header_BattleScript_DampStopsExplosion =               BattleScript_DampStopsExplosion,
+    .header_BattleScript_MoveHPDrain =                      BattleScript_MoveHPDrain,
+    .header_BattleScript_MonMadeMoveUseless =               BattleScript_MonMadeMoveUseless,
+    .header_BattleScript_FlashFireBoost =                   BattleScript_FlashFireBoost,
+    .header_BattleScript_AbilityPreventsPhasingOut =        BattleScript_AbilityPreventsPhasingOut,
+    .header_BattleScript_AbilityNoStatLoss =                BattleScript_AbilityNoStatLoss,
+    .header_BattleScript_BRNPrevention =                    BattleScript_BRNPrevention,
+    .header_BattleScript_PRLZPrevention =                   BattleScript_PRLZPrevention,
+    .header_BattleScript_PSNPrevention =                    BattleScript_PSNPrevention,
+    .header_BattleScript_ObliviousPreventsAttraction =      BattleScript_ObliviousPreventsAttraction,
+    .header_BattleScript_FlinchPrevention =                 BattleScript_FlinchPrevention,
+    .header_BattleScript_OwnTempoPrevents =                 BattleScript_OwnTempoPrevents,
+    .header_BattleScript_SoundproofProtected =              BattleScript_SoundproofProtected,
+    .header_BattleScript_AbilityNoSpecificStatLoss =        BattleScript_AbilityNoSpecificStatLoss,
+    .header_BattleScript_StickyHoldActivates =              BattleScript_StickyHoldActivates,
+    .header_BattleScript_ColorChangeActivates =             BattleScript_ColorChangeActivates,
+    .header_BattleScript_RoughSkinActivates =               BattleScript_RoughSkinActivates,
+    .header_BattleScript_CuteCharmActivates =               BattleScript_CuteCharmActivates,
+    .header_BattleScript_MoveUsedLoafingAroundMsg =         BattleScript_MoveUsedLoafingAroundMsg,
 };

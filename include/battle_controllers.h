@@ -191,6 +191,7 @@ enum
     CONTROLLER_CMDS_COUNT
 };
 
+extern u8 sBattleBuffersTransferData[0x100];
 extern struct UnusedControllerStruct gUnusedControllerStruct;
 
 // general functions

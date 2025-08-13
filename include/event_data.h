@@ -1,6 +1,16 @@
 #ifndef GUARD_EVENT_DATA_H
 #define GUARD_EVENT_DATA_H
 
+#define NUM_SPECIAL_FLAGS (SPECIAL_FLAGS_END - SPECIAL_FLAGS_START + 1)
+#define NUM_TEMP_FLAGS    (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
+#define NUM_DAILY_FLAGS   (DAILY_FLAGS_END - DAILY_FLAGS_START + 1)
+#define NUM_TEMP_VARS     (TEMP_VARS_END - TEMP_VARS_START + 1)
+
+#define SPECIAL_FLAGS_SIZE  (NUM_SPECIAL_FLAGS / 8)  // 8 flags per byte
+#define TEMP_FLAGS_SIZE     (NUM_TEMP_FLAGS / 8)
+#define DAILY_FLAGS_SIZE    (NUM_DAILY_FLAGS / 8)
+#define TEMP_VARS_SIZE      (NUM_TEMP_VARS * 2)      // 1/2 var per byte
+
 void InitEventData(void);
 void ClearTempFieldEventData(void);
 void ClearDailyFlags(void);
@@ -47,5 +57,6 @@ extern u16 gSpecialVar_Facing;
 extern u16 gSpecialVar_MonBoxId;
 extern u16 gSpecialVar_MonBoxPos;
 extern u16 gSpecialVar_Unused_0x8014;
+extern u8 sSpecialFlags[SPECIAL_FLAGS_SIZE];
 
 #endif // GUARD_EVENT_DATA_H

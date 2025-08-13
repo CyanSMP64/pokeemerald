@@ -756,16 +756,16 @@ int main(int argc, char ** argv)
  *         SetMonData                          - 0x0806acac (random statics)
  * 
  * src/battle_setup.o(.text)
- *         BattleSetup_StartLegendaryBattle    - 0x080b0934 (fix music)
+ *         BattleSetup_StartLegendaryBattle    - 0x080b0934 (fix music) // option removed from randomizer
  * 
  * src/menu.o(.rodata)
  *         sTextSpeedFrameDelays               - 0x0860f094 (instant text) // intentional crash, moved
  * 
  * Also please make sure no data is written to the following addresses:
  * 
- * 0x08a00000 - 0x08a000df (instant text)     only 0x00 bytes
+ * 0x08a00000 - 0x08a000df (instant text)     only 0x00 bytes // option removed from randomizer
  * 0x08fe0000 - 0x08fe0047 (random statics)   only 0xFF bytes
- * 0x08fe0100 - 0x08fe017f (fix music)        only 0xFF bytes
+ * 0x08fe0100 - 0x08fe017f (fix music)        only 0xFF bytes // option removed from randomizer
  * 
 ******************************************************************************/
 

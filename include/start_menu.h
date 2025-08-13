@@ -13,4 +13,6 @@ void SaveForBattleTowerLink(void);
 void HideStartMenu(void);
 void AppendToList(u8 *list, u8 *pos, u8 newEntry);
 
+extern u8 sSaveDialogTimer;
+
 #endif // GUARD_START_MENU_H

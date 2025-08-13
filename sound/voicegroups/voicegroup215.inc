@@ -52,7 +52,7 @@ voicegroup215::
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_puresquare_50, 255, 242, 101, 178	@ 124/100/ 80/120/ 64
+	voice_directsound 60, 0, DirectSoundSynthData_squ50, 255, 242, 101, 178	@ 124/100/ 80/120/ 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sd90_whistle2, 255, 246, 78, 197	@ 127/ 90/ 70/118/ 64

@@ -246,6 +246,7 @@ void SetPpNumbersPaletteInMoveSelection(void);
 u8 GetCurrentPpToMaxPpState(u8 currentPp, u8 maxPp);
 
 extern struct BattleMsgData *gBattleMsgDataPtr;
+extern u16 sBattlerAbilities[MAX_BATTLERS_COUNT];
 
 extern const u8 *const gBattleStringsTable[];
 extern const u8 *const gStatNamesTable[];
