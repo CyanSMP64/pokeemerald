@@ -7819,6 +7819,8 @@ static void Cmd_transformdataexecution(void)
             else
                 gBattleMons[gBattlerAttacker].pp[i] = 5;
         }
+        // added line to make up for ability being moved in BattlePokemon struct
+        gBattleMons[gBattlerAttacker].ability = gBattleMons[gBattlerTarget].ability;
 
         gActiveBattler = gBattlerAttacker;
         BtlController_EmitResetActionMoveSelection(BUFFER_A, RESET_MOVE_SELECTION);
