@@ -36,15 +36,6 @@
 
 extern struct Evolution gEvolutionTable[][EVOS_PER_MON];
 
-struct EvoInfo
-{
-    u8 preEvoSpriteId;
-    u8 postEvoSpriteId;
-    u8 evoTaskId;
-    u8 delayTimer;
-    u16 savedPalette[48];
-};
-
 EWRAM_DATA struct EvoInfo *sEvoStructPtr = NULL;
 static EWRAM_DATA u16 *sBgAnimPal = NULL;
 

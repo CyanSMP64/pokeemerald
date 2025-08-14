@@ -232,6 +232,93 @@ struct GFRomHeader
     const u8 * header_BattleScript_RoughSkinActivates;                                          // 0x3e0
     const u8 * header_BattleScript_CuteCharmActivates;                                          // 0x3e4
     const u8 * header_BattleScript_MoveUsedLoafingAroundMsg;                                    // 0x3e8
+    // program addresses
+    u16 offsetStarterMonChoice;                                                                 // 0x3ec
+    u16 offsetRepelStepCount;                                                                   // 0x3ee
+    u16 offsetGrowthRateIndex;                                                                  // 0x3f0
+    u16 offsetMapHeaderLayoutId;                                                                // 0x3f2
+    u16 offsetPokemonGettingExp;                                                                // 0x3f4
+    u16 offsetBattlePokemonStatStages;                                                          // 0x3f6
+    u16 offsetBattlePokemonTypes;                                                               // 0x3f8
+    u16 offsetBattlePokemonDoublesPartner;                                                      // 0x3fa
+    u16 offsetBattleMoves;                                                                      // 0x3fc
+    u16 offsetBattleMoveFlags;                                                                  // 0x3fe
+    u16 offsetEvoInfoTaskId;                                                                    // 0x400
+    u16 offsetTaskIsActive;                                                                     // 0x402
+    u16 offsetTrainerFlagStart;                                                                 // 0x404
+    u16 offsetSysFlagStart;                                                                     // 0x406
+    u16 offsetSysFlagSafariMode;                                                                // 0x408
+    u16 offsetBattleResultsCurrentTurn;                                                         // 0x40a
+    u16 offsetBattleResultsEnemyMoveId;                                                         // 0x40c
+    u16 offsetBattleResultsLastAttackerMove;                                                    // 0x40e
+    u16 offsetBattleCommConfirmedCount;                                                         // 0x410
+    u16 offsetBattleCommLevitate;                                                               // 0x412
+    u16 offsetPokemonSubstruct;                                                                 // 0x414
+    u16 offsetPokemonStatus;                                                                    // 0x416
+    u16 offsetPokemonStatsLvCurHp;                                                              // 0x418
+    u16 offsetPokemonStatsMaxHpAtk;                                                             // 0x41a
+    u16 offsetPokemonStatsDefSpe;                                                               // 0x41c
+    u16 offsetPokemonStatsSpaSpd;                                                               // 0x41e
+    u16 offsetRivalName;                                                                        // 0x420
+    u16 offsetOptionsButtonMode;                                                                // 0x422
+    u16 offsetPokedexOwned;                                                                     // 0x424
+    u16 offsetPokedexSeen;                                                                      // 0x426
+    u16 sizeofBaseStatsPokemon;                                                                 // 0x428
+    u16 sizeofExpTablePokemon;                                                                  // 0x42a
+    u16 sizeofExpTableLevel;                                                                    // 0x42c
+    u16 sizeofTrainer;                                                                          // 0x42e
+    u16 sizeofTrainerName;                                                                      // 0x430
+    u16 sizeofTrainerClass;                                                                     // 0x432
+    u16 sizeofMaxTrainerItems;                                                                  // 0x434
+    u16 sizeofBattlePokemon;                                                                    // 0x436
+    u16 sizeofBattleMove;                                                                       // 0x438
+    u16 sizeofTaskStruct;                                                                       // 0x43a
+    u16 sizeofTMHMMoveId;                                                                       // 0x43c
+    u16 sizeofGameStat;                                                                         // 0x43e
+    u16 sizeofLastAttackerMove;                                                                 // 0x440
+    u16 sizeofPokemonStruct;                                                                    // 0x442
+    // program values
+    u16 shinyOdds;                                                                              // 0x444
+    u8 buttonModeLR;                                                                            // 0x446
+    // battle details screen addresses
+    u16 offsetBattleMonsStatus2;                                                                // 0x448
+    u16 offsetBattleStructWrappedBy;                                                            // 0x44a
+    u16 sizeofStatus3;                                                                          // 0x44c
+    u16 sizeofSideStatuses;                                                                     // 0x44e
+    u16 sizeofSideTimers;                                                                       // 0x450
+    u16 sizeofDisableStruct;                                                                    // 0x452
+    u16 offsetTimerReflect;                                                                     // 0x454
+    u16 offsetTimerLightScreen;                                                                 // 0x456
+    u16 offsetTimerSpikes;                                                                      // 0x458
+    u16 offsetTimerSafeguard;                                                                   // 0x45a
+    u16 offsetTimerMist;                                                                        // 0x45c
+    u16 offsetWishStructFutureCounter;                                                          // 0x45e
+    u16 offsetWishStructFutureSource;                                                           // 0x460
+    u16 offsetWishStructWishCounter;                                                            // 0x462
+    u16 offsetWishStructWishSource;                                                             // 0x464
+    u16 offsetWishStructKnockOff;                                                               // 0x466
+    // pokemon data addresses
+    u16 offsetBaseStats;                                                                        // 0x468
+    u16 offsetTypes;                                                                            // 0x46a
+    u16 offsetCatchRate;                                                                        // 0x46c
+    u16 offsetExpYield;                                                                         // 0x46e
+    u16 offsetGenderRatio;                                                                      // 0x470
+    u16 offsetBaseFriendship;                                                                   // 0x472
+    u16 offsetAbilities;                                                                        // 0x474
+    u16 offsetLevelUpMoveId;                                                                    // 0x476
+    u16 offsetLevelUpMoveLv;                                                                    // 0x478
+    u16 sizeofExpYield;                                                                         // 0x47a
+    u16 sizeofAbilityInBytes;                                                                   // 0x47c
+    u16 sizeofLevelUpLearnset;                                                                  // 0x47e
+    u16 sizeofLevelUpMove;                                                                      // 0x480
+    u16 sizeofLevelUpMoveId;                                                                    // 0x482
+    u16 sizeofLevelUpMoveLv;                                                                    // 0x484
+    u32 endFlagLevelUp;                                                                         // 0x488
+    // nat dex rom version
+    u8 romVersionMajor;                                                                         // 0x48c
+    u8 romVersionMinor;                                                                         // 0x48d
+    u8 romVersionPatch;                                                                         // 0x48e
+    u8 romVersionBuild;                                                                         // 0x48f
 };
 
 // This seems to need to be in the text section for some reason.
@@ -440,4 +527,91 @@ static const struct GFRomHeader sGFRomHeader = {
     .header_BattleScript_RoughSkinActivates =               BattleScript_RoughSkinActivates,
     .header_BattleScript_CuteCharmActivates =               BattleScript_CuteCharmActivates,
     .header_BattleScript_MoveUsedLoafingAroundMsg =         BattleScript_MoveUsedLoafingAroundMsg,
+    // program addresses
+    .offsetStarterMonChoice =                               (VAR_STARTER_MON - VARS_START) * 2,
+    .offsetRepelStepCount =                                 (VAR_REPEL_STEP_COUNT - VARS_START) * 2,
+    .offsetGrowthRateIndex =                                offsetof(struct SpeciesInfo, growthRate),
+    .offsetMapHeaderLayoutId =                              offsetof(struct MapHeader, mapLayoutId),
+    .offsetPokemonGettingExp =                              offsetof(struct BattleStruct, expGetterMonId),
+    .offsetBattlePokemonStatStages =                        offsetof(struct BattlePokemon, statStages),
+    .offsetBattlePokemonTypes =                             offsetof(struct BattlePokemon, type1),
+    .offsetBattlePokemonDoublesPartner =                    sizeof(struct BattlePokemon) * 2,
+    .offsetBattleMoves =                                    offsetof(struct BattleMove, power),
+    .offsetBattleMoveFlags =                                offsetof(struct BattleMove, priority) + 1,
+    .offsetEvoInfoTaskId =                                  offsetof(struct EvoInfo, evoTaskId),
+    .offsetTaskIsActive =                                   offsetof(struct Task, isActive),
+    .offsetTrainerFlagStart =                               TRAINER_FLAGS_START,
+    .offsetSysFlagStart =                                   SYSTEM_FLAGS,
+    .offsetSysFlagSafariMode =                              FLAG_SYS_SAFARI_MODE - SYSTEM_FLAGS,
+    .offsetBattleResultsCurrentTurn =                       offsetof(struct BattleResults, battleTurnCounter),
+    .offsetBattleResultsEnemyMoveId =                       offsetof(struct BattleResults, lastUsedMoveOpponent),
+    .offsetBattleResultsLastAttackerMove =                  offsetof(struct BattleResults, lastUsedMovePlayer),
+    .offsetBattleCommConfirmedCount =                       ACTIONS_CONFIRMED_COUNT,
+    .offsetBattleCommLevitate =                             MISS_TYPE,
+    .offsetPokemonSubstruct =                               offsetof(struct BoxPokemon, secure.substructs),
+    .offsetPokemonStatus =                                  offsetof(struct Pokemon, status),
+    .offsetPokemonStatsLvCurHp =                            offsetof(struct Pokemon, level),
+    .offsetPokemonStatsMaxHpAtk =                           offsetof(struct Pokemon, maxHP),
+    .offsetPokemonStatsDefSpe =                             offsetof(struct Pokemon, defense),
+    .offsetPokemonStatsSpaSpd =                             offsetof(struct Pokemon, spAttack),
+    .offsetRivalName = 0,                                   // only in FireRed
+    .offsetOptionsButtonMode =                              offsetof(struct SaveBlock2, optionsButtonMode),
+    .offsetPokedexOwned =                                   offsetof(struct Pokedex, owned),
+    .offsetPokedexSeen =                                    offsetof(struct Pokedex, seen),
+    .sizeofBaseStatsPokemon =                               sizeof(struct SpeciesInfo),
+    .sizeofExpTablePokemon =                                sizeof(gExperienceTables[0]),
+    .sizeofExpTableLevel =                                  sizeof(gExperienceTables[0][0]),
+    .sizeofTrainer =                                        sizeof(struct Trainer),
+    .sizeofTrainerName =                                    sizeof(gTrainers->trainerName),
+    .sizeofTrainerClass =                                   sizeof(gTrainerClassNames[0]),
+    .sizeofMaxTrainerItems =                                MAX_TRAINER_ITEMS,
+    .sizeofBattlePokemon =                                  sizeof(struct BattlePokemon),
+    .sizeofBattleMove =                                     sizeof(struct BattleMove),
+    .sizeofTaskStruct =                                     sizeof(struct Task),
+    .sizeofTMHMMoveId =                                     sizeof(sTMHMMoves[0]),
+    .sizeofGameStat =                                       sizeof(gSaveBlock1Ptr->gameStats[0]),
+    .sizeofLastAttackerMove =                               sizeof(gBattleResults.lastUsedMovePlayer),
+    .sizeofPokemonStruct =                                  sizeof(struct Pokemon),
+    // program values
+    .shinyOdds =                                            SHINY_ODDS,
+    .buttonModeLR =                                         OPTIONS_BUTTON_MODE_LR,
+    // battle details screen addresses
+    .offsetBattleMonsStatus2 =                              offsetof(struct BattlePokemon, status2),
+    .offsetBattleStructWrappedBy =                          offsetof(struct BattleStruct, wrappedBy),
+    .sizeofStatus3 =                                        sizeof(gStatuses3[0]),
+    .sizeofSideStatuses =                                   sizeof(gSideStatuses[0]),
+    .sizeofSideTimers =                                     sizeof(struct SideTimer),
+    .sizeofDisableStruct =                                  sizeof(struct DisableStruct),
+    .offsetTimerReflect =                                   offsetof(struct SideTimer, reflectTimer),
+    .offsetTimerLightScreen =                               offsetof(struct SideTimer, lightscreenTimer),
+    .offsetTimerSpikes =                                    offsetof(struct SideTimer, spikesAmount),
+    .offsetTimerSafeguard =                                 offsetof(struct SideTimer, safeguardTimer),
+    .offsetTimerMist =                                      offsetof(struct SideTimer, mistTimer),
+    .offsetWishStructFutureCounter =                        offsetof(struct WishFutureKnock, futureSightCounter),
+    .offsetWishStructFutureSource =                         offsetof(struct WishFutureKnock, futureSightAttacker),
+    .offsetWishStructWishCounter =                          offsetof(struct WishFutureKnock, wishCounter),
+    .offsetWishStructWishSource =                           offsetof(struct WishFutureKnock, wishMonId),
+    .offsetWishStructKnockOff =                             offsetof(struct WishFutureKnock, knockedOffMons),
+    // pokemon data addresses
+    .offsetBaseStats =                                      offsetof(struct SpeciesInfo, baseHP),
+    .offsetTypes =                                          offsetof(struct SpeciesInfo, types),
+    .offsetCatchRate =                                      offsetof(struct SpeciesInfo, catchRate),
+    .offsetExpYield =                                       offsetof(struct SpeciesInfo, expYield),
+    .offsetGenderRatio =                                    offsetof(struct SpeciesInfo, genderRatio),
+    .offsetBaseFriendship =                                 offsetof(struct SpeciesInfo, friendship),
+    .offsetAbilities =                                      offsetof(struct SpeciesInfo, abilities),
+    .offsetLevelUpMoveId =                                  0,  // hardcoded
+    .offsetLevelUpMoveLv =                                  16, // hardcoded
+    .sizeofExpYield =                                       sizeof(gSpeciesInfo->expYield),
+    .sizeofAbilityInBytes =                                 sizeof(gSpeciesInfo->abilities[0]),
+    .sizeofLevelUpLearnset =                                sizeof(gLevelUpLearnsets[0]),
+    .sizeofLevelUpMove =                                    sizeof(struct LevelUpMove),
+    .sizeofLevelUpMoveId =                                  16, // hardcoded
+    .sizeofLevelUpMoveLv =                                  16, // hardcoded
+    .endFlagLevelUp =                                       LEVEL_UP_END,
+    // nat dex rom version
+    .romVersionMajor =                                      1,
+    .romVersionMinor =                                      2,
+    .romVersionPatch =                                      0,
+    .romVersionBuild =                                      0,
 };

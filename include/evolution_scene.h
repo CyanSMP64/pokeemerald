@@ -8,6 +8,13 @@ void Task_EvolutionScene(u8 taskId);
 
 extern void (*gCB2_AfterEvolution)(void);
 
-extern struct EvoInfo *sEvoStructPtr;
+struct EvoInfo
+{
+    u8 preEvoSpriteId;
+    u8 postEvoSpriteId;
+    u8 evoTaskId;
+    u8 delayTimer;
+    u16 savedPalette[48];
+}*sEvoStructPtr;
 
 #endif // GUARD_EVOLUTION_SCENE_H
