@@ -141,7 +141,7 @@ EWRAM_DATA u8 gBattleTextBuff3[TEXT_BUFF_ARRAY_COUNT] = {0};
 // it will instead overflow into useful data.
 EWRAM_DATA static u32 sFlickerArray[22] = {0};
 EWRAM_DATA u32 gBattleTypeFlags = 0;
-EWRAM_DATA u16 gBattlerAbility = 0;
+EWRAM_DATA u8 gBattlerAbility = 0;
 EWRAM_DATA u8 gBattleTerrain = 0;
 EWRAM_DATA u32 gUnusedFirstBattleVar1 = 0; // Never read
 EWRAM_DATA struct MultiPartnerMenuPokemon gMultiPartnerParty[MULTI_PARTY_SIZE] = {0};
