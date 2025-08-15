@@ -4105,11 +4105,11 @@ BattleScript_IntimidateActivatesEnd3::
 BattleScript_PauseIntimidateActivates:
 BattleScript_IntimidateActivates::
 	setbyte gBattlerTarget, 0
-	call BattleScript_AbilityPopUp
 	setstatchanger STAT_ATK, 1, TRUE
 BattleScript_IntimidateActivatesLoop::
 	trygetintimidatetarget BattleScript_IntimidateActivatesReturn
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_IntimidateActivatesLoopIncrement
+	call BattleScript_AbilityPopUp
 	jumpifability BS_TARGET, ABILITY_CLEAR_BODY, BattleScript_IntimidatePrevented
 	jumpifability BS_TARGET, ABILITY_HYPER_CUTTER, BattleScript_IntimidatePrevented_HyperCutter
 	jumpifability BS_TARGET, ABILITY_WHITE_SMOKE, BattleScript_IntimidatePrevented
