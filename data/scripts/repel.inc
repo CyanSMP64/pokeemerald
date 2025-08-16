@@ -30,11 +30,11 @@ EventScript_RepelWoreOff_NoMoreRepels:
 	end
 
 Text_RepelWoreOff:
-	.string "Repel's effect wore off…$"
+	.string "The repellent's effect wore off!$"
 
 Text_RepelWoreOff_UseAnother:
-	.string "Repel's effect wore off!\n"
-	.string "Use another?$"
+	.string "The repellent's effect wore off!\n"
+	.string "Would you like to use another one?$"
 
 Text_PlayerUsedRepel:
 	.string "You used a {STR_VAR_2}.$"
