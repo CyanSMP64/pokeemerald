@@ -8660,6 +8660,10 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem)
                     }
                 }
                 break;
+            case EVO_LEVEL_REG_ROCK:
+                if (gEvolutionTable[species][i].param <= level && GetMonData(mon, MON_DATA_HELD_ITEM, NULL) == ITEM_REGIONAL_ROCK)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
             }
         }
         break;
@@ -8702,6 +8706,10 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem)
                 break;
             case EVO_ITEM_CASCOON:
                 if (gEvolutionTable[species][i].param == evolutionItem && (upperPersonality % 10) > 4)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_ITEM_REG_ROCK:
+                if (gEvolutionTable[species][i].param == evolutionItem && GetMonData(mon, MON_DATA_HELD_ITEM, NULL) == ITEM_REGIONAL_ROCK)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             }
