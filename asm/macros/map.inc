@@ -22,9 +22,8 @@
 	@ Defines an object event template for map data, to be used by a normal object. Mirrors the struct layout of ObjectEventTemplate in include/global.fieldmap.h
 	.macro object_event index:req, gfx:req, x:req, y:req, elevation:req, movement_type:req, x_radius:req, y_radius:req, trainer_type:req, sight_radius_tree_etc:req, script:req, event_flag:req
 	.byte \index
-	.byte \gfx
 	.byte OBJ_KIND_NORMAL
-	.space 1  @ Padding
+	.2byte \gfx
 	.2byte \x, \y
 	.byte \elevation
 	.byte \movement_type
@@ -42,9 +41,8 @@
 	@ NOTE: The handling for this type of event does not exist in Emerald by default; it is exclusive to FRLG.
 	.macro clone_event index:req, gfx:req, x:req, y:req, target_local_id:req, target_map_id:req
 	.byte \index
-	.byte \gfx
 	.byte OBJ_KIND_CLONE
-	.space 1  @ Padding
+	.2byte \gfx
 	.2byte \x, \y
 	.byte \target_local_id
 	.space 3  @ Padding
