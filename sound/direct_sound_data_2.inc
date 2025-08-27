@@ -2,24 +2,52 @@
 	.4byte 0x40000000, 0x01058920, 0, 0
 	.byte 0x80
 	.byte \type
-	.if \type != 0
-	.else
+	.if \type == 0
 	.byte \offset
 	.byte \step
 	.byte \depth
 	.byte \init
+	.byte 0
+	.elseif \type == 3
+	.byte \offset
+	.else
+	.byte 0
 	.endif
-	.byte 0, 0
+	.byte 0
 	.endm
 
-	.macro camelot_square_basic duty_cycle:req
-	camelot_synth_sound 0, \duty_cycle, 0, 0, 0
+	.macro camelot_square_basic_loud duty_cycle:req
+	camelot_synth_sound 3, \duty_cycle, 0, 0, 0
 	.endm
+	
+	.align 2
+DirectSoundSynthData_squ12::
+	camelot_square_basic_loud 32
+	
+	.align 2
+DirectSoundSynthData_squ25::
+	camelot_square_basic_loud 64
+	
+	.align 2
+DirectSoundSynthData_squ37::
+	camelot_square_basic_loud 96
 
 	.align 2
 DirectSoundSynthData_squ50::
-	camelot_square_basic 128
-	
+	camelot_square_basic_loud 128
+
+	.align 2
+DirectSoundSynthData_squ62::
+	camelot_square_basic_loud 160
+
+	.align 2
+DirectSoundSynthData_squ75::
+	camelot_square_basic_loud 192
+
+	.align 2
+DirectSoundSynthData_squ87::
+	camelot_square_basic_loud 224
+
 	.align 2
 DirectSoundWaveData_dp_sd90_mg303_bass::
 	.incbin "sound/direct_sound_samples/dp_sd90_mg303_bass.bin"

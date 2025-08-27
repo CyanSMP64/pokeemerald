@@ -1162,6 +1162,9 @@ C_synth_saw_loop:
 	b C_end_mixing
 
 C_synth_triangle:
+	subs r12, r12, #1
+	bne C_synth_static_pulse
+
 	mov r6, #0x80
 	mov r12, #0x180
 
@@ -1178,6 +1181,28 @@ C_synth_triangle_loop:
 	subs r8, r8, #4                  @ subtract #4 from the remaining samples
 	bgt C_synth_triangle_loop
 
+	b C_end_mixing
+
+C_synth_static_pulse:
+	/* louder, but static, pulse wave */
+	ldrb r0, [r3, #SYNTH_BASE_WAVE_DUTY]
+	mov r6, r0, lsl#24
+	stmfd sp!, {r2, r3, r9, r12}
+
+C_synth_static_pulse_loop:
+	ldmia r5, {r0-r3, r9, r10, r12, lr} @ load 8 samples
+	.irp reg, r0, r1, r2, r3, r9, r10, r12, lr @ 8 blocks
+	  cmp r7, r6                      @ Block #1
+	  addlo \reg, \reg, r11, lsl#7
+	  subhs \reg, \reg, r11, lsl#7
+	  adds r7, r7, r4, lsl#3
+	.endr
+
+	stmia r5!, {r0-r3, r9, r10, r12, lr} @ write 8 samples
+	subs r8, r8, #8
+	bgt C_synth_static_pulse_loop
+
+	ldmfd sp!, {r2, r3, r9, r12}
 	b C_end_mixing
 
 /* r0: base addr
