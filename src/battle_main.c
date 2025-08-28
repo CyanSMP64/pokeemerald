@@ -2031,12 +2031,12 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
             otIdType = OT_ID_RANDOM_NO_SHINY;
             fixedOtId = 0;
 
-//            if (gTrainers[trainerNum].doubleBattle == TRUE)
-//                personalityValue = 0x80;
-//            else if (gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
-//                personalityValue = 0x78; // Use personality more likely to result in a female Pokémon
-//            else
-//                personalityValue = 0x88; // Use personality more likely to result in a male Pokémon
+            if (gTrainers[trainerNum].doubleBattle == TRUE)
+                personalityValue = 0x80;
+            else if (gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
+                personalityValue = 0x78; // Use personality more likely to result in a female Pokémon
+            else
+                personalityValue = 0x88; // Use personality more likely to result in a male Pokémon
 
             for (j = 0; gTrainers[trainerNum].trainerName[j] != EOS; j++)
                 nameHash += gTrainers[trainerNum].trainerName[j];
@@ -2053,8 +2053,13 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
 
-                personalityValue += ((personalityValue & 0x0000f800) >> 8);
-
+                if (partyData[i].forcedGender != 0) {
+                    if (gTrainers[trainerNum].doubleBattle == TRUE
+                     || gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
+                        personalityValue = ((personalityValue & 0xffffff00) - 0x18 + (partyData[i].forcedGender * 0x24));
+                    else
+                        personalityValue = ((personalityValue & 0xffffff00) - 0x08 + (partyData[i].forcedGender * 0x24));
+                }
                 if (partyData[i].ability == 2) {
                     personalityValue += 1;
                 }
@@ -2076,8 +2081,13 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
 
-                personalityValue += ((personalityValue & 0x0000f800) >> 8);
-
+                if (partyData[i].forcedGender != 0) {
+                    if (gTrainers[trainerNum].doubleBattle == TRUE
+                     || gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
+                        personalityValue = ((personalityValue & 0xffffff00) - 0x18 + (partyData[i].forcedGender * 0x24));
+                    else
+                        personalityValue = ((personalityValue & 0xffffff00) - 0x08 + (partyData[i].forcedGender * 0x24));
+                }
                 if (partyData[i].ability == 2) {
                     personalityValue += 1;
                 }
@@ -2105,8 +2115,13 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
 
-                personalityValue += ((personalityValue & 0x0000f800) >> 8);
-
+                if (partyData[i].forcedGender != 0) {
+                    if (gTrainers[trainerNum].doubleBattle == TRUE
+                     || gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
+                        personalityValue = ((personalityValue & 0xffffff00) - 0x18 + (partyData[i].forcedGender * 0x24));
+                    else
+                        personalityValue = ((personalityValue & 0xffffff00) - 0x08 + (partyData[i].forcedGender * 0x24));
+                }
                 if (partyData[i].ability == 2) {
                     personalityValue += 1;
                 }
@@ -2130,8 +2145,13 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
 
-                personalityValue += ((personalityValue & 0x0000f800) >> 8);
-
+                if (partyData[i].forcedGender != 0) {
+                    if (gTrainers[trainerNum].doubleBattle == TRUE
+                     || gTrainers[trainerNum].encounterMusic_gender & F_TRAINER_FEMALE)
+                        personalityValue = ((personalityValue & 0xffffff00) - 0x18 + (partyData[i].forcedGender * 0x24));
+                    else
+                        personalityValue = ((personalityValue & 0xffffff00) - 0x08 + (partyData[i].forcedGender * 0x24));
+                }
                 if (partyData[i].ability == 2) {
                     personalityValue += 1;
                 }
