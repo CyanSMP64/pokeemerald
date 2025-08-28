@@ -530,11 +530,7 @@ static void FortreeBridgePerStepCallback(u8 taskId)
 
         // Because this doesn't check for isFortreeBridgeCur, bridge sections aren't
         // lowered when first stepping onto them from anything other than another bridge.
-    #ifdef BUGFIX
         if (isFortreeBridgePrev || isFortreeBridgeCur)
-    #else
-        if (isFortreeBridgePrev)
-    #endif
         {
             // Raise old bridge
             TryRaiseFortreeBridge(prevX, prevY);
@@ -555,7 +551,7 @@ static void FortreeBridgePerStepCallback(u8 taskId)
         if (!isFortreeBridgePrev)
             break;
 
-        tBounceTime = 16;
+        tBounceTime = 8;
         tState = 2;
         // fallthrough
     case 2:
