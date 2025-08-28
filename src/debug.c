@@ -1326,8 +1326,8 @@ static void DebugTask_HandleMenuInput_FlagsVars(u8 taskId)
         PlaySE(SE_SELECT);
         Debug_DestroyMenu(taskId);
         
-        ClearStdWindowAndFrame(gTasks[taskId].data[2], TRUE);
-        RemoveWindow(gTasks[taskId].data[2]);
+        //ClearStdWindowAndFrame(gTasks[taskId].data[2], TRUE);
+        //RemoveWindow(gTasks[taskId].data[2]);
 
         Debug_ReShowMainMenu();
     }
