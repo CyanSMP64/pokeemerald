@@ -461,7 +461,7 @@ SECTIONS {
         src/trade.o(.rodata);
     } =0
 
-    .rodata_pokemon 0x0831c898 : @ moved gBattleMoves to vanilla address for now
+    .rodata_pokemon 0x0831c898 : /* moved gBattleMoves to vanilla address for now */
     ALIGN(4)
     {
         src/pokemon.o(.rodata);
