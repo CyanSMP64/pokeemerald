@@ -517,7 +517,7 @@ struct SaveBlock2
     /*0x2C8*/ struct BerryPickingResults berryPick;
     /*0x2D8*/ u16 contestLinkResults[CONTEST_CATEGORIES_COUNT][CONTESTANT_COUNT];
     /*0x300*/ struct BattleFrontier frontier;
-}; // sizeof=0xB24
+};
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
 

@@ -3,8 +3,8 @@
 
 // Each 4 KiB flash sector contains 3968 bytes of actual data followed by a 128 byte footer.
 // Only 12 bytes of the footer are used.
-#define SECTOR_DATA_SIZE 4084
-#define SECTOR_FOOTER_SIZE 12
+#define SECTOR_DATA_SIZE 4076
+#define SECTOR_FOOTER_SIZE 20
 #define SECTOR_SIZE (SECTOR_DATA_SIZE + SECTOR_FOOTER_SIZE)
 
 #define NUM_SAVE_SLOTS 2
@@ -32,6 +32,7 @@
 #define SAVE_STATUS_EMPTY    0
 #define SAVE_STATUS_OK       1
 #define SAVE_STATUS_CORRUPT  2
+#define SAVE_STATUS_VERSION_MISMATCH 3
 #define SAVE_STATUS_NO_FLASH 4
 #define SAVE_STATUS_ERROR    0xFF
 
@@ -69,7 +70,11 @@ struct SaveSectorLocation
 struct SaveSector
 {
     u8 data[SECTOR_DATA_SIZE];
-    u8 unused[SECTOR_FOOTER_SIZE - 12]; // Unused portion of the footer
+    u8 saveVersionMajor;
+    u8 saveVersionMinor;
+    u8 saveVersionPatch;
+    u8 fillerFEF;
+    u32 saveVersionBuild;
     u16 id;
     u16 checksum;
     u32 signature;

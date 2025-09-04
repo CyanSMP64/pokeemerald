@@ -29,6 +29,12 @@
 #define GAME_VERSION (VERSION_EMERALD)
 #define GAME_LANGUAGE (LANGUAGE_ENGLISH)
 
+#define NATDEX_VERSION_MAJOR 1
+#define NATDEX_VERSION_MINOR 1
+#define NATDEX_VERSION_PATCH 3
+// revision number: git describe --tags
+#define NATDEX_VERSION_BUILD 165
+
 // party sizes
 #define PARTY_SIZE 6
 #define MULTI_PARTY_SIZE (PARTY_SIZE / 2)

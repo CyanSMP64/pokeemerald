@@ -195,6 +195,10 @@ static u8 HandleWriteSector(u16 sectorId, const struct SaveSectorLocation *locat
         ((u8 *)gReadWriteSector)[i] = 0;
 
     // Set footer data
+    gReadWriteSector->saveVersionMajor = NATDEX_VERSION_MAJOR;
+    gReadWriteSector->saveVersionMinor = NATDEX_VERSION_MINOR;
+    gReadWriteSector->saveVersionPatch = NATDEX_VERSION_PATCH;
+    gReadWriteSector->saveVersionBuild = NATDEX_VERSION_BUILD;
     gReadWriteSector->id = sectorId;
     gReadWriteSector->signature = SECTOR_SIGNATURE;
     gReadWriteSector->counter = gSaveCounter;
@@ -329,6 +333,10 @@ static u8 HandleReplaceSector(u16 sectorId, const struct SaveSectorLocation *loc
         ((u8 *)gReadWriteSector)[i] = 0;
 
     // Set footer data
+    gReadWriteSector->saveVersionMajor = NATDEX_VERSION_MAJOR;
+    gReadWriteSector->saveVersionMinor = NATDEX_VERSION_MINOR;
+    gReadWriteSector->saveVersionPatch = NATDEX_VERSION_PATCH;
+    gReadWriteSector->saveVersionBuild = NATDEX_VERSION_BUILD;
     gReadWriteSector->id = sectorId;
     gReadWriteSector->signature = SECTOR_SIGNATURE;
     gReadWriteSector->counter = gSaveCounter;
@@ -520,6 +528,7 @@ static u8 GetSaveValidStatus(const struct SaveSectorLocation *locations)
     u32 saveSlot2Counter = 0;
     u32 validSectorFlags = 0;
     bool8 signatureValid = FALSE;
+    bool8 versionMatch = FALSE;
     u8 saveSlot1Status;
     u8 saveSlot2Status;
 
@@ -537,6 +546,12 @@ static u8 GetSaveValidStatus(const struct SaveSectorLocation *locations)
                 validSectorFlags |= 1 << gReadWriteSector->id;
             }
         }
+        if (gReadWriteSector->saveVersionMajor == NATDEX_VERSION_MAJOR
+         && gReadWriteSector->saveVersionMinor == NATDEX_VERSION_MINOR
+         && gReadWriteSector->saveVersionPatch == NATDEX_VERSION_PATCH
+         && gReadWriteSector->saveVersionBuild == NATDEX_VERSION_BUILD) {
+            versionMatch = TRUE;
+        }
     }
 
     if (signatureValid)
@@ -552,8 +567,12 @@ static u8 GetSaveValidStatus(const struct SaveSectorLocation *locations)
         saveSlot1Status = SAVE_STATUS_EMPTY;
     }
 
+    if (saveSlot1Status != SAVE_STATUS_EMPTY && !versionMatch)
+        saveSlot1Status = SAVE_STATUS_VERSION_MISMATCH;
+
     validSectorFlags = 0;
     signatureValid = FALSE;
+    versionMatch = FALSE;
 
     // Check save slot 2
     for (i = 0; i < NUM_SECTORS_PER_SLOT; i++)
@@ -569,6 +588,12 @@ static u8 GetSaveValidStatus(const struct SaveSectorLocation *locations)
                 validSectorFlags |= 1 << gReadWriteSector->id;
             }
         }
+        if (gReadWriteSector->saveVersionMajor == NATDEX_VERSION_MAJOR
+         && gReadWriteSector->saveVersionMinor == NATDEX_VERSION_MINOR
+         && gReadWriteSector->saveVersionPatch == NATDEX_VERSION_PATCH
+         && gReadWriteSector->saveVersionBuild == NATDEX_VERSION_BUILD) {
+            versionMatch = TRUE;
+        }
     }
 
     if (signatureValid)
@@ -583,6 +608,9 @@ static u8 GetSaveValidStatus(const struct SaveSectorLocation *locations)
         // No sectors in slot 2 have the correct signature, treat it as empty.
         saveSlot2Status = SAVE_STATUS_EMPTY;
     }
+
+    if (saveSlot2Status != SAVE_STATUS_EMPTY && !versionMatch)
+        saveSlot2Status = SAVE_STATUS_VERSION_MISMATCH;
 
     if (saveSlot1Status == SAVE_STATUS_OK && saveSlot2Status == SAVE_STATUS_OK)
     {
@@ -602,6 +630,29 @@ static u8 GetSaveValidStatus(const struct SaveSectorLocation *locations)
                 gSaveCounter = saveSlot1Counter;
         }
         return SAVE_STATUS_OK;
+    }
+
+    if (saveSlot1Status == SAVE_STATUS_VERSION_MISMATCH && saveSlot2Status == SAVE_STATUS_VERSION_MISMATCH)
+    {
+        gSaveCounter = 0;
+        gLastWrittenSector = 0;
+        return SAVE_STATUS_VERSION_MISMATCH;
+    }
+
+    if (saveSlot1Status == SAVE_STATUS_VERSION_MISMATCH)
+    {
+        gSaveCounter = saveSlot2Counter;
+        if (saveSlot2Status == SAVE_STATUS_OK)
+            return SAVE_STATUS_OK;
+        return SAVE_STATUS_VERSION_MISMATCH;
+    }
+
+    if (saveSlot2Status == SAVE_STATUS_VERSION_MISMATCH)
+    {
+        gSaveCounter = saveSlot1Counter;
+        if (saveSlot1Status == SAVE_STATUS_OK)
+            return SAVE_STATUS_OK;
+        return SAVE_STATUS_VERSION_MISMATCH;
     }
 
     // One or both save slots are not OK

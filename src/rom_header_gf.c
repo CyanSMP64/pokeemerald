@@ -318,7 +318,7 @@ struct GFRomHeader
     u8 romVersionMajor;                                                                         // 0x48c
     u8 romVersionMinor;                                                                         // 0x48d
     u8 romVersionPatch;                                                                         // 0x48e
-    u8 romVersionBuild;                                                                         // 0x48f
+    u32 romVersionBuild;                                                                         // 0x48f
 };
 
 // This seems to need to be in the text section for some reason.
@@ -610,8 +610,8 @@ static const struct GFRomHeader sGFRomHeader = {
     .sizeofLevelUpMoveLv =                                  16, // hardcoded
     .endFlagLevelUp =                                       LEVEL_UP_END,
     // nat dex rom version
-    .romVersionMajor =                                      1,
-    .romVersionMinor =                                      2,
-    .romVersionPatch =                                      0,
-    .romVersionBuild =                                      0,
+    .romVersionMajor =                                      NATDEX_VERSION_MAJOR,
+    .romVersionMinor =                                      NATDEX_VERSION_MINOR,
+    .romVersionPatch =                                      NATDEX_VERSION_PATCH,
+    .romVersionBuild =                                      NATDEX_VERSION_BUILD,
 };
