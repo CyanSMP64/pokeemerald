@@ -23,6 +23,8 @@
 #include "sound.h"
 #include "util.h"
 #include "title_screen.h"
+#include "string_util.h"
+#include "strings.h"
 #include "constants/rgb.h"
 #include "constants/battle_anim.h"
 
@@ -1051,11 +1053,95 @@ static void MainCB2_EndIntro(void)
         SetMainCallback2(CB2_InitTitleScreen);
 }
 
+static const u8 sVersionNumberDigits[] = {
+    0x28, 0x29, 0x2a, 0x2b, 0x2c, 0x2d, 0x2e, 0x2f, 0x30, 0x31
+};
+
+static void WriteGlyphToTilemap(u8 glyph, u16 *dest)
+{
+    u16 tile_index;
+
+    switch (glyph)
+    {
+        case 0xe6: // r
+            tile_index = 0x44;
+            break;
+        case 0xea: // v
+            tile_index = 0x48;
+            break;
+        case 0xad: // .
+            tile_index = 0x27;
+            break;
+        case 0xae: // -
+            tile_index = 0x32;
+            break;
+        case 0xa1: // 0
+        case 0xa2: // 1
+        case 0xa3: // 2
+        case 0xa4: // 3
+        case 0xa5: // 4
+        case 0xa6: // 5
+        case 0xa7: // 6
+        case 0xa8: // 7
+        case 0xa9: // 8
+        case 0xaa: // 9
+            tile_index = sVersionNumberDigits[0 + (glyph - 0xa1)];
+            break;
+        default:
+            tile_index = 0x01; // blank tile
+            break;
+    }
+
+    *dest = tile_index;
+}
+
+static void DrawVersionString(const char *versionString)
+{
+    u8 x;
+    u8 y = 1;
+    u16 *tilemap;
+    u8 i = 0;
+    tilemap = (u16*)BG_SCREEN_ADDR(7);
+
+    if (NATDEX_VERSION_BUILD >= 100)
+        x = 18;
+    else if (NATDEX_VERSION_BUILD >= 10)
+        x = 19;
+    else if (NATDEX_VERSION_BUILD >= 1)
+        x = 20;
+    else // release version, revision # 0
+        x = 23;
+
+    while (versionString[i] != 0xff)
+    {
+        u16 *dest = tilemap + (y * 32) + x;
+        WriteGlyphToTilemap(versionString[i], dest);
+        x++;
+        i++;
+    }
+}
+
 static void LoadCopyrightGraphics(u16 tilesetAddress, u16 tilemapAddress, u16 paletteOffset)
 {
+    char versionString[12];
+
     LZ77UnCompVram(gIntroCopyright_Gfx, (void *)(VRAM + tilesetAddress));
     LZ77UnCompVram(gIntroCopyright_Tilemap, (void *)(VRAM + tilemapAddress));
     LoadPalette(gIntroCopyright_Pal, paletteOffset, PLTT_SIZE_4BPP);
+
+    StringCopy(versionString, gText_V);
+    ConvertIntToDecimalStringN(&versionString[1], NATDEX_VERSION_MAJOR, STR_CONV_MODE_RIGHT_ALIGN, 1);
+    StringAppend(versionString, gText_DecimalPoint);
+    ConvertIntToDecimalStringN(&versionString[3], NATDEX_VERSION_MINOR, STR_CONV_MODE_RIGHT_ALIGN, 1);
+    StringAppend(versionString, gText_DecimalPoint);
+    ConvertIntToDecimalStringN(&versionString[5], NATDEX_VERSION_PATCH, STR_CONV_MODE_RIGHT_ALIGN, 1);
+    if (NATDEX_VERSION_BUILD != 0) {
+        StringAppend(versionString, gText_DashR);
+        ConvertIntToDecimalStringN(&versionString[8], NATDEX_VERSION_BUILD, STR_CONV_MODE_LEFT_ALIGN, 3);
+    }
+    StringAppend(versionString, gText_Blank);
+
+    DrawVersionString(versionString);
 }
 
 static void SerialCB_CopyrightScreen(void)

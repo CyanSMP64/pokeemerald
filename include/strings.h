@@ -3043,4 +3043,8 @@ extern const u8 gText_HM08Dive[];
 extern const u8 gText_A[];
 extern const u8 gText_An[];
 
+extern const u8 gText_V[];
+extern const u8 gText_DashR[];
+extern const u8 gText_DecimalPoint[];
+
 #endif // GUARD_STRINGS_H
