@@ -319,6 +319,25 @@ struct GFRomHeader
     u8 romVersionMinor;                                                                         // 0x48d
     u8 romVersionPatch;                                                                         // 0x48e
     u32 romVersionBuild;                                                                        // 0x490
+    // program addresses - trainers
+    u16 offsetTrainerClass;                                                                     // 0x494
+    u16 offsetTrainerGender;                                                                    // 0x496
+    u16 offsetTrainerPic;                                                                       // 0x498
+    u16 offsetTrainerName;                                                                      // 0x49a
+    u16 offsetTrainerItems;                                                                     // 0x49c
+    u16 offsetTrainerDoubleBattle;                                                              // 0x49e
+    u16 offsetTrainerFlagsAI;                                                                   // 0x4a0
+    u16 offsetTrainerPartySize;                                                                 // 0x4a2
+    u16 offsetTrainerPartyPtr;                                                                  // 0x4a4
+    u16 offsetTrainerMonLevel;                                                                  // 0x4a6
+    u16 offsetTrainerMonSpecies;                                                                // 0x4a8
+    u16 offsetTrainerMonItem;                                                                   // 0x4aa
+    u16 offsetTrainerMonNoItemMove1;                                                            // 0x4ac
+    u16 offsetTrainerMonItemMove1;                                                              // 0x4ae
+    u16 sizeofTrainerMonWithDefaultMoves;                                                       // 0x4b0
+    u16 sizeofTrainerMonWithCustomMoves;                                                        // 0x4b2
+    u16 sizeofTrainerItem;                                                                      // 0x4b4
+    u16 sizeofTrainerMonCustomMove;                                                             // 0x4b6
 };
 
 // This seems to need to be in the text section for some reason.
@@ -614,4 +633,23 @@ static const struct GFRomHeader sGFRomHeader = {
     .romVersionMinor =                                      NATDEX_VERSION_MINOR,
     .romVersionPatch =                                      NATDEX_VERSION_PATCH,
     .romVersionBuild =                                      NATDEX_VERSION_BUILD,
+    // program addresses - trainers
+    .offsetTrainerClass =                                   offsetof(struct Trainer, trainerClass),
+    .offsetTrainerGender =                                  offsetof(struct Trainer, encounterMusic_gender),
+    .offsetTrainerPic =                                     offsetof(struct Trainer, trainerPic),
+    .offsetTrainerName =                                    offsetof(struct Trainer, trainerName),
+    .offsetTrainerItems =                                   offsetof(struct Trainer, items),
+    .offsetTrainerDoubleBattle =                            offsetof(struct Trainer, doubleBattle),
+    .offsetTrainerFlagsAI =                                 offsetof(struct Trainer, aiFlags),
+    .offsetTrainerPartySize =                               offsetof(struct Trainer, partySize),
+    .offsetTrainerPartyPtr =                                offsetof(struct Trainer, party),
+    .offsetTrainerMonLevel =                                offsetof(struct TrainerMonNoItemDefaultMoves, lvl),
+    .offsetTrainerMonSpecies =                              offsetof(struct TrainerMonNoItemDefaultMoves, species),
+    .offsetTrainerMonItem =                                 offsetof(struct TrainerMonItemDefaultMoves, heldItem),
+    .offsetTrainerMonNoItemMove1 =                          offsetof(struct TrainerMonNoItemCustomMoves, moves),
+    .offsetTrainerMonItemMove1 =                            offsetof(struct TrainerMonItemCustomMoves, moves),
+    .sizeofTrainerMonWithDefaultMoves =                     sizeof(struct TrainerMonItemDefaultMoves),
+    .sizeofTrainerMonWithCustomMoves =                      sizeof(struct TrainerMonItemCustomMoves),
+    .sizeofTrainerItem =                                    sizeof(gTrainerMonItemCustomMoves->heldItem),
+    .sizeofTrainerMonCustomMove =                           sizeof(gTrainerMonItemCustomMoves->moves[0]),
 };

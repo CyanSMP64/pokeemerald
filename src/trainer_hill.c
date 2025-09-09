@@ -36,7 +36,7 @@
 
 struct FloorTrainers
 {
-    u8 name[HILL_TRAINERS_PER_FLOOR][TRAINER_NAME_LENGTH + 1];
+    u8 name[HILL_TRAINERS_PER_FLOOR][12];
     u8 facilityClass[HILL_TRAINERS_PER_FLOOR];
 };
 
@@ -330,7 +330,7 @@ void InitTrainerHillBattleStruct(void)
 
     for (i = 0; i < HILL_TRAINERS_PER_FLOOR; i++)
     {
-        for (j = 0; j < TRAINER_NAME_LENGTH + 1; j++)
+        for (j = 0; j < 12; j++)
             sFloorTrainers->name[i][j] = sHillData->floors[sHillData->floorId].trainers[i].name[j];
 
         sFloorTrainers->facilityClass[i] = sHillData->floors[sHillData->floorId].trainers[i].facilityClass;

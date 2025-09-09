@@ -593,7 +593,7 @@ int main(int argc, char ** argv)
     Elf32_Sym * Em_gTrainerClassNames = GetSymbolByName("gTrainerClassNames");
     print("TrainerClassCount=%d\n", TRAINER_CLASS_COUNT);
     print("TrainerClassNameLength=%d\n", Em_gTrainerClassNames->st_size / TRAINER_CLASS_COUNT);
-    print("TrainerNameLength=%d\n", 12); // hardcoded for now
+    print("TrainerNameLength=%d\n", 16); // hardcoded for now
     print("DoublesTrainerClasses=[%d, %d, %d, %d, %d]\n", TRAINER_CLASS_SR_AND_JR, TRAINER_CLASS_TWINS, TRAINER_CLASS_YOUNG_COUPLE, TRAINER_CLASS_OLD_COUPLE, TRAINER_CLASS_SIS_AND_BRO); // hardcoded for now
     print("EliteFourIndices=[%d, %d, %d, %d, %d]\n", TRAINER_SIDNEY, TRAINER_PHOEBE, TRAINER_GLACIA, TRAINER_DRAKE, TRAINER_WALLACE); // hardcoded for now
     config_sym("MossdeepStevenTeamOffset", "sStevenMons");

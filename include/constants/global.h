@@ -33,7 +33,7 @@
 #define NATDEX_VERSION_MINOR 1
 #define NATDEX_VERSION_PATCH 3
 // revision number: git describe --tags
-#define NATDEX_VERSION_BUILD 166
+#define NATDEX_VERSION_BUILD 167
 
 // party sizes
 #define PARTY_SIZE 6
@@ -112,7 +112,7 @@
 #define TYPE_NAME_LENGTH 6
 #define TYPE2_NAME_LENGTH 8
 #define ABILITY_NAME_LENGTH 16
-#define TRAINER_NAME_LENGTH 11
+#define TRAINER_NAME_LENGTH 15
 
 #define MAX_STAMP_CARD_STAMPS 7
 
