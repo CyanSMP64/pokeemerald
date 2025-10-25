@@ -367,25 +367,11 @@ static const u8 *GetInteractedBackgroundEventScript(struct MapPosition *position
     case 5:
     case 6:
     case BG_EVENT_HIDDEN_ITEM:
-        if (!FlagGet(FLAG_SUPER_KAIZO)
-        || ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE104)
-          && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE104))
-         || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(GRANITE_CAVE_B2F)
-          && (gSaveBlock1Ptr->location.mapNum == MAP_NUM(GRANITE_CAVE_B2F)
-           || (gSaveBlock1Ptr->location.mapNum == MAP_NUM(PETALBURG_WOODS)
-            && gSaveBlock1Ptr->pos.x <= 25
-            && gSaveBlock1Ptr->pos.y >= 30)
-           || (gSaveBlock1Ptr->location.mapNum >= MAP_NUM(MT_PYRE_1F)
-            && gSaveBlock1Ptr->location.mapNum <= MAP_NUM(VICTORY_ROAD_B2F))))))
-        {
-            gSpecialVar_0x8004 = ((u32)bgEvent->bgUnion.script >> 16) + FLAG_HIDDEN_ITEMS_START;
-            gSpecialVar_0x8005 = (u32)bgEvent->bgUnion.script;
-            if (FlagGet(gSpecialVar_0x8004) == TRUE)
-                return NULL;
-            return EventScript_HiddenItemScript;
-        }
-        else
+        gSpecialVar_0x8004 = ((u32)bgEvent->bgUnion.script >> 16) + FLAG_HIDDEN_ITEMS_START;
+        gSpecialVar_0x8005 = (u32)bgEvent->bgUnion.script;
+        if (FlagGet(gSpecialVar_0x8004) == TRUE)
             return NULL;
+        return EventScript_HiddenItemScript;
     case BG_EVENT_SECRET_BASE:
         if (direction == DIR_NORTH)
         {

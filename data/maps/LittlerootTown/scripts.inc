@@ -145,9 +145,6 @@ LittlerootTown_EventScript_StepOffTruckFemale::
 	setvar VAR_0x8004, 14
 	setvar VAR_0x8005, 8
 	call LittlerootTown_EventScript_GoInsideWithMom
-	call_if_eq VAR_RESULT, YES, LittlerootTown_EventScript_SetSuperKaizoFlag
-	msgbox LittlerootTown_Text_OkayGoodLuck, MSGBOX_DEFAULT
-	closemessage
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN
@@ -184,11 +181,8 @@ LittlerootTown_EventScript_GoInsideWithMom::
 	waitdooranim
 	applymovement LOCALID_MOM, LittlerootTown_Movement_MomApproachPlayerAtTruck
 	waitmovement 0
-	msgbox LittlerootTown_Text_OurNewHomeLetsGoInside, MSGBOX_NOYES
-	return
-
-LittlerootTown_EventScript_SetSuperKaizoFlag::
-	setflag FLAG_SUPER_KAIZO
+	msgbox LittlerootTown_Text_OurNewHomeLetsGoInside, MSGBOX_DEFAULT
+	call PlayersHouse_2F_EventScript_SetWallClock
 	return
 
 LittlerootTown_Movement_MomExitHouse:
@@ -930,8 +924,7 @@ LittlerootTown_EventScript_GiveRunningShoes::
 	return
 
 LittlerootTown_Text_OurNewHomeLetsGoInside:
-	.string "Mom: Are you playing the Super Kaizo\n"
-	.string "ruleset?$"
+	.string "Mom: What time is it?$"
 
 LittlerootTown_Text_WaitPlayer:
 	.string "Mom: Wait, {PLAYER}!$"
@@ -1030,6 +1023,3 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I gave you?\p"
 	.string "I have something to show you.\n"
 	.string "Let's go to my Lab.$"
-
-LittlerootTown_Text_OkayGoodLuck:
-	.string "Okay, good luck!$"

@@ -93,7 +93,6 @@ SECTIONS {
     ALIGN(4)
     {
         src/battle_controllers.o(.text);
-        src/berry_powder.o(.text);
         src/decompress.o(.text);
         src/battle_main.o(.text);
         src/battle_util.o(.text);
@@ -109,6 +108,7 @@ SECTIONS {
     ALIGN(4)
     {
         src/pokemon.o(.text);
+        src/berry_powder.o(.text);
         src/field_screen_effect.o(.text);
         src/pokeball.o(.text);
         src/new_game.o(.text);

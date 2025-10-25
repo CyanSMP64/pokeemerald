@@ -2,14 +2,7 @@
 @  These are labeled in DewfordTown/scripts.inc
 
 Route109_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Route109_OnTransition
 	.byte 0
-
-Route109_OnTransition:
-	goto_if_unset FLAG_SUPER_KAIZO, Route109_EventScript_End
-	setobjectxyperm 9, 12, 6
-Route109_EventScript_End::
-	end
 
 Route109_EventScript_StartDepartForDewford::
 	call EventScript_BackupMrBrineyLocation
@@ -320,10 +313,6 @@ Route109_EventScript_ChoseNotToSail::
 	end
 
 Route109_EventScript_SeashoreHouseGirl::
-	goto_if_unset FLAG_SUPER_KAIZO, Route109_EventScript_SeashoreHouseGirl2
-	msgbox Route109_Text_NotWelcome, MSGBOX_NPC
-	end
-Route109_EventScript_SeashoreHouseGirl2::
 	msgbox Route109_Text_ChillAtMyPapasSpot, MSGBOX_NPC
 	end
 
@@ -528,9 +517,6 @@ Route109_Text_ChillAtMyPapasSpot:
 	.string "Whether you're hot to trot,\l"
 	.string "or cool cat not,\l"
 	.string "chill at my papa's spot!$"
-
-Route109_Text_NotWelcome:
-	.string "You are not welcome here!$"
 
 Route109_Text_LittleKidsDartAround:
 	.string "Little kids can dart around so quickly…\p"

@@ -276,4 +276,8 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_ACCUSER
 	setflag FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM
 	call EventScript_ResetAllBerries
+EventScript_SetHiddenItemSparkleFlag::
+	clearflag FLAG_HIDDEN_ITEM_SPARKLES		@ this flag will be set by a randomizer setting
+EventScript_SetModernExpFlag::
+	clearflag FLAG_MODERN_EXP_SCALE			@ this flag will be set by a randomizer setting
 	end
