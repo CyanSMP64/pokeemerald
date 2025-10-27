@@ -1480,8 +1480,8 @@ static bool8 KeyboardKeyHandler_Character(u8 input)
     {
         bool8 textFull = AddTextCharacter();
 
-        if (sNamingScreen ->currentPage == KBPAGE_LETTERS_UPPER && GetTextEntryPosition() == 1)
-            MainState_StartPageSwap();
+        //if (sNamingScreen ->currentPage == KBPAGE_LETTERS_UPPER && GetTextEntryPosition() == 1)
+        //    MainState_StartPageSwap();
 
         SquishCursor();
         if (textFull)
