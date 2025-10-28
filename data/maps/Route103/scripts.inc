@@ -69,20 +69,21 @@ Route103_EventScript_StartMayBattleMudkip::
 
 Route103_EventScript_StartBrendanBattleTreecko::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_TREECKO, Route103_Text_BrendanDefeated
-	goto Route103_EventScript_AfterBrendanBattle
+	goto Route103_EventScript_AfterMayBattle
 	end
 
 Route103_EventScript_StartBrendanBattleTorchic::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_TORCHIC, Route103_Text_BrendanDefeated
-	goto Route103_EventScript_AfterBrendanBattle
+	goto Route103_EventScript_AfterMayBattle
 	end
 
 Route103_EventScript_StartBrendanBattleMudkip::
 	trainerbattle_no_intro TRAINER_BRENDAN_ROUTE_103_MUDKIP, Route103_Text_BrendanDefeated
-	goto Route103_EventScript_AfterBrendanBattle
+	goto Route103_EventScript_AfterMayBattle
 	end
 
 Route103_EventScript_AfterMayBattle::
+	msgbox Route103_Text_MayTimeToHeadBack, MSGBOX_DEFAULT
 	specialvar VAR_RESULT, IsPoisonInParty
 	goto_if_eq VAR_RESULT, TRUE, Route103_EventScript_RivalExit
 	goto Route103_EventScript_RivalEnd
@@ -304,14 +305,7 @@ Route103_Text_MayDefeated:
 	.string "I got societied.$"
 
 Route103_Text_MayTimeToHeadBack:
-	.string "May: I think I know why my dad has\n"
-	.string "an eye out for you now.\p"
-	.string "I mean, you just got that Pokémon,\n"
-	.string "but it already likes you.\p"
-	.string "You might be able to befriend any\n"
-	.string "kind of Pokémon easily.\p"
-	.string "Well, it's time to head back to\n"
-	.string "the Lab.$"
+	.string "Let's head back to the Lab.$"
 
 Route103_Text_BrendanRoute103Pokemon:
 	.string "Brendan: Okay, so it's this one and\n"

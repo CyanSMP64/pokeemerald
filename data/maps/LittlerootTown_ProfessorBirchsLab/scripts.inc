@@ -118,24 +118,10 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
 	goto LittlerootTown_ProfessorBirchsLab_EventScript_NicknameStarter
 	end
 
-LittlerootTown_ProfessorBirchsLab_EventScript_NicknameStarter::
-	setvar VAR_0x8004, 0
-	call Common_EventScript_NameReceivedPartyMon
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival
-	end
-
 LittlerootTown_ProfessorBirchsLab_EventScript_GoSeeRival::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_MightBeGoodIdeaToGoSeeRival, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival
 	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_DeclineSeeingRival
-	end
-
-LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival::
-	clearflag FLAG_HIDE_ROUTE_101_BOY
-	setvar VAR_BIRCH_LAB_STATE, 3
-	warp MAP_ROUTE101, 6, 10
-	waitstate
-	releaseall
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_DeclineSeeingRival::
@@ -704,10 +690,7 @@ LittlerootTown_ProfessorBirchsLab_Text_MightBeGoodIdeaToGoSeeRival:
 	.string "a good idea to go see {RIVAL}?$"
 
 LittlerootTown_ProfessorBirchsLab_Text_GetRivalToTeachYou:
-	.string "Prof. Birch: Great!\n"
-	.string "{RIVAL} should be happy, too.\p"
-	.string "Get {RIVAL} to teach you what it\n"
-	.string "means to be a Trainer.$"
+	.string "Prof. Birch: Go see {RIVAL} on\nRoute 103!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_DontBeThatWay:
 	.string "Prof. Birch: Oh, don't be that way.\n"

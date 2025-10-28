@@ -1,4 +1,5 @@
 .set LOCALID_BIRCH, 2
+.set LOCALID_BAG, 3
 .set LOCALID_ZIGZAGOON, 4
 
 Route101_MapScripts::
@@ -217,6 +218,7 @@ Route101_EventScript_BirchsBag::
 	faceplayer
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_RESCUED_BIRCH
+	getplayerxy VAR_0x8004, VAR_0x8005
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_ZIGZAGOON
 	setobjectxy OBJ_EVENT_ID_PLAYER, 6, 13
@@ -234,10 +236,51 @@ Route101_EventScript_BirchsBag::
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route101_EventScript_HideMayInBedroom
 	call_if_eq VAR_RESULT, FEMALE, Route101_EventScript_HideBrendanInBedroom
-	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 6, 5
-	waitstate
+	applymovement LOCALID_BIRCH, Route101_Movement_BirchApproachPlayer
+	waitmovement 0
+	bufferleadmonspeciesname STR_VAR_1
+	message Route101_Text_YouSavedMe
+	waitmessage
+	playfanfare MUS_LEVEL_UP
+	waitfanfare
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_WhyNotGiveNicknameToMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, LittlerootTown_ProfessorBirchsLab_EventScript_NicknameStarter
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival
 	release
 	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_NicknameStarter::
+	setvar VAR_0x8004, 0
+	call Common_EventScript_NameReceivedPartyMon
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_GetRivalToTeachYou, MSGBOX_DEFAULT
+	closemessage
+@	clearflag FLAG_HIDE_ROUTE_101_BOY
+	setvar VAR_BIRCH_LAB_STATE, 3
+	applymovement LOCALID_BIRCH, Route101_Movement_BirchApproachBag
+	waitmovement 0
+	removeobject LOCALID_BAG
+	applymovement LOCALID_BIRCH, Route101_Movement_BirchAfterTakingBag
+	waitmovement 0
+	removeobject LOCALID_BIRCH
+	special SpawnCameraObject
+	call_if_eq VAR_0x8005, 14, Route101_EventScript_CameraPanTowardsPlayerEast
+	call_if_eq VAR_0x8005, 15, Route101_EventScript_CameraPanTowardsPlayerSouth
+	waitmovement 0
+	special RemoveCameraObject
+	releaseall
+	end
+
+Route101_EventScript_CameraPanTowardsPlayerEast::
+	applymovement OBJ_EVENT_ID_CAMERA, Route101_Movement_CameraPanTowardsPlayerEast
+	return
+
+Route101_EventScript_CameraPanTowardsPlayerSouth::
+	applymovement OBJ_EVENT_ID_CAMERA, Route101_Movement_CameraPanTowardsPlayerSouth
+	return
 
 Route101_EventScript_HideMayInBedroom::
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
@@ -248,7 +291,39 @@ Route101_EventScript_HideBrendanInBedroom::
 	return
 
 Route101_Movement_BirchApproachPlayer:
-	walk_faster_right
+	walk_fast_right
+	step_end
+
+Route101_Movement_BirchApproachBag:
+	walk_fast_down
+	walk_fast_right
+	delay_8
+	step_end
+
+Route101_Movement_BirchAfterTakingBag:
+	delay_8
+	walk_fast_right
+	walk_fast_right
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_right
+	walk_fast_right
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	delay_8
+	step_end
+
+Route101_Movement_CameraPanTowardsPlayerEast:
+	walk_diag_northwest
+	walk_left
+	step_end
+
+Route101_Movement_CameraPanTowardsPlayerSouth:
+	walk_diag_northwest
+	walk_up
 	step_end
 
 Route101_Text_HelpMe:
@@ -265,7 +340,9 @@ Route101_Text_DontLeaveMe:
 	.string "Don't leave me like this!$"
 
 Route101_Text_YouSavedMe:
-	.string "Prof. Birch: You saved me :)$"
+	.string "Prof. Birch: You saved me! :)\n"
+	.string "As thanks, you may keep my Pokémon.\p"
+	.string "{PLAYER} received the {STR_VAR_1}!$"
 
 Route101_Text_TakeTiredPokemonToPokeCenter:
 	.string "If Pokémon get tired, take them to\n"
