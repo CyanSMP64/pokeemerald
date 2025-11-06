@@ -20,6 +20,7 @@
 #include "dma3.h"
 #include "event_data.h"
 #include "evolution_scene.h"
+#include "form_change.h"
 #include "graphics.h"
 #include "gpu_regs.h"
 #include "international_string_util.h"
@@ -4062,6 +4063,7 @@ static void BattleIntroPlayer1SendsOutMonAnimation(void)
         {
             BtlController_EmitIntroTrainerBallThrow(BUFFER_A);
             MarkBattlerForControllerExec(gActiveBattler);
+            GetBattlerPartyState(gActiveBattler)->sentOut = TRUE;
             if (gBattleTypeFlags & (BATTLE_TYPE_MULTI))
             {
                 gBattleMainFunc = BattleIntroPlayer2SendsOutMonAnimation;
@@ -5362,6 +5364,7 @@ static void HandleEndTurn_FinishBattle(void)
 {
     if (gCurrentActionFuncId == B_ACTION_TRY_FINISH || gCurrentActionFuncId == B_ACTION_FINISHED)
     {
+        s32 i;
         if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK
                                   | BATTLE_TYPE_RECORDED_LINK
                                   | BATTLE_TYPE_FIRST_BATTLE
@@ -5405,6 +5408,18 @@ static void HandleEndTurn_FinishBattle(void)
         RecordedBattle_SetPlaybackFinished();
         BeginFastPaletteFade(3);
         FadeOutMapMusic(5);
+
+        // burmy form change
+        for (i = 0; i < PARTY_SIZE; i++)
+        {
+            if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) != SPECIES_NONE
+            && GetMonData(&gPlayerParty[i], MON_DATA_HP, NULL) != 0
+            && gBattleStruct->partyState[B_SIDE_PLAYER][i].sentOut)
+            {
+                TryFormChange(&gPlayerParty[i], gBattleTerrain);
+            }
+        }
+        
         gBattleMainFunc = FreeResetData_ReturnToOvOrDoEvolutions;
         gCB2_AfterEvolution = BattleMainCB2;
     }

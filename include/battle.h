@@ -344,8 +344,42 @@ struct LinkBattlerHeader
     struct BattleEnigmaBerry battleEnigmaBerry;
 };
 
+// ported from pokeemerald-expansion (v1.14.0 dev build)
+struct PartyState
+{
+    u32 intrepidSwordBoost:1;
+    u32 dauntlessShieldBoost:1;
+    u32 ateBerry:1;
+    u32 battleBondBoost:1;
+    u32 transformZeroToHero:1;
+    u32 supersweetSyrup:1;
+    u32 timesGotHit:5;
+    u32 changedSpecies:11; // For forms when multiple mons can change into the same pokemon.
+    u32 sentOut:1;
+    u32 padding:9;
+    u16 usedHeldItem;
+};
+
 struct BattleStruct
 {
+    union {
+        struct LinkBattlerHeader linkBattlerHeader;
+        u32 battleVideo[2];
+    } multiBuffer;
+    struct BattleTvMovePoints tvMovePoints;
+    struct BattleTv tv;
+    struct PartyState partyState[NUM_BATTLE_SIDES][PARTY_SIZE];
+    void (*savedCallback)(void);
+    u32 savedBattleTypeFlags;
+    u16 assistPossibleMoves[PARTY_SIZE * MAX_MON_MOVES]; // Each of mons can know max 4 moves.
+    u16 expValue;
+    u16 hpOnSwitchout[NUM_BATTLE_SIDES];
+    u16 abilityPreventingSwitchout;
+    u16 usedHeldItems[MAX_BATTLERS_COUNT];
+    u16 choicedMove[MAX_BATTLERS_COUNT];
+    u16 changedItems[MAX_BATTLERS_COUNT];
+    u16 castformPalette[NUM_CASTFORM_FORMS][16];
+    u16 arenaStartHp[2];
     u8 turnEffectsTracker;
     u8 turnEffectsBattlerId;
     u8 activeAbilityPopUps;
@@ -353,11 +387,9 @@ struct BattleStruct
     u8 wrappedMove[MAX_BATTLERS_COUNT * 2]; // Leftover from Ruby's ewram access.
     u8 moveTarget[MAX_BATTLERS_COUNT];
     u8 expGetterMonId;
-    u8 unused_1;
     u8 wildVictorySong;
     u8 dynamicMoveType;
     u8 wrappedBy[MAX_BATTLERS_COUNT];
-    u16 assistPossibleMoves[PARTY_SIZE * MAX_MON_MOVES]; // Each of mons can know max 4 moves.
     u8 focusPunchBattlerId;
     u8 battlerPreventingSwitchout;
     u8 moneyMultiplier;
@@ -365,7 +397,6 @@ struct BattleStruct
     u8 switchInAbilitiesCounter;
     u8 faintedActionsState;
     u8 faintedActionsBattlerId;
-    u16 expValue;
     u8 scriptPartyIdx; // for printing the nickname
     u8 sentInPokes;
     bool8 selectionScriptFinished[MAX_BATTLERS_COUNT];
@@ -374,7 +405,6 @@ struct BattleStruct
     u8 battlerPartyOrders[MAX_BATTLERS_COUNT][PARTY_SIZE / 2];
     u8 runTries;
     u8 caughtMonNick[POKEMON_NAME_LENGTH + 1];
-    u8 unused_2;
     u8 safariGoNearCounter;
     u8 safariPkblThrowCounter;
     u8 safariEscapeFactor;
@@ -384,12 +414,9 @@ struct BattleStruct
     u8 formToChangeInto;
     u8 chosenMovePositions[MAX_BATTLERS_COUNT];
     u8 stateIdAfterSelScript[MAX_BATTLERS_COUNT];
-    u8 unused_3;
     u8 prevSelectedPartySlot;
-    u8 unused_4[2];
     u8 stringMoveType;
     u8 expGetterBattlerId;
-    u8 unused_5;
     u8 absentBattlerFlags;
     u8 palaceFlags; // First 4 bits are "is < 50% HP and not asleep" for each battler, last 4 bits are selected moves to pass to AI
     u8 field_93; // related to choosing pokemon?
@@ -398,43 +425,26 @@ struct BattleStruct
     u8 wallyWaitFrames;
     u8 wallyMoveFrames;
     u8 lastTakenMove[MAX_BATTLERS_COUNT * 2 * 2]; // Last move that a battler was hit with. This field seems to erroneously take 16 bytes instead of 8.
-    u16 hpOnSwitchout[NUM_BATTLE_SIDES];
-    u32 savedBattleTypeFlags;
-    u16 abilityPreventingSwitchout;
     u8 hpScale;
     u8 synchronizeMoveEffect;
     bool8 anyMonHasTransformed;
-    void (*savedCallback)(void);
-    u16 usedHeldItems[MAX_BATTLERS_COUNT];
     u8 chosenItem[MAX_BATTLERS_COUNT]; // why is this an u8?
     u8 AI_itemType[2];
     u8 AI_itemFlags[2];
-    u16 choicedMove[MAX_BATTLERS_COUNT];
-    u16 changedItems[MAX_BATTLERS_COUNT];
     u8 intimidateBattler;
     u8 switchInItemsCounter;
     u8 arenaTurnCounter;
     u8 turnSideTracker;
-    u8 unused_6[3];
     u8 givenExpMons; // Bits for enemy party's pokemon that gave exp to player's party.
     u8 lastTakenMoveFrom[MAX_BATTLERS_COUNT * MAX_BATTLERS_COUNT * 2]; // a 3-D array [target][attacker][byte]
-    u16 castformPalette[NUM_CASTFORM_FORMS][16];
-    union {
-        struct LinkBattlerHeader linkBattlerHeader;
-        u32 battleVideo[2];
-    } multiBuffer;
     u8 wishPerishSongState;
     u8 wishPerishSongBattlerId;
     bool8 overworldWeatherDone;
     u8 atkCancellerTracker;
-    struct BattleTvMovePoints tvMovePoints;
-    struct BattleTv tv;
     u8 abilityPopUpSpriteIds[MAX_BATTLERS_COUNT][2];    // two per battler
-    u8 unused_7[0x20];
     u8 AI_monToSwitchIntoId[MAX_BATTLERS_COUNT];
     s8 arenaMindPoints[2];
     s8 arenaSkillPoints[2];
-    u16 arenaStartHp[2];
     u8 arenaLostPlayerMons; // Bits for party member, lost as in referee's decision, not by fainting.
     u8 arenaLostOpponentMons;
     u8 alreadyStatusedMoveAttempt; // As bits for battlers; For example when using Thunder Wave on an already paralyzed pokemon.
@@ -720,5 +730,20 @@ extern u8 gHealthboxSpriteIds[MAX_BATTLERS_COUNT];
 extern u8 gMultiUsePlayerCursor;
 extern u8 gNumberOfMovesToChoose;
 extern u8 gBattleControllerData[MAX_BATTLERS_COUNT];
+
+static inline u32 GetBattlerPosition_exp(u32 battler)
+{
+    return gBattlerPositions[battler];
+}
+
+static inline u32 GetBattlerSide_exp(u32 battler)
+{
+    return GetBattlerPosition_exp(battler) & BIT_SIDE;
+}
+
+static inline struct PartyState *GetBattlerPartyState(u32 battler)
+{
+    return &gBattleStruct->partyState[GetBattlerSide_exp(battler)][gBattlerPartyIndexes[battler]];
+}
 
 #endif // GUARD_BATTLE_H

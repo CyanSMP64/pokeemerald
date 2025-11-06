@@ -894,9 +894,6 @@ static u16 DetermineEggSpeciesAndParentSlots(struct DayCare *daycare, u8 *parent
     else if (eggSpecies >= SPECIES_CASTFORM_SUNNY
           && eggSpecies <= SPECIES_CASTFORM_SNOWY)
         eggSpecies = SPECIES_CASTFORM;
-    else if (eggSpecies >= SPECIES_BURMY_SANDY_CLOAK
-          && eggSpecies <= SPECIES_WORMADAM_TRASH_CLOAK)
-        eggSpecies = SPECIES_BURMY;
     else if (eggSpecies == SPECIES_EISCUE_NOICE_FACE)
         eggSpecies = SPECIES_EISCUE;
     else if (eggSpecies == SPECIES_MORPEKO_HANGRY)

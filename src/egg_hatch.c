@@ -647,7 +647,8 @@ static void CB2_EggHatch(void)
         break;
     case 4:
         // Wait for Pokémon's front sprite animation
-        if (gSprites[sEggHatchData->monSpriteId].callback == SpriteCallbackDummy)
+        if (gSprites[sEggHatchData->monSpriteId].callback == SpriteCallbackDummy
+         && IsCryFinished())
             sEggHatchData->state++;
         break;
     case 5:

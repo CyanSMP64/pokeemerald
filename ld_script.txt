@@ -101,13 +101,13 @@ SECTIONS {
         src/battle_gfx_sfx_util.o(.text);
         src/battle_controller_link_opponent.o(.text);
         src/overworld.o(.text);
-        src/battle_bg.o(.text);
     } =0
 
     .text_4 0x08067a74 :
     ALIGN(4)
     {
         src/pokemon.o(.text);
+        src/battle_bg.o(.text);
         src/berry_powder.o(.text);
         src/field_screen_effect.o(.text);
         src/pokeball.o(.text);
@@ -351,6 +351,7 @@ SECTIONS {
         src/battle_anim_new.o(.text);
         src/debug.o(.text);
         src/debug_pokemon_creator.o(.text);
+        src/form_change.o(.text);
     } =0
 
     script_data :
@@ -719,6 +720,7 @@ SECTIONS {
         src/battle_anim_new.o(.rodata);
         src/debug.o(.rodata);
         src/debug_pokemon_creator.o(.rodata);
+        src/form_change.o(.rodata);
     } =0
 
     lib_rodata :
