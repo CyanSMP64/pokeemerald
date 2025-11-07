@@ -26355,11 +26355,11 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_CHERRIM_SUNSHINE] =
     {
         .baseHP        = 70,
-        .baseAttack    = 90,
+        .baseAttack    = 60,
         .baseDefense   = 70,
         .baseSpeed     = 85,
         .baseSpAttack  = 87,
-        .baseSpDefense = 117,
+        .baseSpDefense = 78,
         .types = { TYPE_GRASS, TYPE_GRASS},
         .catchRate = 75,
         .expYield = 158,
