@@ -4,7 +4,7 @@ voice_group voicegroup191
 	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 5
 	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 5
 	voice_keysplit voicegroup_E_Piano_1___8P, keysplit_3oct + 1
-	voice_directsound 62, 0, DirectSoundWaveData_E_Piano_2___881, 255, 253, 0, 127
+	voice_directsound 60, 0, DirectSoundWaveData_E_Piano_2___881, 255, 253, 0, 127
 	voice_keysplit voicegroup_Harpsichord___, keysplit_3oct + 4
 	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 5
 	voice_keysplit voicegroup_European_Pf_8P, keysplit_6oct - 5
@@ -135,12 +135,12 @@ voice_group voicegroup191
 @	voice_directsound 60, 0, DirectSoundWaveData_Piano_1_______4, 255, 239, 0, 200
 
 voice_group European_Pf_8P @ 6oct - 5
-	voice_directsound 62, 0, DirectSoundWaveData_European_Pf_8P1, 255, 252, 0, 227
-	voice_directsound 62, 0, DirectSoundWaveData_European_Pf_8P2, 255, 252, 0, 221
-	voice_directsound 62, 0, DirectSoundWaveData_European_Pf_8P3, 255, 248, 0, 211
-	voice_directsound 62, 0, DirectSoundWaveData_European_Pf_8P4, 255, 246, 0, 206
-	voice_directsound 62, 0, DirectSoundWaveData_European_Pf_8P5, 255, 245, 0, 190
-	voice_directsound 62, 0, DirectSoundWaveData_European_Pf_8P6, 255, 242, 0, 214
+	voice_directsound 60, 0, DirectSoundWaveData_European_Pf_8P1, 255, 252, 0, 227
+	voice_directsound 60, 0, DirectSoundWaveData_European_Pf_8P2, 255, 252, 0, 221
+	voice_directsound 60, 0, DirectSoundWaveData_European_Pf_8P3, 255, 248, 0, 211
+	voice_directsound 60, 0, DirectSoundWaveData_European_Pf_8P4, 255, 246, 0, 206
+	voice_directsound 60, 0, DirectSoundWaveData_European_Pf_8P5, 255, 245, 0, 190
+	voice_directsound 60, 0, DirectSoundWaveData_European_Pf_8P6, 255, 242, 0, 214
 
 voice_group Piano_2_______ @ 4oct - 8
 	voice_directsound 60, 0, DirectSoundWaveData_Piano_2_______1, 255, 252, 0, 212
@@ -190,8 +190,8 @@ voice_group Acoustic_Bs___ @ 2oct + 14
 	voice_directsound 60, 0, DirectSoundWaveData_Acoustic_Bs___2, 255, 247, 0, 127
 
 voice_group Fingered_Bs_8P @ 2oct + 23
-	voice_directsound 62, 0, DirectSoundWaveData_Fingered_Bs_8P1, 255, 252, 68, 127
-	voice_directsound 62, 0, DirectSoundWaveData_Fingered_Bs_8P2, 255, 252, 68, 127
+	voice_directsound 60, 0, DirectSoundWaveData_Fingered_Bs_8P1, 255, 252, 68, 127
+	voice_directsound 60, 0, DirectSoundWaveData_Fingered_Bs_8P2, 255, 252, 68, 127
 
 voice_group Viola_______8P @ 2oct - 8
 	voice_directsound 60, 0, DirectSoundWaveData_Viola_______8P1, 255, 0, 255, 189
@@ -204,15 +204,15 @@ voice_group PizzicatoStr88 @ 4oct - 4
 	voice_directsound 60, 0, DirectSoundWaveData_PizzicatoStr884, 255, 223, 0, 190
 
 voice_group Harp________88 @ 4oct - 8
-	voice_directsound 62, 0, DirectSoundWaveData_Harp________881, 255, 249, 0, 233
-	voice_directsound 62, 0, DirectSoundWaveData_Harp________882, 255, 247, 0, 233
-	voice_directsound 62, 0, DirectSoundWaveData_Harp________883, 255, 249, 0, 233
-	voice_directsound 62, 0, DirectSoundWaveData_Harp________884, 255, 247, 0, 233
+	voice_directsound 60, 0, DirectSoundWaveData_Harp________881, 255, 249, 0, 233
+	voice_directsound 60, 0, DirectSoundWaveData_Harp________882, 255, 247, 0, 233
+	voice_directsound 60, 0, DirectSoundWaveData_Harp________883, 255, 249, 0, 233
+	voice_directsound 60, 0, DirectSoundWaveData_Harp________884, 255, 247, 0, 233
 
 voice_group Strings_______ @ 3oct + 1
-	voice_directsound 62, 0, DirectSoundWaveData_Strings_______1, 128, 255, 180, 223
-	voice_directsound 62, 0, DirectSoundWaveData_Strings_______2, 128, 255, 180, 223
-	voice_directsound 62, 0, DirectSoundWaveData_Strings_______3, 128, 255, 180, 223
+	voice_directsound 60, 0, DirectSoundWaveData_Strings_______1, 128, 255, 180, 223
+	voice_directsound 60, 0, DirectSoundWaveData_Strings_______2, 128, 255, 180, 223
+	voice_directsound 60, 0, DirectSoundWaveData_Strings_______3, 128, 255, 180, 223
 
 voice_group Slow_Strings__ @ 3oct + 1
 	voice_directsound 60, 0, DirectSoundWaveData_Strings_______1, 20, 255, 230, 235
@@ -280,11 +280,11 @@ voice_group STANDARD_1____
 	voice_directsound 60, 54, DirectSoundWaveData_DR__909_Clap, 255, 0, 255, 200
 	voice_directsound 60, 64, DirectSoundWaveData_DR__Std1_S2_, 255, 0, 255, 200
 	voice_directsound 57, 34, DirectSoundWaveData_DR__LowTom_1, 255, 247, 0, 200
-	voice_directsound 48, 84, DirectSoundWaveData_DR__C_Hi_Hat, 255, 0, 255, 200
+	voice_directsound 60, 84, DirectSoundWaveData_DR__C_Hi_Hat, 255, 0, 255, 200
 	voice_directsound 60, 46, DirectSoundWaveData_DR__LowTom_1, 255, 246, 0, 200
-	voice_directsound 48, 84, DirectSoundWaveData_DR__P_Hi_Hat, 255, 0, 255, 200
+	voice_directsound 60, 84, DirectSoundWaveData_DR__P_Hi_Hat, 255, 0, 255, 200
 	voice_directsound 57, 58, DirectSoundWaveData_DR__MidTom_1, 255, 245, 0, 200
-	voice_directsound 48, 84, DirectSoundWaveData_DR__O_Hi_Hat, 255, 233, 0, 200
+	voice_directsound 60, 84, DirectSoundWaveData_DR__O_Hi_Hat, 255, 233, 0, 200
 	voice_directsound 60, 70, DirectSoundWaveData_DR__MidTom_1, 255, 244, 0, 200
 	voice_directsound 57, 82, DirectSoundWaveData_DR__Hi_Tom_1, 255, 243, 0, 200
 	voice_directsound 60, 84, DirectSoundWaveData_DR__CrshCym1, 255, 247, 0, 224

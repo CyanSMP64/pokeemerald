@@ -2302,6 +2302,23 @@ _081DDCCE:
 	str r0, [r4, o_SoundChannel_count]
 	ldrb r2, [r5, o_MusicPlayerTrack_pitM]
 	adds r1, r3, 0
+		/* new sound engine: skip transpose if instrument type is drum */
+	adds r0, r5, 0
+	adds r0, o_MusicPlayerTrack_ToneData_type
+	ldrb r0, [r0]
+	movs r3, TONEDATA_TYPE_RHY
+	tst r3, r0
+	bne _081DDCE4
+		/* adjust key based on tone data key for directsound instruments */
+	mov r6, r9
+	ldrb r0, [r6, o_ToneData_key]
+	cmp r0, 60
+	beq _081DDCE4
+		/* adjustment: key += (60 - tone_data_key) */
+	ldr r3, =60
+	subs r3, r0
+	adds r1, r3
+_081DDCE4:
 	adds r0, r7, 0
 	bl MidiKeyToFreq
 _081DDCDC:
