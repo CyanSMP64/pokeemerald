@@ -777,6 +777,9 @@ void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *tr
         if (track->modT == 1)
             x = (u32)(x * (track->modM + 128)) >> 7;
 
+        // Apply song volume scaling (64 = normal volume)
+        x = (u32)(x * mplayInfo->songVol) >> 6;
+
         y = 2 * track->pan + track->panX;
 
         if (track->modT == 2)
