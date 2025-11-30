@@ -853,7 +853,7 @@ u32 MidiKeyToCgbFreq(u8 chanNum, u8 key, u8 fineAdjust)
         val2 = gCgbScaleTable[key + 1];
         val2 = gCgbFreqTable[val2 & 0xF] >> (val2 >> 4);
 
-        return val1 + ((fineAdjust * (val2 - val1)) >> 8) + 2048;
+        return val1 + ((fineAdjust * (val2 - val1)) >> 8);
     }
 }
 

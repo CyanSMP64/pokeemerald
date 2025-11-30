@@ -356,7 +356,7 @@ gSongTable::
 	song dummy_song_header, MUSIC_PLAYER_BGM, 64, 1024
 	song dummy_song_header, MUSIC_PLAYER_BGM, 64, 1024
 	song dummy_song_header, MUSIC_PLAYER_BGM, 64, 1024
-	song mus_littleroot_test, MUSIC_PLAYER_BGM, 64, 1024
+	song mus_littleroot_test, MUSIC_PLAYER_BGM, 64, 1100
 	song mus_gsc_route38, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_caught, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_victory_wild, MUSIC_PLAYER_BGM, 64, 1024
@@ -616,11 +616,11 @@ gSongTable::
 	song ph_nurse_blend, MUSIC_PLAYER_SE2, 64, 1024
 	song ph_nurse_held, MUSIC_PLAYER_SE2, 64, 1024
 	song ph_nurse_solo, MUSIC_PLAYER_SE2, 64, 1024
-	song mus_test_1, MUSIC_PLAYER_BGM, 64, 1024
+	song mus_test_1, MUSIC_PLAYER_BGM, 64, 800
 	song mus_test_2, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_test_3, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_test_4, MUSIC_PLAYER_BGM, 64, 1024
-	song mus_test_5, MUSIC_PLAYER_BGM, 64, 1024
+	song mus_test_5, MUSIC_PLAYER_BGM, 64, 992
 	song mus_test_6, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_test_7, MUSIC_PLAYER_BGM, 64, 1024
 

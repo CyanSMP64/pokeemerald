@@ -1921,12 +1921,35 @@ _081DDA14:
 _081DDA28:
 	cmp r6, 0
 	beq _081DDA46
+		/* skip noise - dont apply songSpeed scaling */
+	cmp r6, #4
+	beq _081DDA46_noise
 	mov r0, r8
 	ldr r3, [r0, o_SoundInfo_MidiKeyToCgbFreq]
 	adds r1, r2, 0
 	ldrb r2, [r5, o_MusicPlayerTrack_pitM]
 	adds r0, r6, 0
 	bl call_r3
+		/* scale cgb period inversely: period' = period * 1024 / songSpeed */
+	push {r0}
+	ldrh r1, [r7, o_MusicPlayerInfo_songSpeed]
+	pop {r0}
+		/*
+		 * r0 = signed period, r1 = songSpeed
+		 * calculate: (period << 10) / songSpeed
+		 */
+	lsls r0, r0, #10
+	bl __divsi3  @ signed divide
+	b _081DDA46_common
+_081DDA46_noise:
+		/* noise: use period directly without scaling */
+	mov r0, r8
+	ldr r3, [r0, o_SoundInfo_MidiKeyToCgbFreq]
+	adds r1, r2, 0
+	ldrb r2, [r5, o_MusicPlayerTrack_pitM]
+	adds r0, r6, 0
+	bl call_r3
+_081DDA46_common:
 	str r0, [r4, o_CgbChannel_frequency]
 	ldrb r0, [r4, o_CgbChannel_modify]
 	movs r1, CGB_CHANNEL_MO_PIT
@@ -1938,7 +1961,21 @@ _081DDA46:
 	ldrb r2, [r5, o_MusicPlayerTrack_pitM]
 	ldr r0, [r4, o_SoundChannel_wav]
 	bl MidiKeyToFreq
+		/* 
+		 * scale by songSpeed for consistent mixer stepping
+		 * first try to use cached mplayInfo, fallback to loading r7 (always valid in MPlayMain context)
+		 */
+	ldr r1, [r4, o_SoundChannel_dummy4]
+	cmp r1, #0
+	bne 1f
+	adds r1, r7, #0
+1:
+	ldrh r2, [r1, o_MusicPlayerInfo_songSpeed]
+	muls r0, r2
+	lsrs r0, r0, #10
 	str r0, [r4, o_SoundChannel_frequency]
+		/* Cache mplayInfo pointer */
+	str r7, [r4, o_SoundChannel_dummy4]
 _081DDA52:
 	ldr r4, [r4, o_SoundChannel_nextChannelPointer]
 	cmp r4, 0
@@ -2293,10 +2330,40 @@ _081DDCBC:
 	ldrb r2, [r5, o_MusicPlayerTrack_pitM]
 	adds r1, r3, 0
 	ldr r0, [sp, 0xC]
+		/* skip noise - dont apply songSpeed scaling */
+	cmp r0, #4
+	beq _081DDCBC_noise
 	ldr r3, [sp, 0x4]
 	ldr r3, [r3, o_SoundInfo_MidiKeyToCgbFreq]
 	bl call_r3
-	b _081DDCDC
+		/* scale cgb period inversely: period' = period * 1024 / songSpeed */
+	ldr r2, [sp]
+	ldrh r1, [r2, o_MusicPlayerInfo_songSpeed]
+		/*
+		 * r0 = signed period, r1 = songSpeed
+		 * calculate: (period << 10) / songSpeed
+		 */
+	lsls r0, r0, #10
+	bl __divsi3  @ signed divide
+	b _081DDCBC_common
+_081DDCBC_noise:
+		/* noise: use period directly without scaling */
+	ldr r3, [sp, 0x4]
+	ldr r3, [r3, o_SoundInfo_MidiKeyToCgbFreq]
+	bl call_r3
+_081DDCBC_common:
+	str r0, [r4, o_CgbChannel_frequency]
+	ldrb r0, [r4, o_CgbChannel_modify]
+	movs r1, CGB_CHANNEL_MO_PIT
+	orrs r0, r1
+	strb r0, [r4, o_CgbChannel_modify]
+	movs r0, SOUND_CHANNEL_SF_START
+	strb r0, [r4, o_CgbChannel_statusFlags]
+	ldrb r1, [r5, o_MusicPlayerTrack_flags]
+	movs r0, 0xF0
+	ands r0, r1
+	strb r0, [r5, o_MusicPlayerTrack_flags]
+	b _081DDCEA
 _081DDCCE:
 	ldr r0, [r5, o_MusicPlayerTrack_unk_3C]
 	str r0, [r4, o_SoundChannel_count]
@@ -2322,7 +2389,14 @@ _081DDCE4:
 	adds r0, r7, 0
 	bl MidiKeyToFreq
 _081DDCDC:
+		/* scale by songSpeed for consistent mixer stepping */
+	ldr r2, [sp]	@ load mplayInfo
+	ldrh r1, [r2, o_MusicPlayerInfo_songSpeed]
+	muls r0, r1
+	lsrs r0, r0, #10
 	str r0, [r4, o_SoundChannel_frequency]
+		/* cache mplayInfo pointer */
+	str r2, [r4, o_SoundChannel_dummy4]
 	movs r0, SOUND_CHANNEL_SF_START
 	strb r0, [r4, o_SoundChannel_statusFlags]
 	ldrb r1, [r5, o_MusicPlayerTrack_flags]
