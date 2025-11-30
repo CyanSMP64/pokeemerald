@@ -2302,6 +2302,23 @@ _081DDCCE:
 	str r0, [r4, o_SoundChannel_count]
 	ldrb r2, [r5, o_MusicPlayerTrack_pitM]
 	adds r1, r3, 0
+		/* new sound engine: check if tone data type is not CGB, RHY, or SPL */
+	mov r6, r9
+	ldrb r0, [r6, o_ToneData_type]
+	movs r6, TONEDATA_TYPE_CGB
+	ands r6, r0
+	cmp r6, 0
+	bne _081DDCE4
+		/* new sound engine: adjust key based on base key */
+	mov r6, r9
+	ldrb r0, [r6, o_ToneData_key]
+	cmp r0, 60
+	beq _081DDCE4
+		/* adjustment: key += (60 - tone_data_key) */
+	ldr r3, =60
+	subs r3, r0
+	adds r1, r3
+_081DDCE4:
 	adds r0, r7, 0
 	bl MidiKeyToFreq
 _081DDCDC:
