@@ -72,3 +72,28 @@ keysplit 7oct, 0
     split 4, 84
     split 5, 96
     split 6, 132
+
+keysplit piano1, 0
+    split 0, 33
+    split 1, 43
+    split 2, 53
+    split 3, 62
+    split 4, 68
+    split 5, 76
+    split 6, 84
+    split 7, 94
+    split 8, 120
+
+keysplit strings_new, 0
+    split 0, 47
+    split 1, 61
+    split 2, 76
+    split 3, 89
+    split 4, 120
+
+keysplit slowstrings, 0
+    split 0, 47
+    split 1, 60
+    split 2, 76
+    split 3, 89
+    split 4, 120

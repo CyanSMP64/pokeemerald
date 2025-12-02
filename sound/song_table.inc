@@ -616,7 +616,7 @@ gSongTable::
 	song ph_nurse_blend, MUSIC_PLAYER_SE2, 64, 1024
 	song ph_nurse_held, MUSIC_PLAYER_SE2, 64, 1024
 	song ph_nurse_solo, MUSIC_PLAYER_SE2, 64, 1024
-	song mus_test_1, MUSIC_PLAYER_BGM, 64, 800
+	song mus_test_1, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_test_2, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_test_3, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_test_4, MUSIC_PLAYER_BGM, 64, 1024

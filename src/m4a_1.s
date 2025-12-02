@@ -2364,11 +2364,22 @@ _081DDCBC_common:
 	ands r0, r1
 	strb r0, [r5, o_MusicPlayerTrack_flags]
 	b _081DDCEA
+_081DDCEA:
+	add sp, 0x18
+	pop {r0-r7}
+	mov r8, r0
+	mov r9, r1
+	mov r10, r2
+	mov r11, r3
+	pop {r0}
+	bx r0
+
+	.align 2, 0
 _081DDCCE:
+		/* For DirectSound: adjust the stored key for tone data offset, then apply keyM */
 	ldr r0, [r5, o_MusicPlayerTrack_unk_3C]
 	str r0, [r4, o_SoundChannel_count]
-	ldrb r2, [r5, o_MusicPlayerTrack_pitM]
-	adds r1, r3, 0
+	ldrb r1, [r4, o_SoundChannel_key]
 		/* new sound engine: skip transpose if instrument type is drum */
 	adds r0, r5, 0
 	adds r0, o_MusicPlayerTrack_ToneData_type
@@ -2385,10 +2396,16 @@ _081DDCCE:
 	ldr r3, =60
 	subs r3, r0
 	adds r1, r3
+		/* Store adjusted key back so subsequent pitch changes use correct base */
+	strb r1, [r4, o_SoundChannel_key]
 _081DDCE4:
+		/* now apply keyM (bend/vibrato) to the adjusted base key */
+	movs r0, o_MusicPlayerTrack_keyM
+	ldrsb r0, [r5, r0]
+	adds r1, r0
+	ldrb r2, [r5, o_MusicPlayerTrack_pitM]
 	adds r0, r7, 0
 	bl MidiKeyToFreq
-_081DDCDC:
 		/* scale by songSpeed for consistent mixer stepping */
 	ldr r2, [sp]	@ load mplayInfo
 	ldrh r1, [r2, o_MusicPlayerInfo_songSpeed]
@@ -2403,15 +2420,7 @@ _081DDCDC:
 	movs r0, 0xF0
 	ands r0, r1
 	strb r0, [r5, o_MusicPlayerTrack_flags]
-_081DDCEA:
-	add sp, 0x18
-	pop {r0-r7}
-	mov r8, r0
-	mov r9, r1
-	mov r10, r2
-	mov r11, r3
-	pop {r0}
-	bx r0
+	b _081DDCEA
 	.pool
 	thumb_func_end ply_note
 
