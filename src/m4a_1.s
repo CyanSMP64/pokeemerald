@@ -1940,6 +1940,9 @@ _081DDA28:
 		 */
 	lsls r0, r0, #10
 	bl __divsi3  @ signed divide
+		/* Mask to 11-bit range for GBC hardware compatibility */
+	ldr r1, =0x7FF
+	ands r0, r1
 	b _081DDA46_common
 _081DDA46_noise:
 		/* noise: use period directly without scaling */
@@ -2345,6 +2348,9 @@ _081DDCBC:
 		 */
 	lsls r0, r0, #10
 	bl __divsi3  @ signed divide
+		/* Mask to 11-bit range for GBC hardware compatibility */
+	ldr r1, =0x7FF
+	ands r0, r1
 	b _081DDCBC_common
 _081DDCBC_noise:
 		/* noise: use period directly without scaling */
