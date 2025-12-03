@@ -1246,6 +1246,7 @@ SECTIONS {
         sound/songs/midi/mus_test_5.o(.rodata);
         sound/songs/midi/mus_test_6.o(.rodata);
         sound/songs/midi/mus_test_7.o(.rodata);
+        sound/songs/midi/mus_ut_story.o(.rodata);
     } > ROM =0
 
     lib_rodata :

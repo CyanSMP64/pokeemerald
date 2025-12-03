@@ -1280,6 +1280,9 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(MUS_TEST_3) \
     X(MUS_TEST_4) \
     X(MUS_TEST_5) \
+    X(MUS_TEST_6) \
+    X(MUS_TEST_7) \
+    X(MUS_UT_STORY) \
 
 #define SOUND_LIST_SE \
     X(SE_STOP) \
