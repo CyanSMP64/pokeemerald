@@ -25,8 +25,7 @@ $(CRY_BIN_DIR)/%.bin: $(CRY_SUBDIR)/%.wav
 
 # New uncompressed sounds
 $(NEW_BIN_DIR)/%.bin: $(NEW_SUBDIR)/%.wav
-	$(WAV2AGB) -b $< $@ 
-# --loopfix
+	$(WAV2AGB) -b --loop-fix $< $@ 
 
 # Uncompressed sounds
 $(SOUND_BIN_DIR)/%.bin: sound/%.wav 

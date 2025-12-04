@@ -25,6 +25,7 @@ static void usage() {
     fprintf(stderr, "--tune <cents>           | override tuning (float)\n");
     fprintf(stderr, "--key <key>              | override midi key (int)\n");
     fprintf(stderr, "--rate <rate>            | override base samplerate (int)\n");
+    fprintf(stderr, "--loop-fix               | fix loop end off-by-one\n");
     exit(1);
 }
 
@@ -163,6 +164,8 @@ int main(int argc, char *argv[]) {
                     die("--rate: missing parameter");
                 uint32_t rate = static_cast<uint32_t>(std::stoul(argv[i], nullptr, 10));
                 set_wav_rate(rate);
+            } else if (st == "--loop-fix") {
+                fix_loop_end();
             } else {
                 if (st == "--") {
                     if (++i >= argc)

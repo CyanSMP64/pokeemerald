@@ -21,6 +21,7 @@ void set_wav_loop_end(uint32_t end);
 void set_wav_tune(double tune);
 void set_wav_key(uint8_t key);
 void set_wav_rate(uint32_t rate);
+void fix_loop_end();
 
 void convert(const std::string&, const std::string&,
         const std::string& sym, cmp_type ct, out_type ot);

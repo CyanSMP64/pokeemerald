@@ -105,6 +105,7 @@ static bool wav_rate_override = false;
 static bool dpcm_verbose = false;
 static bool dpcm_lookahead_fast = false;
 static bool dpcm_include_padding = true;
+static bool fix_loop = false;
 static size_t dpcm_enc_lookahead = 3;
 static const size_t DPCM_BLK_SIZE = 0x40;
 static const std::vector<int8_t> dpcmLookupTable = { 
@@ -351,6 +352,11 @@ void set_wav_rate(uint32_t rate)
     wav_rate_override = true;
 }
 
+void fix_loop_end()
+{
+    fix_loop = true;
+}
+
 void convert(const std::string& wav_file_str, const std::string& out_file_str,
         const std::string& sym, cmp_type ct, out_type ot)
 {
@@ -415,7 +421,7 @@ void convert(const std::string& wav_file_str, const std::string& out_file_str,
 
         // Bytes 12-15: loop end
         // wf.loopEnd is the exclusive end position; binary format expects (end - 1)
-        bin_write_u32_le(bin_data, wf.loopEnd > 0 ? wf.loopEnd - 1 : 0);
+        bin_write_u32_le(bin_data, wf.loopEnd > 0 ? (fix_loop ? wf.loopEnd : wf.loopEnd - 1) : 0);
 
         // Write sample data
         if (ct == cmp_type::none)
