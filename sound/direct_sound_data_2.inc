@@ -843,3 +843,7 @@ DirectSoundWaveData_strings_g4::
 	.align 2
 DirectSoundWaveData_strings_g6::
 	.incbin "sound/direct_sound_samples/new/strings_g6.bin"
+
+	.align 2
+DirectSoundWaveData_funnytriangle::
+	.incbin "sound/direct_sound_samples/new/funnytriangle.bin"

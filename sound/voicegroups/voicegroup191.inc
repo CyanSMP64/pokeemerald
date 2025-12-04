@@ -1,5 +1,5 @@
 voice_group voicegroup191
-	voice_keysplit voicegroup_piano1f, keysplit_piano1
+	voice_directsound 72, 0, DirectSoundWaveData_funnytriangle, 255, 253, 0, 127
 	voice_keysplit voicegroup_Piano_2_______, keysplit_4oct - 8
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
 	voice_keysplit voicegroup_piano1p, keysplit_piano1

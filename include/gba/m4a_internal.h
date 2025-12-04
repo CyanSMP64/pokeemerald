@@ -395,7 +395,7 @@ extern const XcmdFunc gXcmdTable[];
 
 extern struct CgbChannel gCgbChans[];
 
-extern const u8 gScaleTable[];
+extern const u16 gScaleTable[];
 extern const u32 gFreqTable[];
 extern const u16 gPcmSamplesPerVBlankTable[];
 

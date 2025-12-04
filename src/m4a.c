@@ -21,7 +21,7 @@ COMMON_DATA struct PokemonCrySong gPokemonCrySong = {0};
 COMMON_DATA u8 gMPlayMemAccArea[0x10] = {0};
 COMMON_DATA struct MusicPlayerInfo gMPlayInfo_SE3 = {0};
 
-u32 MidiKeyToFreq(struct WaveData *wav, u8 key, u8 fineAdjust)
+u32 MidiKeyToFreq(struct WaveData *wav, s16 key, u8 fineAdjust)
 {
     u32 val1;
     u32 val2;
@@ -32,11 +32,16 @@ u32 MidiKeyToFreq(struct WaveData *wav, u8 key, u8 fineAdjust)
         key = 178;
         fineAdjustShifted = 255 << 24;
     }
+    else if (key < -60)
+    {
+        key = -60;
+        fineAdjustShifted = 0;
+    }
 
-    val1 = gScaleTable[key];
+    val1 = gScaleTable[key + 60];
     val1 = gFreqTable[val1 & 0xF] >> (val1 >> 4);
 
-    val2 = gScaleTable[key + 1];
+    val2 = gScaleTable[key + 61];
     val2 = gFreqTable[val2 & 0xF] >> (val2 >> 4);
 
     return umul3232H32(wav->freq, val1 + umul3232H32(val2 - val1, fineAdjustShifted));
