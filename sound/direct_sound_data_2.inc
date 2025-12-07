@@ -709,18 +709,6 @@ DirectSoundWaveData_Steel_str_Gt8P2::
 	.incbin "sound/direct_sound_samples/new/Steel_str_Gt8P2.bin"
 
 	.align 2
-DirectSoundWaveData_Strings_______1::
-	.incbin "sound/direct_sound_samples/new/Strings_______1.bin"
-
-	.align 2
-DirectSoundWaveData_Strings_______2::
-	.incbin "sound/direct_sound_samples/new/Strings_______2.bin"
-
-	.align 2
-DirectSoundWaveData_Strings_______3::
-	.incbin "sound/direct_sound_samples/new/Strings_______3.bin"
-
-	.align 2
 DirectSoundWaveData_Timpani_____881::
 	.incbin "sound/direct_sound_samples/new/Timpani_____881.bin"
 
@@ -751,6 +739,54 @@ DirectSoundWaveData_Viola_______8P2::
 	.align 2
 DirectSoundWaveData_Whistle_____551::
 	.incbin "sound/direct_sound_samples/new/Whistle_____551.bin"
+
+	.align 2
+DirectSoundWaveData_acbass_a1::
+	.incbin "sound/direct_sound_samples/new/acbass_a1.bin"
+
+	.align 2
+DirectSoundWaveData_acbass_a2::
+	.incbin "sound/direct_sound_samples/new/acbass_a2.bin"
+
+	.align 2
+DirectSoundWaveData_acbass_a3::
+	.incbin "sound/direct_sound_samples/new/acbass_a3.bin"
+
+	.align 2
+DirectSoundWaveData_acbass_ds2::
+	.incbin "sound/direct_sound_samples/new/acbass_ds2.bin"
+
+	.align 2
+DirectSoundWaveData_bongolow::
+	.incbin "sound/direct_sound_samples/new/bongolow.bin"
+
+	.align 2
+DirectSoundWaveData_clave::
+	.incbin "sound/direct_sound_samples/new/clave.bin"
+
+	.align 2
+DirectSoundWaveData_congahimute::
+	.incbin "sound/direct_sound_samples/new/congahimute.bin"
+
+	.align 2
+DirectSoundWaveData_congalow::
+	.incbin "sound/direct_sound_samples/new/congalow.bin"
+
+	.align 2
+DirectSoundWaveData_glocken_cs6::
+	.incbin "sound/direct_sound_samples/new/glocken_cs6.bin"
+
+	.align 2
+DirectSoundWaveData_glocken_g5::
+	.incbin "sound/direct_sound_samples/new/glocken_g5.bin"
+
+	.align 2
+DirectSoundWaveData_glocken_g6::
+	.incbin "sound/direct_sound_samples/new/glocken_g6.bin"
+
+	.align 2
+DirectSoundWaveData_glocken_g7::
+	.incbin "sound/direct_sound_samples/new/glocken_g7.bin"
 
 	.align 2
 DirectSoundWaveData_piano1f_b2::
@@ -845,5 +881,5 @@ DirectSoundWaveData_strings_g6::
 	.incbin "sound/direct_sound_samples/new/strings_g6.bin"
 
 	.align 2
-DirectSoundWaveData_funnytriangle::
-	.incbin "sound/direct_sound_samples/new/funnytriangle.bin"
+DirectSoundWaveData_whitenoise_c4::
+	.incbin "sound/direct_sound_samples/new/whitenoise_c4.bin"

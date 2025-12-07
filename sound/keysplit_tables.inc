@@ -73,7 +73,7 @@ keysplit 7oct, 0
     split 5, 96
     split 6, 132
 
-keysplit piano1, 0
+keysplit piano1, 12
     split 0, 33
     split 1, 43
     split 2, 53
@@ -83,6 +83,18 @@ keysplit piano1, 0
     split 6, 84
     split 7, 94
     split 8, 120
+
+keysplit glocken, 24
+    split 0, 83
+    split 1, 89
+    split 2, 100
+    split 3, 120
+
+keysplit acbass, 12
+    split 0, 37
+    split 1, 43
+    split 2, 50
+    split 3, 108
 
 keysplit strings_new, 0
     split 0, 47

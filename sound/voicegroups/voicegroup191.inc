@@ -1,5 +1,5 @@
 voice_group voicegroup191
-	voice_directsound 72, 0, DirectSoundWaveData_funnytriangle, 255, 253, 0, 127
+	voice_keysplit voicegroup_piano1f, keysplit_piano1
 	voice_keysplit voicegroup_Piano_2_______, keysplit_4oct - 8
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
 	voice_keysplit voicegroup_piano1p, keysplit_piano1
@@ -8,7 +8,7 @@ voice_group voicegroup191
 	voice_keysplit voicegroup_Harpsichord___, keysplit_3oct + 4
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
-	voice_keysplit voicegroup_piano1f, keysplit_piano1
+	voice_keysplit voicegroup_glocken, keysplit_glocken
 	voice_directsound 60, 0, DirectSoundWaveData_Music_Box_____1, 255, 249, 0, 240
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
 	voice_keysplit voicegroup_Marimba_____88, keysplit_2oct - 6
@@ -31,7 +31,7 @@ voice_group voicegroup191
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
-	voice_keysplit voicegroup_Acoustic_Bs___, keysplit_2oct + 14
+	voice_keysplit voicegroup_acbass, keysplit_acbass
 	voice_keysplit voicegroup_Fingered_Bs_8P, keysplit_2oct + 23
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
@@ -121,7 +121,7 @@ voice_group voicegroup191
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
-	voice_keysplit voicegroup_piano1f, keysplit_piano1
+	voice_directsound 60, 0, DirectSoundWaveData_whitenoise_c4, 255, 0, 255, 80
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
@@ -166,6 +166,12 @@ voice_group Harpsichord___ @ 3oct + 4
 	voice_directsound 60, 0, DirectSoundWaveData_Harpsichord___2, 255, 247, 0, 160
 	voice_directsound 60, 0, DirectSoundWaveData_Harpsichord___3, 255, 244, 0, 160
 
+voice_group glocken @ glocken
+	voice_directsound 79, 0, DirectSoundWaveData_glocken_g5, 255, 248, 0, 230
+	voice_directsound 85, 0, DirectSoundWaveData_glocken_cs6, 255, 248, 0, 230
+	voice_directsound 91, 0, DirectSoundWaveData_glocken_g6, 255, 248, 0, 230
+	voice_directsound 103, 0, DirectSoundWaveData_glocken_g7, 255, 248, 0, 230
+
 voice_group Marimba_____88 @ 2oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_Marimba_____881, 255, 233, 0, 216
 	voice_directsound 60, 0, DirectSoundWaveData_Marimba_____882, 255, 239, 0, 216
@@ -188,9 +194,11 @@ voice_group Steel_str_Gt8P @ 2oct - 1
 	voice_directsound 60, 0, DirectSoundWaveData_Steel_str_Gt8P1, 255, 251, 0, 180
 	voice_directsound 60, 0, DirectSoundWaveData_Steel_str_Gt8P2, 255, 250, 0, 180
 
-voice_group Acoustic_Bs___ @ 2oct + 14
-	voice_directsound 60, 0, DirectSoundWaveData_Acoustic_Bs___1, 255, 250, 0, 127
-	voice_directsound 60, 0, DirectSoundWaveData_Acoustic_Bs___2, 255, 247, 0, 127
+voice_group acbass @ acbass
+	voice_directsound 33, 0, DirectSoundWaveData_acbass_a1, 255, 253, 0, 127
+	voice_directsound 39, 0, DirectSoundWaveData_acbass_ds2, 255, 253, 0, 127
+	voice_directsound 45, 0, DirectSoundWaveData_acbass_a2, 255, 251, 0, 127
+	voice_directsound 57, 0, DirectSoundWaveData_acbass_a3, 255, 248, 0, 127
 
 voice_group Fingered_Bs_8P @ 2oct + 23
 	voice_directsound 60, 0, DirectSoundWaveData_Fingered_Bs_8P1, 255, 252, 68, 127
@@ -371,3 +379,20 @@ voice_group STANDARD_1____
 	voice_directsound 55, 64, DirectSoundWaveData_DR8PHouse_S2, 255, 0, 255, 200
 	voice_directsound 60, 64, DirectSoundWaveData_DR88House_S_, 255, 0, 255, 200
 	voice_directsound 60, 64, DirectSoundWaveData_DR8PHouse_S2, 255, 0, 255, 200
+
+voice_group perc_standard
+	voice_directsound 60, 56, DirectSoundWaveData_bongolow, 255, 0, 255, 127
+	voice_directsound 60, 60, DirectSoundWaveData_congahimute, 255, 0, 255, 127
+	voice_directsound 65, 40, DirectSoundWaveData_congalow, 255, 0, 255, 127
+	voice_directsound 60, 75, DirectSoundWaveData_congalow, 255, 0, 255, 127
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 90, DirectSoundWaveData_DR__Claves__, 255, 0, 255, 127

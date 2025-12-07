@@ -624,6 +624,14 @@ gSongTable::
 	song mus_test_6, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_test_7, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_ut_story, MUSIC_PLAYER_BGM, 64, 931
+	song mus_ut_menu0, MUSIC_PLAYER_BGM, 40, 1024
+	song mus_ut_menu1, MUSIC_PLAYER_BGM, 40, 1024
+	song mus_ut_menu2, MUSIC_PLAYER_BGM, 40, 1024
+	song mus_ut_menu3, MUSIC_PLAYER_BGM, 40, 1024
+	song mus_ut_menu4, MUSIC_PLAYER_BGM, 40, 1024
+	song mus_ut_menu5, MUSIC_PLAYER_BGM, 40, 1024
+	song mus_ut_menu6, MUSIC_PLAYER_BGM, 40, 1024
+	song mus_ut_menu0_10, MUSIC_PLAYER_BGM, 10, 103
 
 	.align 2
 dummy_song_header:

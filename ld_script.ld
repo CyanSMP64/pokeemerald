@@ -1247,6 +1247,14 @@ SECTIONS {
         sound/songs/midi/mus_test_6.o(.rodata);
         sound/songs/midi/mus_test_7.o(.rodata);
         sound/songs/midi/mus_ut_story.o(.rodata);
+        sound/songs/midi/mus_ut_menu0.o(.rodata);
+        sound/songs/midi/mus_ut_menu0_10.o(.rodata);
+        sound/songs/midi/mus_ut_menu1.o(.rodata);
+        sound/songs/midi/mus_ut_menu2.o(.rodata);
+        sound/songs/midi/mus_ut_menu3.o(.rodata);
+        sound/songs/midi/mus_ut_menu4.o(.rodata);
+        sound/songs/midi/mus_ut_menu5.o(.rodata);
+        sound/songs/midi/mus_ut_menu6.o(.rodata);
     } > ROM =0
 
     lib_rodata :
