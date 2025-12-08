@@ -789,6 +789,18 @@ DirectSoundWaveData_glocken_g7::
 	.incbin "sound/direct_sound_samples/new/glocken_g7.bin"
 
 	.align 2
+DirectSoundWaveData_mus_cymbal::
+	.incbin "sound/direct_sound_samples/new/compressed/mus_cymbal.bin"
+
+	.align 2
+DirectSoundWaveData_mus_intronoise_l::
+	.incbin "sound/direct_sound_samples/new/mus_intronoise_l.bin"
+
+	.align 2
+DirectSoundWaveData_mus_intronoise_r::
+	.incbin "sound/direct_sound_samples/new/mus_intronoise_r.bin"
+
+	.align 2
 DirectSoundWaveData_piano1f_b2::
 	.incbin "sound/direct_sound_samples/new/piano1f_b2.bin"
 
