@@ -637,6 +637,8 @@ gSongTable::
 	song mus_ut_cymbal, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_ut_cymbal, MUSIC_PLAYER_BGM, 58, 973
 	song mus_ut_cymbal, MUSIC_PLAYER_BGM, 52, 973
+	song mus_ut_flowey, MUSIC_PLAYER_BGM, 64, 1024
+	song mus_ut_toomuch, MUSIC_PLAYER_BGM, 64, 1024
 
 	.align 2
 dummy_song_header:

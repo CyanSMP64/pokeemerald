@@ -1258,6 +1258,8 @@ SECTIONS {
         sound/songs/midi/mus_ut_intronoise.o(.rodata);
         sound/songs/midi/mus_ut_intronoise_loop.o(.rodata);
         sound/songs/midi/mus_ut_cymbal.o(.rodata);
+        sound/songs/midi/mus_ut_flowey.o(.rodata);
+        sound/songs/midi/mus_ut_toomuch.o(.rodata);
     } > ROM =0
 
     lib_rodata :

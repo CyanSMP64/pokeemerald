@@ -773,6 +773,14 @@ DirectSoundWaveData_congalow::
 	.incbin "sound/direct_sound_samples/new/congalow.bin"
 
 	.align 2
+DirectSoundWaveData_floweylead_gs4::
+	.incbin "sound/direct_sound_samples/new/floweylead_gs4.bin"
+
+	.align 2
+DirectSoundWaveData_floweylead_gs5::
+	.incbin "sound/direct_sound_samples/new/floweylead_gs5.bin"
+
+	.align 2
 DirectSoundWaveData_glocken_cs6::
 	.incbin "sound/direct_sound_samples/new/glocken_cs6.bin"
 
