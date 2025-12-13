@@ -1260,6 +1260,8 @@ SECTIONS {
         sound/songs/midi/mus_ut_cymbal.o(.rodata);
         sound/songs/midi/mus_ut_flowey.o(.rodata);
         sound/songs/midi/mus_ut_toomuch.o(.rodata);
+        sound/songs/midi/mus_ut_toriel.o(.rodata);
+        sound/songs/midi/mus_ut_fallendown2.o(.rodata);
     } > ROM =0
 
     lib_rodata :

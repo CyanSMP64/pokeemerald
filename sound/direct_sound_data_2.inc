@@ -773,6 +773,198 @@ DirectSoundWaveData_congalow::
 	.incbin "sound/direct_sound_samples/new/congalow.bin"
 
 	.align 2
+DirectSoundWaveData_ct_bassdrum::
+	.incbin "sound/direct_sound_samples/new/ct_bassdrum.bin"
+
+	.align 2
+DirectSoundWaveData_ct_choir::
+	.incbin "sound/direct_sound_samples/new/ct_choir.bin"
+
+	.align 2
+DirectSoundWaveData_ct_cymbal::
+	.incbin "sound/direct_sound_samples/new/ct_cymbal.bin"
+
+	.align 2
+DirectSoundWaveData_ct_flute::
+	.incbin "sound/direct_sound_samples/new/ct_flute.bin"
+
+	.align 2
+DirectSoundWaveData_ct_osnare::
+	.incbin "sound/direct_sound_samples/new/ct_osnare.bin"
+
+	.align 2
+DirectSoundWaveData_ct_panflute::
+	.incbin "sound/direct_sound_samples/new/ct_panflute.bin"
+
+	.align 2
+DirectSoundWaveData_ct_pbass::
+	.incbin "sound/direct_sound_samples/new/ct_pbass.bin"
+
+	.align 2
+DirectSoundWaveData_ct_piano::
+	.incbin "sound/direct_sound_samples/new/ct_piano.bin"
+
+	.align 2
+DirectSoundWaveData_ct_pizzicato::
+	.incbin "sound/direct_sound_samples/new/ct_pizzicato.bin"
+
+	.align 2
+DirectSoundWaveData_ct_rhodes::
+	.incbin "sound/direct_sound_samples/new/ct_rhodes.bin"
+
+	.align 2
+DirectSoundWaveData_ct_sax::
+	.incbin "sound/direct_sound_samples/new/ct_sax.bin"
+
+	.align 2
+DirectSoundWaveData_ct_strings::
+	.incbin "sound/direct_sound_samples/new/ct_strings.bin"
+
+	.align 2
+DirectSoundWaveData_ct_toms::
+	.incbin "sound/direct_sound_samples/new/ct_toms.bin"
+
+	.align 2
+DirectSoundWaveData_eb_acousticbass::
+	.incbin "sound/direct_sound_samples/new/eb_acousticbass.bin"
+
+	.align 2
+DirectSoundWaveData_eb_bazaarbongo::
+	.incbin "sound/direct_sound_samples/new/eb_bazaarbongo.bin"
+
+	.align 2
+DirectSoundWaveData_eb_bongo::
+	.incbin "sound/direct_sound_samples/new/eb_bongo.bin"
+
+	.align 2
+DirectSoundWaveData_eb_buzzbuzz::
+	.incbin "sound/direct_sound_samples/new/eb_buzzbuzz.bin"
+
+	.align 2
+DirectSoundWaveData_eb_cashmoney::
+	.incbin "sound/direct_sound_samples/new/eb_cashmoney.bin"
+
+	.align 2
+DirectSoundWaveData_eb_doorshut::
+	.incbin "sound/direct_sound_samples/new/eb_doorshut.bin"
+
+	.align 2
+DirectSoundWaveData_eb_giygas3::
+	.incbin "sound/direct_sound_samples/new/eb_giygas3.bin"
+
+	.align 2
+DirectSoundWaveData_eb_giygasbreath::
+	.incbin "sound/direct_sound_samples/new/eb_giygasbreath.bin"
+
+	.align 2
+DirectSoundWaveData_eb_giygasstatic::
+	.incbin "sound/direct_sound_samples/new/eb_giygasstatic.bin"
+
+	.align 2
+DirectSoundWaveData_eb_guica::
+	.incbin "sound/direct_sound_samples/new/eb_guica.bin"
+
+	.align 2
+DirectSoundWaveData_eb_hihatopen::
+	.incbin "sound/direct_sound_samples/new/eb_hihatopen.bin"
+
+	.align 2
+DirectSoundWaveData_eb_kick1::
+	.incbin "sound/direct_sound_samples/new/eb_kick1.bin"
+
+	.align 2
+DirectSoundWaveData_eb_kick2::
+	.incbin "sound/direct_sound_samples/new/eb_kick2.bin"
+
+	.align 2
+DirectSoundWaveData_eb_krakenstring::
+	.incbin "sound/direct_sound_samples/new/eb_krakenstring.bin"
+
+	.align 2
+DirectSoundWaveData_eb_mellowpiano::
+	.incbin "sound/direct_sound_samples/new/eb_mellowpiano.bin"
+
+	.align 2
+DirectSoundWaveData_eb_moonsidecafe::
+	.incbin "sound/direct_sound_samples/new/eb_moonsidecafe.bin"
+
+	.align 2
+DirectSoundWaveData_eb_onettbass::
+	.incbin "sound/direct_sound_samples/new/eb_onettbass.bin"
+
+	.align 2
+DirectSoundWaveData_eb_overdrivenguitar::
+	.incbin "sound/direct_sound_samples/new/eb_overdrivenguitar.bin"
+
+	.align 2
+DirectSoundWaveData_eb_pokeybass::
+	.incbin "sound/direct_sound_samples/new/eb_pokeybass.bin"
+
+	.align 2
+DirectSoundWaveData_eb_pokeyhihat::
+	.incbin "sound/direct_sound_samples/new/eb_pokeyhihat.bin"
+
+	.align 2
+DirectSoundWaveData_eb_ride::
+	.incbin "sound/direct_sound_samples/new/eb_ride.bin"
+
+	.align 2
+DirectSoundWaveData_eb_savetheminerspad::
+	.incbin "sound/direct_sound_samples/new/eb_savetheminerspad.bin"
+
+	.align 2
+DirectSoundWaveData_eb_snare1::
+	.incbin "sound/direct_sound_samples/new/eb_snare1.bin"
+
+	.align 2
+DirectSoundWaveData_eb_snare3::
+	.incbin "sound/direct_sound_samples/new/eb_snare3.bin"
+
+	.align 2
+DirectSoundWaveData_eb_square::
+	.incbin "sound/direct_sound_samples/new/eb_square.bin"
+
+	.align 2
+DirectSoundWaveData_eb_subsine::
+	.incbin "sound/direct_sound_samples/new/eb_subsine.bin"
+
+	.align 2
+DirectSoundWaveData_eb_telephonering::
+	.incbin "sound/direct_sound_samples/new/eb_telephonering.bin"
+
+	.align 2
+DirectSoundWaveData_eb_thepast::
+	.incbin "sound/direct_sound_samples/new/eb_thepast.bin"
+
+	.align 2
+DirectSoundWaveData_eb_trumpet::
+	.incbin "sound/direct_sound_samples/new/eb_trumpet.bin"
+
+	.align 2
+DirectSoundWaveData_eb_trumpetforalltime::
+	.incbin "sound/direct_sound_samples/new/eb_trumpetforalltime.bin"
+
+	.align 2
+DirectSoundWaveData_eb_unsettlingopponent::
+	.incbin "sound/direct_sound_samples/new/eb_unsettlingopponent.bin"
+
+	.align 2
+DirectSoundWaveData_eb_venus::
+	.incbin "sound/direct_sound_samples/new/eb_venus.bin"
+
+	.align 2
+DirectSoundWaveData_eb_waspy::
+	.incbin "sound/direct_sound_samples/new/eb_waspy.bin"
+
+	.align 2
+DirectSoundWaveData_eb_water::
+	.incbin "sound/direct_sound_samples/new/eb_water.bin"
+
+	.align 2
+DirectSoundWaveData_eb_yournameplease2::
+	.incbin "sound/direct_sound_samples/new/eb_yournameplease2.bin"
+
+	.align 2
 DirectSoundWaveData_floweylead_gs4::
 	.incbin "sound/direct_sound_samples/new/floweylead_gs4.bin"
 

@@ -567,8 +567,12 @@
 #define MUS_UT_CYMBAL_80_95         630
 #define MUS_UT_FLOWEY               631
 #define MUS_UT_TOOMUCH              632
+#define MUS_UT_TORIEL_86            633
+#define MUS_UT_TORIEL_75            634
+#define MUS_UT_TORIEL_40            635
+#define MUS_UT_FALLENDOWN2          636
 
-#define MUSIC_END       MUS_UT_TOOMUCH
+#define MUSIC_END       MUS_UT_FALLENDOWN2
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

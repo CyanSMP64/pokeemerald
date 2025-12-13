@@ -1298,6 +1298,10 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(MUS_UT_CYMBAL_80_95) \
     X(MUS_UT_FLOWEY) \
     X(MUS_UT_TOOMUCH) \
+    X(MUS_UT_TORIEL_86) \
+    X(MUS_UT_TORIEL_75) \
+    X(MUS_UT_TORIEL_40) \
+    X(MUS_UT_FALLENDOWN2) \
 
 #define SOUND_LIST_SE \
     X(SE_STOP) \
