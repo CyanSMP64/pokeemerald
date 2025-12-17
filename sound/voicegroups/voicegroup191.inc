@@ -34,7 +34,7 @@ voice_group voicegroup191
 	voice_keysplit voicegroup_acbass, keysplit_acbass
 	voice_keysplit voicegroup_Fingered_Bs_8P, keysplit_2oct + 23
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
-	voice_keysplit voicegroup_piano1f, keysplit_piano1
+	voice_directsound 48, 0, DirectSoundWaveData_fretlessbass_c3, 255, 250, 127, 100
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
 	voice_keysplit voicegroup_piano1f, keysplit_piano1

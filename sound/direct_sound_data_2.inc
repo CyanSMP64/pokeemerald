@@ -969,6 +969,10 @@ DirectSoundWaveData_eb_yournameplease2::
 	.incbin "sound/direct_sound_samples/new/eb_yournameplease2.bin"
 
 	.align 2
+DirectSoundWaveData_fingersnap::
+	.incbin "sound/direct_sound_samples/new/fingersnap.bin"
+
+	.align 2
 DirectSoundWaveData_floweylead_gs4::
 	.incbin "sound/direct_sound_samples/new/floweylead_gs4.bin"
 
@@ -1093,8 +1097,20 @@ DirectSoundWaveData_piano1p_gs5::
 	.incbin "sound/direct_sound_samples/new/piano1p_gs5.bin"
 
 	.align 2
+DirectSoundWaveData_roomkick::
+	.incbin "sound/direct_sound_samples/new/roomkick.bin"
+
+	.align 2
+DirectSoundWaveData_roomsnare::
+	.incbin "sound/direct_sound_samples/new/roomsnare.bin"
+
+	.align 2
 DirectSoundWaveData_sidestick::
 	.incbin "sound/direct_sound_samples/new/sidestick.bin"
+
+	.align 2
+DirectSoundWaveData_sinewave_c5::
+	.incbin "sound/direct_sound_samples/new/sinewave_c5.bin"
 
 	.align 2
 DirectSoundWaveData_snare1::

@@ -644,6 +644,7 @@ gSongTable::
 	song mus_ut_toriel, MUSIC_PLAYER_BGM, 64, 410
 	song mus_ut_fallendown2, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_ut_ruins, MUSIC_PLAYER_BGM, 64, 1024
+	song mus_ut_options_fall, MUSIC_PLAYER_BGM, 52, 1024
 
 	.align 2
 dummy_song_header:
