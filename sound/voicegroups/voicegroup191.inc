@@ -133,11 +133,11 @@ voice_group piano1f @ piano1
 	voice_directsound 38, 0, DirectSoundWaveData_piano1f_d2, 255, 255, 0, 220
 	voice_directsound 47, 0, DirectSoundWaveData_piano1f_b2, 255, 254, 0, 220
 	voice_directsound 56, 0, DirectSoundWaveData_piano1f_gs3, 255, 254, 0, 220
-	voice_directsound 65, 0, DirectSoundWaveData_piano1f_f4, 255, 253, 0, 220
+	voice_directsound 65, 0, DirectSoundWaveData_piano1f_f4, 255, 254, 0, 220
 	voice_directsound 71, 0, DirectSoundWaveData_piano1f_b4, 255, 253, 0, 220
-	voice_directsound 80, 0, DirectSoundWaveData_piano1f_gs5, 255, 252, 0, 220
-	voice_directsound 89, 0, DirectSoundWaveData_piano1f_f6, 255, 252, 0, 220
-	voice_directsound 98, 0, DirectSoundWaveData_piano1f_d7, 255, 251, 0, 220
+	voice_directsound 80, 0, DirectSoundWaveData_piano1f_gs5, 255, 253, 0, 220
+	voice_directsound 89, 0, DirectSoundWaveData_piano1f_f6, 255, 253, 0, 220
+	voice_directsound 98, 0, DirectSoundWaveData_piano1f_d7, 255, 253, 0, 220
 
 voice_group piano1p @ piano1
 	voice_directsound 29, 0, DirectSoundWaveData_piano1p_f1, 255, 255, 0, 220

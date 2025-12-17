@@ -773,6 +773,10 @@ DirectSoundWaveData_congalow::
 	.incbin "sound/direct_sound_samples/new/congalow.bin"
 
 	.align 2
+DirectSoundWaveData_crash1::
+	.incbin "sound/direct_sound_samples/new/crash1.bin"
+
+	.align 2
 DirectSoundWaveData_ct_bassdrum::
 	.incbin "sound/direct_sound_samples/new/ct_bassdrum.bin"
 
@@ -973,6 +977,10 @@ DirectSoundWaveData_floweylead_gs5::
 	.incbin "sound/direct_sound_samples/new/floweylead_gs5.bin"
 
 	.align 2
+DirectSoundWaveData_fretlessbass_c3::
+	.incbin "sound/direct_sound_samples/new/fretlessbass_c3.bin"
+
+	.align 2
 DirectSoundWaveData_glocken_cs6::
 	.incbin "sound/direct_sound_samples/new/glocken_cs6.bin"
 
@@ -987,6 +995,18 @@ DirectSoundWaveData_glocken_g6::
 	.align 2
 DirectSoundWaveData_glocken_g7::
 	.incbin "sound/direct_sound_samples/new/glocken_g7.bin"
+
+	.align 2
+DirectSoundWaveData_hat_closed::
+	.incbin "sound/direct_sound_samples/new/hat_closed.bin"
+
+	.align 2
+DirectSoundWaveData_hat_open::
+	.incbin "sound/direct_sound_samples/new/hat_open.bin"
+
+	.align 2
+DirectSoundWaveData_kick1::
+	.incbin "sound/direct_sound_samples/new/kick1.bin"
 
 	.align 2
 DirectSoundWaveData_mus_cymbal::
@@ -1071,6 +1091,14 @@ DirectSoundWaveData_piano1p_gs3::
 	.align 2
 DirectSoundWaveData_piano1p_gs5::
 	.incbin "sound/direct_sound_samples/new/piano1p_gs5.bin"
+
+	.align 2
+DirectSoundWaveData_sidestick::
+	.incbin "sound/direct_sound_samples/new/sidestick.bin"
+
+	.align 2
+DirectSoundWaveData_snare1::
+	.incbin "sound/direct_sound_samples/new/snare1.bin"
 
 	.align 2
 DirectSoundWaveData_strings_as5::

@@ -1262,6 +1262,7 @@ SECTIONS {
         sound/songs/midi/mus_ut_toomuch.o(.rodata);
         sound/songs/midi/mus_ut_toriel.o(.rodata);
         sound/songs/midi/mus_ut_fallendown2.o(.rodata);
+        sound/songs/midi/mus_ut_ruins.o(.rodata);
     } > ROM =0
 
     lib_rodata :

@@ -571,8 +571,9 @@
 #define MUS_UT_TORIEL_75            634
 #define MUS_UT_TORIEL_40            635
 #define MUS_UT_FALLENDOWN2          636
+#define MUS_UT_RUINS                637
 
-#define MUSIC_END       MUS_UT_FALLENDOWN2
+#define MUSIC_END       MUS_UT_RUINS
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
