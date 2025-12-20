@@ -1264,6 +1264,7 @@ SECTIONS {
         sound/songs/midi/mus_ut_fallendown2.o(.rodata);
         sound/songs/midi/mus_ut_ruins.o(.rodata);
         sound/songs/midi/mus_ut_options_fall.o(.rodata);
+        sound/songs/midi/mus_ut_options_winter.o(.rodata);
     } > ROM =0
 
     lib_rodata :

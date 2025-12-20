@@ -761,6 +761,10 @@ DirectSoundWaveData_bongolow::
 	.incbin "sound/direct_sound_samples/new/bongolow.bin"
 
 	.align 2
+DirectSoundWaveData_celesta_c5::
+	.incbin "sound/direct_sound_samples/new/celesta_c5.bin"
+
+	.align 2
 DirectSoundWaveData_clave::
 	.incbin "sound/direct_sound_samples/new/clave.bin"
 
@@ -1137,5 +1141,17 @@ DirectSoundWaveData_strings_g6::
 	.incbin "sound/direct_sound_samples/new/strings_g6.bin"
 
 	.align 2
+DirectSoundWaveData_tubularbell_a4::
+	.incbin "sound/direct_sound_samples/new/tubularbell_a4.bin"
+
+	.align 2
+DirectSoundWaveData_tubularbell_fs5::
+	.incbin "sound/direct_sound_samples/new/tubularbell_fs5.bin"
+
+	.align 2
 DirectSoundWaveData_whitenoise_c4::
 	.incbin "sound/direct_sound_samples/new/whitenoise_c4.bin"
+
+	.align 2
+DirectSoundWaveData_windchime_c4::
+	.incbin "sound/direct_sound_samples/new/windchime_c4.bin"

@@ -210,4 +210,5 @@
 .include "sound/voicegroups/ut/004.inc"
 .include "sound/voicegroups/ut/005.inc"
 .include "sound/voicegroups/ut/006.inc"
+.include "sound/voicegroups/ut/018.inc"
 .include "sound/voicegroups/ut/sfx.inc"

@@ -7,7 +7,7 @@ voice_group voicegroup191
 	voice_directsound 60, 0, DirectSoundWaveData_E_Piano_2___881, 255, 253, 0, 127
 	voice_keysplit voicegroup_Harpsichord___, keysplit_3oct + 4
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
-	voice_keysplit voicegroup_piano1f, keysplit_piano1
+	voice_directsound 72, 0, DirectSoundWaveData_celesta_c5, 255, 251, 0, 235
 	voice_keysplit voicegroup_glocken, keysplit_glocken
 	voice_directsound 60, 0, DirectSoundWaveData_Music_Box_____1, 255, 249, 0, 240
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
@@ -175,6 +175,10 @@ voice_group glocken @ glocken
 voice_group Marimba_____88 @ 2oct - 6
 	voice_directsound 60, 0, DirectSoundWaveData_Marimba_____881, 255, 233, 0, 216
 	voice_directsound 60, 0, DirectSoundWaveData_Marimba_____882, 255, 239, 0, 216
+
+voice_group tubularbell @ 2oct - 13
+	voice_directsound 69, 0, DirectSoundWaveData_tubularbell_a4, 255, 252, 0, 238
+	voice_directsound 78, 0, DirectSoundWaveData_tubularbell_fs5, 255, 252, 0, 238
 
 voice_group Accordion_It8P @ 3oct - 9
 	voice_directsound 60, 0, DirectSoundWaveData_Accordion_It8P1, 255, 250, 200, 127

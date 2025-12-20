@@ -573,8 +573,9 @@
 #define MUS_UT_FALLENDOWN2          636
 #define MUS_UT_RUINS                637
 #define MUS_UT_OPTIONS_FALL         638
+#define MUS_UT_OPTIONS_WINTER       639
 
-#define MUSIC_END       MUS_UT_OPTIONS_FALL
+#define MUSIC_END       MUS_UT_OPTIONS_WINTER
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

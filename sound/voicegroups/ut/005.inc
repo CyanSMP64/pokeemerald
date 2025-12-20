@@ -7,9 +7,9 @@ voice_group ut_005
 	voice_directsound 72, 0, DirectSoundWaveData_sinewave_c5, 80, 0, 255, 100
 	voice_directsound 60, 0, DirectSoundSynthData_squ50, 60, 0, 255, 100
 	voice_keysplit_all voicegroup_perc_005 - 0xc * 36
-	voice_square_2 60, 0, 1, 0, 7, 15, 0
+	voice_square_2 60, 0, 1, 0, 0, 15, 0
     voice_programmable_wave 60, 0, ProgrammableWaveData_saw, 0, 4, 8, 0
-	voice_square_2 60, 0, 2, 1, 7, 15, 0
+	voice_square_2 60, 0, 2, 1, 0, 15, 0
 
 voice_group perc_005
 	voice_directsound 63, 64, DirectSoundWaveData_kick1, 255, 0, 255, 127
