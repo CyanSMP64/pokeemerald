@@ -8811,7 +8811,9 @@ extern const u32 gItemIcon_MagmaEmblem[];
 extern const u32 gItemIconPalette_MagmaEmblem[];
 extern const u32 gItemIcon_OldSeaMap[];
 extern const u32 gItemIconPalette_OldSeaMap[];
-// New Items
+// nat dex Items
+extern const u32 gItemIcon_Gracidea[];
+extern const u32 gItemIconPalette_Gracidea[];
 extern const u32 gItemIconPalette_RegionalMineral[];
 
 extern const u32 gItemIcon_ReturnToFieldArrow[];

@@ -4589,4 +4589,18 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .grammarAn = TRUE,
     },
+
+// nat dex key items
+
+    [ITEM_GRACIDEA] =
+    {
+        .name = _("Gracidea"),
+        .itemId = ITEM_GRACIDEA,
+        .price = 0,
+        .description = sGracideaDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU, // ITEM_USE_PARTY_MENU
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // todo:form change
+    },
 };
