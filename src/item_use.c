@@ -1127,6 +1127,18 @@ void ItemUseInBattle_EnigmaBerry(u8 taskId)
     }
 }
 
+void ItemUseOutOfBattle_FormChange(u8 taskId)
+{
+    gItemUseCB = ItemUseCB_FormChange;
+    SetUpItemUseCallback(taskId);
+}
+
+void ItemUseOutOfBattle_FormChange_ConsumedOnUse(u8 taskId)
+{
+    gItemUseCB = ItemUseCB_FormChange_ConsumedOnUse;
+    SetUpItemUseCallback(taskId);
+}
+
 void ItemUseOutOfBattle_CannotUse(u8 taskId)
 {
     DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);

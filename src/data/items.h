@@ -4600,7 +4600,7 @@ const struct Item gItems[] =
         .description = sGracideaDesc,
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
-        .type = ITEM_USE_BAG_MENU, // ITEM_USE_PARTY_MENU
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse, // todo:form change
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_FormChange,
     },
 };

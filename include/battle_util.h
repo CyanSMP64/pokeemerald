@@ -96,6 +96,12 @@ void ClearFuryCutterDestinyBondGrudge(u8 battlerId);
 void HandleAction_RunBattleScript(void);
 u8 GetMoveTarget(u16 move, u8 setTarget);
 u8 IsMonDisobedient(void);
+u16 GetBattleFormChangeTargetSpecies(u32 battler, u16 method);
+bool32 TryRevertPartyMonFormChange(u32 partyIndex);
+bool32 TryBattleFormChange(u32 battler, u16 method);
+void CopyMonLevelAndBaseStatsToBattleMon(u32 battler, struct Pokemon *mon);
+void CopyMonAbilityAndTypesToBattleMon(u32 battler, struct Pokemon *mon);
+void RecalcBattlerStats(u32 battler, struct Pokemon *mon, bool32 isDynamaxing);
 
 bool32 CanSleep(u32 battler);
 bool32 CanBePoisoned(u32 battlerAttacker, u32 battlerTarget);
@@ -103,6 +109,7 @@ bool32 CanBeBurned(u32 battler);
 bool32 CanBeParalyzed(u32 battler);
 bool32 CanBeFrozen(u32 battler);
 bool32 CanBeConfused(u32 battler);
+bool32 HasWeatherEffect(void);
 
 extern const u8 gShedSkinString_Poison1[];
 extern const u8 gShedSkinString_Poison2[];

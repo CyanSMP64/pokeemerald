@@ -9,6 +9,7 @@
 #include "field_screen_effect.h"
 #include "field_weather.h"
 #include "fldeff_misc.h"
+#include "form_change.h"
 #include "gpu_regs.h"
 #include "graphics.h"
 #include "international_string_util.h"
@@ -574,6 +575,8 @@ EWRAM_DATA static bool8 sIsMonBeingMoved = 0;
 EWRAM_DATA static u8 sMovingMonOrigBoxId = 0;
 EWRAM_DATA static u8 sMovingMonOrigBoxPos = 0;
 EWRAM_DATA static bool8 sAutoActionOn = 0;
+EWRAM_DATA static bool8 sJustOpenedBag = 0;
+EWRAM_DATA static bool8 sRefreshDisplayMonGfx = FALSE;
 
 // Main tasks
 static void Task_InitPokeStorage(u8);
@@ -867,6 +870,10 @@ static void TilemapUtil_Free(void);
 static void TilemapUtil_Update(u8);
 static void TilemapUtil_DrawPrev(u8);
 static void TilemapUtil_Draw(u8);
+
+// Form changing
+void SetMonFormPSS(struct BoxPokemon *boxMon, u16 method);
+void UpdateSpeciesSpritePSS(struct BoxPokemon *boxmon);
 
 // Unknown utility
 static void UnkUtil_Init(struct UnkUtil *, struct UnkUtilData *, u32);
@@ -3089,6 +3096,7 @@ static void Task_TakeItemForMoving(u8 taskId)
         StartCursorAnim(CURSOR_ANIM_OPEN);
         TakeItemFromMon(sInPartyMenu ? CURSOR_AREA_IN_PARTY : CURSOR_AREA_IN_BOX, GetCursorPosition());
         sStorage->state++;
+        sJustOpenedBag = FALSE;
         break;
     case 2:
         if (!IsItemIconAnimActive())
@@ -3608,6 +3616,7 @@ static void Task_GiveItemFromBag(u8 taskId)
             sWhichToReshow = SCREEN_CHANGE_ITEM_FROM_BAG - 1;
             sStorage->screenChangeType = SCREEN_CHANGE_ITEM_FROM_BAG;
             SetPokeStorageTask(Task_ChangeScreen);
+            sJustOpenedBag = TRUE;
         }
         break;
     }
@@ -6333,17 +6342,20 @@ static void MoveMon(void)
 static void PlaceMon(void)
 {
     u8 boxId;
+    struct Pokemon *mon = &gPlayerParty[sCursorPosition];
 
     switch (sCursorArea)
     {
     case CURSOR_AREA_IN_PARTY:
         SetPlacedMonData(TOTAL_BOXES_COUNT, sCursorPosition);
         SetPlacedMonSprite(TOTAL_BOXES_COUNT, sCursorPosition);
+        UpdateSpeciesSpritePSS(&mon->box);
         break;
     case CURSOR_AREA_IN_BOX:
         boxId = StorageGetCurrentBox();
         SetPlacedMonData(boxId, sCursorPosition);
         SetPlacedMonSprite(boxId, sCursorPosition);
+        UpdateSpeciesSpritePSS(&mon->box);
         break;
     default:
         return;
@@ -6373,12 +6385,17 @@ static void SetPlacedMonData(u8 boxId, u8 position)
 {
     if (boxId == TOTAL_BOXES_COUNT)
     {
+        struct Pokemon *mon;
+
         gPlayerParty[position] = sStorage->movingMon;
+        mon = &gPlayerParty[position];
+        SetMonFormPSS(&mon->box, FORM_CHANGE_WITHDRAW);
     }
     else
     {
         BoxMonRestorePP(&sStorage->movingMon.box);
         SetBoxMonAt(boxId, position, &sStorage->movingMon.box);
+        SetMonFormPSS(&gPokemonStoragePtr->boxes[boxId][position], FORM_CHANGE_DEPOSIT);
     }
 }
 
@@ -6856,6 +6873,16 @@ static void ReshowDisplayMon(void)
         SetDisplayMonData(&sSavedMovingMon, MODE_PARTY);
     else
         TryRefreshDisplayMon();
+}
+
+void SetMonFormPSS(struct BoxPokemon *boxMon, u16 method)
+{
+    u16 targetSpecies = GetFormChangeTargetSpeciesBoxMon(boxMon, method, 0);
+    if (targetSpecies != GetBoxMonData(boxMon, MON_DATA_SPECIES, NULL))
+    {
+        SetBoxMonData(boxMon, MON_DATA_SPECIES, &targetSpecies);
+        sRefreshDisplayMonGfx = TRUE;
+    }
 }
 
 static void SetDisplayMonData(void *pokemon, u8 mode)
@@ -9974,6 +10001,41 @@ static void TilemapUtil_Draw(u8 id)
                                   1);
         tiles += adder;
     }
+}
+
+void UpdateSpeciesSpritePSS(struct BoxPokemon *boxMon)
+{
+    u16 species = GetBoxMonData(boxMon, MON_DATA_SPECIES);
+    u32 pid = GetBoxMonData(boxMon, MON_DATA_PERSONALITY);
+    u32 otId = GetBoxMonData(boxMon, MON_DATA_OT_ID);
+
+    // Update front sprite
+    sStorage->displayMonSpecies = species;
+    sStorage->displayMonPalette = GetMonSpritePalFromSpeciesAndPersonality(sStorage->displayMonSpecies, otId, sStorage->displayMonPersonality);
+    if (!sJustOpenedBag)
+    {
+        if (sRefreshDisplayMonGfx)
+        {
+            LoadDisplayMonGfx(species, pid);
+            StartDisplayMonMosaicEffect();
+            sRefreshDisplayMonGfx = FALSE;
+        }
+
+        // Recreate icon sprite
+        if (sInPartyMenu)
+        {
+            DestroyAllPartyMonIcons();
+            CreatePartyMonsSprites(TRUE);
+        }
+        else
+        {
+            DestroyBoxMonIconAtPosition(sCursorPosition);
+            CreateBoxMonIconAtPos(sCursorPosition);
+            if (sStorage->boxOption == OPTION_MOVE_ITEMS)
+                SetBoxMonIconObjMode(sCursorPosition, (GetBoxMonData(boxMon, MON_DATA_HELD_ITEM) == ITEM_NONE ? ST_OAM_OBJ_BLEND : ST_OAM_OBJ_NORMAL));
+        }
+    }
+    sJustOpenedBag = FALSE;
 }
 
 

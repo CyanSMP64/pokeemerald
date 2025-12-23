@@ -19,6 +19,7 @@
 #include "party_menu.h"
 #include "list_menu.h"
 #include "overworld.h"
+#include "form_change.h"
 #include "constants/items.h"
 #include "constants/moves.h"
 #include "constants/region_map_sections.h"
@@ -161,6 +162,8 @@ static s8 Daycare_FindEmptySpot(struct DayCare *daycare)
 
 static void StorePokemonInDaycare(struct Pokemon *mon, struct DaycareMon *daycareMon)
 {
+    u32 newSpecies;
+    
     if (MonHasMail(mon))
     {
         u8 mailId;
@@ -173,6 +176,13 @@ static void StorePokemonInDaycare(struct Pokemon *mon, struct DaycareMon *daycar
         mailId = GetMonData(mon, MON_DATA_MAIL);
         daycareMon->mail.message = gSaveBlock1Ptr->mail[mailId];
         TakeMailFromMon(mon);
+    }
+
+    newSpecies = GetFormChangeTargetSpecies(mon, FORM_CHANGE_DEPOSIT, 0);
+    if (newSpecies != GetMonData(mon, MON_DATA_SPECIES))
+    {
+        SetMonData(mon, MON_DATA_SPECIES, &newSpecies);
+        CalculateMonStats(mon);
     }
 
     daycareMon->mon = mon->box;
@@ -245,12 +255,21 @@ static void ApplyDaycareExperience(struct Pokemon *mon)
 static u16 TakeSelectedPokemonFromDaycare(struct DaycareMon *daycareMon)
 {
     u16 species;
+    u16 newSpecies;
     u32 experience;
     struct Pokemon pokemon;
 
     GetBoxMonNickname(&daycareMon->mon, gStringVar1);
     species = GetBoxMonData(&daycareMon->mon, MON_DATA_SPECIES);
     BoxMonToMon(&daycareMon->mon, &pokemon);
+
+    newSpecies = GetFormChangeTargetSpecies(&pokemon, FORM_CHANGE_WITHDRAW, 0);
+    if (newSpecies != species)
+    {
+        SetMonData(&pokemon, MON_DATA_SPECIES, &newSpecies);
+        CalculateMonStats(&pokemon);
+        species = newSpecies;
+    }
 
     if (GetMonData(&pokemon, MON_DATA_LEVEL) != MAX_LEVEL)
     {

@@ -427,6 +427,7 @@ const u8 gText_PkmnAdoresBaseVar2Fell[] = _(""); // dummied
 const u8 gText_PkmnFriendlyBaseVar2CantFall[] = _("{STR_VAR_1} became more friendly, and\nits base points for its {STR_VAR_2} stat\lcan't go any lower!{PAUSE_UNTIL_PRESS}");
 const u8 gText_PkmnSnappedOutOfConfusion[] = _("{STR_VAR_1} snapped out of its\nconfusion.{PAUSE_UNTIL_PRESS}");
 const u8 gText_PkmnGotOverInfatuation[] = _("{STR_VAR_1} got over its\ninfatuation.{PAUSE_UNTIL_PRESS}");
+const u8 gText_PkmnTransformed[] = _("{STR_VAR_1} transformed!{PAUSE_UNTIL_PRESS}");
 const u8 gText_ThrowAwayItem[] = _("Throw away this\n{STR_VAR_1}?");
 const u8 gText_ItemThrownAway[] = _("The {STR_VAR_1}\nwas thrown away.{PAUSE_UNTIL_PRESS}");
 const u8 gText_TeachWhichPokemon2[] = _("Teach which Pokémon?"); // Unused

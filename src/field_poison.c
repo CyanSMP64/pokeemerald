@@ -6,6 +6,7 @@
 #include "field_message_box.h"
 #include "field_poison.h"
 #include "fldeff_misc.h"
+#include "form_change.h"
 #include "frontier_util.h"
 #include "party_menu.h"
 #include "pokenav.h"
@@ -128,7 +129,10 @@ s32 DoPoisonFieldEffect(void)
             // Apply poison damage
             hp = GetMonData(pokemon, MON_DATA_HP);
             if (hp == 0 || --hp == 0)
+            {
+                TryFormChange(&pokemon[i], FORM_CHANGE_FAINT);
                 numFainted++;
+            }
 
             SetMonData(pokemon, MON_DATA_HP, &hp);
             numPoisoned++;

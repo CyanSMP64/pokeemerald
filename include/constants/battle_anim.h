@@ -379,6 +379,7 @@
 #define B_ANIM_INGRAIN_HEAL             21
 #define B_ANIM_WISH_HEAL                22
 #define B_ANIM_RAIN_DISH_HEAL           23
+#define B_ANIM_FORM_CHANGE              24
 
 // special animations table (gBattleAnims_Special)
 #define B_ANIM_LVL_UP                   0

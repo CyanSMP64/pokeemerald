@@ -568,7 +568,7 @@ void BattleLoadOpponentMonSpriteGfx(struct Pokemon *mon, u8 battlerId)
     if (gBattleSpritesDataPtr->battlerData[battlerId].transformSpecies == SPECIES_NONE)
         lzPaletteData = GetMonFrontSpritePal(mon);
     else
-        lzPaletteData = GetMonSpritePalFromSpeciesAndPersonality(species, otId, monsPersonality);
+        lzPaletteData = GetMonSpritePalFromSpeciesAndPersonality(species, otId, currentPersonality);
 
     LZDecompressWram(lzPaletteData, gDecompressionBuffer);
     LoadPalette(gDecompressionBuffer, paletteOffset, PLTT_SIZE_4BPP);
@@ -631,7 +631,7 @@ void BattleLoadPlayerMonSpriteGfx(struct Pokemon *mon, u8 battlerId)
     if (gBattleSpritesDataPtr->battlerData[battlerId].transformSpecies == SPECIES_NONE)
         lzPaletteData = GetMonFrontSpritePal(mon);
     else
-        lzPaletteData = GetMonSpritePalFromSpeciesAndPersonality(species, otId, monsPersonality);
+        lzPaletteData = GetMonSpritePalFromSpeciesAndPersonality(species, otId, currentPersonality);
 
     LZDecompressWram(lzPaletteData, gDecompressionBuffer);
     LoadPalette(gDecompressionBuffer, paletteOffset, PLTT_SIZE_4BPP);
@@ -835,6 +835,20 @@ static void ClearSpritesBattlerHealthboxAnimData(void)
     memset(gBattleSpritesDataPtr->battlerData, 0, sizeof(struct BattleSpriteInfo) * MAX_BATTLERS_COUNT);
 }
 
+static bool8 sSkipPaletteBlend;
+static bool8 sSkipPaletteBlendOnce[MAX_BATTLERS_COUNT];
+
+void SetSkipPaletteBlend(bool8 skip)
+{
+    sSkipPaletteBlend = skip;
+}
+
+void SetSkipPaletteBlendOnce(u8 battlerId, bool8 skip)
+{
+    if (battlerId < MAX_BATTLERS_COUNT)
+        sSkipPaletteBlendOnce[battlerId] = skip;
+}
+
 void CopyAllBattleSpritesInvisibilities(void)
 {
     s32 i;
@@ -864,8 +878,11 @@ void HandleSpeciesGfxDataChange(u8 battlerAtk, u8 battlerDef, bool8 castform, bo
         gBattleMonForms[battlerAtk] = gBattleSpritesDataPtr->animationData->animArg;
         if (gBattleSpritesDataPtr->battlerData[battlerAtk].transformSpecies != SPECIES_NONE)
         {
-            BlendPalette(paletteOffset, 16, 6, RGB_WHITE);
-            CpuCopy32(&gPlttBufferFaded[paletteOffset], &gPlttBufferUnfaded[paletteOffset], PLTT_SIZEOF(16));
+            if (!sSkipPaletteBlend)
+            {
+                BlendPalette(paletteOffset, 16, 6, RGB_WHITE);
+                CpuCopy32(&gPlttBufferFaded[paletteOffset], &gPlttBufferUnfaded[paletteOffset], PLTT_SIZEOF(16));
+            }
         }
         gSprites[gBattlerSpriteIds[battlerAtk]].y = GetBattlerSpriteDefault_Y(battlerAtk);
     }
@@ -939,12 +956,18 @@ void HandleSpeciesGfxDataChange(u8 battlerAtk, u8 battlerDef, bool8 castform, bo
             LoadPalette(gBattleStruct->castformPalette[gBattleMonForms[battlerDef]], paletteOffset, PLTT_SIZE_4BPP);
         }
 
-        BlendPalette(paletteOffset, 16, 6, RGB_WHITE);
-        CpuCopy32(&gPlttBufferFaded[paletteOffset], &gPlttBufferUnfaded[paletteOffset], PLTT_SIZEOF(16));
+        if (!sSkipPaletteBlend && !sSkipPaletteBlendOnce[battlerAtk])
+        {
+            BlendPalette(paletteOffset, 16, 6, RGB_WHITE);
+            CpuCopy32(&gPlttBufferFaded[paletteOffset], &gPlttBufferUnfaded[paletteOffset], PLTT_SIZEOF(16));
+        }
+        sSkipPaletteBlendOnce[battlerAtk] = FALSE;
 
         if (!IsContest())
         {
-            gBattleSpritesDataPtr->battlerData[battlerAtk].transformSpecies = targetSpecies;
+            // Only mark as transformed if we're actually using Transform (with palette blend)
+            if (!sSkipPaletteBlend)
+                gBattleSpritesDataPtr->battlerData[battlerAtk].transformSpecies = targetSpecies;
             gBattleMonForms[battlerAtk] = gBattleMonForms[battlerDef];
         }
 

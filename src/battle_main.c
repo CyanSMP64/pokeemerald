@@ -3634,6 +3634,8 @@ void FaintClearSetData(void)
     gBattleMons[gActiveBattler].type1 = gSpeciesInfo[gBattleMons[gActiveBattler].species].types[0];
     gBattleMons[gActiveBattler].type2 = gSpeciesInfo[gBattleMons[gActiveBattler].species].types[1];
 
+    TryBattleFormChange(gActiveBattler, FORM_CHANGE_FAINT);
+
     ClearBattlerMoveHistory(gActiveBattler);
     ClearBattlerAbilityHistory(gActiveBattler);
 }

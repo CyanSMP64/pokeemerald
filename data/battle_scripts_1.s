@@ -3931,6 +3931,8 @@ BattleScript_MoveEffectSleep::
 BattleScript_UpdateEffectStatusIconRet::
 	updatestatusicon BS_EFFECT_BATTLER
 	waitstate
+	trytriggerstatusform
+	flushtextbox
 	return
 
 BattleScript_YawnMakesAsleep::
@@ -4094,6 +4096,17 @@ BattleScript_DoCastformChange::
 	call BattleScript_AbilityPopUp
 	docastformchangeanimation
 	waitstate
+	printstring STRINGID_PKMNTRANSFORMED
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_TargetFormChangeWithStringNoPopup::
+	copybyte sBATTLER, gBattleScripting + 0x17 @ battler field
+	handleformchange BS_SCRIPTING, 0
+	handleformchange BS_SCRIPTING, 1
+	playanimation BS_SCRIPTING, B_ANIM_FORM_CHANGE
+	waitstate
+	handleformchange BS_SCRIPTING, 2
 	printstring STRINGID_PKMNTRANSFORMED
 	waitmessage B_WAIT_TIME_LONG
 	return

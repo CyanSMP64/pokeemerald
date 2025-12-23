@@ -25,6 +25,7 @@
 #include "fldeff.h"
 #include "fldeff_misc.h"
 #include "frontier_util.h"
+#include "form_change.h"
 #include "gpu_regs.h"
 #include "graphics.h"
 #include "international_string_util.h"
@@ -5276,6 +5277,163 @@ void ItemUseCB_EvolutionStone(u8 taskId, TaskFunc task)
         FreePartyPointers();
     }
 }
+
+#define tState          data[0]
+#define tTargetSpecies  data[1]
+#define tAnimWait       data[2]
+#define tNextFunc       3
+
+static void SpriteCB_FormChangeIconMosaic(struct Sprite *sprite);
+
+static void Task_TryItemUseFormChange(u8 taskId)
+{
+    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    u16 targetSpecies;
+    struct Sprite *icon = &gSprites[sPartyMenuBoxes[gPartyMenu.slotId].monSpriteId];
+
+    switch (gTasks[taskId].tState)
+    {
+    case 0:
+        targetSpecies = gTasks[taskId].tTargetSpecies;
+        SetMonData(mon, MON_DATA_SPECIES, &targetSpecies);
+    //    TrySetDayLimitToFormChange(mon);
+        CalculateMonStats(mon);
+        gTasks[taskId].tState++;
+        break;
+    case 1:
+        gTasks[taskId].tState++;
+        break;
+    case 2:
+        PlaySE(SE_M_TELEPORT);
+        gTasks[taskId].tState++;
+        break;
+    case 3:
+        targetSpecies = gTasks[taskId].tTargetSpecies;
+
+        if (gTasks[taskId].tAnimWait == 0)
+        {
+            FreeAndDestroyMonIconSprite(icon);
+            CreatePartyMonIconSpriteParameterized(targetSpecies, GetMonData(mon, MON_DATA_PERSONALITY, NULL), &sPartyMenuBoxes[gPartyMenu.slotId], 1, FALSE);
+            icon->oam.mosaic = TRUE;
+            icon->data[0] = 10;
+            icon->data[1] = 1;
+            icon->data[2] = taskId;
+            icon->callback = SpriteCB_FormChangeIconMosaic;
+            SetGpuReg(REG_OFFSET_MOSAIC, (icon->data[0] << 12) | (icon->data[1] << 8));
+        }
+
+        if (++gTasks[taskId].tAnimWait == 60)
+            gTasks[taskId].tState++;
+
+        break;
+    case 4:
+        targetSpecies = gTasks[taskId].tTargetSpecies;
+        PlayCry_Normal(targetSpecies, 0);
+        gTasks[taskId].tState++;
+        break;
+    case 5:
+        if (IsCryFinished())
+        {
+            GetMonNickname(mon, gStringVar1);
+            StringExpandPlaceholders(gStringVar4, gText_PkmnTransformed);
+            DisplayPartyMenuMessage(gStringVar4, FALSE);
+            ScheduleBgCopyTilemapToVram(2);
+            gTasks[taskId].tState++;
+        }
+
+        break;
+    case 6:
+        if (!IsPartyMenuTextPrinterActive())
+        {
+        //    if (gSpecialVar_ItemId == ITEM_ROTOM_CATALOG) //only for Rotom currently
+        //    {
+        //        u32 i;
+        //        for (i = 0; i < ARRAY_COUNT(sRotomFormChangeMoves); i++)
+        //            DeleteMove(mon, sRotomFormChangeMoves[i]);
+        //
+        //        if (I_ROTOM_CATALOG_THUNDER_SHOCK < GEN_9 && gSpecialVar_0x8000 == ROTOM_BASE_MOVE)
+        //        {
+        //            if (!DoesMonHaveAnyMoves(mon))
+        //                FormChangeTeachMove(taskId, gSpecialVar_0x8000, gPartyMenu.slotId);
+        //        }
+        //        else
+        //            FormChangeTeachMove(taskId, gSpecialVar_0x8000, gPartyMenu.slotId);
+        //    }
+
+            gTasks[taskId].tState++;
+        }
+        break;
+    case 7:
+        gTasks[taskId].func = (void *)GetWordTaskArg(taskId, tNextFunc);
+        break;
+    }
+}
+
+static void SpriteCB_FormChangeIconMosaic(struct Sprite *sprite)
+{
+    u8 taskId = sprite->data[2];
+
+    sprite->data[0] -= sprite->data[1];
+
+    if (sprite->data[0] <= 0)
+    {
+        if (gTasks[taskId].tAnimWait == 60)
+            sprite->data[0] = 0;
+        else
+            sprite->data[0] = 10;
+    }
+
+    SetGpuReg(REG_OFFSET_MOSAIC, (sprite->data[0] << 12) | (sprite->data[1] << 8));
+
+    if (sprite->data[0] == 0)
+    {
+        sprite->oam.mosaic = FALSE;
+        sprite->callback = SpriteCallbackDummy;
+    }
+}
+
+bool32 TryItemUseFormChange(u8 taskId, TaskFunc task)
+{
+    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    u32 currentSpecies = GetMonData(mon, MON_DATA_SPECIES);
+    u32 targetSpecies = GetFormChangeTargetSpecies(mon, FORM_CHANGE_ITEM_USE, gSpecialVar_ItemId);
+
+    if (targetSpecies != currentSpecies)
+    {
+        gPartyMenuUseExitCallback = TRUE;
+        SetWordTaskArg(taskId, tNextFunc, (u32)task);
+        gTasks[taskId].func = Task_TryItemUseFormChange;
+        gTasks[taskId].tState = 0;
+        gTasks[taskId].tTargetSpecies = targetSpecies;
+        gTasks[taskId].tAnimWait = 0;
+        return TRUE;
+    }
+    else
+    {
+        gPartyMenuUseExitCallback = FALSE;
+        PlaySE(SE_SELECT);
+        DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
+        ScheduleBgCopyTilemapToVram(2);
+        gTasks[taskId].func = task;
+        return FALSE;
+    }
+}
+
+void ItemUseCB_FormChange(u8 taskId, TaskFunc task)
+{
+    TryItemUseFormChange(taskId, task);
+}
+
+void ItemUseCB_FormChange_ConsumedOnUse(u8 taskId, TaskFunc task)
+{
+    if (TryItemUseFormChange(taskId, task))
+        RemoveBagItem(gSpecialVar_ItemId, 1);
+}
+
+#undef tState
+#undef tTargetSpecies
+#undef tAnimWait
+#undef tNextFunc
 
 u8 GetItemEffectType(u16 item)
 {
