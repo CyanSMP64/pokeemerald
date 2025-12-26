@@ -4328,3 +4328,15 @@ void GetHmModeOption(void) {
     else // Classic
         gSpecialVar_Result = 0;
 }
+
+bool8 DoesPlayerPartyContainSpecies(void)
+{
+    u8 partyCount = CalculatePlayerPartyCount();
+    u8 i;
+    for (i = 0; i < partyCount; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG, NULL) == gSpecialVar_0x8004)
+            return TRUE;
+    }
+    return FALSE;
+}

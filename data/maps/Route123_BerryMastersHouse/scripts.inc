@@ -128,3 +128,50 @@ Route123_BerryMastersHouse_EventScript_GaveBerry::
 	release
 	end
 
+Route123_BerryMastersHouse_EventScript_GracideaMan::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_GRACIDEA, Route123_BerryMastersHouse_EventScript_GracideaMan_Explain
+	setvar VAR_0x8004, SPECIES_SHAYMIN
+	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
+	goto_if_eq VAR_RESULT, TRUE, Route123_BerryMastersHouse_EventScript_GracideaMan_Give
+	msgbox Route123_BerryMastersHouse_Text_HaveYouHeardOfGracidea
+	release
+	end
+
+Route123_BerryMastersHouse_EventScript_GracideaMan_Give::
+	msgbox Route123_BerryMastersHouse_Text_WowShaymin
+	giveitem ITEM_GRACIDEA
+	setflag FLAG_RECEIVED_GRACIDEA
+	release
+	end
+
+Route123_BerryMastersHouse_EventScript_GracideaMan_Explain::
+	msgbox Route123_BerryMastersHouse_Text_ItsBeenATradition
+	release
+	end
+
+Route123_BerryMastersHouse_Text_HaveYouHeardOfGracidea::
+    .string "Do you know Gracidea?\p"
+	.string "In the Sinnoh region, people give a\n"
+	.string "bouquet of Gracidea to convey their\l"
+	.string "gratitude!\p"
+	.string "It's a very old custom!$"
+
+Route123_BerryMastersHouse_Text_WowShaymin::
+    .string "Golly!\n"
+	.string "You have a Shaymin!\p"
+	.string "Speaking of Shaymin, do you have a\n"
+	.string "Gracidea?\p"
+	.string "I have many Gracidea right now, so I'll\n"
+	.string "give you one.$"
+
+Route123_BerryMastersHouse_Text_ItsBeenATradition::
+    .string "In the Sinnoh region, there's an old\n"
+	.string "custom that they give a bouquet of\l"
+	.string "Gracidea to convey gratitude.\p"
+	.string "In other words, if you give Gracidea, you\n"
+	.string "can express your feeling even without\l"
+	.string "saying it.\p"
+	.string "For a shy person like me, there's nothing\n"
+	.string "more useful than this.$"
