@@ -1724,3 +1724,13 @@ SootopolisCity_Text_DazzledByMentor:
 	.string "Wallace: I'm sure that you will be\n"
 	.string "dazzled by my mentor's breathtakingly\l"
 	.string "elegant battle style.$"
+
+SootopolisCity_EventScript_Meteorite::
+	lock
+	msgbox SootopolisCity_Text_MysteriousMeteorite, MSGBOX_DEFAULT
+	release
+	end
+
+SootopolisCity_Text_MysteriousMeteorite:
+	.string "It's a mysterious meteorite that\n"
+	.string "fell from the stars…$"
