@@ -542,3 +542,4 @@ gSpecials::
 	def_special FieldUseFly
 	def_special GetHmModeOption
 	def_special DoesPlayerPartyContainSpecies
+	def_special TryChangeDeoxysForm

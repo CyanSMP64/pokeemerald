@@ -719,3 +719,10 @@ SafariZone_Northeast_EventScript_Sparkle_Zinc::
 SafariZone_Northeast_EventScript_SetVarTempItem1To0::
 	setvar VAR_TEMP_01, 0
 	end
+
+SootopolisCity_EventScript_Sparkle_ShinyStone::
+	goto_if_unset FLAG_HIDDEN_ITEM_SPARKLES, EventScript_ReleaseEnd
+	goto_if_set FLAG_HIDDEN_ITEM_SOOTOPOLIS_CITY_SHINY_STONE, EventScript_ReleaseEnd
+	dofieldeffectsparkle 7, 53, 0
+	setvar VAR_TEMP_00, 1
+	end
