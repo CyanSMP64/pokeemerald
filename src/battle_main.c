@@ -2881,7 +2881,7 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
             else
                 unownSpecies = NUM_SPECIES + unownForm;  // Use one of the other Unown letters.
         }
-        else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_KELDEO || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
+        else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
         {
             unownForm = (personalityValue >> 8) % 2;
             if (!unownForm)
@@ -2890,8 +2890,6 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
             {
                 if (species == SPECIES_SHELLOS)
                     unownSpecies = SPECIES_SHELLOS_EAST_SEA;
-                else if (species == SPECIES_KELDEO)
-                    unownSpecies = SPECIES_KELDEO_RESOLUTE;
                 else if (species == SPECIES_MAGEARNA)
                     unownSpecies = SPECIES_MAGEARNA_ORIGINAL_COLOR;
                 else if (species == SPECIES_ZARUDE)
@@ -2899,6 +2897,14 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
                 else
                     unownSpecies = SPECIES_GASTRODON_EAST_SEA;
             }
+        }
+        else if (species == SPECIES_KELDEO)
+        {
+            struct Pokemon *mon = GetBattlerMon(battler);
+            if (MonKnowsMove(mon, MOVE_SECRET_SWORD))
+                unownSpecies = SPECIES_KELDEO_RESOLUTE;
+            else
+                unownSpecies = species;
         }
         else if (species == SPECIES_MAUSHOLD || species == SPECIES_DUDUNSPARCE)
         {

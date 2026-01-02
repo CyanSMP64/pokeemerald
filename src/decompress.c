@@ -88,7 +88,7 @@ void LoadSpecialPokePic(const struct CompressedSpriteSheet *src, void *dest, s32
         || species == SPECIES_UNFEZANT || species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_FRILLISH || species == SPECIES_JELLICENT
         || species == SPECIES_VIVILLON || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES
         || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_ALCREMIE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY
-        || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE || species == SPECIES_KELDEO || species == SPECIES_FURFROU || species == SPECIES_COMBEE
+        || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE || species == SPECIES_FURFROU || species == SPECIES_COMBEE
         || species == SPECIES_MAGEARNA || species == SPECIES_CRAMORANT || species == SPECIES_ZARUDE || species == SPECIES_PIKACHU_CAP || species == SPECIES_PACHIRISU
         
         || species == SPECIES_VENUSAUR || species == SPECIES_BUTTERFREE || species == SPECIES_RATTATA || species == SPECIES_RATICATE
@@ -131,7 +131,7 @@ void LoadSpecialPokePic(const struct CompressedSpriteSheet *src, void *dest, s32
             else
                 i += SPECIES_UNOWN_B - 1;
         }
-        else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_KELDEO || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
+        else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
         {
             i = (personality >> 8) % 2;
             if (!i)
@@ -140,8 +140,6 @@ void LoadSpecialPokePic(const struct CompressedSpriteSheet *src, void *dest, s32
             {
                 if (species == SPECIES_SHELLOS)
                     i = SPECIES_SHELLOS_EAST_SEA;
-                else if (species == SPECIES_KELDEO)
-                    i = SPECIES_KELDEO_RESOLUTE;
                 else if (species == SPECIES_MAGEARNA)
                     i = SPECIES_MAGEARNA_ORIGINAL_COLOR;
                 else if (species == SPECIES_ZARUDE)
@@ -513,7 +511,7 @@ void LoadSpecialPokePic(const struct CompressedSpriteSheet *src, void *dest, s32
         else
             LZ77UnCompWram(gMonFrontPicTable[i].data, dest);
     }
-    else if (species > NUM_SPECIES) // is species unknown? draw the ? icon
+    else if (species > NUM_SPECIES && species != SPECIES_KELDEO_RESOLUTE) // is species unknown? draw the ? icon
         LZ77UnCompWram(gMonFrontPicTable[0].data, dest);
     else
         LZ77UnCompWram(src->data, dest);
@@ -756,7 +754,7 @@ void LoadSpecialPokePic_DontHandleDeoxys(const struct CompressedSpriteSheet *src
         || species == SPECIES_UNFEZANT || species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_FRILLISH || species == SPECIES_JELLICENT
         || species == SPECIES_VIVILLON || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES
         || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_ALCREMIE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY
-        || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE || species == SPECIES_KELDEO || species == SPECIES_FURFROU || species == SPECIES_COMBEE
+        || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE || species == SPECIES_FURFROU || species == SPECIES_COMBEE
         || species == SPECIES_MAGEARNA || species == SPECIES_CRAMORANT || species == SPECIES_ZARUDE || species == SPECIES_PIKACHU_CAP || species == SPECIES_PACHIRISU
         
         || species == SPECIES_VENUSAUR || species == SPECIES_BUTTERFREE || species == SPECIES_RATTATA || species == SPECIES_RATICATE
@@ -799,7 +797,7 @@ void LoadSpecialPokePic_DontHandleDeoxys(const struct CompressedSpriteSheet *src
             else
                 i += SPECIES_UNOWN_B - 1;
         }
-        else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_KELDEO || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
+        else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
         {
             i = (personality >> 8) % 2;
             if (!i)
@@ -808,8 +806,6 @@ void LoadSpecialPokePic_DontHandleDeoxys(const struct CompressedSpriteSheet *src
             {
                 if (species == SPECIES_SHELLOS)
                     i = SPECIES_SHELLOS_EAST_SEA;
-                else if (species == SPECIES_KELDEO)
-                    i = SPECIES_KELDEO_RESOLUTE;
                 else if (species == SPECIES_MAGEARNA)
                     i = SPECIES_MAGEARNA_ORIGINAL_COLOR;
                 else if (species == SPECIES_ZARUDE)
@@ -1181,7 +1177,7 @@ void LoadSpecialPokePic_DontHandleDeoxys(const struct CompressedSpriteSheet *src
         else
             LZ77UnCompWram(gMonFrontPicTable[i].data, dest);
     }
-    else if (species > NUM_SPECIES) // is species unknown? draw the ? icon
+    else if (species > NUM_SPECIES && species != SPECIES_KELDEO_RESOLUTE) // is species unknown? draw the ? icon
         LZ77UnCompWram(gMonFrontPicTable[0].data, dest);
     else
         LZ77UnCompWram(src->data, dest);

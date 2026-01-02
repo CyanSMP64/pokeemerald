@@ -14,6 +14,7 @@
 #include "task.h"
 #include "trig.h"
 #include "util.h"
+#include "party_menu.h"
 #include "constants/battle_anim.h"
 
 #define IS_DOUBLE_BATTLE() ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
@@ -209,7 +210,7 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
                 else
                     coordSpecies = letter + SPECIES_UNOWN_B - 1;
             }
-            else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_KELDEO || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
+            else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
             {
                 letter = (personality >> 8) % 2;
                 if (!letter)
@@ -218,8 +219,6 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
                 {
                     if (species == SPECIES_SHELLOS)
                         coordSpecies = SPECIES_SHELLOS_EAST_SEA;
-                    else if (species == SPECIES_KELDEO)
-                        coordSpecies = SPECIES_KELDEO_RESOLUTE;
                     else if (species == SPECIES_MAGEARNA)
                         coordSpecies = SPECIES_MAGEARNA_ORIGINAL_COLOR;
                     else if (species == SPECIES_ZARUDE)
@@ -227,6 +226,14 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
                     else
                         coordSpecies = SPECIES_GASTRODON_EAST_SEA;
                 }
+            }
+            else if (species == SPECIES_KELDEO)
+            {
+                struct Pokemon *mon = GetBattlerMon(battlerId);
+                if (MonKnowsMove(mon, MOVE_SECRET_SWORD))
+                    coordSpecies = SPECIES_KELDEO_RESOLUTE;
+                else
+                    coordSpecies = species;
             }
             else if (species == SPECIES_MAUSHOLD || species == SPECIES_DUDUNSPARCE)
             {
@@ -382,7 +389,7 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
         {
             ret = sCastformBackSpriteYCoords[gBattleMonForms[battlerId]];
         }
-        else if (species > NUM_SPECIES)
+        else if (species > NUM_SPECIES && species != SPECIES_KELDEO_RESOLUTE)
         {
             ret = gMonBackPicCoords[0].y_offset;
         }
@@ -413,7 +420,7 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
                 else
                     coordSpecies = letter + SPECIES_UNOWN_B - 1;
             }
-            else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_KELDEO || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
+            else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
             {
                 letter = (personality >> 8) % 2;
                 if (!letter)
@@ -422,8 +429,6 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
                 {
                     if (species == SPECIES_SHELLOS)
                         coordSpecies = SPECIES_SHELLOS_EAST_SEA;
-                    else if (species == SPECIES_KELDEO)
-                        coordSpecies = SPECIES_KELDEO_RESOLUTE;
                     else if (species == SPECIES_MAGEARNA)
                         coordSpecies = SPECIES_MAGEARNA_ORIGINAL_COLOR;
                     else if (species == SPECIES_ZARUDE)
@@ -431,6 +436,14 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
                     else
                         coordSpecies = SPECIES_GASTRODON_EAST_SEA;
                 }
+            }
+            else if (species == SPECIES_KELDEO)
+            {
+                struct Pokemon *mon = GetBattlerMon(battlerId);
+                if (MonKnowsMove(mon, MOVE_SECRET_SWORD))
+                    coordSpecies = SPECIES_KELDEO_RESOLUTE;
+                else
+                    coordSpecies = species;
             }
             else if (species == SPECIES_MAUSHOLD || species == SPECIES_DUDUNSPARCE)
             {
@@ -586,7 +599,7 @@ u8 GetBattlerYDelta(u8 battlerId, u16 species)
         {
             ret = gCastformFrontSpriteCoords[gBattleMonForms[battlerId]].y_offset;
         }
-        else if (species > NUM_SPECIES)
+        else if (species > NUM_SPECIES && species != SPECIES_KELDEO_RESOLUTE)
         {
             ret = gMonFrontPicCoords[0].y_offset;
         }
@@ -607,7 +620,7 @@ u8 GetBattlerElevation(u8 battlerId, u16 species)
         {
             if (species == SPECIES_CASTFORM)
                 ret = sCastformElevations[gBattleMonForms[battlerId]];
-            else if (species > NUM_SPECIES)
+            else if (species > NUM_SPECIES && species != SPECIES_KELDEO_RESOLUTE)
                 ret = gEnemyMonElevation[0];
             else
                 ret = gEnemyMonElevation[species];
@@ -662,6 +675,13 @@ u8 GetBattlerSpriteCoord2(u8 battlerId, u8 coordType)
                 species = gAnimBattlerSpecies[battlerId];
             else
                 species = spriteInfo[battlerId].transformSpecies;
+            
+            if (species == SPECIES_KELDEO)
+            {
+                struct Pokemon *mon = GetBattlerMon(battlerId);
+                if (MonKnowsMove(mon, MOVE_SECRET_SWORD))
+                    species = SPECIES_KELDEO_RESOLUTE;
+            }
         }
         if (coordType == BATTLER_COORD_Y_PIC_OFFSET)
             return GetBattlerSpriteFinal_Y(battlerId, species, TRUE);
@@ -2542,7 +2562,7 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                 else
                     unownSpecies = letter + SPECIES_UNOWN_B - 1;
             }
-            else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_KELDEO || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
+            else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
             {
                 letter = (personality >> 8) % 2;
                 if (!letter)
@@ -2551,8 +2571,6 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                 {
                     if (species == SPECIES_SHELLOS)
                         unownSpecies = SPECIES_SHELLOS_EAST_SEA;
-                    else if (species == SPECIES_KELDEO)
-                        unownSpecies = SPECIES_KELDEO_RESOLUTE;
                     else if (species == SPECIES_MAGEARNA)
                         unownSpecies = SPECIES_MAGEARNA_ORIGINAL_COLOR;
                     else if (species == SPECIES_ZARUDE)
@@ -2560,6 +2578,14 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                     else
                         unownSpecies = SPECIES_GASTRODON_EAST_SEA;
                 }
+            }
+            else if (species == SPECIES_KELDEO)
+            {
+                struct Pokemon *mon = GetBattlerMon(battlerId);
+                if (MonKnowsMove(mon, MOVE_SECRET_SWORD))
+                    unownSpecies = SPECIES_KELDEO_RESOLUTE;
+                else
+                    unownSpecies = species;
             }
             else if (species == SPECIES_MAUSHOLD || species == SPECIES_DUDUNSPARCE)
             {
@@ -2755,7 +2781,7 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                     else
                         unownSpecies = letter + SPECIES_UNOWN_B - 1;
                 }
-                else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_KELDEO || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
+                else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
                 {
                     letter = (personality >> 8) % 2;
                     if (!letter)
@@ -2764,8 +2790,6 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                     {
                         if (species == SPECIES_SHELLOS)
                             unownSpecies = SPECIES_SHELLOS_EAST_SEA;
-                        else if (species == SPECIES_KELDEO)
-                            unownSpecies = SPECIES_KELDEO_RESOLUTE;
                         else if (species == SPECIES_MAGEARNA)
                             unownSpecies = SPECIES_MAGEARNA_ORIGINAL_COLOR;
                         else if (species == SPECIES_ZARUDE)
@@ -2773,6 +2797,14 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                         else
                             unownSpecies = SPECIES_GASTRODON_EAST_SEA;
                     }
+                }
+                else if (species == SPECIES_KELDEO)
+                {
+                    struct Pokemon *mon = GetBattlerMon(battlerId);
+                    if (MonKnowsMove(mon, MOVE_SECRET_SWORD))
+                        unownSpecies = SPECIES_KELDEO_RESOLUTE;
+                    else
+                        unownSpecies = species;
                 }
                 else if (species == SPECIES_MAUSHOLD || species == SPECIES_DUDUNSPARCE)
                 {
@@ -2924,7 +2956,7 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                 }
                 coords = &gMonBackPicCoords[unownSpecies];
             }
-            else if (species > NUM_SPECIES)
+            else if (species > NUM_SPECIES && species != SPECIES_KELDEO_RESOLUTE)
             {
                 coords = &gMonBackPicCoords[0];
             }
@@ -2962,7 +2994,7 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                     else
                         unownSpecies = letter + SPECIES_UNOWN_B - 1;
                 }
-                else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_KELDEO || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
+                else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
                 {
                     letter = (personality >> 8) % 2;
                     if (!letter)
@@ -2971,8 +3003,6 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                     {
                         if (species == SPECIES_SHELLOS)
                             unownSpecies = SPECIES_SHELLOS_EAST_SEA;
-                        else if (species == SPECIES_KELDEO)
-                            unownSpecies = SPECIES_KELDEO_RESOLUTE;
                         else if (species == SPECIES_MAGEARNA)
                             unownSpecies = SPECIES_MAGEARNA_ORIGINAL_COLOR;
                         else if (species == SPECIES_ZARUDE)
@@ -2980,6 +3010,14 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
                         else
                             unownSpecies = SPECIES_GASTRODON_EAST_SEA;
                     }
+                }
+                else if (species == SPECIES_KELDEO)
+                {
+                    struct Pokemon *mon = GetBattlerMon(battlerId);
+                    if (MonKnowsMove(mon, MOVE_SECRET_SWORD))
+                        unownSpecies = SPECIES_KELDEO_RESOLUTE;
+                    else
+                        unownSpecies = species;
                 }
                 else if (species == SPECIES_MAUSHOLD || species == SPECIES_DUDUNSPARCE)
                 {
@@ -3135,7 +3173,7 @@ s16 GetBattlerSpriteCoordAttr(u8 battlerId, u8 attr)
             {
                 coords = &gCastformFrontSpriteCoords[gBattleMonForms[battlerId]];
             }
-            else if (species > NUM_SPECIES)
+            else if (species > NUM_SPECIES && species != SPECIES_KELDEO_RESOLUTE)
             {
                 coords = &gMonFrontPicCoords[0];
             }

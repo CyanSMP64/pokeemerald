@@ -23,6 +23,7 @@
 #include "naming_screen.h"
 #include "overworld.h"
 #include "palette.h"
+#include "party_menu.h"
 #include "pc_screen_effect.h"
 #include "pokemon.h"
 #include "pokemon_icon.h"
@@ -500,6 +501,7 @@ struct PokemonStorageSystemData
     u32 displayMonPersonality;
     u16 displayMonSpecies;
     u16 displayMonItemId;
+    struct Pokemon *displayMonMon;
     u16 displayUnusedVar;
     bool8 setMosaic;
     u8 displayMonMarkings;
@@ -3990,7 +3992,12 @@ static void LoadDisplayMonGfx(u16 species, u32 pid)
 
     if (species != SPECIES_NONE)
     {
-        LoadSpecialPokePic(&gMonFrontPicTable[species], sStorage->tileBuffer, species, pid, TRUE);
+        // Check if this is a Keldeo with Secret Sword and use Resolute form sprite
+        u16 spriteSpecies = species;
+        if (species == SPECIES_KELDEO && sStorage->displayMonMon != NULL && MonKnowsMove(sStorage->displayMonMon, MOVE_SECRET_SWORD))
+            spriteSpecies = SPECIES_KELDEO_RESOLUTE;
+        
+        LoadSpecialPokePic(&gMonFrontPicTable[spriteSpecies], sStorage->tileBuffer, spriteSpecies, pid, TRUE);
         LZ77UnCompWram(sStorage->displayMonPalette, sStorage->displayMonPalBuffer);
         CpuCopy32(sStorage->tileBuffer, sStorage->displayMonTilePtr, MON_PIC_SIZE);
         LoadPalette(sStorage->displayMonPalBuffer, sStorage->displayMonPalOffset, PLTT_SIZE_4BPP);
@@ -6898,6 +6905,7 @@ static void SetDisplayMonData(void *pokemon, u8 mode)
     {
         struct Pokemon *mon = (struct Pokemon *)pokemon;
 
+        sStorage->displayMonMon = mon;
         sStorage->displayMonSpecies = GetMonData(mon, MON_DATA_SPECIES_OR_EGG);
         if (sStorage->displayMonSpecies != SPECIES_NONE)
         {
@@ -6920,6 +6928,8 @@ static void SetDisplayMonData(void *pokemon, u8 mode)
     else if (mode == MODE_BOX)
     {
         struct BoxPokemon *boxMon = (struct BoxPokemon *)pokemon;
+
+        sStorage->displayMonMon = NULL;
 
         sStorage->displayMonSpecies = GetBoxMonData(pokemon, MON_DATA_SPECIES_OR_EGG);
         if (sStorage->displayMonSpecies != SPECIES_NONE)
@@ -6944,6 +6954,7 @@ static void SetDisplayMonData(void *pokemon, u8 mode)
     }
     else
     {
+        sStorage->displayMonMon = NULL;
         sStorage->displayMonSpecies = SPECIES_NONE;
         sStorage->displayMonItemId = ITEM_NONE;
     }

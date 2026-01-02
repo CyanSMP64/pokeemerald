@@ -3742,23 +3742,29 @@ static u8 LoadMonGfxAndSprite(struct Pokemon *mon, s16 *state)
 {
     const struct CompressedSpritePalette *pal;
     struct PokeSummary *summary = &sMonSummaryScreen->summary;
+    u16 species;
 
     switch (*state)
     {
     default:
         return CreateMonSprite(mon);
     case 0:
+        // Use Resolute forme sprite if Keldeo knows Secret Sword
+        species = summary->species2;
+        if (species == SPECIES_KELDEO && MonKnowsMove(mon, MOVE_SECRET_SWORD))
+            species = SPECIES_KELDEO_RESOLUTE;
+        
         if (gMain.inBattle)
         {
             if (ShouldIgnoreDeoxysForm(3, sMonSummaryScreen->curMonIndex))
-                HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[summary->species2],
+                HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[species],
                                                           gMonSpritesGfxPtr->sprites.ptr[B_POSITION_OPPONENT_LEFT],
-                                                          summary->species2,
+                                                          species,
                                                           summary->pid);
             else
-                HandleLoadSpecialPokePic_2(&gMonFrontPicTable[summary->species2],
+                HandleLoadSpecialPokePic_2(&gMonFrontPicTable[species],
                                            gMonSpritesGfxPtr->sprites.ptr[B_POSITION_OPPONENT_LEFT],
-                                           summary->species2,
+                                           species,
                                            summary->pid);
         }
         else
@@ -3766,34 +3772,39 @@ static u8 LoadMonGfxAndSprite(struct Pokemon *mon, s16 *state)
             if (gMonSpritesGfxPtr != NULL)
             {
                 if (sMonSummaryScreen->monList.mons == gPlayerParty || sMonSummaryScreen->mode == SUMMARY_MODE_BOX || sMonSummaryScreen->handleDeoxys == TRUE)
-                    HandleLoadSpecialPokePic_2(&gMonFrontPicTable[summary->species2],
+                    HandleLoadSpecialPokePic_2(&gMonFrontPicTable[species],
                                                gMonSpritesGfxPtr->sprites.ptr[B_POSITION_OPPONENT_LEFT],
-                                               summary->species2,
+                                               species,
                                                summary->pid);
                 else
-                    HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[summary->species2],
+                    HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[species],
                                                               gMonSpritesGfxPtr->sprites.ptr[B_POSITION_OPPONENT_LEFT],
-                                                              summary->species2,
+                                                              species,
                                                               summary->pid);
             }
             else
             {
                 if (sMonSummaryScreen->monList.mons == gPlayerParty || sMonSummaryScreen->mode == SUMMARY_MODE_BOX || sMonSummaryScreen->handleDeoxys == TRUE)
-                    HandleLoadSpecialPokePic_2(&gMonFrontPicTable[summary->species2],
+                    HandleLoadSpecialPokePic_2(&gMonFrontPicTable[species],
                                                 MonSpritesGfxManager_GetSpritePtr(MON_SPR_GFX_MANAGER_A, B_POSITION_OPPONENT_LEFT),
-                                                summary->species2,
+                                                species,
                                                 summary->pid);
                 else
-                    HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[summary->species2],
+                    HandleLoadSpecialPokePic_DontHandleDeoxys(&gMonFrontPicTable[species],
                                                               MonSpritesGfxManager_GetSpritePtr(MON_SPR_GFX_MANAGER_A, B_POSITION_OPPONENT_LEFT),
-                                                              summary->species2,
+                                                              species,
                                                               summary->pid);
             }
         }
         (*state)++;
         return 0xFF;
     case 1:
-        pal = GetMonSpritePalStructFromOtIdPersonality(summary->species2, summary->OTID, summary->pid);
+        // Use Resolute forme palette if Keldeo knows Secret Sword
+        species = summary->species2;
+        if (species == SPECIES_KELDEO && MonKnowsMove(mon, MOVE_SECRET_SWORD))
+            species = SPECIES_KELDEO_RESOLUTE;
+        
+        pal = GetMonSpritePalStructFromOtIdPersonality(species, summary->OTID, summary->pid);
         LoadCompressedSpritePalette(pal);
         SetMultiuseSpriteTemplateToPokemon(pal->tag, B_POSITION_OPPONENT_LEFT);
         (*state)++;

@@ -3043,7 +3043,7 @@ u8 CreateMonIcon(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_MINIOR_CORE_GREEN];
     if (species == SPECIES_MINIOR_CORE_RED && (personality >> 8) % 7 == 6)
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_MINIOR_CORE_VIOLET];
-    if (species > NUM_SPECIES)
+    if (species > NUM_SPECIES && species != SPECIES_KELDEO_RESOLUTE)
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG;
 
     spriteId = CreateMonIconSprite(&iconTemplate, x, y, subpriority);
@@ -3082,7 +3082,7 @@ u16 GetIconSpecies(u16 species, u32 personality)
         || species == SPECIES_UNFEZANT || species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_FRILLISH || species == SPECIES_JELLICENT
         || species == SPECIES_VIVILLON || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES
         || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_ALCREMIE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY
-        || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE || species == SPECIES_KELDEO || species == SPECIES_FURFROU
+        || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE || species == SPECIES_FURFROU
         || species == SPECIES_MAGEARNA || species == SPECIES_CRAMORANT || species == SPECIES_ZARUDE || species == SPECIES_PIKACHU_CAP)
     {
         u16 letter;
@@ -3094,7 +3094,7 @@ u16 GetIconSpecies(u16 species, u32 personality)
             else
                 letter += (SPECIES_UNOWN_B - 1);
         }
-        else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_KELDEO || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
+        else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
         {
             letter = (personality >> 8) % 2;
             if (!letter)
@@ -3103,8 +3103,6 @@ u16 GetIconSpecies(u16 species, u32 personality)
             {
                 if (species == SPECIES_SHELLOS)
                     letter = SPECIES_SHELLOS_EAST_SEA;
-                else if (species == SPECIES_KELDEO)
-                    letter = SPECIES_KELDEO_RESOLUTE;
                 else if (species == SPECIES_MAGEARNA)
                     letter = SPECIES_MAGEARNA_ORIGINAL_COLOR;
                 else if (species == SPECIES_ZARUDE)
@@ -3265,7 +3263,7 @@ u16 GetIconSpecies(u16 species, u32 personality)
     }
     else
     {
-        if (species > NUM_SPECIES)
+        if (species > NUM_SPECIES && species != SPECIES_KELDEO_RESOLUTE)
             result = INVALID_ICON_SPECIES;
         else
             result = species;

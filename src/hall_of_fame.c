@@ -29,6 +29,7 @@
 #include "event_data.h"
 #include "overworld.h"
 #include "menu.h"
+#include "party_menu.h"
 #include "fldeff_misc.h"
 #include "trainer_pokemon_sprites.h"
 #include "data.h"
@@ -42,7 +43,8 @@ struct HallofFameMon
 {
     u32 tid;
     u32 personality;
-    u16 species;
+    u16 species:15;
+    u16 isResolute:1;
     u8 lvl;
     u8 nick[POKEMON_NAME_LENGTH];
 };
@@ -338,7 +340,8 @@ static const struct HallofFameMon sDummyFameMon =
     .personality = 0,
     .species = SPECIES_NONE,
     .lvl = 0,
-    .nick = {0}
+    .nick = {0},
+    .isResolute = 0
 };
 
 // Unused, order of party slots on Hall of Fame screen
@@ -449,6 +452,13 @@ static void Task_Hof_InitMonData(u8 taskId)
             sHofMonPtr->mon[i].tid = GetMonData(&gPlayerParty[i], MON_DATA_OT_ID);
             sHofMonPtr->mon[i].personality = GetMonData(&gPlayerParty[i], MON_DATA_PERSONALITY);
             sHofMonPtr->mon[i].lvl = GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
+            
+            // Mark if Keldeo knows Secret Sword for display as Resolute form
+            if (sHofMonPtr->mon[i].species == SPECIES_KELDEO && MonKnowsMove(&gPlayerParty[i], MOVE_SECRET_SWORD))
+                sHofMonPtr->mon[i].isResolute = TRUE;
+            else
+                sHofMonPtr->mon[i].isResolute = FALSE;
+            
             GetMonData(&gPlayerParty[i], MON_DATA_NICKNAME, nick);
             for (j = 0; j < POKEMON_NAME_LENGTH; j++)
             {
@@ -463,6 +473,7 @@ static void Task_Hof_InitMonData(u8 taskId)
             sHofMonPtr->mon[i].personality = 0;
             sHofMonPtr->mon[i].lvl = 0;
             sHofMonPtr->mon[i].nick[0] = EOS;
+            sHofMonPtr->mon[i].isResolute = FALSE;
         }
     }
 
@@ -563,6 +574,7 @@ static void Task_Hof_DisplayMon(u8 taskId)
 {
     u8 spriteId;
     s16 startX, startY, destX, destY;
+    u16 spriteSpecies;
 
     u16 currMonId = gTasks[taskId].tDisplayedMonId;
     struct HallofFameMon* currMon = &sHofMonPtr->mon[currMonId];
@@ -585,7 +597,12 @@ static void Task_Hof_DisplayMon(u8 taskId)
     if (currMon->species == SPECIES_EGG)
         destY += 10;
 
-    spriteId = CreateMonPicSprite_Affine(currMon->species, currMon->tid, currMon->personality, MON_PIC_AFFINE_FRONT, startX, startY, currMonId, TAG_NONE);
+    // Use Resolute form sprite if marked
+    spriteSpecies = currMon->species;
+    if (currMon->isResolute && currMon->species == SPECIES_KELDEO)
+        spriteSpecies = SPECIES_KELDEO_RESOLUTE;
+
+    spriteId = CreateMonPicSprite_Affine(spriteSpecies, currMon->tid, currMon->personality, MON_PIC_AFFINE_FRONT, startX, startY, currMonId, TAG_NONE);
     gSprites[spriteId].tDestinationX = destX;
     gSprites[spriteId].tDestinationY = destY;
     gSprites[spriteId].data[0] = 0;
@@ -915,6 +932,7 @@ static void Task_HofPC_DrawSpritesPrintText(u8 taskId)
         if (currMon->species != 0)
         {
             u16 spriteId;
+            u16 spriteSpecies;
             s16 posX, posY;
 
             if (gTasks[taskId].tMonNo > PARTY_SIZE / 2)
@@ -931,7 +949,12 @@ static void Task_HofPC_DrawSpritesPrintText(u8 taskId)
             if (currMon->species == SPECIES_EGG)
                 posY += 10;
 
-            spriteId = CreateMonPicSprite_HandleDeoxys(currMon->species, currMon->tid, currMon->personality, TRUE, posX, posY, i, TAG_NONE);
+            // Use Resolute form sprite if marked
+            spriteSpecies = currMon->species;
+            if (currMon->isResolute && currMon->species == SPECIES_KELDEO)
+                spriteSpecies = SPECIES_KELDEO_RESOLUTE;
+
+            spriteId = CreateMonPicSprite_HandleDeoxys(spriteSpecies, currMon->tid, currMon->personality, TRUE, posX, posY, i, TAG_NONE);
             gSprites[spriteId].oam.priority = 1;
             gTasks[taskId].tMonSpriteId(i) = spriteId;
         }

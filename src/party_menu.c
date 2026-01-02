@@ -3956,6 +3956,11 @@ static void CreatePartyMonIconSprite(struct Pokemon *mon, struct PartyMenuBox *m
         handleDeoxys = (sMultiBattlePartnersPartyMask[slot] ^ handleDeoxys) ? TRUE : FALSE;
 
     species2 = GetMonData(mon, MON_DATA_SPECIES_OR_EGG);
+    
+    // Change Keldeo to Resolute forme if it knows Secret Sword
+    if (species2 == SPECIES_KELDEO && MonKnowsMove(mon, MOVE_SECRET_SWORD))
+        species2 = SPECIES_KELDEO_RESOLUTE;
+    
     CreatePartyMonIconSpriteParameterized(species2, GetMonData(mon, MON_DATA_PERSONALITY), menuBox, 1, handleDeoxys);
     UpdatePartyMonHPBar(menuBox->monSpriteId, mon);
 }
