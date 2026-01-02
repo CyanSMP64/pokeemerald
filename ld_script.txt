@@ -794,32 +794,6 @@ SECTIONS {
         data/sound_data_2.o(.rodata);
     } =0
 
-    new_songs :
-    ALIGN(4)
-    {
-        sound/songs/midi/se_vineboom.o(.rodata);
-        sound/songs/midi/mus_dp_vs_dialga_palkia.o(.rodata);
-        sound/songs/midi/mus_hg_vs_raikou.o(.rodata);
-        sound/songs/midi/mus_hg_vs_entei.o(.rodata);
-        sound/songs/midi/mus_hg_vs_suicune.o(.rodata);
-        sound/songs/midi/mus_hg_vs_lugia.o(.rodata);
-        sound/songs/midi/mus_hg_vs_ho_oh.o(.rodata);
-        sound/songs/midi/mus_dp_vs_uxie_mesprit_azelf.o(.rodata);
-        sound/songs/midi/mus_dp_vs_legend.o(.rodata);
-        sound/songs/midi/mus_dp_vs_arceus.o(.rodata);
-        sound/songs/midi/mus_pl_vs_giratina.o(.rodata);
-        sound/songs/midi/mus_bw_vs_legend.o(.rodata);
-        sound/songs/midi/mus_bw_vs_reshiram.o(.rodata);
-        sound/songs/midi/mus_bw_vs_kyurem.o(.rodata);
-        sound/songs/midi/mus_b2_vs_black_white_kyurem.o(.rodata);
-        sound/songs/midi/mus_bw_vs_zekrom.o(.rodata);
-        sound/songs/midi/se_dinkdonk.o(.rodata);
-        sound/songs/midi/mus_b2_vs_champion_hoenn.o(.rodata);
-        sound/songs/midi/mus_b2_victory_pwt.o(.rodata);
-        sound/songs/midi/se_utvanish.o(.rodata);
-        sound/songs/midi/mus_smwend.o(.rodata);
-    } =0
-
     song_data :
     ALIGN(4)
     {
@@ -1360,6 +1334,32 @@ SECTIONS {
     {
         data/dummy_data.o(.rodata);
         data/sound_data_3.o(.rodata);
+    } =0
+
+    new_songs :
+    ALIGN(4)
+    {
+        sound/songs/midi/se_vineboom.o(.rodata);
+        sound/songs/midi/mus_dp_vs_dialga_palkia.o(.rodata);
+        sound/songs/midi/mus_hg_vs_raikou.o(.rodata);
+        sound/songs/midi/mus_hg_vs_entei.o(.rodata);
+        sound/songs/midi/mus_hg_vs_suicune.o(.rodata);
+        sound/songs/midi/mus_hg_vs_lugia.o(.rodata);
+        sound/songs/midi/mus_hg_vs_ho_oh.o(.rodata);
+        sound/songs/midi/mus_dp_vs_uxie_mesprit_azelf.o(.rodata);
+        sound/songs/midi/mus_dp_vs_legend.o(.rodata);
+        sound/songs/midi/mus_dp_vs_arceus.o(.rodata);
+        sound/songs/midi/mus_pl_vs_giratina.o(.rodata);
+        sound/songs/midi/mus_bw_vs_legend.o(.rodata);
+        sound/songs/midi/mus_bw_vs_reshiram.o(.rodata);
+        sound/songs/midi/mus_bw_vs_kyurem.o(.rodata);
+        sound/songs/midi/mus_b2_vs_black_white_kyurem.o(.rodata);
+        sound/songs/midi/mus_bw_vs_zekrom.o(.rodata);
+        sound/songs/midi/se_dinkdonk.o(.rodata);
+        sound/songs/midi/mus_b2_vs_champion_hoenn.o(.rodata);
+        sound/songs/midi/mus_b2_victory_pwt.o(.rodata);
+        sound/songs/midi/se_utvanish.o(.rodata);
+        sound/songs/midi/mus_smwend.o(.rodata);
     } =0
 
     multiboot_data :
