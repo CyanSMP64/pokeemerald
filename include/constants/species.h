@@ -1531,7 +1531,11 @@
 #define SPECIES_ARCEUS_DRAGON                    (SPECIES_UNOWN_B + 283)
 #define SPECIES_ARCEUS_DARK                      (SPECIES_UNOWN_B + 284)
 #define SPECIES_ARCEUS_FAIRY                     (SPECIES_UNOWN_B + 285)
+#define SPECIES_GENESECT_SHOCK                   (SPECIES_UNOWN_B + 286)
+#define SPECIES_GENESECT_BURN                    (SPECIES_UNOWN_B + 287)
+#define SPECIES_GENESECT_CHILL                   (SPECIES_UNOWN_B + 288)
+#define SPECIES_GENESECT_DOUSE                   (SPECIES_UNOWN_B + 289)
 
-#define SPECIES_END                (SPECIES_ARCEUS_FAIRY + 1)
+#define SPECIES_END                (SPECIES_GENESECT_DOUSE + 1)
 
 #endif  // GUARD_CONSTANTS_SPECIES_H

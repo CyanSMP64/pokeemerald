@@ -1555,4 +1555,8 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(ARCEUS_DRAGON, gMonPalette_ArceusDragon),
     SPECIES_PAL(ARCEUS_DARK, gMonPalette_ArceusDark),
     SPECIES_PAL(ARCEUS_FAIRY, gMonPalette_ArceusFairy),
+    SPECIES_PAL(GENESECT_SHOCK, gMonPalette_GenesectShock),
+    SPECIES_PAL(GENESECT_BURN, gMonPalette_GenesectBurn),
+    SPECIES_PAL(GENESECT_CHILL, gMonPalette_GenesectChill),
+    SPECIES_PAL(GENESECT_DOUSE, gMonPalette_GenesectDouse),
 };

@@ -1596,4 +1596,8 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     [SPECIES_ARCEUS_DRAGON] = sAnims_None,
     [SPECIES_ARCEUS_DARK] = sAnims_None,
     [SPECIES_ARCEUS_FAIRY] = sAnims_None,
+    [SPECIES_GENESECT_SHOCK] = sAnims_None,
+    [SPECIES_GENESECT_BURN] = sAnims_None,
+    [SPECIES_GENESECT_CHILL] = sAnims_None,
+    [SPECIES_GENESECT_DOUSE] = sAnims_None,
 };
