@@ -8873,6 +8873,8 @@ extern const u32 gItemIconPalette_OldSeaMap[];
 // nat dex Items
 extern const u32 gItemIcon_Gracidea[];
 extern const u32 gItemIconPalette_Gracidea[];
+extern const u32 gItemIcon_PrisonBottle[];
+extern const u32 gItemIconPalette_PrisonBottle[];
 extern const u32 gItemIconPalette_RegionalMineral[];
 
 extern const u32 gItemIcon_ReturnToFieldArrow[];

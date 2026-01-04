@@ -59,5 +59,6 @@ const struct FormChange *GetFormChangeTable(u16 species);
 // Form change table declarations
 extern const struct FormChange sBurmyFormChangeTable[];
 extern const struct FormChange sShayminFormChangeTable[];
+extern const struct FormChange sHoopaFormChangeTable[];
 
 #endif // GUARD_FORM_CHANGE_H

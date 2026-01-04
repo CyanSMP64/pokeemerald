@@ -25,6 +25,13 @@ const struct FormChange sShayminFormChangeTable[] = {
     {FORM_CHANGE_TERMINATOR},
 };
 
+const struct FormChange sHoopaFormChangeTable[] = {
+    {FORM_CHANGE_ITEM_USE,    SPECIES_HOOPA_UNBOUND, ITEM_PRISON_BOTTLE},
+    {FORM_CHANGE_ITEM_USE,    SPECIES_HOOPA, ITEM_PRISON_BOTTLE},
+    {FORM_CHANGE_WITHDRAW,    SPECIES_HOOPA},
+    {FORM_CHANGE_TERMINATOR},
+};
+
 const struct FormChange *GetFormChangeTable(u16 species)
 {
     if (species == SPECIES_NONE || species >= NUM_SPECIES)

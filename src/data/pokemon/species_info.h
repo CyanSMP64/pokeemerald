@@ -17633,7 +17633,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .abilities = {ABILITY_MAGICIAN, ABILITY_MAGICIAN, ABILITY_MAGICIAN},
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
-        .formChangeTable = NULL,
+        .formChangeTable = sHoopaFormChangeTable,
     },
 
     [SPECIES_VOLCANION] =
@@ -28294,7 +28294,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .abilities = {ABILITY_MAGICIAN, ABILITY_MAGICIAN, ABILITY_MAGICIAN},
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
-        .formChangeTable = NULL,
+        .formChangeTable = sHoopaFormChangeTable,
     },
 
     [SPECIES_ORICORIO_POM_POM] =

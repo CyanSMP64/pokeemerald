@@ -1569,3 +1569,8 @@ static const u8 sGracideaDesc[] = _(
     "Bouquets made with\n"
     "it are offered as a\n"
     "token of gratitude.");
+
+static const u8 sPrisonBottleDesc[] = _(
+    "A bottle used to\n"
+    "seal a certain\n"
+    "Pokémon long ago.");

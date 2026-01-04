@@ -4603,4 +4603,16 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_FormChange,
     },
+
+    [ITEM_PRISON_BOTTLE] =
+    {
+        .name = _("Prison Bottle"),
+        .itemId = ITEM_PRISON_BOTTLE,
+        .price = 0,
+        .description = sPrisonBottleDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_FormChange,
+    },
 };
