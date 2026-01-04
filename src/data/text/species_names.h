@@ -1218,6 +1218,7 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_KYUREM_WHITE] = _("Kyurem-W"),
     // Meloetta
     [SPECIES_MELOETTA_PIROUETTE] = _("Meloetta-P"),
+    [SPECIES_GRENINJA_BATTLE_BOND] = _("Greninja-B"),
     [SPECIES_GRENINJA_ASH] = _("Greninja-A"),
     [SPECIES_FLOETTE_ETERNAL_FLOWER] = _("Floette-E"),
     [SPECIES_MEOWSTIC_FEMALE] = _("Meowstic-F"),

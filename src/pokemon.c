@@ -1335,6 +1335,7 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(OGERPON_CORNERSTONE),
     SPECIES_TO_HOENN(TERAPAGOS_TERASTAL),
     SPECIES_TO_HOENN(TERAPAGOS_STELLAR),
+    SPECIES_TO_HOENN(GRENINJA_BATTLE_BOND),
 };
 
 // Assigns all species to the National Dex Index (Summary No. for National Dex)
@@ -2575,6 +2576,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(OGERPON_CORNERSTONE),
     SPECIES_TO_NATIONAL(TERAPAGOS_TERASTAL),
     SPECIES_TO_NATIONAL(TERAPAGOS_STELLAR),
+    SPECIES_TO_NATIONAL(GRENINJA_BATTLE_BOND),
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
@@ -3815,6 +3817,7 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(OGERPON_CORNERSTONE),
     HOENN_TO_NATIONAL(TERAPAGOS_TERASTAL),
     HOENN_TO_NATIONAL(TERAPAGOS_STELLAR),
+    HOENN_TO_NATIONAL(GRENINJA_BATTLE_BOND),
 };
 
 const struct SpindaSpot gSpindaSpotGraphics[] =

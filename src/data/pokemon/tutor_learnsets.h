@@ -14748,4 +14748,17 @@ static const u32 sTutorLearnsets[] =
                                              TUTOR(MOVE_BODY_SLAM),
                                              TUTOR(MOVE_DOUBLE_EDGE),
                                              TUTOR(MOVE_ROCK_SLIDE)),
+
+    [SPECIES_GRENINJA_BATTLE_BOND]        = (TUTOR(MOVE_SLEEP_TALK),
+                                             TUTOR(MOVE_SWAGGER),
+                                             TUTOR(MOVE_ENDURE),
+                                             TUTOR(MOVE_SNORE),
+                                             TUTOR(MOVE_SUBSTITUTE),
+                                             TUTOR(MOVE_ICE_PUNCH),
+                                             TUTOR(MOVE_SWORDS_DANCE),
+                                             TUTOR(MOVE_COUNTER),
+                                             TUTOR(MOVE_SWIFT),
+                                             TUTOR(MOVE_ROCK_SLIDE),
+                                             TUTOR(MOVE_MUD_SLAP),
+                                             TUTOR(MOVE_ICY_WIND)),
 };

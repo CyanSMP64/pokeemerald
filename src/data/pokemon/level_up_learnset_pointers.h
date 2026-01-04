@@ -1236,4 +1236,5 @@ const u32 *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_OGERPON_CORNERSTONE] = sOgerponCornerstoneLevelUpLearnset,
     [SPECIES_TERAPAGOS_TERASTAL] = sTerapagosTerastalLevelUpLearnset,
     [SPECIES_TERAPAGOS_STELLAR] = sTerapagosStellarLevelUpLearnset,
+    [SPECIES_GRENINJA_BATTLE_BOND] = sGreninjaBattleBondLevelUpLearnset,
 };

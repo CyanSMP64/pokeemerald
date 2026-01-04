@@ -29014,4 +29014,27 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = TRUE,
         .formChangeTable = NULL,
     },
+
+    [SPECIES_GRENINJA_BATTLE_BOND] =
+    {
+        .baseHP        = 72,
+        .baseAttack    = 95,
+        .baseDefense   = 67,
+        .baseSpeed     = 122,
+        .baseSpAttack  = 103,
+        .baseSpDefense = 71,
+        .types = { TYPE_WATER, TYPE_DARK},
+        .catchRate = 45,
+        .expYield = 265,
+        .evYield_Speed     = 3,
+        .genderRatio = PERCENT_FEMALE(12.5),
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_SLOW,
+        .eggGroups = { EGG_GROUP_UNDISCOVERED, EGG_GROUP_UNDISCOVERED},
+        .abilities = {ABILITY_BATTLE_BOND, ABILITY_BATTLE_BOND, ABILITY_BATTLE_BOND},
+        .bodyColor = BODY_COLOR_BLUE,
+        .noFlip = TRUE,
+        .formChangeTable = NULL,
+    },
 };

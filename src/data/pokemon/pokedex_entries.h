@@ -14531,4 +14531,16 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 17,
         .weight = 770,
     },
+
+    [NATIONAL_DEX_GRENINJA_BATTLE_BOND] =
+    {
+        .categoryName = _("Ninja"),
+        .height = 15,
+        .weight = 400,
+        .description = gGreninjaPokedexText,
+        .pokemonScale = 268,
+        .pokemonOffset = 2,
+        .trainerScale = 271,
+        .trainerOffset = 0,
+    },
 };

@@ -1309,6 +1309,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     [SPECIES_OGERPON_CORNERSTONE] = sAnims_None,
     [SPECIES_TERAPAGOS_TERASTAL] = sAnims_None,
     [SPECIES_TERAPAGOS_STELLAR] = sAnims_None,
+    [SPECIES_GRENINJA_BATTLE_BOND] = sAnims_None,
     [SPECIES_EGG] = sAnims_None,
     [SPECIES_UNOWN_B] = sAnims_None,
     [SPECIES_UNOWN_C] = sAnims_None,

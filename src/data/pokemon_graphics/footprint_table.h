@@ -684,6 +684,7 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_FROAKIE] = gMonFootprint_Froakie,
     [SPECIES_FROGADIER] = gMonFootprint_Frogadier,
     [SPECIES_GRENINJA] = gMonFootprint_Greninja,
+    [SPECIES_GRENINJA_BATTLE_BOND] = gMonFootprint_Greninja,
     [SPECIES_BUNNELBY] = gMonFootprint_Bunnelby,
     [SPECIES_DIGGERSBY] = gMonFootprint_Diggersby,
     [SPECIES_FLETCHLING] = gMonFootprint_Fletchling,
