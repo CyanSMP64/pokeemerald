@@ -3093,7 +3093,7 @@ u16 GetIconSpecies(u16 species, u32 personality)
         || species == SPECIES_VIVILLON || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES
         || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_ALCREMIE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY
         || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE || species == SPECIES_FURFROU
-        || species == SPECIES_MAGEARNA || species == SPECIES_CRAMORANT || species == SPECIES_ZARUDE || species == SPECIES_PIKACHU_CAP)
+        || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE || species == SPECIES_PIKACHU_CAP)
     {
         u16 letter;
         if (species == SPECIES_UNOWN)
@@ -3164,7 +3164,7 @@ u16 GetIconSpecies(u16 species, u32 personality)
                     letter += SPECIES_FLORGES_YELLOW_FLOWER - 1;
             }
         }
-        else if (species == SPECIES_VIVILLON || species == SPECIES_CRAMORANT || species == SPECIES_FURFROU)
+        else if (species == SPECIES_VIVILLON || species == SPECIES_FURFROU)
         {
             letter = (personality >> 8) % 20;
             if (species == SPECIES_VIVILLON) {
@@ -3172,14 +3172,6 @@ u16 GetIconSpecies(u16 species, u32 personality)
                     letter = species;
                 else
                     letter += SPECIES_VIVILLON_POLAR - 1;
-            }
-            else if (species == SPECIES_CRAMORANT) {
-                if (letter < 16)
-                    letter = species;
-                else if (letter == 19)
-                    letter = SPECIES_CRAMORANT_GORGING;
-                else
-                    letter = SPECIES_CRAMORANT_GULPING;
             }
             else {
                 if (letter <= 10)

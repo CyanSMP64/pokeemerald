@@ -89,7 +89,7 @@ void LoadSpecialPokePic(const struct CompressedSpriteSheet *src, void *dest, s32
         || species == SPECIES_VIVILLON || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES
         || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_ALCREMIE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY
         || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE || species == SPECIES_FURFROU || species == SPECIES_COMBEE
-        || species == SPECIES_MAGEARNA || species == SPECIES_CRAMORANT || species == SPECIES_ZARUDE || species == SPECIES_PIKACHU_CAP || species == SPECIES_PACHIRISU
+        || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE || species == SPECIES_PIKACHU_CAP || species == SPECIES_PACHIRISU
         
         || species == SPECIES_VENUSAUR || species == SPECIES_BUTTERFREE || species == SPECIES_RATTATA || species == SPECIES_RATICATE
         || species == SPECIES_PIKACHU || species == SPECIES_PIKACHU_PARTNER || species == SPECIES_RAICHU || species == SPECIES_ZUBAT
@@ -191,7 +191,7 @@ void LoadSpecialPokePic(const struct CompressedSpriteSheet *src, void *dest, s32
                     i += SPECIES_FLORGES_YELLOW_FLOWER - 1;
             }
         }
-        else if (species == SPECIES_VIVILLON || species == SPECIES_CRAMORANT || species == SPECIES_FURFROU)
+        else if (species == SPECIES_VIVILLON || species == SPECIES_FURFROU)
         {
             i = (personality >> 8) % 20;
             if (species == SPECIES_VIVILLON) {
@@ -199,14 +199,6 @@ void LoadSpecialPokePic(const struct CompressedSpriteSheet *src, void *dest, s32
                     i = species;
                 else
                     i += SPECIES_VIVILLON_POLAR - 1;
-            }
-            else if (species == SPECIES_CRAMORANT) {
-                if (i < 16)
-                    i = species;
-                else if (i == 19)
-                    i = SPECIES_CRAMORANT_GORGING;
-                else
-                    i = SPECIES_CRAMORANT_GULPING;
             }
             else {
                 if (i <= 10)
@@ -755,7 +747,7 @@ void LoadSpecialPokePic_DontHandleDeoxys(const struct CompressedSpriteSheet *src
         || species == SPECIES_VIVILLON || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES
         || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_ALCREMIE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY
         || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE || species == SPECIES_FURFROU || species == SPECIES_COMBEE
-        || species == SPECIES_MAGEARNA || species == SPECIES_CRAMORANT || species == SPECIES_ZARUDE || species == SPECIES_PIKACHU_CAP || species == SPECIES_PACHIRISU
+        || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE || species == SPECIES_PIKACHU_CAP || species == SPECIES_PACHIRISU
         
         || species == SPECIES_VENUSAUR || species == SPECIES_BUTTERFREE || species == SPECIES_RATTATA || species == SPECIES_RATICATE
         || species == SPECIES_PIKACHU || species == SPECIES_PIKACHU_PARTNER || species == SPECIES_RAICHU || species == SPECIES_ZUBAT
@@ -857,7 +849,7 @@ void LoadSpecialPokePic_DontHandleDeoxys(const struct CompressedSpriteSheet *src
                     i += SPECIES_FLORGES_YELLOW_FLOWER - 1;
             }
         }
-        else if (species == SPECIES_VIVILLON || species == SPECIES_CRAMORANT || species == SPECIES_FURFROU)
+        else if (species == SPECIES_VIVILLON || species == SPECIES_FURFROU)
         {
             i = (personality >> 8) % 20;
             if (species == SPECIES_VIVILLON) {
@@ -865,14 +857,6 @@ void LoadSpecialPokePic_DontHandleDeoxys(const struct CompressedSpriteSheet *src
                     i = species;
                 else
                     i += SPECIES_VIVILLON_POLAR - 1;
-            }
-            else if (species == SPECIES_CRAMORANT) {
-                if (i < 16)
-                    i = species;
-                else if (i == 19)
-                    i = SPECIES_CRAMORANT_GORGING;
-                else
-                    i = SPECIES_CRAMORANT_GULPING;
             }
             else {
                 if (i <= 10)

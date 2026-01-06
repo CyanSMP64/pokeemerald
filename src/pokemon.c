@@ -9836,7 +9836,7 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
                     return gMonShinyPaletteTable[SPECIES_GASTRODON_EAST_SEA].data;
             }
         }
-        if (species == SPECIES_VIVILLON || species == SPECIES_CRAMORANT || species == SPECIES_FURFROU)
+        if (species == SPECIES_VIVILLON || species == SPECIES_FURFROU)
         {
             form = (personality >> 8) % 20;
             if (species == SPECIES_VIVILLON) {
@@ -9844,14 +9844,6 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
                     form = species;
                 else
                     form += SPECIES_VIVILLON_POLAR - 1;
-            }
-            else if (species == SPECIES_CRAMORANT) {
-                if (form < 16)
-                    form = species;
-                else if (form == 19)
-                    form = SPECIES_CRAMORANT_GORGING;
-                else
-                    form = SPECIES_CRAMORANT_GULPING;
             }
             else {
                 if (form <= 10)
@@ -9980,7 +9972,7 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
                     return gMonPaletteTable[SPECIES_GASTRODON_EAST_SEA].data;
             }
         }
-        if (species == SPECIES_VIVILLON || species == SPECIES_CRAMORANT || species == SPECIES_FURFROU)
+        if (species == SPECIES_VIVILLON || species == SPECIES_FURFROU)
         {
             form = (personality >> 8) % 20;
             if (species == SPECIES_VIVILLON) {
@@ -9988,14 +9980,6 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
                     form = species;
                 else
                     form += SPECIES_VIVILLON_POLAR - 1;
-            }
-            else if (species == SPECIES_CRAMORANT) {
-                if (form < 16)
-                    form = species;
-                else if (form == 19)
-                    form = SPECIES_CRAMORANT_GORGING;
-                else
-                    form = SPECIES_CRAMORANT_GULPING;
             }
             else {
                 if (form <= 10)
@@ -10147,7 +10131,7 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
                     return &gMonShinyPaletteTable[SPECIES_GASTRODON_EAST_SEA];
             }
         }
-        if (species == SPECIES_VIVILLON || species == SPECIES_CRAMORANT || species == SPECIES_FURFROU)
+        if (species == SPECIES_VIVILLON || species == SPECIES_FURFROU)
         {
             form = (personality >> 8) % 20;
             if (species == SPECIES_VIVILLON) {
@@ -10155,14 +10139,6 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
                     form = species;
                 else
                     form += SPECIES_VIVILLON_POLAR - 1;
-            }
-            else if (species == SPECIES_CRAMORANT) {
-                if (form < 16)
-                    form = species;
-                else if (form == 19)
-                    form = SPECIES_CRAMORANT_GORGING;
-                else
-                    form = SPECIES_CRAMORANT_GULPING;
             }
             else {
                 if (form <= 10)
@@ -10291,7 +10267,7 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
                     return &gMonPaletteTable[SPECIES_GASTRODON_EAST_SEA];
             }
         }
-        if (species == SPECIES_VIVILLON || species == SPECIES_CRAMORANT || species == SPECIES_FURFROU)
+        if (species == SPECIES_VIVILLON || species == SPECIES_FURFROU)
         {
             form = (personality >> 8) % 20;
             if (species == SPECIES_VIVILLON) {
@@ -10299,14 +10275,6 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
                     form = species;
                 else
                     form += SPECIES_VIVILLON_POLAR - 1;
-            }
-            else if (species == SPECIES_CRAMORANT) {
-                if (form < 16)
-                    form = species;
-                else if (form == 19)
-                    form = SPECIES_CRAMORANT_GORGING;
-                else
-                    form = SPECIES_CRAMORANT_GULPING;
             }
             else {
                 if (form <= 10)

@@ -2867,7 +2867,7 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
         || species == SPECIES_VIVILLON || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES
         || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_ALCREMIE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY
         || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE || species == SPECIES_KELDEO || species == SPECIES_FURFROU
-        || species == SPECIES_MAGEARNA || species == SPECIES_CRAMORANT || species == SPECIES_ZARUDE || species == SPECIES_PIKACHU_CAP)
+        || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE || species == SPECIES_PIKACHU_CAP)
     {
         u32 personalityValue = GetMonData(&gEnemyParty[gBattlerPartyIndexes[battler]], MON_DATA_PERSONALITY);
         u16 unownForm;
@@ -2949,7 +2949,7 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
                     unownSpecies = unownForm + SPECIES_FLORGES_YELLOW_FLOWER - 1;
             }
         }
-        else if (species == SPECIES_VIVILLON || species == SPECIES_CRAMORANT || species == SPECIES_FURFROU)
+        else if (species == SPECIES_VIVILLON || species == SPECIES_FURFROU)
         {
             unownForm = (personalityValue >> 8) % 20;
             if (species == SPECIES_VIVILLON) {
@@ -2957,14 +2957,6 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
                     unownSpecies = species;
                 else
                     unownSpecies = unownForm + SPECIES_VIVILLON_POLAR - 1;
-            }
-            else if (species == SPECIES_CRAMORANT) {
-                if (unownForm < 16)
-                    unownSpecies = species;
-                else if (unownForm == 19)
-                    unownSpecies = SPECIES_CRAMORANT_GORGING;
-                else
-                    unownSpecies = SPECIES_CRAMORANT_GULPING;
             }
             else {
                 if (unownForm <= 10)
