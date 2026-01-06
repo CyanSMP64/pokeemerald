@@ -1,6 +1,8 @@
 .set LOCALID_OLD_WOMAN, 2
+.set LOCALID_HOOPA_CLERK, 5
 
 BattleFrontier_Mart_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, VerdanturfTown_Mart_OnTransition
 	.byte 0
 
 BattleFrontier_Mart_EventScript_Clerk::

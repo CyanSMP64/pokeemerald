@@ -1,4 +1,7 @@
+.set LOCALID_HOOPA_CLERK, 5
+
 MossdeepCity_Mart_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, VerdanturfTown_Mart_OnTransition
 	.byte 0
 
 MossdeepCity_Mart_EventScript_Clerk::

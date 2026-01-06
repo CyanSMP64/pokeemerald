@@ -1,5 +1,22 @@
+.set LOCALID_HOOPA_CLERK, 5
+
 VerdanturfTown_Mart_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, VerdanturfTown_Mart_OnTransition
 	.byte 0
+
+VerdanturfTown_Mart_OnTransition:
+	setvar VAR_0x8004, SPECIES_HOOPA
+	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
+	goto_if_eq VAR_RESULT, TRUE, VerdanturfTown_Mart_UnhideHoopaClerk
+	setflag FLAG_HIDE_HOOPA_CLERK
+	end
+
+VerdanturfTown_Mart_UnhideHoopaClerk::
+	goto_if_set FLAG_RECEIVED_PRISON_BOTTLE, VerdanturfTown_Mart_End
+	clearflag FLAG_HIDE_HOOPA_CLERK
+	addobject LOCALID_HOOPA_CLERK
+VerdanturfTown_Mart_End::
+	end
 
 VerdanturfTown_Mart_EventScript_Clerk::
 	lock

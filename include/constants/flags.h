@@ -45,8 +45,8 @@
 #define FLAG_USED_FRIENDSHIP 0x21
 #define FLAG_HIDE_ACCUSER    0x22
 #define FLAG_RECEIVED_GRACIDEA 0x23
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
+#define FLAG_HIDE_HOOPA_CLERK 0x24
+#define FLAG_RECEIVED_PRISON_BOTTLE 0x25
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag

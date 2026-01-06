@@ -11,6 +11,7 @@
 #include "decompress.h"
 #include "event_data.h"
 #include "event_object_movement.h"
+#include "event_object_lock.h"
 #include "event_scripts.h"
 #include "field_player_avatar.h"
 #include "field_specials.h"
@@ -210,6 +211,9 @@ static void ConfirmToss(u8);
 static void CancelToss(u8);
 static void ConfirmSell(u8);
 static void CancelSell(u8);
+static bool8 IsPartyMenuKeyItem(u16 itemId);
+static void Task_ShowRegisteredPartyItemError(u8 taskId);
+static void Task_CloseRegisteredPartyItemError(u8 taskId);
 
 static const struct BgTemplate sBgTemplates_ItemMenu[] =
 {
@@ -2030,6 +2034,24 @@ static void Task_ItemContext_GiveToPC(u8 taskId)
         PrintItemCantBeHeld(taskId);
 }
 
+static bool8 IsPartyMenuKeyItem(u16 itemId)
+{
+    return ItemId_GetPocket(itemId) == POCKET_KEY_ITEMS && ItemId_GetType(itemId) == ITEM_USE_PARTY_MENU;
+}
+
+static void Task_CloseRegisteredPartyItemError(u8 taskId)
+{
+    ClearDialogWindowAndFrame(0, TRUE);
+    DestroyTask(taskId);
+    ScriptUnfreezeObjectEvents();
+    UnlockPlayerFieldControls();
+}
+
+static void Task_ShowRegisteredPartyItemError(u8 taskId)
+{
+    DisplayItemMessageOnField(taskId, gText_DadsAdvice, Task_CloseRegisteredPartyItemError);
+}
+
 #define tUsingRegisteredKeyItem data[3] // See usage in item_use.c
 
 bool8 UseRegisteredKeyItemOnField(void)
@@ -2044,6 +2066,15 @@ bool8 UseRegisteredKeyItemOnField(void)
     {
         if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem, 1) == TRUE)
         {
+            if (IsPartyMenuKeyItem(gSaveBlock1Ptr->registeredItem) == TRUE)
+            {
+                LockPlayerFieldControls();
+                FreezeObjectEvents();
+                PlayerFreeze();
+                StopPlayerAvatar();
+                CreateTask(Task_ShowRegisteredPartyItemError, 8);
+                return TRUE;
+            }
             LockPlayerFieldControls();
             FreezeObjectEvents();
             PlayerFreeze();

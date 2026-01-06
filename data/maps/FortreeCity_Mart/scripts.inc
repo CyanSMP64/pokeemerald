@@ -1,4 +1,7 @@
+.set LOCALID_HOOPA_CLERK, 5
+
 FortreeCity_Mart_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, VerdanturfTown_Mart_OnTransition
 	.byte 0
 
 FortreeCity_Mart_EventScript_Clerk::

@@ -275,6 +275,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_HIDE_ACCUSER
 	setflag FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM
+	setflag FLAG_HIDE_HOOPA_CLERK
 	call EventScript_ResetAllBerries
 EventScript_SetHiddenItemSparkleFlag::
 	clearflag FLAG_HIDDEN_ITEM_SPARKLES		@ this flag will be set by a randomizer setting
