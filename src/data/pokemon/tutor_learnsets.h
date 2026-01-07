@@ -11488,6 +11488,14 @@ static const u32 sTutorLearnsets[] =
                                              TUTOR(MOVE_DOUBLE_EDGE),
                                              TUTOR(MOVE_MIMIC)),
 
+    [SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE] = (TUTOR(MOVE_SLEEP_TALK),
+                                             TUTOR(MOVE_SWAGGER),
+                                             TUTOR(MOVE_ENDURE),
+                                             TUTOR(MOVE_SNORE),
+                                             TUTOR(MOVE_SUBSTITUTE),
+                                             TUTOR(MOVE_DOUBLE_EDGE),
+                                             TUTOR(MOVE_MIMIC)),
+
     [SPECIES_NACLI]                       = (TUTOR(MOVE_SLEEP_TALK),
                                              TUTOR(MOVE_SWAGGER),
                                              TUTOR(MOVE_ENDURE),

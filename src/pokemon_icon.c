@@ -3027,8 +3027,10 @@ u8 CreateMonIcon(u16 species, void (*callback)(struct Sprite *), s16 x, s16 y, u
 
     if ((species == SPECIES_FRILLISH || species == SPECIES_JELLICENT) && (personality % 0x100) < 0x7F)
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_FRILLISH_FEMALE];
-    if (species == SPECIES_SQUAWKABILLY && ((personality >> 8) % 4 == 1 || (personality >> 8) % 4 == 3))
+    if (species == SPECIES_SQUAWKABILLY && ((personality >> 8) % 2 == 1))
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_SQUAWKABILLY_BLUE_PLUMAGE];
+    if (species == SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE && ((personality >> 8) % 2 == 1))
+        iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_SQUAWKABILLY_WHITE_PLUMAGE];
     if (species == SPECIES_DEERLING && (personality >> 8) % 4 == 2)
         iconTemplate.paletteTag = POKE_ICON_BASE_PAL_TAG + gMonIconPaletteIndices[SPECIES_DEERLING_AUTUMN];
     if (species == SPECIES_DEERLING && (personality >> 8) % 4 == 3)
@@ -3093,7 +3095,7 @@ u16 GetIconSpecies(u16 species, u32 personality)
         || species == SPECIES_VIVILLON || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES
         || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_ALCREMIE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY
         || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE || species == SPECIES_FURFROU
-        || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE || species == SPECIES_PIKACHU_CAP)
+        || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE || species == SPECIES_PIKACHU_CAP || species == SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE)
     {
         u16 letter;
         if (species == SPECIES_UNOWN)
@@ -3104,7 +3106,8 @@ u16 GetIconSpecies(u16 species, u32 personality)
             else
                 letter += (SPECIES_UNOWN_B - 1);
         }
-        else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
+        else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE
+        || species == SPECIES_SQUAWKABILLY || species == SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE)
         {
             letter = (personality >> 8) % 2;
             if (!letter)
@@ -3117,6 +3120,10 @@ u16 GetIconSpecies(u16 species, u32 personality)
                     letter = SPECIES_MAGEARNA_ORIGINAL_COLOR;
                 else if (species == SPECIES_ZARUDE)
                     letter = SPECIES_ZARUDE_DADA;
+                else if (species == SPECIES_SQUAWKABILLY)
+                    letter = SPECIES_SQUAWKABILLY_BLUE_PLUMAGE;
+                else if (species == SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE)
+                    letter = SPECIES_SQUAWKABILLY_WHITE_PLUMAGE;
                 else
                     letter = SPECIES_GASTRODON_EAST_SEA;
             }
@@ -3134,7 +3141,7 @@ u16 GetIconSpecies(u16 species, u32 personality)
                     letter = SPECIES_DUDUNSPARCE_THREE_SEGMENT;
             }
         }
-        else if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_SQUAWKABILLY)
+        else if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK)
         {
             letter = (personality >> 8) % 4;
             if (!letter)
@@ -3143,10 +3150,8 @@ u16 GetIconSpecies(u16 species, u32 personality)
             {
                 if (species == SPECIES_DEERLING)
                     letter += SPECIES_DEERLING_SUMMER - 1;
-                else if (species == SPECIES_SAWSBUCK)
-                    letter += SPECIES_SAWSBUCK_SUMMER - 1;
                 else
-                    letter += SPECIES_SQUAWKABILLY_BLUE_PLUMAGE - 1;
+                    letter += SPECIES_SAWSBUCK_SUMMER - 1;
             }
         }
         else if (species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES)

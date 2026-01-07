@@ -2867,7 +2867,7 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
         || species == SPECIES_VIVILLON || species == SPECIES_PYROAR || species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES
         || species == SPECIES_MINIOR_CORE_RED || species == SPECIES_ALCREMIE || species == SPECIES_MAUSHOLD || species == SPECIES_SQUAWKABILLY
         || species == SPECIES_TATSUGIRI || species == SPECIES_DUDUNSPARCE || species == SPECIES_KELDEO || species == SPECIES_FURFROU
-        || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE || species == SPECIES_PIKACHU_CAP)
+        || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE || species == SPECIES_PIKACHU_CAP || species == SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE)
     {
         u32 personalityValue = GetMonData(&gEnemyParty[gBattlerPartyIndexes[battler]], MON_DATA_PERSONALITY);
         u16 unownForm;
@@ -2881,7 +2881,8 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
             else
                 unownSpecies = NUM_SPECIES + unownForm;  // Use one of the other Unown letters.
         }
-        else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
+        else if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE
+        || species == SPECIES_SQUAWKABILLY || species == SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE)
         {
             unownForm = (personalityValue >> 8) % 2;
             if (!unownForm)
@@ -2894,6 +2895,10 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
                     unownSpecies = SPECIES_MAGEARNA_ORIGINAL_COLOR;
                 else if (species == SPECIES_ZARUDE)
                     unownSpecies = SPECIES_ZARUDE_DADA;
+                else if (species == SPECIES_SQUAWKABILLY)
+                    unownSpecies = SPECIES_SQUAWKABILLY_BLUE_PLUMAGE;
+                else if (species == SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE)
+                    unownSpecies = SPECIES_SQUAWKABILLY_WHITE_PLUMAGE;
                 else
                     unownSpecies = SPECIES_GASTRODON_EAST_SEA;
             }
@@ -2919,7 +2924,7 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
                     unownSpecies = SPECIES_DUDUNSPARCE_THREE_SEGMENT;
             }
         }
-        else if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_SQUAWKABILLY)
+        else if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK)
         {
             unownForm = (personalityValue >> 8) % 4;
             if (!unownForm)
@@ -2928,10 +2933,8 @@ void SpriteCB_FaintOpponentMon(struct Sprite *sprite)
             {
                 if (species == SPECIES_DEERLING)
                     unownSpecies = unownForm + SPECIES_DEERLING_SUMMER - 1;
-                else if (species == SPECIES_SAWSBUCK)
-                    unownSpecies = unownForm + SPECIES_SAWSBUCK_SUMMER - 1;
                 else
-                    unownSpecies = unownForm + SPECIES_SQUAWKABILLY_BLUE_PLUMAGE - 1;
+                    unownSpecies = unownForm + SPECIES_SAWSBUCK_SUMMER - 1;
             }
         }
         else if (species == SPECIES_FLABEBE || species == SPECIES_FLOETTE || species == SPECIES_FLORGES)

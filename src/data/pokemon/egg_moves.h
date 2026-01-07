@@ -2917,6 +2917,10 @@ const u16 gEggMoves[] = {
     MOVE_DOUBLE_EDGE,
     MOVE_FLATTER),
 
+    egg_moves(SQUAWKABILLY_YELLOW_PLUMAGE,
+    MOVE_DOUBLE_EDGE,
+    MOVE_FLATTER),
+
     egg_moves(NACLI,
     MOVE_FISSURE,
     MOVE_CURSE,

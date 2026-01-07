@@ -11184,6 +11184,18 @@ const struct PokedexEntry gPokedexEntries[] =
         .weight = 24,
     },
 
+    [NATIONAL_DEX_SQUAWKABILLY_YELLOW_PLUMAGE] =
+    {
+        .description = gSquawkbilyYellowPlumagePokedexText,
+        .categoryName = _("Parrot"),
+        .pokemonScale = 356,
+        .pokemonOffset = 17,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .height = 6,
+        .weight = 24,
+    },
+
     [NATIONAL_DEX_NACLI] =
     {
         .description = gNacliPokedexText,

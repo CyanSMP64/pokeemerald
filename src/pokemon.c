@@ -1336,6 +1336,7 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(TERAPAGOS_TERASTAL),
     SPECIES_TO_HOENN(TERAPAGOS_STELLAR),
     SPECIES_TO_HOENN(GRENINJA_BATTLE_BOND),
+    SPECIES_TO_HOENN(SQUAWKABILLY_YELLOW_PLUMAGE),
 };
 
 // Assigns all species to the National Dex Index (Summary No. for National Dex)
@@ -2577,6 +2578,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(TERAPAGOS_TERASTAL),
     SPECIES_TO_NATIONAL(TERAPAGOS_STELLAR),
     SPECIES_TO_NATIONAL(GRENINJA_BATTLE_BOND),
+    SPECIES_TO_NATIONAL(SQUAWKABILLY_YELLOW_PLUMAGE),
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
@@ -3818,6 +3820,7 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(TERAPAGOS_TERASTAL),
     HOENN_TO_NATIONAL(TERAPAGOS_STELLAR),
     HOENN_TO_NATIONAL(GRENINJA_BATTLE_BOND),
+    HOENN_TO_NATIONAL(SQUAWKABILLY_YELLOW_PLUMAGE),
 };
 
 const struct SpindaSpot gSpindaSpotGraphics[] =
@@ -9806,23 +9809,22 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
             }
             return gMonShinyPaletteTable[form].data;
         }
-        if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_SQUAWKABILLY)
+        if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK)
         {
             form = (personality >> 8) % 4;
             if (!form)
                 form += species;
             else
             {
-                if (species == SPECIES_SQUAWKABILLY)
-                    form += SPECIES_SQUAWKABILLY_BLUE_PLUMAGE - 1;
-                else if (species == SPECIES_DEERLING)
+                if (species == SPECIES_DEERLING)
                     form += SPECIES_DEERLING_SUMMER - 1;
                 else
                     form += SPECIES_SAWSBUCK_SUMMER - 1;
             }
             return gMonShinyPaletteTable[form].data;
         }
-        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
+        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE
+        || species == SPECIES_SQUAWKABILLY || species == SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE)
         {
             if ((personality % 0x200) >= 0x100)
             {
@@ -9832,6 +9834,10 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
                     return gMonShinyPaletteTable[SPECIES_MAGEARNA_ORIGINAL_COLOR].data;
                 else if (species == SPECIES_ZARUDE)
                     return gMonShinyPaletteTable[SPECIES_ZARUDE_DADA].data;
+                else if (species == SPECIES_SQUAWKABILLY)
+                    return gMonShinyPaletteTable[SPECIES_SQUAWKABILLY_BLUE_PLUMAGE].data;
+                else if (species == SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE)
+                    return gMonShinyPaletteTable[SPECIES_SQUAWKABILLY_WHITE_PLUMAGE].data;
                 else
                     return gMonShinyPaletteTable[SPECIES_GASTRODON_EAST_SEA].data;
             }
@@ -9942,23 +9948,22 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
             }
             return gMonPaletteTable[form].data;
         }
-        if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_SQUAWKABILLY)
+        if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK)
         {
             form = (personality >> 8) % 4;
             if (!form)
                 form += species;
             else
             {
-                if (species == SPECIES_SQUAWKABILLY)
-                    form += SPECIES_SQUAWKABILLY_BLUE_PLUMAGE - 1;
-                else if (species == SPECIES_DEERLING)
+                if (species == SPECIES_DEERLING)
                     form += SPECIES_DEERLING_SUMMER - 1;
                 else
                     form += SPECIES_SAWSBUCK_SUMMER - 1;
             }
             return gMonPaletteTable[form].data;
         }
-        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
+        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE
+        || species == SPECIES_SQUAWKABILLY || species == SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE)
         {
             if ((personality % 0x200) >= 0x100)
             {
@@ -9968,6 +9973,10 @@ const u32 *GetMonSpritePalFromSpeciesAndPersonality(u16 species, u32 otId, u32 p
                     return gMonPaletteTable[SPECIES_MAGEARNA_ORIGINAL_COLOR].data;
                 else if (species == SPECIES_ZARUDE)
                     return gMonPaletteTable[SPECIES_ZARUDE_DADA].data;
+                else if (species == SPECIES_SQUAWKABILLY)
+                    return gMonPaletteTable[SPECIES_SQUAWKABILLY_BLUE_PLUMAGE].data;
+                else if (species == SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE)
+                    return gMonPaletteTable[SPECIES_SQUAWKABILLY_WHITE_PLUMAGE].data;
                 else
                     return gMonPaletteTable[SPECIES_GASTRODON_EAST_SEA].data;
             }
@@ -10101,23 +10110,22 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
             }
             return &gMonShinyPaletteTable[form];
         }
-        if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_SQUAWKABILLY)
+        if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK)
         {
             form = (personality >> 8) % 4;
             if (!form)
                 form += species;
             else
             {
-                if (species == SPECIES_SQUAWKABILLY)
-                    form += SPECIES_SQUAWKABILLY_BLUE_PLUMAGE - 1;
-                else if (species == SPECIES_DEERLING)
+                if (species == SPECIES_DEERLING)
                     form += SPECIES_DEERLING_SUMMER - 1;
                 else
                     form += SPECIES_SAWSBUCK_SUMMER - 1;
             }
             return &gMonShinyPaletteTable[form];
         }
-        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
+        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE
+        || species == SPECIES_SQUAWKABILLY || species == SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE)
         {
             if ((personality % 0x200) >= 0x100)
             {
@@ -10127,6 +10135,10 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
                     return &gMonShinyPaletteTable[SPECIES_MAGEARNA_ORIGINAL_COLOR];
                 else if (species == SPECIES_ZARUDE)
                     return &gMonShinyPaletteTable[SPECIES_ZARUDE_DADA];
+                else if (species == SPECIES_SQUAWKABILLY)
+                    return &gMonShinyPaletteTable[SPECIES_SQUAWKABILLY_BLUE_PLUMAGE];
+                else if (species == SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE)
+                    return &gMonShinyPaletteTable[SPECIES_SQUAWKABILLY_WHITE_PLUMAGE];
                 else
                     return &gMonShinyPaletteTable[SPECIES_GASTRODON_EAST_SEA];
             }
@@ -10237,23 +10249,22 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
             }
             return &gMonPaletteTable[form];
         }
-        if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK || species == SPECIES_SQUAWKABILLY)
+        if (species == SPECIES_DEERLING || species == SPECIES_SAWSBUCK)
         {
             form = (personality >> 8) % 4;
             if (!form)
                 form += species;
             else
             {
-                if (species == SPECIES_SQUAWKABILLY)
-                    form += SPECIES_SQUAWKABILLY_BLUE_PLUMAGE - 1;
-                else if (species == SPECIES_DEERLING)
+                if (species == SPECIES_DEERLING)
                     form += SPECIES_DEERLING_SUMMER - 1;
                 else
                     form += SPECIES_SAWSBUCK_SUMMER - 1;
             }
             return &gMonPaletteTable[form];
         }
-        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE)
+        if (species == SPECIES_SHELLOS || species == SPECIES_GASTRODON || species == SPECIES_MAGEARNA || species == SPECIES_ZARUDE
+        || species == SPECIES_SQUAWKABILLY || species == SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE)
         {
             if ((personality % 0x200) >= 0x100)
             {
@@ -10263,6 +10274,10 @@ const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u
                     return &gMonPaletteTable[SPECIES_MAGEARNA_ORIGINAL_COLOR];
                 else if (species == SPECIES_ZARUDE)
                     return &gMonPaletteTable[SPECIES_ZARUDE_DADA];
+                else if (species == SPECIES_SQUAWKABILLY)
+                    return &gMonPaletteTable[SPECIES_SQUAWKABILLY_BLUE_PLUMAGE];
+                else if (species == SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE)
+                    return &gMonPaletteTable[SPECIES_SQUAWKABILLY_WHITE_PLUMAGE];
                 else
                     return &gMonPaletteTable[SPECIES_GASTRODON_EAST_SEA];
             }

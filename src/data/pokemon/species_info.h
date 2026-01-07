@@ -22504,7 +22504,6 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .formChangeTable = NULL,
     },
 
-    // TODO: Yellow/White Squawkabilly species
     [SPECIES_SQUAWKABILLY] =
     {
         .abilities = {ABILITY_INTIMIDATE, ABILITY_HUSTLE, ABILITY_GUTS},
@@ -29035,6 +29034,29 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .abilities = {ABILITY_BATTLE_BOND, ABILITY_BATTLE_BOND, ABILITY_BATTLE_BOND},
         .bodyColor = BODY_COLOR_BLUE,
         .noFlip = TRUE,
+        .formChangeTable = NULL,
+    },
+
+    [SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE] =
+    {
+        .abilities = {ABILITY_INTIMIDATE, ABILITY_HUSTLE, ABILITY_SHEER_FORCE},
+        .bodyColor = BODY_COLOR_YELLOW,
+        .baseHP        = 82,                                    \
+        .baseAttack    = 96,                                    \
+        .baseDefense   = 51,                                    \
+        .baseSpeed     = 92,                                    \
+        .baseSpAttack  = 45,                                    \
+        .baseSpDefense = 51,                                    \
+        .types = { TYPE_NORMAL, TYPE_FLYING },                  \
+        .catchRate = 190,                                       \
+        .expYield = 146,                                        \
+        .evYield_Attack = 1,                                    \
+        .genderRatio = PERCENT_FEMALE(50),                      \
+        .eggCycles = 15,                                        \
+        .friendship = 50,                                       \
+        .growthRate = GROWTH_ERRATIC,                           \
+        .eggGroups = { EGG_GROUP_FLYING, EGG_GROUP_FLYING},     \
+        .noFlip = FALSE,
         .formChangeTable = NULL,
     },
 };

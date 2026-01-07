@@ -958,6 +958,7 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_DOLLIV] = gMonFootprint_Metapod,
     [SPECIES_ARBOLIVA] = gMonFootprint_Metapod,
     [SPECIES_SQUAWKABILLY] = gMonFootprint_Metapod,
+    [SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE] = gMonFootprint_Metapod,
     [SPECIES_NACLI] = gMonFootprint_Metapod,
     [SPECIES_NACLSTACK] = gMonFootprint_Metapod,
     [SPECIES_GARGANACL] = gMonFootprint_Metapod,

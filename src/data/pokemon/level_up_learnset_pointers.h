@@ -957,6 +957,7 @@ const u32 *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_DOLLIV] = sDollivLevelUpLearnset,
     [SPECIES_ARBOLIVA] = sArbolivaLevelUpLearnset,
     [SPECIES_SQUAWKABILLY] = sSquawkabillyLevelUpLearnset,
+    [SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE] = sSquawkabillyYellowPlumageLevelUpLearnset,
     [SPECIES_NACLI] = sNacliLevelUpLearnset,
     [SPECIES_NACLSTACK] = sNaclstackLevelUpLearnset,
     [SPECIES_GARGANACL] = sGarganaclLevelUpLearnset,

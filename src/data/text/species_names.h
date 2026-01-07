@@ -956,6 +956,7 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_DOLLIV] = _("Dolliv"),
     [SPECIES_ARBOLIVA] = _("Arboliva"),
     [SPECIES_SQUAWKABILLY] = _("Squawkabilly"),
+    [SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE] = _("SquawkabillW"),
     [SPECIES_NACLI] = _("Nacli"),
     [SPECIES_NACLSTACK] = _("Naclstack"),
     [SPECIES_GARGANACL] = _("Garganacl"),

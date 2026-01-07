@@ -5360,6 +5360,12 @@ const u8 gSquawkbilyPokedexText[] = _(
     "towns and forests, searching for food and\n"
     "making a racket.");
 
+const u8 gSquawkbilyYellowPlumagePokedexText[] = _(
+    "These Squawkabilly are hotheaded, and\n"
+    "their fighting style is vicious.\n"
+    "They'll leap within reach of their\n"
+    "foes to engage in close combat.");
+
 const u8 gNacliPokedexText[] = _(
     "The ground scrapes its body as it travels,\n"
     "causing it to leave salt behind. Salt is\n"
