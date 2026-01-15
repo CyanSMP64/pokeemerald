@@ -1045,6 +1045,7 @@ void ChooseStarter(void)
     gMain.savedCallback = CB2_GiveStarter;
 }
 
+// do not modify this function - inigen reads a hardcoded offset to get the starter held item
 static void CB2_GiveStarter(void)
 {
     u16 starterMon;

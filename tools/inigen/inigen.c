@@ -193,23 +193,21 @@ const struct TMText gMoveTutorTexts[] = {
 
 static int IsLoadingStarterItems(const struct cs_insn * insn)
 {
-    static int to_return;
-    Elf32_Sym *sym = GetSymbolByName("ScriptGiveMon");
-    cs_arm_op * ops = insn->detail->arm.operands;
-    // mov r2, #0
-    if (insn->id == ARM_INS_MOV
-     && ops[0].type == ARM_OP_REG
-     && ops[0].reg == ARM_REG_R2
-     && ops[1].type == ARM_OP_IMM
-     && ops[1].imm == 0)
-        to_return = insn->address;
-    // bl ScriptGiveMon
-    else if (insn->id == ARM_INS_BL)
+    // The StarterItems offset is located 0x22 bytes into CB2_GiveStarter function
+    // This corresponds to the mov r2, #0 instruction before the bl ScriptGiveMon call
+    static int found = 0;
+    
+    if (!found)
     {
-        uint32_t target = ops[0].imm;
-        if (target == (sym->st_value & ~1))
-            return to_return;
+        Elf32_Sym *sym = GetSymbolByName("CB2_GiveStarter");
+        if (sym)
+        {
+            found = 1;
+            // Return the address of "mov r2, #0" which is at offset 0x22 from function start
+            return (sym->st_value & ~1) + 0x22;
+        }
     }
+    
     return -1;
 }
 
