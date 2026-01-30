@@ -20,7 +20,7 @@ enum
 
 struct PokedexEntry
 {
-    /*0x00*/ u8 categoryName[13];
+    /*0x00*/ u8 categoryName[14];
     /*0x0E*/ u16 height; //in decimeters
     /*0x10*/ const u8 *description;
     /*0x14*/ u16 weight; //in hectograms

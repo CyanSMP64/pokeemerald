@@ -5953,26 +5953,26 @@ const u8 gPidgeotMPokedexText[] = _(
     "weeks without resting.");
 
 const u8 gAlakazamMPokedexText[] = _(
-    "Having traded away its muscles, Alakazam's\n"
-    "true power has been unleashed. With its\n"
+    "Alakazam has traded away its muscles,\n"
+    "unleashing its true power. With its\n"
     "psychic powers, it can foresee all things.");
 
 const u8 gSlowbroMPokedexText[] = _(
-    "Having been swallowed whole by Shellder,\n"
-    "Slowbro now has an iron defense. It's\n"
-    "pretty comfortable in there, too.");
+    "When bathed in the energy of Mega\n"
+    "Evolution, Shellder converts into\n"
+    "impregnable armor. There is virtually no\n"
+    "change in Slowpoke.");
 
 const u8 gGengarMPokedexText[] = _(
-    "Mega Evolution has made it possible for\n"
-    "Gengar to access other dimensions. Its\n"
-    "entire body is brimming with strange\n"
-    "power.");
+    "It can pass through other dimensions and\n"
+    "appear anywhere. It caused a stir one time\n"
+    "when it stuck just one leg out of a wall.");
 
 const u8 gKangaskhaMPokedexText[] = _(
-    "When the mother sees the back of her\n"
-    "Mega-Evolved child, it makes her think of\n"
-    "the day when her child will inevitably\n"
-    "leave her.");
+    "Its child has grown rapidly, thanks\n"
+    "to the energy of Mega Evolution.\n"
+    "Mother and child show off their\n"
+    "harmonious teamwork in battle.");
 
 const u8 gPinsirMPokedexText[] = _(
     "After Mega Evolution, it becomes able to\n"
@@ -5980,26 +5980,25 @@ const u8 gPinsirMPokedexText[] = _(
     "rarely touches the ground.");
 
 const u8 gGyaradosMPokedexText[] = _(
-    "Mega Evolution places a burden on its\n"
-    "body. The stress causes it to become all\n"
-    "the more ferocious.");
+    "It jets water from the orifices on\n"
+    "its sides, streaking above the water\n"
+    "surface at supersonic speed.");
 
 const u8 gAerodactyMPokedexText[] = _(
-    "Mega Evolution awakened some dormant\n"
-    "genes, bringing back the sharp rocks that\n"
-    "once covered Aerodactyl's entire body.");
+    "Parts of its body have become stone.\n"
+    "Some scholars claim that this is\n"
+    "Aerodactyl's true appearance.");
 
 const u8 gMewtwoXPokedexText[] = _(
     "Psychic power has augmented its muscles.\n"
     "It has a grip strength of one ton and can\n"
-    "sprint a hundred meters in two seconds\n"
-    "flat!");
+    "sprint 100 meters in two seconds flat!");
 
 const u8 gMewtwoYPokedexText[] = _(
     "Despite its diminished size, its mental\n"
-    "power has grown phenomenally. With a mere\n"
-    "thought, it can smash a skyscraper to\n"
-    "smithereens.");
+    "power has grown phenomenally.\n"
+    "With a mere thought, it can smash a\n"
+    "skyscraper to smithereens.");
 
 const u8 gAmpharosMPokedexText[] = _(
     "Massive amounts of energy intensely\n"
@@ -6008,16 +6007,15 @@ const u8 gAmpharosMPokedexText[] = _(
     "blood.");
 
 const u8 gSteelixMPokedexText[] = _(
-    "Steelix live even further underground\n"
-    "than Onix. This Pokémon is known to dig\n"
-    "toward the earth's core, reaching a depth\n"
-    "of over six-tenths of a mile underground.");
+    "To protect itself from opponents' attacks,\n"
+    "it uses magnetism to control pieces of its\n"
+    "hard outer shell that have flaked off.");
 
 const u8 gScizorMPokedexText[] = _(
-    "It's better at beating things than\n"
-    "grasping them. When it battles for a long\n"
-    "time, the weight of its pincers becomes\n"
-    "too much to bear.");
+    "Due to the effects of Mega Evolution,\n"
+    "its pincers have taken on a more\n"
+    "diabolical form, ripping anything they\n"
+    "pinch to shreds.");
 
 const u8 gHeracrossMPokedexText[] = _(
     "A tremendous influx of energy builds it up,\n"
@@ -6027,8 +6025,8 @@ const u8 gHeracrossMPokedexText[] = _(
 
 const u8 gHoundoomMPokedexText[] = _(
     "Houndoom's entire body generates heat\n"
-    "when it Mega Evolves. Its fearsome fiery\n"
-    "breath turns its opponents to ash.");
+    "when it Mega Evolves. Its intense, fiery\n"
+    "breath turns its opponents to charcoal.");
 
 const u8 gTyranitarMPokedexText[] = _(
     "Due to the colossal power poured into it,\n"
@@ -6037,34 +6035,32 @@ const u8 gTyranitarMPokedexText[] = _(
     "keeping it moving.");
 
 const u8 gSceptileMPokedexText[] = _(
-    "In the jungle, its power is without equal.\n"
-    "This Pokémon carefully grows trees and\n"
-    "plants. It regulates its body temperature\n"
-    "by basking in sunlight.");
+    "The seeds on its back are filled\n"
+    "with energy from Mega Evolution.\n"
+    "The Pokémon detonates these seeds\n"
+    "to launch the tip of its tail.");
 
 const u8 gBlazikenMPokedexText[] = _(
-    "It learns martial arts that use punches\n"
-    "and kicks. Every several years, its old\n"
-    "feathers burn off, and new, supple\n"
-    "feathers grow back in their place.");
+    "Boiling-hot blood courses through its\n"
+    "entire body, doubling the sharpness of\n"
+    "its moves. It subdues opponents in the \n"
+    "blink of an eye.");
 
 const u8 gSwampertMPokedexText[] = _(
-    "If it senses the approach of a storm and\n"
-    "a tidal wave, it protects its seaside nest\n"
-    "by piling up boulders. It swims as fast as\n"
-    "a jet ski.");
+    "The water within its body further\n"
+    "strengthens its already enlarged\n"
+    "muscles, using the same principles\n"
+    "as a hydraulic pump.");
 
 const u8 gGardevoirMPokedexText[] = _(
-    "It apparently does not feel the pull of\n"
-    "gravity because it supports itself with\n"
-    "psychic power. It will give its life to\n"
-    "protect its Trainer.");
+    "When it opens the red plate on its chest\n"
+    "and unleashes its heart, its strongest\n"
+    "psychic power is released.");
 
 const u8 gSableyeMPokedexText[] = _(
-    "It blocks any and all attacks with its\n"
-    "giant-sized gemstone. However, the\n"
-    "stone's a heavy burden, and it limits Mega\n"
-    "Sableye's movements.");
+    "The jewel from its chest, which has grown\n"
+    "gigantic due to the effects of Mega\n"
+    "Evolution, can turn back any attack.");
 
 const u8 gMawileMPokedexText[] = _(
     "Its two sets of jaws thrash about\n"
@@ -6073,16 +6069,14 @@ const u8 gMawileMPokedexText[] = _(
     "boulder to dust.");
 
 const u8 gAggronMPokedexText[] = _(
-    "Its iron horns grow longer a little at\n"
-    "a time. They are used to determine the\n"
-    "Aggron's age. The gouges in its armor are\n"
-    "worn with pride as mementos from battles.");
+    "Energy from Mega Evolution has turned the\n"
+    "iron inside this Pokémon into steel armor\n"
+    "that covers Mega Aggron's whole body.");
 
 const u8 gMedichamMPokedexText[] = _(
-    "Through crushingly harsh yoga training, it\n"
-    "gained the power to foretell its foe's\n"
-    "actions. It battles with elegant, dance-\n"
-    "like movement.");
+    "Thanks to Mega Evolution, its mental power\n"
+    "is limitless. It conjures up arms imbued\n"
+    "with malice to defeat its enemies.");
 
 const u8 gManectricMPokedexText[] = _(
     "Too much electricity has built up in its\n"
@@ -6090,22 +6084,21 @@ const u8 gManectricMPokedexText[] = _(
     "speed is equal to that of a lightning bolt.");
 
 const u8 gSharpedoMPokedexText[] = _(
-    "The yellow patterns it bears are old scars.\n"
-    "The energy from Mega Evolution runs\n"
-    "through them, causing it sharp pain and\n"
-    "suffering.");
+    "The spines sprouting from its head are\n"
+    "transformed fangs. If they're injured or\n"
+    "broken off, the spines will regenerate\n"
+    "countless times.");
 
 const u8 gCameruptMPokedexText[] = _(
-    "A Pokémon that lives in the crater of\n"
-    "a volcano. Every 10 years, the volcanoes\n"
-    "on its back erupt violently. Research is\n"
-    "under way on the cause of eruption.");
+    "When this Pokémon's rage reaches a boiling\n"
+    "point, the huge volcano in the hump on its\n"
+    "back erupts violently, spewing molten lava.");
 
 const u8 gAltariaMPokedexText[] = _(
-    "It hums in a beautiful soprano voice.\n"
-    "It flies among white clouds in the blue\n"
-    "sky. It launches intensely hot fireballs\n"
-    "from its mouth.");
+    "Its down is so soft, it seems as if a touch\n"
+    "could melt it. But it's strong enough that\n"
+    "just a few strands could be used to hoist\n"
+    "a dump truck.");
 
 const u8 gBanetteMPokedexText[] = _(
     "Mega Evolution increases its\n"
@@ -6114,10 +6107,10 @@ const u8 gBanetteMPokedexText[] = _(
     "spilling out.");
 
 const u8 gAbsolMPokedexText[] = _(
-    "It converts the energy from Mega\n"
-    "Evolution into an intimidating aura.\n"
-    "Fainthearted people expire from shock at\n"
-    "the sight of it.");
+    "When this Pokémon whips the winglike fur\n"
+    "on its back as though beating its wings,\n"
+    "it sends an intimidating aura flying at\n"
+    "its opponents.");
 
 const u8 gGlalieMPokedexText[] = _(
     "The power of Mega Evolution was so strong\n"
@@ -6125,10 +6118,10 @@ const u8 gGlalieMPokedexText[] = _(
     "to eat very well leaves Glalie irritated.");
 
 const u8 gSalamenceMPokedexText[] = _(
-    "It puts its forelegs inside its shell to\n"
-    "streamline itself for flight. Salamence\n"
-    "flies at high speeds over all kinds of\n"
-    "topographical features.");
+    "To streamline itself for flight, it pulls\n"
+    "its forelegs into its shell. Salamence\n"
+    "flies at high speeds even when faced\n"
+    "with complex topographical features.");
 
 const u8 gMetagrossMPokedexText[] = _(
     "When it knows it can't win, it digs the\n"
@@ -6136,16 +6129,14 @@ const u8 gMetagrossMPokedexText[] = _(
     "starts the countdown to a big explosion.");
 
 const u8 gLatiasMPokedexText[] = _(
-    "They make a small herd of only several\n"
-    "members. They rarely make contact with\n"
-    "people or other Pokémon. They disappear\n"
-    "if they sense enemies.");
+    "Both its flying capabilities and its\n"
+    "attack power have increased. It scatters\n"
+    "transparent down to confuse its enemies.");
 
 const u8 gLatiosMPokedexText[] = _(
-    "Even in hiding, it can detect the locations\n"
-    "of others and sense their emotions since\n"
-    "it has telepathy. Its intelligence allows\n"
-    "it to understand human languages.");
+    "It flies at speeds exceeding Mach 4.\n"
+    "It is among the top tier of all Pokémon\n"
+    "in terms of aerial combat capability.");
 
 const u8 gLopunnyMPokedexText[] = _(
     "It swings its ears like whips and strikes\n"
@@ -6159,49 +6150,49 @@ const u8 gGarchompMPokedexText[] = _(
     "scythes on both arms.");
 
 const u8 gLucarioMPokedexText[] = _(
-    "Its aura has expanded due to Mega\n"
-    "Evolution. Governed only by its combative\n"
-    "instincts, it strikes enemies without\n"
-    "mercy.");
+    "Black streaks all over its body show\n"
+    "where its auras and the energy of\n"
+    "Mega Evolution intermingled and\n"
+    "raced through it.");
 
 const u8 gAbomasnowMPokedexText[] = _(
-    "They appear when the snow flowers bloom.\n"
-    "When the petals fall, they retreat to\n"
-    "places unknown again.");
+    "The buds on its back have sprouted into\n"
+    "impressive icicles that can whip up\n"
+    "massive blizzards of -22 degrees\n"
+    "Fahrenheit.");
 
 const u8 gGalladeMPokedexText[] = _(
-    "Because it can sense what its foe is\n"
-    "thinking, its attacks burst out first, fast,\n"
-    "and fierce.");
+    "It gets power from the bond it has with its\n"
+    "Trainer. Mega Evolution has given it plates\n"
+    "to slice its enemies and a cape to protect\n"
+    "its body.");
 
 const u8 gAudinoMPokedexText[] = _(
-    "This Pokémon has a kind heart. By touching\n"
-    "with its feelers, Audino can gauge other\n"
-    "creatures' feelings and physical\n"
-    "conditions.");
+    "Anyone who touches the secondary feelers\n"
+    "that have sprouted from the base of its\n"
+    "throat will fall into a deep sleep.");
 
 const u8 gDiancieMPokedexText[] = _(
-    "It can instantly create many diamonds by\n"
-    "compressing the carbon in the air between\n"
-    "its hands.");
+    "This Pokémon is also known as the Royal\n"
+    "Pink Princess. The dazzling, sparkling\n"
+    "diamond on its forehead is a whopping\n"
+    "2,000 carats.");
 
 const u8 gRayquazaMPokedexText[] = _(
-    "A Pokémon that flies endlessly in the\n"
-    "ozone layer. It is said it would descend\n"
-    "to the ground if Kyogre and Groudon\n"
-    "were to fight.");
+    "A shooting star streaking across the\n"
+    "night sky may, in fact, be Mega Rayquaza\n"
+    "flying gracefully after a meteoroid.");
 
 const u8 gKyogrePPokedexText[] = _(
-    "Kyogre has appeared in mythology as the\n"
-    "creator of the sea. After long years of\n"
-    "feuding with Groudon, it took to sleep at\n"
-    "the bottom of the sea.");
+    "Kyogre reverted to this state via the\n"
+    "Blue Orb, which contains the energy of the\n"
+    "primordial world. Kyogre's body resembles\n"
+    "seawater.");
 
 const u8 gGroudonPPokedexText[] = _(
-    "Groudon has appeared in mythology as the\n"
-    "creator of the land. It sleeps in magma\n"
-    "underground and is said to make volcanoes\n"
-    "erupt on awakening.");
+    "This is Groudon's true form, restored\n"
+    "using the Red Orb. Energy spills from\n"
+    "its body in the form of magma.");
 
 const u8 gRattataAPokedexText[] = _(
     "Night after night, they sneak into\n"
@@ -6709,9 +6700,9 @@ const u8 gGreninjaAPokedexText[] = _(
     "stars of sharpest water.");
 
 const u8 gFloetteEPokedexText[] = _(
-    "Terrifying energy is concealed within its\n"
-    "ominous flower, but Floette still swings it\n"
-    "about innocently.");
+    "This rare Floette holds a plant that died\n"
+    "out in ancient times. The Pokémon is said\n"
+    "to harbor an incredible power.");
 
 const u8 gMeowsticFPokedexText[] = _(
     "Female Meowstic are more aggressive than\n"
@@ -6955,3 +6946,258 @@ const u8 gTerapagosStellarPokedexText[] = _(
     "sight of this Pokémon buried in the depths\n"
     "of the earth as resembling a planet\n"
     "floating in space.");
+
+const u8 gClefableMegaPokedexText[] = _(
+    "It flies by using the power of moonlight\n"
+    "to control gravity within a radius of\n"
+    "over 32 feet around it.");
+
+const u8 gVictreebelMegaPokedexText[] = _(
+    "The volume of this Pokémon's acid has\n"
+    "increased due to Mega Evolution, filling\n"
+    "its mouth. If it's not careful, the acid\n"
+    "will overflow and spill out.");
+
+const u8 gStarmieMegaPokedexText[] = _(
+    "Its movements have become more humanlike.\n"
+    "Whether it's simply trying to communicate\n"
+    "or wants to supplant humanity is unclear.");
+
+const u8 gDragoniteMegaPokedexText[] = _(
+    "Mega Evolution has excessively powered\n"
+    "up this Pokémon's feelings of kindness.\n"
+    "It finishes off its opponents with mercy\n"
+    "in its heart.");
+
+const u8 gMeganiumMegaPokedexText[] = _(
+    "This Pokémon can fire a tremendously\n"
+    "powerful Solar Beam from its four flowers.\n"
+    "Another name for this is Mega Sol Cannon.");
+
+const u8 gFeraligatrMegaPokedexText[] = _(
+    "With its arms and hoodlike fin, this\n"
+    "Pokémon forms a gigantic set of jaws\n"
+    "with a bite 10 times as powerful as\n"
+    "Mega Feraligatr's actual jaws.");
+
+const u8 gSkarmoryMegaPokedexText[] = _(
+    "It flies faster than the speed of sound.\n"
+    "After whipping up shock waves to send\n"
+    "enemies flying, it finishes them off with\n"
+    "its talons.");
+
+const u8 gFroslassMegaPokedexText[] = _(
+    "This Pokémon can use eerie cold air\n"
+    "imbued with ghost energy to freeze\n"
+    "even insubstantial things, such as\n"
+    "flames or the wind.");
+
+const u8 gEmboarMegaPokedexText[] = _(
+    "Brandishing a blazing flame shaped like a\n"
+    "serpentine spear, it rushes in to rescue\n"
+    "its imperiled allies.");
+
+const u8 gExcadrillMegaPokedexText[] = _(
+    "If this Pokémon brings its arms and head\n"
+    "together to form a streamlined shape and\n"
+    "spins at high speeds, it can destroy\n"
+    "anything.");
+
+const u8 gScolipedeMegaPokedexText[] = _(
+    "Its deadly venom gives off a faint glow.\n"
+    "The venom affects Scolipede's mind,\n"
+    "honing its viciousness.");
+
+const u8 gScraftyMegaPokedexText[] = _(
+    "Mega Evolution has caused Scrafty's\n"
+    "shed skin to turn white, growing tough\n"
+    "and supple. Of course, this Pokémon is\n"
+    "still as feisty as ever.");
+
+const u8 gEelektrossMegaPokedexText[] = _(
+    "It now generates 10 times the electricity\n"
+    "it did before Mega Evolving. It discharges\n"
+    "this electricity from its false Eelektrik,\n"
+    "which are made of mucus.");
+
+const u8 gChandelureMegaPokedexText[] = _(
+    "One of its eyes is a window linking our\n"
+    "world with the afterlife. This Pokémon\n"
+    "draws in hatred and converts it into\n"
+    "power.");
+
+const u8 gChesnaughtMegaPokedexText[] = _(
+    "It has fortified armor and a will to\n"
+    "defend at all costs. Both are absurdly\n"
+    "strong.");
+
+const u8 gDelphoxMegaPokedexText[] = _(
+    "It wields flaming branches to dazzle its\n"
+    "opponents before incinerating them with a\n"
+    "huge fireball.");
+
+const u8 gGreninjaMegaPokedexText[] = _(
+    "This Pokémon spins a giant shuriken at\n"
+    "high speed to make it float, then clings\n"
+    "to it upside down to catch opponents\n"
+    "unawares.");
+
+const u8 gPyroarMegaPokedexText[] = _(
+    "This Pokémon spews flames hotter than\n"
+    "18,000 degrees Fahrenheit. It swings\n"
+    "around its grand, blazing mane as it\n"
+    "protects its allies.");
+
+const u8 gFloetteMegaPokedexText[] = _(
+    "The Eternal Flower has absorbed all the\n"
+    "energy from Mega Evolution. The flower\n"
+    "now attacks enemies on its own.");
+
+const u8 gMalamarMegaPokedexText[] = _(
+    "It uses its colorful lights to overwrite\n"
+    "the personalities and memories of\n"
+    "others--and to control them.");
+
+const u8 gBarbaracleMegaPokedexText[] = _(
+    "It uses its many arms to toy with its\n"
+    "opponents. This keeps the head\n"
+    "extremely busy.");
+
+const u8 gDragalgeMegaPokedexText[] = _(
+    "It spits a liquid that causes the\n"
+    "regenerative power of cells to run wild.\n"
+    "The liquid is deadly poison to everything\n"
+    "other than itself.");
+
+const u8 gHawluchaMegaPokedexText[] = _(
+    "Mega Evolution has pumped up all its\n"
+    "muscles. Hawlucha flexes to show off\n"
+    "its strength.");
+
+const u8 gZygardeMegaPokedexText[] = _(
+    "In response to people's emotions during\n"
+    "an unprecedented crisis, Zygarde Mega\n"
+    "Evolves and calms the situation with its\n"
+    "unmatched power.");
+
+const u8 gDrampaMegaPokedexText[] = _(
+    "Drampa's cells have been invigorated,\n"
+    "allowing it to regain its youth.\n"
+    "It manipulates the atmosphere to\n"
+    "summon storms.");
+
+const u8 gFalinksMegaPokedexText[] = _(
+    "Mega Falinks has taken on the ultimate\n"
+    "battle formation, which can be achieved\n"
+    "only if the troopers and brass have the\n"
+    "strongest of bonds.");
+
+const u8 gRaichuMegaXPokedexText[] = _(
+    "It resembles an X as it flies through the\n"
+    "air with 50 million volts of electricity\n"
+    "sparking from its ears and forked tail.");
+
+const u8 gRaichuMegaYPokedexText[] = _(
+    "It fires bolts of electricity from the\n"
+    "tip of its tail and from the spiky tufts\n"
+    "of fur growing out of its temples.\n"
+    "This electricity forms the letter Y.");
+
+const u8 gChimechoMegaPokedexText[] = _(
+    "It vibrates its entire body to attack\n"
+    "in all directions using sound waves.\n"
+    "Any who hear the vibrations get so\n"
+    "confused, they forget who they are.");
+
+const u8 gAbsolMegaZPokedexText[] = _(
+    "Using fur that it has made into sharp,\n"
+    "clawlike shapes, it cuts down foes with a\n"
+    "single blow. This is an act of kindness to\n"
+    "keep them from suffering.");
+
+const u8 gStaraptorMegaPokedexText[] = _(
+    "Mega Staraptor is a top-class flier.\n"
+    "It can easily soar through the sky\n"
+    "while gripping a Steelix that weighs\n"
+    "more than 880 lbs.");
+
+const u8 gGarchompMegaZPokedexText[] = _(
+    "Garchomp has gained a new Mega-Evolved\n"
+    "form. It flies around foes at Mach speed\n"
+    "and cuts them to shreds with its sinister\n"
+    "wing claws.");
+
+const u8 gLucarioMegaZPokedexText[] = _(
+    "By completely cloaking itself in its aura,\n"
+    "Mega Lucario Z can parry all manner of\n"
+    "attacks, battling as if it were gracefully\n"
+    "dancing.");
+
+const u8 gHeatranMegaPokedexText[] = _(
+    "It's said that if it goes all out, it can\n"
+    "heat its body up to temperatures over\n"
+    "1.8 million degrees Fahrenheit.\n"
+    "This heat keeps enemies at bay.");
+
+const u8 gDarkraiMegaPokedexText[] = _(
+    "Its dark power blocks out the sun,\n"
+    "plunging the surrounding area into\n"
+    "darkness. There is no escaping its\n"
+    "evil eye.");
+
+const u8 gGolurkMegaPokedexText[] = _(
+    "The energy within Golurk has been\n"
+    "stimulated by Mega Evolution. The\n"
+    "Pokémon could explode at any moment.");
+
+const u8 gMeowsticMegaPokedexText[] = _(
+    "Mega Meowstic can use its psychic\n"
+    "power to compress or expand anything.\n"
+    "It overwhelms foes by contorting\n"
+    "space itself.");
+
+const u8 gCrabominableMegaPokedexText[] = _(
+    "It can pulverize reinforced concrete with\n"
+    "a light swing of one of its fists, each of\n"
+    "which is covered in a thick layer of ice.");
+
+const u8 gGolisopodMegaPokedexText[] = _(
+    "It uses four of its arms to fiercely assail\n"
+    "its foes. Once they've been pushed to the\n"
+    "brink of defeat, it finishes them off with\n"
+    "the arms it kept hidden.");
+
+const u8 gMagearnaMegaPokedexText[] = _(
+    "This is Magearna once a previously hidden\n"
+    "mode activates. The emotions Magearna\n"
+    "had begun to feel now hide away as it\n"
+    "fells foe after foe.");
+
+const u8 gZeraoraMegaPokedexText[] = _(
+    "It stores up 10 lightning strikes' worth\n"
+    "of electricity. When it stops limiting\n"
+    "itself, it's in the strongest class of\n"
+    "electric Pokémon.");
+
+const u8 gScovillainMegaPokedexText[] = _(
+    "Mega Evolution has dialed up this\n"
+    "Pokémon's spiciness. It swings its\n"
+    "“necktie” around to wallop its foes.");
+
+const u8 gGlimmoraMegaPokedexText[] = _(
+    "Glimmora's petals--now larger and\n"
+    "separated from its main body--rotate\n"
+    "around it to provide defense while\n"
+    "scattering poisonous fragments.");
+
+const u8 gTatsugiriMegaPokedexText[] = _(
+    "It solidifies the energy of Mega\n"
+    "Evolution, building up an overflowing\n"
+    "pile to launch as projectiles. These\n"
+    "projectiles explode on contact.");
+
+const u8 gBaxcaliburMegaPokedexText[] = _(
+    "Baxcalibur's dorsal blade has grown even\n"
+    "more massive thanks to Mega Evolution.\n"
+    "This Pokémon fires beams from the hilt\n"
+    "at its solar plexus.");

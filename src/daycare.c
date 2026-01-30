@@ -750,6 +750,7 @@ void RejectEggFromDayCare(void)
     RemoveEggFromDayCare(&gSaveBlock1Ptr->daycare);
 }
 
+// remove this function later
 static void AlterEggSpeciesWithIncenseItem(u16 *species, struct DayCare *daycare)
 {
     u16 motherItem, fatherItem;
@@ -884,9 +885,11 @@ static u16 DetermineEggSpeciesAndParentSlots(struct DayCare *daycare, u8 *parent
         eggSpecies = SPECIES_SWABLU;
     else if (eggSpecies == SPECIES_BANETTE_MEGA)
         eggSpecies = SPECIES_SHUPPET;
-    else if (eggSpecies == SPECIES_ABSOL_MEGA)
+    else if (eggSpecies == SPECIES_ABSOL_MEGA
+          || eggSpecies == SPECIES_ABSOL_MEGA_Z)
         eggSpecies = SPECIES_ABSOL;
-    else if (eggSpecies == SPECIES_GLALIE_MEGA)
+    else if (eggSpecies == SPECIES_GLALIE_MEGA
+          || eggSpecies == SPECIES_FROSLASS_MEGA)
         eggSpecies = SPECIES_SNORUNT;
     else if (eggSpecies == SPECIES_SALAMENCE_MEGA)
         eggSpecies = SPECIES_BAGON;
@@ -894,14 +897,86 @@ static u16 DetermineEggSpeciesAndParentSlots(struct DayCare *daycare, u8 *parent
         eggSpecies = SPECIES_BELDUM;
     else if (eggSpecies == SPECIES_LOPUNNY_MEGA)
         eggSpecies = SPECIES_BUNEARY;
-    else if (eggSpecies == SPECIES_GARCHOMP_MEGA)
+    else if (eggSpecies == SPECIES_GARCHOMP_MEGA
+          || eggSpecies == SPECIES_GARCHOMP_MEGA_Z)
         eggSpecies = SPECIES_GIBLE;
-    else if (eggSpecies == SPECIES_LUCARIO_MEGA)
+    else if (eggSpecies == SPECIES_LUCARIO_MEGA
+          || eggSpecies == SPECIES_LUCARIO_MEGA_Z)
         eggSpecies = SPECIES_RIOLU;
     else if (eggSpecies == SPECIES_ABOMASNOW_MEGA)
         eggSpecies = SPECIES_SNOVER;
     else if (eggSpecies == SPECIES_AUDINO_MEGA)
         eggSpecies = SPECIES_AUDINO;
+    else if (eggSpecies == SPECIES_CLEFABLE_MEGA)
+        eggSpecies = SPECIES_CLEFFA;
+    else if (eggSpecies == SPECIES_VICTREEBEL_MEGA)
+        eggSpecies = SPECIES_BELLSPROUT;
+    else if (eggSpecies == SPECIES_STARMIE_MEGA)
+        eggSpecies = SPECIES_STARYU;
+    else if (eggSpecies == SPECIES_DRAGONITE_MEGA)
+        eggSpecies = SPECIES_DRATINI;
+    else if (eggSpecies == SPECIES_MEGANIUM_MEGA)
+        eggSpecies = SPECIES_CHIKORITA;
+    else if (eggSpecies == SPECIES_FERALIGATR_MEGA)
+        eggSpecies = SPECIES_TOTODILE;
+    else if (eggSpecies == SPECIES_SKARMORY_MEGA)
+        eggSpecies = SPECIES_SKARMORY;
+    else if (eggSpecies == SPECIES_EMBOAR_MEGA)
+        eggSpecies = SPECIES_TEPIG;
+    else if (eggSpecies == SPECIES_EXCADRILL_MEGA)
+        eggSpecies = SPECIES_DRILBUR;
+    else if (eggSpecies == SPECIES_SCOLIPEDE_MEGA)
+        eggSpecies = SPECIES_VENIPEDE;
+    else if (eggSpecies == SPECIES_SCRAFTY_MEGA)
+        eggSpecies = SPECIES_SCRAGGY;
+    else if (eggSpecies == SPECIES_EELEKTROSS_MEGA)
+        eggSpecies = SPECIES_TYNAMO;
+    else if (eggSpecies == SPECIES_CHANDELURE_MEGA)
+        eggSpecies = SPECIES_LITWICK;
+    else if (eggSpecies == SPECIES_CHESNAUGHT_MEGA)
+        eggSpecies = SPECIES_CHESPIN;
+    else if (eggSpecies == SPECIES_DELPHOX_MEGA)
+        eggSpecies = SPECIES_FENNEKIN;
+    else if (eggSpecies == SPECIES_GRENINJA_MEGA)
+        eggSpecies = SPECIES_FROAKIE;
+    else if (eggSpecies == SPECIES_PYROAR_MEGA)
+        eggSpecies = SPECIES_LITLEO;
+    else if (eggSpecies == SPECIES_MALAMAR_MEGA)
+        eggSpecies = SPECIES_INKAY;
+    else if (eggSpecies == SPECIES_BARBARACLE_MEGA)
+        eggSpecies = SPECIES_BINACLE;
+    else if (eggSpecies == SPECIES_DRAGALGE_MEGA)
+        eggSpecies = SPECIES_SKRELP;
+    else if (eggSpecies == SPECIES_HAWLUCHA_MEGA)
+        eggSpecies = SPECIES_HAWLUCHA;
+    else if (eggSpecies == SPECIES_DRAMPA_MEGA)
+        eggSpecies = SPECIES_DRAMPA;
+    else if (eggSpecies == SPECIES_FALINKS_MEGA)
+        eggSpecies = SPECIES_FALINKS;
+    else if (eggSpecies == SPECIES_RAICHU_MEGA_X
+          || eggSpecies == SPECIES_RAICHU_MEGA_Y)
+        eggSpecies = SPECIES_PICHU;
+    else if (eggSpecies == SPECIES_CHIMECHO_MEGA)
+        eggSpecies = SPECIES_CHINGLING;
+    else if (eggSpecies == SPECIES_STARAPTOR_MEGA)
+        eggSpecies = SPECIES_STARLY;
+    else if (eggSpecies == SPECIES_GOLURK_MEGA)
+        eggSpecies = SPECIES_GOLETT;
+    else if (eggSpecies == SPECIES_MEOWSTIC_MEGA
+          || eggSpecies == SPECIES_MEOWSTIC_FEMALE_MEGA)
+        eggSpecies = SPECIES_ESPURR;
+    else if (eggSpecies == SPECIES_CRABOMINABLE_MEGA)
+        eggSpecies = SPECIES_CRABRAWLER;
+    else if (eggSpecies == SPECIES_GOLISOPOD_MEGA)
+        eggSpecies = SPECIES_WIMPOD;
+    else if (eggSpecies == SPECIES_SCOVILLAIN_MEGA)
+        eggSpecies = SPECIES_CAPSAKID;
+    else if (eggSpecies == SPECIES_GLIMMORA_MEGA)
+        eggSpecies = SPECIES_GLIMMET;
+    else if (eggSpecies == SPECIES_TATSUGIRI_MEGA)
+        eggSpecies = SPECIES_TATSUGIRI;
+    else if (eggSpecies == SPECIES_BAXCALIBUR_MEGA)
+        eggSpecies = SPECIES_FRIGIBAX;
     else if (eggSpecies == SPECIES_CHERRIM_SUNSHINE)
         eggSpecies = SPECIES_CHERUBI;
     else if (eggSpecies == SPECIES_DARMANITAN_ZEN_MODE)

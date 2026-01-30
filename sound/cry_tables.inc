@@ -1113,6 +1113,54 @@ gCryTable::
 	cry Cry_Terapagos
 	cry Cry_Pecharunt
 	cry Cry_GimmighoulRoaming
+@	cry Cry_MausholdThree
+@	cry Cry_TatsugiriDroopy
+@	cry Cry_TatsugiriStretchy
+@	cry Cry_ClefableMega
+@	cry Cry_VictreebelMega
+@	cry Cry_StarmieMega
+@	cry Cry_DragoniteMega
+@	cry Cry_MeganiumMega
+@	cry Cry_FeraligatrMega
+@	cry Cry_SkarmoryMega
+@	cry Cry_FroslassMega
+@	cry Cry_EmboarMega
+@	cry Cry_ExcadrillMega
+@	cry Cry_ScolipedeMega
+@	cry Cry_ScraftyMega
+@	cry Cry_EelektrossMega
+@	cry Cry_ChandelureMega
+@	cry Cry_ChesnaughtMega
+@	cry Cry_DelphoxMega
+@	cry Cry_GreninjaMega
+@	cry Cry_PyroarMega
+@	cry Cry_FloetteMega
+@	cry Cry_MalamarMega
+@	cry Cry_BarbaracleMega
+@	cry Cry_DragalgeMega
+@	cry Cry_HawluchaMega
+@	cry Cry_ZygardeMega
+@	cry Cry_DrampaMega
+@	cry Cry_FalinksMega
+@	cry Cry_RaichuMegaX
+@	cry Cry_RaichuMegaY
+@	cry Cry_ChimechoMega
+@	cry Cry_AbsolMegaZ
+@	cry Cry_StaraptorMega
+@	cry Cry_GarchompMegaZ
+@	cry Cry_LucarioMegaZ
+@	cry Cry_HeatranMega
+@	cry Cry_DarkraiMega
+@	cry Cry_GolurkMega
+@	cry Cry_MeowsticMega
+@	cry Cry_CrabominableMega
+@	cry Cry_GolisopodMega
+@	cry Cry_MagearnaMega
+@	cry Cry_ZeraoraMega
+@	cry Cry_ScovillainMega
+@	cry Cry_GlimmoraMega
+@	cry Cry_TatsugiriMega
+@	cry Cry_BaxcaliburMega
 
 	.align 2
 gCryTable_Reverse::
@@ -2229,3 +2277,51 @@ gCryTable_Reverse::
 	cry_reverse Cry_Terapagos
 	cry_reverse Cry_Pecharunt
 	cry_reverse Cry_GimmighoulRoaming
+@	cry_reverse Cry_MausholdThree
+@	cry_reverse Cry_TatsugiriDroopy
+@	cry_reverse Cry_TatsugiriStretchy
+@	cry_reverse Cry_ClefableMega
+@	cry_reverse Cry_VictreebelMega
+@	cry_reverse Cry_StarmieMega
+@	cry_reverse Cry_DragoniteMega
+@	cry_reverse Cry_MeganiumMega
+@	cry_reverse Cry_FeraligatrMega
+@	cry_reverse Cry_SkarmoryMega
+@	cry_reverse Cry_FroslassMega
+@	cry_reverse Cry_EmboarMega
+@	cry_reverse Cry_ExcadrillMega
+@	cry_reverse Cry_ScolipedeMega
+@	cry_reverse Cry_ScraftyMega
+@	cry_reverse Cry_EelektrossMega
+@	cry_reverse Cry_ChandelureMega
+@	cry_reverse Cry_ChesnaughtMega
+@	cry_reverse Cry_DelphoxMega
+@	cry_reverse Cry_GreninjaMega
+@	cry_reverse Cry_PyroarMega
+@	cry_reverse Cry_FloetteMega
+@	cry_reverse Cry_MalamarMega
+@	cry_reverse Cry_BarbaracleMega
+@	cry_reverse Cry_DragalgeMega
+@	cry_reverse Cry_HawluchaMega
+@	cry_reverse Cry_ZygardeMega
+@	cry_reverse Cry_DrampaMega
+@	cry_reverse Cry_FalinksMega
+@	cry_reverse Cry_RaichuMegaX
+@	cry_reverse Cry_RaichuMegaY
+@	cry_reverse Cry_ChimechoMega
+@	cry_reverse Cry_AbsolMegaZ
+@	cry_reverse Cry_StaraptorMega
+@	cry_reverse Cry_GarchompMegaZ
+@	cry_reverse Cry_LucarioMegaZ
+@	cry_reverse Cry_HeatranMega
+@	cry_reverse Cry_DarkraiMega
+@	cry_reverse Cry_GolurkMega
+@	cry_reverse Cry_MeowsticMega
+@	cry_reverse Cry_CrabominableMega
+@	cry_reverse Cry_GolisopodMega
+@	cry_reverse Cry_MagearnaMega
+@	cry_reverse Cry_ZeraoraMega
+@	cry_reverse Cry_ScovillainMega
+@	cry_reverse Cry_GlimmoraMega
+@	cry_reverse Cry_TatsugiriMega
+@	cry_reverse Cry_BaxcaliburMega

@@ -1153,6 +1153,55 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
     SPECIES_SHINY_PAL(GALLADE_MEGA, gMonShinyPalette_GalladeMega),
     SPECIES_SHINY_PAL(AUDINO_MEGA, gMonShinyPalette_AudinoMega),
     SPECIES_SHINY_PAL(DIANCIE_MEGA, gMonShinyPalette_DiancieMega),
+    SPECIES_SHINY_PAL(CLEFABLE_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(VICTREEBEL_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(STARMIE_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(DRAGONITE_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(MEGANIUM_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(FERALIGATR_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(SKARMORY_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(FROSLASS_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(EMBOAR_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(EXCADRILL_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(SCOLIPEDE_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(SCRAFTY_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(EELEKTROSS_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(CHANDELURE_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(CHESNAUGHT_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(DELPHOX_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(GRENINJA_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(PYROAR_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(FLOETTE_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(MALAMAR_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(BARBARACLE_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(DRAGALGE_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(HAWLUCHA_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(ZYGARDE_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(DRAMPA_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(FALINKS_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(RAICHU_MEGA_X, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(RAICHU_MEGA_Y, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(CHIMECHO_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(ABSOL_MEGA_Z, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(STARAPTOR_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(GARCHOMP_MEGA_Z, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(LUCARIO_MEGA_Z, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(HEATRAN_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(DARKRAI_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(GOLURK_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(MEOWSTIC_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(CRABOMINABLE_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(GOLISOPOD_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(MAGEARNA_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(ZERAORA_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(SCOVILLAIN_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(GLIMMORA_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(TATSUGIRI_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(BAXCALIBUR_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(MEOWSTIC_FEMALE_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(MAGEARNA_MEGA_ORIGINAL_COLOR, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(TATSUGIRI_MEGA_DROOPY, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(TATSUGIRI_MEGA_STRETCHY, gMonShinyPalette_CircledQuestionMark), // placeholder
 
     SPECIES_SHINY_PAL(RAYQUAZA_MEGA, gMonShinyPalette_RayquazaMega),
     SPECIES_SHINY_PAL(KYOGRE_PRIMAL, gMonShinyPalette_KyogrePrimal),

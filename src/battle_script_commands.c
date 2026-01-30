@@ -3525,7 +3525,7 @@ static void Cmd_getexp(void)
             if (FlagGet(FLAG_MODERN_EXP_SCALE))
                 specExpYield = gSpeciesInfo[gBattleMons[gBattlerFainted].species].expYield;
             else
-                specExpYield = gSpeciesInfo[gBattleMons[gBattlerFainted].species].expYield *57/92+34;
+                specExpYield = gSpeciesInfo[gBattleMons[gBattlerFainted].species].expYield *65/103+30;
 
             calculatedExp = specExpYield * gBattleMons[gBattlerFainted].level;
             if (!FlagGet(FLAG_MODERN_EXP_SCALE))
@@ -3599,8 +3599,8 @@ static void Cmd_getexp(void)
                         gBattleMoveDamage += gExpShareExp;
                     if (holdEffect == HOLD_EFFECT_LUCKY_EGG)
                         gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
-                    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && !FlagGet(FLAG_MODERN_EXP_SCALE))
-                        gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
+                    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+                        gBattleMoveDamage = (gBattleMoveDamage * (FlagGet(FLAG_MODERN_EXP_SCALE) ? 5 : 6)) / 4;
 
                     if (IsTradedMon(&gPlayerParty[gBattleStruct->expGetterMonId]))
                     {

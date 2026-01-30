@@ -4449,3 +4449,195 @@ Cry_Pecharunt::
 	.align 2
 Cry_GimmighoulRoaming::
 	.incbin "sound/direct_sound_samples/cries/gimmighoul-roaming.bin"
+
+@	.align 2
+@Cry_MausholdThree::
+@	.incbin "sound/direct_sound_samples/cries/maushold_three.bin"
+
+@	.align 2
+@Cry_TatsugiriDroopy::
+@	.incbin "sound/direct_sound_samples/cries/tatsugiri_droopy.bin"
+
+@	.align 2
+@Cry_TatsugiriStretchy::
+@	.incbin "sound/direct_sound_samples/cries/tatsugiri_stretchy.bin"
+
+@	.align 2
+@Cry_ClefableMega::
+@	.incbin "sound/direct_sound_samples/cries/clefable_mega.bin"
+
+@	.align 2
+@Cry_VictreebelMega::
+@	.incbin "sound/direct_sound_samples/cries/victreebel_mega.bin"
+
+@	.align 2
+@Cry_StarmieMega::
+@	.incbin "sound/direct_sound_samples/cries/starmie_mega.bin"
+
+@	.align 2
+@Cry_DragoniteMega::
+@	.incbin "sound/direct_sound_samples/cries/dragonite_mega.bin"
+
+@	.align 2
+@Cry_MeganiumMega::
+@	.incbin "sound/direct_sound_samples/cries/meganium_mega.bin"
+
+@	.align 2
+@Cry_FeraligatrMega::
+@	.incbin "sound/direct_sound_samples/cries/feraligatr_mega.bin"
+
+@	.align 2
+@Cry_SkarmoryMega::
+@	.incbin "sound/direct_sound_samples/cries/skarmory_mega.bin"
+
+@	.align 2
+@Cry_FroslassMega::
+@	.incbin "sound/direct_sound_samples/cries/froslass_mega.bin"
+
+@	.align 2
+@Cry_EmboarMega::
+@	.incbin "sound/direct_sound_samples/cries/emboar_mega.bin"
+
+@	.align 2
+@Cry_ExcadrillMega::
+@	.incbin "sound/direct_sound_samples/cries/excadrill_mega.bin"
+
+@	.align 2
+@Cry_ScolipedeMega::
+@	.incbin "sound/direct_sound_samples/cries/scolipede_mega.bin"
+
+@	.align 2
+@Cry_ScraftyMega::
+@	.incbin "sound/direct_sound_samples/cries/scrafty_mega.bin"
+
+@	.align 2
+@Cry_EelektrossMega::
+@	.incbin "sound/direct_sound_samples/cries/eelektross_mega.bin"
+
+@	.align 2
+@Cry_ChandelureMega::
+@	.incbin "sound/direct_sound_samples/cries/chandelure_mega.bin"
+
+@	.align 2
+@Cry_ChesnaughtMega::
+@	.incbin "sound/direct_sound_samples/cries/chesnaught_mega.bin"
+
+@	.align 2
+@Cry_DelphoxMega::
+@	.incbin "sound/direct_sound_samples/cries/delphox_mega.bin"
+
+@	.align 2
+@Cry_GreninjaMega::
+@	.incbin "sound/direct_sound_samples/cries/greninja_mega.bin"
+
+@	.align 2
+@Cry_PyroarMega::
+@	.incbin "sound/direct_sound_samples/cries/pyroar_mega.bin"
+
+@	.align 2
+@Cry_FloetteMega::
+@	.incbin "sound/direct_sound_samples/cries/floette_mega.bin"
+
+@	.align 2
+@Cry_MalamarMega::
+@	.incbin "sound/direct_sound_samples/cries/malamar_mega.bin"
+
+@	.align 2
+@Cry_BarbaracleMega::
+@	.incbin "sound/direct_sound_samples/cries/barbaracle_mega.bin"
+
+@	.align 2
+@Cry_DragalgeMega::
+@	.incbin "sound/direct_sound_samples/cries/dragalge_mega.bin"
+
+@	.align 2
+@Cry_HawluchaMega::
+@	.incbin "sound/direct_sound_samples/cries/hawlucha_mega.bin"
+
+@	.align 2
+@Cry_ZygardeMega::
+@	.incbin "sound/direct_sound_samples/cries/zygarde_mega.bin"
+
+@	.align 2
+@Cry_DrampaMega::
+@	.incbin "sound/direct_sound_samples/cries/drampa_mega.bin"
+
+@	.align 2
+@Cry_FalinksMega::
+@	.incbin "sound/direct_sound_samples/cries/falinks_mega.bin"
+
+@	.align 2
+@Cry_RaichuMegaX::
+@	.incbin "sound/direct_sound_samples/cries/raichu_mega_x.bin"
+
+@	.align 2
+@Cry_RaichuMegaY::
+@	.incbin "sound/direct_sound_samples/cries/raichu_mega_y.bin"
+
+@	.align 2
+@Cry_ChimechoMega::
+@	.incbin "sound/direct_sound_samples/cries/chimecho_mega.bin"
+
+@	.align 2
+@Cry_AbsolMegaZ::
+@	.incbin "sound/direct_sound_samples/cries/absol_mega_z.bin"
+
+@	.align 2
+@Cry_StaraptorMega::
+@	.incbin "sound/direct_sound_samples/cries/staraptor_mega.bin"
+
+@	.align 2
+@Cry_GarchompMegaZ::
+@	.incbin "sound/direct_sound_samples/cries/garchomp_mega_z.bin"
+
+@	.align 2
+@Cry_LucarioMegaZ::
+@	.incbin "sound/direct_sound_samples/cries/lucario_mega_z.bin"
+
+@	.align 2
+@Cry_HeatranMega::
+@	.incbin "sound/direct_sound_samples/cries/heatran_mega.bin"
+
+@	.align 2
+@Cry_DarkraiMega::
+@	.incbin "sound/direct_sound_samples/cries/darkrai_mega.bin"
+
+@	.align 2
+@Cry_GolurkMega::
+@	.incbin "sound/direct_sound_samples/cries/golurk_mega.bin"
+
+@	.align 2
+@Cry_MeowsticMega::
+@	.incbin "sound/direct_sound_samples/cries/meowstic_mega.bin"
+
+@	.align 2
+@Cry_CrabominableMega::
+@	.incbin "sound/direct_sound_samples/cries/crabominable_mega.bin"
+
+@	.align 2
+@Cry_GolisopodMega::
+@	.incbin "sound/direct_sound_samples/cries/golisopod_mega.bin"
+
+@	.align 2
+@Cry_MagearnaMega::
+@	.incbin "sound/direct_sound_samples/cries/magearna_mega.bin"
+
+@	.align 2
+@Cry_ZeraoraMega::
+@	.incbin "sound/direct_sound_samples/cries/zeraora_mega.bin"
+
+@	.align 2
+@Cry_ScovillainMega::
+@	.incbin "sound/direct_sound_samples/cries/scovillain_mega.bin"
+
+@	.align 2
+@Cry_GlimmoraMega::
+@	.incbin "sound/direct_sound_samples/cries/glimmora_mega.bin"
+
+@	.align 2
+@Cry_TatsugiriMega::
+@	.incbin "sound/direct_sound_samples/cries/tatsugiri_mega.bin"
+
+@	.align 2
+@Cry_BaxcaliburMega::
+@	.incbin "sound/direct_sound_samples/cries/baxcalibur_mega.bin"

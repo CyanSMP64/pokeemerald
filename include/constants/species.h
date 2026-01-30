@@ -1242,8 +1242,54 @@
 #define SPECIES_TERAPAGOS_STELLAR            1235
 #define SPECIES_GRENINJA_BATTLE_BOND         1236
 #define SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE  1237
+#define SPECIES_CLEFABLE_MEGA                1238
+#define SPECIES_VICTREEBEL_MEGA              1239
+#define SPECIES_STARMIE_MEGA                 1240
+#define SPECIES_DRAGONITE_MEGA               1241
+#define SPECIES_MEGANIUM_MEGA                1242
+#define SPECIES_FERALIGATR_MEGA              1243
+#define SPECIES_SKARMORY_MEGA                1244
+#define SPECIES_FROSLASS_MEGA                1245
+#define SPECIES_EMBOAR_MEGA                  1246
+#define SPECIES_EXCADRILL_MEGA               1247
+#define SPECIES_SCOLIPEDE_MEGA               1248
+#define SPECIES_SCRAFTY_MEGA                 1249
+#define SPECIES_EELEKTROSS_MEGA              1250
+#define SPECIES_CHANDELURE_MEGA              1251
+#define SPECIES_CHESNAUGHT_MEGA              1252
+#define SPECIES_DELPHOX_MEGA                 1253
+#define SPECIES_GRENINJA_MEGA                1254
+#define SPECIES_PYROAR_MEGA                  1255
+#define SPECIES_FLOETTE_MEGA                 1256
+#define SPECIES_MALAMAR_MEGA                 1257
+#define SPECIES_BARBARACLE_MEGA              1258
+#define SPECIES_DRAGALGE_MEGA                1259
+#define SPECIES_HAWLUCHA_MEGA                1260
+#define SPECIES_ZYGARDE_MEGA                 1261
+#define SPECIES_DRAMPA_MEGA                  1262
+#define SPECIES_FALINKS_MEGA                 1263
+#define SPECIES_RAICHU_MEGA_X                1264
+#define SPECIES_RAICHU_MEGA_Y                1265
+#define SPECIES_CHIMECHO_MEGA                1266
+#define SPECIES_ABSOL_MEGA_Z                 1267
+#define SPECIES_STARAPTOR_MEGA               1268
+#define SPECIES_GARCHOMP_MEGA_Z              1269
+#define SPECIES_LUCARIO_MEGA_Z               1270
+#define SPECIES_HEATRAN_MEGA                 1271
+#define SPECIES_DARKRAI_MEGA                 1272
+#define SPECIES_GOLURK_MEGA                  1273
+#define SPECIES_MEOWSTIC_MEGA                1274
+#define SPECIES_CRABOMINABLE_MEGA            1275
+#define SPECIES_GOLISOPOD_MEGA               1276
+#define SPECIES_MAGEARNA_MEGA                1277
+#define SPECIES_ZERAORA_MEGA                 1278
+#define SPECIES_SCOVILLAIN_MEGA              1279
+#define SPECIES_GLIMMORA_MEGA                1280
+#define SPECIES_TATSUGIRI_MEGA               1281
+#define SPECIES_BAXCALIBUR_MEGA              1282
+#define SPECIES_MEOWSTIC_FEMALE_MEGA         1283
 
-#define SPECIES_EGG 1238
+#define SPECIES_EGG 1284
 
 #define NUM_SPECIES SPECIES_EGG
 
@@ -1536,7 +1582,10 @@
 #define SPECIES_GENESECT_BURN                    (SPECIES_UNOWN_B + 286)
 #define SPECIES_GENESECT_CHILL                   (SPECIES_UNOWN_B + 287)
 #define SPECIES_GENESECT_DOUSE                   (SPECIES_UNOWN_B + 288)
+#define SPECIES_MAGEARNA_MEGA_ORIGINAL_COLOR     (SPECIES_UNOWN_B + 289)
+#define SPECIES_TATSUGIRI_MEGA_DROOPY            (SPECIES_UNOWN_B + 290)
+#define SPECIES_TATSUGIRI_MEGA_STRETCHY          (SPECIES_UNOWN_B + 291)
 
-#define SPECIES_END                (SPECIES_GENESECT_DOUSE + 1)
+#define SPECIES_END                (SPECIES_TATSUGIRI_MEGA_STRETCHY + 1)
 
 #endif  // GUARD_CONSTANTS_SPECIES_H
