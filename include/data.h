@@ -3,7 +3,7 @@
 
 #include "constants/moves.h"
 
-#define SPECIES_SHINY_TAG 500
+#define SPECIES_SHINY_TAG 2000
 
 #define MAX_TRAINER_ITEMS 4
 
