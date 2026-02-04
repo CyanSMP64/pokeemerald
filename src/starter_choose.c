@@ -15,6 +15,7 @@
 #include "sprite.h"
 #include "starter_choose.h"
 #include "strings.h"
+#include "string_util.h"
 #include "task.h"
 #include "text.h"
 #include "text_window.h"
@@ -89,7 +90,7 @@ static const struct WindowTemplate sWindowTemplate_StarterLabel =
     .bg = 0,
     .tilemapLeft = 0,
     .tilemapTop = 0,
-    .width = 13,
+    .width = 14,
     .height = 4,
     .paletteNum = 14,
     .baseBlock = 0x0274
@@ -111,9 +112,9 @@ static const u8 sStarterLabelCoords[STARTER_MON_COUNT][2] =
 
 static const u16 sStarterMon[STARTER_MON_COUNT] =
 {
-    SPECIES_TREECKO,
-    SPECIES_TORCHIC,
-    SPECIES_MUDKIP,
+    SPECIES_OGERPON_WELLSPRING,
+    SPECIES_OGERPON_HEARTHFLAME,
+    SPECIES_OGERPON_CORNERSTONE,
 };
 
 static const struct BgTemplate sBgTemplates[3] =
@@ -405,7 +406,7 @@ void CB2_ChooseStarter(void)
     InitWindows(sWindowTemplates);
 
     DeactivateAllTextPrinters();
-    LoadUserWindowBorderGfx(0, 0x2A8, BG_PLTT_ID(13));
+    LoadUserWindowBorderGfx(0, 0x2AC, BG_PLTT_ID(13));
     ClearScheduledBgCopiesToVram();
     ScanlineEffect_Stop();
     ResetTasks();
@@ -473,7 +474,7 @@ static void CB2_StarterChoose(void)
 static void Task_StarterChoose(u8 taskId)
 {
     CreateStarterPokemonLabel(gTasks[taskId].tStarterSelection);
-    DrawStdFrameWithCustomTileAndPalette(0, FALSE, 0x2A8, 0xD);
+    DrawStdFrameWithCustomTileAndPalette(0, FALSE, 0x2AC, 0xD);
     AddTextPrinterParameterized(0, FONT_NORMAL, gText_BirchInTrouble, 0, 1, 0, NULL);
     PutWindowTilemap(0);
     ScheduleBgCopyTilemapToVram(0);
@@ -530,7 +531,7 @@ static void Task_AskConfirmStarter(u8 taskId)
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
     AddTextPrinterParameterized(0, FONT_NORMAL, gText_ConfirmStarterChoice, 0, 1, 0, NULL);
     ScheduleBgCopyTilemapToVram(0);
-    CreateYesNoMenu(&sWindowTemplate_ConfirmStarter, 0x2A8, 0xD, 0);
+    CreateYesNoMenu(&sWindowTemplate_ConfirmStarter, 0x2AC, 0xD, 0);
     gTasks[taskId].func = Task_HandleConfirmStarterInput;
 }
 
@@ -569,14 +570,238 @@ static void Task_DeclineStarter(u8 taskId)
 static void CreateStarterPokemonLabel(u8 selection)
 {
     u8 categoryText[32];
+    u8 displayName[32];
     struct WindowTemplate winTemplate;
     const u8 *speciesName;
+    const u8 *prefix;
+    const u8 *suffix;
     s32 width;
     u8 labelLeft, labelRight, labelTop, labelBottom;
+    u8 nameFont;
 
     u16 species = GetStarterPokemon(selection);
     CopyMonCategoryText(SpeciesToNationalPokedexNum(species), categoryText);
     speciesName = gSpeciesNames[species];
+
+    prefix = NULL;
+    suffix = NULL;
+
+    if ((species >= SPECIES_VENUSAUR_MEGA && species <= SPECIES_RAYQUAZA_MEGA)
+    || (species >= SPECIES_CLEFABLE_MEGA && species <= SPECIES_MEOWSTIC_FEMALE_MEGA))
+        prefix = gText_PrefixMega;
+
+    if (species >= SPECIES_RATTATA_ALOLAN && species <= SPECIES_MAROWAK_ALOLAN)
+        prefix = gText_PrefixAlolan;
+
+    if ((species >= SPECIES_MEOWTH_GALARIAN && species <= SPECIES_STUNFISK_GALARIAN)
+    || species == SPECIES_DARMANITAN_ZEN_MODE_GALARIAN)
+        prefix = gText_PrefixGalarian;
+
+    if (species >= SPECIES_GROWLITHE_HISUIAN && species <= SPECIES_DECIDUEYE_HISUIAN)
+        prefix = gText_PrefixHisuian;
+
+    if (species == SPECIES_TAUROS_PALDEAN || species == SPECIES_TAUROS_PALDEAN_BLAZE_BREED
+    || species == SPECIES_TAUROS_PALDEAN_AQUA_BREED || species == SPECIES_WOOPER_PALDEAN)
+        prefix = gText_PrefixPaldean;
+
+    switch (species)
+    {
+    case SPECIES_CHARIZARD_MEGA_X:
+    case SPECIES_MEWTWO_MEGA_X:
+    case SPECIES_RAICHU_MEGA_X:
+        suffix = gText_SuffixX;
+        break;
+    case SPECIES_CHARIZARD_MEGA_Y:
+    case SPECIES_MEWTWO_MEGA_Y:
+    case SPECIES_RAICHU_MEGA_Y:
+        suffix = gText_SuffixY;
+        break;
+    case SPECIES_ABSOL_MEGA_Z:
+    case SPECIES_GARCHOMP_MEGA_Z:
+    case SPECIES_LUCARIO_MEGA_Z:
+        suffix = gText_SuffixZ;
+        break;
+    case SPECIES_KYOGRE_PRIMAL:
+    case SPECIES_GROUDON_PRIMAL:
+        prefix = gText_PrefixPrimal;
+        break;
+    case SPECIES_TAUROS_PALDEAN_BLAZE_BREED:
+        suffix = gText_SuffixBlazeBreed;
+        break;
+    case SPECIES_TAUROS_PALDEAN_AQUA_BREED:
+        suffix = gText_SuffixAquaBreed;
+        break;
+    case SPECIES_PIKACHU_PARTNER:
+    case SPECIES_EEVEE_PARTNER:
+        prefix = gText_PrefixPartner;
+        break;
+    case SPECIES_CASTFORM_SUNNY:
+        prefix = gText_PrefixSunnyForm;
+        break;
+    case SPECIES_CASTFORM_RAINY:
+        prefix = gText_PrefixRainyForm;
+        break;
+    case SPECIES_CASTFORM_SNOWY:
+        prefix = gText_PrefixSnowyForm;
+        break;
+    case SPECIES_DEOXYS_ATTACK:
+        prefix = gText_PrefixAttackForme;
+        break;
+    case SPECIES_DEOXYS_DEFENSE:
+        prefix = gText_PrefixDefenseForme;
+        break;
+    case SPECIES_DEOXYS_SPEED:
+        prefix = gText_PrefixSpeedForme;
+        break;
+    case SPECIES_WORMADAM_SANDY_CLOAK:
+        prefix = gText_PrefixSandyCloak;
+        break;
+    case SPECIES_WORMADAM_TRASH_CLOAK:
+        prefix = gText_PrefixTrashCloak;
+        break;
+    case SPECIES_ROTOM_HEAT:
+        prefix = gText_PrefixHeat;
+        break;
+    case SPECIES_ROTOM_WASH:
+        prefix = gText_PrefixWash;
+        break;
+    case SPECIES_ROTOM_FROST:
+        prefix = gText_PrefixFrost;
+        break;
+    case SPECIES_ROTOM_FAN:
+        prefix = gText_PrefixFan;
+        break;
+    case SPECIES_ROTOM_MOW:
+        prefix = gText_PrefixMow;
+        break;
+    case SPECIES_DIALGA_ORIGIN:
+    case SPECIES_PALKIA_ORIGIN:
+    case SPECIES_GIRATINA_ORIGIN:
+        prefix = gText_PrefixOriginForme;
+        break;
+    case SPECIES_SHAYMIN_SKY:
+        prefix = gText_PrefixSkyForme;
+        break;
+    case SPECIES_BASCULIN_BLUE_STRIPED:
+        prefix = gText_PrefixBlueStriped;
+        break;
+    case SPECIES_BASCULIN_WHITE_STRIPED:
+        prefix = gText_PrefixWhiteStriped;
+        break;
+    case SPECIES_DARMANITAN_ZEN_MODE:
+    case SPECIES_DARMANITAN_ZEN_MODE_GALARIAN:
+        suffix = gText_SuffixZenMode;
+        break;
+    case SPECIES_TORNADUS_THERIAN:
+    case SPECIES_THUNDURUS_THERIAN:
+    case SPECIES_LANDORUS_THERIAN:
+    case SPECIES_ENAMORUS_THERIAN:
+        prefix = gText_PrefixTherian;
+        break;
+    case SPECIES_KYUREM_WHITE:
+        prefix = gText_PrefixWhite;
+        break;
+    case SPECIES_KYUREM_BLACK:
+        prefix = gText_PrefixBlack;
+        break;
+    case SPECIES_MELOETTA_PIROUETTE:
+        prefix = gText_PrefixPirouette;
+        break;
+    case SPECIES_GRENINJA_ASH:
+        prefix = gText_PrefixAsh;
+        break;
+    case SPECIES_FLOETTE_ETERNAL_FLOWER:
+        prefix = gText_PrefixEternalFlower;
+        break;
+    case SPECIES_ZYGARDE_10:
+        prefix = gText_Prefix10Percent;
+        break;
+    case SPECIES_ZYGARDE_COMPLETE:
+        prefix = gText_PrefixComplete;
+        break;
+    case SPECIES_HOOPA_UNBOUND:
+        suffix = gText_SuffixUnbound;
+        break;
+    case SPECIES_ORICORIO_POM_POM:
+        prefix = gText_PrefixPomPom;
+        break;
+    case SPECIES_ORICORIO_PAU:
+        prefix = gText_PrefixPau;
+        break;
+    case SPECIES_ORICORIO_SENSU:
+        prefix = gText_PrefixSensu;
+        break;
+    case SPECIES_LYCANROC_MIDNIGHT:
+        prefix = gText_PrefixMidnight;
+        break;
+    case SPECIES_LYCANROC_DUSK:
+        prefix = gText_PrefixDusk;
+        break;
+    case SPECIES_WISHIWASHI_SCHOOL:
+        prefix = gText_PrefixSchool;
+        break;
+    case SPECIES_MINIOR_CORE_RED:
+        prefix = gText_PrefixCore;
+        break;
+    case SPECIES_NECROZMA_DUSK_MANE:
+        prefix = gText_PrefixDuskMane;
+        break;
+    case SPECIES_NECROZMA_DAWN_WINGS:
+        prefix = gText_PrefixDawnWings;
+        break;
+    case SPECIES_NECROZMA_ULTRA:
+        prefix = gText_PrefixUltra;
+        break;
+    case SPECIES_ZACIAN_CROWNED_SWORD:
+    case SPECIES_ZAMAZENTA_CROWNED_SHIELD:
+        prefix = gText_PrefixCrowned;
+        break;
+    case SPECIES_ETERNATUS_ETERNAMAX:
+        prefix = gText_PrefixEternamax;
+        break;
+    case SPECIES_URSHIFU_RAPID_STRIKE_STYLE:
+        prefix = gText_PrefixRapidStrike;
+        break;
+    case SPECIES_CALYREX_ICE_RIDER:
+        prefix = gText_PrefixIceRider;
+        break;
+    case SPECIES_CALYREX_SHADOW_RIDER:
+        prefix = gText_PrefixShadowRider;
+        break;
+    case SPECIES_URSALUNA_BLOODMOON:
+        prefix = gText_PrefixBloodmoon;
+        break;
+    case SPECIES_PALAFIN_HERO:
+        prefix = gText_PrefixHero;
+        break;
+    case SPECIES_OGERPON_WELLSPRING:
+        prefix = gText_PrefixWellspringMask;
+        break;
+    case SPECIES_OGERPON_HEARTHFLAME:
+        prefix = gText_PrefixHearthflameMask;
+        break;
+    case SPECIES_OGERPON_CORNERSTONE:
+        prefix = gText_PrefixCornerstoneMask;
+        break;
+    case SPECIES_TERAPAGOS_TERASTAL:
+        prefix = gText_PrefixTerastal;
+        break;
+    case SPECIES_TERAPAGOS_STELLAR:
+        prefix = gText_PrefixStellar;
+        break;
+    }
+
+    if (prefix != NULL)
+    {
+        StringCopy(displayName, prefix);
+        StringAppend(displayName, speciesName);
+        if (suffix != NULL)
+            StringAppend(displayName, suffix);
+    }
+    else
+    {
+        StringCopy(displayName, speciesName);
+    }
 
     winTemplate = sWindowTemplate_StarterLabel;
     winTemplate.tilemapLeft = sStarterLabelCoords[selection][0];
@@ -585,17 +810,33 @@ static void CreateStarterPokemonLabel(u8 selection)
     sStarterLabelWindowId = AddWindow(&winTemplate);
     FillWindowPixelBuffer(sStarterLabelWindowId, PIXEL_FILL(0));
 
-    width = GetStringCenterAlignXOffset(FONT_NARROW, categoryText, 0x68);
+    width = GetStringCenterAlignXOffset(FONT_NARROW, categoryText, 0x70);
     AddTextPrinterParameterized3(sStarterLabelWindowId, FONT_NARROW, width, 1, sTextColors, 0, categoryText);
 
-    width = GetStringCenterAlignXOffset(FONT_NORMAL, speciesName, 0x68);
-    AddTextPrinterParameterized3(sStarterLabelWindowId, FONT_NORMAL, width, 17, sTextColors, 0, speciesName);
+    switch (species) {
+    case SPECIES_DARMANITAN_ZEN_MODE_GALARIAN:
+    case SPECIES_OGERPON_HEARTHFLAME:
+    case SPECIES_OGERPON_CORNERSTONE:
+        nameFont = FONT_NARROWER;
+        break;
+    case SPECIES_BASCULIN_WHITE_STRIPED:
+    case SPECIES_BASCULIN_BLUE_STRIPED:
+    case SPECIES_FLOETTE_ETERNAL_FLOWER:
+    case SPECIES_OGERPON_WELLSPRING:
+        nameFont = FONT_NARROW;
+        break;
+    default:
+        nameFont = FONT_NORMAL;
+        break;
+    }
+    width = GetStringCenterAlignXOffset(nameFont, displayName, 0x70);
+    AddTextPrinterParameterized3(sStarterLabelWindowId, nameFont, width, 17, sTextColors, 0, displayName);
 
     PutWindowTilemap(sStarterLabelWindowId);
     ScheduleBgCopyTilemapToVram(0);
 
-    labelLeft = sStarterLabelCoords[selection][0] * 8 - 4;
-    labelRight = (sStarterLabelCoords[selection][0] + 13) * 8 + 4;
+    labelLeft = sStarterLabelCoords[selection][0] * 8;
+    labelRight = (sStarterLabelCoords[selection][0] + 14) * 8;
     labelTop = sStarterLabelCoords[selection][1] * 8;
     labelBottom = (sStarterLabelCoords[selection][1] + 4) * 8;
     SetGpuReg(REG_OFFSET_WIN0H, WIN_RANGE(labelLeft, labelRight));

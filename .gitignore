@@ -41,3 +41,4 @@ prefabs.json
 *.js
 *.ini
 *.toml
+*:Zone.Identifier
