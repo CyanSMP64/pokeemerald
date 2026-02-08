@@ -1153,7 +1153,7 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
     SPECIES_SHINY_PAL(GALLADE_MEGA, gMonShinyPalette_GalladeMega),
     SPECIES_SHINY_PAL(AUDINO_MEGA, gMonShinyPalette_AudinoMega),
     SPECIES_SHINY_PAL(DIANCIE_MEGA, gMonShinyPalette_DiancieMega),
-    SPECIES_SHINY_PAL(CLEFABLE_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(CLEFABLE_MEGA, gMonShinyPalette_ClefableMega),
     SPECIES_SHINY_PAL(VICTREEBEL_MEGA, gMonShinyPalette_VictreebelMega),
     SPECIES_SHINY_PAL(STARMIE_MEGA, gMonShinyPalette_StarmieMega),
     SPECIES_SHINY_PAL(DRAGONITE_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
@@ -1196,12 +1196,12 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
     SPECIES_SHINY_PAL(ZERAORA_MEGA, gMonShinyPalette_ZeraoraMega),
     SPECIES_SHINY_PAL(SCOVILLAIN_MEGA, gMonShinyPalette_ScovillainMega),
     SPECIES_SHINY_PAL(GLIMMORA_MEGA, gMonShinyPalette_GlimmoraMega),
-    SPECIES_SHINY_PAL(TATSUGIRI_MEGA, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(TATSUGIRI_MEGA, gMonShinyPalette_TatsugiriMega),
     SPECIES_SHINY_PAL(BAXCALIBUR_MEGA, gMonShinyPalette_BaxcaliburMega),
     SPECIES_SHINY_PAL(MEOWSTIC_FEMALE_MEGA, gMonShinyPalette_MeowsticMega),
     SPECIES_SHINY_PAL(MAGEARNA_MEGA_ORIGINAL_COLOR, gMonShinyPalette_MagearnaMegaOriginal),
-    SPECIES_SHINY_PAL(TATSUGIRI_MEGA_DROOPY, gMonShinyPalette_CircledQuestionMark), // placeholder
-    SPECIES_SHINY_PAL(TATSUGIRI_MEGA_STRETCHY, gMonShinyPalette_CircledQuestionMark), // placeholder
+    SPECIES_SHINY_PAL(TATSUGIRI_MEGA_DROOPY, gMonShinyPalette_TatsugiriMega),
+    SPECIES_SHINY_PAL(TATSUGIRI_MEGA_STRETCHY, gMonShinyPalette_TatsugiriMega),
 
     SPECIES_SHINY_PAL(RAYQUAZA_MEGA, gMonShinyPalette_RayquazaMega),
     SPECIES_SHINY_PAL(KYOGRE_PRIMAL, gMonShinyPalette_KyogrePrimal),

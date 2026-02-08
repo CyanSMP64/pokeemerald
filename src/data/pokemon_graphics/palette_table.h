@@ -1153,7 +1153,7 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(GALLADE_MEGA, gMonPalette_GalladeMega),
     SPECIES_PAL(AUDINO_MEGA, gMonPalette_AudinoMega),
     SPECIES_PAL(DIANCIE_MEGA, gMonPalette_DiancieMega),
-    SPECIES_PAL(CLEFABLE_MEGA, gMonPalette_CircledQuestionMark), // placeholder
+    SPECIES_PAL(CLEFABLE_MEGA, gMonPalette_ClefableMega),
     SPECIES_PAL(VICTREEBEL_MEGA, gMonPalette_VictreebelMega),
     SPECIES_PAL(STARMIE_MEGA, gMonPalette_StarmieMega),
     SPECIES_PAL(DRAGONITE_MEGA, gMonPalette_CircledQuestionMark), // placeholder
@@ -1196,12 +1196,12 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(ZERAORA_MEGA, gMonPalette_ZeraoraMega),
     SPECIES_PAL(SCOVILLAIN_MEGA, gMonPalette_ScovillainMega),
     SPECIES_PAL(GLIMMORA_MEGA, gMonPalette_GlimmoraMega),
-    SPECIES_PAL(TATSUGIRI_MEGA, gMonPalette_CircledQuestionMark), // placeholder
+    SPECIES_PAL(TATSUGIRI_MEGA, gMonPalette_TatsugiriMega),
     SPECIES_PAL(BAXCALIBUR_MEGA, gMonPalette_BaxcaliburMega),
     SPECIES_PAL(MEOWSTIC_FEMALE_MEGA, gMonPalette_MeowsticMega),
     SPECIES_PAL(MAGEARNA_MEGA_ORIGINAL_COLOR, gMonPalette_MagearnaMegaOriginal),
-    SPECIES_PAL(TATSUGIRI_MEGA_DROOPY, gMonPalette_CircledQuestionMark), // placeholder
-    SPECIES_PAL(TATSUGIRI_MEGA_STRETCHY, gMonPalette_CircledQuestionMark), // placeholder
+    SPECIES_PAL(TATSUGIRI_MEGA_DROOPY, gMonPalette_TatsugiriMega),
+    SPECIES_PAL(TATSUGIRI_MEGA_STRETCHY, gMonPalette_TatsugiriMega),
 
     SPECIES_PAL(RAYQUAZA_MEGA, gMonPalette_RayquazaMega),
     SPECIES_PAL(KYOGRE_PRIMAL, gMonPalette_KyogrePrimal),

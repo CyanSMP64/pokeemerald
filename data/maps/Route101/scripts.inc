@@ -218,7 +218,6 @@ Route101_EventScript_BirchsBag::
 	faceplayer
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_RESCUED_BIRCH
-	getplayerxy VAR_0x8004, VAR_0x8005
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_ZIGZAGOON
 	setobjectxy OBJ_EVENT_ID_PLAYER, 6, 13
@@ -266,6 +265,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival::
 	applymovement LOCALID_BIRCH, Route101_Movement_BirchAfterTakingBag
 	waitmovement 0
 	removeobject LOCALID_BIRCH
+	getplayerxy VAR_0x8004, VAR_0x8005
 	special SpawnCameraObject
 	call_if_eq VAR_0x8005, 14, Route101_EventScript_CameraPanTowardsPlayerEast
 	call_if_eq VAR_0x8005, 15, Route101_EventScript_CameraPanTowardsPlayerSouth

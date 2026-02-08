@@ -1161,7 +1161,7 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_GALLADE_MEGA]                 = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
     [SPECIES_AUDINO_MEGA]                  = { .size = MON_COORDS_SIZE(48, 64), .y_offset =  6 },
     [SPECIES_DIANCIE_MEGA]                 = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_CLEFABLE_MEGA]                = { .size = MON_COORDS_SIZE(64, 64), .y_offset = 12 },
+    [SPECIES_CLEFABLE_MEGA]                = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
     [SPECIES_VICTREEBEL_MEGA]              = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_STARMIE_MEGA]                 = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_DRAGONITE_MEGA]               = { .size = MON_COORDS_SIZE(64, 64), .y_offset = 12 },
@@ -1209,7 +1209,7 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_MEOWSTIC_FEMALE_MEGA]         = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_MAGEARNA_MEGA_ORIGINAL_COLOR] = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_TATSUGIRI_MEGA_DROOPY]        = { .size = MON_COORDS_SIZE(64, 64), .y_offset = 12 },
-    [SPECIES_TATSUGIRI_MEGA_STRETCHY]      = { .size = MON_COORDS_SIZE(64, 64), .y_offset = 12 },
+    [SPECIES_TATSUGIRI_MEGA_STRETCHY]      = { .size = MON_COORDS_SIZE(64, 64), .y_offset = 11 },
     // Special Mega + Primals
     [SPECIES_RAYQUAZA_MEGA]                = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_KYOGRE_PRIMAL]                = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },

@@ -1155,7 +1155,7 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(GALLADE_MEGA, gMonFrontPic_GalladeMega),
     SPECIES_SPRITE(AUDINO_MEGA, gMonFrontPic_AudinoMega),
     SPECIES_SPRITE(DIANCIE_MEGA, gMonFrontPic_DiancieMega),
-    SPECIES_SPRITE(CLEFABLE_MEGA, gMonFrontPic_CircledQuestionMark), // placeholder
+    SPECIES_SPRITE(CLEFABLE_MEGA, gMonFrontPic_ClefableMega),
     SPECIES_SPRITE(VICTREEBEL_MEGA, gMonFrontPic_VictreebelMega),
     SPECIES_SPRITE(STARMIE_MEGA, gMonFrontPic_StarmieMega),
     SPECIES_SPRITE(DRAGONITE_MEGA, gMonFrontPic_CircledQuestionMark), // placeholder
@@ -1198,12 +1198,12 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(ZERAORA_MEGA, gMonFrontPic_ZeraoraMega),
     SPECIES_SPRITE(SCOVILLAIN_MEGA, gMonFrontPic_ScovillainMega),
     SPECIES_SPRITE(GLIMMORA_MEGA, gMonFrontPic_GlimmoraMega),
-    SPECIES_SPRITE(TATSUGIRI_MEGA, gMonFrontPic_CircledQuestionMark), // placeholder
+    SPECIES_SPRITE(TATSUGIRI_MEGA, gMonFrontPic_TatsugiriMega),
     SPECIES_SPRITE(BAXCALIBUR_MEGA, gMonFrontPic_BaxcaliburMega),
     SPECIES_SPRITE(MEOWSTIC_FEMALE_MEGA, gMonFrontPic_MeowsticMega),
     SPECIES_SPRITE(MAGEARNA_MEGA_ORIGINAL_COLOR, gMonFrontPic_MagearnaMegaOriginal),
-    SPECIES_SPRITE(TATSUGIRI_MEGA_DROOPY, gMonFrontPic_CircledQuestionMark), // placeholder
-    SPECIES_SPRITE(TATSUGIRI_MEGA_STRETCHY, gMonFrontPic_CircledQuestionMark), // placeholder
+    SPECIES_SPRITE(TATSUGIRI_MEGA_DROOPY, gMonFrontPic_TatsugiriMegaDroopy),
+    SPECIES_SPRITE(TATSUGIRI_MEGA_STRETCHY, gMonFrontPic_TatsugiriMegaStretchy),
     SPECIES_SPRITE(RAYQUAZA_MEGA, gMonFrontPic_RayquazaMega),
     SPECIES_SPRITE(KYOGRE_PRIMAL, gMonFrontPic_KyogrePrimal),
     SPECIES_SPRITE(GROUDON_PRIMAL, gMonFrontPic_GroudonPrimal),
