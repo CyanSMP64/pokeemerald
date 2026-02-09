@@ -1094,31 +1094,43 @@ static u8 SaveSavingMessageCallback(void)
         FlagSet(FLAG_SYS_DEBUG_SAVE);
         FlagClear(FLAG_SYS_DEBUG_MODE);
     }
+    else
+        FlagClear(FLAG_SYS_DEBUG_SAVE);
     if (FlagGet(FLAG_SYS_NO_COLLISION) == TRUE)
     {
         FlagSet(FLAG_SYS_SAVE_NO_COLLISION);
         FlagClear(FLAG_SYS_NO_COLLISION);
     }
+    else
+        FlagClear(FLAG_SYS_SAVE_NO_COLLISION);
     if (FlagGet(FLAG_SYS_NO_ENCOUNTER) == TRUE)
     {
         FlagSet(FLAG_SYS_SAVE_NO_ENCOUNTER);
         FlagClear(FLAG_SYS_NO_ENCOUNTER);
     }
+    else
+        FlagClear(FLAG_SYS_SAVE_NO_ENCOUNTER);
     if (FlagGet(FLAG_SYS_NO_TRAINER_SEE) == TRUE)
     {
         FlagSet(FLAG_SYS_SAVE_NO_TRAINER_SEE);
         FlagClear(FLAG_SYS_NO_TRAINER_SEE);
     }
+    else
+        FlagClear(FLAG_SYS_SAVE_NO_TRAINER_SEE);
     if (FlagGet(FLAG_SYS_PC_FROM_DEBUG_MENU) == TRUE)
     {
         FlagSet(FLAG_SYS_SAVE_PC_FROM_DEBUG_MENU);
         FlagClear(FLAG_SYS_PC_FROM_DEBUG_MENU);
     }
+    else
+        FlagClear(FLAG_SYS_SAVE_PC_FROM_DEBUG_MENU);
     if (FlagGet(FLAG_SYS_NO_BATTLE_DMG) == TRUE)
     {
         FlagSet(FLAG_SYS_SAVE_NO_BATTLE_DMG);
         FlagClear(FLAG_SYS_NO_BATTLE_DMG);
     }
+    else
+        FlagClear(FLAG_SYS_SAVE_NO_BATTLE_DMG);
     ShowSaveMessage(gText_SavingDontTurnOff, SaveDoSaveCallback);
     return SAVE_IN_PROGRESS;
 }
