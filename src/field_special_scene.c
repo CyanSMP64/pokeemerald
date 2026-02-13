@@ -265,7 +265,7 @@ void ExecuteTruckSequence(void)
     DrawWholeMapView();
     LockPlayerFieldControls();
     CpuFastFill(0, gPlttBufferFaded, PLTT_SIZE);
-    CreateTask(Task_HandleTruckSequence, 0xA);
+    CreateTask((TaskFunc)CB2_LoadMap2, 0xA);
 }
 
 void EndTruckSequence(u8 taskId)

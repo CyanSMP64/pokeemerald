@@ -2015,12 +2015,10 @@ MatchCall_BattlePyramidText14::
 	.string "See you again!$"
 
 MatchCall_Text_Mom1::
-	.string "MOM: Your father and you…\n"
-	.string "Everyone is captivated by POKéMON.\p"
-	.string "What is the charm of POKéMON?\p"
-	.string "Me?\n"
-	.string "I adore POKéMON that help me with\l"
-	.string "my everyday chores.$"
+	.string "Remember to use your\n"
+	.string "Prime Gaming Sub\p"
+	.string "Like on your favorite streamer\n"
+	.string "{PLAYER}$"
 
 MatchCall_Text_Mom2::
 	.string "MOM: Hi, {PLAYER}!\n"
@@ -2852,19 +2850,8 @@ MatchCall_Text_UnusedProfBirch:
 	.string "POKéMON becomes more fun, eh?$"
 
 MatchCall_Text_MrStone1::
-	.string "MR. STONE: Oh? {PLAYER}{KUN}!\p"
-	.string "Since you called me, the POKéNAV\n"
-	.string "must be working properly!\p"
-	.string "Other people will be registered,\n"
-	.string "so try calling them up, too!\p"
-	.string "Good! Good!\n"
-	.string "You seem to be quite happy!\p"
-	.string "Hm…\n"
-	.string "How could I know that?\p"
-	.string "It's because I'm looking down at\n"
-	.string "you from my office window!\p"
-	.string "Wahahaha!\n"
-	.string "See you again!$"
+	.string "MR. STONE: Who gave you this number?\n"
+	.string "Stop calling me.$"
 
 MatchCall_Text_MrStone2::
 	.string "MR. STONE: Oh? {PLAYER}{KUN}!\p"

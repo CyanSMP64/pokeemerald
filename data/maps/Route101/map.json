@@ -27,7 +27,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 16,
+      "x": 18,
       "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
@@ -41,7 +41,7 @@
     {
       "local_id": "LOCALID_ROUTE101_BIRCH",
       "graphics_id": "OBJ_EVENT_GFX_PROF_BIRCH",
-      "x": 9,
+      "x": 4,
       "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_JOG_IN_PLACE_RIGHT",
@@ -68,7 +68,7 @@
     {
       "local_id": "LOCALID_ROUTE101_ZIGZAGOON",
       "graphics_id": "OBJ_EVENT_GFX_ZIGZAGOON_1",
-      "x": 10,
+      "x": 5,
       "y": 13,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_JOG_IN_PLACE_LEFT",
@@ -97,16 +97,37 @@
       "x": 2,
       "y": 13,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route101_EventScript_Boy",
       "flag": "FLAG_HIDE_ROUTE_101_BOY"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 10,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ArtisanCave_1F_EventScript_ItemCarbos",
+      "flag": "FLAG_ITEM_ARTISAN_CAVE_1F_CARBOS"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_PETALBURG_CITY",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [
     {
       "type": "trigger",

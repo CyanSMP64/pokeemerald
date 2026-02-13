@@ -261,7 +261,6 @@ Route104_EventScript_ExpertF::
 	giveitem ITEM_CHESTO_BERRY
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_CHESTO_BERRY_ROUTE_104
-	msgbox Route104_Text_TrainersOftenMakeMonHoldBerries, MSGBOX_DEFAULT
 	release
 	end
 
@@ -368,12 +367,10 @@ Route104_EventScript_SailToDewfordDadCalls::
 	waitmovement 0
 	pokenavcall Route104_Text_DadPokenavCall
 	waitmessage
-	delay 30
 	playfanfare MUS_REGISTER_MATCH_CALL
 	msgbox Route104_Text_RegisteredDadInPokenav, MSGBOX_DEFAULT
 	waitfanfare
 	closemessage
-	delay 30
 	setflag FLAG_ENABLE_NORMAN_MATCH_CALL
 	applymovement LOCALID_PLAYER, Route104_Movement_SailToDewfordAfterDadCalls
 	applymovement LOCALID_ROUTE104_BOAT, Route104_Movement_SailToDewfordAfterDadCalls, MAP_ROUTE104
@@ -1018,25 +1015,14 @@ Route104_Text_OnlyThrowBallAtWildPokemon:
 	.string "wild POKéMON.$"
 
 Route104_Text_ImNotATrainer:
-	.string "Oh, no, I'm not a TRAINER.\p"
-	.string "But that's right, if TRAINERS lock eyes,\n"
-	.string "it's a challenge to battle.\p"
-	.string "If you don't want to battle, stay out\n"
-	.string "of their sight.$"
+	.string "Oh, no, I'm not a TRAINER.$"
 
 Route104_Text_LikeFillingMouthWithSeedsTakeThis:
-	.string "I like filling my mouth with seeds,\n"
-	.string "then spitting them out fast!\p"
-	.string "You can have this, so you try it out!\p"
-	.string "Use it on a POKéMON, and it will learn\n"
-	.string "a move for firing seeds rapidly.$"
+	.string "Why do you even want this?\n"
+	.string "You can't even use it!$"
 
 Route104_Text_TMsAreOneTimeUse:
-	.string "A word of advice!\p"
-	.string "A TM, TECHNICAL MACHINE, is good only\n"
-	.string "for one-time use.\p"
-	.string "Once you use it, it's gone.\n"
-	.string "Think twice before using it!$"
+	.string "I already gave you the TM.$"
 
 Route104_Text_DontNeedThisTakeIt:
 	.string "This FLOWER SHOP started selling\n"

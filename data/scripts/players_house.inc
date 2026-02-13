@@ -41,33 +41,25 @@ PlayersHouse_1F_EventScript_MomGoSeeRoom::
 	end
 
 LittlerootTown_BrendansHouse_2F_EventScript_WallClock::
-	lockall
 	setvar VAR_0x8004, MALE
 	goto PlayersHouse_2F_EventScript_WallClock
 	end
 
 LittlerootTown_MaysHouse_2F_EventScript_WallClock::
-	lockall
 	setvar VAR_0x8004, FEMALE
 	goto PlayersHouse_2F_EventScript_WallClock
 	end
 
 PlayersHouse_2F_EventScript_WallClock::
 	goto_if_set FLAG_SET_WALL_CLOCK, PlayersHouse_2F_EventScript_CheckWallClock
-	msgbox PlayersHouse_2F_Text_ClockIsStopped, MSGBOX_DEFAULT
 	call PlayersHouse_2F_EventScript_SetWallClock
-	delay 30
-	setvar VAR_LITTLEROOT_INTRO_STATE, 6
+	setvar VAR_LITTLEROOT_INTRO_STATE, 8
 	setflag FLAG_SET_WALL_CLOCK
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_1
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_2
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, PlayersHouse_2F_EventScript_MomComesUpstairsMale
-	call_if_eq VAR_RESULT, FEMALE, PlayersHouse_2F_EventScript_MomComesUpstairsFemale
-	playse SE_EXIT
 	removeobject VAR_0x8008
 	releaseall
-	end
+	return
 
 PlayersHouse_2F_EventScript_MomComesUpstairsMale::
 	setvar VAR_0x8008, LOCALID_PLAYERS_HOUSE_2F_MOM

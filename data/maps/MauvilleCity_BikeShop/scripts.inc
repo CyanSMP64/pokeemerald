@@ -40,6 +40,7 @@ MauvilleCity_BikeShop_EventScript_YesFar::
 
 MauvilleCity_BikeShop_EventScript_GetMachBike::
 	msgbox MauvilleCity_BikeShop_Text_ChoseMachBike, MSGBOX_DEFAULT
+	giveitem ITEM_ACRO_BIKE
 	giveitem ITEM_MACH_BIKE
 	goto MauvilleCity_BikeShop_EventScript_ComeBackToSwitchBikes
 	end
@@ -47,19 +48,18 @@ MauvilleCity_BikeShop_EventScript_GetMachBike::
 MauvilleCity_BikeShop_EventScript_GetAcroBike::
 	msgbox MauvilleCity_BikeShop_Text_ChoseAcroBike, MSGBOX_DEFAULT
 	giveitem ITEM_ACRO_BIKE
+	giveitem ITEM_MACH_BIKE
 	goto MauvilleCity_BikeShop_EventScript_ComeBackToSwitchBikes
 	end
 
 MauvilleCity_BikeShop_EventScript_ComeBackToSwitchBikes::
 	msgbox MauvilleCity_BikeShop_Text_ComeBackToSwitchBikes, MSGBOX_DEFAULT
-	special SwapRegisteredBike
 	release
 	end
 
 MauvilleCity_BikeShop_EventScript_AskSwitchBikes::
-	msgbox MauvilleCity_BikeShop_Text_WantToSwitchBikes, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, MauvilleCity_BikeShop_EventScript_SwitchBikes
-	goto_if_eq VAR_RESULT, NO, MauvilleCity_BikeShop_EventScript_KeepBike
+	msgbox MauvilleCity_BikeShop_Text_WantToSwitchBikes, MSGBOX_DEFAULT
+	release
 	end
 
 @ If the player does not have a bike on them Rydel assumes its stored in the PC
@@ -215,18 +215,17 @@ MauvilleCity_BikeShop_Text_ExplainBikesChooseWhichOne:
 	.string "Which one will you choose?$"
 
 MauvilleCity_BikeShop_Text_ChoseMachBike:
-	.string "{PLAYER} chose the MACH BIKE.$"
+	.string "{PLAYER} chose BOTH BIKES.$"
 
 MauvilleCity_BikeShop_Text_ChoseAcroBike:
-	.string "{PLAYER} chose the ACRO BIKE.$"
+	.string "{PLAYER} chose BOTH BIKES.$"
 
 MauvilleCity_BikeShop_Text_ComeBackToSwitchBikes:
 	.string "RYDEL: If you get the urge to switch\n"
 	.string "BIKES, just come see me!$"
 
 MauvilleCity_BikeShop_Text_WantToSwitchBikes:
-	.string "RYDEL: Oh? Were you thinking about\n"
-	.string "switching BIKES?$"
+	.string "RYDEL: You have both bikes.$"
 
 MauvilleCity_BikeShop_Text_IllSwitchBikes:
 	.string "RYDEL: Okay, no problem!\n"

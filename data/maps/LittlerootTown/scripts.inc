@@ -113,7 +113,7 @@ LittlerootTown_EventScript_StepOffTruckMale::
 	setvar VAR_0x8005, 8
 	call LittlerootTown_EventScript_GoInsideWithMom
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK
-	warpsilent MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F, 8, 8
+	warpsilent MAP_ROUTE101, 0, 8, 8
 	waitstate
 	releaseall
 	end
@@ -124,13 +124,12 @@ LittlerootTown_EventScript_StepOffTruckFemale::
 	setvar VAR_0x8005, 8
 	call LittlerootTown_EventScript_GoInsideWithMom
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
-	warpsilent MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F, 2, 8
+	warpsilent MAP_ROUTE101, 0, 2, 8
 	waitstate
 	releaseall
 	end
 
 LittlerootTown_EventScript_GoInsideWithMom::
-	delay 15
 	playse SE_LEDGE
 	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerStepOffTruck
 	waitmovement 0
@@ -141,34 +140,31 @@ LittlerootTown_EventScript_GoInsideWithMom::
 	waitmovement 0
 	closedoor VAR_0x8004, VAR_0x8005
 	waitdooranim
-	delay 10
 	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomApproachPlayerAtTruck
 	waitmovement 0
 	msgbox LittlerootTown_Text_OurNewHomeLetsGoInside, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomApproachDoor
-	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerApproachDoor
-	waitmovement 0
-	opendoor VAR_0x8004, VAR_0x8005
-	waitdooranim
-	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomEnterHouse
-	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerEnterHouse
-	waitmovement 0
+	checkplayergender
+	compare_var_to_value VAR_RESULT, 0
+	call_if TRUE, LittlerootTown_BrendansHouse_2F_EventScript_WallClock
+	compare_var_to_value VAR_RESULT, 1
+	call_if TRUE, LittlerootTown_MaysHouse_2F_EventScript_WallClock
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
-	setvar VAR_LITTLEROOT_INTRO_STATE, 3
-	hideplayer
-	closedoor VAR_0x8004, VAR_0x8005
-	waitdooranim
+	setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 2
+	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 2
+	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
+	setvar VAR_LITTLEROOT_TOWN_STATE, 2
+	setvar VAR_ROUTE101_STATE, 2
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN
-	clearflag FLAG_HIDE_MAP_NAME_POPUP
+	clearflag VAR_TEMP_0
 	return
 
 LittlerootTown_Movement_MomExitHouse:
-	walk_down
+	walk_faster_down
 	step_end
 
 LittlerootTown_Movement_MomApproachPlayerAtTruck:
-	walk_down
+	walk_faster_down
 	walk_in_place_faster_left
 	step_end
 
@@ -197,9 +193,6 @@ LittlerootTown_Movement_PlayerEnterHouse:
 
 LittlerootTown_Movement_PlayerStepOffTruck:
 	jump_right
-	delay_16
-	delay_16
-	delay_16
 	step_end
 
 LittlerootTown_EventScript_BeginDexUpgradeScene::
@@ -472,8 +465,6 @@ LittlerootTown_EventScript_GiveRunningShoesTrigger::
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_SetHomeDoorCoordsMale
 	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_SetHomeDoorCoordsFemale
-	msgbox LittlerootTown_Text_WaitPlayer, MSGBOX_DEFAULT
-	closemessage
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_MomApproachPlayerMale
 	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_MomApproachPlayerFemale
@@ -482,7 +473,6 @@ LittlerootTown_EventScript_GiveRunningShoesTrigger::
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_MomReturnHomeMale
 	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_MomReturnHomeFemale
 	goto LittlerootTown_EventScript_SetReceivedRunningShoes
-	end
 
 LittlerootTown_EventScript_SetHomeDoorCoordsMale::
 	setvar VAR_0x8009, 5
@@ -895,40 +885,20 @@ LittlerootTown_EventScript_SetReceivedRunningShoes::
 LittlerootTown_EventScript_GiveRunningShoes::
 	msgbox LittlerootTown_Text_WearTheseRunningShoes, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
-	message LittlerootTown_Text_SwitchShoesWithRunningShoes
-	waitfanfare
 	setflag FLAG_RECEIVED_RUNNING_SHOES
-	msgbox LittlerootTown_Text_ExplainRunningShoes, MSGBOX_DEFAULT
-	msgbox LittlerootTown_Text_ComeHomeIfAnythingHappens, MSGBOX_DEFAULT
+	setflag FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM
 	closemessage
 	delay 30
 	return
 
 LittlerootTown_Text_OurNewHomeLetsGoInside:
-	.string "MOM: {PLAYER}, we're here, honey!\p"
-	.string "It must be tiring riding with our things\n"
-	.string "in the moving truck.\p"
-	.string "Well, this is LITTLEROOT TOWN.\p"
-	.string "How do you like it?\n"
-	.string "This is our new home!\p"
-	.string "It has a quaint feel, but it seems to be\n"
-	.string "an easy place to live, don't you think?\p"
-	.string "And, you get your own room, {PLAYER}!\n"
-	.string "Let's go inside.$"
+	.string "MOM: What time is it?$"
 
 LittlerootTown_Text_WaitPlayer:
 	.string "MOM: Wait, {PLAYER}!$"
 
 LittlerootTown_Text_WearTheseRunningShoes:
-	.string "MOM: {PLAYER}! {PLAYER}! Did you\n"
-	.string "introduce yourself to PROF. BIRCH?\p"
-	.string "Oh! What an adorable POKéMON!\n"
-	.string "You got it from PROF. BIRCH. How nice!\p"
-	.string "You're your father's child, all right.\n"
-	.string "You look good together with POKéMON!\p"
-	.string "Here, honey! If you're going out on an\n"
-	.string "adventure, wear these RUNNING SHOES.\p"
-	.string "They'll put a zip in your step!$"
+	.string "MOM: Shoes.$"
 
 LittlerootTown_Text_SwitchShoesWithRunningShoes:
 	.string "{PLAYER} switched shoes with the\n"

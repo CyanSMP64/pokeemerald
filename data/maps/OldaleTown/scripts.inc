@@ -73,7 +73,6 @@ OldaleTown_EventScript_ExplainPokemonMart::
 	msgbox OldaleTown_Text_ThisIsAPokemonMart, MSGBOX_DEFAULT
 	giveitem ITEM_POTION
 	goto_if_eq VAR_RESULT, FALSE, OldaleTown_EventScript_BagIsFull
-	msgbox OldaleTown_Text_PotionExplanation, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_POTION_OLDALE
 	fadedefaultbgm
 	release
@@ -91,37 +90,37 @@ OldaleTown_EventScript_BagIsFull::
 	end
 
 OldaleTown_Movement_EmployeeEast:
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
 	walk_in_place_faster_down
 	step_end
 
 OldaleTown_Movement_EmployeeSouth:
-	walk_left
-	walk_up
-	walk_up
-	walk_right
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_faster_left
+	walk_faster_up
+	walk_faster_up
+	walk_faster_right
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
 	walk_in_place_faster_down
 	step_end
 
 OldaleTown_Movement_EmployeeNorth:
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
 	walk_in_place_faster_down
 	step_end
 
@@ -142,13 +141,13 @@ OldaleTown_Movement_Unknown1:
 	step_end
 
 OldaleTown_Movement_PlayerEast:
-	walk_right
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_faster_right
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
 	step_end
 
 OldaleTown_Movement_PlayerSouth:
@@ -156,21 +155,21 @@ OldaleTown_Movement_PlayerSouth:
 	delay_16
 	delay_16
 	delay_16
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
 	step_end
 
 OldaleTown_Movement_PlayerNorth:
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
+	walk_faster_up
 	step_end
 
 OldaleTown_Movement_Unknown2:
@@ -344,36 +343,20 @@ OldaleTown_Text_SavingMyProgress:
 	.string "progress.$"
 
 OldaleTown_Text_IWorkAtPokemonMart:
-	.string "Hi!\n"
-	.string "I work at a POKéMON MART.\p"
-	.string "Can I get you to come with me?$"
+	.string "Follow me.$"
 
 OldaleTown_Text_ThisIsAPokemonMart:
-	.string "This is a POKéMON MART.\n"
-	.string "Just look for our blue roof.\p"
-	.string "We sell a variety of goods including\n"
-	.string "POKé BALLS for catching POKéMON.\p"
-	.string "Here, I'd like you to have this as\n"
-	.string "a promotional item.$"
+	.string "Trust me and we will escape from the city.$"
 
 OldaleTown_Text_PotionExplanation:
-	.string "A POTION can be used anytime, so it's\n"
-	.string "even more useful than a POKéMON CENTER\l"
-	.string "in certain situations.$"
+	.string "You only get one.$"
 
 OldaleTown_Text_WaitDontComeInHere:
-	.string "Aaaaah! Wait!\n"
-	.string "Please don't come in here.\p"
-	.string "I just discovered the footprints of\n"
-	.string "a rare POKéMON!\p"
-	.string "Wait until I finish sketching\n"
-	.string "them, okay?$"
+	.string "If I take one more step, it'll be the\n"
+	.string "farthest away from home I've ever been.$"
 
 OldaleTown_Text_DiscoveredFootprints:
-	.string "I just discovered the footprints of\n"
-	.string "a rare POKéMON!\p"
-	.string "Wait until I finish sketching\n"
-	.string "them, okay?$"
+	.string "This is it…$"
 
 OldaleTown_Text_FinishedSketchingFootprints:
 	.string "I finished sketching the footprints of\n"
@@ -393,5 +376,5 @@ OldaleTown_Text_BrendanLetsGoBack:
 
 OldaleTown_Text_TownSign:
 	.string "OLDALE TOWN\n"
-	.string "“Where things start off scarce.”$"
+	.string "“You'll be back.”$"
 

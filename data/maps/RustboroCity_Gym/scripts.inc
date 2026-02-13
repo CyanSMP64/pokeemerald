@@ -176,25 +176,12 @@ RustboroCity_Gym_Text_MarcPostBattle:
 	.string "pick the ROCK type at her young age.$"
 
 RustboroCity_Gym_Text_RoxanneIntro:
-	.string "Hello, I am ROXANNE, the RUSTBORO\n"
-	.string "POKéMON GYM LEADER.\p"
-	.string "I became a GYM LEADER so that I might\n"
-	.string "apply what I learned at the POKéMON\l"
-	.string "TRAINER'S SCHOOL in battle.\p"
-	.string "Would you kindly demonstrate how you\n"
-	.string "battle, and with which POKéMON?$"
+	.string "Hey, I'm ROXANNE, and I'm putting a red\n"
+	.string "light on your run.$"
 
 RustboroCity_Gym_Text_RoxanneDefeat:
 	.string "So…\n"
-	.string "I lost…\p"
-	.string "It seems that I still have much more\n"
-	.string "to learn…\p"
-	.string "I understand.\p"
-	.string "The POKéMON LEAGUE's rules state\n"
-	.string "that TRAINERS are to be given this\l"
-	.string "if they defeat a GYM LEADER.\p"
-	.string "Please accept the official POKéMON\n"
-	.string "LEAGUE STONE BADGE.$"
+	.string "I lost :($"
 
 RustboroCity_Gym_Text_ReceivedStoneBadge:
 	.string "{PLAYER} received the STONE BADGE\n"
@@ -210,12 +197,7 @@ RustboroCity_Gym_Text_StoneBadgeInfoTakeThis:
 RustboroCity_Gym_Text_ExplainRockTomb:
 	.string "That TECHNICAL MACHINE, TM39,\n"
 	.string "contains ROCK TOMB.\p"
-	.string "It not only inflicts damage by dropping\n"
-	.string "rocks, it also lowers SPEED.\p"
-	.string "If you use a TM, it instantly teaches\n"
-	.string "the move to a POKéMON.\p"
-	.string "Remember, a TM can be used only once,\n"
-	.string "so think before you use it.$"
+	.string "Good luck with Brawly.$"
 
 RustboroCity_Gym_Text_RoxannePostBattle:
 	.string "Since you are so strong, you should\n"

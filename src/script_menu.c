@@ -28,7 +28,6 @@ static void Task_HandleMultichoiceInput(u8 taskId);
 static void Task_HandleYesNoInput(u8 taskId);
 static void Task_HandleMultichoiceGridInput(u8 taskId);
 static void DrawMultichoiceMenu(u8 left, u8 top, u8 multichoiceId, bool8 ignoreBPress, u8 cursorPos);
-static void InitMultichoiceCheckWrap(bool8 ignoreBPress, u8 count, u8 windowId, u8 multichoiceId);
 static void DrawLinkServicesMultichoiceMenu(u8 multichoiceId);
 static void CreatePCMultichoice(void);
 static void CreateLilycoveSSTidalMultichoice(void);
@@ -122,7 +121,7 @@ static void DrawMultichoiceMenu(u8 left, u8 top, u8 multichoiceId, bool8 ignoreB
 #define tWindowId       data[6]
 #define tMultichoiceId  data[7]
 
-static void InitMultichoiceCheckWrap(bool8 ignoreBPress, u8 count, u8 windowId, u8 multichoiceId)
+void InitMultichoiceCheckWrap(bool8 ignoreBPress, u8 count, u8 windowId, u8 multichoiceId)
 {
     u8 i;
     u8 taskId;

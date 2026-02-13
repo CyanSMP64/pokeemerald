@@ -1,7 +1,5 @@
 Route102_Text_CalvinIntro:
-	.string "If you have POKéMON with you, then\n"
-	.string "you're an official POKéMON TRAINER!\l"
-	.string "You can't say no to my challenge!$"
+	.string "I probably have a Legendary.$"
 
 Route102_Text_CalvinDefeated:
 	.string "Arrgh, I lost…\n"
@@ -35,8 +33,7 @@ Route102_Text_CalvinRematchPostBattle:
 	.string "I'll get stronger, too.$"
 
 Route102_Text_AllenIntro:
-	.string "Did you just become a TRAINER?\n"
-	.string "We're both beginners!$"
+	.string "I wear only shorts, never pants.$"
 
 Route102_Text_AllenDefeated:
 	.string "I called you because I thought\n"
@@ -47,8 +44,7 @@ Route102_Text_AllenPostBattle:
 	.string "I wish I would win soon…$"
 
 Route102_Text_RickIntro:
-	.string "Hahah! Our eyes met!\n"
-	.string "I'll take you on with my BUG POKéMON!$"
+	.string "I just caught a Mareep, it's cracked!$"
 
 Route102_Text_RickDefeated:
 	.string "Ow! Down and out!$"
@@ -382,8 +378,7 @@ Route104_Text_WinstonPostRematch:
 	.string "It's so deep, the world of POKéMON…$"
 
 Route104_Text_CindyIntro:
-	.string "We must have been fated to meet.\n"
-	.string "May I ask you for a battle?$"
+	.string "I have a Full Restore :)$"
 
 Route104_Text_CindyDefeat:
 	.string "Oh, my!$"

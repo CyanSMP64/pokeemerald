@@ -99,7 +99,6 @@ static void Overworld_ResetStateAfterWhiteOut(void);
 static void CB2_ReturnToFieldLocal(void);
 static void CB2_ReturnToFieldLink(void);
 static void CB2_LoadMapOnReturnToFieldCableClub(void);
-static void CB2_LoadMap2(void);
 static void VBlankCB_Field(void);
 static void SpriteCB_LinkPlayer(struct Sprite *);
 static void ChooseAmbientCrySpecies(void);
@@ -1579,7 +1578,7 @@ void CB2_LoadMap(void)
     gMain.savedCallback = CB2_LoadMap2;
 }
 
-static void CB2_LoadMap2(void)
+void CB2_LoadMap2(void)
 {
     DoMapLoadLoop(&gMain.state);
     SetFieldVBlankCallback();

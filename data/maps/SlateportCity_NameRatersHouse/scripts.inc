@@ -13,7 +13,7 @@ SlateportCity_NameRatersHouse_EventScript_ChooseMonToRate::
 	msgbox SlateportCity_NameRatersHouse_Text_CritiqueWhichMonNickname, MSGBOX_DEFAULT
 	special ChoosePartyMon
 	waitstate
-	goto_if_ne VAR_0x8004, PARTY_NOTHING_CHOSEN, SlateportCity_NameRatersHouse_EventScript_RateMonNickname
+	goto_if_ne VAR_0x8004, PARTY_NOTHING_CHOSEN, SlateportCity_NameRatersHouse_EventScript_ChangeNickname
 	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, SlateportCity_NameRatersHouse_EventScript_DeclineNameRate
 	end
 
@@ -62,14 +62,11 @@ SlateportCity_NameRatersHouse_EventScript_NewNameDifferent::
 	end
 
 SlateportCity_NameRatersHouse_Text_PleasedToRateMonNickname:
-	.string "Hi, hi! I'm the NAME RATER!\n"
-	.string "I'm the fortune-teller of names!\p"
-	.string "I shall be pleased to rate your\n"
-	.string "POKéMON's nickname.$"
+	.string "Want to change a POKéMON's name?$"
 
 SlateportCity_NameRatersHouse_Text_CritiqueWhichMonNickname:
 	.string "Which POKéMON's nickname should\n"
-	.string "I critique?$"
+	.string "I change?$"
 
 SlateportCity_NameRatersHouse_Text_FineNameSuggestBetterOne:
 	.string "Hmmm… {STR_VAR_1}, is it? That is\n"
@@ -82,21 +79,14 @@ SlateportCity_NameRatersHouse_Text_WhatShallNewNameBe:
 	.string "nickname be?$"
 
 SlateportCity_NameRatersHouse_Text_MonShallBeKnownAsName:
-	.string "Done! From now on, this POKéMON\n"
-	.string "shall be known as {STR_VAR_1}!\p"
-	.string "It is a better name than before!\n"
-	.string "How fortunate for you!$"
+	.string "Done!$"
 
 SlateportCity_NameRatersHouse_Text_DoVisitAgain:
 	.string "I see.\n"
 	.string "Do come visit again.$"
 
 SlateportCity_NameRatersHouse_Text_NameNoDifferentYetSuperior:
-	.string "Done! From now on, this POKéMON\n"
-	.string "shall be known as {STR_VAR_1}!\p"
-	.string "It looks no different from before,\n"
-	.string "and yet, this is vastly superior!\p"
-	.string "How fortunate for you!$"
+	.string "Done!$"
 
 SlateportCity_NameRatersHouse_Text_MagnificentName:
 	.string "Hmmm… {STR_VAR_1} it is!\p"
