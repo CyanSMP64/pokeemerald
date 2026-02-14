@@ -1017,25 +1017,14 @@ Route104_Text_OnlyThrowBallAtWildPokemon:
 	.string "wild Pokémon.$"
 
 Route104_Text_ImNotATrainer:
-	.string "Oh, no, I'm not a Trainer.\p"
-	.string "But that's right, if Trainers lock eyes,\n"
-	.string "it's a challenge to battle.\p"
-	.string "If you don't want to battle, stay out\n"
-	.string "of their sight.$"
+	.string "Oh, no, I'm not a Trainer.$"
 
 Route104_Text_LikeFillingMouthWithSeedsTakeThis:
-	.string "I like filling my mouth with seeds,\n"
-	.string "then spitting them out fast!\p"
-	.string "You can have this, so you try it out!\p"
-	.string "Use it on a Pokémon, and it will learn\n"
-	.string "a move for firing seeds rapidly.$"
+	.string "Why do you want this?\n"
+	.string "You can't even use it!$"
 
 Route104_Text_TMsAreOneTimeUse:
-	.string "A word of advice!\p"
-	.string "A TM, Technical Machine, is good only\n"
-	.string "for one-time use.\p"
-	.string "Once you use it, it's gone.\n"
-	.string "Think twice before using it!$"
+	.string "I already gave you the TM.$"
 
 Route104_Text_DontNeedThisTakeIt:
 	.string "This Flower Shop started selling\n"

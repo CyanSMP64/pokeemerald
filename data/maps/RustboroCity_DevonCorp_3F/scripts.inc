@@ -29,10 +29,6 @@ RustboroCity_DevonCorp_3F_OnFrame:
 
 RustboroCity_DevonCorp_3F_EventScript_MeetPresident::
 	lockall
-	applymovement LOCALID_DEVON_EMPLOYEE, RustboroCity_DevonCorp_3F_Movement_EmployeeWalkOffscreen
-	waitmovement 0
-	applymovement LOCALID_DEVON_EMPLOYEE, RustboroCity_DevonCorp_3F_Movement_EmployeeReturnToPlayer
-	waitmovement 0
 	playbgm MUS_FOLLOW_ME, FALSE
 	applymovement LOCALID_DEVON_EMPLOYEE, RustboroCity_DevonCorp_3F_Movement_LeadPlayerToPresident
 	applymovement OBJ_EVENT_ID_PLAYER, RustboroCity_DevonCorp_3F_Movement_PlayerFollowToPresident
@@ -41,7 +37,9 @@ RustboroCity_DevonCorp_3F_EventScript_MeetPresident::
 	applymovement LOCALID_DEVON_EMPLOYEE, RustboroCity_DevonCorp_3F_Movement_EmployeeFaceDesk
 	applymovement OBJ_EVENT_ID_PLAYER, RustboroCity_DevonCorp_3F_Movement_PlayerApproachDesk
 	waitmovement 0
+	msgbox RustboroCity_DevonCorp_3F_Text_MrStoneIHaveFavor, MSGBOX_DEFAULT
 	giveitem ITEM_LETTER
+	msgbox RustboroCity_DevonCorp_3F_Text_MrStoneWantYouToHaveThis, MSGBOX_DEFAULT
 	playfanfare MUS_OBTAIN_ITEM
 	message RustboroCity_DevonCorp_3F_Text_ReceivedPokenav
 	waitfanfare
@@ -49,6 +47,7 @@ RustboroCity_DevonCorp_3F_EventScript_MeetPresident::
 	setflag FLAG_RECEIVED_POKENAV
 	setflag FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT
 	call Common_EventScript_OutOfCenterPartyHeal
+	msgbox RustboroCity_DevonCorp_3F_Text_MrStoneGoWithCautionAndCare, MSGBOX_DEFAULT
 	setflag FLAG_HIDE_ROUTE_116_WANDAS_BOYFRIEND
 	clearflag FLAG_HIDE_RUSTURF_TUNNEL_WANDAS_BOYFRIEND
 	clearflag FLAG_HIDE_RUSTURF_TUNNEL_WANDA
@@ -186,26 +185,11 @@ RustboroCity_DevonCorp_3F_EventScript_RareRocksDisplay::
 	end
 
 RustboroCity_DevonCorp_3F_Text_MrStoneIHaveFavor:
-	.string "I'm Mr. Stone, the President of\n"
-	.string "the Devon Corporation.\p"
-	.string "I'd just got word about you!\p"
-	.string "You saved our staff not just once,\n"
-	.string "but twice!\p"
-	.string "I have a favor to ask of an amazing\n"
-	.string "person like you.\p"
-	.string "I understand that you're delivering\n"
-	.string "a package to Slateport's Shipyard.\p"
-	.string "Well, on the way, could you stop off in\n"
-	.string "Dewford Town?\p"
-	.string "I was hoping that you'd deliver a\n"
-	.string "Letter to Steven in Dewford.$"
+	.string "Mr. Stone: Go to Dewford Town and\n"
+	.string "deliver this Letter to Steven.$"
 
 RustboroCity_DevonCorp_3F_Text_MrStoneWantYouToHaveThis:
-	.string "Mr. Stone: Now, you should know that\n"
-	.string "I am a great President.\p"
-	.string "So, I'd never be so cheap as to ask\n"
-	.string "a favor for nothing in return.\p"
-	.string "That's why I want you to have this!$"
+	.string "Mr. Stone: Take my old phone, too.$"
 
 RustboroCity_DevonCorp_3F_Text_ReceivedPokenav:
 	.string "{PLAYER} received a PokéNav.$"

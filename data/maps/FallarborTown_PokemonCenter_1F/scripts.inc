@@ -83,7 +83,8 @@ FallarborTown_PokemonCenter_1F_Movement_LanetteExitWest:
 	step_end
 
 FallarborTown_PokemonCenter_1F_Text_LanetteGreeting:
-	.string "Aaaaaaah!$"
+	.string "Aaaaaaah!\n"
+	.string "A creeper blew up my house!$"
 
 FallarborTown_PokemonCenter_1F_Text_FossilManiacEdgeOfTown:
 	.string "I wonder what Pokémon looked like\n"

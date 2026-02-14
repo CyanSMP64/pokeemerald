@@ -90,6 +90,7 @@ Route103_EventScript_AfterMayBattle::
 	end
 
 Route103_EventScript_AfterBrendanBattle::
+	msgbox Route103_Text_MayTimeToHeadBack, MSGBOX_DEFAULT
 	specialvar VAR_RESULT, IsPoisonInParty
 	goto_if_eq VAR_RESULT, TRUE, Route103_EventScript_RivalExit
 	goto Route103_EventScript_RivalEnd

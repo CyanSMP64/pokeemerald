@@ -129,11 +129,7 @@ Route102_Text_LetsGoBack:
 	.string "Let's go back to the Gym!$"
 
 Route102_Text_ImNotVeryTall:
-	.string "I'm…not very tall, so I sink right\n"
-	.string "into tall grass.\p"
-	.string "The grass goes up my nose and…\n"
-	.string "Fwafwafwafwafwa…\p"
-	.string "Fwatchoo!$"
+	.string "I'm just here to get in the way.$"
 
 Route102_Text_CatchWholeBunchOfPokemon:
 	.string "I knew you wanted to join me.$"

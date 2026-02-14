@@ -441,24 +441,39 @@ RustboroCity_EventScript_ReturnGoodsSpokeToEmployee::
 	end
 
 RustboroCity_EventScript_HelpGetGoodsTrigger0::
+	lockall
+	setvar VAR_TEMP_1, 0
 	goto RustboroCity_EventScript_EmployeeAskToGetGoods
 	end
 
 RustboroCity_EventScript_HelpGetGoodsTrigger1::
+	lockall
+	setvar VAR_TEMP_1, 1
 	goto RustboroCity_EventScript_EmployeeAskToGetGoods
 	end
 
 RustboroCity_EventScript_HelpGetGoodsTrigger2::
+	lockall
+	setvar VAR_TEMP_1, 2
 	goto RustboroCity_EventScript_EmployeeAskToGetGoods
 	end
 
 RustboroCity_EventScript_HelpGetGoodsTrigger3::
+	lockall
+	setvar VAR_TEMP_1, 3
 	goto RustboroCity_EventScript_EmployeeAskToGetGoods
 	end
 
 RustboroCity_EventScript_EmployeeAskToGetGoods::
+	call_if_eq VAR_TEMP_1, 0, RustboroCity_EventScript_EmployeeFacePlayerUp1
+	call_if_eq VAR_TEMP_1, 1, RustboroCity_EventScript_EmployeeFacePlayerLeft1
+	call_if_eq VAR_TEMP_1, 2, RustboroCity_EventScript_EmployeeFacePlayerDown1
+	call_if_eq VAR_TEMP_1, 3, RustboroCity_EventScript_EmployeeApproachPlayerDown1
 	setflag FLAG_INTERACTED_WITH_DEVON_EMPLOYEE_GOODS_STOLEN
 	setvar VAR_RUSTBORO_CITY_STATE, 3
+	copyobjectxytoperm LOCALID_DEVON_EMPLOYEE
+	msgbox RustboroCity_Text_HelpMeIWasRobbed, MSGBOX_DEFAULT
+	releaseall
 	end
 
 @ The below movement scripts are either partially or fully duplicated by the movement scripts when the player returns the goods
@@ -518,25 +533,35 @@ RustboroCity_Movement_EmployeeApproachPlayerDown:
 
 RustboroCity_EventScript_ReturnGoodsTrigger0::
 	lockall
+	setvar VAR_TEMP_1, 0
 	goto RustboroCity_EventScript_ReturnGoods
 	end
 
 RustboroCity_EventScript_ReturnGoodsTrigger1::
 	lockall
+	setvar VAR_TEMP_1, 1
 	goto RustboroCity_EventScript_ReturnGoods
 	end
 
 RustboroCity_EventScript_ReturnGoodsTrigger2::
 	lockall
+	setvar VAR_TEMP_1, 2
 	goto RustboroCity_EventScript_ReturnGoods
 	end
 
 RustboroCity_EventScript_ReturnGoodsTrigger3::
 	lockall
+	setvar VAR_TEMP_1, 3
 	goto RustboroCity_EventScript_ReturnGoods
 	end
 
 RustboroCity_EventScript_ReturnGoods::
+	call_if_eq VAR_TEMP_1, 0, RustboroCity_EventScript_EmployeeFacePlayerUp2
+	call_if_eq VAR_TEMP_1, 1, RustboroCity_EventScript_EmployeeFacePlayerLeft2
+	call_if_eq VAR_TEMP_1, 2, RustboroCity_EventScript_EmployeeFacePlayerDown2
+	call_if_eq VAR_TEMP_1, 3, RustboroCity_EventScript_EmployeeApproachPlayerDown2
+	call_if_eq VAR_TEMP_1, 4, RustboroCity_EventScript_EmployeeFacePlayerRight
+	msgbox RustboroCity_Text_YouGotItThankYou, MSGBOX_DEFAULT
 	giveitem ITEM_GREAT_BALL
 	call_if_eq VAR_RESULT, FALSE, RustboroCity_EventScript_BagFull
 	setflag FLAG_RETURNED_DEVON_GOODS
@@ -557,8 +582,6 @@ RustboroCity_EventScript_EmployeeFacePlayerUp2::
 	playse SE_PIN
 	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_Delay48
-	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	return
@@ -568,8 +591,6 @@ RustboroCity_EventScript_EmployeeFacePlayerLeft2::
 	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_Delay48
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
 	waitmovement 0
@@ -581,8 +602,6 @@ RustboroCity_EventScript_EmployeeFacePlayerDown2::
 	playse SE_PIN
 	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_ExclamationMark
 	waitmovement 0
-	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_Delay48
-	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	return
@@ -592,8 +611,6 @@ RustboroCity_EventScript_EmployeeApproachPlayerDown2::
 	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_Delay48
 	waitmovement 0
 	applymovement LOCALID_DEVON_EMPLOYEE, RustboroCity_Movement_EmployeeApproachPlayerDown
 	waitmovement 0
@@ -1047,26 +1064,14 @@ RustboroCity_Text_WaitDontTakeMyGoods:
 	.string "Don't take those parts!$"
 
 RustboroCity_Text_HelpMeIWasRobbed:
-	.string "Oh, it's you!\p"
-	.string "You're that fantastic Trainer who\n"
-	.string "helped me in Petalburg Woods!\p"
-	.string "Help me! I was robbed by Team Aqua!\n"
-	.string "I have to get the Devon Parts back!\p"
-	.string "If I don't…\n"
-	.string "I'm going to be in serious trouble.$"
+	.string "Get my stuff back.$"
 
 RustboroCity_Text_ShadyCharacterTookOffTowardsTunnel:
 	.string "That shady character, I think he took\n"
 	.string "off towards the tunnel over there.$"
 
 RustboroCity_Text_YouGotItThankYou:
-	.string "Oh! How did it go?\n"
-	.string "The Devon Parts?\p"
-	.string "You did!\n"
-	.string "You got them back!\p"
-	.string "You really are a great Trainer!\p"
-	.string "I know! As my thanks, I'll give you\n"
-	.string "another Great Ball!$"
+	.string "You got it!$"
 
 RustboroCity_Text_YoureLoadedWithItems:
 	.string "You're loaded with items.\n"
@@ -1208,9 +1213,7 @@ RustboroCity_Text_DevelopedNewPokenavFeature:
 	.string "{PLAYER}, may I see that PokéNav?$"
 
 RustboroCity_Text_AddedMatchCallPleaseCallMrStone:
-	.string "There you go, {PLAYER}!\p"
-	.string "I added a new feature named\n"
-	.string "Match Call to your PokéNav.\p"
+	.string "There you go, {PLAYER}!\n"
 	.string "Please give our President a call.$"
 
 RustboroCity_Text_PleaseSelectPokenav:

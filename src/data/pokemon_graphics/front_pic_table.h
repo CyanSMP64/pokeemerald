@@ -1158,13 +1158,13 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(CLEFABLE_MEGA, gMonFrontPic_ClefableMega),
     SPECIES_SPRITE(VICTREEBEL_MEGA, gMonFrontPic_VictreebelMega),
     SPECIES_SPRITE(STARMIE_MEGA, gMonFrontPic_StarmieMega),
-    SPECIES_SPRITE(DRAGONITE_MEGA, gMonFrontPic_CircledQuestionMark), // placeholder
+    SPECIES_SPRITE(DRAGONITE_MEGA, gMonFrontPic_DragoniteMega),
     SPECIES_SPRITE(MEGANIUM_MEGA, gMonFrontPic_MeganiumMega),
     SPECIES_SPRITE(FERALIGATR_MEGA, gMonFrontPic_FeraligatrMega),
     SPECIES_SPRITE(SKARMORY_MEGA, gMonFrontPic_SkarmoryMega),
     SPECIES_SPRITE(FROSLASS_MEGA, gMonFrontPic_FroslassMega),
     SPECIES_SPRITE(EMBOAR_MEGA, gMonFrontPic_EmboarMega),
-    SPECIES_SPRITE(EXCADRILL_MEGA, gMonFrontPic_CircledQuestionMark), // placeholder
+    SPECIES_SPRITE(EXCADRILL_MEGA, gMonFrontPic_ExcadrillMega),
     SPECIES_SPRITE(SCOLIPEDE_MEGA, gMonFrontPic_ScolipedeMega),
     SPECIES_SPRITE(SCRAFTY_MEGA, gMonFrontPic_ScraftyMega),
     SPECIES_SPRITE(EELEKTROSS_MEGA, gMonFrontPic_EelektrossMega),

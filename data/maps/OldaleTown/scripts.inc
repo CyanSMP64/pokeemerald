@@ -446,35 +446,21 @@ OldaleTown_Text_SavingMyProgress:
 	.string "progress.$"
 
 OldaleTown_Text_IWorkAtPokemonMart:
-	.string "Hi!\n"
-	.string "I work at a Pokémon Mart.\p"
-	.string "Can I get you to come with me?$"
+	.string "Follow me.$"
 
 OldaleTown_Text_ThisIsAPokemonMart:
-	.string "This is a Pokémon Mart.\n"
-	.string "Just look for our blue roof.\p"
-	.string "We sell a variety of goods including\n"
-	.string "Poké Balls for catching Pokémon.\p"
-	.string "Here, I'd like you to have this as\n"
-	.string "a promotional item.$"
+	.string "Trust me and we will escape from the\n"
+	.string "city.$"
 
 OldaleTown_Text_PotionExplanation:
-	.string "A Potion can be used only in battles.\n"
-	.string "Don't be a filthy cheater.$"
+	.string "You only get one.$"
 
 OldaleTown_Text_WaitDontComeInHere:
-	.string "Aaaaah! Wait!\n"
-	.string "Please don't come in here.\p"
-	.string "I just discovered the footprints of\n"
-	.string "a rare Pokémon!\p"
-	.string "Wait until I finish sketching\n"
-	.string "them, okay?$"
+	.string "If I take one more step, it'll be the\n"
+	.string "farthest away from home I've ever been.$"
 
 OldaleTown_Text_DiscoveredFootprints:
-	.string "I just discovered the footprints of\n"
-	.string "a rare Pokémon!\p"
-	.string "Wait until I finish sketching\n"
-	.string "them, okay?$"
+	.string "This is it…$"
 
 OldaleTown_Text_FinishedSketchingFootprints:
 	.string "I finished sketching the footprints of\n"
@@ -494,7 +480,7 @@ OldaleTown_Text_BrendanLetsGoBack:
 
 OldaleTown_Text_TownSign:
 	.string "Oldale Town\n"
-	.string "“Where things start off scarce.”$"
+	.string "“You'll be back.”$"
 
 OldaleTown_Text_Accuser1:
 	.string "Well, well, how d'ya do, young 'un?\p"

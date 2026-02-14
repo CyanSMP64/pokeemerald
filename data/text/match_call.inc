@@ -2015,12 +2015,10 @@ MatchCall_BattlePyramidText14::
 	.string "See you again!$"
 
 MatchCall_Text_Mom1::
-	.string "Mom: Your father and you…\n"
-	.string "Everyone is captivated by Pokémon.\p"
-	.string "What is the charm of Pokémon?\p"
-	.string "Me?\n"
-	.string "I adore Pokémon that help me with\l"
-	.string "my everyday chores.$"
+	.string "Remember to use your\n"
+	.string "Prime Gaming Sub\p"
+	.string "Like on your favorite streamer\n"
+	.string "{PLAYER}$"
 
 MatchCall_Text_Mom2::
 	.string "Mom: Hi, {PLAYER}!\n"
@@ -2856,16 +2854,8 @@ MatchCall_Text_MrStone1::
 	.string "Stop calling me.$"
 
 MatchCall_Text_MrStone2::
-	.string "Mr. Stone: Oh? {PLAYER}!\p"
-	.string "What's wrong? Have you forgotten\n"
-	.string "about that little errand of mine?\p"
-	.string "I need you to deliver my letter\n"
-	.string "to Steven in Dewford.\p"
-	.string "After that, deliver our parcel to\n"
-	.string "Capt. Stern in Slateport.\p"
-	.string "You remember, don't you?\p"
-	.string "Now, since I am a busy President,\n"
-	.string "I have to go! Bye-bye!$"
+	.string "Mr. Stone: Who gave you this number?\n"
+	.string "Stop calling me.$"
 
 MatchCall_Text_MrStone3::
 	.string "Mr. Stone: Oh! {PLAYER}!\p"

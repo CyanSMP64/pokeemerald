@@ -8,17 +8,18 @@ PetalburgWoods_EventScript_DevonResearcherLeft::
 	lockall
 	applymovement LOCALID_DEVON_EMPLOYEE, PetalburgWoods_Movement_DevonResearcherApproachPlayerLeft
 	waitmovement 0
+	msgbox PetalburgWoods_Text_HaveYouSeenShroomish, MSGBOX_DEFAULT
+	closemessage
 	playbgm MUS_ENCOUNTER_AQUA, FALSE
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaEntrance
 	waitmovement 0
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaApproachResearcherLeft
 	waitmovement 0
-	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
 	applymovement LOCALID_DEVON_EMPLOYEE, PetalburgWoods_Movement_DevonResearcherFleeToPlayerLeft
 	waitmovement 0
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaApproachPlayer
 	waitmovement 0
+	msgbox PetalburgWoods_Text_NoOneCrossesTeamAqua, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_GRUNT_PETALBURG_WOODS, PetalburgWoods_Text_YoureKiddingMe
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaBackOff
 	waitmovement 0
@@ -33,6 +34,8 @@ PetalburgWoods_EventScript_DevonResearcherRight::
 	lockall
 	applymovement LOCALID_DEVON_EMPLOYEE, PetalburgWoods_Movement_DevonResearcherApproachPlayerRight
 	waitmovement 0
+	msgbox PetalburgWoods_Text_HaveYouSeenShroomish, MSGBOX_DEFAULT
+	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	playbgm MUS_ENCOUNTER_AQUA, FALSE
@@ -40,12 +43,11 @@ PetalburgWoods_EventScript_DevonResearcherRight::
 	waitmovement 0
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaApproachResearcherRight
 	waitmovement 0
-	applymovement LOCALID_DEVON_EMPLOYEE, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
 	applymovement LOCALID_DEVON_EMPLOYEE, PetalburgWoods_Movement_DevonResearcherFleeToPlayerRight
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
+	msgbox PetalburgWoods_Text_NoOneCrossesTeamAqua, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_GRUNT_PETALBURG_WOODS, PetalburgWoods_Text_YoureKiddingMe
 	applymovement LOCALID_GRUNT, PetalburgWoods_Movement_AquaBackOff
 	waitmovement 0
@@ -284,8 +286,7 @@ PetalburgWoods_Text_NotAOneToBeFound:
 
 PetalburgWoods_Text_HaveYouSeenShroomish:
 	.string "Hello, have you seen any Pokémon\n"
-	.string "called Shroomish around here?\p"
-	.string "I really love that Pokémon.$"
+	.string "called Zekrom around here?"
 
 PetalburgWoods_Text_IWasGoingToAmbushYou:
 	.string "I was going to ambush you, but you\n"
@@ -303,10 +304,6 @@ PetalburgWoods_Text_YouHaveToHelpMe:
 	.string "You've got to help me, please!$"
 
 PetalburgWoods_Text_NoOneCrossesTeamAqua:
-	.string "Hunh? What do you think you're doing?\n"
-	.string "What, you're going to protect him?\p"
-	.string "No one who crosses Team Aqua\n"
-	.string "gets any mercy, not even a kid!\p"
 	.string "Come on and battle me!$"
 
 PetalburgWoods_Text_YoureKiddingMe:
@@ -344,9 +341,7 @@ PetalburgWoods_Text_YoureLoadedWithItems:
 	.string "I can't give you this Great Ball.$"
 
 PetalburgWoods_Text_GoBugPokemonTeam:
-	.string "I caught a whole bunch of Pokémon!\p"
-	.string "Go, go, go!\n"
-	.string "My Bug Pokémon team!$"
+	.string "I'm using tilt controls!$"
 
 PetalburgWoods_Text_ICouldntWin:
 	.string "I have all these Pokémon,\n"
@@ -357,8 +352,7 @@ PetalburgWoods_Text_ImOutOfPokeBalls:
 	.string "Now I'm out of Poké Balls.$"
 
 PetalburgWoods_Text_InstantlyPopularWithBugPokemon:
-	.string "If you take Bug Pokémon to school,\n"
-	.string "you get to be instantly popular!$"
+	.string "I know you were trying to dodge me.$"
 
 PetalburgWoods_Text_CantBePopularIfILose:
 	.string "I can't be popular if I lose.$"

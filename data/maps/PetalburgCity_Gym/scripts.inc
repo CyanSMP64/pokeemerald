@@ -1232,14 +1232,7 @@ PetalburgCity_Gym_Text_DadGoCollectBadges:
 	.string "stronger.$"
 
 PetalburgCity_Gym_Text_NormanGoToRustboro:
-	.string "Dad: Hm? Aren't you going to the\n"
-	.string "Pokémon Gym in Rustboro City?\p"
-	.string "There's no challenge for me to\n"
-	.string "battle a greenhorn Trainer.\p"
-	.string "{PLAYER}, I want you to challenge me\n"
-	.string "when you become a lot stronger.\p"
-	.string "I'll battle you, {PLAYER}, when you\n"
-	.string "can show me four Gym Badges, okay?$"
+	.string "Dad: You're already free.$"
 
 PetalburgCity_Gym_Text_NormanGoToDewford:
 	.string "Dad: I see… So, you've beaten\n"

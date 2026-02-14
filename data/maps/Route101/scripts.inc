@@ -336,8 +336,8 @@ Route101_Text_PleaseHelp:
 	.string "There's a Poké Ball!$"
 
 Route101_Text_DontLeaveMe:
-	.string "Wh-Where are you going?!\n"
-	.string "Don't leave me like this!$"
+	.string "You're not getting out of this\n"
+	.string "that easily.$"
 
 Route101_Text_YouSavedMe:
 	.string "Prof. Birch: You saved me! :)\n"

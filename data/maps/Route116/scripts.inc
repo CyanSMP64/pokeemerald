@@ -352,7 +352,7 @@ Route116_EventScript_Johnson::
 	end
 
 Route116_Text_ScoundrelMadeOffWithPeeko:
-	.string "Help birdge$"
+	.string "Help Birdge$"
 
 Route116_Text_WantToDigTunnel:
 	.string "Nnn… Roar!\p"

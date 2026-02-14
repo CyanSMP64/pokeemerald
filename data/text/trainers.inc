@@ -49,8 +49,8 @@ Route102_Text_RickDefeated:
 	.string "I didn't play around the crit…$"
 
 Route102_Text_RickPostBattle:
-	.string "You're saying this is IronMON…\n"
-	.string "what's that?$"
+	.string "I lost…\n"
+	.string "On to attempt 1,431…$"
 
 Route102_Text_TianaIntro:
 	.string "Entering my line of sight?\n"

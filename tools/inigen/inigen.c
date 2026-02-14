@@ -148,15 +148,15 @@ const struct TMText gTMTexts[] = {
     { 5,  0, 29, 12,  0x0D, "All my Pokémon does is [move]... No one dares to come near me...\\pSigh... If you would, please take this TM away..."},
     { 5,  0, 29, 12,  0x2F, "TM05 contains [move]."},
     { 8,  3,  3,  1,  0xAC, "That TM08 contains [move].\\p… … … … … …"},
-    { 9,  0, 19, 31,  0x0D, "I like filling my mouth with seeds, then spitting them out fast!\\pI like you, so you can have this!\\pUse it on a Pokémon, and it will learn [move].\\pWhat does that have to do with firing seeds? Well, nothing!"},
+    { 9,  0, 19, 31,  0x0D, "Why do you want this?\\nYou can’t even use it!"},
     {24,  0,  2,  8,  0x4C, "Wattson: Wahahahaha!\\pI knew it, \\v01\\v05! I knew I’d made the right choice asking you!\\pThis is my thanks - a TM containing [move]!\\pGo on, you’ve earned it!"},
     {31, 15,  5,  1,  0x2F, "TM31 contains [move]! It’s a move so horrible that I can’t describe it."},
     {34, 10,  0,  1,  0xBB, "That TM34 there contains [move]. You can count on it!\\p… … … … … …"},
-    {39, 11,  3,  1,  0x8F, "That TM39 contains [move].\\pIf you use a TM, it instantly teaches the move to a Pokémon.\\pRemember, a TM can be used only once, so think before you use it."},
+    {39, 11,  3,  1,  0x8F, "That TM39 contains [move].\\pGood luck with Brawly."},
     {40, 12,  1,  1,  0x97, "TM40 contains [move].\\p… … … … … …"},
     {41,  9,  2,  2,  0x2F, "That’s, like, TM41, you know? Hey, it’s [move], you hearing me?\\pHey, now, you listen here, like, I’m not laying a torment on you!"},
     {42,  8,  1,  1, 0x4FD, "Dad: TM42 contains [move].\\pIt might be able to turn a bad situation into an advantage."},
-    {47, 24, 10,  1,  0x19, "Steven: Okay, thank you.\\pYou went through all this trouble to deliver that. I need to thank you.\\pLet me see... I’ll give you this TM.\\pIt contains my favorite move, [move]."},
+    {47, 24, 10,  1,  0x19, "Steven: Thank you.\\nI’ll give you this TM.\\pIt contains the ultimate technique!\\p… … … … … …"},
     {50,  4,  1,  1,  0xAA, "That TM50 contains [move].\\p… … … … … …"}
 };
 

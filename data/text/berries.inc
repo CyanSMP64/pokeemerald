@@ -4,11 +4,8 @@ PetalburgCity_Gym_Text_GiveEnigmaBerry:
 	.string "I'd like you to have it.$"
 
 Route104_Text_PlantBerriesInSoilTakeThis:
-	.string "If you see Berries growing in loamy\n"
-	.string "soil, feel free to take them.\p"
-	.string "But make sure you plant a Berry in the\n"
-	.string "same spot. That's common courtesy.\p"
-	.string "Here, I'll share this with you.$"
+	.string "Want a berry?\n"
+	.string "Have a berry.$"
 
 Route104_Text_TrainersOftenMakeMonHoldBerries:
 	.string "The way you look, you must be a\n"
