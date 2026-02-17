@@ -1189,7 +1189,7 @@ const struct MonCoords gMonBackPicCoords[] =
     [SPECIES_SKARMORY_MEGA]                = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  1 },
     [SPECIES_FROSLASS_MEGA]                = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_EMBOAR_MEGA]                  = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_EXCADRILL_MEGA]               = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  4 },
+    [SPECIES_EXCADRILL_MEGA]               = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  6 },
     [SPECIES_SCOLIPEDE_MEGA]               = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
     [SPECIES_SCRAFTY_MEGA]                 = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  4 },
     [SPECIES_EELEKTROSS_MEGA]              = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },

@@ -26,6 +26,7 @@
 #include "party_menu.h"
 #include "pokeball.h"
 #include "pokedex.h"
+#include "pokemon.h"
 #include "pokemon_icon.h"
 #include "pokemon_summary_screen.h"
 #include "pokemon_storage_system.h"
@@ -3469,7 +3470,11 @@ static bool8 DoTradeAnim_Cable(void)
         DrawTextOnTradeWindow(0, gStringVar4, 0);
 
         if (sTradeAnim->monSpecies[TRADE_PLAYER] != SPECIES_EGG)
-            PlayCry_Normal(sTradeAnim->monSpecies[TRADE_PLAYER], 0);
+        {
+            u16 crySpecies = GetCrySpeciesIdFromPersonality(sTradeAnim->monSpecies[TRADE_PLAYER],
+                                                           sTradeAnim->monPersonalities[TRADE_PLAYER]);
+            PlayCry_Normal(crySpecies, 0);
+        }
 
         sTradeAnim->state = STATE_BYE_BYE;
         sTradeAnim->timer = 0;
@@ -3940,7 +3945,11 @@ static bool8 DoTradeAnim_Wireless(void)
         DrawTextOnTradeWindow(0, gStringVar4, 0);
 
         if (sTradeAnim->monSpecies[TRADE_PLAYER] != SPECIES_EGG)
-            PlayCry_Normal(sTradeAnim->monSpecies[TRADE_PLAYER], 0);
+        {
+            u16 crySpecies = GetCrySpeciesIdFromPersonality(sTradeAnim->monSpecies[TRADE_PLAYER],
+                                                           sTradeAnim->monPersonalities[TRADE_PLAYER]);
+            PlayCry_Normal(crySpecies, 0);
+        }
 
         sTradeAnim->state = STATE_BYE_BYE;
         sTradeAnim->timer = 0;

@@ -2559,6 +2559,8 @@ static void TeleportWarpInFieldEffect_SpinGround(struct Task *task)
 // Sprite data for field move mon sprite
 #define sSpecies       data[0]
 #define sOnscreenTimer data[1]
+#define sPersonalityLo data[2]
+#define sPersonalityHi data[3]
 #define sSlidOffscreen data[7]
 
 // There are two variants (outdoor/indoor) of the "show mon for a field move" effect
@@ -2937,6 +2939,8 @@ static u8 InitFieldMoveMonSprite(u32 species, u32 otId, u32 personality)
     sprite->callback = SpriteCallbackDummy;
     sprite->oam.priority = 0;
     sprite->sSpecies = species;
+    sprite->sPersonalityLo = (u16)personality;
+    sprite->sPersonalityHi = (u16)(personality >> 16);
     sprite->data[6] = noDucking;
     return monSprite;
 }
@@ -2945,13 +2949,16 @@ static void SpriteCB_FieldMoveMonSlideOnscreen(struct Sprite *sprite)
 {
     if ((sprite->x -= 20) <= DISPLAY_WIDTH / 2)
     {
+        u32 personality = (u16)sprite->sPersonalityLo | ((u32)(u16)sprite->sPersonalityHi << 16);
+        u16 crySpecies = GetCrySpeciesIdFromPersonality(sprite->sSpecies, personality);
+
         sprite->x = DISPLAY_WIDTH / 2;
         sprite->sOnscreenTimer = 30;
         sprite->callback = SpriteCB_FieldMoveMonWaitAfterCry;
         if (sprite->data[6])
-            PlayCry_NormalNoDucking(sprite->sSpecies, 0, CRY_VOLUME_RS, CRY_PRIORITY_NORMAL);
+            PlayCry_NormalNoDucking(crySpecies, 0, CRY_VOLUME_RS, CRY_PRIORITY_NORMAL);
         else
-            PlayCry_Normal(sprite->sSpecies, 0);
+            PlayCry_Normal(crySpecies, 0);
     }
 }
 
@@ -2974,6 +2981,8 @@ static void SpriteCB_FieldMoveMonSlideOffscreen(struct Sprite *sprite)
 #undef sSpecies
 #undef sSlidOffscreen
 #undef sOnscreenTimer
+#undef sPersonalityLo
+#undef sPersonalityHi
 
 #define tState data[0]
 #define tDestX data[1]

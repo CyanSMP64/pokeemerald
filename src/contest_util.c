@@ -916,6 +916,8 @@ static void Task_ShowWinnerMonBanner(u8 taskId)
         gMultiuseSpriteTemplate.paletteTag = pokePal->tag;
         spriteId = CreateSprite(&gMultiuseSpriteTemplate, DISPLAY_WIDTH + 32, DISPLAY_HEIGHT / 2, 10);
         gSprites[spriteId].data[1] = species;
+        gSprites[spriteId].data[2] = (u16)personality;
+        gSprites[spriteId].data[3] = (u16)(personality >> 16);
         gSprites[spriteId].oam.priority = 0;
         gSprites[spriteId].callback = SpriteCB_WinnerMonSlideIn;
         sContestResults->data->winnerMonSpriteId = spriteId;
@@ -1576,14 +1578,21 @@ static void Task_HighlightWinnersBox(u8 taskId)
     }
 }
 
+#define sWinnerMonSpecies       data[1]
+#define sWinnerMonPersonalityLo data[2]
+#define sWinnerMonPersonalityHi data[3]
+
 static void SpriteCB_WinnerMonSlideIn(struct Sprite *sprite)
 {
     if (sprite->data[0] < 10)
     {
         if (++sprite->data[0] == 10)
         {
-            PlayCry_Normal(sprite->data[1], 0);
-            sprite->data[1] = 0;
+            u32 personality = (u16)sprite->sWinnerMonPersonalityLo | ((u32)(u16)sprite->sWinnerMonPersonalityHi << 16);
+            u16 crySpecies = GetCrySpeciesIdFromPersonality(sprite->sWinnerMonSpecies, personality);
+
+            PlayCry_Normal(crySpecies, 0);
+            sprite->sWinnerMonSpecies = 0;
         }
     }
     else
@@ -1603,6 +1612,10 @@ static void SpriteCB_WinnerMonSlideIn(struct Sprite *sprite)
         }
     }
 }
+
+#undef sWinnerMonSpecies
+#undef sWinnerMonPersonalityLo
+#undef sWinnerMonPersonalityHi
 
 static void SpriteCB_WinnerMonSlideOut(struct Sprite *sprite)
 {

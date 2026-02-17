@@ -1843,7 +1843,11 @@ static void OpponentHandlePlayFanfareOrBGM(void)
 
 static void OpponentHandleFaintingCry(void)
 {
-    u16 species = GetMonData(&gEnemyParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_SPECIES);
+    struct Pokemon *mon = &gEnemyParty[gBattlerPartyIndexes[gActiveBattler]];
+    u16 species = GetMonData(mon, MON_DATA_SPECIES);
+    u32 personality = GetMonData(mon, MON_DATA_PERSONALITY);
+
+    species = GetCrySpeciesIdFromPersonality(species, personality);
 
     PlayCry_ByMode(species, 25, CRY_MODE_FAINT);
     OpponentBufferExecCompleted();

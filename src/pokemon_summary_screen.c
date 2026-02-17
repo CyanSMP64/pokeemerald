@@ -3813,10 +3813,11 @@ static void PlayMonCry(void)
     struct PokeSummary *summary = &sMonSummaryScreen->summary;
     if (!summary->isEgg)
     {
+        u16 species = GetCrySpeciesIdFromPersonality(summary->species2, summary->pid);
         if (ShouldPlayNormalMonCry(&sMonSummaryScreen->currentMon) == TRUE)
-            PlayCry_ByMode(summary->species2, 0, CRY_MODE_NORMAL);
+            PlayCry_ByMode(species, 0, CRY_MODE_NORMAL);
         else
-            PlayCry_ByMode(summary->species2, 0, CRY_MODE_WEAK);
+            PlayCry_ByMode(species, 0, CRY_MODE_WEAK);
     }
 }
 

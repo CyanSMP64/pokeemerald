@@ -904,16 +904,21 @@ static void Task_FadeOutPokeblockFeed(u8 taskId)
 #define sSpeed   data[0]
 #define sAccel   data[1]
 #define sSpecies data[2]
+#define sPersonalityLo data[3]
+#define sPersonalityHi data[4]
 
 static u8 CreateMonSprite(struct Pokemon *mon)
 {
     u16 species = GetMonData(mon, MON_DATA_SPECIES_OR_EGG);
+    u32 personality = GetMonData(mon, MON_DATA_PERSONALITY);
     u8 spriteId = CreateSprite(&gMultiuseSpriteTemplate, MON_X, MON_Y, 2);
 
     sPokeblockFeed->species = species;
     sPokeblockFeed->monSpriteId_ = spriteId;
     sPokeblockFeed->nature = GetNature(mon);
     gSprites[spriteId].sSpecies = species;
+    gSprites[spriteId].sPersonalityLo = (u16)personality;
+    gSprites[spriteId].sPersonalityHi = (u16)(personality >> 16);
     gSprites[spriteId].callback = SpriteCallbackDummy;
 
     sPokeblockFeed->noMonFlip = TRUE;
@@ -945,7 +950,12 @@ static void SpriteCB_MonJumpForPokeblock(struct Sprite *sprite)
 
     // Play cry at jump peak
     if (sprite->sSpeed == 0)
-        PlayCry_Normal(sprite->sSpecies, 0);
+    {
+        u32 personality = (u16)sprite->sPersonalityLo | ((u32)(u16)sprite->sPersonalityHi << 16);
+        u16 crySpecies = GetCrySpeciesIdFromPersonality(sprite->sSpecies, personality);
+
+        PlayCry_Normal(crySpecies, 0);
+    }
 
     if (sprite->sSpeed == 9)
         sprite->callback = SpriteCallbackDummy;

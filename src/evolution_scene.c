@@ -149,6 +149,8 @@ static void CB2_BeginEvolutionScene(void)
 #define tCanStop            data[3]
 #define tBits               data[3]
 #define tLearnsFirstMove    data[4]
+#define tPreEvoPersonalityLo data[11]
+#define tPreEvoPersonalityHi data[12]
 #define tLearnMoveState     data[6]
 #define tLearnMoveYesState  data[7]
 #define tLearnMoveNoState   data[8]
@@ -289,6 +291,8 @@ void EvolutionScene(struct Pokemon *mon, u16 postEvoSpecies, bool8 canStopEvo, u
     gTasks[id].tLearnsFirstMove = TRUE;
     gTasks[id].tEvoWasStopped = FALSE;
     gTasks[id].tPartyId = partyId;
+    gTasks[id].tPreEvoPersonalityLo = (u16)personality;
+    gTasks[id].tPreEvoPersonalityHi = (u16)(personality >> 16);
 
     memcpy(&sEvoStructPtr->savedPalette, &gPlttBufferUnfaded[BG_PLTT_ID(2)], sizeof(sEvoStructPtr->savedPalette));
 
@@ -1076,7 +1080,11 @@ static void Task_TradeEvolutionScene(u8 taskId)
     case T_EVOSTATE_INTRO_CRY:
         if (!IsTextPrinterActive(0))
         {
-            PlayCry_Normal(gTasks[taskId].tPreEvoSpecies, 0);
+            u32 personality = (u16)gTasks[taskId].tPreEvoPersonalityLo
+                            | ((u32)(u16)gTasks[taskId].tPreEvoPersonalityHi << 16);
+            u16 crySpecies = GetCrySpeciesIdFromPersonality(gTasks[taskId].tPreEvoSpecies, personality);
+
+            PlayCry_Normal(crySpecies, 0);
             gTasks[taskId].tState++;
         }
         break;

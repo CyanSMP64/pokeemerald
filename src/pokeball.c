@@ -670,6 +670,9 @@ static void Task_PlayCryWhenReleasedFromBall(u8 taskId)
     u8 battlerId = gTasks[taskId].tCryTaskBattler;
     u8 monSpriteId = gTasks[taskId].tCryTaskMonSpriteId;
     struct Pokemon *mon = (void *)(u32)((gTasks[taskId].tCryTaskMonPtr1 << 16) | (u16)(gTasks[taskId].tCryTaskMonPtr2));
+    u32 personality = GetMonData(mon, MON_DATA_PERSONALITY, NULL);
+
+    species = GetCrySpeciesIdFromPersonality(species, personality);
 
     switch (gTasks[taskId].tCryTaskState)
     {

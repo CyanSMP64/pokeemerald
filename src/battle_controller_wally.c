@@ -1413,7 +1413,11 @@ static void WallyHandlePlayFanfareOrBGM(void)
 
 static void WallyHandleFaintingCry(void)
 {
-    u16 species = GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_SPECIES);
+    struct Pokemon *mon = &gPlayerParty[gBattlerPartyIndexes[gActiveBattler]];
+    u16 species = GetMonData(mon, MON_DATA_SPECIES);
+    u32 personality = GetMonData(mon, MON_DATA_PERSONALITY);
+
+    species = GetCrySpeciesIdFromPersonality(species, personality);
 
     // Seems that it doesn't bother using CRY_MODE_FAINT because
     // Wally's Pokémon during the tutorial is never intended to faint.

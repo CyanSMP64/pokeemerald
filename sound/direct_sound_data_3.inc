@@ -4452,15 +4452,15 @@ Cry_GimmighoulRoaming::
 
 	.align 2
 Cry_MausholdThree::
-@	.incbin "sound/direct_sound_samples/cries/maushold_three.bin"
+	.incbin "sound/direct_sound_samples/cries/maushold_three.bin"
 
 	.align 2
 Cry_TatsugiriDroopy::
-@	.incbin "sound/direct_sound_samples/cries/tatsugiri_droopy.bin"
+	.incbin "sound/direct_sound_samples/cries/tatsugiri_droopy.bin"
 
 	.align 2
 Cry_TatsugiriStretchy::
-@	.incbin "sound/direct_sound_samples/cries/tatsugiri_stretchy.bin"
+	.incbin "sound/direct_sound_samples/cries/tatsugiri_stretchy.bin"
 
 	.align 2
 Cry_ClefableMega::

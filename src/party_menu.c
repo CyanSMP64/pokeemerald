@@ -5332,10 +5332,15 @@ static void Task_TryItemUseFormChange(u8 taskId)
 
         break;
     case 4:
+    {
+        u32 personality = GetMonData(mon, MON_DATA_PERSONALITY, NULL);
+
         targetSpecies = gTasks[taskId].tTargetSpecies;
+        targetSpecies = GetCrySpeciesIdFromPersonality(targetSpecies, personality);
         PlayCry_Normal(targetSpecies, 0);
         gTasks[taskId].tState++;
         break;
+    }
     case 5:
         if (IsCryFinished())
         {

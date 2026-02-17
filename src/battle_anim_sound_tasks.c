@@ -130,6 +130,7 @@ static void SoundTask_LoopSEAdjustPanning_Step(u8 taskId)
 void SoundTask_PlayCryHighPitch(u8 taskId)
 {
     u16 species = 0;
+    u32 personality = 0;
     s8 pan = BattleAnimAdjustPanning(SOUND_PAN_ATTACKER);
     if (IsContest())
     {
@@ -164,13 +165,24 @@ void SoundTask_PlayCryHighPitch(u8 taskId)
         }
 
         if (GetBattlerSide(battlerId) != B_SIDE_PLAYER)
-            species = GetMonData(&gEnemyParty[gBattlerPartyIndexes[battlerId]], MON_DATA_SPECIES);
+        {
+            struct Pokemon *mon = &gEnemyParty[gBattlerPartyIndexes[battlerId]];
+            species = GetMonData(mon, MON_DATA_SPECIES);
+            personality = GetMonData(mon, MON_DATA_PERSONALITY);
+        }
         else
-            species = GetMonData(&gPlayerParty[gBattlerPartyIndexes[battlerId]], MON_DATA_SPECIES);
+        {
+            struct Pokemon *mon = &gPlayerParty[gBattlerPartyIndexes[battlerId]];
+            species = GetMonData(mon, MON_DATA_SPECIES);
+            personality = GetMonData(mon, MON_DATA_PERSONALITY);
+        }
     }
 
     if (species != SPECIES_NONE)
+    {
+        species = GetCrySpeciesIdFromPersonality(species, personality);
         PlayCry_ByMode(species, pan, CRY_MODE_HIGH_PITCH);
+    }
 
     DestroyAnimVisualTask(taskId);
 }
@@ -178,6 +190,7 @@ void SoundTask_PlayCryHighPitch(u8 taskId)
 void SoundTask_PlayDoubleCry(u8 taskId)
 {
     u16 species = 0;
+    u32 personality = 0;
     s8 pan = BattleAnimAdjustPanning(SOUND_PAN_ATTACKER);
     if (IsContest())
     {
@@ -212,9 +225,17 @@ void SoundTask_PlayDoubleCry(u8 taskId)
         }
 
         if (GetBattlerSide(battlerId) != B_SIDE_PLAYER)
-            species = GetMonData(&gEnemyParty[gBattlerPartyIndexes[battlerId]], MON_DATA_SPECIES);
+        {
+            struct Pokemon *mon = &gEnemyParty[gBattlerPartyIndexes[battlerId]];
+            species = GetMonData(mon, MON_DATA_SPECIES);
+            personality = GetMonData(mon, MON_DATA_PERSONALITY);
+        }
         else
-            species = GetMonData(&gPlayerParty[gBattlerPartyIndexes[battlerId]], MON_DATA_SPECIES);
+        {
+            struct Pokemon *mon = &gPlayerParty[gBattlerPartyIndexes[battlerId]];
+            species = GetMonData(mon, MON_DATA_SPECIES);
+            personality = GetMonData(mon, MON_DATA_PERSONALITY);
+        }
     }
 
     gTasks[taskId].data[0] = gBattleAnimArgs[1];
@@ -223,6 +244,8 @@ void SoundTask_PlayDoubleCry(u8 taskId)
 
     if (species != SPECIES_NONE)
     {
+        species = GetCrySpeciesIdFromPersonality(species, personality);
+        gTasks[taskId].data[1] = species;
         if (gBattleAnimArgs[1] == DOUBLE_CRY_GROWL)
             PlayCry_ByMode(species, pan, CRY_MODE_GROWL_1);
         else // DOUBLE_CRY_ROAR
@@ -288,15 +311,24 @@ void SoundTask_WaitForCry(u8 taskId)
 void SoundTask_PlayCryWithEcho(u8 taskId)
 {
     u16 species;
+    u32 personality = 0;
     s8 pan;
 
     gTasks[taskId].tLastCry = gBattleAnimArgs[0];
     pan = BattleAnimAdjustPanning(SOUND_PAN_ATTACKER);
 
     if (IsContest())
+    {
         species = gContestResources->moveAnim->species;
+    }
     else
-        species = gAnimBattlerSpecies[gBattleAnimAttacker];
+    {
+        u8 battlerId = gBattleAnimAttacker;
+        species = gAnimBattlerSpecies[battlerId];
+        personality = gBattleMons[battlerId].personality;
+    }
+
+    species = GetCrySpeciesIdFromPersonality(species, personality);
 
     gTasks[taskId].tSpecies = species;
     gTasks[taskId].tPan = pan;

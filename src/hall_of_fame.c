@@ -1002,8 +1002,10 @@ static void Task_HofPC_PrintMonInfo(u8 taskId)
     currMon = &savedTeams->mon[gTasks[taskId].tCurrMonId];
     if (currMon->species != SPECIES_EGG)
     {
+        u16 crySpecies = GetCrySpeciesIdFromPersonality(currMon->species, currMon->personality);
+
         StopCryAndClearCrySongs();
-        PlayCry_Normal(currMon->species, 0);
+        PlayCry_Normal(crySpecies, 0);
     }
     HallOfFame_PrintMonInfo(currMon, 0, 14);
 
