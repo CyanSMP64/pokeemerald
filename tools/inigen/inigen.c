@@ -156,7 +156,7 @@ const struct TMText gTMTexts[] = {
     {40, 12,  1,  1,  0x97, "TM40 contains [move].\\p… … … … … …"},
     {41,  9,  2,  2,  0x2F, "That’s, like, TM41, you know? Hey, it’s [move], you hearing me?\\pHey, now, you listen here, like, I’m not laying a torment on you!"},
     {42,  8,  1,  1, 0x4FD, "Dad: TM42 contains [move].\\pIt might be able to turn a bad situation into an advantage."},
-    {47, 24, 10,  1,  0x19, "Steven: Thank you.\\nI’ll give you this TM.\\pIt contains the ultimate technique!\\p… … … … … …"},
+    {47, 24, 10,  1,  0x19, "Steven: Thank you.\\nI’ll give you this TM.\\pIt contains the ultimate technique!"},
     {50,  4,  1,  1,  0xAA, "That TM50 contains [move].\\p… … … … … …"}
 };
 

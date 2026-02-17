@@ -36,6 +36,7 @@
 #include "title_screen.h"
 #include "window.h"
 #include "mystery_gift_menu.h"
+#include "gba/flash_internal.h"
 
 /*
  * Main menu state machine
@@ -634,7 +635,28 @@ static void Task_MainMenuCheckSaveFile(u8 taskId)
                 gTasks[taskId].func = Task_WaitForSaveFileErrorWindow;
                 break;
             case SAVE_STATUS_VERSION_MISMATCH:
-                CreateMainMenuErrorWindow(gText_SaveFileVersionMismatch);
+                {
+                    u8 *ptr = gStringVar1;
+                    // Read the first sector to get version info
+                    if (gReadWriteSector == NULL)
+                        gReadWriteSector = &gSaveDataBuffer;
+                    ReadFlash(0, 0, (u8 *)gReadWriteSector, SECTOR_SIZE);
+                    *ptr++ = CHAR_v;
+                    ptr = ConvertIntToDecimalStringN(ptr, gReadWriteSector->saveVersionMajor, STR_CONV_MODE_LEFT_ALIGN, 1);
+                    *ptr++ = CHAR_PERIOD;
+                    ptr = ConvertIntToDecimalStringN(ptr, gReadWriteSector->saveVersionMinor, STR_CONV_MODE_LEFT_ALIGN, 1);
+                    *ptr++ = CHAR_PERIOD;
+                    ptr = ConvertIntToDecimalStringN(ptr, gReadWriteSector->saveVersionPatch, STR_CONV_MODE_LEFT_ALIGN, 1);
+                    if (gReadWriteSector->saveVersionBuild != 0)
+                    {
+                        *ptr++ = CHAR_HYPHEN;
+                        *ptr++ = CHAR_r;
+                        ptr = ConvertIntToDecimalStringN(ptr, gReadWriteSector->saveVersionBuild, STR_CONV_MODE_LEFT_ALIGN, 4);
+                    }
+                    *ptr = EOS;
+                    StringExpandPlaceholders(gStringVar4, gText_SaveFileVersionMismatch);
+                }
+                CreateMainMenuErrorWindow(gStringVar4);
                 tMenuType = HAS_NO_SAVED_GAME;
                 gTasks[taskId].func = Task_WaitForSaveFileErrorWindow;
                 break;

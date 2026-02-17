@@ -86,13 +86,13 @@ SECTIONS {
         src/pokemon_jump.o(.text);
         src/minigame_countdown.o(.text);
         src/rtc.o(.text);
-        src/main_menu.o(.text);
     } =0
 
     .text_2 0x08032654 :
     ALIGN(4)
     {
         src/battle_controllers.o(.text);
+        src/main_menu.o(.text);
         src/decompress.o(.text);
         src/battle_main.o(.text);
         src/battle_util.o(.text);
@@ -100,13 +100,13 @@ SECTIONS {
         src/battle_controller_player.o(.text);
         src/battle_gfx_sfx_util.o(.text);
         src/battle_controller_link_opponent.o(.text);
-        src/overworld.o(.text);
     } =0
 
     .text_4 0x08067a74 :
     ALIGN(4)
     {
         src/pokemon.o(.text);
+        src/overworld.o(.text);
         src/battle_bg.o(.text);
         src/berry_powder.o(.text);
         src/field_screen_effect.o(.text);

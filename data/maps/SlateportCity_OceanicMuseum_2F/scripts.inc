@@ -9,6 +9,8 @@ SlateportCity_OceanicMuseum_2F_MapScripts::
 SlateportCity_OceanicMuseum_2F_EventScript_CaptStern::
 	lock
 	faceplayer
+	msgbox SlateportCity_OceanicMuseum_2F_Text_ThankYouForTheParts, MSGBOX_DEFAULT
+	closemessage
 	playbgm MUS_ENCOUNTER_AQUA, TRUE
 	addobject LOCALID_GRUNT_1
 	applymovement LOCALID_GRUNT_1, SlateportCity_OceanicMuseum_2F_Movement_FirstGruntEnter
@@ -22,6 +24,8 @@ SlateportCity_OceanicMuseum_2F_EventScript_CaptStern::
 	call_if_eq VAR_FACING, DIR_SOUTH, SlateportCity_OceanicMuseum_2F_EventScript_PlayerFaceGrunts
 	call_if_eq VAR_FACING, DIR_EAST, SlateportCity_OceanicMuseum_2F_EventScript_PlayerFaceGrunts
 	call_if_ne VAR_FACING, DIR_EAST, SlateportCity_OceanicMuseum_2F_EventScript_SternFaceGrunts
+	msgbox SlateportCity_OceanicMuseum_2F_Text_WellTakeThoseParts, MSGBOX_DEFAULT
+	closemessage
 	applymovement LOCALID_GRUNT_2, SlateportCity_OceanicMuseum_2F_Movement_GruntApproachToBattle
 	waitmovement 0
 	call_if_eq VAR_FACING, DIR_SOUTH, SlateportCity_OceanicMuseum_2F_EventScript_PlayerApproachGruntSouth
@@ -31,31 +35,25 @@ SlateportCity_OceanicMuseum_2F_EventScript_CaptStern::
 	waitmovement 0
 	applymovement LOCALID_GRUNT_1, SlateportCity_OceanicMuseum_2F_Movement_GruntApproachToBattle
 	waitmovement 0
+	msgbox SlateportCity_OceanicMuseum_2F_Text_LetMeTakeCareOfThis, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_GRUNT_MUSEUM_2, SlateportCity_OceanicMuseum_2F_Text_Grunt2Defeat
-	applymovement LOCALID_GRUNT_1, SlateportCity_OceanicMuseum_2F_Movement_GruntDefeated
-	waitmovement 0
-	applymovement LOCALID_GRUNT_1, Common_Movement_WalkInPlaceFasterDown
-	applymovement LOCALID_GRUNT_2, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
-	addobject LOCALID_ARCHIE
-	applymovement LOCALID_ARCHIE, SlateportCity_OceanicMuseum_2F_Movement_ArchieEnter
-	applymovement LOCALID_GRUNT_2, SlateportCity_OceanicMuseum_2F_Movement_GruntMoveForArchie
-	waitmovement 0
-	applymovement LOCALID_ARCHIE, SlateportCity_OceanicMuseum_2F_Movement_ArchieApproachPlayer
-	waitmovement 0
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	fadescreen FADE_TO_BLACK
-	removeobject LOCALID_ARCHIE
 	removeobject LOCALID_GRUNT_1
 	removeobject LOCALID_GRUNT_2
 	fadescreen FADE_FROM_BLACK
 	setflag FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_AQUA_GRUNTS
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
+	msgbox SlateportCity_OceanicMuseum_2F_Text_SternThankYouForSavingUs, MSGBOX_DEFAULT
 	setvar VAR_0x8004, ITEM_DEVON_GOODS
 	call Common_EventScript_PlayerHandedOverTheItem
+	msgbox SlateportCity_OceanicMuseum_2F_Text_SternIveGotToGo, MSGBOX_DEFAULT
+	closemessage
 	fadescreen FADE_TO_BLACK
+	playfanfare MUS_HEAL
+	waitfanfare
 	special HealPlayerParty
 	removeobject LOCALID_CAPT_STERN
 	setflag FLAG_HIDE_ROUTE_110_TEAM_AQUA
@@ -251,12 +249,8 @@ SlateportCity_OceanicMuseum_2F_EventScript_MuseumPatron3::
 	end
 
 SlateportCity_OceanicMuseum_2F_Text_ThankYouForTheParts:
-	.string "Yes? If you're looking for Stern,\n"
-	.string "that would be me.\p"
-	.string "Ah! Those must be the parts I ordered\n"
-	.string "from Mr. Stone of Devon.\p"
-	.string "Thank you! That's great!\n"
-	.string "We can prepare for our expedition now.$"
+	.string "Capt. Stern: You got the Devon Parts!\n"
+	.string "Thank you!$"
 
 SlateportCity_OceanicMuseum_2F_Text_WellTakeThoseParts:
 	.string "Hehehe, hold it!\n"
@@ -280,7 +274,6 @@ SlateportCity_OceanicMuseum_2F_Text_BossGoingToBeFurious:
 	.string "The Boss is going to be furious…$"
 
 SlateportCity_OceanicMuseum_2F_Text_LetMeTakeCareOfThis:
-	.string "Humph, sniveling wimp!\n"
 	.string "Let me take care of this!$"
 
 SlateportCity_OceanicMuseum_2F_Text_Grunt2Defeat:
@@ -326,22 +319,10 @@ SlateportCity_OceanicMuseum_2F_Text_ArchieWarning:
 	.string "And don't you forget it!$"
 
 SlateportCity_OceanicMuseum_2F_Text_SternThankYouForSavingUs:
-	.string "Capt. Stern: You're…\n"
-	.string "Ah, okay, you're {PLAYER}…\p"
-	.string "Anyway, that was a tense situation!\n"
-	.string "Thank you for saving us!\p"
-	.string "Oh, yes, I almost forgot that you\n"
-	.string "even brought the parts from Devon!$"
+	.string "Capt. Stern: Thank you for saving us!$"
 
 SlateportCity_OceanicMuseum_2F_Text_SternIveGotToGo:
-	.string "Capt. Stern: Whoops!\n"
-	.string "There's no time to lose!\p"
-	.string "We have to set out on our ocean-floor\n"
-	.string "expedition really soon.\p"
-	.string "Thanks again, but now I've got\n"
-	.string "to go!\p"
-	.string "Feel free to wander around and check\n"
-	.string "out our facilities, though.$"
+	.string "Capt. Stern: I've got to go now!$"
 
 SlateportCity_OceanicMuseum_2F_Text_RemindsMeOfAbandonedShip:
 	.string "I saw a model of a ship here.\p"

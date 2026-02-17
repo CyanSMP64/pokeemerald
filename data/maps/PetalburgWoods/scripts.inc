@@ -286,7 +286,7 @@ PetalburgWoods_Text_NotAOneToBeFound:
 
 PetalburgWoods_Text_HaveYouSeenShroomish:
 	.string "Hello, have you seen any Pokémon\n"
-	.string "called Zekrom around here?"
+	.string "called Zekrom around here?$"
 
 PetalburgWoods_Text_IWasGoingToAmbushYou:
 	.string "I was going to ambush you, but you\n"

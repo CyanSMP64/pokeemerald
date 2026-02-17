@@ -90,6 +90,7 @@ extern u16 gLastKnownGoodSector;
 extern u32 gDamagedSaveSectors;
 extern u32 gSaveCounter;
 extern struct SaveSector *gFastSaveSector;
+extern struct SaveSector *gReadWriteSector;
 extern u16 gIncrementalSectorId;
 extern u16 gSaveFileStatus;
 extern void (*gGameContinueCallback)(void);
