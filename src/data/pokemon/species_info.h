@@ -5893,7 +5893,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .formChangeTable = NULL,
     },
 
-    [SPECIES_OLD_UNOWN_B] = 
+    [SPECIES_MANAPHY_EGG] = 
     {                                                                       \
         .baseHP = 50,                                                       \
         .baseAttack = 150,                                                  \

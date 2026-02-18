@@ -565,7 +565,7 @@ static void CB2_CreateTradeMenu(void)
         for (i = 0; i < sTradeMenu->partyCounts[TRADE_PLAYER]; i++)
         {
             struct Pokemon *mon = &gPlayerParty[i];
-            sTradeMenu->partySpriteIds[TRADE_PLAYER][i] = CreateMonIcon(GetMonData(mon, MON_DATA_SPECIES_OR_EGG),
+            sTradeMenu->partySpriteIds[TRADE_PLAYER][i] = CreateMonIcon(GetMonSpriteSpecies(mon),
                                                          SpriteCB_MonIcon,
                                                          (sTradeMonSpriteCoords[i][0] * 8) + 14,
                                                          (sTradeMonSpriteCoords[i][1] * 8) - 12,
@@ -577,7 +577,7 @@ static void CB2_CreateTradeMenu(void)
         for (i = 0; i < sTradeMenu->partyCounts[TRADE_PARTNER]; i++)
         {
             struct Pokemon *mon = &gEnemyParty[i];
-            sTradeMenu->partySpriteIds[TRADE_PARTNER][i] = CreateMonIcon(GetMonData(mon, MON_DATA_SPECIES_OR_EGG, NULL),
+            sTradeMenu->partySpriteIds[TRADE_PARTNER][i] = CreateMonIcon(GetMonSpriteSpecies(mon),
                                                          SpriteCB_MonIcon,
                                                          (sTradeMonSpriteCoords[i + PARTY_SIZE][0] * 8) + 14,
                                                          (sTradeMonSpriteCoords[i + PARTY_SIZE][1] * 8) - 12,
@@ -2804,7 +2804,7 @@ static void LoadTradeMonPic(u8 whichParty, u8 state)
     switch (state)
     {
     case 0:
-        species = GetMonData(mon, MON_DATA_SPECIES_OR_EGG);
+        species = GetMonSpriteSpecies(mon);
         personality = GetMonData(mon, MON_DATA_PERSONALITY);
 
         if (whichParty == TRADE_PLAYER)

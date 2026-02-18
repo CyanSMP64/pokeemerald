@@ -257,7 +257,7 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_LUGIA]                        = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_HO_OH]                        = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_CELEBI]                       = { .size = MON_COORDS_SIZE(40, 40), .y_offset = 12 },
-    [SPECIES_OLD_UNOWN_B] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
+    [SPECIES_MANAPHY_EGG] = { .size = MON_COORDS_SIZE(64, 56), .y_offset = 16 },
     [SPECIES_OLD_UNOWN_C] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
     [SPECIES_OLD_UNOWN_D] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },
     [SPECIES_OLD_UNOWN_E] = { .size = MON_COORDS_SIZE(64, 56), .y_offset =  4 },

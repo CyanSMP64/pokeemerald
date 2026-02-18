@@ -2405,6 +2405,9 @@ const u8 gMonFootprint_Chimecho[] = INCBIN_U8("graphics/pokemon/chimecho/footpri
 const u32 gMonStillFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/front.4bpp.lz");
 const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
 
+const u32 gMonStillFrontPic_ManaphyEgg[] = INCBIN_U32("graphics/pokemon/egg/manaphy_front.4bpp.lz");
+const u32 gMonPalette_ManaphyEgg[] = INCBIN_U32("graphics/pokemon/egg/manaphy.gbapal.lz");
+
 const u32 gMonBackPic_UnownB[] = INCBIN_U32("graphics/pokemon/unown/b/back.4bpp.lz");
 const u8 gMonIcon_UnownB[] = INCBIN_U8("graphics/pokemon/unown/b/icon.4bpp");
 

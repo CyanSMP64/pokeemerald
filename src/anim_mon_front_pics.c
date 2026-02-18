@@ -1425,8 +1425,6 @@ const u32 gMonFrontPic_CramorantGulping[] = INCBIN_U32("graphics/pokemon/cramora
 const u32 gMonFrontPic_CramorantGorging[] = INCBIN_U32("graphics/pokemon/cramorant/gorging/front.4bpp.lz");
 const u32 gMonFrontPic_ZarudeDada[] = INCBIN_U32("graphics/pokemon/zarude/dada/front.4bpp.lz");
 
-const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
-
 const u32 gMonFrontPic_UnownB[] = INCBIN_U32("graphics/pokemon/unown/b/front.4bpp.lz");
 const u32 gMonFrontPic_UnownC[] = INCBIN_U32("graphics/pokemon/unown/c/front.4bpp.lz");
 const u32 gMonFrontPic_UnownD[] = INCBIN_U32("graphics/pokemon/unown/d/front.4bpp.lz");

@@ -3710,7 +3710,7 @@ static const u32 sTutorLearnsets[] =
                                              TUTOR(MOVE_MUD_SLAP),
                                              TUTOR(MOVE_PSYCH_UP)),
 
-    [SPECIES_OLD_UNOWN_B]                 = (0),
+    [SPECIES_MANAPHY_EGG]                 = (0),
     [SPECIES_OLD_UNOWN_C]                 = (0),
     [SPECIES_OLD_UNOWN_D]                 = (0),
     [SPECIES_OLD_UNOWN_E]                 = (0),

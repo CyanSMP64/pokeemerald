@@ -277,7 +277,7 @@ const struct MonCoords gMonBackPicCoords[] =
     [SPECIES_LUGIA]                        = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_HO_OH]                        = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
     [SPECIES_CELEBI]                       = { .size = MON_COORDS_SIZE(48, 56), .y_offset =  7 },
-    [SPECIES_OLD_UNOWN_B] = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
+    [SPECIES_MANAPHY_EGG] = { .size = MON_COORDS_SIZE(64, 64), .y_offset = 16 },
     [SPECIES_OLD_UNOWN_C] = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
     [SPECIES_OLD_UNOWN_D] = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },
     [SPECIES_OLD_UNOWN_E] = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  2 },

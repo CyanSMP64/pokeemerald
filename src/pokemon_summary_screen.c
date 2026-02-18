@@ -3740,16 +3740,19 @@ static u8 LoadMonGfxAndSprite(struct Pokemon *mon, s16 *state)
     struct PokeSummary *summary = &sMonSummaryScreen->summary;
     u16 species;
 
+    species = summary->species2;
+    // Use Resolute forme if Keldeo knows Secret Sword
+    if (species == SPECIES_KELDEO && MonKnowsMove(mon, MOVE_SECRET_SWORD))
+        species = SPECIES_KELDEO_RESOLUTE;
+    // Use Manaphy egg sprite if it's a Manaphy egg
+    if (summary->isEgg && summary->species == SPECIES_MANAPHY)
+        species = SPECIES_MANAPHY_EGG;
+
     switch (*state)
     {
     default:
         return CreateMonSprite(mon);
     case 0:
-        // Use Resolute forme sprite if Keldeo knows Secret Sword
-        species = summary->species2;
-        if (species == SPECIES_KELDEO && MonKnowsMove(mon, MOVE_SECRET_SWORD))
-            species = SPECIES_KELDEO_RESOLUTE;
-        
         if (gMain.inBattle)
         {
             if (ShouldIgnoreDeoxysForm(3, sMonSummaryScreen->curMonIndex))
@@ -3795,11 +3798,6 @@ static u8 LoadMonGfxAndSprite(struct Pokemon *mon, s16 *state)
         (*state)++;
         return 0xFF;
     case 1:
-        // Use Resolute forme palette if Keldeo knows Secret Sword
-        species = summary->species2;
-        if (species == SPECIES_KELDEO && MonKnowsMove(mon, MOVE_SECRET_SWORD))
-            species = SPECIES_KELDEO_RESOLUTE;
-        
         pal = GetMonSpritePalStructFromOtIdPersonality(species, summary->OTID, summary->pid);
         LoadCompressedSpritePalette(pal);
         SetMultiuseSpriteTemplateToPokemon(pal->tag, B_POSITION_OPPONENT_LEFT);

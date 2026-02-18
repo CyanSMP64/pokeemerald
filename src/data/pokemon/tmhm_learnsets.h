@@ -6083,7 +6083,7 @@ const u32 gTMHMLearnsets[][2] =
                                                         | TMHM(TM34_SHOCK_WAVE)
                                                         | TMHM(TM03_WATER_PULSE)),
 
-    [SPECIES_OLD_UNOWN_B]                 = TMHM_LEARNSET(0),
+    [SPECIES_MANAPHY_EGG]                 = TMHM_LEARNSET(0),
     [SPECIES_OLD_UNOWN_C]                 = TMHM_LEARNSET(0),
     [SPECIES_OLD_UNOWN_D]                 = TMHM_LEARNSET(0),
     [SPECIES_OLD_UNOWN_E]                 = TMHM_LEARNSET(0),

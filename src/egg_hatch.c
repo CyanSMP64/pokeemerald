@@ -53,7 +53,7 @@ struct EggHatchData
     u8 state;
     u8 delayTimer;
     u8 eggPartyId;
-    u8 unused_5;
+    u8 isManaphyEgg;
     u8 unused_6;
     u8 eggShardVelocityId;
     u8 windowId;
@@ -86,6 +86,9 @@ static struct EggHatchData *sEggHatchData;
 static const u16 sEggPalette[]  = INCBIN_U16("graphics/pokemon/egg/normal.gbapal");
 static const u8 sEggHatchTiles[] = INCBIN_U8("graphics/pokemon/egg/hatch.4bpp");
 static const u8 sEggShardTiles[] = INCBIN_U8("graphics/pokemon/egg/shard.4bpp");
+static const u16 sManaphyEggPalette[]  = INCBIN_U16("graphics/pokemon/egg/manaphy.gbapal");
+static const u8 sManaphyEggHatchTiles[] = INCBIN_U8("graphics/pokemon/egg/manaphy_hatch.4bpp");
+static const u8 sManaphyEggShardTiles[] = INCBIN_U8("graphics/pokemon/egg/manaphy_shard.4bpp");
 
 static const struct OamData sOamData_Egg =
 {
@@ -143,6 +146,14 @@ static const union AnimCmd *const sSpriteAnimTable_Egg[] =
     [EGG_ANIM_CRACKED_3] = sSpriteAnim_Egg_Cracked3,
 };
 
+static const union AnimCmd *const sSpriteAnimTable_ManaphyEgg[] =
+{
+    [EGG_ANIM_NORMAL]    = sSpriteAnim_Egg_Normal,
+    [EGG_ANIM_CRACKED_1] = sSpriteAnim_Egg_Cracked1,
+    [EGG_ANIM_CRACKED_2] = sSpriteAnim_Egg_Cracked2,
+    [EGG_ANIM_CRACKED_3] = sSpriteAnim_Egg_Cracked3,
+};
+
 static const struct SpriteSheet sEggHatch_Sheet =
 {
     .data = sEggHatchTiles,
@@ -157,10 +168,30 @@ static const struct SpriteSheet sEggShards_Sheet =
     .tag = GFXTAG_EGG_SHARD,
 };
 
+static const struct SpriteSheet sManaphyEggHatch_Sheet =
+{
+    .data = sManaphyEggHatchTiles,
+    .size = sizeof(sManaphyEggHatchTiles),
+    .tag = GFXTAG_EGG + 1,
+};
+
+static const struct SpriteSheet sManaphyEggShards_Sheet =
+{
+    .data = sManaphyEggShardTiles,
+    .size = sizeof(sManaphyEggShardTiles),
+    .tag = GFXTAG_EGG_SHARD + 1,
+};
+
 static const struct SpritePalette sEgg_SpritePalette =
 {
     .data = sEggPalette,
     .tag = PALTAG_EGG
+};
+
+static const struct SpritePalette sManaphyEgg_SpritePalette =
+{
+    .data = sManaphyEggPalette,
+    .tag = PALTAG_EGG + 1
 };
 
 static const struct SpriteTemplate sSpriteTemplate_Egg =
@@ -169,6 +200,17 @@ static const struct SpriteTemplate sSpriteTemplate_Egg =
     .paletteTag = PALTAG_EGG,
     .oam = &sOamData_Egg,
     .anims = sSpriteAnimTable_Egg,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCallbackDummy
+};
+
+static const struct SpriteTemplate sSpriteTemplate_ManaphyEgg =
+{
+    .tileTag = GFXTAG_EGG + 1,
+    .paletteTag = PALTAG_EGG + 1,
+    .oam = &sOamData_Egg,
+    .anims = sSpriteAnimTable_ManaphyEgg,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy
@@ -223,12 +265,31 @@ static const union AnimCmd *const sSpriteAnimTable_EggShard[] =
     sSpriteAnim_EggShard3,
 };
 
+static const union AnimCmd *const sSpriteAnimTable_ManaphyEggShard[] =
+{
+    sSpriteAnim_EggShard0,
+    sSpriteAnim_EggShard1,
+    sSpriteAnim_EggShard2,
+    sSpriteAnim_EggShard3,
+};
+
 static const struct SpriteTemplate sSpriteTemplate_EggShard =
 {
     .tileTag = GFXTAG_EGG_SHARD,
     .paletteTag = PALTAG_EGG,
     .oam = &sOamData_EggShard,
     .anims = sSpriteAnimTable_EggShard,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCB_EggShard
+};
+
+static const struct SpriteTemplate sSpriteTemplate_ManaphyEggShard =
+{
+    .tileTag = GFXTAG_EGG_SHARD + 1,
+    .paletteTag = PALTAG_EGG + 1,
+    .oam = &sOamData_EggShard,
+    .anims = sSpriteAnimTable_ManaphyEggShard,
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCB_EggShard
@@ -499,6 +560,8 @@ static void CB2_LoadEggHatch(void)
         AllocateMonSpritesGfx();
         sEggHatchData->eggPartyId = gSpecialVar_0x8004;
         sEggHatchData->eggShardVelocityId = 0;
+        // check if this is a manaphy egg
+        sEggHatchData->isManaphyEgg = (GetMonData(&gPlayerParty[sEggHatchData->eggPartyId], MON_DATA_SPECIES) == SPECIES_MANAPHY);
 
         SetVBlankCallback(VBlankCB_EggHatch);
         gSpecialVar_0x8005 = GetCurrentMapMusic();
@@ -537,9 +600,18 @@ static void CB2_LoadEggHatch(void)
         gMain.state++;
         break;
     case 3:
-        LoadSpriteSheet(&sEggHatch_Sheet);
-        LoadSpriteSheet(&sEggShards_Sheet);
-        LoadSpritePalette(&sEgg_SpritePalette);
+        if (sEggHatchData->isManaphyEgg)
+        {
+            LoadSpriteSheet(&sManaphyEggHatch_Sheet);
+            LoadSpriteSheet(&sManaphyEggShards_Sheet);
+            LoadSpritePalette(&sManaphyEgg_SpritePalette);
+        }
+        else
+        {
+            LoadSpriteSheet(&sEggHatch_Sheet);
+            LoadSpriteSheet(&sEggShards_Sheet);
+            LoadSpritePalette(&sEgg_SpritePalette);
+        }
         gMain.state++;
         break;
     case 4:
@@ -614,7 +686,10 @@ static void CB2_EggHatch(void)
     {
     case 0:
         BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
-        sEggHatchData->eggSpriteId = CreateSprite(&sSpriteTemplate_Egg, EGG_X, EGG_Y, 5);
+        if (sEggHatchData->isManaphyEgg)
+            sEggHatchData->eggSpriteId = CreateSprite(&sSpriteTemplate_ManaphyEgg, EGG_X, EGG_Y, 5);
+        else
+            sEggHatchData->eggSpriteId = CreateSprite(&sSpriteTemplate_Egg, EGG_X, EGG_Y, 5);
         ShowBg(0);
         ShowBg(1);
         sEggHatchData->state++;
@@ -640,7 +715,11 @@ static void CB2_EggHatch(void)
         // Wait for hatching animation to finish
         if (gSprites[sEggHatchData->eggSpriteId].callback == SpriteCallbackDummy)
         {
-            species = GetMonData(&gPlayerParty[sEggHatchData->eggPartyId], MON_DATA_SPECIES);
+            struct Pokemon *mon = &gPlayerParty[sEggHatchData->eggPartyId];
+            u32 personality = GetMonData(mon, MON_DATA_PERSONALITY);
+
+            species = GetMonData(mon, MON_DATA_SPECIES);
+            species = GetCrySpeciesIdFromPersonality(species, personality);
             DoMonFrontSpriteAnimation(&gSprites[sEggHatchData->monSpriteId], species, FALSE, 1 | SKIP_FRONT_ANIM);
             sEggHatchData->state++;
         }
@@ -909,7 +988,11 @@ static void CreateRandomEggShardSprite(void)
 
 static void CreateEggShardSprite(u8 x, u8 y, s16 velocityX, s16 velocityY, s16 acceleration, u8 spriteAnimIndex)
 {
-    u8 spriteId = CreateSprite(&sSpriteTemplate_EggShard, x, y, 4);
+    u8 spriteId;
+    if (sEggHatchData->isManaphyEgg)
+        spriteId = CreateSprite(&sSpriteTemplate_ManaphyEggShard, x, y, 4);
+    else
+        spriteId = CreateSprite(&sSpriteTemplate_EggShard, x, y, 4);
     gSprites[spriteId].sVelocX = velocityX;
     gSprites[spriteId].sVelocY = velocityY;
     gSprites[spriteId].sAccelY = acceleration;

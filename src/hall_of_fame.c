@@ -448,7 +448,7 @@ static void Task_Hof_InitMonData(u8 taskId)
         u8 nick[POKEMON_NAME_LENGTH + 2];
         if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES))
         {
-            sHofMonPtr->mon[i].species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG);
+            sHofMonPtr->mon[i].species = GetMonSpriteSpecies(&gPlayerParty[i]);
             sHofMonPtr->mon[i].tid = GetMonData(&gPlayerParty[i], MON_DATA_OT_ID);
             sHofMonPtr->mon[i].personality = GetMonData(&gPlayerParty[i], MON_DATA_PERSONALITY);
             sHofMonPtr->mon[i].lvl = GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
@@ -568,6 +568,8 @@ static void Task_Hof_SetMonDisplayTask(u8 taskId)
 
 #define tDestinationX  data[1]
 #define tDestinationY  data[2]
+#define tPersonalityLo data[5]
+#define tPersonalityHi data[6]
 #define tSpecies       data[7]
 
 static void Task_Hof_DisplayMon(u8 taskId)
@@ -594,7 +596,7 @@ static void Task_Hof_DisplayMon(u8 taskId)
         destY = sHallOfFame_MonHalfTeamPositions[currMonId][3];
     }
 
-    if (currMon->species == SPECIES_EGG)
+    if (currMon->species == SPECIES_EGG || currMon->species == SPECIES_MANAPHY_EGG)
         destY += 10;
 
     // Use Resolute form sprite if marked
@@ -606,6 +608,8 @@ static void Task_Hof_DisplayMon(u8 taskId)
     gSprites[spriteId].tDestinationX = destX;
     gSprites[spriteId].tDestinationY = destY;
     gSprites[spriteId].data[0] = 0;
+    gSprites[spriteId].tPersonalityLo = (u16)currMon->personality;
+    gSprites[spriteId].tPersonalityHi = (u16)(currMon->personality >> 16);
     gSprites[spriteId].tSpecies = currMon->species;
     gSprites[spriteId].callback = SpriteCB_GetOnScreenAndAnimate;
     gTasks[taskId].tMonSpriteId(currMonId) = spriteId;
@@ -946,7 +950,7 @@ static void Task_HofPC_DrawSpritesPrintText(u8 taskId)
                 posY = sHallOfFame_MonHalfTeamPositions[i][3];
             }
 
-            if (currMon->species == SPECIES_EGG)
+            if (currMon->species == SPECIES_EGG || currMon->species == SPECIES_MANAPHY_EGG)
                 posY += 10;
 
             // Use Resolute form sprite if marked
@@ -1000,7 +1004,7 @@ static void Task_HofPC_PrintMonInfo(u8 taskId)
     BlendPalettesUnfaded(sHofFadePalettes, 0xC, RGB(16, 29, 24));
 
     currMon = &savedTeams->mon[gTasks[taskId].tCurrMonId];
-    if (currMon->species != SPECIES_EGG)
+    if (currMon->species != SPECIES_EGG && currMon->species != SPECIES_MANAPHY_EGG)
     {
         u16 crySpecies = GetCrySpeciesIdFromPersonality(currMon->species, currMon->personality);
 
@@ -1150,7 +1154,7 @@ static void HallOfFame_PrintMonInfo(struct HallofFameMon* currMon, u8 unused1, u
     PutWindowTilemap(0);
 
     // dex number
-    if (currMon->species != SPECIES_EGG)
+    if (currMon->species != SPECIES_EGG && currMon->species != SPECIES_MANAPHY_EGG)
     {
         stringPtr = StringCopy(text, gText_Number);
         dexNumber = SpeciesToPokedexNum(currMon->species);
@@ -1177,7 +1181,7 @@ static void HallOfFame_PrintMonInfo(struct HallofFameMon* currMon, u8 unused1, u
     // nick, species names, gender and level
     memcpy(text, currMon->nick, POKEMON_NAME_LENGTH);
     text[POKEMON_NAME_LENGTH] = EOS;
-    if (currMon->species == SPECIES_EGG)
+    if (currMon->species == SPECIES_EGG || currMon->species == SPECIES_MANAPHY_EGG)
     {
         width = GetStringCenterAlignXOffset(FONT_NORMAL, text, 0xD0);
         AddTextPrinterParameterized3(0, FONT_NORMAL, width, 1, sMonInfoTextColors, TEXT_SKIP_DRAW, text);
@@ -1384,16 +1388,23 @@ static void SpriteCB_GetOnScreenAndAnimate(struct Sprite *sprite)
     else
     {
         s16 species = sprite->tSpecies;
+        u32 personality = (u16)sprite->tPersonalityLo | ((u32)(u16)sprite->tPersonalityHi << 16);
+        u16 crySpecies = GetCrySpeciesIdFromPersonality(species, personality);
 
-        if (species == SPECIES_EGG)
+        if (species == SPECIES_EGG || species == SPECIES_MANAPHY_EGG)
             DoMonFrontSpriteAnimation(sprite, species, TRUE, 3 | SKIP_FRONT_ANIM);
         else
-            DoMonFrontSpriteAnimation(sprite, species, FALSE, 3 | SKIP_FRONT_ANIM);
+        {
+            DoMonFrontSpriteAnimation(sprite, species, TRUE, 3 | SKIP_FRONT_ANIM);
+            PlayCry_Normal(crySpecies, 0);
+        }
     }
 }
 
 #undef tDestinationX
 #undef tDestinationY
+#undef tPersonalityLo
+#undef tPersonalityHi
 #undef tSpecies
 
 #define sSineIdx data[0]
