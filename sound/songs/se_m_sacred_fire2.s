@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_sacred_fire2_grp, voicegroup128
-	.equ	se_m_sacred_fire2_pri, 4
+	.equ	se_m_sacred_fire2_pri, 100+4
 	.equ	se_m_sacred_fire2_rev, 0
 	.equ	se_m_sacred_fire2_mvl, 127
 	.equ	se_m_sacred_fire2_key, 0

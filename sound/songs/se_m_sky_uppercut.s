@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_sky_uppercut_grp, voicegroup128
-	.equ	se_m_sky_uppercut_pri, 4
+	.equ	se_m_sky_uppercut_pri, 100+4
 	.equ	se_m_sky_uppercut_rev, 0
 	.equ	se_m_sky_uppercut_mvl, 127
 	.equ	se_m_sky_uppercut_key, 0

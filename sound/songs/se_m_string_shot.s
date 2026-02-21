@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_string_shot_grp, voicegroup128
-	.equ	se_m_string_shot_pri, 4
+	.equ	se_m_string_shot_pri, 100+4
 	.equ	se_m_string_shot_rev, 0
 	.equ	se_m_string_shot_mvl, 127
 	.equ	se_m_string_shot_key, 0

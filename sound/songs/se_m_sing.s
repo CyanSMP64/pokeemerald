@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_sing_grp, voicegroup128
-	.equ	se_m_sing_pri, 4
+	.equ	se_m_sing_pri, 100+4
 	.equ	se_m_sing_rev, 0
 	.equ	se_m_sing_mvl, 127
 	.equ	se_m_sing_key, 0

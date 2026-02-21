@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_morning_sun_grp, voicegroup128
-	.equ	se_m_morning_sun_pri, 5
+	.equ	se_m_morning_sun_pri, 100+5
 	.equ	se_m_morning_sun_rev, 0
 	.equ	se_m_morning_sun_mvl, 127
 	.equ	se_m_morning_sun_key, 0

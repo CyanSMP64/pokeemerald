@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_blizzard_grp, voicegroup128
-	.equ	se_m_blizzard_pri, 4
+	.equ	se_m_blizzard_pri, 100+4
 	.equ	se_m_blizzard_rev, 0
 	.equ	se_m_blizzard_mvl, 127
 	.equ	se_m_blizzard_key, 0

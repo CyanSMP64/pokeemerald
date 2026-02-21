@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_flamethrower_grp, voicegroup128
-	.equ	se_m_flamethrower_pri, 4
+	.equ	se_m_flamethrower_pri, 100+4
 	.equ	se_m_flamethrower_rev, 0
 	.equ	se_m_flamethrower_mvl, 127
 	.equ	se_m_flamethrower_key, 0

@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_dizzy_punch_grp, voicegroup128
-	.equ	se_m_dizzy_punch_pri, 4
+	.equ	se_m_dizzy_punch_pri, 100+4
 	.equ	se_m_dizzy_punch_rev, 0
 	.equ	se_m_dizzy_punch_mvl, 127
 	.equ	se_m_dizzy_punch_key, 0

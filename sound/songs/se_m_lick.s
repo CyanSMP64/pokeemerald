@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_lick_grp, voicegroup128
-	.equ	se_m_lick_pri, 4
+	.equ	se_m_lick_pri, 100+4
 	.equ	se_m_lick_rev, 0
 	.equ	se_m_lick_mvl, 127
 	.equ	se_m_lick_key, 0

@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_self_destruct_grp, voicegroup128
-	.equ	se_m_self_destruct_pri, 4
+	.equ	se_m_self_destruct_pri, 100+4
 	.equ	se_m_self_destruct_rev, 0
 	.equ	se_m_self_destruct_mvl, 127
 	.equ	se_m_self_destruct_key, 0
