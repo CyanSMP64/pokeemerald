@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_vital_throw2_grp, voicegroup128
-	.equ	se_m_vital_throw2_pri, 100+4
+	.equ	se_m_vital_throw2_pri, 4
 	.equ	se_m_vital_throw2_rev, 0
 	.equ	se_m_vital_throw2_mvl, 127
 	.equ	se_m_vital_throw2_key, 0

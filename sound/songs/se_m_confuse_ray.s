@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_confuse_ray_grp, voicegroup128
-	.equ	se_m_confuse_ray_pri, 100+4
+	.equ	se_m_confuse_ray_pri, 4
 	.equ	se_m_confuse_ray_rev, 0
 	.equ	se_m_confuse_ray_mvl, 127
 	.equ	se_m_confuse_ray_key, 0

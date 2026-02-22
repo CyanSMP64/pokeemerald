@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_spit_up_grp, voicegroup128
-	.equ	se_m_spit_up_pri, 100+4
+	.equ	se_m_spit_up_pri, 4
 	.equ	se_m_spit_up_rev, 0
 	.equ	se_m_spit_up_mvl, 127
 	.equ	se_m_spit_up_key, 0

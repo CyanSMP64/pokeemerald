@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_dex_scroll_grp, voicegroup127
-	.equ	se_dex_scroll_pri, 100+5
+	.equ	se_dex_scroll_pri, 5
 	.equ	se_dex_scroll_rev, 0
 	.equ	se_dex_scroll_mvl, 127
 	.equ	se_dex_scroll_key, 0

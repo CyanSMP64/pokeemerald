@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_mist_grp, voicegroup128
-	.equ	se_m_mist_pri, 100+4
+	.equ	se_m_mist_pri, 4
 	.equ	se_m_mist_rev, 0
 	.equ	se_m_mist_mvl, 127
 	.equ	se_m_mist_key, 0

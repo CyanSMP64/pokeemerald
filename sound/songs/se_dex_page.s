@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_dex_page_grp, voicegroup127
-	.equ	se_dex_page_pri, 100+5
+	.equ	se_dex_page_pri, 5
 	.equ	se_dex_page_rev, 0
 	.equ	se_dex_page_mvl, 127
 	.equ	se_dex_page_key, 0

@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_uproar_grp, voicegroup128
-	.equ	se_m_uproar_pri, 100+4
+	.equ	se_m_uproar_pri, 4
 	.equ	se_m_uproar_rev, 0
 	.equ	se_m_uproar_mvl, 127
 	.equ	se_m_uproar_key, 0

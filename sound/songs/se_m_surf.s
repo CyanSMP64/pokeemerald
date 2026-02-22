@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_surf_grp, voicegroup128
-	.equ	se_m_surf_pri, 100+4
+	.equ	se_m_surf_pri, 4
 	.equ	se_m_surf_rev, 0
 	.equ	se_m_surf_mvl, 127
 	.equ	se_m_surf_key, 0

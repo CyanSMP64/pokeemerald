@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_toxic_grp, voicegroup128
-	.equ	se_m_toxic_pri, 100+4
+	.equ	se_m_toxic_pri, 4
 	.equ	se_m_toxic_rev, 0
 	.equ	se_m_toxic_mvl, 127
 	.equ	se_m_toxic_key, 0
