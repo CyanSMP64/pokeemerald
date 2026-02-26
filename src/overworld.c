@@ -61,9 +61,12 @@
 #include "frontier_util.h"
 #include "constants/abilities.h"
 #include "constants/layouts.h"
+#include "constants/event_bg.h"
+#include "constants/field_effects.h"
 #include "constants/map_types.h"
 #include "constants/region_map_sections.h"
 #include "constants/songs.h"
+#include "constants/flags.h"
 #include "constants/trainer_hill.h"
 #include "constants/weather.h"
 
@@ -173,6 +176,7 @@ static void TransitionMapMusic(void);
 static u8 GetAdjustedInitialTransitionFlags(struct InitialPlayerAvatarState *, u16, u8);
 static u8 GetAdjustedInitialDirection(struct InitialPlayerAvatarState *, u8, u16, u8);
 static u16 GetCenterScreenMetatileBehavior(void);
+static void TryStartVisibleHiddenItemSparkles(void);
 
 static u8 sPlayerLinkStates[MAX_LINK_PLAYERS];
 // This callback is called with a player's key code. It then returns an
@@ -201,6 +205,30 @@ EWRAM_DATA static struct InitialPlayerAvatarState sInitialPlayerAvatarState = {0
 EWRAM_DATA static u16 sAmbientCrySpecies = 0;
 EWRAM_DATA static bool8 sIsAmbientCryWaterMon = FALSE;
 EWRAM_DATA struct LinkPlayerObjectEvent gLinkPlayerObjectEvents[4] = {0};
+EWRAM_DATA static u8 sHiddenItemSparkleMapNum = 0;
+EWRAM_DATA static u8 sHiddenItemSparkleMapGroup = 0;
+EWRAM_DATA static bool8 sHiddenItemSparkleCacheInit = FALSE;
+
+//    using this python code in the terminal, you can find which 10 maps have the most
+//    bg events, to get the number of bytes sHiddenItemSparkleCooldown should occupy
+//
+//    python3 - <<'PY'
+//    import json
+//    from pathlib import Path
+//
+//    rows = []
+//    for p in Path("data/maps").glob("*/map.json"):
+//        with p.open() as f:
+//            m = json.load(f)
+//        rows.append((len(m.get("bg_events", [])), m.get("id", p.parent.name), str(p)))
+//
+//    rows.sort(key=lambda x: (-x[0], x[1]))
+//
+//    print("Top 10 maps by bg_events:")
+//    for i, (count, map_id, path) in enumerate(rows[:10], 1):
+//        print(f"{i:2}. {count:3}  {map_id}  ({path})")
+//    PY
+EWRAM_DATA static u8 sHiddenItemSparkleCooldown[29] = {0};
 
 static const struct WarpData sDummyWarpData =
 {
@@ -1463,6 +1491,7 @@ static void OverworldBasic(void)
     UpdatePaletteFade();
     UpdateTilesetAnimations();
     DoScheduledBgTilemapCopiesToVram();
+    TryStartVisibleHiddenItemSparkles();
 }
 
 // This CB2 is used when starting
@@ -3201,5 +3230,76 @@ static void SpriteCB_LinkPlayer(struct Sprite *sprite)
     {
         sprite->invisible = ((sprite->data[7] & 4) >> 2);
         sprite->data[7]++;
+    }
+}
+
+static void TryStartVisibleHiddenItemSparkles(void)
+{
+    const struct MapEvents *events;
+    const struct BgEvent *bgEvents;
+    u16 focusX;
+    u16 focusY;
+    s16 left;
+    s16 right;
+    s16 top;
+    s16 bottom;
+    s16 i;
+
+    if (!FlagGet(FLAG_HIDDEN_ITEM_SPARKLES))
+        return;
+
+    if (!sHiddenItemSparkleCacheInit
+     || sHiddenItemSparkleMapNum != gSaveBlock1Ptr->location.mapNum
+     || sHiddenItemSparkleMapGroup != gSaveBlock1Ptr->location.mapGroup)
+    {
+        memset(sHiddenItemSparkleCooldown, 0, sizeof(sHiddenItemSparkleCooldown));
+        sHiddenItemSparkleMapNum = gSaveBlock1Ptr->location.mapNum;
+        sHiddenItemSparkleMapGroup = gSaveBlock1Ptr->location.mapGroup;
+        sHiddenItemSparkleCacheInit = TRUE;
+    }
+
+    events = gMapHeader.events;
+    if (events == NULL)
+        return;
+
+    bgEvents = events->bgEvents;
+    if (bgEvents == NULL)
+        return;
+
+    GetCameraFocusCoords(&focusX, &focusY);
+    left = focusX - 7;
+    right = focusX + 7;
+    top = focusY - 5;
+    bottom = focusY + 5;
+
+    for (i = 0; i < events->bgEventCount && i < (s16)ARRAY_COUNT(sHiddenItemSparkleCooldown); i++)
+    {
+        u16 itemFlag;
+        s16 itemX;
+        s16 itemY;
+
+        if (bgEvents[i].kind != BG_EVENT_HIDDEN_ITEM)
+            continue;
+
+        itemFlag = bgEvents[i].bgUnion.hiddenItem.hiddenItemId + FLAG_HIDDEN_ITEMS_START;
+        if (FlagGet(itemFlag))
+            continue;
+
+        itemX = (u16)bgEvents[i].x + MAP_OFFSET;
+        itemY = (u16)bgEvents[i].y + MAP_OFFSET;
+        if (itemX < left || itemX > right || itemY < top || itemY > bottom)
+            continue;
+
+        if (sHiddenItemSparkleCooldown[i] > 0)
+        {
+            sHiddenItemSparkleCooldown[i]--;
+            continue;
+        }
+
+        gFieldEffectArguments[0] = bgEvents[i].x;
+        gFieldEffectArguments[1] = bgEvents[i].y;
+        gFieldEffectArguments[2] = 0;
+        FieldEffectStart(FLDEFF_SPARKLE);
+        sHiddenItemSparkleCooldown[i] = 16;
     }
 }

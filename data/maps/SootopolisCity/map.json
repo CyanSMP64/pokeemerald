@@ -356,42 +356,6 @@
     }
   ],
   "coord_events": [
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 53,
-      "elevation": 0,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "SootopolisCity_EventScript_Sparkle_ShinyStone"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 52,
-      "elevation": 0,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "SootopolisCity_EventScript_Sparkle_ShinyStone"
-    },
-    {
-      "type": "trigger",
-      "x": 9,
-      "y": 51,
-      "elevation": 0,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "SootopolisCity_EventScript_Sparkle_ShinyStone"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 50,
-      "elevation": 0,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "SootopolisCity_EventScript_Sparkle_ShinyStone"
-    }
   ],
   "bg_events": [
     {

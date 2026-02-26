@@ -223,69 +223,6 @@
       "var": "VAR_JAGGED_PASS_STATE",
       "var_value": "1",
       "script": "JaggedPass_EventScript_OpenMagmaHideout"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 27,
-      "elevation": 0,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "JaggedPass_EventScript_Sparkle_GreatBall"
-    },
-    {
-      "type": "trigger",
-      "x": 9,
-      "y": 27,
-      "elevation": 0,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "JaggedPass_EventScript_Sparkle_GreatBall"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 29,
-      "elevation": 0,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "JaggedPass_EventScript_Sparkle_GreatBall"
-    },
-    {
-      "type": "trigger",
-      "x": 9,
-      "y": 31,
-      "elevation": 0,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "JaggedPass_EventScript_Sparkle_GreatBall"
-    },
-    {
-      "type": "trigger",
-      "x": 12,
-      "y": 10,
-      "elevation": 0,
-      "var": "VAR_TEMP_01",
-      "var_value": "0",
-      "script": "JaggedPass_EventScript_Sparkle_FullHeal"
-    },
-    {
-      "type": "trigger",
-      "x": 12,
-      "y": 12,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "NULL"
-    },
-    {
-      "type": "trigger",
-      "x": 12,
-      "y": 8,
-      "elevation": 0,
-      "var": "VAR_TEMP_01",
-      "var_value": "0",
-      "script": "JaggedPass_EventScript_Sparkle_FullHeal"
     }
   ],
   "bg_events": [

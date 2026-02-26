@@ -324,6 +324,10 @@ Route104_EventScript_Woman::
 	msgbox Route104_Text_OnlyThrowBallAtWildPokemon, MSGBOX_NPC
 	end
 
+Route104_EventScript_Yippee::
+	msgbox Route104_Text_Yippee, MSGBOX_NPC
+	end
+
 Route104_EventScript_Boy2::
 	lock
 	faceplayer
@@ -1153,3 +1157,6 @@ Route104_Text_BrendanPostBattle:
 	.string "making Pokémon battle.\p"
 	.string "Like Mr. Briney, it's important to\n"
 	.string "become friends with your Pokémon.$"
+
+Route104_Text_Yippee:
+	.string "Yippee!$"

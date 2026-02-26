@@ -1413,6 +1413,7 @@ bool8 UpdateRevealDisguise(struct ObjectEvent *objectEvent)
 // Sprite data for FLDEFF_SPARKLE
 #define sFinished data[0]
 #define sEndTimer data[1]
+#define sDelay    data[2]
 
 u32 FldEff_Sparkle(void)
 {
@@ -1426,12 +1427,22 @@ u32 FldEff_Sparkle(void)
     {
         gSprites[spriteId].oam.priority = gFieldEffectArguments[2];
         gSprites[spriteId].coordOffsetEnabled = TRUE;
+        gSprites[spriteId].sDelay = 1;
+        gSprites[spriteId].invisible = TRUE;
     }
     return 0;
 }
 
 void UpdateSparkleFieldEffect(struct Sprite *sprite)
 {
+    if (sprite->sDelay)
+    {
+        sprite->sDelay--;
+        if (!sprite->sDelay)
+            sprite->invisible = FALSE;
+        return;
+    }
+
     if (!sprite->sFinished)
     {
         if (sprite->animEnded)
@@ -1447,6 +1458,7 @@ void UpdateSparkleFieldEffect(struct Sprite *sprite)
 
 #undef sFinished
 #undef sEndTimer
+#undef sDelay
 
 #define sTimer       data[0]
 #define sState       data[2]

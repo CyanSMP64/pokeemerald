@@ -51,33 +51,6 @@
     }
   ],
   "coord_events": [
-    {
-      "type": "trigger",
-      "x": 0,
-      "y": 6,
-      "elevation": 0,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "SSTidalLowerDeck_EventScript_Sparkle_Leftovers"
-    },
-    {
-      "type": "trigger",
-      "x": 5,
-      "y": 4,
-      "elevation": 0,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "SSTidalLowerDeck_EventScript_Sparkle_Leftovers"
-    },
-    {
-      "type": "trigger",
-      "x": 5,
-      "y": 5,
-      "elevation": 0,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "SSTidalLowerDeck_EventScript_Sparkle_Leftovers"
-    }
   ],
   "bg_events": [
     {

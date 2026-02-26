@@ -109,51 +109,6 @@
       "var": "TRIGGER_RUN_IMMEDIATELY",
       "var_value": "0",
       "script": "MtPyre_Exterior_EventScript_FogTrigger"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 12,
-      "elevation": 0,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "MtPyre_Exterior_EventScript_Sparkle_UltraBall"
-    },
-    {
-      "type": "trigger",
-      "x": 17,
-      "y": 19,
-      "elevation": 0,
-      "var": "VAR_TEMP_01",
-      "var_value": "0",
-      "script": "MtPyre_Exterior_EventScript_Sparkle_MaxEther"
-    },
-    {
-      "type": "trigger",
-      "x": 16,
-      "y": 19,
-      "elevation": 0,
-      "var": "VAR_TEMP_01",
-      "var_value": "0",
-      "script": "MtPyre_Exterior_EventScript_Sparkle_MaxEther"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 19,
-      "elevation": 0,
-      "var": "VAR_TEMP_01",
-      "var_value": "0",
-      "script": "MtPyre_Exterior_EventScript_Sparkle_MaxEther"
-    },
-    {
-      "type": "trigger",
-      "x": 11,
-      "y": 22,
-      "elevation": 0,
-      "var": "VAR_TEMP_01",
-      "var_value": "0",
-      "script": "MtPyre_Exterior_EventScript_Sparkle_MaxEther"
     }
   ],
   "bg_events": [

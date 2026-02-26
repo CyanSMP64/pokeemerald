@@ -196,33 +196,6 @@
       "var": "VAR_MT_PYRE_STATE",
       "var_value": "2",
       "script": "MtPyre_Summit_EventScript_ArchieMaxieTrigger2"
-    },
-    {
-      "type": "trigger",
-      "x": 9,
-      "y": 21,
-      "elevation": 0,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "MtPyre_Summit_EventScript_Sparkle_Zinc"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 21,
-      "elevation": 0,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "MtPyre_Summit_EventScript_Sparkle_Zinc"
-    },
-    {
-      "type": "trigger",
-      "x": 33,
-      "y": 5,
-      "elevation": 0,
-      "var": "VAR_TEMP_01",
-      "var_value": "0",
-      "script": "MtPyre_Summit_EventScript_Sparkle_RareCandy"
     }
   ],
   "bg_events": [

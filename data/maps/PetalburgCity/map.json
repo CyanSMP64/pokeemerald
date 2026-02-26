@@ -259,42 +259,6 @@
       "var": "VAR_SCOTT_PETALBURG_ENCOUNTER",
       "var_value": "0",
       "script": "PetalburgCity_EventScript_Scott3"
-    },
-    {
-      "type": "trigger",
-      "x": 11,
-      "y": 26,
-      "elevation": 1,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "PetalburgCity_EventScript_Sparkle_RareCandy"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 26,
-      "elevation": 1,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "PetalburgCity_EventScript_Sparkle_RareCandy"
-    },
-    {
-      "type": "trigger",
-      "x": 9,
-      "y": 26,
-      "elevation": 1,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "PetalburgCity_EventScript_Sparkle_RareCandy"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 27,
-      "elevation": 1,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "PetalburgCity_EventScript_Sparkle_RareCandy"
     }
   ],
   "bg_events": [

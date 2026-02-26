@@ -395,60 +395,6 @@
       "y": 7,
       "elevation": 3,
       "weather": "COORD_EVENT_WEATHER_VOLCANIC_ASH"
-    },
-    {
-      "type": "trigger",
-      "x": 63,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "Route113_EventScript_Sparkle_Ether"
-    },
-    {
-      "type": "trigger",
-      "x": 63,
-      "y": 4,
-      "elevation": 0,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "Route113_EventScript_Sparkle_Ether"
-    },
-    {
-      "type": "trigger",
-      "x": 64,
-      "y": 5,
-      "elevation": 0,
-      "var": "VAR_TEMP_00",
-      "var_value": "0",
-      "script": "Route113_EventScript_Sparkle_Ether"
-    },
-    {
-      "type": "trigger",
-      "x": 70,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_TEMP_01",
-      "var_value": "0",
-      "script": "Route113_EventScript_Sparkle_Nugget"
-    },
-    {
-      "type": "trigger",
-      "x": 70,
-      "y": 5,
-      "elevation": 0,
-      "var": "VAR_TEMP_01",
-      "var_value": "0",
-      "script": "Route113_EventScript_Sparkle_Nugget"
-    },
-    {
-      "type": "trigger",
-      "x": 70,
-      "y": 6,
-      "elevation": 0,
-      "var": "VAR_TEMP_01",
-      "var_value": "0",
-      "script": "Route113_EventScript_Sparkle_Nugget"
     }
   ],
   "bg_events": [

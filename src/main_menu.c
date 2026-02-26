@@ -485,6 +485,7 @@ static const u8 *const sMalePresetNames[] = {
     gText_DefaultNameReid,
     gText_DefaultNameJude,
     gText_DefaultNameTiara,
+    gText_DefaultNameJaxson,
 };
 
 // The number of male vs. female names is assumed to be the same.

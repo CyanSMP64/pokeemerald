@@ -155,6 +155,7 @@ EventScript_HiddenItemScript::
 	end
 
 EventScript_PickUpHiddenItem::
+	special SetHiddenItemFlag
 	copyvar VAR_0x8008, VAR_0x8004
 	copyvar VAR_0x8004, VAR_0x8005
 	specialvar VAR_RESULT, BufferTMHMMoveName
@@ -180,7 +181,6 @@ EventScript_PutHiddenItemInPocket::
 	copyvar VAR_0x8004, VAR_0x8008
 	msgbox gText_PutItemInPocket, MSGBOX_DEFAULT
 	special TryPutTreasureInvestigatorsOnAir
-	special SetHiddenItemFlag
 	releaseall
 	end
 
