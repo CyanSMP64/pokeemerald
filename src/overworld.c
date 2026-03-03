@@ -63,6 +63,7 @@
 #include "constants/layouts.h"
 #include "constants/event_bg.h"
 #include "constants/field_effects.h"
+#include "constants/items.h"
 #include "constants/map_types.h"
 #include "constants/region_map_sections.h"
 #include "constants/songs.h"
@@ -3279,6 +3280,9 @@ static void TryStartVisibleHiddenItemSparkles(void)
         s16 itemY;
 
         if (bgEvents[i].kind != BG_EVENT_HIDDEN_ITEM)
+            continue;
+
+        if (bgEvents[i].bgUnion.hiddenItem.item == ITEM_NONE)
             continue;
 
         itemFlag = bgEvents[i].bgUnion.hiddenItem.hiddenItemId + FLAG_HIDDEN_ITEMS_START;
