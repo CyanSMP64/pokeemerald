@@ -48,6 +48,12 @@ SoundMain_2:
 	adds r1, r2
 SoundMain_3:
 	str r1, [sp, 0x14]
+
+	@ moved from start of SoundMain_4 to here, so cgb channel playback aligns with directsound
+	ldr r3, [r0, o_SoundInfo_CgbSound]
+	bl call_r3
+	ldr r0, [sp, 0x18]
+
 	ldr r3, [r0, o_SoundInfo_MPlayMainHead]
 	cmp r3, 0
 	beq SoundMain_4
@@ -55,9 +61,6 @@ SoundMain_3:
 	bl call_r3
 	ldr r0, [sp, 0x18]
 SoundMain_4:
-	ldr r3, [r0, o_SoundInfo_CgbSound]
-	bl call_r3
-	ldr r0, [sp, 0x18]
 	ldr r3, [r0, o_SoundInfo_pcmSamplesPerVBlank]
 	mov r8, r3
 	ldr r5, lt_o_SoundInfo_pcmBuffer
@@ -88,7 +91,7 @@ lt_PCM_DMA_BUF_SIZE:      .word PCM_DMA_BUF_SIZE
 /* HQ-Mixer rev 4.0 created by ipatix (c) 2021
  * licensed under GPLv3, see LICENSE.txt for details */
 
-	.equ ENABLE_REVERB, 1                        @ <-- if you want faster code or don't like reverb, set this to '0', set to '1' otherwise
+	.equ ENABLE_REVERB, 0                        @ <-- if you want faster code or don't like reverb, set this to '0', set to '1' otherwise
 	.equ ENABLE_DMA, 1                           @ <-- Using DMA produces smaller code and has better performance. Disable it if your case does not allow to use DMA.
 
 	/*****************
