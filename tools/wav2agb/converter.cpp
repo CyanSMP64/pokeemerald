@@ -105,7 +105,6 @@ static bool wav_rate_override = false;
 static bool dpcm_verbose = false;
 static bool dpcm_lookahead_fast = false;
 static bool dpcm_include_padding = true;
-static bool fix_loop = false;
 static size_t dpcm_enc_lookahead = 3;
 static const size_t DPCM_BLK_SIZE = 0x40;
 static const std::vector<int8_t> dpcmLookupTable = { 
@@ -352,11 +351,6 @@ void set_wav_rate(uint32_t rate)
     wav_rate_override = true;
 }
 
-void fix_loop_end()
-{
-    fix_loop = true;
-}
-
 void convert(const std::string& wav_file_str, const std::string& out_file_str,
         const std::string& sym, cmp_type ct, out_type ot)
 {
@@ -402,6 +396,11 @@ void convert(const std::string& wav_file_str, const std::string& out_file_str,
         pitch_value = static_cast<uint32_t>(pitch * 1024.0);
     }
 
+    uint32_t loop_end = wf.loopEnd;
+    if (wf.agbLoopEnd != 0) {
+        loop_end = wf.agbLoopEnd;
+    }
+
     if (ot == out_type::binary) {
         // Binary output mode
         std::vector<uint8_t> bin_data;
@@ -420,8 +419,7 @@ void convert(const std::string& wav_file_str, const std::string& out_file_str,
         bin_write_u32_le(bin_data, wf.loopStart);
 
         // Bytes 12-15: loop end
-        // wf.loopEnd is the exclusive end position; binary format expects (end - 1)
-        bin_write_u32_le(bin_data, wf.loopEnd > 0 ? (fix_loop ? wf.loopEnd : wf.loopEnd - 1) : 0);
+        bin_write_u32_le(bin_data, loop_end);
 
         // Write sample data
         if (ct == cmp_type::none)
@@ -453,7 +451,7 @@ void convert(const std::string& wav_file_str, const std::string& out_file_str,
 
         agb_out(fout, "    .byte   0x%X, 0x0, 0x0, 0x%X\n", fmt, wf.loopEnabled ? 0x40 : 0x0);
         agb_out(fout, "    .word   0x%08X  @ Mid-C ~%f\n", pitch_value, pitch);
-        agb_out(fout, "    .word   %u, %u\n", wf.loopStart, wf.loopEnd);
+        agb_out(fout, "    .word   %u, %u\n", wf.loopStart, loop_end);
 
         if (ct == cmp_type::none)
             convert_uncompressed(wf, fout);
