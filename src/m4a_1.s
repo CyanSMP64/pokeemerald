@@ -1566,12 +1566,45 @@ ply_tune:
 ply_port:
 	mov r12, lr
 	ldr r2, [r1, o_MusicPlayerTrack_cmdPtr]
-	ldrb r3, [r2]
+	ldrb r0, [r2]
 	adds r2, 1
-	ldr r0, =REG_SOUND1CNT_L @ sound register base address
-	adds r0, r3
+	str r2, [r1, o_MusicPlayerTrack_cmdPtr]
 	bl _081DD64A
-	strb r3, [r0]
+	cmp r0, 0xFE
+	beq ply_port_set_time
+	cmp r0, 0xFF
+	beq ply_port_set_flag
+	ldr r2, =REG_SOUND1CNT_L @ sound register base address
+	adds r2, r0
+	strb r3, [r2]
+	bx r12
+ply_port_set_time:
+	adds r2, r1, 0
+	adds r2, o_MusicPlayerTrack_portaFlag
+	strb r3, [r2, o_MusicPlayerTrack_portaTime - o_MusicPlayerTrack_portaFlag]
+	bx r12
+ply_port_set_flag:
+	cmp r3, 64
+	movs r0, 0
+	blo ply_port_store_flag
+	movs r0, 1
+ply_port_store_flag:
+	adds r2, r1, 0
+	adds r2, o_MusicPlayerTrack_portaFlag
+	strb r0, [r2, o_MusicPlayerTrack_portaFlag - o_MusicPlayerTrack_portaFlag]
+	cmp r0, 0
+	bne ply_port_done
+	movs r0, 0
+	ldr r2, [r1, o_MusicPlayerTrack_chan]
+ply_port_clear_loop:
+	cmp r2, 0
+	beq ply_port_done
+	strb r0, [r2, o_SoundChannel_portaActive]
+	strh r0, [r2, o_SoundChannel_portaCurrent]
+	strh r0, [r2, o_SoundChannel_portaStep]
+	ldr r2, [r2, o_SoundChannel_nextChannelPointer]
+	b ply_port_clear_loop
+ply_port_done:
 	bx r12
 	.pool
 	thumb_func_end ply_port
@@ -1740,6 +1773,13 @@ _081DD8BA:
 	movs r0, 0x1
 	adds r1, r5, 0x6
 	strb r0, [r1, o_MusicPlayerTrack_ToneData_type - 0x6]
+	adds r1, r5, 0
+	adds r1, o_MusicPlayerTrack_portaFlag
+	movs r0, 60
+	strb r0, [r1, o_MusicPlayerTrack_portaPrevKey - o_MusicPlayerTrack_portaFlag]
+	movs r0, 0
+	strb r0, [r1, o_MusicPlayerTrack_portaFlag - o_MusicPlayerTrack_portaFlag]
+	strb r0, [r1, o_MusicPlayerTrack_portaTime - o_MusicPlayerTrack_portaFlag]
 	b _081DD938
 _081DD8E0:
 	ldr r2, [r5, o_MusicPlayerTrack_cmdPtr]
@@ -1841,6 +1881,50 @@ _081DD990:
 	orrs r0, r1
 	strb r0, [r5, o_MusicPlayerTrack_flags]
 _081DD994:
+	ldr r4, [r5, o_MusicPlayerTrack_chan]
+	movs r2, 0
+_081DD994_chan_loop:
+	cmp r4, 0
+	beq _081DD994_check_flag
+	ldrb r0, [r4, o_SoundChannel_statusFlags]
+	movs r1, SOUND_CHANNEL_SF_ON
+	tst r1, r0
+	beq _081DD994_next_chan
+	ldrb r0, [r4, o_SoundChannel_portaActive]
+	cmp r0, 0
+	beq _081DD994_next_chan
+	ldrh r0, [r4, o_SoundChannel_portaCurrent]
+	ldrh r1, [r4, o_SoundChannel_portaStep]
+	lsls r0, 16
+	asrs r0, 16
+	cmp r0, 0
+	beq _081DD994_ch_reach_zero
+	bgt _081DD994_ch_positive
+	adds r0, r1
+	cmp r0, 0
+	blt _081DD994_ch_store
+	b _081DD994_ch_reach_zero
+_081DD994_ch_positive:
+	subs r0, r1
+	cmp r0, 0
+	bgt _081DD994_ch_store
+_081DD994_ch_reach_zero:
+	movs r0, 0
+	strb r0, [r4, o_SoundChannel_portaActive]
+_081DD994_ch_store:
+	strh r0, [r4, o_SoundChannel_portaCurrent]
+	movs r2, 1
+_081DD994_next_chan:
+	ldr r4, [r4, o_SoundChannel_nextChannelPointer]
+	b _081DD994_chan_loop
+_081DD994_check_flag:
+	cmp r2, 0
+	beq _081DD994_done
+	ldrb r0, [r5, o_MusicPlayerTrack_flags]
+	movs r1, MPT_FLG_PITCHG
+	orrs r0, r1
+	strb r0, [r5, o_MusicPlayerTrack_flags]
+_081DD994_done:
 	mov r3, r10
 	mov r4, r11
 _081DD998:
@@ -1919,8 +2003,26 @@ _081DDA14:
 	movs r0, o_MusicPlayerTrack_keyM
 	ldrsb r0, [r5, r0]
 	adds r2, r1, r0
-	bpl _081DDA28
+	bpl _081DDA1E
 	movs r2, 0
+_081DDA1E:
+	ldrh r3, [r4, o_SoundChannel_portaCurrent]
+	lsls r3, 16
+	asrs r3, 16
+	asrs r0, r3, 8
+	adds r2, r0
+	bpl _081DDA24
+	movs r2, 0
+_081DDA24:
+	ldrb r1, [r5, o_MusicPlayerTrack_pitM]
+	lsls r0, r3, 24
+	lsrs r0, r0, 24
+	adds r1, r0
+	lsrs r0, r1, 8
+	adds r2, r0
+	movs r0, 0xFF
+	ands r1, r0
+	adds r3, r1, 0
 _081DDA28:
 	cmp r6, 0
 	beq _081DDA46
@@ -1930,7 +2032,7 @@ _081DDA28:
 	mov r0, r8
 	ldr r3, [r0, o_SoundInfo_MidiKeyToCgbFreq]
 	adds r1, r2, 0
-	ldrb r2, [r5, o_MusicPlayerTrack_pitM]
+	adds r2, r3, 0
 	adds r0, r6, 0
 	bl call_r3
 		/* scale cgb period inversely: period' = period * 1024 / songSpeed */
@@ -1952,7 +2054,7 @@ _081DDA46_noise:
 	mov r0, r8
 	ldr r3, [r0, o_SoundInfo_MidiKeyToCgbFreq]
 	adds r1, r2, 0
-	ldrb r2, [r5, o_MusicPlayerTrack_pitM]
+	adds r2, r3, 0
 	adds r0, r6, 0
 	bl call_r3
 _081DDA46_common:
@@ -1964,7 +2066,7 @@ _081DDA46_common:
 	b _081DDA52
 _081DDA46:
 	adds r1, r2, 0
-	ldrb r2, [r5, o_MusicPlayerTrack_pitM]
+	adds r2, r3, 0
 	ldr r0, [r4, o_SoundChannel_wav]
 	bl MidiKeyToFreq
 		/* 
@@ -2267,7 +2369,8 @@ _081DDC34:
 	bgt _081DDBFA
 	mov r4, r8
 	cmp r4, 0
-	beq _081DDCEA
+	bne _081DDC40
+	b _081DDCEA
 _081DDC40:
 	adds r0, r4, 0
 	bl ClearChain
@@ -2288,6 +2391,56 @@ _081DDC54:
 	adds r1, r5, 0
 	bl clear_modM
 _081DDC66:
+	adds r2, r4, 0
+	adds r3, r5, 0
+	adds r3, o_MusicPlayerTrack_portaFlag
+	ldrb r0, [r3, o_MusicPlayerTrack_portaFlag - o_MusicPlayerTrack_portaFlag]
+	cmp r0, 0
+	beq ply_note_porta_disable
+	ldrb r0, [r3, o_MusicPlayerTrack_portaTime - o_MusicPlayerTrack_portaFlag]
+	cmp r0, 0
+	beq ply_note_porta_disable
+	ldrb r0, [r3, o_MusicPlayerTrack_portaPrevKey - o_MusicPlayerTrack_portaFlag]
+	cmp r0, 0xFF
+	beq ply_note_porta_store_prev_only
+	ldrb r1, [r5, o_MusicPlayerTrack_key]
+	cmp r0, r1
+	beq ply_note_porta_store_prev_only
+	subs r0, r1
+	lsls r0, 24
+	asrs r0, 24
+	lsls r0, 8
+	strh r0, [r2, o_SoundChannel_portaCurrent]
+	ldrb r1, [r3, o_MusicPlayerTrack_portaTime - o_MusicPlayerTrack_portaFlag]
+	muls r1, r1
+	movs r0, 0x6B
+	lsls r0, 8
+	bl __divsi3
+	adds r2, r4, 0
+	cmp r0, 0
+	bne ply_note_porta_step_ok
+	movs r0, 1
+ply_note_porta_step_ok:
+	strh r0, [r2, o_SoundChannel_portaStep]
+	movs r0, 1
+	strb r0, [r2, o_SoundChannel_portaActive]
+	b ply_note_porta_store_prev
+ply_note_porta_disable:
+	movs r0, 0
+	strb r0, [r2, o_SoundChannel_portaActive]
+	strh r0, [r2, o_SoundChannel_portaCurrent]
+	strh r0, [r2, o_SoundChannel_portaStep]
+	b ply_note_porta_store_prev
+ply_note_porta_store_prev_only:
+	movs r0, 0
+	strb r0, [r2, o_SoundChannel_portaActive]
+	strh r0, [r2, o_SoundChannel_portaCurrent]
+	strh r0, [r2, o_SoundChannel_portaStep]
+ply_note_porta_store_prev:
+	adds r3, r5, 0
+	adds r3, o_MusicPlayerTrack_portaFlag
+	ldrb r0, [r5, o_MusicPlayerTrack_key]
+	strb r0, [r3, o_MusicPlayerTrack_portaPrevKey - o_MusicPlayerTrack_portaFlag]
 	ldr r0, [sp]
 	adds r1, r5, 0
 	bl TrkVolPitSet

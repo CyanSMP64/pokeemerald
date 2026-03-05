@@ -3,8 +3,8 @@
 
 	.equiv ID_NUMBER, 0x68736d53
 
-	.equiv PCM_DMA_BUF_SIZE, 0x6e0
-	.equiv MAX_DIRECTSOUND_CHANNELS, 12
+	.equiv PCM_DMA_BUF_SIZE, 0x420
+	.equiv MAX_DIRECTSOUND_CHANNELS, 15
 
 	.equiv C_V, 0x40
 	.equiv C_B, 0x80
@@ -124,7 +124,8 @@
 	struct_field o_SoundChannel_velocity, 1
 	struct_field o_SoundChannel_priority, 1
 	struct_field o_SoundChannel_rhythmPan, 1
-	struct_field o_SoundChannel_dummy3, 3
+	struct_field o_SoundChannel_portaActive, 1
+	struct_field o_SoundChannel_portaStep, 2
 	struct_field o_SoundChannel_count, 4
 	struct_field o_SoundChannel_fw, 4
 	struct_field o_SoundChannel_frequency, 4
@@ -134,7 +135,7 @@
 	struct_field o_SoundChannel_prevChannelPointer, 4
 	struct_field o_SoundChannel_nextChannelPointer, 4
 	struct_field o_SoundChannel_dummy4, 4
-	struct_field o_SoundChannel_xpi, 2
+	struct_field o_SoundChannel_portaCurrent, 2
 	struct_field o_SoundChannel_xpc, 2
 	struct_field SoundChannel_size, 0
 
@@ -181,7 +182,10 @@
 	struct_field o_MusicPlayerTrack_ToneData_decay, 1
 	struct_field o_MusicPlayerTrack_ToneData_sustain, 1
 	struct_field o_MusicPlayerTrack_ToneData_release, 1
-	struct_field o_MusicPlayerTrack_gap, 10
+	struct_field o_MusicPlayerTrack_portaFlag, 1
+	struct_field o_MusicPlayerTrack_portaTime, 1
+	struct_field o_MusicPlayerTrack_portaPrevKey, 1
+	struct_field o_MusicPlayerTrack_gap, 7
 	struct_field o_MusicPlayerTrack_timer, 2
 	struct_field o_MusicPlayerTrack_unk_3C, 4
 	struct_field o_MusicPlayerTrack_cmdPtr, 4

@@ -151,7 +151,8 @@ struct SoundChannel
     u8 velocity;
     u8 priority;
     u8 rhythmPan;
-    u8 dummy3[3];
+    u8 portaActive;
+    u16 portaStep;
     u32 count;
     u32 fw;
     u32 frequency;
@@ -161,13 +162,13 @@ struct SoundChannel
     void *prevChannelPointer;
     void *nextChannelPointer;
     u32 dummy4;
-    u16 xpi;
+    u16 portaCurrent;
     u16 xpc;
 };
 
-#define MAX_DIRECTSOUND_CHANNELS 12
+#define MAX_DIRECTSOUND_CHANNELS 15
 
-#define PCM_DMA_BUF_SIZE 0x6e0 // size of Direct Sound buffer
+#define PCM_DMA_BUF_SIZE 0x420 // size of Direct Sound buffer
 
 struct MusicPlayerInfo;
 
@@ -306,7 +307,10 @@ struct MusicPlayerTrack
     u8 pseudoEchoLength;
     struct SoundChannel *chan;
     struct ToneData tone;
-    u8 gap[10];
+    u8 portaFlag;
+    u8 portaTime;
+    u8 portaPrevKey;
+    u8 gap[7];
     u16 timer;
     u32 unk_3C;
     u8 *cmdPtr;

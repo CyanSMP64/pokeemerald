@@ -5,7 +5,7 @@ extern const u8 gCgb3Vol[];
 
 #define BSS_CODE __attribute__((section(".bss.code")))
 
-BSS_CODE ALIGNED(4) char SoundMainRAM_Buffer[0xacc] = {0};
+BSS_CODE ALIGNED(4) char SoundMainRAM_Buffer[0xa6c] = {0};
 BSS_CODE ALIGNED(4) u32 hq_buffer_ptr[0x160] = {0};
 
 COMMON_DATA struct SoundInfo gSoundInfo = {0};
@@ -20,6 +20,13 @@ COMMON_DATA struct MusicPlayerTrack gPokemonCryTracks[MAX_POKEMON_CRIES * 2] = {
 COMMON_DATA struct PokemonCrySong gPokemonCrySong = {0};
 COMMON_DATA u8 gMPlayMemAccArea[0x10] = {0};
 COMMON_DATA struct MusicPlayerInfo gMPlayInfo_SE3 = {0};
+
+static void ResetTrackPortamento(struct MusicPlayerTrack *track)
+{
+    track->portaFlag = 0;
+    track->portaTime = 0;
+    track->portaPrevKey = 60;
+}
 
 u32 MidiKeyToFreq(struct WaveData *wav, s16 key, u8 fineAdjust)
 {
@@ -84,7 +91,7 @@ void m4aSoundInit(void)
     m4aSoundMode(SOUND_MODE_DA_BIT_8
                | SOUND_MODE_FREQ_21024
                | (15 << SOUND_MODE_MASVOL_SHIFT)
-               | (12 << SOUND_MODE_MAXCHN_SHIFT));
+               | (15 << SOUND_MODE_MAXCHN_SHIFT));
 
     for (i = 0; i < NUM_MUSIC_PLAYERS; i++)
     {
@@ -252,6 +259,7 @@ void m4aMPlayImmInit(struct MusicPlayerInfo *mplayInfo)
                 track->volX = 64;
                 track->lfoSpeed = 22;
                 track->tone.type = 1;
+                ResetTrackPortamento(track);
             }
         }
 

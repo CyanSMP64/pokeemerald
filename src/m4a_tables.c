@@ -230,6 +230,7 @@ const u8 gClockTable[] =
 #define MOD    0xc4
 #define MODT   0xc5
 #define TUNE   0xc8
+#define PORT   0xcc
 
 #define XCMD   0xcd
 #define xRELE  0x07

@@ -67,6 +67,7 @@
 	.equ	MOD,	0xc4		@ modulation depth
 	.equ	MODT,	0xc5		@ modulation type
 	.equ	TUNE,	0xc8		@ micro tuning (c_v+??)
+	.equ	PORT,	0xcc		@ portamento
 
 	.equ	XCMD,	0xcd		@ extend command  ***lib
 	 .equ	xIECV,	0x08		@  imi.echo vol   ***lib
