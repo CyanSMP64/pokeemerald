@@ -281,7 +281,7 @@ voice_group STANDARD_1____
 	voice_directsound 72, 64, DirectSoundWaveData_DR__MC_Beep1, 255, 0, 255, 50
 	voice_directsound 60, 64, DirectSoundWaveData_DR__CncrtSnr, 255, 0, 255, 200
 	voice_directsound 60, 64, DirectSoundWaveData_DR__Snr_Roll, 255, 0, 255, 200
-	voice_directsound 60, 64, DirectSoundWaveData_DR__FingSnp2, 255, 0, 255, 200
+	voice_directsound 54, 64, DirectSoundWaveData_fingersnap, 255, 0, 255, 127
 	voice_directsound 60, 49, DirectSoundWaveData_DR__High_Q__, 255, 0, 255, 200
 	voice_directsound 60, 49, DirectSoundWaveData_DR__Slap____, 255, 0, 255, 200
 	voice_directsound 60, 54, DirectSoundWaveData_DR__Scr_Push, 255, 0, 255, 200
@@ -290,18 +290,18 @@ voice_group STANDARD_1____
 	voice_directsound 60, 54, DirectSoundWaveData_DR__Sq_Click, 255, 0, 255, 200
 	voice_directsound 60, 64, DirectSoundWaveData_DR__Mt_Click, 255, 0, 255, 200
 	voice_directsound 60, 64, DirectSoundWaveData_DR__Mt__Bell, 255, 237, 0, 200
-	voice_directsound 60, 64, DirectSoundWaveData_DR__Std1_K2_, 255, 0, 255, 200
-	voice_directsound 60, 64, DirectSoundWaveData_DR__Std1_K1_, 255, 0, 255, 200
-	voice_directsound 60, 64, DirectSoundWaveData_DR__Sd_Stick, 255, 0, 255, 200
-	voice_directsound 60, 64, DirectSoundWaveData_DR__Std1_S1_, 255, 0, 255, 200
+	voice_directsound 59, 64, DirectSoundWaveData_roomkick, 255, 234, 64, 127
+	voice_directsound 60, 64, DirectSoundWaveData_kick1, 255, 0, 255, 127
+	voice_directsound 60, 64, DirectSoundWaveData_sidestick, 255, 0, 255, 127
+	voice_directsound 61, 64, DirectSoundWaveData_snare1, 255, 0, 255, 127
 	voice_directsound 60, 54, DirectSoundWaveData_DR__909_Clap, 255, 0, 255, 200
-	voice_directsound 60, 64, DirectSoundWaveData_DR__Std1_S2_, 255, 0, 255, 200
+	voice_directsound 59, 64, DirectSoundWaveData_roomsnare, 255, 244, 100, 127
 	voice_directsound 57, 34, DirectSoundWaveData_DR__LowTom_1, 255, 247, 0, 200
-	voice_directsound 60, 84, DirectSoundWaveData_DR__C_Hi_Hat, 255, 0, 255, 200
+	voice_directsound 60, 84, DirectSoundWaveData_hat_closed, 255, 248, 0, 127
 	voice_directsound 60, 46, DirectSoundWaveData_DR__LowTom_1, 255, 246, 0, 200
 	voice_directsound 60, 84, DirectSoundWaveData_DR__P_Hi_Hat, 255, 0, 255, 200
 	voice_directsound 57, 58, DirectSoundWaveData_DR__MidTom_1, 255, 245, 0, 200
-	voice_directsound 60, 84, DirectSoundWaveData_DR__O_Hi_Hat, 255, 233, 0, 200
+	voice_directsound 60, 84, DirectSoundWaveData_hat_open, 255, 248, 0, 200
 	voice_directsound 60, 70, DirectSoundWaveData_DR__MidTom_1, 255, 244, 0, 200
 	voice_directsound 57, 82, DirectSoundWaveData_DR__Hi_Tom_1, 255, 243, 0, 200
 	voice_directsound 60, 84, DirectSoundWaveData_DR__CrshCym1, 255, 247, 0, 224
@@ -312,14 +312,14 @@ voice_group STANDARD_1____
 	voice_directsound 60, 74, DirectSoundWaveData_DR__Tambourn, 255, 0, 255, 200
 	voice_directsound 60, 54, DirectSoundWaveData_DR__SplshCym, 255, 239, 0, 224
 	voice_directsound 60, 84, DirectSoundWaveData_DR__Cowbell_, 255, 0, 255, 200
-	voice_directsound 60, 44, DirectSoundWaveData_DR__CrshCym2, 255, 246, 0, 224
+	voice_directsound 57, 32, DirectSoundWaveData_crash1, 255, 252, 0, 215
 	voice_directsound 60, 29, DirectSoundWaveData_DR__Vib_slap, 255, 242, 0, 224
 	voice_directsound 60, 44, DirectSoundWaveData_DR__RideCym2, 255, 249, 0, 224
 	voice_directsound 60, 99, DirectSoundWaveData_DR__Hi_Bongo, 255, 0, 255, 200
-	voice_directsound 60, 99, DirectSoundWaveData_DR__LowBongo, 255, 0, 255, 200
-	voice_directsound 60, 39, DirectSoundWaveData_DR__MH_Conga, 255, 0, 255, 200
-	voice_directsound 60, 39, DirectSoundWaveData_DR__OH_Conga, 255, 0, 255, 200
-	voice_directsound 60, 44, DirectSoundWaveData_DR__LowConga, 255, 233, 0, 200
+	voice_directsound 60, 56, DirectSoundWaveData_bongolow, 255, 0, 255, 127
+	voice_directsound 60, 60, DirectSoundWaveData_congahimute, 255, 0, 255, 127
+	voice_directsound 65, 40, DirectSoundWaveData_congalow, 255, 0, 255, 127
+	voice_directsound 60, 75, DirectSoundWaveData_congalow, 255, 0, 255, 127
 	voice_directsound 60, 84, DirectSoundWaveData_DR__Hi_Timbl, 255, 0, 255, 200
 	voice_directsound 60, 84, DirectSoundWaveData_DR__LowTimbl, 255, 0, 255, 200
 	voice_directsound 65, 29, DirectSoundWaveData_DR__LowAgogo, 255, 0, 255, 200
@@ -330,7 +330,7 @@ voice_group STANDARD_1____
 	voice_directsound 60, 99, DirectSoundWaveData_DR__LL_Whisl, 255, 0, 255, 200
 	voice_directsound 60, 94, DirectSoundWaveData_DR__S_Guiro_, 255, 0, 255, 200
 	voice_directsound 60, 94, DirectSoundWaveData_DR__L_Guiro_, 255, 0, 255, 200
-	voice_directsound 60, 84, DirectSoundWaveData_DR__Claves__, 255, 0, 255, 200
+	voice_directsound 60, 90, DirectSoundWaveData_clave, 255, 0, 255, 127
 	voice_directsound 68, 99, DirectSoundWaveData_DR__LowW_Blk, 255, 0, 255, 200
 	voice_directsound 63, 99, DirectSoundWaveData_DR__LowW_Blk, 255, 0, 255, 200
 	voice_directsound 60, 44, DirectSoundWaveData_DR__Mt_Cuica, 255, 0, 255, 200
@@ -399,4 +399,4 @@ voice_group perc_standard
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 90, DirectSoundWaveData_DR__Claves__, 255, 0, 255, 127
+	voice_directsound 60, 90, DirectSoundWaveData_clave, 255, 0, 255, 127

@@ -26,7 +26,7 @@ void *const gMPlayJumpTableTemplate[] =
     ply_lfodl,
     ply_mod,
     ply_modt,
-    ply_fine,
+    ply_vol2,
     ply_fine,
     ply_tune,
     ply_fine,
@@ -229,6 +229,7 @@ const u8 gClockTable[] =
 #define LFODL  0xc3
 #define MOD    0xc4
 #define MODT   0xc5
+#define VOL2   0xc6
 #define TUNE   0xc8
 #define PORT   0xcc
 

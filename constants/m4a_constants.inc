@@ -185,7 +185,8 @@
 	struct_field o_MusicPlayerTrack_portaFlag, 1
 	struct_field o_MusicPlayerTrack_portaTime, 1
 	struct_field o_MusicPlayerTrack_portaPrevKey, 1
-	struct_field o_MusicPlayerTrack_gap, 7
+	struct_field o_MusicPlayerTrack_vol2, 1
+	struct_field o_MusicPlayerTrack_gap, 6
 	struct_field o_MusicPlayerTrack_timer, 2
 	struct_field o_MusicPlayerTrack_unk_3C, 4
 	struct_field o_MusicPlayerTrack_cmdPtr, 4

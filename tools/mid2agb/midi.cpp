@@ -510,33 +510,12 @@ bool ReadTrackEvent(Event& event)
             int controller_index = ReadInt8();
             int value = ReadInt8();
 
-            if (controller_index == 0x07) {
-                s_channelVolume[g_midiChan] = value;
-                event.type = EventType::Volume;
-                double combined_vol_double = (static_cast<double>(s_channelVolume[g_midiChan]) / 127.0) *
-                                             (static_cast<double>(s_channelExpression[g_midiChan]) / 127.0) * 127.0;
-                if (g_naturalVolumeEnabled) {
-                    event.param1 = applyNaturalVolumeScale(static_cast<int>(std::round(combined_vol_double)));
-                } else {
-                    event.param1 = static_cast<int>(std::round(combined_vol_double));
-                }
-                event.param2 = 0;
-            } else if (controller_index == 0x0B) {
-                s_channelExpression[g_midiChan] = value;
-                event.type = EventType::Volume;
-                double combined_vol_double = (static_cast<double>(s_channelVolume[g_midiChan]) / 127.0) *
-                                             (static_cast<double>(s_channelExpression[g_midiChan]) / 127.0) * 127.0;
-                if (g_naturalVolumeEnabled) {
-                    event.param1 = applyNaturalVolumeScale(static_cast<int>(std::round(combined_vol_double)));
-                } else {
-                    event.param1 = static_cast<int>(std::round(combined_vol_double));
-                }
-                event.param2 = 0;
-            } else {
-                event.type = EventType::Controller;
-                event.param1 = controller_index;
-                event.param2 = value;
-            }
+            if ((controller_index == 0x07 || controller_index == 0x0B) && g_naturalVolumeEnabled)
+                value = applyNaturalVolumeScale(value);
+
+            event.type = EventType::Controller;
+            event.param1 = controller_index;
+            event.param2 = value;
             break;
         }
         case 0xC0: // instrument change

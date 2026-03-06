@@ -66,6 +66,7 @@
 	.equ	LFODL,	0xc3		@ LFO delay
 	.equ	MOD,	0xc4		@ modulation depth
 	.equ	MODT,	0xc5		@ modulation type
+	.equ	VOL2,	0xc6		@ expression volume
 	.equ	TUNE,	0xc8		@ micro tuning (c_v+??)
 	.equ	PORT,	0xcc		@ portamento
 

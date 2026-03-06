@@ -1487,6 +1487,20 @@ ply_vol:
 	bx r12
 	thumb_func_end ply_vol
 
+	thumb_func_start ply_vol2
+ply_vol2:
+	mov r12, lr
+	bl ld_r3_tp_adr_i
+	adds r2, r1, 0
+	adds r2, o_MusicPlayerTrack_portaFlag
+	strb r3, [r2, o_MusicPlayerTrack_vol2 - o_MusicPlayerTrack_portaFlag]
+	ldrb r3, [r1, o_MusicPlayerTrack_flags]
+	movs r2, MPT_FLG_VOLCHG
+	orrs r3, r2
+	strb r3, [r1, o_MusicPlayerTrack_flags]
+	bx r12
+	thumb_func_end ply_vol2
+
 	thumb_func_start ply_pan
 ply_pan:
 	mov r12, lr
@@ -1565,28 +1579,16 @@ ply_tune:
 	thumb_func_start ply_port
 ply_port:
 	mov r12, lr
-	ldr r2, [r1, o_MusicPlayerTrack_cmdPtr]
-	ldrb r0, [r2]
-	adds r2, 1
-	str r2, [r1, o_MusicPlayerTrack_cmdPtr]
-	bl _081DD64A
-	cmp r0, 0xFE
-	beq ply_port_set_time
-	cmp r0, 0xFF
-	beq ply_port_set_flag
-	ldr r2, =REG_SOUND1CNT_L @ sound register base address
-	adds r2, r0
-	strb r3, [r2]
-	bx r12
+	bl ld_r3_tp_adr_i
 ply_port_set_time:
 	adds r2, r1, 0
 	adds r2, o_MusicPlayerTrack_portaFlag
 	strb r3, [r2, o_MusicPlayerTrack_portaTime - o_MusicPlayerTrack_portaFlag]
-	bx r12
-ply_port_set_flag:
-	cmp r3, 64
+	cmp r3, 0
+	bne ply_port_enable
 	movs r0, 0
-	blo ply_port_store_flag
+	b ply_port_store_flag
+ply_port_enable:
 	movs r0, 1
 ply_port_store_flag:
 	adds r2, r1, 0
@@ -1777,6 +1779,8 @@ _081DD8BA:
 	adds r1, o_MusicPlayerTrack_portaFlag
 	movs r0, 60
 	strb r0, [r1, o_MusicPlayerTrack_portaPrevKey - o_MusicPlayerTrack_portaFlag]
+	movs r0, 127
+	strb r0, [r1, o_MusicPlayerTrack_vol2 - o_MusicPlayerTrack_portaFlag]
 	movs r0, 0
 	strb r0, [r1, o_MusicPlayerTrack_portaFlag - o_MusicPlayerTrack_portaFlag]
 	strb r0, [r1, o_MusicPlayerTrack_portaTime - o_MusicPlayerTrack_portaFlag]
@@ -2023,6 +2027,7 @@ _081DDA24:
 	movs r0, 0xFF
 	ands r1, r0
 	adds r3, r1, 0
+	push {r3}
 _081DDA28:
 	cmp r6, 0
 	beq _081DDA46
@@ -2032,7 +2037,7 @@ _081DDA28:
 	mov r0, r8
 	ldr r3, [r0, o_SoundInfo_MidiKeyToCgbFreq]
 	adds r1, r2, 0
-	adds r2, r3, 0
+	pop {r2}
 	adds r0, r6, 0
 	bl call_r3
 		/* scale cgb period inversely: period' = period * 1024 / songSpeed */
@@ -2054,7 +2059,7 @@ _081DDA46_noise:
 	mov r0, r8
 	ldr r3, [r0, o_SoundInfo_MidiKeyToCgbFreq]
 	adds r1, r2, 0
-	adds r2, r3, 0
+	pop {r2}
 	adds r0, r6, 0
 	bl call_r3
 _081DDA46_common:
@@ -2066,7 +2071,7 @@ _081DDA46_common:
 	b _081DDA52
 _081DDA46:
 	adds r1, r2, 0
-	adds r2, r3, 0
+	pop {r2}
 	ldr r0, [r4, o_SoundChannel_wav]
 	bl MidiKeyToFreq
 		/* 

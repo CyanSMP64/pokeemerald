@@ -46,7 +46,6 @@ enum class EventType
     PitchBend = 0x23,
     KeyShift = 0x31,
     Note = 0x40,
-    Volume = 0x41,
     TimeSplit = 0xFE,
     EndOfTrack = 0xFF,
 };

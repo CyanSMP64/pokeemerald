@@ -5,7 +5,7 @@ extern const u8 gCgb3Vol[];
 
 #define BSS_CODE __attribute__((section(".bss.code")))
 
-BSS_CODE ALIGNED(4) char SoundMainRAM_Buffer[0xa6c] = {0};
+BSS_CODE ALIGNED(4) char SoundMainRAM_Buffer[0xacc] = {0};
 BSS_CODE ALIGNED(4) u32 hq_buffer_ptr[0x160] = {0};
 
 COMMON_DATA struct SoundInfo gSoundInfo = {0};
@@ -257,6 +257,7 @@ void m4aMPlayImmInit(struct MusicPlayerInfo *mplayInfo)
                 track->flags = MPT_FLG_EXIST;
                 track->bendRange = 2;
                 track->volX = 64;
+                track->vol2 = 127;
                 track->lfoSpeed = 22;
                 track->tone.type = 1;
                 ResetTrackPortamento(track);
@@ -785,7 +786,9 @@ void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *tr
         s32 x;
         s32 y;
 
-        x = (u32)(track->vol * track->volX) >> 5;
+        // VOL2 is a second multiplicative volume stage; VOL2 defaults to 127.
+        x = (u32)((track->vol * track->vol2 + 63) / 127);
+        x = (u32)(x * track->volX) >> 5;
 
         if (track->modT == 1)
             x = (u32)(x * (track->modM + 128)) >> 7;

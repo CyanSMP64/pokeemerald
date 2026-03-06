@@ -310,7 +310,8 @@ struct MusicPlayerTrack
     u8 portaFlag;
     u8 portaTime;
     u8 portaPrevKey;
-    u8 gap[7];
+    u8 vol2;
+    u8 gap[6];
     u16 timer;
     u32 unk_3C;
     u8 *cmdPtr;
@@ -478,6 +479,7 @@ void ply_tempo(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_keysh(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_voice(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_vol(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
+void ply_vol2(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_pan(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_bend(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_bendr(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
