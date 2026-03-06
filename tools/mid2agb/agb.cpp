@@ -46,6 +46,7 @@ static int s_cc5Value;
 static bool s_cc65Enabled;
 static int s_lastPortValue;
 static int s_lastModValue;
+static int s_lastModMValue;
 static int s_lastPanValue;
 static int s_lastBendrValue;
 static int s_lastLfosValue;
@@ -74,6 +75,7 @@ static void InvalidateDedupeState()
 {
     s_lastPortValue = -1;
     s_lastModValue = -1;
+    s_lastModMValue = -1;
     s_lastPanValue = -1;
     s_lastBendrValue = -1;
     s_lastLfosValue = -1;
@@ -406,6 +408,17 @@ void PrintControllerOp(const Event& event)
             PrintWait(event.time);
         }
         break;
+    case 0x03:
+        if (event.param2 != s_lastModMValue)
+        {
+            PrintOp(event.time, "MODM  ", "%u", event.param2);
+            s_lastModMValue = event.param2;
+        }
+        else
+        {
+            PrintWait(event.time);
+        }
+        break;
     case 0x05:
         s_cc5Value = event.param2;
         EmitPortIfChanged(event.time, s_cc65Enabled ? s_cc5Value : 0);
@@ -555,6 +568,7 @@ void PrintAgbTrack(std::vector<Event>& events)
     s_cc65Enabled = false;
     s_lastPortValue = 0;
     s_lastModValue = 0;
+    s_lastModMValue = 0;
     s_lastPanValue = 64;
     s_lastBendrValue = 2;
     s_lastLfosValue = 22;

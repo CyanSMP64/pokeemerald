@@ -311,7 +311,8 @@ struct MusicPlayerTrack
     u8 portaTime;
     u8 portaPrevKey;
     u8 vol2;
-    u8 gap[6];
+    u8 modMSB;
+    u8 gap[5];
     u16 timer;
     u32 unk_3C;
     u8 *cmdPtr;
@@ -486,6 +487,7 @@ void ply_bendr(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_lfos(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_lfodl(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_mod(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
+void ply_modm(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_modt(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_tune(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_port(struct MusicPlayerInfo *, struct MusicPlayerTrack *);

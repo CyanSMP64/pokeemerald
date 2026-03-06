@@ -1400,8 +1400,9 @@ void m4aMPlayModDepthSet(struct MusicPlayerInfo *mplayInfo, u16 trackBits, u8 mo
             if (track->flags & MPT_FLG_EXIST)
             {
                 track->mod = modDepth;
+                track->modMSB = 0;
 
-                if (!track->mod)
+                if (!track->mod && !track->modMSB)
                     ClearModM(track);
             }
         }

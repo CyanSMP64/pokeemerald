@@ -67,6 +67,7 @@
 	.equ	MOD,	0xc4		@ modulation depth
 	.equ	MODT,	0xc5		@ modulation type
 	.equ	VOL2,	0xc6		@ expression volume
+	.equ	MODM,	0xc7		@ modulation depth MSB (effective depth = MOD + MODM*128)
 	.equ	TUNE,	0xc8		@ micro tuning (c_v+??)
 	.equ	PORT,	0xcc		@ portamento
 

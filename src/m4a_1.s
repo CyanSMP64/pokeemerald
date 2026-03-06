@@ -1865,7 +1865,12 @@ _081DD96E:
 	movs r0, 0x80
 	subs r2, r0, r1
 _081DD972:
-	ldrb r0, [r5, o_MusicPlayerTrack_mod]
+	adds r0, r5, 0
+	adds r0, o_MusicPlayerTrack_portaFlag
+	ldrb r0, [r0, o_MusicPlayerTrack_modMSB - o_MusicPlayerTrack_portaFlag]
+	lsls r0, 7
+	ldrb r1, [r5, o_MusicPlayerTrack_mod]
+	adds r0, r1
 	muls r0, r2
 	asrs r2, r0, 6
 	ldrb r0, [r5, o_MusicPlayerTrack_modM]
@@ -2677,11 +2682,29 @@ ply_mod:
 	mov r12, lr
 	bl ld_r3_tp_adr_i_unchecked
 	strb r3, [r1, o_MusicPlayerTrack_mod]
-	cmp r3, 0
+	adds r2, r1, 0
+	adds r2, o_MusicPlayerTrack_portaFlag
+	ldrb r0, [r2, o_MusicPlayerTrack_modMSB - o_MusicPlayerTrack_portaFlag]
+	orrs r0, r3
 	bne _081DDD90
 	bl clear_modM
 _081DDD90:
 	bx r12
 	thumb_func_end ply_mod
+
+	thumb_func_start ply_modm
+ply_modm:
+	mov r12, lr
+	bl ld_r3_tp_adr_i_unchecked
+	adds r2, r1, 0
+	adds r2, o_MusicPlayerTrack_portaFlag
+	strb r3, [r2, o_MusicPlayerTrack_modMSB - o_MusicPlayerTrack_portaFlag]
+	ldrb r0, [r1, o_MusicPlayerTrack_mod]
+	orrs r0, r3
+	bne _081DDD9E
+	bl clear_modM
+_081DDD9E:
+	bx r12
+	thumb_func_end ply_modm
 
 	.align 2, 0 @ Don't pad with nop.
