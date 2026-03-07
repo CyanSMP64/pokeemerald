@@ -781,6 +781,13 @@ void FadeOutBody(struct MusicPlayerInfo *mplayInfo)
 
 void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *track)
 {
+    s32 modPitch = (s16)((u8)track->modM | ((u16)(u8)track->modMHi << 8));
+    s32 mod8 = modPitch;
+    if (mod8 < -128)
+        mod8 = -128;
+    else if (mod8 > 127)
+        mod8 = 127;
+
     if (track->flags & MPT_FLG_VOLSET)
     {
         s32 x;
@@ -791,7 +798,7 @@ void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *tr
         x = (u32)(x * track->volX) >> 5;
 
         if (track->modT == 1)
-            x = (u32)(x * (track->modM + 128)) >> 7;
+            x = (u32)(x * (mod8 + 128)) >> 7;
 
         // Apply song volume scaling (64 = normal volume)
         x = (u32)(x * mplayInfo->songVol) >> 6;
@@ -799,7 +806,7 @@ void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *tr
         y = 2 * track->pan + track->panX;
 
         if (track->modT == 2)
-            y += track->modM;
+            y += mod8;
 
         if (y < -128)
             y = -128;
@@ -820,7 +827,7 @@ void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *tr
               + track->pitX;
 
         if (track->modT == 0)
-            x += 16 * track->modM;
+            x += 16 * modPitch;
 
         track->keyM = x >> 8;
         track->pitM = x;
@@ -1371,6 +1378,7 @@ void ClearModM(struct MusicPlayerTrack *track)
 {
     track->lfoSpeedC = 0;
     track->modM = 0;
+    track->modMHi = 0;
 
     if (track->modT == 0)
         track->flags |= MPT_FLG_PITCHG;

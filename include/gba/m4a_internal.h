@@ -312,7 +312,8 @@ struct MusicPlayerTrack
     u8 portaPrevKey;
     u8 vol2;
     u8 modMSB;
-    u8 gap[5];
+    s8 modMHi;
+    u8 gap[4];
     u16 timer;
     u32 unk_3C;
     u8 *cmdPtr;

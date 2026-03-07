@@ -1841,8 +1841,11 @@ _081DD938:
 	ldrb r1, [r5, o_MusicPlayerTrack_lfoSpeed]
 	cmp r1, 0
 	beq _081DD994
-	ldrb r0, [r5, o_MusicPlayerTrack_mod]
-	cmp r0, 0
+	adds r2, r5, 0
+	adds r2, o_MusicPlayerTrack_portaFlag
+	ldrb r0, [r2, o_MusicPlayerTrack_modMSB - o_MusicPlayerTrack_portaFlag]
+	ldrb r2, [r5, o_MusicPlayerTrack_mod]
+	orrs r0, r2
 	beq _081DD994
 	ldrb r0, [r5, o_MusicPlayerTrack_lfoDelayC]
 	cmp r0, 0
@@ -1873,11 +1876,41 @@ _081DD972:
 	adds r0, r1
 	muls r0, r2
 	asrs r2, r0, 6
+	movs r0, 0x80
+	lsls r0, 8
+	subs r1, r0, 1
+	cmp r2, r1
+	ble _081DD97A
+	adds r2, r1, 0
+	b _081DD982
+_081DD97A:
+	negs r0, r0
+	cmp r2, r0
+	bge _081DD982
+	adds r2, r0, 0
+_081DD982:
 	ldrb r0, [r5, o_MusicPlayerTrack_modM]
-	eors r0, r2
+	adds r3, r2, 0
+	lsls r3, 24
+	lsrs r3, 24
+	eors r0, r3
+	lsls r0, 24
+	bne _081DD988
+	adds r0, r5, 0
+	adds r0, o_MusicPlayerTrack_portaFlag
+	ldrb r1, [r0, o_MusicPlayerTrack_modMHi - o_MusicPlayerTrack_portaFlag]
+	asrs r0, r2, 8
+	lsls r0, 24
+	lsrs r0, 24
+	eors r0, r1
 	lsls r0, 24
 	beq _081DD994
+_081DD988:
 	strb r2, [r5, o_MusicPlayerTrack_modM]
+	adds r0, r5, 0
+	adds r0, o_MusicPlayerTrack_portaFlag
+	asrs r1, r2, 8
+	strb r1, [r0, o_MusicPlayerTrack_modMHi - o_MusicPlayerTrack_portaFlag]
 	ldrb r0, [r5]
 	ldrb r1, [r5, o_MusicPlayerTrack_modT]
 	cmp r1, 0
@@ -2641,6 +2674,9 @@ _081DDD40:
 clear_modM:
 	movs r2, 0
 	strb r2, [r1, o_MusicPlayerTrack_modM]
+	adds r3, r1, 0
+	adds r3, o_MusicPlayerTrack_portaFlag
+	strb r2, [r3, o_MusicPlayerTrack_modMHi - o_MusicPlayerTrack_portaFlag]
 	strb r2, [r1, o_MusicPlayerTrack_lfoSpeedC]
 	ldrb r2, [r1, o_MusicPlayerTrack_modT]
 	cmp r2, 0
