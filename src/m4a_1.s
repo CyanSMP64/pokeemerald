@@ -6,6 +6,25 @@
 
 	.text
 
+/* HQ-Mixer rev 4.0 created by ipatix (c) 2021
+ * licensed under GPLv3, see LICENSE.txt for details */
+
+/* mixer modified by CyanSixFour */
+
+	.equ ENABLE_REVERB, 0                        @ <-- if you want faster code or don't like reverb, set this to '0', set to '1' otherwise
+	.equ ENABLE_DMA, 1                           @ <-- Using DMA produces smaller code and has better performance. Disable it if your case does not allow to use DMA.
+	.equ ALIGN_CGB_WITH_DIRECT, 1                @ <-- 0: vanilla behaviour, cgb plays one frame before direct sound; 1: fixed timing
+
+/* ENABLE_REVERB saves 0x60 bytes of SoundMainRAM when =0
+ * ENABLE_DMA saves 0x68 bytes of SoundMainRAM when =1
+ * please ensure SoundMainRAM_Buffer is large enough when changing configs.	*/
+
+	/*****************
+	 * END OF CONFIG *
+	 *****************/
+
+	/* NO USER SERVICABLE CODE BELOW HERE! YOU HAVE BEEN WARNED */
+
 	thumb_func_start umul3232H32
 umul3232H32:
 	adr r2, __umul3232H32
@@ -48,12 +67,11 @@ SoundMain_2:
 	adds r1, r2
 SoundMain_3:
 	str r1, [sp, 0x14]
-
-	@ moved from start of SoundMain_4 to here, so cgb channel playback aligns with directsound
+.if ALIGN_CGB_WITH_DIRECT==1
 	ldr r3, [r0, o_SoundInfo_CgbSound]
 	bl call_r3
 	ldr r0, [sp, 0x18]
-
+.endif
 	ldr r3, [r0, o_SoundInfo_MPlayMainHead]
 	cmp r3, 0
 	beq SoundMain_4
@@ -61,6 +79,11 @@ SoundMain_3:
 	bl call_r3
 	ldr r0, [sp, 0x18]
 SoundMain_4:
+.if ALIGN_CGB_WITH_DIRECT==0
+	ldr r3, [r0, o_SoundInfo_CgbSound]
+	bl call_r3
+	ldr r0, [sp, 0x18]
+.endif
 	ldr r3, [r0, o_SoundInfo_pcmSamplesPerVBlank]
 	mov r8, r3
 	ldr r5, lt_o_SoundInfo_pcmBuffer
@@ -87,18 +110,6 @@ lt_REG_VCOUNT:            .word REG_VCOUNT
 lt_o_SoundInfo_pcmBuffer: .word o_SoundInfo_pcmBuffer
 lt_PCM_DMA_BUF_SIZE:      .word PCM_DMA_BUF_SIZE
 	thumb_func_end SoundMain
-
-/* HQ-Mixer rev 4.0 created by ipatix (c) 2021
- * licensed under GPLv3, see LICENSE.txt for details */
-
-	.equ ENABLE_REVERB, 0                        @ <-- if you want faster code or don't like reverb, set this to '0', set to '1' otherwise
-	.equ ENABLE_DMA, 1                           @ <-- Using DMA produces smaller code and has better performance. Disable it if your case does not allow to use DMA.
-
-	/*****************
-	 * END OF CONFIG *
-	 *****************/
-
-	/* NO USER SERVICABLE CODE BELOW HERE! YOU HAVE BEEN WARNED */
 
 	/* globals */
 	.global SoundMainRAM
@@ -1115,6 +1126,15 @@ C_setup_synth:
 	ldrb r0, [r3, #SYNTH_BASE_WAVE_DUTY]
 	mov r0, r0, lsl#24
 	mla r6, r10, r1, r0                 @ calculate the final duty cycle with the offset, and intensity * rotating duty cycle amount
+	b C_synth_pulse_setup
+
+C_synth_static_pulse:
+	/* louder, but static, pulse wave */
+	ldrb r0, [r3, #SYNTH_BASE_WAVE_DUTY]
+	mov r6, r0, lsl#24
+	mov r11, r11, lsl#1                @ static pulse was using lsl#7; scale once and reuse lsl#6 loop
+
+C_synth_pulse_setup:
 	stmfd sp!, {r2, r3, r9, r12}
 
 C_synth_pulse_loop:
@@ -1166,6 +1186,9 @@ C_synth_saw_loop:
 	b C_end_mixing
 
 C_synth_triangle:
+	subs r12, r12, #1
+	bne C_synth_static_pulse
+
 	mov r6, #0x80
 	mov r12, #0x180
 
