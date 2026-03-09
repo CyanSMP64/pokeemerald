@@ -47,7 +47,7 @@ se_m_tri_attack2_1:
 	.byte	W06
 	.byte		BEND  , c_b-(8*2)
 	.byte	W03
-	.byte		BEND  , c_b-(15*2)
+	.byte		        c_b-(15*2)
 	.byte		N60   , Cs3 , v124
 	.byte	W03
 	.byte		BEND  , c_b-(4*2)

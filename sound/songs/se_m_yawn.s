@@ -77,11 +77,11 @@ se_m_yawn_1:
 	.byte	W01
 	.byte		BEND  , c_b-(1*2)
 	.byte	W01
-	.byte		BEND  , c_b-(1*2)
+	.byte		        c_b-(1*2)
 	.byte	W01
-	.byte		BEND  , c_b-(3*2)
+	.byte		        c_b-(3*2)
 	.byte	W01
-	.byte		BEND  , c_b-(3*2)
+	.byte		        c_b-(3*2)
 	.byte	W02
 	.byte	FINE
 

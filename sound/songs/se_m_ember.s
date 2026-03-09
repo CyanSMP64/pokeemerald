@@ -34,7 +34,7 @@ se_m_ember_1:
 	.byte	W01
 	.byte		BEND  , c_b+(7*2)
 	.byte	W02
-	.byte		BEND  , c_b-(12*2)
+	.byte		        c_b-(12*2)
 	.byte	W01
 	.byte		VOL   , 89*se_m_ember_mvl/mxv
 	.byte	W01

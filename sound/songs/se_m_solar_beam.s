@@ -137,7 +137,7 @@ se_m_solar_beam_1:
 	.byte		PAN   , c_v+11
 	.byte		BEND  , c_b-(49*2)
 	.byte	W03
-	.byte		BEND  , c_b-(64*2)
+	.byte		        c_b-(64*2)
 	.byte	W01
 	.byte		VOL   , 10*se_m_solar_beam_mvl/mxv
 	.byte	W02

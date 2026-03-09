@@ -60,7 +60,7 @@ se_m_heat_wave_1:
 	.byte		PAN   , c_v+0
 	.byte		BEND  , c_b-(41*2)
 	.byte	W04
-	.byte		BEND  , c_b-(45*2)
+	.byte		        c_b-(45*2)
 	.byte	W02
 	.byte		PAN   , c_v+6
 	.byte	W02
@@ -85,7 +85,7 @@ se_m_heat_wave_1:
 	.byte		PAN   , c_v+0
 	.byte		BEND  , c_b-(18*2)
 	.byte	W04
-	.byte		BEND  , c_b-(13*2)
+	.byte		        c_b-(13*2)
 	.byte	W02
 	.byte		PAN   , c_v-8
 	.byte	W06

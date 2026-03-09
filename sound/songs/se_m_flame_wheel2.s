@@ -57,7 +57,7 @@ se_m_flame_wheel2_1:
 	.byte		VOL   , 13*se_m_flame_wheel2_mvl/mxv
 	.byte		BEND  , c_b-(24*2)
 	.byte	W03
-	.byte		BEND  , c_b-(40*2)
+	.byte		        c_b-(40*2)
 	.byte	W03
 	.byte	FINE
 

@@ -27,20 +27,20 @@ se_m_belly_drum_1:
 	.byte	W01
 	.byte		BEND  , c_b-(6*2)
 	.byte	W01
-	.byte		BEND  , c_b-(10*2)
+	.byte		        c_b-(10*2)
 	.byte	W01
-	.byte		BEND  , c_b-(14*2)
+	.byte		        c_b-(14*2)
 	.byte	W01
-	.byte		BEND  , c_b-(12*2)
+	.byte		        c_b-(12*2)
 	.byte	W02
-	.byte		BEND  , c_b-(14*2)
+	.byte		        c_b-(14*2)
 	.byte	W01
-	.byte		BEND  , c_b-(18*2)
+	.byte		        c_b-(18*2)
 	.byte	W01
 	.byte		VOL   , 108*se_m_belly_drum_mvl/mxv
 	.byte		BEND  , c_b-(20*2)
 	.byte	W01
-	.byte		BEND  , c_b-(22*2)
+	.byte		        c_b-(22*2)
 	.byte	W01
 	.byte		VOL   , 94*se_m_belly_drum_mvl/mxv
 	.byte	W03

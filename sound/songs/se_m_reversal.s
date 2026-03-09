@@ -228,7 +228,7 @@ se_m_reversal_2:
 	.byte	W01
 	.byte		BEND  , c_b+(0*2)
 	.byte	W01
-	.byte		BEND  , c_b-(33*2)
+	.byte		        c_b-(33*2)
 	.byte	W02
 	.byte	W01
 	.byte		        c_v+31
@@ -236,35 +236,35 @@ se_m_reversal_2:
 	.byte	W01
 	.byte		BEND  , c_b+(0*2)
 	.byte	W01
-	.byte		BEND  , c_b-(33*2)
+	.byte		        c_b-(33*2)
 	.byte	W03
 	.byte		BEND  , c_b+(31*2)
 	.byte		N03   , Dn5
 	.byte	W01
 	.byte		BEND  , c_b+(0*2)
 	.byte	W01
-	.byte		BEND  , c_b-(33*2)
+	.byte		        c_b-(33*2)
 	.byte	W02
 	.byte		BEND  , c_b+(31*2)
 	.byte		N03   , Ds5
 	.byte	W02
 	.byte		BEND  , c_b+(0*2)
 	.byte	W01
-	.byte		BEND  , c_b-(33*2)
+	.byte		        c_b-(33*2)
 	.byte	W02
 	.byte		BEND  , c_b+(31*2)
 	.byte		N03   , En5
 	.byte	W01
 	.byte		BEND  , c_b+(0*2)
 	.byte	W02
-	.byte		BEND  , c_b-(33*2)
+	.byte		        c_b-(33*2)
 	.byte	W02
 	.byte		BEND  , c_b+(31*2)
 	.byte		N03   , Fn5
 	.byte	W01
 	.byte		BEND  , c_b+(0*2)
 	.byte	W01
-	.byte		BEND  , c_b-(33*2)
+	.byte		        c_b-(33*2)
 	.byte	W02
 	.byte	W01
 	.byte		        c_v+31
@@ -272,35 +272,35 @@ se_m_reversal_2:
 	.byte	W01
 	.byte		BEND  , c_b+(0*2)
 	.byte	W01
-	.byte		BEND  , c_b-(33*2)
+	.byte		        c_b-(33*2)
 	.byte	W03
 	.byte		BEND  , c_b+(31*2)
 	.byte		N03   , Gn5
 	.byte	W01
 	.byte		BEND  , c_b+(0*2)
 	.byte	W01
-	.byte		BEND  , c_b-(33*2)
+	.byte		        c_b-(33*2)
 	.byte	W02
 	.byte		BEND  , c_b+(31*2)
 	.byte		N03   , Gs5
 	.byte	W02
 	.byte		BEND  , c_b+(0*2)
 	.byte	W01
-	.byte		BEND  , c_b-(33*2)
+	.byte		        c_b-(33*2)
 	.byte	W02
 	.byte		BEND  , c_b+(31*2)
 	.byte		N03   , An5
 	.byte	W01
 	.byte		BEND  , c_b+(0*2)
 	.byte	W02
-	.byte		BEND  , c_b-(33*2)
+	.byte		        c_b-(33*2)
 	.byte	W02
 	.byte		BEND  , c_b+(31*2)
 	.byte		N03   , As5
 	.byte	W01
 	.byte		BEND  , c_b+(0*2)
 	.byte	W01
-	.byte		BEND  , c_b-(33*2)
+	.byte		        c_b-(33*2)
 	.byte	W02
 	.byte	W01
 	.byte		        c_v+31
@@ -308,14 +308,14 @@ se_m_reversal_2:
 	.byte	W01
 	.byte		BEND  , c_b+(0*2)
 	.byte	W01
-	.byte		BEND  , c_b-(33*2)
+	.byte		        c_b-(33*2)
 	.byte	W03
 	.byte		BEND  , c_b+(31*2)
 	.byte		N03   , Bn5 , v020
 	.byte	W01
 	.byte		BEND  , c_b+(0*2)
 	.byte	W01
-	.byte		BEND  , c_b-(33*2)
+	.byte		        c_b-(33*2)
 	.byte	W04
 	.byte	FINE
 

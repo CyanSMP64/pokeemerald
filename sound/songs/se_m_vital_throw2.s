@@ -27,12 +27,12 @@ se_m_vital_throw2_1:
 	.byte	W01
 	.byte		BEND  , c_b-(9*2)
 	.byte	W01
-	.byte		BEND  , c_b-(21*2)
+	.byte		        c_b-(21*2)
 	.byte	W01
 	.byte		PAN   , c_v-6
 	.byte		BEND  , c_b-(40*2)
 	.byte	W01
-	.byte		BEND  , c_b-(64*2)
+	.byte		        c_b-(64*2)
 	.byte	W02
 	.byte		PAN   , c_v+0
 	.byte		BEND  , c_b+(0*2)
@@ -40,12 +40,12 @@ se_m_vital_throw2_1:
 	.byte	W01
 	.byte		BEND  , c_b-(9*2)
 	.byte	W01
-	.byte		BEND  , c_b-(21*2)
+	.byte		        c_b-(21*2)
 	.byte	W01
 	.byte		PAN   , c_v+7
 	.byte		BEND  , c_b-(40*2)
 	.byte	W01
-	.byte		BEND  , c_b-(64*2)
+	.byte		        c_b-(64*2)
 	.byte	W02
 	.byte		PAN   , c_v+0
 	.byte		BEND  , c_b+(0*2)
@@ -53,9 +53,9 @@ se_m_vital_throw2_1:
 	.byte	W01
 	.byte		BEND  , c_b-(9*2)
 	.byte	W01
-	.byte		BEND  , c_b-(19*2)
+	.byte		        c_b-(19*2)
 	.byte	W01
-	.byte		BEND  , c_b-(29*2)
+	.byte		        c_b-(29*2)
 	.byte	W01
 	.byte		VOL   , 86*se_m_vital_throw2_mvl/mxv
 	.byte		BEND  , c_b-(39*2)
@@ -69,7 +69,7 @@ se_m_vital_throw2_1:
 	.byte		VOL   , 20*se_m_vital_throw2_mvl/mxv
 	.byte		BEND  , c_b-(64*2)
 	.byte	W04
-	.byte		BEND  , c_b-(64*2)
+	.byte		        c_b-(64*2)
 	.byte	FINE
 
 @********************** Track  2 **********************@

@@ -35,7 +35,7 @@ se_m_crabhammer_1:
 	.byte		PAN   , c_v+0
 	.byte		BEND  , c_b+(9*2)
 	.byte	W02
-	.byte		BEND  , c_b-(1*2)
+	.byte		        c_b-(1*2)
 	.byte	W02
 	.byte		BEND  , c_b+(32*2)
 	.byte		N02   , Dn3 , v056

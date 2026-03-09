@@ -47,7 +47,7 @@ se_m_twister_1:
 	.byte		        c_v-17
 	.byte		BEND  , c_b+(0*2)
 	.byte	W03
-	.byte		BEND  , c_b-(7*2)
+	.byte		        c_b-(7*2)
 	.byte	W03
 	.byte		PAN   , c_v-9
 	.byte	W06

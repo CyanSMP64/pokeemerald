@@ -44,7 +44,7 @@ se_m_grasswhistle_1:
 	.byte	W06
 	.byte		BEND  , c_b-(8*2)
 	.byte	W06
-	.byte		BEND  , c_b-(4*2)
+	.byte		        c_b-(4*2)
 	.byte	W06
 	.byte		BEND  , c_b+(0*2)
 	.byte	W06

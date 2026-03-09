@@ -30,12 +30,12 @@ se_m_flamethrower_1:
 	.byte		PAN   , c_v-5
 	.byte		BEND  , c_b+(16*2)
 	.byte	W02
-	.byte		BEND  , c_b-(8*2)
+	.byte		        c_b-(8*2)
 	.byte	W02
 	.byte		PAN   , c_v+8
 	.byte		BEND  , c_b-(15*2)
 	.byte	W02
-	.byte		BEND  , c_b-(10*2)
+	.byte		        c_b-(10*2)
 	.byte	W01
 	.byte		PAN   , c_v-9
 	.byte	W02

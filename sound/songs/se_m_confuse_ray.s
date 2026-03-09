@@ -27,9 +27,9 @@ se_m_confuse_ray_1:
 	.byte	W01
 	.byte		BEND  , c_b-(8*2)
 	.byte	W01
-	.byte		BEND  , c_b-(16*2)
+	.byte		        c_b-(16*2)
 	.byte	W01
-	.byte		BEND  , c_b-(1*2)
+	.byte		        c_b-(1*2)
 	.byte		N12   , As2 , v127
 	.byte	W03
 	.byte		PAN   , c_v+4
@@ -53,9 +53,9 @@ se_m_confuse_ray_1:
 	.byte	W01
 	.byte		BEND  , c_b-(8*2)
 	.byte	W02
-	.byte		BEND  , c_b-(17*2)
+	.byte		        c_b-(17*2)
 	.byte	W01
-	.byte		BEND  , c_b-(1*2)
+	.byte		        c_b-(1*2)
 	.byte		N12   , As2
 	.byte	W02
 	.byte		PAN   , c_v+4
@@ -79,9 +79,9 @@ se_m_confuse_ray_1:
 	.byte	W01
 	.byte		BEND  , c_b-(8*2)
 	.byte	W01
-	.byte		BEND  , c_b-(16*2)
+	.byte		        c_b-(16*2)
 	.byte	W01
-	.byte		BEND  , c_b-(1*2)
+	.byte		        c_b-(1*2)
 	.byte		N12   , As2
 	.byte	W03
 	.byte		PAN   , c_v+4

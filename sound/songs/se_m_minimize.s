@@ -77,7 +77,7 @@ se_m_minimize_1:
 	.byte	W01
 	.byte		BEND  , c_b+(5*2)
 	.byte	W01
-	.byte		BEND  , c_b-(2*2)
+	.byte		        c_b-(2*2)
 	.byte	W02
 	.byte		PAN   , c_v+0
 	.byte		BEND  , c_b+(24*2)
@@ -90,7 +90,7 @@ se_m_minimize_1:
 	.byte	W01
 	.byte		BEND  , c_b+(1*2)
 	.byte	W01
-	.byte		BEND  , c_b-(6*2)
+	.byte		        c_b-(6*2)
 	.byte	W02
 	.byte		VOL   , 82*se_m_minimize_mvl/mxv
 	.byte		PAN   , c_v+0
@@ -103,7 +103,7 @@ se_m_minimize_1:
 	.byte		PAN   , c_v-8
 	.byte		BEND  , c_b+(5*2)
 	.byte	W01
-	.byte		BEND  , c_b-(2*2)
+	.byte		        c_b-(2*2)
 	.byte	W01
 	.byte		VOL   , 61*se_m_minimize_mvl/mxv
 	.byte		BEND  , c_b-(10*2)
@@ -117,9 +117,9 @@ se_m_minimize_1:
 	.byte		PAN   , c_v+8
 	.byte		BEND  , c_b+(2*2)
 	.byte	W01
-	.byte		BEND  , c_b-(6*2)
+	.byte		        c_b-(6*2)
 	.byte	W01
-	.byte		BEND  , c_b-(13*2)
+	.byte		        c_b-(13*2)
 	.byte	W02
 	.byte		PAN   , c_v+0
 	.byte		BEND  , c_b+(14*2)
@@ -130,9 +130,9 @@ se_m_minimize_1:
 	.byte		PAN   , c_v-8
 	.byte		BEND  , c_b-(2*2)
 	.byte	W01
-	.byte		BEND  , c_b-(10*2)
+	.byte		        c_b-(10*2)
 	.byte	W01
-	.byte		BEND  , c_b-(17*2)
+	.byte		        c_b-(17*2)
 	.byte	W02
 	.byte		PAN   , c_v+0
 	.byte		BEND  , c_b+(12*2)
@@ -143,9 +143,9 @@ se_m_minimize_1:
 	.byte		PAN   , c_v+8
 	.byte		BEND  , c_b-(4*2)
 	.byte	W01
-	.byte		BEND  , c_b-(11*2)
+	.byte		        c_b-(11*2)
 	.byte	W01
-	.byte		BEND  , c_b-(18*2)
+	.byte		        c_b-(18*2)
 	.byte	W02
 	.byte	FINE
 

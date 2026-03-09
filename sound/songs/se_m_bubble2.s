@@ -28,7 +28,7 @@ se_m_bubble2_1:
 	.byte	W02
 	.byte		BEND  , c_b+(31*2)
 	.byte	W02
-	.byte		BEND  , c_b-(34*2)
+	.byte		        c_b-(34*2)
 	.byte	W17
 	.byte	FINE
 

@@ -46,12 +46,12 @@ se_m_giga_drain_1:
 	.byte		PAN   , c_v-6
 	.byte		BEND  , c_b+(0*2)
 	.byte	W01
-	.byte		BEND  , c_b-(5*2)
+	.byte		        c_b-(5*2)
 	.byte	W02
 	.byte		PAN   , c_v+0
 	.byte		BEND  , c_b-(12*2)
 	.byte	W01
-	.byte		BEND  , c_b-(23*2)
+	.byte		        c_b-(23*2)
 	.byte	W01
 	.byte		VOICE , 36
 	.byte		BEND  , c_b+(0*2)

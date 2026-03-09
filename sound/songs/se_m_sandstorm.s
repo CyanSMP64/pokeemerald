@@ -60,7 +60,7 @@ se_m_sandstorm_1:
 	.byte	W01
 	.byte		BEND  , c_b-(20*2)
 	.byte	W06
-	.byte		BEND  , c_b-(13*2)
+	.byte		        c_b-(13*2)
 	.byte	W05
 	.byte		PAN   , c_v-31
 	.byte	W01
@@ -82,16 +82,16 @@ se_m_sandstorm_1:
 	.byte		PAN   , c_v-16
 	.byte		BEND  , c_b+(0*2)
 	.byte	W03
-	.byte		BEND  , c_b-(7*2)
+	.byte		        c_b-(7*2)
 	.byte	W03
-	.byte		BEND  , c_b-(12*2)
+	.byte		        c_b-(12*2)
 	.byte	W03
-	.byte		BEND  , c_b-(20*2)
+	.byte		        c_b-(20*2)
 	.byte	W06
 	.byte		PAN   , c_v-7
 	.byte		BEND  , c_b-(13*2)
 	.byte	W06
-	.byte		BEND  , c_b-(6*2)
+	.byte		        c_b-(6*2)
 	.byte	W03
 	.byte		BEND  , c_b+(0*2)
 	.byte	W03
@@ -110,12 +110,12 @@ se_m_sandstorm_1:
 	.byte	W02
 	.byte		BEND  , c_b-(7*2)
 	.byte	W03
-	.byte		BEND  , c_b-(12*2)
+	.byte		        c_b-(12*2)
 	.byte	W03
 	.byte		PAN   , c_v+24
 	.byte		BEND  , c_b-(20*2)
 	.byte	W06
-	.byte		BEND  , c_b-(13*2)
+	.byte		        c_b-(13*2)
 	.byte	W05
 	.byte		PAN   , c_v+32
 	.byte	W01

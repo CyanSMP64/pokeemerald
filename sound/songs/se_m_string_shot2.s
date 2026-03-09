@@ -36,7 +36,7 @@ se_m_string_shot2_1:
 	.byte	W03
 	.byte		BEND  , c_b-(8*2)
 	.byte	W03
-	.byte		BEND  , c_b-(14*2)
+	.byte		        c_b-(14*2)
 	.byte	W06
 	.byte		PAN   , c_v+0
 	.byte		BEND  , c_b-(11*2)
@@ -46,14 +46,14 @@ se_m_string_shot2_1:
 	.byte	W03
 	.byte		BEND  , c_b+(1*2)
 	.byte	W05
-	.byte		BEND  , c_b-(3*2)
+	.byte		        c_b-(3*2)
 	.byte	W01
 	.byte		PAN   , c_v-16
 	.byte		N09   , Gn4
 	.byte	W03
 	.byte		BEND  , c_b-(19*2)
 	.byte	W03
-	.byte		BEND  , c_b-(25*2)
+	.byte		        c_b-(25*2)
 	.byte	W06
 	.byte		PAN   , c_v+0
 	.byte		BEND  , c_b-(19*2)
@@ -61,16 +61,16 @@ se_m_string_shot2_1:
 	.byte	W03
 	.byte		BEND  , c_b-(13*2)
 	.byte	W03
-	.byte		BEND  , c_b-(6*2)
+	.byte		        c_b-(6*2)
 	.byte	W05
-	.byte		BEND  , c_b-(10*2)
+	.byte		        c_b-(10*2)
 	.byte	W01
 	.byte		PAN   , c_v+16
 	.byte		N09   , Gn4 , v096
 	.byte	W03
 	.byte		BEND  , c_b-(27*2)
 	.byte	W03
-	.byte		BEND  , c_b-(32*2)
+	.byte		        c_b-(32*2)
 	.byte	W06
 	.byte		PAN   , c_v+0
 	.byte		BEND  , c_b-(32*2)
@@ -78,16 +78,16 @@ se_m_string_shot2_1:
 	.byte	W03
 	.byte		BEND  , c_b-(26*2)
 	.byte	W03
-	.byte		BEND  , c_b-(19*2)
+	.byte		        c_b-(19*2)
 	.byte	W05
-	.byte		BEND  , c_b-(23*2)
+	.byte		        c_b-(23*2)
 	.byte	W01
 	.byte		PAN   , c_v-16
 	.byte		N09   , Gn4 , v060
 	.byte	W03
 	.byte		BEND  , c_b-(40*2)
 	.byte	W03
-	.byte		BEND  , c_b-(45*2)
+	.byte		        c_b-(45*2)
 	.byte	W06
 	.byte	FINE
 
