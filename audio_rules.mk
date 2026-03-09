@@ -29,7 +29,7 @@ $(NEW_BIN_DIR)/compressed/%.bin: $(NEW_SUBDIR)/compressed/%.wav
 
 # New uncompressed sounds
 $(NEW_BIN_DIR)/%.wavl: $(NEW_SUBDIR)/%.wav
-	$(WAV2AGB) -b --set-agbl -1 $< $@ 
+	$(WAV2AGB) --set-agbl -1 $< $@ 
 $(NEW_BIN_DIR)/%.bin: $(NEW_SUBDIR)/%.wavl
 	$(WAV2AGB) -b $< $@ 
 
