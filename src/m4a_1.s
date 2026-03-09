@@ -155,8 +155,8 @@ lt_PCM_DMA_BUF_SIZE:      .word PCM_DMA_BUF_SIZE
 	.equ VAR_EXT_NOISE_SHAPE_LEFT, 0xE       @ [byte] normally unused, used here for noise shaping
 	.equ VAR_EXT_NOISE_SHAPE_RIGHT, 0xF      @ [byte] normally unused, used here for noise shaping
 	.equ VAR_DEF_PITCH_FAC, 0x18             @ [word] this value get's multiplied with the samplerate for the inter sample distance
-	.equ VAR_FIRST_CHN, 0x50                 @ [CHN struct] relative offset to channel array
-	.equ VAR_PCM_BUFFER, 0x410
+	.equ VAR_FIRST_CHN, 0x40                 @ [CHN struct] relative offset to channel array
+	.equ VAR_PCM_BUFFER, 0x400
 
 	/* just some more defines */
 	.equ ARM_OP_LEN, 0x4
@@ -1864,9 +1864,7 @@ _081DD938:
 	ldrb r1, [r5, o_MusicPlayerTrack_lfoSpeed]
 	cmp r1, 0
 	beq _081DD994
-	adds r2, r5, 0
-	adds r2, o_MusicPlayerTrack_portaFlag
-	ldrb r0, [r2, o_MusicPlayerTrack_modMSB - o_MusicPlayerTrack_portaFlag]
+	ldrb r0, [r5, o_MusicPlayerTrack_mod + 1]
 	ldrb r2, [r5, o_MusicPlayerTrack_mod]
 	orrs r0, r2
 	beq _081DD994
@@ -1891,9 +1889,7 @@ _081DD96E:
 	movs r0, 0x80
 	subs r2, r0, r1
 _081DD972:
-	adds r0, r5, 0
-	adds r0, o_MusicPlayerTrack_portaFlag
-	ldrb r0, [r0, o_MusicPlayerTrack_modMSB - o_MusicPlayerTrack_portaFlag]
+	ldrb r0, [r5, o_MusicPlayerTrack_mod + 1]
 	lsls r0, 7
 	ldrb r1, [r5, o_MusicPlayerTrack_mod]
 	adds r0, r1
@@ -1919,9 +1915,7 @@ _081DD982:
 	eors r0, r3
 	lsls r0, 24
 	bne _081DD988
-	adds r0, r5, 0
-	adds r0, o_MusicPlayerTrack_portaFlag
-	ldrb r1, [r0, o_MusicPlayerTrack_modMHi - o_MusicPlayerTrack_portaFlag]
+	ldrb r1, [r5, o_MusicPlayerTrack_modM + 1]
 	asrs r0, r2, 8
 	lsls r0, 24
 	lsrs r0, 24
@@ -1930,10 +1924,8 @@ _081DD982:
 	beq _081DD994
 _081DD988:
 	strb r2, [r5, o_MusicPlayerTrack_modM]
-	adds r0, r5, 0
-	adds r0, o_MusicPlayerTrack_portaFlag
 	asrs r1, r2, 8
-	strb r1, [r0, o_MusicPlayerTrack_modMHi - o_MusicPlayerTrack_portaFlag]
+	strb r1, [r5, o_MusicPlayerTrack_modM + 1]
 	ldrb r0, [r5]
 	ldrb r1, [r5, o_MusicPlayerTrack_modT]
 	cmp r1, 0
@@ -2696,10 +2688,7 @@ _081DDD40:
 	thumb_func_start clear_modM
 clear_modM:
 	movs r2, 0
-	strb r2, [r1, o_MusicPlayerTrack_modM]
-	adds r3, r1, 0
-	adds r3, o_MusicPlayerTrack_portaFlag
-	strb r2, [r3, o_MusicPlayerTrack_modMHi - o_MusicPlayerTrack_portaFlag]
+	strh r2, [r1, o_MusicPlayerTrack_modM]
 	strb r2, [r1, o_MusicPlayerTrack_lfoSpeedC]
 	ldrb r2, [r1, o_MusicPlayerTrack_modT]
 	cmp r2, 0
@@ -2741,9 +2730,7 @@ ply_mod:
 	mov r12, lr
 	bl ld_r3_tp_adr_i_unchecked
 	strb r3, [r1, o_MusicPlayerTrack_mod]
-	adds r2, r1, 0
-	adds r2, o_MusicPlayerTrack_portaFlag
-	ldrb r0, [r2, o_MusicPlayerTrack_modMSB - o_MusicPlayerTrack_portaFlag]
+	ldrb r0, [r1, o_MusicPlayerTrack_mod + 1]
 	orrs r0, r3
 	bne _081DDD90
 	bl clear_modM
@@ -2755,9 +2742,7 @@ _081DDD90:
 ply_modm:
 	mov r12, lr
 	bl ld_r3_tp_adr_i_unchecked
-	adds r2, r1, 0
-	adds r2, o_MusicPlayerTrack_portaFlag
-	strb r3, [r2, o_MusicPlayerTrack_modMSB - o_MusicPlayerTrack_portaFlag]
+	strb r3, [r1, o_MusicPlayerTrack_mod + 1]
 	ldrb r0, [r1, o_MusicPlayerTrack_mod]
 	orrs r0, r3
 	bne _081DDD9E

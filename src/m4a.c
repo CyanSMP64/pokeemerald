@@ -21,13 +21,6 @@ COMMON_DATA struct PokemonCrySong gPokemonCrySong = {0};
 COMMON_DATA u8 gMPlayMemAccArea[0x10] = {0};
 COMMON_DATA struct MusicPlayerInfo gMPlayInfo_SE3 = {0};
 
-static void ResetTrackPortamento(struct MusicPlayerTrack *track)
-{
-    track->portaFlag = 0;
-    track->portaTime = 0;
-    track->portaPrevKey = 60;
-}
-
 u32 MidiKeyToFreq(struct WaveData *wav, s16 key, u8 fineAdjust)
 {
     u32 val1;
@@ -260,7 +253,9 @@ void m4aMPlayImmInit(struct MusicPlayerInfo *mplayInfo)
                 track->vol2 = 127;
                 track->lfoSpeed = 22;
                 track->tone.type = 1;
-                ResetTrackPortamento(track);
+                track->portaFlag = 0;
+                track->portaTime = 0;
+                track->portaPrevKey = 60;
             }
         }
 
@@ -781,7 +776,7 @@ void FadeOutBody(struct MusicPlayerInfo *mplayInfo)
 
 void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *track)
 {
-    s32 modPitch = (s16)((u8)track->modM | ((u16)(u8)track->modMHi << 8));
+    s32 modPitch = track->modM;
     s32 mod8 = modPitch;
     if (mod8 < -128)
         mod8 = -128;
@@ -1378,7 +1373,6 @@ void ClearModM(struct MusicPlayerTrack *track)
 {
     track->lfoSpeedC = 0;
     track->modM = 0;
-    track->modMHi = 0;
 
     if (track->modT == 0)
         track->flags |= MPT_FLG_PITCHG;
@@ -1408,9 +1402,8 @@ void m4aMPlayModDepthSet(struct MusicPlayerInfo *mplayInfo, u16 trackBits, u8 mo
             if (track->flags & MPT_FLG_EXIST)
             {
                 track->mod = modDepth;
-                track->modMSB = 0;
 
-                if (!track->mod && !track->modMSB)
+                if (!track->mod)
                     ClearModM(track);
             }
         }

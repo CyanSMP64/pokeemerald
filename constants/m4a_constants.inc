@@ -97,7 +97,6 @@
 	struct_field o_SoundInfo_MPlayJumpTable, 4
 	struct_field o_SoundInfo_plynote, 4
 	struct_field o_SoundInfo_ExtVolPit, 4
-	struct_field o_SoundInfo_gap2, 16
 	struct_field o_SoundInfo_chans, MAX_DIRECTSOUND_CHANNELS * 64
 	struct_field o_SoundInfo_pcmBuffer, PCM_DMA_BUF_SIZE * 2
 	struct_field SoundInfo_size, 0
@@ -162,16 +161,14 @@
 	struct_field o_MusicPlayerTrack_volX, 1
 	struct_field o_MusicPlayerTrack_pan, 1
 	struct_field o_MusicPlayerTrack_panX, 1
-	struct_field o_MusicPlayerTrack_modM, 1
-	struct_field o_MusicPlayerTrack_mod, 1
+	struct_field o_MusicPlayerTrack_modM, 2
+	struct_field o_MusicPlayerTrack_mod, 2
 	struct_field o_MusicPlayerTrack_modT, 1
 	struct_field o_MusicPlayerTrack_lfoSpeed, 1
 	struct_field o_MusicPlayerTrack_lfoSpeedC, 1
 	struct_field o_MusicPlayerTrack_lfoDelay, 1
 	struct_field o_MusicPlayerTrack_lfoDelayC, 1
 	struct_field o_MusicPlayerTrack_priority, 1
-	struct_field o_MusicPlayerTrack_pseudoEchoVolume, 1
-	struct_field o_MusicPlayerTrack_pseudoEchoLength, 1
 	struct_field o_MusicPlayerTrack_chan, 4
 	struct_field o_MusicPlayerTrack_ToneData_type, 1
 	struct_field o_MusicPlayerTrack_ToneData_key, 1
@@ -182,12 +179,12 @@
 	struct_field o_MusicPlayerTrack_ToneData_decay, 1
 	struct_field o_MusicPlayerTrack_ToneData_sustain, 1
 	struct_field o_MusicPlayerTrack_ToneData_release, 1
+	struct_field o_MusicPlayerTrack_pseudoEchoVolume, 1
+	struct_field o_MusicPlayerTrack_pseudoEchoLength, 1
 	struct_field o_MusicPlayerTrack_portaFlag, 1
 	struct_field o_MusicPlayerTrack_portaTime, 1
 	struct_field o_MusicPlayerTrack_portaPrevKey, 1
 	struct_field o_MusicPlayerTrack_vol2, 1
-	struct_field o_MusicPlayerTrack_modMSB, 1
-	struct_field o_MusicPlayerTrack_modMHi, 1
 	struct_field o_MusicPlayerTrack_gap, 4
 	struct_field o_MusicPlayerTrack_timer, 2
 	struct_field o_MusicPlayerTrack_unk_3C, 4
