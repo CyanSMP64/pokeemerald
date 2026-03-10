@@ -23,7 +23,7 @@ se_m_perish_song_1:
 	.byte		LFOS  , 40
 	.byte		PAN   , c_v+7
 	.byte		VOL   , 25*se_m_perish_song_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W03
 	.byte		VOL   , 29*se_m_perish_song_mvl/mxv
 	.byte	W03

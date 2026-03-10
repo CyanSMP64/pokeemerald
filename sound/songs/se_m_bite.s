@@ -22,7 +22,7 @@ se_m_bite_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+6
 	.byte		VOL   , 110*se_m_bite_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N02   , Gn3 , v112
 	.byte	W02
 	.byte		        Gs3
@@ -75,7 +75,7 @@ se_m_bite_2:
 	.byte		VOICE , 27
 	.byte		VOL   , 110*se_m_bite_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W10
 	.byte		N01   , Gn2 , v040
 	.byte	W08

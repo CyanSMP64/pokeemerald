@@ -24,6 +24,7 @@
 #include <vector>
 #include <algorithm>
 #include <memory>
+#include <cmath>
 #include "midi.h"
 #include "main.h"
 #include "error.h"
@@ -53,6 +54,19 @@ static int s_blockCount = 0;
 static int s_minNote;
 static int s_maxNote;
 static int s_runningStatus;
+
+static int s_channelVolume[16];
+static int s_channelExpression[16];
+
+static int applyNaturalVolumeScale(int value) {
+    double scaled_value = std::pow(static_cast<double>(value) / 127.0, 10.0 / 6.0) * 127.0;
+    
+    int result = static_cast<int>(std::round(scaled_value));
+    result = std::max(0, result);
+    result = std::min(127, result);
+    
+    return result;
+}
 
 void Seek(long offset)
 {
@@ -492,10 +506,18 @@ bool ReadTrackEvent(Event& event)
             break;
         }
         case 0xB0: // controller event
+        {
+            int controller_index = ReadInt8();
+            int value = ReadInt8();
+
+            if ((controller_index == 0x07 || controller_index == 0x0B) && g_naturalVolumeEnabled)
+                value = applyNaturalVolumeScale(value);
+
             event.type = EventType::Controller;
-            event.param1 = ReadInt8(); // controller index
-            event.param2 = ReadInt8(); // value
+            event.param1 = controller_index;
+            event.param2 = value;
             break;
+        }
         case 0xC0: // instrument change
             event.type = EventType::InstrumentChange;
             event.param1 = ReadInt8(); // instrument
@@ -636,6 +658,9 @@ void ConvertTimes(std::vector<Event>& events)
 
         if (event.type == EventType::Note)
         {
+            if (g_naturalVolumeEnabled) {
+                event.param1 = applyNaturalVolumeScale(event.param1);
+            }
             event.param1 = g_noteVelocityLUT[event.param1];
 
             std::uint32_t duration = (24 * g_clocksPerBeat * event.param2) / g_midiTimeDiv;
@@ -921,6 +946,11 @@ void ReadMidiTracks()
     ReadSeqEvents();
 
     g_agbTrack = 1;
+
+    for (int i = 0; i < 16; ++i) {
+        s_channelVolume[i] = 127;
+        s_channelExpression[i] = 127;
+    }
 
     for (int midiTrack = 0; midiTrack < g_midiTrackCount; midiTrack++)
     {

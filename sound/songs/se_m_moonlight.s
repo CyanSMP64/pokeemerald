@@ -23,7 +23,7 @@ se_m_moonlight_1:
 	.byte		BENDR , 4
 	.byte		PAN   , c_v+0
 	.byte		MOD   , 6
-	.byte		BEND  , c_v+3
+	.byte		BEND  , c_b+(3*2)
 	.byte		N01   , Ds6 , v092
 	.byte	W01
 	.byte		        Dn6
@@ -123,7 +123,7 @@ se_m_moonlight_2:
 	.byte		VOICE , 55
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 39*se_m_moonlight_mvl/mxv
-	.byte		BEND  , c_v-4
+	.byte		BEND  , c_b-(4*2)
 	.byte	W10
 	.byte		N01   , Ds6 , v112
 	.byte	W02

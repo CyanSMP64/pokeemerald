@@ -22,7 +22,7 @@ se_m_swagger_1:
 	.byte		BENDR , 8
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 28*se_m_swagger_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N15   , An1 , v127
 	.byte	W01
 	.byte		VOL   , 60*se_m_swagger_mvl/mxv
@@ -31,33 +31,33 @@ se_m_swagger_1:
 	.byte	W01
 	.byte		        120*se_m_swagger_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v-3
+	.byte		BEND  , c_b-(3*2)
 	.byte	W02
 	.byte		PAN   , c_v+5
-	.byte		BEND  , c_v-6
+	.byte		BEND  , c_b-(6*2)
 	.byte	W01
 	.byte		PAN   , c_v-4
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W01
 	.byte		VOL   , 109*se_m_swagger_mvl/mxv
 	.byte		PAN   , c_v+9
-	.byte		BEND  , c_v-10
+	.byte		BEND  , c_b-(10*2)
 	.byte	W01
 	.byte		PAN   , c_v-9
-	.byte		BEND  , c_v-14
+	.byte		BEND  , c_b-(14*2)
 	.byte	W01
 	.byte		VOL   , 95*se_m_swagger_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-19
+	.byte		BEND  , c_b-(19*2)
 	.byte	W02
 	.byte		VOL   , 71*se_m_swagger_mvl/mxv
-	.byte		BEND  , c_v-29
+	.byte		BEND  , c_b-(29*2)
 	.byte	W01
 	.byte		VOL   , 41*se_m_swagger_mvl/mxv
-	.byte		BEND  , c_v-38
+	.byte		BEND  , c_b-(38*2)
 	.byte	W01
 	.byte		VOL   , 15*se_m_swagger_mvl/mxv
-	.byte		BEND  , c_v-52
+	.byte		BEND  , c_b-(52*2)
 	.byte	W04
 	.byte	FINE
 

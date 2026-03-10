@@ -22,37 +22,37 @@ se_m_whirlpool_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 115*se_m_whirlpool_mvl/mxv
-	.byte		BEND  , c_v-18
+	.byte		BEND  , c_b-(18*2)
 	.byte		TIE   , Dn2 , v127
 	.byte	W03
-	.byte		BEND  , c_v-12
+	.byte		BEND  , c_b-(12*2)
 	.byte	W03
 	.byte		PAN   , c_v-5
 	.byte	W02
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W04
 	.byte		PAN   , c_v-10
 	.byte	W01
-	.byte		BEND  , c_v-3
+	.byte		BEND  , c_b-(3*2)
 	.byte	W03
-	.byte		        c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte	W02
 	.byte		PAN   , c_v-13
 	.byte	W04
-	.byte		BEND  , c_v+5
+	.byte		BEND  , c_b+(5*2)
 	.byte	W02
 	.byte		PAN   , c_v-16
 	.byte	W04
-	.byte		BEND  , c_v+14
+	.byte		BEND  , c_b+(14*2)
 	.byte	W02
 	.byte		PAN   , c_v-14
 	.byte	W06
 	.byte		        c_v-9
-	.byte		BEND  , c_v+18
+	.byte		BEND  , c_b+(18*2)
 	.byte	W06
 	.byte		PAN   , c_v-6
 	.byte	W01
-	.byte		BEND  , c_v+24
+	.byte		BEND  , c_b+(24*2)
 	.byte	W05
 	.byte		PAN   , c_v+0
 	.byte	W06
@@ -61,50 +61,50 @@ se_m_whirlpool_1:
 	.byte		        c_v+7
 	.byte	W06
 	.byte		        c_v+11
-	.byte		BEND  , c_v+17
+	.byte		BEND  , c_b+(17*2)
 	.byte	W06
 	.byte		PAN   , c_v+16
-	.byte		BEND  , c_v+10
+	.byte		BEND  , c_b+(10*2)
 	.byte	W06
 	.byte		PAN   , c_v+11
 	.byte	W01
-	.byte		BEND  , c_v+5
+	.byte		BEND  , c_b+(5*2)
 	.byte	W05
 	.byte		PAN   , c_v+6
 	.byte	W02
 	.byte		VOL   , 103*se_m_whirlpool_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W03
 	.byte		PAN   , c_v+4
 	.byte	W01
 	.byte		VOL   , 85*se_m_whirlpool_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v-5
+	.byte		BEND  , c_b-(5*2)
 	.byte	W04
 	.byte		PAN   , c_v+0
 	.byte	W01
 	.byte		VOL   , 71*se_m_whirlpool_mvl/mxv
 	.byte	W02
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W03
 	.byte		VOL   , 52*se_m_whirlpool_mvl/mxv
 	.byte		PAN   , c_v-4
 	.byte	W03
-	.byte		BEND  , c_v-12
+	.byte		BEND  , c_b-(12*2)
 	.byte	W01
 	.byte		VOL   , 32*se_m_whirlpool_mvl/mxv
 	.byte	W02
 	.byte		PAN   , c_v-10
 	.byte	W03
 	.byte		VOL   , 11*se_m_whirlpool_mvl/mxv
-	.byte		BEND  , c_v-19
+	.byte		BEND  , c_b-(19*2)
 	.byte	W03
 	.byte		PAN   , c_v-15
 	.byte	W01
 	.byte		VOL   , 6*se_m_whirlpool_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v-28
+	.byte		BEND  , c_b-(28*2)
 	.byte	W04
 	.byte		EOT
 	.byte	FINE

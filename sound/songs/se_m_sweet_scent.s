@@ -22,51 +22,51 @@ se_m_sweet_scent_1:
 	.byte		BENDR , 44
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 110*se_m_sweet_scent_mvl/mxv
-	.byte		BEND  , c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte		N36   , En3 , v096
 	.byte	W12
 	.byte		PAN   , c_v-4
-	.byte		BEND  , c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte	W12
 	.byte		PAN   , c_v-10
-	.byte		BEND  , c_v+4
+	.byte		BEND  , c_b+(4*2)
 	.byte	W12
 	.byte		PAN   , c_v-4
-	.byte		BEND  , c_v+5
+	.byte		BEND  , c_b+(5*2)
 	.byte		N36   , Fn3
 	.byte	W12
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+6
+	.byte		BEND  , c_b+(6*2)
 	.byte	W12
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+7
+	.byte		BEND  , c_b+(7*2)
 	.byte	W12
 	.byte		PAN   , c_v+9
-	.byte		BEND  , c_v+8
+	.byte		BEND  , c_b+(8*2)
 	.byte		N36   , En3 , v088
 	.byte	W12
 	.byte		PAN   , c_v+5
-	.byte		BEND  , c_v+8
+	.byte		BEND  , c_b+(8*2)
 	.byte	W12
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+9
+	.byte		BEND  , c_b+(9*2)
 	.byte	W12
 	.byte		PAN   , c_v-4
-	.byte		BEND  , c_v+10
+	.byte		BEND  , c_b+(10*2)
 	.byte		N60   , Fs3 , v056
 	.byte	W12
 	.byte		PAN   , c_v-10
-	.byte		BEND  , c_v+11
+	.byte		BEND  , c_b+(11*2)
 	.byte	W12
 	.byte		PAN   , c_v-4
-	.byte		BEND  , c_v+12
+	.byte		BEND  , c_b+(12*2)
 	.byte	W04
 	.byte		VOL   , 103*se_m_sweet_scent_mvl/mxv
 	.byte	W04
 	.byte		        97*se_m_sweet_scent_mvl/mxv
 	.byte	W04
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+12
+	.byte		BEND  , c_b+(12*2)
 	.byte	W01
 	.byte		VOL   , 91*se_m_sweet_scent_mvl/mxv
 	.byte	W05
@@ -75,7 +75,7 @@ se_m_sweet_scent_1:
 	.byte		        72*se_m_sweet_scent_mvl/mxv
 	.byte	W03
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+13
+	.byte		BEND  , c_b+(13*2)
 	.byte	W01
 	.byte		VOL   , 62*se_m_sweet_scent_mvl/mxv
 	.byte	W02
@@ -97,21 +97,21 @@ se_m_sweet_scent_2:
 	.byte		BENDR , 44
 	.byte		PAN   , c_v+1
 	.byte		VOL   , 38*se_m_sweet_scent_mvl/mxv
-	.byte		BEND  , c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte		TIE   , Gn3 , v100
 	.byte	W03
 	.byte		VOL   , 50*se_m_sweet_scent_mvl/mxv
 	.byte	W04
 	.byte		        62*se_m_sweet_scent_mvl/mxv
 	.byte	W02
-	.byte		BEND  , c_v-1
+	.byte		BEND  , c_b-(1*2)
 	.byte	W01
 	.byte		VOL   , 65*se_m_sweet_scent_mvl/mxv
 	.byte	W04
 	.byte		        74*se_m_sweet_scent_mvl/mxv
 	.byte	W04
 	.byte		        78*se_m_sweet_scent_mvl/mxv
-	.byte		BEND  , c_v-2
+	.byte		BEND  , c_b-(2*2)
 	.byte	W03
 	.byte		VOL   , 86*se_m_sweet_scent_mvl/mxv
 	.byte	W03
@@ -119,11 +119,11 @@ se_m_sweet_scent_2:
 	.byte	W03
 	.byte		        105*se_m_sweet_scent_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v-4
+	.byte		BEND  , c_b-(4*2)
 	.byte	W03
 	.byte		VOL   , 110*se_m_sweet_scent_mvl/mxv
 	.byte	W13
-	.byte		BEND  , c_v-2
+	.byte		BEND  , c_b-(2*2)
 	.byte	W04
 	.byte	W10
 	.byte		        c_v-1
@@ -146,7 +146,7 @@ se_m_sweet_scent_2:
 	.byte	W05
 	.byte		        96*se_m_sweet_scent_mvl/mxv
 	.byte	W04
-	.byte		BEND  , c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte	W01
 	.byte		VOL   , 91*se_m_sweet_scent_mvl/mxv
 	.byte	W03
@@ -157,18 +157,18 @@ se_m_sweet_scent_2:
 	.byte	W02
 	.byte		        68*se_m_sweet_scent_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W04
 	.byte		VOL   , 58*se_m_sweet_scent_mvl/mxv
 	.byte	W03
 	.byte		        48*se_m_sweet_scent_mvl/mxv
 	.byte	W04
 	.byte		        37*se_m_sweet_scent_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W04
 	.byte		VOL   , 23*se_m_sweet_scent_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v-1
+	.byte		BEND  , c_b-(1*2)
 	.byte	W02
 	.byte		VOL   , 12*se_m_sweet_scent_mvl/mxv
 	.byte	W03

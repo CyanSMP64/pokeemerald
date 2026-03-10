@@ -22,7 +22,7 @@ se_m_uproar_1:
 	.byte		BENDR , 12
 	.byte		VOL   , 25*se_m_uproar_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N24   , Gs2 , v127
 	.byte	W01
 	.byte		PAN   , c_v+2
@@ -32,7 +32,7 @@ se_m_uproar_1:
 	.byte		VOL   , 74*se_m_uproar_mvl/mxv
 	.byte	W01
 	.byte		        89*se_m_uproar_mvl/mxv
-	.byte		BEND  , c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W01
 	.byte		PAN   , c_v+2
 	.byte		VOL   , 100*se_m_uproar_mvl/mxv
@@ -40,12 +40,12 @@ se_m_uproar_1:
 	.byte		PAN   , c_v+0
 	.byte	W01
 	.byte		        c_v-2
-	.byte		BEND  , c_v+4
+	.byte		BEND  , c_b+(4*2)
 	.byte	W01
 	.byte		PAN   , c_v-4
 	.byte	W02
 	.byte		        c_v-2
-	.byte		BEND  , c_v+5
+	.byte		BEND  , c_b+(5*2)
 	.byte	W02
 	.byte		PAN   , c_v+0
 	.byte	W01

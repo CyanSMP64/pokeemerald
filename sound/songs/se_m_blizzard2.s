@@ -22,7 +22,7 @@ se_m_blizzard2_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 110*se_m_blizzard2_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N24   , Gn3 , v108
 	.byte	W02
 	.byte		PAN   , c_v-19

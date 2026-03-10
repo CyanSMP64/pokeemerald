@@ -22,22 +22,22 @@ se_m_milk_drink_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 100*se_m_milk_drink_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N06   , An6 , v100
 	.byte	W01
-	.byte		BEND  , c_v-11
+	.byte		BEND  , c_b-(11*2)
 	.byte	W01
 	.byte		PAN   , c_v+5
 	.byte		VOL   , 90*se_m_milk_drink_mvl/mxv
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W01
 	.byte		PAN   , c_v-6
 	.byte		VOL   , 77*se_m_milk_drink_mvl/mxv
-	.byte		BEND  , c_v-37
+	.byte		BEND  , c_b-(37*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 37*se_m_milk_drink_mvl/mxv
-	.byte		BEND  , c_v-47
+	.byte		BEND  , c_b-(47*2)
 	.byte	W02
 	.byte		N02   , An6 , v056
 	.byte	W01
@@ -45,23 +45,23 @@ se_m_milk_drink_1:
 	.byte	W01
 	.byte		        c_v-6
 	.byte		VOL   , 100*se_m_milk_drink_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N06   , An6 , v100
 	.byte	W01
 	.byte		PAN   , c_v+8
-	.byte		BEND  , c_v-11
+	.byte		BEND  , c_b-(11*2)
 	.byte	W01
 	.byte		PAN   , c_v-10
 	.byte		VOL   , 90*se_m_milk_drink_mvl/mxv
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W02
 	.byte		PAN   , c_v+1
 	.byte		VOL   , 77*se_m_milk_drink_mvl/mxv
-	.byte		BEND  , c_v-37
+	.byte		BEND  , c_b-(37*2)
 	.byte	W01
 	.byte		PAN   , c_v+5
 	.byte		VOL   , 37*se_m_milk_drink_mvl/mxv
-	.byte		BEND  , c_v-47
+	.byte		BEND  , c_b-(47*2)
 	.byte	W01
 	.byte		PAN   , c_v-6
 	.byte		N02   , An6 , v056
@@ -70,23 +70,23 @@ se_m_milk_drink_1:
 	.byte	W01
 	.byte		        c_v-10
 	.byte		VOL   , 100*se_m_milk_drink_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N06   , An6 , v072
 	.byte	W02
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-11
+	.byte		BEND  , c_b-(11*2)
 	.byte	W01
 	.byte		PAN   , c_v+5
 	.byte		VOL   , 90*se_m_milk_drink_mvl/mxv
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W01
 	.byte		PAN   , c_v-6
 	.byte		VOL   , 77*se_m_milk_drink_mvl/mxv
-	.byte		BEND  , c_v-37
+	.byte		BEND  , c_b-(37*2)
 	.byte	W01
 	.byte		PAN   , c_v+8
 	.byte		VOL   , 37*se_m_milk_drink_mvl/mxv
-	.byte		BEND  , c_v-47
+	.byte		BEND  , c_b-(47*2)
 	.byte	W01
 	.byte		PAN   , c_v-10
 	.byte	W02

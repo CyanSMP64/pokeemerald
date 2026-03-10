@@ -22,7 +22,7 @@ se_m_teeter_dance_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 110*se_m_teeter_dance_mvl/mxv
-	.byte		BEND  , c_v-4
+	.byte		BEND  , c_b-(4*2)
 	.byte		N03   , Gn4 , v100
 	.byte	W06
 	.byte		PAN   , c_v+16
@@ -73,7 +73,7 @@ se_m_teeter_dance_2:
 	.byte		        xIECL , 8
 	.byte		MOD   , 20
 	.byte		VOL   , 44*se_m_teeter_dance_mvl/mxv
-	.byte		BEND  , c_v-2
+	.byte		BEND  , c_b-(2*2)
 	.byte	W03
 	.byte		N03   , Gn3 , v112
 	.byte	W03

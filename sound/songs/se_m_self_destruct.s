@@ -22,7 +22,7 @@ se_m_self_destruct_1:
 	.byte		VOL   , 115*se_m_self_destruct_mvl/mxv
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N01   , Gn3 , v127
 	.byte	W01
 	.byte		        Cn3
@@ -44,17 +44,17 @@ se_m_self_destruct_1:
 	.byte	W01
 	.byte		VOL   , 67*se_m_self_destruct_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v-2
+	.byte		BEND  , c_b-(2*2)
 	.byte	W01
 	.byte		PAN   , c_v+7
 	.byte		VOL   , 45*se_m_self_destruct_mvl/mxv
 	.byte	W02
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W01
 	.byte		VOL   , 13*se_m_self_destruct_mvl/mxv
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-15
+	.byte		BEND  , c_b-(15*2)
 	.byte	W22
 	.byte	FINE
 

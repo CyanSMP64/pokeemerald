@@ -23,7 +23,7 @@ se_m_sing_1:
 	.byte		LFOS  , 40
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 95*se_m_sing_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N44   , Gn4 , v112
 	.byte	W06
 	.byte	W06
@@ -101,7 +101,7 @@ se_m_sing_2:
 	.byte		VOICE , 73
 	.byte		LFOS  , 40
 	.byte		VOL   , 95*se_m_sing_mvl/mxv
-	.byte		BEND  , c_v+9
+	.byte		BEND  , c_b+(9*2)
 	.byte	W06
 	.byte	W06
 	.byte		PAN   , c_v+12

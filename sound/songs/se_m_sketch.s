@@ -22,31 +22,31 @@ se_m_sketch_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 110*se_m_sketch_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N02   , Gn4 , v127
 	.byte	W01
 	.byte		VOL   , 74*se_m_sketch_mvl/mxv
-	.byte		BEND  , c_v-11
+	.byte		BEND  , c_b-(11*2)
 	.byte	W01
 	.byte		VOICE , 31
 	.byte		VOL   , 40*se_m_sketch_mvl/mxv
-	.byte		BEND  , c_v-1
+	.byte		BEND  , c_b-(1*2)
 	.byte		N03   , Cs5
 	.byte	W01
 	.byte		VOL   , 64*se_m_sketch_mvl/mxv
 	.byte		PAN   , c_v-6
-	.byte		BEND  , c_v-12
+	.byte		BEND  , c_b-(12*2)
 	.byte	W01
 	.byte		VOL   , 86*se_m_sketch_mvl/mxv
 	.byte		PAN   , c_v+4
-	.byte		BEND  , c_v-16
+	.byte		BEND  , c_b-(16*2)
 	.byte	W02
 	.byte		VOL   , 110*se_m_sketch_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N02   , As5
 	.byte	W01
-	.byte		BEND  , c_v+12
+	.byte		BEND  , c_b+(12*2)
 	.byte	W01
 	.byte		VOL   , 0*se_m_sketch_mvl/mxv
 	.byte	W04

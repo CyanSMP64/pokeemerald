@@ -6,6 +6,25 @@
 
 	.text
 
+/* HQ-Mixer rev 4.0 created by ipatix (c) 2021
+ * licensed under GPLv3, see LICENSE.txt for details */
+
+/* mixer modified by CyanSixFour */
+
+	.equ ENABLE_REVERB, 1                        @ <-- if you want faster code or don't like reverb, set this to '0', set to '1' otherwise
+	.equ ENABLE_DMA, 1                           @ <-- Using DMA produces smaller code and has better performance. Disable it if your case does not allow to use DMA.
+	.equ ALIGN_CGB_WITH_DIRECT, 0                @ <-- 0: vanilla behaviour, cgb plays one frame before direct sound; 1: fixed timing
+
+/* ENABLE_REVERB saves 0x60 bytes of SoundMainRAM when =0
+ * ENABLE_DMA saves 0x68 bytes of SoundMainRAM when =1
+ * please ensure SoundMainRAM_Buffer is large enough when changing configs.	*/
+
+	/*****************
+	 * END OF CONFIG *
+	 *****************/
+
+	/* NO USER SERVICABLE CODE BELOW HERE! YOU HAVE BEEN WARNED */
+
 	thumb_func_start umul3232H32
 umul3232H32:
 	adr r2, __umul3232H32
@@ -48,6 +67,11 @@ SoundMain_2:
 	adds r1, r2
 SoundMain_3:
 	str r1, [sp, 0x14]
+.if ALIGN_CGB_WITH_DIRECT==1
+	ldr r3, [r0, o_SoundInfo_CgbSound]
+	bl call_r3
+	ldr r0, [sp, 0x18]
+.endif
 	ldr r3, [r0, o_SoundInfo_MPlayMainHead]
 	cmp r3, 0
 	beq SoundMain_4
@@ -55,9 +79,11 @@ SoundMain_3:
 	bl call_r3
 	ldr r0, [sp, 0x18]
 SoundMain_4:
+.if ALIGN_CGB_WITH_DIRECT==0
 	ldr r3, [r0, o_SoundInfo_CgbSound]
 	bl call_r3
 	ldr r0, [sp, 0x18]
+.endif
 	ldr r3, [r0, o_SoundInfo_pcmSamplesPerVBlank]
 	mov r8, r3
 	ldr r5, lt_o_SoundInfo_pcmBuffer
@@ -84,18 +110,6 @@ lt_REG_VCOUNT:            .word REG_VCOUNT
 lt_o_SoundInfo_pcmBuffer: .word o_SoundInfo_pcmBuffer
 lt_PCM_DMA_BUF_SIZE:      .word PCM_DMA_BUF_SIZE
 	thumb_func_end SoundMain
-
-/* HQ-Mixer rev 4.0 created by ipatix (c) 2021
- * licensed under GPLv3, see LICENSE.txt for details */
-
-	.equ ENABLE_REVERB, 1                        @ <-- if you want faster code or don't like reverb, set this to '0', set to '1' otherwise
-	.equ ENABLE_DMA, 1                           @ <-- Using DMA produces smaller code and has better performance. Disable it if your case does not allow to use DMA.
-
-	/*****************
-	 * END OF CONFIG *
-	 *****************/
-
-	/* NO USER SERVICABLE CODE BELOW HERE! YOU HAVE BEEN WARNED */
 
 	/* globals */
 	.global SoundMainRAM
@@ -141,8 +155,8 @@ lt_PCM_DMA_BUF_SIZE:      .word PCM_DMA_BUF_SIZE
 	.equ VAR_EXT_NOISE_SHAPE_LEFT, 0xE       @ [byte] normally unused, used here for noise shaping
 	.equ VAR_EXT_NOISE_SHAPE_RIGHT, 0xF      @ [byte] normally unused, used here for noise shaping
 	.equ VAR_DEF_PITCH_FAC, 0x18             @ [word] this value get's multiplied with the samplerate for the inter sample distance
-	.equ VAR_FIRST_CHN, 0x50                 @ [CHN struct] relative offset to channel array
-	.equ VAR_PCM_BUFFER, 0x410
+	.equ VAR_FIRST_CHN, 0x40                 @ [CHN struct] relative offset to channel array
+	.equ VAR_PCM_BUFFER, 0x400
 
 	/* just some more defines */
 	.equ ARM_OP_LEN, 0x4
@@ -506,6 +520,7 @@ C_data_load_comp:
 	adr r12, delta_lookup_table
 	bmi C_data_load_comp_rev
 C_data_load_comp_for:
+	/* TODO having loop support for forward samples would be nice */
 	/* lr = end_of_last_block */
 	add lr, r3, r0
 	add lr, #(1+(BDPCM_BLK_SIZE-1))             @ -1 for alignment, +1 because we need an extra sample for interpolation
@@ -1111,6 +1126,15 @@ C_setup_synth:
 	ldrb r0, [r3, #SYNTH_BASE_WAVE_DUTY]
 	mov r0, r0, lsl#24
 	mla r6, r10, r1, r0                 @ calculate the final duty cycle with the offset, and intensity * rotating duty cycle amount
+	b C_synth_pulse_setup
+
+C_synth_static_pulse:
+	/* louder, but static, pulse wave */
+	ldrb r0, [r3, #SYNTH_BASE_WAVE_DUTY]
+	mov r6, r0, lsl#24
+	mov r11, r11, lsl#1                @ static pulse was using lsl#7; scale once and reuse lsl#6 loop
+
+C_synth_pulse_setup:
 	stmfd sp!, {r2, r3, r9, r12}
 
 C_synth_pulse_loop:
@@ -1181,28 +1205,6 @@ C_synth_triangle_loop:
 	subs r8, r8, #4                  @ subtract #4 from the remaining samples
 	bgt C_synth_triangle_loop
 
-	b C_end_mixing
-
-C_synth_static_pulse:
-	/* louder, but static, pulse wave */
-	ldrb r0, [r3, #SYNTH_BASE_WAVE_DUTY]
-	mov r6, r0, lsl#24
-	stmfd sp!, {r2, r3, r9, r12}
-
-C_synth_static_pulse_loop:
-	ldmia r5, {r0-r3, r9, r10, r12, lr} @ load 8 samples
-	.irp reg, r0, r1, r2, r3, r9, r10, r12, lr @ 8 blocks
-	  cmp r7, r6                      @ Block #1
-	  addlo \reg, \reg, r11, lsl#7
-	  subhs \reg, \reg, r11, lsl#7
-	  adds r7, r7, r4, lsl#3
-	.endr
-
-	stmia r5!, {r0-r3, r9, r10, r12, lr} @ write 8 samples
-	subs r8, r8, #8
-	bgt C_synth_static_pulse_loop
-
-	ldmfd sp!, {r2, r3, r9, r12}
 	b C_end_mixing
 
 /* r0: base addr
@@ -1453,6 +1455,9 @@ ply_tempo:
 	ldrh r2, [r0, o_MusicPlayerInfo_tempoU]
 	muls r3, r2
 	lsrs r3, 8
+	ldrh r2, [r0, o_MusicPlayerInfo_songSpeed]
+	muls r3, r2
+	lsrs r3, 10
 	strh r3, [r0, o_MusicPlayerInfo_tempoI]
 	bx r12
 	thumb_func_end ply_tempo
@@ -1505,6 +1510,20 @@ ply_vol:
 	bx r12
 	thumb_func_end ply_vol
 
+	thumb_func_start ply_vol2
+ply_vol2:
+	mov r12, lr
+	bl ld_r3_tp_adr_i
+	adds r2, r1, 0
+	adds r2, o_MusicPlayerTrack_portaFlag
+	strb r3, [r2, o_MusicPlayerTrack_vol2 - o_MusicPlayerTrack_portaFlag]
+	ldrb r3, [r1, o_MusicPlayerTrack_flags]
+	movs r2, MPT_FLG_VOLCHG
+	orrs r3, r2
+	strb r3, [r1, o_MusicPlayerTrack_flags]
+	bx r12
+	thumb_func_end ply_vol2
+
 	thumb_func_start ply_pan
 ply_pan:
 	mov r12, lr
@@ -1522,7 +1541,7 @@ ply_pan:
 ply_bend:
 	mov r12, lr
 	bl ld_r3_tp_adr_i
-	subs r3, C_V
+	subs r3, C_B
 	strb r3, [r1, o_MusicPlayerTrack_bend]
 	ldrb r3, [r1, o_MusicPlayerTrack_flags]
 	movs r2, MPT_FLG_PITCHG
@@ -1583,13 +1602,34 @@ ply_tune:
 	thumb_func_start ply_port
 ply_port:
 	mov r12, lr
-	ldr r2, [r1, o_MusicPlayerTrack_cmdPtr]
-	ldrb r3, [r2]
-	adds r2, 1
-	ldr r0, =REG_SOUND1CNT_L @ sound register base address
-	adds r0, r3
-	bl _081DD64A
-	strb r3, [r0]
+	bl ld_r3_tp_adr_i
+ply_port_set_time:
+	adds r2, r1, 0
+	adds r2, o_MusicPlayerTrack_portaFlag
+	strb r3, [r2, o_MusicPlayerTrack_portaTime - o_MusicPlayerTrack_portaFlag]
+	cmp r3, 0
+	bne ply_port_enable
+	movs r0, 0
+	b ply_port_store_flag
+ply_port_enable:
+	movs r0, 1
+ply_port_store_flag:
+	adds r2, r1, 0
+	adds r2, o_MusicPlayerTrack_portaFlag
+	strb r0, [r2, o_MusicPlayerTrack_portaFlag - o_MusicPlayerTrack_portaFlag]
+	cmp r0, 0
+	bne ply_port_done
+	movs r0, 0
+	ldr r2, [r1, o_MusicPlayerTrack_chan]
+ply_port_clear_loop:
+	cmp r2, 0
+	beq ply_port_done
+	strb r0, [r2, o_SoundChannel_portaActive]
+	strh r0, [r2, o_SoundChannel_portaCurrent]
+	strh r0, [r2, o_SoundChannel_portaStep]
+	ldr r2, [r2, o_SoundChannel_nextChannelPointer]
+	b ply_port_clear_loop
+ply_port_done:
 	bx r12
 	.pool
 	thumb_func_end ply_port
@@ -1695,6 +1735,9 @@ _081DD858:
 _081DD86C:
 	ldrh r0, [r7, o_MusicPlayerInfo_tempoC]
 	ldrh r1, [r7, o_MusicPlayerInfo_tempoI]
+@	ldrh r2, [r7, o_MusicPlayerInfo_songSpeed]
+@	muls r1, r2
+@	lsrs r1, 10
 	adds r0, r1
 	b _081DD9BC
 _081DD874:
@@ -1755,6 +1798,15 @@ _081DD8BA:
 	movs r0, 0x1
 	adds r1, r5, 0x6
 	strb r0, [r1, o_MusicPlayerTrack_ToneData_type - 0x6]
+	adds r1, r5, 0
+	adds r1, o_MusicPlayerTrack_portaFlag
+	movs r0, 60
+	strb r0, [r1, o_MusicPlayerTrack_portaPrevKey - o_MusicPlayerTrack_portaFlag]
+	movs r0, 127
+	strb r0, [r1, o_MusicPlayerTrack_vol2 - o_MusicPlayerTrack_portaFlag]
+	movs r0, 0
+	strb r0, [r1, o_MusicPlayerTrack_portaFlag - o_MusicPlayerTrack_portaFlag]
+	strb r0, [r1, o_MusicPlayerTrack_portaTime - o_MusicPlayerTrack_portaFlag]
 	b _081DD938
 _081DD8E0:
 	ldr r2, [r5, o_MusicPlayerTrack_cmdPtr]
@@ -1812,8 +1864,9 @@ _081DD938:
 	ldrb r1, [r5, o_MusicPlayerTrack_lfoSpeed]
 	cmp r1, 0
 	beq _081DD994
-	ldrb r0, [r5, o_MusicPlayerTrack_mod]
-	cmp r0, 0
+	ldrb r0, [r5, o_MusicPlayerTrack_mod + 1]
+	ldrb r2, [r5, o_MusicPlayerTrack_mod]
+	orrs r0, r2
 	beq _081DD994
 	ldrb r0, [r5, o_MusicPlayerTrack_lfoDelayC]
 	cmp r0, 0
@@ -1836,14 +1889,43 @@ _081DD96E:
 	movs r0, 0x80
 	subs r2, r0, r1
 _081DD972:
-	ldrb r0, [r5, o_MusicPlayerTrack_mod]
+	ldrb r0, [r5, o_MusicPlayerTrack_mod + 1]
+	lsls r0, 7
+	ldrb r1, [r5, o_MusicPlayerTrack_mod]
+	adds r0, r1
 	muls r0, r2
 	asrs r2, r0, 6
+	movs r0, 0x80
+	lsls r0, 8
+	subs r1, r0, 1
+	cmp r2, r1
+	ble _081DD97A
+	adds r2, r1, 0
+	b _081DD982
+_081DD97A:
+	negs r0, r0
+	cmp r2, r0
+	bge _081DD982
+	adds r2, r0, 0
+_081DD982:
 	ldrb r0, [r5, o_MusicPlayerTrack_modM]
-	eors r0, r2
+	adds r3, r2, 0
+	lsls r3, 24
+	lsrs r3, 24
+	eors r0, r3
+	lsls r0, 24
+	bne _081DD988
+	ldrb r1, [r5, o_MusicPlayerTrack_modM + 1]
+	asrs r0, r2, 8
+	lsls r0, 24
+	lsrs r0, 24
+	eors r0, r1
 	lsls r0, 24
 	beq _081DD994
+_081DD988:
 	strb r2, [r5, o_MusicPlayerTrack_modM]
+	asrs r1, r2, 8
+	strb r1, [r5, o_MusicPlayerTrack_modM + 1]
 	ldrb r0, [r5]
 	ldrb r1, [r5, o_MusicPlayerTrack_modT]
 	cmp r1, 0
@@ -1856,6 +1938,50 @@ _081DD990:
 	orrs r0, r1
 	strb r0, [r5, o_MusicPlayerTrack_flags]
 _081DD994:
+	ldr r4, [r5, o_MusicPlayerTrack_chan]
+	movs r2, 0
+_081DD994_chan_loop:
+	cmp r4, 0
+	beq _081DD994_check_flag
+	ldrb r0, [r4, o_SoundChannel_statusFlags]
+	movs r1, SOUND_CHANNEL_SF_ON
+	tst r1, r0
+	beq _081DD994_next_chan
+	ldrb r0, [r4, o_SoundChannel_portaActive]
+	cmp r0, 0
+	beq _081DD994_next_chan
+	ldrh r0, [r4, o_SoundChannel_portaCurrent]
+	ldrh r1, [r4, o_SoundChannel_portaStep]
+	lsls r0, 16
+	asrs r0, 16
+	cmp r0, 0
+	beq _081DD994_ch_reach_zero
+	bgt _081DD994_ch_positive
+	adds r0, r1
+	cmp r0, 0
+	blt _081DD994_ch_store
+	b _081DD994_ch_reach_zero
+_081DD994_ch_positive:
+	subs r0, r1
+	cmp r0, 0
+	bgt _081DD994_ch_store
+_081DD994_ch_reach_zero:
+	movs r0, 0
+	strb r0, [r4, o_SoundChannel_portaActive]
+_081DD994_ch_store:
+	strh r0, [r4, o_SoundChannel_portaCurrent]
+	movs r2, 1
+_081DD994_next_chan:
+	ldr r4, [r4, o_SoundChannel_nextChannelPointer]
+	b _081DD994_chan_loop
+_081DD994_check_flag:
+	cmp r2, 0
+	beq _081DD994_done
+	ldrb r0, [r5, o_MusicPlayerTrack_flags]
+	movs r1, MPT_FLG_PITCHG
+	orrs r0, r1
+	strb r0, [r5, o_MusicPlayerTrack_flags]
+_081DD994_done:
 	mov r3, r10
 	mov r4, r11
 _081DD998:
@@ -1922,7 +2048,7 @@ _081DD9F6:
 	cmp r6, 0
 	beq _081DDA14
 	ldrb r0, [r4, o_CgbChannel_modify]
-	movs r1, 0x1
+	movs r1, CGB_CHANNEL_MO_VOL
 	orrs r0, r1
 	strb r0, [r4, o_CgbChannel_modify]
 _081DDA14:
@@ -1934,17 +2060,62 @@ _081DDA14:
 	movs r0, o_MusicPlayerTrack_keyM
 	ldrsb r0, [r5, r0]
 	adds r2, r1, r0
-	bpl _081DDA28
+	bpl _081DDA1E
 	movs r2, 0
+_081DDA1E:
+	ldrh r3, [r4, o_SoundChannel_portaCurrent]
+	lsls r3, 16
+	asrs r3, 16
+	asrs r0, r3, 8
+	adds r2, r0
+	bpl _081DDA24
+	movs r2, 0
+_081DDA24:
+	ldrb r1, [r5, o_MusicPlayerTrack_pitM]
+	lsls r0, r3, 24
+	lsrs r0, r0, 24
+	adds r1, r0
+	lsrs r0, r1, 8
+	adds r2, r0
+	movs r0, 0xFF
+	ands r1, r0
+	adds r3, r1, 0
+	push {r3}
 _081DDA28:
 	cmp r6, 0
 	beq _081DDA46
+		/* skip noise - dont apply songSpeed scaling */
+	cmp r6, #4
+	beq _081DDA46_noise
 	mov r0, r8
 	ldr r3, [r0, o_SoundInfo_MidiKeyToCgbFreq]
 	adds r1, r2, 0
-	ldrb r2, [r5, o_MusicPlayerTrack_pitM]
+	pop {r2}
 	adds r0, r6, 0
 	bl call_r3
+		/* scale cgb period inversely: period' = period * 1024 / songSpeed */
+	push {r0}
+	ldrh r1, [r7, o_MusicPlayerInfo_songSpeed]
+	pop {r0}
+		/*
+		 * r0 = signed period, r1 = songSpeed
+		 * calculate: (period << 10) / songSpeed
+		 */
+	lsls r0, r0, #10
+	bl __divsi3  @ signed divide
+		/* Mask to 11-bit range for GBC hardware compatibility */
+	ldr r1, =0x7FF
+	ands r0, r1
+	b _081DDA46_common
+_081DDA46_noise:
+		/* noise: use period directly without scaling */
+	mov r0, r8
+	ldr r3, [r0, o_SoundInfo_MidiKeyToCgbFreq]
+	adds r1, r2, 0
+	pop {r2}
+	adds r0, r6, 0
+	bl call_r3
+_081DDA46_common:
 	str r0, [r4, o_CgbChannel_frequency]
 	ldrb r0, [r4, o_CgbChannel_modify]
 	movs r1, CGB_CHANNEL_MO_PIT
@@ -1953,10 +2124,24 @@ _081DDA28:
 	b _081DDA52
 _081DDA46:
 	adds r1, r2, 0
-	ldrb r2, [r5, o_MusicPlayerTrack_pitM]
+	pop {r2}
 	ldr r0, [r4, o_SoundChannel_wav]
 	bl MidiKeyToFreq
+		/* 
+		 * scale by songSpeed for consistent mixer stepping
+		 * first try to use cached mplayInfo, fallback to loading r7 (always valid in MPlayMain context)
+		 */
+	ldr r1, [r4, o_SoundChannel_dummy4]
+	cmp r1, #0
+	bne 1f
+	adds r1, r7, #0
+1:
+	ldrh r2, [r1, o_MusicPlayerInfo_songSpeed]
+	muls r0, r2
+	lsrs r0, r0, #10
 	str r0, [r4, o_SoundChannel_frequency]
+		/* Cache mplayInfo pointer */
+	str r7, [r4, o_SoundChannel_dummy4]
 _081DDA52:
 	ldr r4, [r4, o_SoundChannel_nextChannelPointer]
 	cmp r4, 0
@@ -2242,7 +2427,8 @@ _081DDC34:
 	bgt _081DDBFA
 	mov r4, r8
 	cmp r4, 0
-	beq _081DDCEA
+	bne _081DDC40
+	b _081DDCEA
 _081DDC40:
 	adds r0, r4, 0
 	bl ClearChain
@@ -2263,6 +2449,56 @@ _081DDC54:
 	adds r1, r5, 0
 	bl clear_modM
 _081DDC66:
+	adds r2, r4, 0
+	adds r3, r5, 0
+	adds r3, o_MusicPlayerTrack_portaFlag
+	ldrb r0, [r3, o_MusicPlayerTrack_portaFlag - o_MusicPlayerTrack_portaFlag]
+	cmp r0, 0
+	beq ply_note_porta_disable
+	ldrb r0, [r3, o_MusicPlayerTrack_portaTime - o_MusicPlayerTrack_portaFlag]
+	cmp r0, 0
+	beq ply_note_porta_disable
+	ldrb r0, [r3, o_MusicPlayerTrack_portaPrevKey - o_MusicPlayerTrack_portaFlag]
+	cmp r0, 0xFF
+	beq ply_note_porta_store_prev_only
+	ldrb r1, [r5, o_MusicPlayerTrack_key]
+	cmp r0, r1
+	beq ply_note_porta_store_prev_only
+	subs r0, r1
+	lsls r0, 24
+	asrs r0, 24
+	lsls r0, 8
+	strh r0, [r2, o_SoundChannel_portaCurrent]
+	ldrb r1, [r3, o_MusicPlayerTrack_portaTime - o_MusicPlayerTrack_portaFlag]
+	muls r1, r1
+	movs r0, 0x6B
+	lsls r0, 8
+	bl __divsi3
+	adds r2, r4, 0
+	cmp r0, 0
+	bne ply_note_porta_step_ok
+	movs r0, 1
+ply_note_porta_step_ok:
+	strh r0, [r2, o_SoundChannel_portaStep]
+	movs r0, 1
+	strb r0, [r2, o_SoundChannel_portaActive]
+	b ply_note_porta_store_prev
+ply_note_porta_disable:
+	movs r0, 0
+	strb r0, [r2, o_SoundChannel_portaActive]
+	strh r0, [r2, o_SoundChannel_portaCurrent]
+	strh r0, [r2, o_SoundChannel_portaStep]
+	b ply_note_porta_store_prev
+ply_note_porta_store_prev_only:
+	movs r0, 0
+	strb r0, [r2, o_SoundChannel_portaActive]
+	strh r0, [r2, o_SoundChannel_portaCurrent]
+	strh r0, [r2, o_SoundChannel_portaStep]
+ply_note_porta_store_prev:
+	adds r3, r5, 0
+	adds r3, o_MusicPlayerTrack_portaFlag
+	ldrb r0, [r5, o_MusicPlayerTrack_key]
+	strb r0, [r3, o_MusicPlayerTrack_portaPrevKey - o_MusicPlayerTrack_portaFlag]
 	ldr r0, [sp]
 	adds r1, r5, 0
 	bl TrkVolPitSet
@@ -2311,25 +2547,43 @@ _081DDCBC:
 	ldrb r2, [r5, o_MusicPlayerTrack_pitM]
 	adds r1, r3, 0
 	ldr r0, [sp, 0xC]
+		/* skip noise - dont apply songSpeed scaling */
+	cmp r0, #4
+	beq _081DDCBC_noise
 	ldr r3, [sp, 0x4]
 	ldr r3, [r3, o_SoundInfo_MidiKeyToCgbFreq]
 	bl call_r3
-	b _081DDCDC
-_081DDCCE:
-	ldr r0, [r5, o_MusicPlayerTrack_unk_3C]
-	str r0, [r4, o_SoundChannel_count]
-	ldrb r2, [r5, o_MusicPlayerTrack_pitM]
-	adds r1, r3, 0
-	adds r0, r7, 0
-	bl MidiKeyToFreq
-_081DDCDC:
-	str r0, [r4, o_SoundChannel_frequency]
+		/* scale cgb period inversely: period' = period * 1024 / songSpeed */
+	ldr r2, [sp]
+	ldrh r1, [r2, o_MusicPlayerInfo_songSpeed]
+		/*
+		 * r0 = signed period, r1 = songSpeed
+		 * calculate: (period << 10) / songSpeed
+		 */
+	lsls r0, r0, #10
+	bl __divsi3  @ signed divide
+		/* Mask to 11-bit range for GBC hardware compatibility */
+	ldr r1, =0x7FF
+	ands r0, r1
+	b _081DDCBC_common
+_081DDCBC_noise:
+		/* noise: use period directly without scaling */
+	ldr r3, [sp, 0x4]
+	ldr r3, [r3, o_SoundInfo_MidiKeyToCgbFreq]
+	bl call_r3
+_081DDCBC_common:
+	str r0, [r4, o_CgbChannel_frequency]
+	ldrb r0, [r4, o_CgbChannel_modify]
+	movs r1, CGB_CHANNEL_MO_PIT
+	orrs r0, r1
+	strb r0, [r4, o_CgbChannel_modify]
 	movs r0, SOUND_CHANNEL_SF_START
-	strb r0, [r4, o_SoundChannel_statusFlags]
+	strb r0, [r4, o_CgbChannel_statusFlags]
 	ldrb r1, [r5, o_MusicPlayerTrack_flags]
 	movs r0, 0xF0
 	ands r0, r1
 	strb r0, [r5, o_MusicPlayerTrack_flags]
+	b _081DDCEA
 _081DDCEA:
 	add sp, 0x18
 	pop {r0-r7}
@@ -2339,6 +2593,54 @@ _081DDCEA:
 	mov r11, r3
 	pop {r0}
 	bx r0
+
+	.align 2, 0
+_081DDCCE:
+		/* For DirectSound: adjust the stored key for tone data offset, then apply keyM */
+	ldr r0, [r5, o_MusicPlayerTrack_unk_3C]
+	str r0, [r4, o_SoundChannel_count]
+	ldrb r1, [r4, o_SoundChannel_key]
+		/* new sound engine: skip transpose if instrument type is drum */
+	adds r0, r5, 0
+	adds r0, o_MusicPlayerTrack_ToneData_type
+	ldrb r0, [r0]
+	movs r3, TONEDATA_TYPE_RHY
+	tst r3, r0
+	bne _081DDCE4
+		/* adjust key based on tone data key for directsound instruments */
+	mov r6, r9
+	ldrb r0, [r6, o_ToneData_key]
+	cmp r0, 60
+	beq _081DDCE4
+		/* adjustment: key += (60 - tone_data_key) */
+	ldr r3, =60
+	subs r3, r0
+	adds r1, r3
+		/* Store adjusted key back so subsequent pitch changes use correct base */
+	strb r1, [r4, o_SoundChannel_key]
+_081DDCE4:
+		/* now apply keyM (bend/vibrato) to the adjusted base key */
+	movs r0, o_MusicPlayerTrack_keyM
+	ldrsb r0, [r5, r0]
+	adds r1, r0
+	ldrb r2, [r5, o_MusicPlayerTrack_pitM]
+	adds r0, r7, 0
+	bl MidiKeyToFreq
+		/* scale by songSpeed for consistent mixer stepping */
+	ldr r2, [sp]	@ load mplayInfo
+	ldrh r1, [r2, o_MusicPlayerInfo_songSpeed]
+	muls r0, r1
+	lsrs r0, r0, #10
+	str r0, [r4, o_SoundChannel_frequency]
+		/* cache mplayInfo pointer */
+	str r2, [r4, o_SoundChannel_dummy4]
+	movs r0, SOUND_CHANNEL_SF_START
+	strb r0, [r4, o_SoundChannel_statusFlags]
+	ldrb r1, [r5, o_MusicPlayerTrack_flags]
+	movs r0, 0xF0
+	ands r0, r1
+	strb r0, [r5, o_MusicPlayerTrack_flags]
+	b _081DDCEA
 	.pool
 	thumb_func_end ply_note
 
@@ -2386,7 +2688,7 @@ _081DDD40:
 	thumb_func_start clear_modM
 clear_modM:
 	movs r2, 0
-	strb r2, [r1, o_MusicPlayerTrack_modM]
+	strh r2, [r1, o_MusicPlayerTrack_modM]
 	strb r2, [r1, o_MusicPlayerTrack_lfoSpeedC]
 	ldrb r2, [r1, o_MusicPlayerTrack_modT]
 	cmp r2, 0
@@ -2428,11 +2730,25 @@ ply_mod:
 	mov r12, lr
 	bl ld_r3_tp_adr_i_unchecked
 	strb r3, [r1, o_MusicPlayerTrack_mod]
-	cmp r3, 0
+	ldrb r0, [r1, o_MusicPlayerTrack_mod + 1]
+	orrs r0, r3
 	bne _081DDD90
 	bl clear_modM
 _081DDD90:
 	bx r12
 	thumb_func_end ply_mod
+
+	thumb_func_start ply_modm
+ply_modm:
+	mov r12, lr
+	bl ld_r3_tp_adr_i_unchecked
+	strb r3, [r1, o_MusicPlayerTrack_mod + 1]
+	ldrb r0, [r1, o_MusicPlayerTrack_mod]
+	orrs r0, r3
+	bne _081DDD9E
+	bl clear_modM
+_081DDD9E:
+	bx r12
+	thumb_func_end ply_modm
 
 	.align 2, 0 @ Don't pad with nop.

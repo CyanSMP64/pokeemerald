@@ -22,7 +22,7 @@ se_m_hyper_beam_1:
 	.byte		VOL   , 110*se_m_hyper_beam_mvl/mxv
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N02   , En3 , v127
 	.byte	W03
 	.byte		N01   , As3

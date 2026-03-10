@@ -22,44 +22,44 @@ se_m_metronome_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 115*se_m_metronome_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N15   , En3 , v127
 	.byte	W01
 	.byte		PAN   , c_v+4
-	.byte		BEND  , c_v-4
+	.byte		BEND  , c_b-(4*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-7
+	.byte		BEND  , c_b-(7*2)
 	.byte	W01
 	.byte		PAN   , c_v-4
-	.byte		BEND  , c_v-11
+	.byte		BEND  , c_b-(11*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-5
+	.byte		BEND  , c_b-(5*2)
 	.byte	W02
 	.byte		PAN   , c_v+4
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+3
+	.byte		BEND  , c_b+(3*2)
 	.byte	W01
 	.byte		PAN   , c_v-4
-	.byte		BEND  , c_v+6
+	.byte		BEND  , c_b+(6*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+9
+	.byte		BEND  , c_b+(9*2)
 	.byte	W01
 	.byte		PAN   , c_v+4
-	.byte		BEND  , c_v+14
+	.byte		BEND  , c_b+(14*2)
 	.byte	W02
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+20
+	.byte		BEND  , c_b+(20*2)
 	.byte	W01
 	.byte		PAN   , c_v-4
-	.byte		BEND  , c_v+25
+	.byte		BEND  , c_b+(25*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+46
+	.byte		BEND  , c_b+(46*2)
 	.byte	W10
 	.byte	FINE
 

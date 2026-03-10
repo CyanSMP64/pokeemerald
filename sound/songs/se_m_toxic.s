@@ -22,27 +22,27 @@ se_m_toxic_1:
 	.byte		VOL   , 110*se_m_toxic_mvl/mxv
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N02   , Dn2 , v127
 	.byte	W01
-	.byte		BEND  , c_v+32
+	.byte		BEND  , c_b+(32*2)
 	.byte	W01
 	.byte		VOICE , 23
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N02   , Gn1 , v112
 	.byte	W01
 	.byte		PAN   , c_v+8
-	.byte		BEND  , c_v+63
+	.byte		BEND  , c_b+(63*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N02   , Cn2
 	.byte	W02
 	.byte		PAN   , c_v-7
-	.byte		BEND  , c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W01
 	.byte		N01
 	.byte	W01
@@ -63,7 +63,7 @@ se_m_toxic_1:
 	.byte	W01
 	.byte		VOICE , 23
 	.byte		PAN   , c_v-8
-	.byte		BEND  , c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte		N01   , Cn3
 	.byte	W02
 	.byte		PAN   , c_v+8

@@ -22,23 +22,23 @@ se_m_thunder_wave_1:
 	.byte		VOL   , 110*se_m_thunder_wave_mvl/mxv
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+32
+	.byte		BEND  , c_b+(32*2)
 	.byte		N06   , Gn3 , v127
 	.byte	W02
 	.byte		PAN   , c_v-8
 	.byte	W01
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+32
+	.byte		BEND  , c_b+(32*2)
 	.byte		N04   , Cn3
 	.byte	W02
 	.byte		PAN   , c_v+9
 	.byte	W01
-	.byte		BEND  , c_v-12
+	.byte		BEND  , c_b-(12*2)
 	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N01   , Gn3
 	.byte	W02
 	.byte		        Bn2
@@ -49,19 +49,19 @@ se_m_thunder_wave_1:
 	.byte	W01
 	.byte		        85*se_m_thunder_wave_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v-23
+	.byte		BEND  , c_b-(23*2)
 	.byte	W01
 	.byte		VOL   , 66*se_m_thunder_wave_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v-40
+	.byte		BEND  , c_b-(40*2)
 	.byte	W01
 	.byte		VOL   , 36*se_m_thunder_wave_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v-54
+	.byte		BEND  , c_b-(54*2)
 	.byte	W02
 	.byte		VOL   , 12*se_m_thunder_wave_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v-64
+	.byte		BEND  , c_b-(64*2)
 	.byte	W21
 	.byte	FINE
 

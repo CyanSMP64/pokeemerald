@@ -22,24 +22,24 @@ se_m_ember_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 61*se_m_ember_mvl/mxv
-	.byte		BEND  , c_v+8
+	.byte		BEND  , c_b+(8*2)
 	.byte		N10   , Gn3 , v127
 	.byte	W01
 	.byte		VOL   , 84*se_m_ember_mvl/mxv
 	.byte	W01
 	.byte		        97*se_m_ember_mvl/mxv
-	.byte		BEND  , c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte	W01
 	.byte		VOL   , 110*se_m_ember_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v+7
+	.byte		BEND  , c_b+(7*2)
 	.byte	W02
-	.byte		        c_v-12
+	.byte		        c_b-(12*2)
 	.byte	W01
 	.byte		VOL   , 89*se_m_ember_mvl/mxv
 	.byte	W01
 	.byte		        64*se_m_ember_mvl/mxv
-	.byte		BEND  , c_v-42
+	.byte		BEND  , c_b-(42*2)
 	.byte	W01
 	.byte		VOL   , 34*se_m_ember_mvl/mxv
 	.byte	W15

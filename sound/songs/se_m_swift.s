@@ -22,60 +22,60 @@ se_m_swift_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 100*se_m_swift_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N06   , Ds6 , v100
 	.byte	W01
-	.byte		BEND  , c_v-11
+	.byte		BEND  , c_b-(11*2)
 	.byte	W01
 	.byte		PAN   , c_v+5
 	.byte		VOL   , 90*se_m_swift_mvl/mxv
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W01
 	.byte		PAN   , c_v-6
 	.byte		VOL   , 77*se_m_swift_mvl/mxv
-	.byte		BEND  , c_v-37
+	.byte		BEND  , c_b-(37*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 37*se_m_swift_mvl/mxv
-	.byte		BEND  , c_v-47
+	.byte		BEND  , c_b-(47*2)
 	.byte	W02
 	.byte		VOL   , 100*se_m_swift_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N06
 	.byte	W01
 	.byte		PAN   , c_v+5
-	.byte		BEND  , c_v-11
+	.byte		BEND  , c_b-(11*2)
 	.byte	W01
 	.byte		PAN   , c_v-6
 	.byte		VOL   , 90*se_m_swift_mvl/mxv
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W01
 	.byte		PAN   , c_v+8
 	.byte		VOL   , 77*se_m_swift_mvl/mxv
-	.byte		BEND  , c_v-37
+	.byte		BEND  , c_b-(37*2)
 	.byte	W01
 	.byte		PAN   , c_v-10
 	.byte		VOL   , 37*se_m_swift_mvl/mxv
-	.byte		BEND  , c_v-47
+	.byte		BEND  , c_b-(47*2)
 	.byte	W02
 	.byte		VOL   , 100*se_m_swift_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N06   , Ds6 , v056
 	.byte	W01
 	.byte		PAN   , c_v+5
-	.byte		BEND  , c_v-11
+	.byte		BEND  , c_b-(11*2)
 	.byte	W01
 	.byte		PAN   , c_v-6
 	.byte		VOL   , 90*se_m_swift_mvl/mxv
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W01
 	.byte		PAN   , c_v+8
 	.byte		VOL   , 77*se_m_swift_mvl/mxv
-	.byte		BEND  , c_v-37
+	.byte		BEND  , c_b-(37*2)
 	.byte	W01
 	.byte		PAN   , c_v-10
 	.byte		VOL   , 37*se_m_swift_mvl/mxv
-	.byte		BEND  , c_v-47
+	.byte		BEND  , c_b-(47*2)
 	.byte	W02
 	.byte	FINE
 

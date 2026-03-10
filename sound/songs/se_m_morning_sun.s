@@ -22,7 +22,7 @@ se_m_morning_sun_1:
 	.byte		VOL   , 95*se_m_morning_sun_mvl/mxv
 	.byte		BENDR , 2
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+15
+	.byte		BEND  , c_b+(15*2)
 	.byte	W03
 	.byte		N06   , Ds6 , v112
 	.byte	W03
@@ -78,7 +78,7 @@ se_m_morning_sun_2:
 	.byte		BENDR , 2
 	.byte		VOL   , 43*se_m_morning_sun_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+15
+	.byte		BEND  , c_b+(15*2)
 	.byte		N06   , Gs6 , v108
 	.byte	W03
 	.byte	W03

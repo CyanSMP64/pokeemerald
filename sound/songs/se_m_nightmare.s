@@ -22,7 +22,7 @@ se_m_nightmare_1:
 	.byte		VOL   , 110*se_m_nightmare_mvl/mxv
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W06
 	.byte		N03   , Gn2 , v092
 	.byte	W06
@@ -72,59 +72,59 @@ se_m_nightmare_2:
 	.byte		        xIECL , 8
 	.byte		VOL   , 110*se_m_nightmare_mvl/mxv
 	.byte		PAN   , c_v-7
-	.byte		BEND  , c_v+55
+	.byte		BEND  , c_b+(55*2)
 	.byte		N03   , Cn2 , v100
 	.byte	W06
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+36
+	.byte		BEND  , c_b+(36*2)
 	.byte		N03
 	.byte	W06
 	.byte		PAN   , c_v-7
-	.byte		BEND  , c_v+17
+	.byte		BEND  , c_b+(17*2)
 	.byte		N03
 	.byte	W06
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte		N03
 	.byte	W06
 	.byte		PAN   , c_v-7
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte		N03
 	.byte	W06
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+12
+	.byte		BEND  , c_b+(12*2)
 	.byte		N03
 	.byte	W06
 	.byte		PAN   , c_v-7
-	.byte		BEND  , c_v+6
+	.byte		BEND  , c_b+(6*2)
 	.byte		N03
 	.byte	W06
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N03
 	.byte	W06
 	.byte		PAN   , c_v-7
-	.byte		BEND  , c_v-6
+	.byte		BEND  , c_b-(6*2)
 	.byte		N03
 	.byte	W06
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v-19
+	.byte		BEND  , c_b-(19*2)
 	.byte		N03
 	.byte	W06
 	.byte		PAN   , c_v-7
-	.byte		BEND  , c_v-31
+	.byte		BEND  , c_b-(31*2)
 	.byte		N03
 	.byte	W06
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v-44
+	.byte		BEND  , c_b-(44*2)
 	.byte		N03
 	.byte	W06
 	.byte		PAN   , c_v-7
-	.byte		BEND  , c_v-55
+	.byte		BEND  , c_b-(55*2)
 	.byte		N03
 	.byte	W06
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v-64
+	.byte		BEND  , c_b-(64*2)
 	.byte		N03
 	.byte	W18
 	.byte	FINE

@@ -22,19 +22,19 @@ se_m_blizzard_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 64*se_m_blizzard_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N24   , Gn3 , v108
 	.byte	W03
 	.byte		VOL   , 79*se_m_blizzard_mvl/mxv
-	.byte		BEND  , c_v+22
+	.byte		BEND  , c_b+(22*2)
 	.byte	W02
-	.byte		        c_v+8
+	.byte		BEND  , c_b+(8*2)
 	.byte	W01
 	.byte		VOL   , 84*se_m_blizzard_mvl/mxv
 	.byte		PAN   , c_v-4
 	.byte	W03
 	.byte		VOL   , 91*se_m_blizzard_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W03
 	.byte		VOL   , 100*se_m_blizzard_mvl/mxv
 	.byte		PAN   , c_v-8
@@ -45,41 +45,41 @@ se_m_blizzard_1:
 	.byte	W06
 se_m_blizzard_1_B1:
 	.byte		PAN   , c_v-17
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N48   , Gn3 , v108
 	.byte	W03
-	.byte		BEND  , c_v-7
+	.byte		BEND  , c_b-(7*2)
 	.byte	W03
 	.byte		PAN   , c_v-9
-	.byte		BEND  , c_v-12
+	.byte		BEND  , c_b-(12*2)
 	.byte	W03
-	.byte		        c_v-20
+	.byte		        c_b-(20*2)
 	.byte	W03
 	.byte		PAN   , c_v-3
 	.byte	W03
 	.byte		        c_v+6
-	.byte		BEND  , c_v-13
+	.byte		BEND  , c_b-(13*2)
 	.byte	W03
 	.byte		PAN   , c_v+10
 	.byte	W03
-	.byte		BEND  , c_v-6
+	.byte		BEND  , c_b-(6*2)
 	.byte	W03
 	.byte		PAN   , c_v+16
 	.byte	W03
-	.byte		BEND  , c_v+6
+	.byte		BEND  , c_b+(6*2)
 	.byte	W03
 	.byte		PAN   , c_v+13
-	.byte		BEND  , c_v+11
+	.byte		BEND  , c_b+(11*2)
 	.byte	W03
-	.byte		        c_v+20
+	.byte		BEND  , c_b+(20*2)
 	.byte	W03
 	.byte		PAN   , c_v+8
 	.byte	W03
 	.byte		        c_v+0
-	.byte		BEND  , c_v+12
+	.byte		BEND  , c_b+(12*2)
 	.byte	W03
 	.byte		PAN   , c_v-8
-	.byte		BEND  , c_v+7
+	.byte		BEND  , c_b+(7*2)
 	.byte	W03
 	.byte		PAN   , c_v-11
 	.byte	W03

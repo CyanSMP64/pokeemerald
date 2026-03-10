@@ -22,27 +22,27 @@ se_m_bubble3_1:
 	.byte		VOL   , 95*se_m_bubble3_mvl/mxv
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N12   , Gn2 , v127
 	.byte	W06
 	.byte		PAN   , c_v-17
-	.byte		BEND  , c_v+6
+	.byte		BEND  , c_b+(6*2)
 	.byte	W01
-	.byte		        c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte	W02
 	.byte		PAN   , c_v+16
-	.byte		BEND  , c_v+25
+	.byte		BEND  , c_b+(25*2)
 	.byte	W01
-	.byte		        c_v+31
+	.byte		BEND  , c_b+(31*2)
 	.byte	W02
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-1
+	.byte		BEND  , c_b-(1*2)
 	.byte	W03
 	.byte		N06
 	.byte	W03
-	.byte		BEND  , c_v+6
+	.byte		BEND  , c_b+(6*2)
 	.byte	W01
-	.byte		        c_v+13
+	.byte		BEND  , c_b+(13*2)
 	.byte	W05
 	.byte	FINE
 

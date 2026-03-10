@@ -22,17 +22,17 @@ se_m_giga_drain_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 110*se_m_giga_drain_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N03   , Gn2 , v127
 	.byte	W02
 	.byte		PAN   , c_v+3
-	.byte		BEND  , c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte	W01
 	.byte		VOICE , 23
 	.byte		N02   , Cn3 , v104
 	.byte	W01
 	.byte		PAN   , c_v-3
-	.byte		BEND  , c_v+5
+	.byte		BEND  , c_b+(5*2)
 	.byte	W02
 	.byte		VOICE , 36
 	.byte		N02   , Cn2 , v127
@@ -40,21 +40,21 @@ se_m_giga_drain_1:
 	.byte		PAN   , c_v+7
 	.byte	W01
 	.byte		VOICE , 23
-	.byte		BEND  , c_v+4
+	.byte		BEND  , c_b+(4*2)
 	.byte		N06   , Cn3 , v104
 	.byte	W01
 	.byte		PAN   , c_v-6
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W01
-	.byte		        c_v-5
+	.byte		        c_b-(5*2)
 	.byte	W02
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-12
+	.byte		BEND  , c_b-(12*2)
 	.byte	W01
-	.byte		        c_v-23
+	.byte		        c_b-(23*2)
 	.byte	W01
 	.byte		VOICE , 36
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N03   , An2 , v100
 	.byte	W04
 	.byte		PAN   , c_v+5

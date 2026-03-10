@@ -22,41 +22,41 @@ se_m_tri_attack_1:
 	.byte		BENDR , 24
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 19*se_m_tri_attack_mvl/mxv
-	.byte		BEND  , c_v-32
+	.byte		BEND  , c_b-(32*2)
 	.byte		N16   , Gn1 , v127
 	.byte	W01
 	.byte		VOL   , 43*se_m_tri_attack_mvl/mxv
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W01
 	.byte		VOL   , 72*se_m_tri_attack_mvl/mxv
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W01
 	.byte		VOL   , 92*se_m_tri_attack_mvl/mxv
-	.byte		BEND  , c_v+7
+	.byte		BEND  , c_b+(7*2)
 	.byte	W01
 	.byte		VOL   , 109*se_m_tri_attack_mvl/mxv
-	.byte		BEND  , c_v+19
+	.byte		BEND  , c_b+(19*2)
 	.byte	W02
-	.byte		        c_v+28
+	.byte		BEND  , c_b+(28*2)
 	.byte	W01
-	.byte		        c_v+40
+	.byte		BEND  , c_b+(40*2)
 	.byte	W01
-	.byte		        c_v+28
+	.byte		BEND  , c_b+(28*2)
 	.byte	W01
 	.byte		VOL   , 102*se_m_tri_attack_mvl/mxv
-	.byte		BEND  , c_v+19
+	.byte		BEND  , c_b+(19*2)
 	.byte	W01
 	.byte		VOL   , 88*se_m_tri_attack_mvl/mxv
-	.byte		BEND  , c_v+5
+	.byte		BEND  , c_b+(5*2)
 	.byte	W02
 	.byte		VOL   , 69*se_m_tri_attack_mvl/mxv
-	.byte		BEND  , c_v-9
+	.byte		BEND  , c_b-(9*2)
 	.byte	W01
 	.byte		VOL   , 37*se_m_tri_attack_mvl/mxv
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W01
 	.byte		VOL   , 17*se_m_tri_attack_mvl/mxv
-	.byte		BEND  , c_v-34
+	.byte		BEND  , c_b-(34*2)
 	.byte	W10
 	.byte	FINE
 

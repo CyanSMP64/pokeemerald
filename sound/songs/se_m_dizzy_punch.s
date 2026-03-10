@@ -22,43 +22,43 @@ se_m_dizzy_punch_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 5*se_m_dizzy_punch_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N07   , Bn5 , v080
 	.byte	W01
 	.byte		VOL   , 55*se_m_dizzy_punch_mvl/mxv
 	.byte		PAN   , c_v+11
-	.byte		BEND  , c_v+3
+	.byte		BEND  , c_b+(3*2)
 	.byte	W01
 	.byte		VOL   , 67*se_m_dizzy_punch_mvl/mxv
 	.byte		PAN   , c_v+22
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W01
 	.byte		VOL   , 90*se_m_dizzy_punch_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-6
+	.byte		BEND  , c_b-(6*2)
 	.byte	W01
 	.byte		PAN   , c_v-12
-	.byte		BEND  , c_v-14
+	.byte		BEND  , c_b-(14*2)
 	.byte	W02
 	.byte		VOL   , 4*se_m_dizzy_punch_mvl/mxv
 	.byte		PAN   , c_v-22
-	.byte		BEND  , c_v-23
+	.byte		BEND  , c_b-(23*2)
 	.byte	W01
 	.byte		PAN   , c_v-13
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N04   , Cn6
 	.byte	W01
 	.byte		VOL   , 66*se_m_dizzy_punch_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W01
 	.byte		VOL   , 90*se_m_dizzy_punch_mvl/mxv
 	.byte		PAN   , c_v+11
-	.byte		BEND  , c_v+3
+	.byte		BEND  , c_b+(3*2)
 	.byte	W01
 	.byte		VOL   , 4*se_m_dizzy_punch_mvl/mxv
 	.byte		PAN   , c_v+21
-	.byte		BEND  , c_v+5
+	.byte		BEND  , c_b+(5*2)
 	.byte	W14
 	.byte		VOL   , 90*se_m_dizzy_punch_mvl/mxv
 	.byte	FINE

@@ -22,30 +22,30 @@ se_m_rock_throw_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 105*se_m_rock_throw_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N06   , En3 , v127
 	.byte	W03
 	.byte		PAN   , c_v-8
-	.byte		BEND  , c_v-34
+	.byte		BEND  , c_b-(34*2)
 	.byte	W03
 	.byte		PAN   , c_v+7
 	.byte		N03   , Gn3 , v100
 	.byte	W03
 	.byte		PAN   , c_v-15
-	.byte		BEND  , c_v+4
+	.byte		BEND  , c_b+(4*2)
 	.byte		N06   , En3 , v127
 	.byte	W03
 	.byte		PAN   , c_v+16
-	.byte		BEND  , c_v-13
+	.byte		BEND  , c_b-(13*2)
 	.byte	W03
 	.byte		PAN   , c_v-1
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N06   , Cn3 , v084
 	.byte	W06
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte		N06   , En3 , v068
 	.byte	W03
-	.byte		BEND  , c_v-41
+	.byte		BEND  , c_b-(41*2)
 	.byte	W24
 	.byte	FINE
 

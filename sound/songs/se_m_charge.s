@@ -22,7 +22,7 @@ se_m_charge_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 34*se_m_charge_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N66   , Cn5 , v127
 	.byte	W01
 	.byte		PAN   , c_v-2
@@ -31,7 +31,7 @@ se_m_charge_1:
 	.byte		PAN   , c_v+0
 	.byte	W01
 	.byte		        c_v+2
-	.byte		BEND  , c_v-2
+	.byte		BEND  , c_b-(2*2)
 	.byte	W01
 	.byte		VOL   , 58*se_m_charge_mvl/mxv
 	.byte		PAN   , c_v+0
@@ -40,7 +40,7 @@ se_m_charge_1:
 	.byte	W01
 	.byte		VOL   , 70*se_m_charge_mvl/mxv
 	.byte		PAN   , c_v-4
-	.byte		BEND  , c_v-4
+	.byte		BEND  , c_b-(4*2)
 	.byte	W01
 	.byte		PAN   , c_v-2
 	.byte	W01
@@ -48,7 +48,7 @@ se_m_charge_1:
 	.byte		PAN   , c_v+0
 	.byte	W01
 	.byte		        c_v+2
-	.byte		BEND  , c_v-6
+	.byte		BEND  , c_b-(6*2)
 	.byte	W02
 	.byte		VOL   , 90*se_m_charge_mvl/mxv
 	.byte		PAN   , c_v+4
@@ -56,65 +56,65 @@ se_m_charge_1:
 	.byte		        c_v+2
 	.byte	W01
 	.byte		        c_v+0
-	.byte		BEND  , c_v-8
+	.byte		BEND  , c_b-(8*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
 	.byte	W01
 	.byte		        c_v-2
 	.byte	W02
 	.byte		        c_v+0
-	.byte		BEND  , c_v-13
+	.byte		BEND  , c_b-(13*2)
 	.byte	W01
 	.byte		PAN   , c_v+2
 	.byte	W01
 	.byte		        c_v+0
 	.byte	W01
 	.byte		        c_v-2
-	.byte		BEND  , c_v-15
+	.byte		BEND  , c_b-(15*2)
 	.byte	W01
 	.byte		PAN   , c_v-4
 	.byte	W02
 	.byte		        c_v-2
 	.byte	W01
 	.byte		        c_v+0
-	.byte		BEND  , c_v-19
+	.byte		BEND  , c_b-(19*2)
 	.byte	W01
 	.byte		PAN   , c_v+2
 	.byte	W01
 	.byte		        c_v+4
-	.byte		BEND  , c_v-22
+	.byte		BEND  , c_b-(22*2)
 	.byte	W01
 	.byte		PAN   , c_v+2
 	.byte	W02
 	.byte		        c_v+0
-	.byte		BEND  , c_v-19
+	.byte		BEND  , c_b-(19*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
 	.byte	W01
 	.byte		        c_v-2
-	.byte		BEND  , c_v-17
+	.byte		BEND  , c_b-(17*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
 	.byte	W01
 	.byte		        c_v+2
 	.byte	W02
 	.byte		        c_v+0
-	.byte		BEND  , c_v-19
+	.byte		BEND  , c_b-(19*2)
 	.byte	W01
 	.byte		PAN   , c_v-2
 	.byte	W01
 	.byte		        c_v-4
 	.byte	W01
 	.byte		        c_v-2
-	.byte		BEND  , c_v-22
+	.byte		BEND  , c_b-(22*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
 	.byte	W02
 	.byte		        c_v+2
-	.byte		BEND  , c_v-28
+	.byte		BEND  , c_b-(28*2)
 	.byte	W01
 	.byte		PAN   , c_v+4
-	.byte		BEND  , c_v-24
+	.byte		BEND  , c_b-(24*2)
 	.byte	W01
 	.byte		PAN   , c_v+2
 	.byte	W01
@@ -129,7 +129,7 @@ se_m_charge_1:
 	.byte		PAN   , c_v+0
 	.byte	W01
 	.byte		        c_v+2
-	.byte		BEND  , c_v-27
+	.byte		BEND  , c_b-(27*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
 	.byte	W01
@@ -140,7 +140,7 @@ se_m_charge_1:
 	.byte	W01
 	.byte		VOL   , 55*se_m_charge_mvl/mxv
 	.byte		PAN   , c_v-2
-	.byte		BEND  , c_v-29
+	.byte		BEND  , c_b-(29*2)
 	.byte	W01
 	.byte		PAN   , c_v+0
 	.byte	W01
@@ -148,7 +148,7 @@ se_m_charge_1:
 	.byte		PAN   , c_v+2
 	.byte	W01
 	.byte		        c_v+4
-	.byte		BEND  , c_v-31
+	.byte		BEND  , c_b-(31*2)
 	.byte	W02
 	.byte		VOL   , 36*se_m_charge_mvl/mxv
 	.byte		PAN   , c_v+2
@@ -157,13 +157,13 @@ se_m_charge_1:
 	.byte	W01
 	.byte		VOL   , 24*se_m_charge_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-36
+	.byte		BEND  , c_b-(36*2)
 	.byte	W01
 	.byte		PAN   , c_v-2
 	.byte	W01
 	.byte		VOL   , 13*se_m_charge_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v-42
+	.byte		BEND  , c_b-(42*2)
 	.byte	W02
 	.byte		VOL   , 5*se_m_charge_mvl/mxv
 	.byte		PAN   , c_v+2

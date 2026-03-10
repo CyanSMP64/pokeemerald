@@ -22,7 +22,7 @@ se_m_screech_1:
 	.byte		VOICE , 44
 	.byte		BENDR , 2
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N21   , Fs5 , v112
 	.byte	W01
 	.byte		PAN   , c_v-5
@@ -67,7 +67,7 @@ se_m_screech_1:
 	.byte	W01
 	.byte		VOL   , 55*se_m_screech_mvl/mxv
 	.byte	W02
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W02
 	.byte	FINE
 
@@ -78,7 +78,7 @@ se_m_screech_2:
 	.byte	KEYSH , se_m_screech_key+0
 	.byte		VOICE , 42
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N21   , Fn6 , v064
 	.byte	W06
 	.byte		PAN   , c_v+0
@@ -91,7 +91,7 @@ se_m_screech_2:
 	.byte	W01
 	.byte		        c_v+0
 	.byte	W03
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W02
 	.byte	FINE
 

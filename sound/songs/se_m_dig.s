@@ -22,26 +22,26 @@ se_m_dig_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 115*se_m_dig_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N01   , Cn2 , v112
 	.byte	W01
 	.byte		VOICE , 26
 	.byte		N02   , Cn3 , v127
 	.byte	W01
 	.byte		PAN   , c_v+5
-	.byte		BEND  , c_v+4
+	.byte		BEND  , c_b+(4*2)
 	.byte	W01
-	.byte		        c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte		N03
 	.byte	W01
 	.byte		PAN   , c_v-8
-	.byte		BEND  , c_v+28
+	.byte		BEND  , c_b+(28*2)
 	.byte	W02
-	.byte		        c_v+45
+	.byte		BEND  , c_b+(45*2)
 	.byte	W01
 	.byte		VOICE , 36
 	.byte		PAN   , c_v+12
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N02   , Cn3 , v056
 	.byte	W02
 	.byte	W03

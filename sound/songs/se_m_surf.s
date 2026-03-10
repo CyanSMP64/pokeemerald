@@ -22,36 +22,36 @@ se_m_surf_1:
 	.byte		BENDR , 12
 	.byte		VOL   , 27*se_m_surf_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N96   , Cn3 , v112
 	.byte	W04
 	.byte		VOL   , 45*se_m_surf_mvl/mxv
 	.byte	W02
 	.byte		PAN   , c_v-4
 	.byte	W02
-	.byte		BEND  , c_v+4
+	.byte		BEND  , c_b+(4*2)
 	.byte	W01
 	.byte		VOL   , 60*se_m_surf_mvl/mxv
 	.byte	W03
 	.byte		PAN   , c_v-10
 	.byte	W02
-	.byte		BEND  , c_v+9
+	.byte		BEND  , c_b+(9*2)
 	.byte	W01
 	.byte		VOL   , 88*se_m_surf_mvl/mxv
 	.byte	W03
 	.byte		PAN   , c_v-5
 	.byte	W02
-	.byte		BEND  , c_v+14
+	.byte		BEND  , c_b+(14*2)
 	.byte	W04
 	.byte		PAN   , c_v+0
 	.byte	W01
 	.byte		VOL   , 110*se_m_surf_mvl/mxv
 	.byte	W02
-	.byte		BEND  , c_v+19
+	.byte		BEND  , c_b+(19*2)
 	.byte	W03
 	.byte		PAN   , c_v+4
 	.byte	W02
-	.byte		BEND  , c_v+24
+	.byte		BEND  , c_b+(24*2)
 	.byte	W04
 	.byte		PAN   , c_v+11
 	.byte	W06
@@ -61,7 +61,7 @@ se_m_surf_1:
 	.byte	W06
 	.byte		        c_v-4
 	.byte	W02
-	.byte		BEND  , c_v+19
+	.byte		BEND  , c_b+(19*2)
 	.byte	W04
 	.byte		PAN   , c_v-10
 	.byte	W01
@@ -69,12 +69,12 @@ se_m_surf_1:
 	.byte	W05
 	.byte		        81*se_m_surf_mvl/mxv
 	.byte		PAN   , c_v-5
-	.byte		BEND  , c_v+12
+	.byte		BEND  , c_b+(12*2)
 	.byte	W06
 	.byte		VOL   , 68*se_m_surf_mvl/mxv
 	.byte		PAN   , c_v+0
 	.byte	W03
-	.byte		BEND  , c_v+17
+	.byte		BEND  , c_b+(17*2)
 	.byte	W01
 	.byte		VOL   , 50*se_m_surf_mvl/mxv
 	.byte	W02
@@ -83,13 +83,13 @@ se_m_surf_1:
 	.byte		VOL   , 31*se_m_surf_mvl/mxv
 	.byte	W03
 	.byte		PAN   , c_v+11
-	.byte		BEND  , c_v+22
+	.byte		BEND  , c_b+(22*2)
 	.byte	W02
 	.byte		VOL   , 11*se_m_surf_mvl/mxv
 	.byte	W04
 	.byte		        6*se_m_surf_mvl/mxv
 	.byte		PAN   , c_v+4
-	.byte		BEND  , c_v+30
+	.byte		BEND  , c_b+(30*2)
 	.byte	W06
 	.byte	FINE
 

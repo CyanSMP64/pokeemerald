@@ -7,7 +7,8 @@
 // This is presumably short for SMASH, the developer of MKS4AGB.
 #define ID_NUMBER 0x68736D53
 
-#define C_V 0x40 // center value for PAN, BEND, and TUNE
+#define C_V 0x40 // center value for PAN and TUNE
+#define C_B 0x80 // center value for BEND
 
 #define SOUND_MODE_REVERB_VAL   0x0000007F
 #define SOUND_MODE_REVERB_SET   0x00000080
@@ -150,7 +151,8 @@ struct SoundChannel
     u8 velocity;
     u8 priority;
     u8 rhythmPan;
-    u8 dummy3[3];
+    u8 portaActive;
+    u16 portaStep;
     u32 count;
     u32 fw;
     u32 frequency;
@@ -160,7 +162,7 @@ struct SoundChannel
     void *prevChannelPointer;
     void *nextChannelPointer;
     u32 dummy4;
-    u16 xpi;
+    u16 portaCurrent;
     u16 xpc;
 };
 
@@ -211,7 +213,6 @@ struct SoundInfo
     MPlayFunc *MPlayJumpTable;
     PlyNoteFunc plynote;
     ExtVolPitFunc ExtVolPit;
-    u8 gap2[16];
     struct SoundChannel chans[MAX_DIRECTSOUND_CHANNELS];
     s8 pcmBuffer[PCM_DMA_BUF_SIZE * 2];
 };
@@ -289,19 +290,23 @@ struct MusicPlayerTrack
     u8 volX;
     s8 pan;
     s8 panX;
-    s8 modM;
-    u8 mod;
+    s16 modM;
+    u16 mod;
     u8 modT;
     u8 lfoSpeed;
     u8 lfoSpeedC;
     u8 lfoDelay;
     u8 lfoDelayC;
     u8 priority;
-    u8 pseudoEchoVolume;
-    u8 pseudoEchoLength;
     struct SoundChannel *chan;
     struct ToneData tone;
-    u8 gap[10];
+    u8 pseudoEchoVolume;
+    u8 pseudoEchoLength;
+    u8 portaFlag;
+    u8 portaTime;
+    u8 portaPrevKey;
+    u8 vol2;
+    u8 gap[4];
     u16 unk_3A;
     u32 unk_3C;
     u8 *cmdPtr;
@@ -329,7 +334,9 @@ struct MusicPlayerInfo
     u8 cmd;
     u8 unk_B;
     u32 clock;
-    u8 gap[8];
+    u16 songSpeed;
+    u8 songVol;
+    u8 gap[5];
     u8 *memAccArea;
     u16 tempoD;
     u16 tempoU;
@@ -356,8 +363,9 @@ struct MusicPlayer
 struct Song
 {
     struct SongHeader *header;
-    u16 ms;
-    u16 me;
+    u8 ms;
+    u8 volume;
+    u16 speed;
 };
 
 extern const struct MusicPlayer gMPlayTable[];
@@ -387,7 +395,7 @@ extern const XcmdFunc gXcmdTable[];
 
 extern struct CgbChannel gCgbChans[];
 
-extern const u8 gScaleTable[];
+extern const s16 gScaleTable[];
 extern const u32 gFreqTable[];
 extern const u16 gPcmSamplesPerVBlankTable[];
 
@@ -413,7 +421,7 @@ void MPlayMain(struct MusicPlayerInfo *);
 void RealClearChain(void *x);
 
 void MPlayContinue(struct MusicPlayerInfo *mplayInfo);
-void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader);
+void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader, u8 volume, u16 speed);
 void m4aMPlayStop(struct MusicPlayerInfo *mplayInfo);
 void FadeOutBody(struct MusicPlayerInfo *mplayInfo);
 void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *track);
@@ -466,12 +474,14 @@ void ply_tempo(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_keysh(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_voice(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_vol(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
+void ply_vol2(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_pan(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_bend(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_bendr(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_lfos(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_lfodl(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_mod(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
+void ply_modm(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_modt(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_tune(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_port(struct MusicPlayerInfo *, struct MusicPlayerTrack *);

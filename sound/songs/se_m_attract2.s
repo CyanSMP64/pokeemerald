@@ -23,7 +23,7 @@ se_m_attract2_1:
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 110*se_m_attract2_mvl/mxv
 	.byte		MOD   , 30
-	.byte		BEND  , c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte		N54   , Dn4 , v080
 	.byte	W12
 	.byte		PAN   , c_v-4
@@ -76,7 +76,7 @@ se_m_attract2_2:
 	.byte		VOL   , 110*se_m_attract2_mvl/mxv
 	.byte		MOD   , 30
 	.byte		PAN   , c_v+1
-	.byte		BEND  , c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte		N24   , Dn4 , v040
 	.byte	W24
 	.byte	W02

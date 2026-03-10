@@ -22,37 +22,37 @@ se_m_flamethrower_1:
 	.byte		BENDR , 12
 	.byte		VOL   , 110*se_m_flamethrower_mvl/mxv
 	.byte		PAN   , c_v+4
-	.byte		BEND  , c_v+50
+	.byte		BEND  , c_b+(50*2)
 	.byte		TIE   , Cn3 , v127
 	.byte	W01
-	.byte		BEND  , c_v+32
+	.byte		BEND  , c_b+(32*2)
 	.byte	W02
 	.byte		PAN   , c_v-5
-	.byte		BEND  , c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte	W02
-	.byte		        c_v-8
+	.byte		        c_b-(8*2)
 	.byte	W02
 	.byte		PAN   , c_v+8
-	.byte		BEND  , c_v-15
+	.byte		BEND  , c_b-(15*2)
 	.byte	W02
-	.byte		        c_v-10
+	.byte		        c_b-(10*2)
 	.byte	W01
 	.byte		PAN   , c_v-9
 	.byte	W02
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W02
 	.byte		PAN   , c_v+4
-	.byte		BEND  , c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte	W04
 	.byte		PAN   , c_v-5
-	.byte		BEND  , c_v+10
+	.byte		BEND  , c_b+(10*2)
 	.byte	W03
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte	W03
 	.byte		PAN   , c_v+4
 	.byte	W01
-	.byte		BEND  , c_v+21
+	.byte		BEND  , c_b+(21*2)
 	.byte	W02
 	.byte		PAN   , c_v-5
 	.byte	W04

@@ -22,7 +22,7 @@ se_m_explosion_1:
 	.byte		VOL   , 125*se_m_explosion_mvl/mxv
 	.byte		BENDR , 12
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		N01   , Ds3 , v127
 	.byte	W01
 	.byte		        As2
@@ -39,40 +39,40 @@ se_m_explosion_1:
 	.byte	W02
 	.byte		N54   , Fn3
 	.byte	W11
-	.byte		BEND  , c_v+3
+	.byte		BEND  , c_b+(3*2)
 	.byte	W03
 	.byte	W02
 	.byte		PAN   , c_v+6
-	.byte		BEND  , c_v+7
+	.byte		BEND  , c_b+(7*2)
 	.byte	W04
 	.byte		PAN   , c_v+0
 	.byte	W01
-	.byte		BEND  , c_v+10
+	.byte		BEND  , c_b+(10*2)
 	.byte	W02
 	.byte		PAN   , c_v-8
 	.byte	W01
-	.byte		BEND  , c_v+16
+	.byte		BEND  , c_b+(16*2)
 	.byte	W03
 	.byte		PAN   , c_v+0
 	.byte	W01
-	.byte		BEND  , c_v+20
+	.byte		BEND  , c_b+(20*2)
 	.byte	W02
 	.byte		PAN   , c_v+7
 	.byte	W02
-	.byte		BEND  , c_v+25
+	.byte		BEND  , c_b+(25*2)
 	.byte	W02
 	.byte		PAN   , c_v+0
 	.byte	W04
 	.byte		        c_v-8
-	.byte		BEND  , c_v+20
+	.byte		BEND  , c_b+(20*2)
 	.byte	W03
 	.byte		PAN   , c_v+6
 	.byte	W01
-	.byte		BEND  , c_v+10
+	.byte		BEND  , c_b+(10*2)
 	.byte	W03
 	.byte		PAN   , c_v-8
 	.byte	W02
-	.byte		BEND  , c_v+3
+	.byte		BEND  , c_b+(3*2)
 	.byte	W01
 	.byte		PAN   , c_v+7
 	.byte	W04
@@ -87,7 +87,7 @@ se_m_explosion_2:
 	.byte		VOICE , 4
 	.byte		VOL   , 125*se_m_explosion_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		BEND  , c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte		N02   , Cn3 , v052
 	.byte	W01
 	.byte		VOL   , 74*se_m_explosion_mvl/mxv

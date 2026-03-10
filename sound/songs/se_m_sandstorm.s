@@ -22,18 +22,18 @@ se_m_sandstorm_1:
 	.byte		BENDR , 12
 	.byte		PAN   , c_v-48
 	.byte		VOL   , 11*se_m_sandstorm_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte		TIE   , En3 , v127
 	.byte	W03
 	.byte		VOL   , 17*se_m_sandstorm_mvl/mxv
-	.byte		BEND  , c_v+22
+	.byte		BEND  , c_b+(22*2)
 	.byte	W02
-	.byte		        c_v+8
+	.byte		BEND  , c_b+(8*2)
 	.byte	W01
 	.byte		VOL   , 24*se_m_sandstorm_mvl/mxv
 	.byte	W03
 	.byte		        32*se_m_sandstorm_mvl/mxv
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W03
 	.byte		VOL   , 52*se_m_sandstorm_mvl/mxv
 	.byte	W03
@@ -46,25 +46,25 @@ se_m_sandstorm_1:
 	.byte	W02
 	.byte		VOL   , 98*se_m_sandstorm_mvl/mxv
 	.byte	W02
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W02
 	.byte		VOL   , 111*se_m_sandstorm_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v-7
+	.byte		BEND  , c_b-(7*2)
 	.byte	W01
 	.byte		VOL   , 127*se_m_sandstorm_mvl/mxv
 	.byte	W02
-	.byte		BEND  , c_v-12
+	.byte		BEND  , c_b-(12*2)
 	.byte	W02
 	.byte		PAN   , c_v-38
 	.byte	W01
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W06
-	.byte		        c_v-13
+	.byte		        c_b-(13*2)
 	.byte	W05
 	.byte		PAN   , c_v-31
 	.byte	W01
-	.byte		BEND  , c_v-6
+	.byte		BEND  , c_b-(6*2)
 	.byte	W03
 	.byte	W03
 	.byte		        c_v+6
@@ -75,51 +75,51 @@ se_m_sandstorm_1:
 	.byte	W01
 	.byte		PAN   , c_v-21
 	.byte	W05
-	.byte		BEND  , c_v+12
+	.byte		BEND  , c_b+(12*2)
 	.byte	W03
-	.byte		        c_v+7
+	.byte		BEND  , c_b+(7*2)
 	.byte	W06
 	.byte		PAN   , c_v-16
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W03
-	.byte		        c_v-7
+	.byte		        c_b-(7*2)
 	.byte	W03
-	.byte		        c_v-12
+	.byte		        c_b-(12*2)
 	.byte	W03
-	.byte		        c_v-20
+	.byte		        c_b-(20*2)
 	.byte	W06
 	.byte		PAN   , c_v-7
-	.byte		BEND  , c_v-13
+	.byte		BEND  , c_b-(13*2)
 	.byte	W06
-	.byte		        c_v-6
+	.byte		        c_b-(6*2)
 	.byte	W03
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W03
 	.byte		PAN   , c_v+2
-	.byte		BEND  , c_v+22
+	.byte		BEND  , c_b+(22*2)
 	.byte	W02
-	.byte		        c_v+8
+	.byte		BEND  , c_b+(8*2)
 	.byte	W04
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W05
 	.byte		PAN   , c_v+10
 	.byte	W10
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W01
 	.byte		PAN   , c_v+16
 	.byte	W02
-	.byte		BEND  , c_v-7
+	.byte		BEND  , c_b-(7*2)
 	.byte	W03
-	.byte		        c_v-12
+	.byte		        c_b-(12*2)
 	.byte	W03
 	.byte		PAN   , c_v+24
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W06
-	.byte		        c_v-13
+	.byte		        c_b-(13*2)
 	.byte	W05
 	.byte		PAN   , c_v+32
 	.byte	W01
-	.byte		BEND  , c_v-6
+	.byte		BEND  , c_b-(6*2)
 	.byte	W03
 	.byte	W03
 	.byte		        c_v+6
@@ -130,36 +130,36 @@ se_m_sandstorm_1:
 	.byte	W01
 	.byte		PAN   , c_v+40
 	.byte	W05
-	.byte		BEND  , c_v+12
+	.byte		BEND  , c_b+(12*2)
 	.byte	W03
-	.byte		        c_v+7
+	.byte		BEND  , c_b+(7*2)
 	.byte	W04
 	.byte		VOL   , 114*se_m_sandstorm_mvl/mxv
 	.byte	W02
-	.byte		BEND  , c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W01
 	.byte		PAN   , c_v+48
 	.byte	W01
 	.byte		VOL   , 104*se_m_sandstorm_mvl/mxv
 	.byte	W01
-	.byte		BEND  , c_v-7
+	.byte		BEND  , c_b-(7*2)
 	.byte	W03
 	.byte		VOL   , 93*se_m_sandstorm_mvl/mxv
-	.byte		BEND  , c_v-12
+	.byte		BEND  , c_b-(12*2)
 	.byte	W03
 	.byte		VOL   , 82*se_m_sandstorm_mvl/mxv
-	.byte		BEND  , c_v-20
+	.byte		BEND  , c_b-(20*2)
 	.byte	W04
 	.byte		VOL   , 67*se_m_sandstorm_mvl/mxv
 	.byte	W02
-	.byte		BEND  , c_v-13
+	.byte		BEND  , c_b-(13*2)
 	.byte	W01
 	.byte		VOL   , 52*se_m_sandstorm_mvl/mxv
 	.byte	W03
 	.byte		        32*se_m_sandstorm_mvl/mxv
 	.byte	W02
 	.byte		        13*se_m_sandstorm_mvl/mxv
-	.byte		BEND  , c_v-6
+	.byte		BEND  , c_b-(6*2)
 	.byte	W03
 	.byte		EOT
 	.byte	FINE

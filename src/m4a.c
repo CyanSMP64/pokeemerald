@@ -5,7 +5,7 @@ extern const u8 gCgb3Vol[];
 
 #define BSS_CODE __attribute__((section(".bss.code")))
 
-BSS_CODE ALIGNED(4) char SoundMainRAM_Buffer[0xb78] = {0};
+BSS_CODE ALIGNED(4) char SoundMainRAM_Buffer[0xae4] = {0};
 BSS_CODE ALIGNED(4) u32 hq_buffer_ptr[0x160] = {0};
 
 struct SoundInfo gSoundInfo;
@@ -21,7 +21,7 @@ struct MusicPlayerInfo gMPlayInfo_SE2;
 struct MusicPlayerInfo gMPlayInfo_SE3;
 u8 gMPlayMemAccArea[0x10];
 
-u32 MidiKeyToFreq(struct WaveData *wav, u8 key, u8 fineAdjust)
+u32 MidiKeyToFreq(struct WaveData *wav, s16 key, u8 fineAdjust)
 {
     u32 val1;
     u32 val2;
@@ -32,11 +32,16 @@ u32 MidiKeyToFreq(struct WaveData *wav, u8 key, u8 fineAdjust)
         key = 178;
         fineAdjustShifted = 255 << 24;
     }
+    else if (key < -60)
+    {
+        key = -60;
+        fineAdjustShifted = 0;
+    }
 
-    val1 = gScaleTable[key];
+    val1 = gScaleTable[key + 60];
     val1 = gFreqTable[val1 & 0xF] >> (val1 >> 4);
 
-    val2 = gScaleTable[key + 1];
+    val2 = gScaleTable[key + 61];
     val2 = gFreqTable[val2 & 0xF] >> (val2 >> 4);
 
     return umul3232H32(wav->freq, val1 + umul3232H32(val2 - val1, fineAdjustShifted));
@@ -112,7 +117,7 @@ void m4aSongNumStart(u16 n)
     const struct Song *song = &songTable[n];
     const struct MusicPlayer *mplay = &mplayTable[song->ms];
 
-    MPlayStart(mplay->info, song->header);
+    MPlayStart(mplay->info, song->header, song->volume, song->speed);
 }
 
 void m4aSongNumStartOrChange(u16 n)
@@ -124,14 +129,14 @@ void m4aSongNumStartOrChange(u16 n)
 
     if (mplay->info->songHeader != song->header)
     {
-        MPlayStart(mplay->info, song->header);
+        MPlayStart(mplay->info, song->header, song->volume, song->speed);
     }
     else
     {
         if ((mplay->info->status & MUSICPLAYER_STATUS_TRACK) == 0
          || (mplay->info->status & MUSICPLAYER_STATUS_PAUSE))
         {
-            MPlayStart(mplay->info, song->header);
+            MPlayStart(mplay->info, song->header, song->volume, song->speed);
         }
     }
 }
@@ -144,9 +149,9 @@ void m4aSongNumStartOrContinue(u16 n)
     const struct MusicPlayer *mplay = &mplayTable[song->ms];
 
     if (mplay->info->songHeader != song->header)
-        MPlayStart(mplay->info, song->header);
+        MPlayStart(mplay->info, song->header, song->volume, song->speed);
     else if ((mplay->info->status & MUSICPLAYER_STATUS_TRACK) == 0)
-        MPlayStart(mplay->info, song->header);
+        MPlayStart(mplay->info, song->header, song->volume, song->speed);
     else if (mplay->info->status & MUSICPLAYER_STATUS_PAUSE)
         MPlayContinue(mplay->info);
 }
@@ -245,8 +250,12 @@ void m4aMPlayImmInit(struct MusicPlayerInfo *mplayInfo)
                 track->flags = MPT_FLG_EXIST;
                 track->bendRange = 2;
                 track->volX = 64;
+                track->vol2 = 127;
                 track->lfoSpeed = 22;
                 track->tone.type = 1;
+                track->portaFlag = 0;
+                track->portaTime = 0;
+                track->portaPrevKey = 60;
             }
         }
 
@@ -589,7 +598,7 @@ void MPlayOpen(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *track
     mplayInfo->ident = ID_NUMBER;
 }
 
-void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader)
+void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader, u8 volume, u16 speed)
 {
     s32 i;
     u8 unk_B;
@@ -612,6 +621,8 @@ void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader
         mplayInfo->tone = songHeader->tone;
         mplayInfo->priority = songHeader->priority;
         mplayInfo->clock = 0;
+        mplayInfo->songSpeed = speed;
+        mplayInfo->songVol = volume;
         mplayInfo->tempoD = 150;
         mplayInfo->tempoI = 150;
         mplayInfo->tempoU = 0x100;
@@ -745,20 +756,28 @@ void FadeOutBody(struct MusicPlayerInfo *mplayInfo)
 
 void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *track)
 {
+    s32 modPitch = track->modM;
+    s32 mod8 = modPitch;
+    if (mod8 < -128)
+        mod8 = -128;
+    else if (mod8 > 127)
+        mod8 = 127;
+
     if (track->flags & MPT_FLG_VOLSET)
     {
         s32 x;
         s32 y;
 
-        x = (u32)(track->vol * track->volX) >> 5;
+        x = (u32)((track->vol * track->vol2 + 63) / 127);
+        x = (u32)(x * track->volX) >> 5;
 
         if (track->modT == 1)
-            x = (u32)(x * (track->modM + 128)) >> 7;
+            x = (u32)(x * (mod8 + 128)) >> 7;
 
         y = 2 * track->pan + track->panX;
 
         if (track->modT == 2)
-            y += track->modM;
+            y += mod8;
 
         if (y < -128)
             y = -128;
@@ -772,14 +791,14 @@ void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *tr
     if (track->flags & MPT_FLG_PITSET)
     {
         s32 bend = track->bend * track->bendRange;
-        s32 x = (track->tune + bend)
-              * 4
-              + (track->keyShift << 8)
-              + (track->keyShiftX << 8)
+        s32 x = ((s32)track->tune << 2)
+              + (bend << 1)
+              + ((s32)track->keyShift << 8)
+              + ((s32)track->keyShiftX << 8)
               + track->pitX;
 
         if (track->modT == 0)
-            x += 16 * track->modM;
+            x += 16 * modPitch;
 
         track->keyM = x >> 8;
         track->pitM = x;
@@ -831,7 +850,7 @@ u32 MidiKeyToCgbFreq(u8 chanNum, u8 key, u8 fineAdjust)
         val2 = gCgbScaleTable[key + 1];
         val2 = gCgbFreqTable[val2 & 0xF] >> (val2 >> 4);
 
-        return val1 + ((fineAdjust * (val2 - val1)) >> 8) + 2048;
+        return val1 + ((fineAdjust * (val2 - val1)) >> 8);
     }
 }
 
@@ -1218,7 +1237,7 @@ void m4aMPlayTempoControl(struct MusicPlayerInfo *mplayInfo, u16 tempo)
     {
         mplayInfo->ident++;
         mplayInfo->tempoU = tempo;
-        mplayInfo->tempoI = (mplayInfo->tempoD * mplayInfo->tempoU) >> 8;
+        mplayInfo->tempoI = (mplayInfo->tempoD * mplayInfo->tempoU * mplayInfo->songSpeed) >> 18;
         mplayInfo->ident = ID_NUMBER;
     }
 }
@@ -1674,7 +1693,7 @@ start_song:
 
     mplayInfo->ident = ID_NUMBER;
 
-    MPlayStart(mplayInfo, (struct SongHeader *)(&gPokemonCrySongs[i]));
+    MPlayStart(mplayInfo, (struct SongHeader *)(&gPokemonCrySongs[i]), 64, 1024);
 
     return mplayInfo;
 }

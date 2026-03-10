@@ -125,7 +125,7 @@ LDFLAGS = -Map ../../$(MAP)
 
 SHA1 := $(shell { command -v sha1sum || command -v shasum; } 2>/dev/null) -c
 GFX := tools/gbagfx/gbagfx$(EXE)
-AIF := tools/aif2pcm/aif2pcm$(EXE)
+WAV2AGB := tools/wav2agb/wav2agb$(EXE)
 MID := tools/mid2agb/mid2agb$(EXE)
 SCANINC := tools/scaninc/scaninc$(EXE)
 PREPROC := tools/preproc/preproc$(EXE)
@@ -138,7 +138,7 @@ INIGEN := tools/inigen/inigen$(EXE)
 PERL := perl
 
 # Inclusive list. If you don't want a tool to be built, don't add it here.
-TOOLDIRS := tools/aif2pcm tools/bin2c tools/gbafix tools/gbagfx tools/inigen tools/jsonproc tools/mapjson tools/mid2agb tools/preproc tools/ramscrgen tools/rsfont tools/scaninc
+TOOLDIRS := tools/bin2c tools/gbafix tools/gbagfx tools/inigen tools/jsonproc tools/mapjson tools/mid2agb tools/preproc tools/ramscrgen tools/rsfont tools/scaninc tools/wav2agb
 TOOLBASE = $(TOOLDIRS:tools/%=%)
 TOOLS = $(foreach tool,$(TOOLBASE),tools/$(tool)/$(tool)$(EXE))
 
@@ -276,7 +276,7 @@ include songs.mk
 %.s: ;
 %.png: ;
 %.pal: ;
-%.aif: ;
+%.wav: ;
 
 %.1bpp: %.png  ; $(GFX) $< $@
 %.4bpp: %.png  ; $(GFX) $< $@
@@ -285,8 +285,8 @@ include songs.mk
 %.gbapal: %.png ; $(GFX) $< $@
 %.lz: % ; $(GFX) $< $@
 %.rl: % ; $(GFX) $< $@
-$(CRY_SUBDIR)/%.bin: $(CRY_SUBDIR)/%.aif ; $(AIF) $< $@ --compress
-sound/%.bin: sound/%.aif ; $(AIF) $< $@
+$(CRY_SUBDIR)/%.bin: $(CRY_SUBDIR)/%.wav ; $(WAV2AGB) -b -c -l 1 $< $@
+sound/%.bin: sound/%.wav ; $(WAV2AGB) -b $< $@
 
 
 ifeq ($(MODERN),0)

@@ -22,7 +22,7 @@ se_m_bubble_beam_1:
 	.byte		BENDR , 2
 	.byte		PAN   , c_v+0
 	.byte		VOL   , 24*se_m_bubble_beam_mvl/mxv
-	.byte		BEND  , c_v-17
+	.byte		BEND  , c_b-(17*2)
 	.byte		N78   , Bn4 , v080
 	.byte	W01
 	.byte		VOL   , 32*se_m_bubble_beam_mvl/mxv
