@@ -815,10 +815,10 @@ void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *tr
     if (track->flags & MPT_FLG_PITSET)
     {
         s32 bend = track->bend * track->bendRange;
-        s32 x = (track->tune + bend)
-              * 2
-              + (track->keyShift << 8)
-              + (track->keyShiftX << 8)
+        s32 x = ((s32)track->tune << 2)
+              + (bend << 1)
+              + ((s32)track->keyShift << 8)
+              + ((s32)track->keyShiftX << 8)
               + track->pitX;
 
         if (track->modT == 0)
