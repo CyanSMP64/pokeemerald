@@ -1055,33 +1055,49 @@ static void Cmd_if_not_in_bytes(void)
 
 static void Cmd_if_in_hwords(void)
 {
-    const u16 *ptr = (const u16 *)T1_READ_PTR(gAIScriptPtr + 1);
+    const u8 *ptr = T1_READ_PTR(gAIScriptPtr + 1);
+    s32 arrayCount = 0;
 
-    while (*ptr != 0xFFFF)
+    while (arrayCount++ <= 0x3ff)
     {
-        if (AI_THINKING_STRUCT->funcResult == *ptr)
+        u16 value = T1_READ_16(ptr);
+        if (value == 0xFFFF)
+        {
+            gAIScriptPtr += 9;
+            return;
+        }
+        if (AI_THINKING_STRUCT->funcResult == value)
         {
             gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 5);
             return;
         }
-        ptr++;
+        ptr += 2;
     }
+
     gAIScriptPtr += 9;
 }
 
 static void Cmd_if_not_in_hwords(void)
 {
-    const u16 *ptr = (const u16 *)T1_READ_PTR(gAIScriptPtr + 1);
+    const u8 *ptr = T1_READ_PTR(gAIScriptPtr + 1);
+    s32 arrayCount = 0;
 
-    while (*ptr != 0xFFFF)
+    while (arrayCount++ <= 0x3ff)
     {
-        if (AI_THINKING_STRUCT->funcResult == *ptr)
+        u16 value = T1_READ_16(ptr);
+        if (value == 0xFFFF)
+        {
+            gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 5);
+            return;
+        }
+        if (AI_THINKING_STRUCT->funcResult == value)
         {
             gAIScriptPtr += 9;
             return;
         }
-        ptr++;
+        ptr += 2;
     }
+
     gAIScriptPtr = T1_READ_PTR(gAIScriptPtr + 5);
 }
 
