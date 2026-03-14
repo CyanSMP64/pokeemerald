@@ -263,8 +263,9 @@
 #define EVO_ITEM_FEMALE      19 // specified item is used on a female Pokémon
 #define EVO_LEVEL_LOW_KEY    20 // Pokémon reaches the specified level, it has a Lonely, Bold, Relaxed, Timid, Serious, Modest, Mild, Quiet, Bashful, Calm, Gentle, or Careful nature.
 #define EVO_ITEM_CASCOON     21 // specified item is used on a Pokémon with a Cascoon personality value
-#define EVO_LEVEL_REG_ROCK   22 // pokemon reaches the specified level while holding Regional Rock
-#define EVO_ITEM_REG_ROCK    23 // specified item is used on pokemon while holding Regional Rock
+#define EVO_LEVEL_REG_ROCK   22 // pokemon reaches the specified level while holding Regional Mineral
+#define EVO_ITEM_REG_ROCK    23 // specified item is used on pokemon while holding Regional Mineral
+#define EVO_LEVEL_IN_CAVE    24 // pokemon reaches the specified level while in a map with the "underground" type
 
 #define EVOS_PER_MON 8
 

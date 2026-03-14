@@ -49,6 +49,7 @@
 #include "constants/songs.h"
 #include "constants/trainers.h"
 #include "constants/union_room.h"
+#include "constants/map_types.h"
 
 struct SpeciesItem
 {
@@ -8823,6 +8824,10 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem)
                 break;
             case EVO_LEVEL_REG_ROCK:
                 if (gEvolutionTable[species][i].param <= level && GetMonData(mon, MON_DATA_HELD_ITEM, NULL) == ITEM_REGIONAL_ROCK)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_IN_CAVE:
+                if (gEvolutionTable[species][i].param <= level && gMapHeader.mapType == MAP_TYPE_UNDERGROUND)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
             }
