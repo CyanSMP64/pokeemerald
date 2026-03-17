@@ -260,6 +260,7 @@ TrainerHill_Entrance_Pokemart_Basic:
 	.2byte ITEM_AWAKENING
 	.2byte ITEM_X_SPEED
 	.2byte ITEM_X_SPECIAL
+	.2byte ITEM_X_SP_DEF
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFEND
 	.2byte ITEM_DIRE_HIT
@@ -284,6 +285,7 @@ TrainerHill_Entrance_Pokemart_Expanded:
 	.2byte ITEM_REVIVE
 	.2byte ITEM_X_SPEED
 	.2byte ITEM_X_SPECIAL
+	.2byte ITEM_X_SP_DEF
 	.2byte ITEM_X_ATTACK
 	.2byte ITEM_X_DEFEND
 	.2byte ITEM_DIRE_HIT
