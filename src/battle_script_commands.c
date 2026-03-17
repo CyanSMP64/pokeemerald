@@ -4249,8 +4249,7 @@ static void Cmd_playanimation(void)
     gActiveBattler = GetBattlerForBattleScript(gBattlescriptCurrInstr[1]);
     argumentPtr = T2_READ_PTR(gBattlescriptCurrInstr + 3);
 
-    if (gBattlescriptCurrInstr[2] == B_ANIM_STATS_CHANGE
-     || gBattlescriptCurrInstr[2] == B_ANIM_SNATCH_MOVE
+    if (gBattlescriptCurrInstr[2] == B_ANIM_SNATCH_MOVE
      || gBattlescriptCurrInstr[2] == B_ANIM_SUBSTITUTE_FADE)
     {
         BtlController_EmitBattleAnimation(BUFFER_A, gBattlescriptCurrInstr[2], *argumentPtr);
@@ -4293,8 +4292,7 @@ static void Cmd_playanimation_var(void)
     animationIdPtr = T2_READ_PTR(gBattlescriptCurrInstr + 2);
     argumentPtr = T2_READ_PTR(gBattlescriptCurrInstr + 6);
 
-    if (*animationIdPtr == B_ANIM_STATS_CHANGE
-     || *animationIdPtr == B_ANIM_SNATCH_MOVE
+    if (*animationIdPtr == B_ANIM_SNATCH_MOVE
      || *animationIdPtr == B_ANIM_SUBSTITUTE_FADE)
     {
         BtlController_EmitBattleAnimation(BUFFER_A, *animationIdPtr, *argumentPtr);
@@ -4434,7 +4432,9 @@ static void Cmd_playstatchangeanimation(void)
     {
         gBattlescriptCurrInstr += 4;
     }
-    else if (changeableStatsCount != 0 && !gBattleScripting.statAnimPlayed)
+    else if (changeableStatsCount != 0
+          && !gBattleScripting.statAnimPlayed
+          && !(gHitMarker & HITMARKER_NO_ANIMATIONS))
     {
         BtlController_EmitBattleAnimation(BUFFER_A, B_ANIM_STATS_CHANGE, statAnimId);
         MarkBattlerForControllerExec(gActiveBattler);
