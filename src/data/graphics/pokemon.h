@@ -5385,6 +5385,7 @@ const u8 gMonIcon_Zamazenta[] = INCBIN_U8("graphics/pokemon/zamazenta/icon.4bpp"
 const u8 gMonIcon_Eternatus[] = INCBIN_U8("graphics/pokemon/eternatus/icon.4bpp");
 const u8 gMonIcon_Kubfu[] = INCBIN_U8("graphics/pokemon/kubfu/icon.4bpp");
 const u8 gMonIcon_Urshifu[] = INCBIN_U8("graphics/pokemon/urshifu/icon.4bpp");
+const u8 gMonIcon_UrshifuRapidStrike[] = INCBIN_U8("graphics/pokemon/urshifu/rapid_strike_style/icon.4bpp");
 const u8 gMonIcon_Zarude[] = INCBIN_U8("graphics/pokemon/zarude/icon.4bpp");
 const u8 gMonIcon_Regieleki[] = INCBIN_U8("graphics/pokemon/regieleki/icon.4bpp");
 const u8 gMonIcon_Regidrago[] = INCBIN_U8("graphics/pokemon/regidrago/icon.4bpp");

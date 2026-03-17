@@ -6273,6 +6273,7 @@ extern const u8 gMonIcon_Zamazenta[];
 extern const u8 gMonIcon_Eternatus[];
 extern const u8 gMonIcon_Kubfu[];
 extern const u8 gMonIcon_Urshifu[];
+extern const u8 gMonIcon_UrshifuRapidStrike[];
 extern const u8 gMonIcon_Zarude[];
 extern const u8 gMonIcon_Regieleki[];
 extern const u8 gMonIcon_Regidrago[];
