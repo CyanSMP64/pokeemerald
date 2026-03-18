@@ -14,10 +14,12 @@
 #include "trainer_hill.h"
 #include "util.h"
 #include "battle_pyramid.h"
+#include "sound.h"
 #include "constants/battle_setup.h"
 #include "constants/event_objects.h"
 #include "constants/event_object_movement.h"
 #include "constants/field_effects.h"
+#include "constants/songs.h"
 #include "constants/trainer_types.h"
 
 // this file's functions
@@ -465,6 +467,8 @@ static bool8 TrainerExclamationMark(u8 taskId, struct Task *task, struct ObjectE
     u8 direction;
 
     ObjectEventGetLocalIdAndMap(trainerObj, &gFieldEffectArguments[0], &gFieldEffectArguments[1], &gFieldEffectArguments[2]);
+    if (!gSaveBlock2Ptr->optionsBGM)
+        PlaySE(SE_PIN);
     FieldEffectStart(FLDEFF_EXCLAMATION_MARK_ICON);
     direction = GetFaceDirectionMovementAction(trainerObj->facingDirection);
     ObjectEventSetHeldMovement(trainerObj, direction);
