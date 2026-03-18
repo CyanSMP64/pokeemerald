@@ -20,7 +20,7 @@ MossdeepCity_OnTransition:
 	end
 
 MossdeepCity_EventScript_CheckPkmnCount::
-	specialvar VAR_RESULT, CalculatePlayerPartyCount
+	specialvar VAR_RESULT, CountPartyNonEggMons
 	goto_if_gt VAR_RESULT, 1, MossdeepCity_EventScript_HideGymGuide
 	clearflag FLAG_HIDE_MOSSDEEP_CITY_GYM_GUIDE
 	return
@@ -31,7 +31,7 @@ MossdeepCity_EventScript_HideGymGuide::
 
 MossdeepCity_EventScript_CheckPkmnCount2::
 	setvar VAR_TEMP_0, 1
-	specialvar VAR_RESULT, CalculatePlayerPartyCount
+	specialvar VAR_RESULT, CountPartyNonEggMons
 	goto_if_gt VAR_RESULT, 1, MossdeepCity_EventScript_HideGymGuide2
 	clearflag FLAG_HIDE_MOSSDEEP_CITY_GYM_GUIDE
 	end
@@ -41,8 +41,21 @@ MossdeepCity_EventScript_HideGymGuide2::
 	end
 
 MossdeepCity_EventScript_PokefanF::
-	msgbox MossdeepCity_Text_SpaceCenterReceivedLetter, MSGBOX_NPC
+	lock
+	faceplayer
+	specialvar VAR_RESULT, CountPartyNonEggMons
+	goto_if_gt VAR_RESULT, 1, MossdeepCity_EventScript_HideGymGuide3
+	msgbox MossdeepCity_Text_SpaceCenterReceivedLetter, MSGBOX_DEFAULT
+	release
 	end
+MossdeepCity_EventScript_HideGymGuide3::
+	playfanfare SE_UTVANISH
+	removeobject LOCALID_GYM_GUIDE
+	waitfanfare
+	setflag FLAG_HIDE_MOSSDEEP_CITY_GYM_GUIDE
+	release
+	end
+
 
 MossdeepCity_EventScript_Sailor::
 	lock
