@@ -126,19 +126,19 @@ se_m_sweet_scent_2:
 	.byte		BEND  , c_b-(2*2)
 	.byte	W04
 	.byte	W10
-	.byte		        c_v-1
+	.byte		        c_b-(1*2)
 	.byte	W10
-	.byte		        c_v+0
+	.byte		BEND  , c_b+(0*2)
 	.byte	W04
 	.byte	W03
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W10
-	.byte		        c_v+1
+	.byte		BEND  , c_b+(1*2)
 	.byte	W11
 	.byte	W02
-	.byte		        c_v+2
+	.byte		BEND  , c_b+(2*2)
 	.byte	W14
-	.byte		        c_v+3
+	.byte		BEND  , c_b+(3*2)
 	.byte	W08
 	.byte		VOL   , 105*se_m_sweet_scent_mvl/mxv
 	.byte	W03
