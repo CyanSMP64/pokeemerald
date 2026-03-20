@@ -49,8 +49,6 @@ struct StaticPokemon {
 
 static csh sCapstone;
 
-static Elf32_Shdr * sh_text;
-
 /*
  * ---------------------------------------------------------
  * Data
@@ -193,21 +191,23 @@ const struct TMText gMoveTutorTexts[] = {
 
 static int IsLoadingStarterItems(const struct cs_insn * insn)
 {
-    // The StarterItems offset is located 0x22 bytes into CB2_GiveStarter function
-    // This corresponds to the mov r2, #0 instruction before the bl ScriptGiveMon call
-    static int found = 0;
-    
-    if (!found)
+    static int to_return;
+    Elf32_Sym *sym = GetSymbolByName("ScriptGiveMon");
+    cs_arm_op * ops = insn->detail->arm.operands;
+    // mov r2, #0
+    if (insn->id == ARM_INS_MOV
+     && ops[0].type == ARM_OP_REG
+     && ops[0].reg == ARM_REG_R2
+     && ops[1].type == ARM_OP_IMM
+     && ops[1].imm == 0)
+        to_return = insn->address;
+    // bl ScriptGiveMon
+    else if (insn->id == ARM_INS_BL)
     {
-        Elf32_Sym *sym = GetSymbolByName("CB2_GiveStarter");
-        if (sym)
-        {
-            found = 1;
-            // Return the address of "mov r2, #0" which is at offset 0x22 from function start
-            return (sym->st_value & ~1) + 0x22;
-        }
+        uint32_t target = ops[0].imm;
+        if (target == (sym->st_value & ~1))
+            return to_return;
     }
-    
     return -1;
 }
 
@@ -332,21 +332,6 @@ static int IsIntroLotadForPic(const struct cs_insn * insn)
     if (retval >= 0)
         return retval;
     return IsIntroLotadForPic_2(insn);
-}
-
-static int IsRunIndoorsTweakOffset(const struct cs_insn * insn)
-{
-    cs_arm_op * ops = insn->detail->arm.operands;
-    if (insn->id == ARM_INS_AND
-        && ops[0].type == ARM_OP_REG
-        && ops[1].type == ARM_OP_REG
-        && (insn - 1)->id == ARM_INS_MOV
-        && (insn - 1)->detail->arm.operands[0].type == ARM_OP_REG
-        && (insn - 1)->detail->arm.operands[1].type == ARM_OP_IMM
-        && (insn - 1)->detail->arm.operands[0].reg == ops[0].reg
-        && (insn - 1)->detail->arm.operands[1].imm == 4)
-        return insn->address;
-    return -1;
 }
 
 static int IsWallyZigzagoon_1(const struct cs_insn * insn)
@@ -475,7 +460,8 @@ static int get_instr_addr(FILE * elfFile, const char * symname, int (*callback)(
 {
     int retval = -1;
     Elf32_Sym * sym = GetSymbolByName(symname);
-    fseek(elfFile, (sym->st_value & ~1) - sh_text->sh_addr + sh_text->sh_offset, SEEK_SET);
+    Elf32_Shdr * section = GetSectionHeader(sym->st_shndx);
+    fseek(elfFile, (sym->st_value & ~1) - section->sh_addr + section->sh_offset, SEEK_SET);
     unsigned char * data = malloc(sym->st_size);
     if (fread(data, 1, sym->st_size, elfFile) != sym->st_size)
         FATAL_ERROR("fread");
@@ -550,7 +536,6 @@ int main(int argc, char ** argv)
     // Initialize Capstone
     cs_open(CS_ARCH_ARM, CS_MODE_THUMB, &sCapstone);
     cs_option(sCapstone, CS_OPT_DETAIL, CS_OPT_ON);
-    sh_text = GetSectionHeaderByName(".text");
 
     // Start writing the INI
     print("[%s]\n", romName);
@@ -629,7 +614,6 @@ int main(int argc, char ** argv)
     Elf32_Sym * Em_gIngameTrades = GetSymbolByName("sIngameTrades");
     print("TradeTableSize=%d\n", Em_gIngameTrades->st_size / 60); // hardcoded for now
     print("TradesUnused=[]\n"); // so randomizer doesn't complain
-    config_set("RunIndoorsTweakOffset", get_instr_addr(elfFile, "IsRunningDisallowed", IsRunIndoorsTweakOffset) & 0x1FFFFFF);
     print("InstantTextTweak=instant_text/em_instant_text\n"); // so randomizer doesn't complain
     config_set("CatchingTutorialOpponentMonOffset", get_instr_addr(elfFile, "StartWallyTutorialBattle", IsWallyRalts) & 0x1FFFFFF);
     config_set("CatchingTutorialPlayerMonOffset", get_instr_addr(elfFile, "LoadWallyZigzagoon", IsWallyZigzagoon) & 0x1FFFFFF);
