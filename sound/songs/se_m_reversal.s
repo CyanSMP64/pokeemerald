@@ -231,7 +231,7 @@ se_m_reversal_2:
 	.byte		        c_b-(33*2)
 	.byte	W02
 	.byte	W01
-	.byte		        c_v+31
+	.byte		BEND  , c_b+(31*2)
 	.byte		N03   , Cs5
 	.byte	W01
 	.byte		BEND  , c_b+(0*2)
@@ -267,7 +267,7 @@ se_m_reversal_2:
 	.byte		        c_b-(33*2)
 	.byte	W02
 	.byte	W01
-	.byte		        c_v+31
+	.byte		BEND  , c_b+(31*2)
 	.byte		N03   , Fs5
 	.byte	W01
 	.byte		BEND  , c_b+(0*2)
@@ -303,7 +303,7 @@ se_m_reversal_2:
 	.byte		        c_b-(33*2)
 	.byte	W02
 	.byte	W01
-	.byte		        c_v+31
+	.byte		BEND  , c_b+(31*2)
 	.byte		N03   , Bn5
 	.byte	W01
 	.byte		BEND  , c_b+(0*2)

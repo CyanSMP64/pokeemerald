@@ -2,6 +2,7 @@
 
 	.include "asm/macros/m4a.inc"
 	.include "asm/macros/music_voice.inc"
+	.include "sound/adsr_ds_conversion.h"
 
 	.include "sound/voice_groups.inc"
 	.include "sound/keysplit_tables.inc"
