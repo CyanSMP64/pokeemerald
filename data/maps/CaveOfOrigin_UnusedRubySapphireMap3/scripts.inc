@@ -11,13 +11,13 @@ CaveOfOrigin_UnusedRubySapphireMap3_EventScript_StartEndScreen::
 	lockall
 	setvar VAR_TEMP_0, 1
 	playbgm MUS_SMWEND, FALSE
-	delay 34
+	delay 33
 	call CaveOfOrigin_UnusedRubySapphireMap3_EventScript_TheEndOn
 	special DrawWholeMapView
-	delay 120
+	delay 115
 	call CaveOfOrigin_UnusedRubySapphireMap3_EventScript_ForRealOn
 	special DrawWholeMapView
-	delay 103
+	delay 98
 	call CaveOfOrigin_UnusedRubySapphireMap3_EventScript_CongratsOn
 	special DrawWholeMapView
 	end
