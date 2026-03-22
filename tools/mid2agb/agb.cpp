@@ -60,15 +60,19 @@ static int s_lastVoiceValue;
 
 void PrintWait(int wait);
 void PrintByte(const char *format, ...);
+void PrintOp(int wait, std::string name, const char *format, ...);
 
 static void EmitPortIfChanged(int wait, int value)
 {
     if (value != s_lastPortValue)
     {
-        PrintByte("PORT  , %u", value);
+        PrintOp(wait, "PORT  ", "%u", value);
         s_lastPortValue = value;
     }
-    PrintWait(wait);
+    else
+    {
+        PrintWait(wait);
+    }
 }
 
 static void InvalidateDedupeState()
