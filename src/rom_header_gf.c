@@ -19,6 +19,7 @@
 #include "starter_choose.h"
 #include "party_menu.h"
 #include "battle_scripts.h"
+#include "constants/items.h"
 
 // The purpose of this struct is for outside applications to be
 // able to access parts of the ROM or its save file, like a public API.
@@ -338,6 +339,8 @@ struct GFRomHeader
     u16 sizeofTrainerMonWithCustomMoves;                                                        // 0x4b2
     u16 sizeofTrainerItem;                                                                      // 0x4b4
     u16 sizeofTrainerMonCustomMove;                                                             // 0x4b6
+    // misc data
+    u16 itemCount;                                                                              // 0x4b8
 };
 
 // This seems to need to be in the text section for some reason.
@@ -652,4 +655,6 @@ static const struct GFRomHeader sGFRomHeader = {
     .sizeofTrainerMonWithCustomMoves =                      sizeof(struct TrainerMonItemCustomMoves),
     .sizeofTrainerItem =                                    sizeof(gTrainerMonItemCustomMoves->heldItem),
     .sizeofTrainerMonCustomMove =                           sizeof(gTrainerMonItemCustomMoves->moves[0]),
+    // misc data
+    .itemCount =                                            ITEMS_COUNT,
 };
