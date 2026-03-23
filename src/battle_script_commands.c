@@ -3600,7 +3600,7 @@ static void Cmd_getexp(void)
                     if (holdEffect == HOLD_EFFECT_LUCKY_EGG)
                         gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
                     if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
-                        gBattleMoveDamage = (gBattleMoveDamage * (FlagGet(FLAG_MODERN_EXP_SCALE) ? 5 : 6)) / 4;
+                        gBattleMoveDamage = (gBattleMoveDamage * (FlagGet(FLAG_MODERN_EXP_SCALE) ? 4 : 6)) / 4;
 
                     if (IsTradedMon(&gPlayerParty[gBattleStruct->expGetterMonId]))
                     {
