@@ -9626,7 +9626,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_MARSHADOW] =
     {
-        .categoryName = _("Gloomdwellr"),
+        .categoryName = _("Gloomdweller"),
         .height = 7,
         .weight = 222,
         .description = gMarshadowPokedexText,

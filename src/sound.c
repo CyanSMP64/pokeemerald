@@ -477,37 +477,39 @@ void PlayCryInternal(u16 species, s8 pan, s8 volume, u8 priority, u8 mode)
 
     #define GET_CRY(speciesIndex, tableId, reversed) \
         ((reversed) ? &gCryTable_Reverse[(128 * (tableId)) + (speciesIndex)] : &gCryTable[(128 * (tableId)) + (speciesIndex)])
+    
+    gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, table, reverse));
 
-    switch (table)
-    {
-    case 0:
-        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 0, reverse));
-        break;
-    case 1:
-        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 1, reverse));
-        break;
-    case 2:
-        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 2, reverse));
-        break;
-    case 3:
-        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 3, reverse));
-        break;
-    case 4:
-        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 4, reverse));
-        break;
-    case 5:
-        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 5, reverse));
-        break;
-    case 6:
-        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 6, reverse));
-        break;
-    case 7:
-        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 7, reverse));
-        break;
-    case 8:
-        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 8, reverse));
-        break;
-    }
+//    switch (table)
+//    {
+//    case 0:
+//        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 0, reverse));
+//        break;
+//    case 1:
+//        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 1, reverse));
+//        break;
+//    case 2:
+//        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 2, reverse));
+//        break;
+//    case 3:
+//        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 3, reverse));
+//        break;
+//    case 4:
+//        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 4, reverse));
+//        break;
+//    case 5:
+//        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 5, reverse));
+//        break;
+//    case 6:
+//        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 6, reverse));
+//        break;
+//    case 7:
+//        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 7, reverse));
+//        break;
+//    case 8:
+//        gMPlay_PokemonCry = SetPokemonCryTone(GET_CRY(index, 8, reverse));
+//        break;
+//    }
 
     #undef GET_CRY
 }

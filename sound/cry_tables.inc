@@ -1142,25 +1142,25 @@ gCryTable::
 	cry Cry_ZygardeMega
 	cry Cry_DrampaMega
 	cry Cry_FalinksMega
-@	cry Cry_RaichuMegaX
-@	cry Cry_RaichuMegaY
-@	cry Cry_ChimechoMega
-@	cry Cry_AbsolMegaZ
-@	cry Cry_StaraptorMega
-@	cry Cry_GarchompMegaZ
-@	cry Cry_LucarioMegaZ
-@	cry Cry_HeatranMega
-@	cry Cry_DarkraiMega
-@	cry Cry_GolurkMega
-@	cry Cry_MeowsticMega
-@	cry Cry_CrabominableMega
-@	cry Cry_GolisopodMega
-@	cry Cry_MagearnaMega
-@	cry Cry_ZeraoraMega
-@	cry Cry_ScovillainMega
-@	cry Cry_GlimmoraMega
-@	cry Cry_TatsugiriMega
-@	cry Cry_BaxcaliburMega
+	cry Cry_RaichuMegaX
+	cry Cry_RaichuMegaY
+	cry Cry_ChimechoMega
+	cry Cry_AbsolMegaZ
+	cry Cry_StaraptorMega
+	cry Cry_GarchompMegaZ
+	cry Cry_LucarioMegaZ
+	cry Cry_HeatranMega
+	cry Cry_DarkraiMega
+	cry Cry_GolurkMega
+	cry Cry_MeowsticMega
+	cry Cry_CrabominableMega
+	cry Cry_GolisopodMega
+	cry Cry_MagearnaMega
+	cry Cry_ZeraoraMega
+	cry Cry_ScovillainMega
+	cry Cry_GlimmoraMega
+	cry Cry_TatsugiriMega
+	cry Cry_BaxcaliburMega
 
 	.align 2
 gCryTable_Reverse::
@@ -2306,22 +2306,22 @@ gCryTable_Reverse::
 	cry_reverse Cry_ZygardeMega
 	cry_reverse Cry_DrampaMega
 	cry_reverse Cry_FalinksMega
-@	cry_reverse Cry_RaichuMegaX
-@	cry_reverse Cry_RaichuMegaY
-@	cry_reverse Cry_ChimechoMega
-@	cry_reverse Cry_AbsolMegaZ
-@	cry_reverse Cry_StaraptorMega
-@	cry_reverse Cry_GarchompMegaZ
-@	cry_reverse Cry_LucarioMegaZ
-@	cry_reverse Cry_HeatranMega
-@	cry_reverse Cry_DarkraiMega
-@	cry_reverse Cry_GolurkMega
-@	cry_reverse Cry_MeowsticMega
-@	cry_reverse Cry_CrabominableMega
-@	cry_reverse Cry_GolisopodMega
-@	cry_reverse Cry_MagearnaMega
-@	cry_reverse Cry_ZeraoraMega
-@	cry_reverse Cry_ScovillainMega
-@	cry_reverse Cry_GlimmoraMega
-@	cry_reverse Cry_TatsugiriMega
-@	cry_reverse Cry_BaxcaliburMega
+	cry_reverse Cry_RaichuMegaX
+	cry_reverse Cry_RaichuMegaY
+	cry_reverse Cry_ChimechoMega
+	cry_reverse Cry_AbsolMegaZ
+	cry_reverse Cry_StaraptorMega
+	cry_reverse Cry_GarchompMegaZ
+	cry_reverse Cry_LucarioMegaZ
+	cry_reverse Cry_HeatranMega
+	cry_reverse Cry_DarkraiMega
+	cry_reverse Cry_GolurkMega
+	cry_reverse Cry_MeowsticMega
+	cry_reverse Cry_CrabominableMega
+	cry_reverse Cry_GolisopodMega
+	cry_reverse Cry_MagearnaMega
+	cry_reverse Cry_ZeraoraMega
+	cry_reverse Cry_ScovillainMega
+	cry_reverse Cry_GlimmoraMega
+	cry_reverse Cry_TatsugiriMega
+	cry_reverse Cry_BaxcaliburMega
