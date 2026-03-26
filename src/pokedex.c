@@ -844,7 +844,7 @@ static const struct WindowTemplate sPokemonList_WindowTemplate[] =
     DUMMY_WIN_TEMPLATE
 };
 
-static const u8 sText_No000[] = _("{NO}0000");
+static const u8 sText_No000[] = _("0000");
 static const u8 sCaughtBall_Gfx[] = INCBIN_U8("graphics/pokedex/caught_ball.4bpp");
 static const u8 sText_TenDashes[] = _("----------");
 
@@ -2357,13 +2357,13 @@ static void CreateMonListEntry(u8 position, u16 b, u16 ignored)
                 {
                     CreateMonDexNum(entryNum, 0x12, i * 2, ignored);
                     CreateCaughtBall(sPokedexView->pokedexList[entryNum].owned, 0x11, i * 2, ignored);
-                    CreateMonName(sPokedexView->pokedexList[entryNum].dexNum, 0x16, i * 2);
+                    CreateMonName(sPokedexView->pokedexList[entryNum].dexNum, 0x15, i * 2);
                 }
                 else
                 {
                     CreateMonDexNum(entryNum, 0x12, i * 2, ignored);
                     CreateCaughtBall(FALSE, 0x11, i * 2, ignored);
-                    CreateMonName(0, 0x16, i * 2);
+                    CreateMonName(0, 0x15, i * 2);
                 }
             }
             entryNum++;
@@ -2382,13 +2382,13 @@ static void CreateMonListEntry(u8 position, u16 b, u16 ignored)
             {
                 CreateMonDexNum(entryNum, 18, sPokedexView->listVOffset * 2, ignored);
                 CreateCaughtBall(sPokedexView->pokedexList[entryNum].owned, 0x11, sPokedexView->listVOffset * 2, ignored);
-                CreateMonName(sPokedexView->pokedexList[entryNum].dexNum, 0x16, sPokedexView->listVOffset * 2);
+                CreateMonName(sPokedexView->pokedexList[entryNum].dexNum, 0x15, sPokedexView->listVOffset * 2);
             }
             else
             {
                 CreateMonDexNum(entryNum, 18, sPokedexView->listVOffset * 2, ignored);
                 CreateCaughtBall(FALSE, 17, sPokedexView->listVOffset * 2, ignored);
-                CreateMonName(0, 0x16, sPokedexView->listVOffset * 2);
+                CreateMonName(0, 0x15, sPokedexView->listVOffset * 2);
             }
         }
         break;
@@ -2406,13 +2406,13 @@ static void CreateMonListEntry(u8 position, u16 b, u16 ignored)
             {
                 CreateMonDexNum(entryNum, 18, vOffset * 2, ignored);
                 CreateCaughtBall(sPokedexView->pokedexList[entryNum].owned, 0x11, vOffset * 2, ignored);
-                CreateMonName(sPokedexView->pokedexList[entryNum].dexNum, 0x16, vOffset * 2);
+                CreateMonName(sPokedexView->pokedexList[entryNum].dexNum, 0x15, vOffset * 2);
             }
             else
             {
                 CreateMonDexNum(entryNum, 18, vOffset * 2, ignored);
                 CreateCaughtBall(FALSE, 0x11, vOffset * 2, ignored);
-                CreateMonName(0, 0x16, vOffset * 2);
+                CreateMonName(0, 0x15, vOffset * 2);
             }
         }
         break;
@@ -2422,17 +2422,17 @@ static void CreateMonListEntry(u8 position, u16 b, u16 ignored)
 
 static void CreateMonDexNum(u16 entryNum, u8 left, u8 top, u16 unused)
 {
-    u8 text[7];
+    u8 text[5];
     u16 dexNum;
 
     memcpy(text, sText_No000, ARRAY_COUNT(text));
     dexNum = sPokedexView->pokedexList[entryNum].dexNum;
     if (sPokedexView->dexMode == DEX_MODE_HOENN)
         dexNum = NationalToHoennOrder(dexNum);
-    text[2] = CHAR_0 + dexNum / 1000;
-    text[3] = CHAR_0 + (dexNum % 1000) / 100;
-    text[4] = CHAR_0 + (dexNum % 100) / 10;
-    text[5] = CHAR_0 + (dexNum % 10);
+    text[0] = CHAR_0 + dexNum / 1000;
+    text[1] = CHAR_0 + (dexNum % 1000) / 100;
+    text[2] = CHAR_0 + (dexNum % 100) / 10;
+    text[3] = CHAR_0 + (dexNum % 10);
     PrintMonDexNumAndName(0, FONT_NARROW, text, left, top);
 }
 
