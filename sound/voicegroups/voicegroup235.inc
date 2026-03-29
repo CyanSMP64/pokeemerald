@@ -31,7 +31,7 @@ voicegroup235::
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 64, DirectSoundWaveData_dp_zg_wet_crossfade_snare2, 255, 255, 191, 178		@ 127/  0/110/120/ 64
-	voice_directsound 48, 64, DirectSoundWaveData_dp_sd90_reverse_cymbal, 2, 0, 227, 178				@   3/127/120/120/ 64
+	voice_directsound 60, 64, DirectSoundWaveData_dp_sd90_reverse_cymbal, 2, 0, 227, 178				@   3/127/120/120/ 64
 	voice_directsound 60, 64, DirectSoundWaveData_dp_zg_wet_tight_thunder, 255, 0, 227, 178				@ 127/127/120/120/ 64
 	voice_directsound 61, 64, DirectSoundWaveData_dp_zg_wet_tight_thunder, 255, 0, 227, 178				@ 127/127/120/120/ 64
 	voice_directsound 60, 64, DirectSoundWaveData_dp_sd90_tr808_snare, 255, 219, 0, 178					@ 127/116/  0/120/ 64

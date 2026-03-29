@@ -1,6 +1,6 @@
 	.align 2
 voicegroup195::
-	voice_directsound 60, 0, DirectSoundWaveData_dp_sd90_strings2_36, 255, 242, 227, 208	@ 127/100/120/116/ 64
-	voice_directsound 60, 0, DirectSoundWaveData_dp_sd90_strings2_48, 255, 239, 191, 208	@ 127/105/110/116/ 64
-	voice_directsound 60, 0, DirectSoundWaveData_dp_sd90_strings2_60, 255, 233, 159, 208	@ 122/110/100/116/ 64
-	voice_directsound 60, 0, DirectSoundWaveData_dp_sd90_strings2_72, 255, 222, 127, 208	@ 122/115/ 90/116/ 64
+	voice_directsound 36, 0, DirectSoundWaveData_dp_sd90_strings2_36, A(127), D(100), R(120), R(116)
+	voice_directsound 48, 0, DirectSoundWaveData_dp_sd90_strings2_48, A(127), D(105), R(110), R(116)
+	voice_directsound 60, 0, DirectSoundWaveData_dp_sd90_strings2_60, A(122), D(110), R(100), R(116)
+	voice_directsound 72, 0, DirectSoundWaveData_dp_sd90_strings2_72, A(122), D(115), R(90), R(116)

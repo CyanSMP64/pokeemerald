@@ -27,7 +27,7 @@ voicegroup214::
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 48, 64, DirectSoundWaveData_dp_sd90_reverse_cymbal, 2, 0, 255, 16				@   3/127/127/126/ 64
+	voice_directsound 60, 64, DirectSoundWaveData_dp_sd90_reverse_cymbal, 2, 0, 255, 16				@   3/127/127/126/ 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
