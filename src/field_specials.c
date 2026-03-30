@@ -4369,3 +4369,138 @@ bool16 TryChangeDeoxysForm(void)
     gSpecialVar_Result = TRUE;
     gSpecialVar_0x8007 = targetSpecies;
 }
+
+bool8 IsChosenMonRotom(void)
+{
+    u16 chosenSpecies = GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPECIES, NULL);
+
+    gSpecialVar_Result = FALSE;
+    if (chosenSpecies == SPECIES_ROTOM
+     || chosenSpecies == SPECIES_ROTOM_HEAT
+     || chosenSpecies == SPECIES_ROTOM_WASH
+     || chosenSpecies == SPECIES_ROTOM_FROST
+     || chosenSpecies == SPECIES_ROTOM_FAN
+     || chosenSpecies == SPECIES_ROTOM_MOW)
+    {
+        gSpecialVar_Result = TRUE;
+    }
+    return FALSE;
+}
+
+// Rotom form change specials
+// Vars used:
+// gSpecialVar_0x8004: set to the party slot of the chosen Rotom, or the first Rotom found if there's only one
+// gSpecialVar_0x8005: set to the form to change Rotom to (e.g. SPECIES_ROTOM_WASH)
+// gSpecialVar_0x8006: special move learned by Rotom after form change (set by GetRotomNewSpecialMove)
+// gSpecialVar_0x8007: Rotom's initial form
+// gSpecialVar_0x8008: Rotom's initial special move (set by RotomForgetSpecialMove)
+
+// Takes a Rotom form as input and returns its special move
+u16 RotomFormToMove (u16 species)
+{
+    u16 move;
+
+    switch (species)
+    {
+        case SPECIES_ROTOM_HEAT:
+            move = MOVE_OVERHEAT;
+            break;
+        case SPECIES_ROTOM_WASH:
+            move = MOVE_HYDRO_PUMP;
+            break;
+        case SPECIES_ROTOM_FROST:
+            move = MOVE_BLIZZARD;
+            break;
+        case SPECIES_ROTOM_FAN:
+            move = MOVE_AIR_SLASH;
+            break;
+        case SPECIES_ROTOM_MOW:
+            move = MOVE_LEAF_STORM;
+            break;
+    //    case SPECIES_ROTOM:
+    //        move = MOVE_THUNDER_SHOCK;
+    //        break;
+    }
+    return move;
+}
+
+// Stores the special move of the Rotom form in gSpecialVar_0x8005 in gSpecialVar_0x8006
+void GetRotomNewSpecialMove (void)
+{
+    gSpecialVar_0x8006 = RotomFormToMove(gSpecialVar_0x8005);
+}
+
+// Gets Rotom's current form and the matching move, stores them in gSpecialVar_0x8007 and gSpecialVar_0x8008
+void GetRotomState (void)
+{
+    gSpecialVar_0x8007 = GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPECIES, NULL);
+    gSpecialVar_0x8008 = RotomFormToMove(gSpecialVar_0x8007);
+}
+
+// If Rotom is an appliance form, delete its special move
+// Rotom's initial form must be loaded into gSpecialVar_0x8007 before use.
+// Returns TRUE if the move was forgotten, false if not
+bool8 RotomForgetSpecialMove (void)
+{
+    u8 i;
+    bool8 forgotSpecialMove = FALSE;
+    u16 currentMove;
+    u16 moveNone = MOVE_NONE;
+    u8 moveCount = 0;
+
+    currentMove = RotomFormToMove(gSpecialVar_0x8007);
+
+    for (i = 0; i < MAX_MON_MOVES; i++)
+    {
+        if (GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_MOVE1 + i, NULL) == currentMove)
+        {
+            RemoveMonPPBonus (&gPlayerParty[gSpecialVar_0x8004], i);
+            SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_MOVE1 + i, &moveNone);
+            forgotSpecialMove = TRUE;
+            break;
+        }
+    }
+
+    if (forgotSpecialMove == TRUE)
+    {
+        for (i = 0; i < MAX_MON_MOVES; i++)
+        {
+            if (GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_MOVE1 + i, NULL) != MOVE_NONE)
+                moveCount++;
+        }
+
+        if (gSpecialVar_0x8005 == SPECIES_ROTOM && moveCount == 0)
+            GiveMoveToMon(&gPlayerParty[gSpecialVar_0x8004], MOVE_THUNDER_SHOCK);
+    }
+
+    return forgotSpecialMove;
+}
+
+// Changes the chosen party mon's species to the one stored in gSpecialVar_0x8005
+void ChangeMonSpecies (void)
+{
+    u16 newSpecies;
+    
+    newSpecies = gSpecialVar_0x8005;
+
+    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPECIES, &newSpecies);
+    CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
+}
+
+// Teaches Rotom's forms their special moves
+// Rotom MUST have an empty moveslot first
+// Move to teach must be stored in gSpecialVar_0x8006
+void TeachRotomMove (void)
+{
+    GiveMoveToMon(&gPlayerParty[gSpecialVar_0x8004], gSpecialVar_0x8006);
+}
+
+// Checks if Rotom knows its special move
+bool8 DoesRotomKnowSpecialMove (void)
+{
+    u16 initialMove, initialSpecies;
+
+    initialSpecies = gSpecialVar_0x8007;
+    initialMove = RotomFormToMove(initialSpecies);
+    return MonKnowsMove(&gPlayerParty[gSpecialVar_0x8004], initialMove);
+}

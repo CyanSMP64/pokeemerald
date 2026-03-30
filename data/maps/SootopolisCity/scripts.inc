@@ -1761,6 +1761,7 @@ SootopolisCity_EventScript_ReleaseEnd::
 
 SootopolisCity_EventScript_DeoxysFormChangeSuccess::
 	playmoncry VAR_0x8007, CRY_MODE_NORMAL
+	special BufferMonNickname
 	call_if_eq VAR_0x8007, SPECIES_DEOXYS, SootopolisCity_EventScript_DeoxysFormChangeSuccessNormal
 	call_if_eq VAR_0x8007, SPECIES_DEOXYS_ATTACK, SootopolisCity_EventScript_DeoxysFormChangeSuccessAttack
 	call_if_eq VAR_0x8007, SPECIES_DEOXYS_DEFENSE, SootopolisCity_EventScript_DeoxysFormChangeSuccessDefense
@@ -1794,17 +1795,17 @@ SootopolisCity_Text_DeoxysReactingToMeteorite:
 	.string "your party closer to the meteorite?$"
 
 SootopolisCity_Text_DeoxysNormal:
-	.string "Deoxys has changed to have\n"
+	.string "{STR_VAR_1} has changed to have\n"
 	.string "balanced stats!$"
 
 SootopolisCity_Text_DeoxysAttack:
-	.string "Deoxys has changed to have\n"
+	.string "{STR_VAR_1} has changed to have\n"
 	.string "superior stats for attacking!$"
 
 SootopolisCity_Text_DeoxysDefense:
-	.string "Deoxys has changed to have\n"
+	.string "{STR_VAR_1} has changed to have\n"
 	.string "superior stats when defending!$"
 
 SootopolisCity_Text_DeoxysSpeed:
-	.string "Deoxys has changed to have\n"
+	.string "{STR_VAR_1} has changed to have\n"
 	.string "increased Speed!$"

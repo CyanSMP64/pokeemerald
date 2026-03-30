@@ -543,3 +543,10 @@ gSpecials::
 	def_special GetHmModeOption
 	def_special DoesPlayerPartyContainSpecies
 	def_special TryChangeDeoxysForm
+	def_special IsChosenMonRotom
+	def_special GetRotomNewSpecialMove
+	def_special ChangeMonSpecies
+	def_special DoesRotomKnowSpecialMove
+	def_special RotomForgetSpecialMove
+	def_special TeachRotomMove
+	def_special GetRotomState

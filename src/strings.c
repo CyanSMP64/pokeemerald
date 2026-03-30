@@ -1901,3 +1901,10 @@ const u8 gText_An[] = _("an");
 
 const u8 gText_V[] = _("v");
 const u8 gText_DashR[] = _("-r");
+
+const u8 gText_MicrowaveOven[] = _("Microwave oven");
+const u8 gText_WashingMachine[] = _("Washing machine");
+const u8 gText_Refrigerator[] = _("Refrigerator");
+const u8 gText_ElectricFan[] = _("Electric fan");
+const u8 gText_Lawnmower[] = _("Lawnmower");
+const u8 gText_Recall[] = _("Recall");

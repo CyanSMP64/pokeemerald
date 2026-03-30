@@ -783,6 +783,16 @@ static const struct MenuAction MultichoiceList_HMMoves[] =
     {gText_HM08Dive},
 };
 
+static const struct MenuAction MultichoiceList_RotomAppliances[] = {
+    { gText_MicrowaveOven },
+    { gText_WashingMachine },
+    { gText_Refrigerator },
+    { gText_ElectricFan },
+    { gText_Lawnmower },
+    { gText_Recall },
+    { gText_Cancel },
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -806,7 +816,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_REGISTER_MENU]              = MULTICHOICE(MultichoiceList_RegisterMenu),
     [MULTI_SSTIDAL_LILYCOVE]           = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_HM_MOVES]                   = MULTICHOICE(MultichoiceList_HMMoves),
-    [MULTI_UNUSED_10]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_ROTOM_APPLIANCES]           = MULTICHOICE(MultichoiceList_RotomAppliances),
     [MULTI_FRONTIER_PASS_INFO]         = MULTICHOICE(MultichoiceList_FrontierPassInfo),
     [MULTI_BIKE]                       = MULTICHOICE(MultichoiceList_Bike),
     [MULTI_STATUS_INFO]                = MULTICHOICE(MultichoiceList_StatusInfo),

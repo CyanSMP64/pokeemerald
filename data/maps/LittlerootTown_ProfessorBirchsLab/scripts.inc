@@ -969,3 +969,207 @@ LittlerootTown_ProfessorBirchsLab_Text_ScottAboardSSTidalCall:
 	.string "we meet. I'll be waiting!\p"
 	.string "… … … … … …\n"
 	.string "… … … … … Click!$"
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomBox::
+	lockall
+	goto_if_lt VAR_BIRCH_LAB_STATE, 4, LittlerootTown_ProfessorBirchsLab_EventScript_RotomBoxNonApplicable
+	setvar VAR_0x8004, SPECIES_ROTOM
+	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
+	goto_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_RotomEvent
+	setvar VAR_0x8004, SPECIES_ROTOM_HEAT
+	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
+	goto_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_RotomEvent
+	setvar VAR_0x8004, SPECIES_ROTOM_WASH
+	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
+	goto_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_RotomEvent
+	setvar VAR_0x8004, SPECIES_ROTOM_FROST
+	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
+	goto_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_RotomEvent
+	setvar VAR_0x8004, SPECIES_ROTOM_FAN
+	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
+	goto_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_RotomEvent
+	setvar VAR_0x8004, SPECIES_ROTOM_MOW
+	specialvar VAR_RESULT, DoesPlayerPartyContainSpecies
+	goto_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_RotomEvent
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomBoxNonApplicable::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_RotomBox1, MSGBOX_DEFAULT
+	releaseall
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomEvent::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_RotomBox2, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange
+LittlerootTown_ProfessorBirchsLab_EventScript_ReleaseAllEnd::
+	releaseall
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange::
+	special ChoosePartyMon
+	waitstate
+	goto_if_ge VAR_0x8004, PARTY_SIZE, LittlerootTown_ProfessorBirchsLab_EventScript_ReleaseAllEnd
+	special IsChosenMonRotom
+	goto_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_ReleaseAllEnd
+	special GetRotomState
+	special BufferMonNickname
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_RotomBoxConfirmed, MSGBOX_DEFAULT
+	multichoicegrid 4, 0, MULTI_ROTOM_APPLIANCES, 2, FALSE
+	switch VAR_RESULT
+	case 0, LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_Heat
+	case 1, LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_Wash
+	case 2, LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_Frost
+	case 3, LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_Fan
+	case 4, LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_Mow
+	case 5, LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_Recall
+	case 127, LittlerootTown_ProfessorBirchsLab_EventScript_ReleaseAllEnd
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_Heat::
+	setvar VAR_0x8005, SPECIES_ROTOM_HEAT
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_CheckMove
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_Wash::
+	setvar VAR_0x8005, SPECIES_ROTOM_WASH
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_CheckMove
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_Frost::
+	setvar VAR_0x8005, SPECIES_ROTOM_FROST
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_CheckMove
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_Fan::
+	setvar VAR_0x8005, SPECIES_ROTOM_FAN
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_CheckMove
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_Mow::
+	setvar VAR_0x8005, SPECIES_ROTOM_MOW
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_CheckMove
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_Recall::
+	setvar VAR_0x8005, SPECIES_ROTOM
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_Recall2
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_CheckMove::
+	goto_if_eq VAR_0x8005, VAR_0x8007, LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_AlreadyEntered
+	special GetRotomNewSpecialMove
+	special ChangeMonSpecies
+	playmoncry VAR_0x8005, CRY_MODE_NORMAL
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_RotomEnterMotor, MSGBOX_DEFAULT
+	specialvar VAR_RESULT, DoesRotomKnowSpecialMove
+	goto_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_DeleteMove
+	special GetNumMovesSelectedMonHas
+	goto_if_eq VAR_RESULT, MAX_MON_MOVES, LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_ChooseMoveToForget
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_LearnMove::
+	special TeachRotomMove
+	bufferpartymonnick 0, VAR_0x8004
+	buffermovename 1, VAR_0x8006
+	playfanfare MUS_LEVEL_UP
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_RotomLearnedMove, MSGBOX_DEFAULT
+	waitfanfare
+	releaseall
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_DeleteMove::
+	special RotomForgetSpecialMove
+	bufferpartymonnick 0, VAR_0x8004
+	buffermovename 1, VAR_0x8008
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_RotomForgotMove2, MSGBOX_DEFAULT
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_LearnMove
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_ChooseMoveToForget::
+	buffermovename 1, VAR_0x8006
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_RotomTryLearnMove, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_GaveUp
+	msgbox LilycoveCity_MoveDeletersHouse_Text_WhichMoveShouldBeForgotten, MSGBOX_DEFAULT
+	fadescreen FADE_TO_BLACK
+	special MoveDeleterChooseMoveToForget
+	fadescreen FADE_FROM_BLACK
+	goto_if_eq VAR_0x8005, MAX_MON_MOVES, LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_GaveUp
+	special BufferMoveDeleterNicknameAndMove
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_RotomForgotMove, MSGBOX_DEFAULT
+	special MoveDeleterForgetMove
+	goto LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_LearnMove
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_Recall2::
+	goto_if_eq VAR_0x8007, SPECIES_ROTOM, LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_HasntEntered
+	special GetRotomNewSpecialMove
+	special ChangeMonSpecies
+	specialvar VAR_RESULT, RotomForgetSpecialMove
+	goto_if_eq VAR_RESULT, FALSE, LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_SkipForgotMoveText
+	bufferpartymonnick 0, VAR_0x8004
+	buffermovename 1, VAR_0x8008
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_RotomForgotMove2, MSGBOX_DEFAULT
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_SkipForgotMoveText::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_RotomEmerged, MSGBOX_DEFAULT
+	releaseall
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_AlreadyEntered::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_RotomAlreadyEntered, MSGBOX_DEFAULT
+	releaseall
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_GaveUp::
+	copyvar VAR_0x8005, VAR_0x8007
+	special ChangeMonSpecies
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_RotomGaveUp, MSGBOX_DEFAULT
+	releaseall
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_HasntEntered::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_RotomHasntEntered, MSGBOX_DEFAULT
+	releaseall
+	end
+
+LittlerootTown_ProfessorBirchsLab_Text_RotomBox1::
+    .string "It's full of cardboard boxes with\n"
+    .string "electrical appliances in them.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_RotomBox2::
+    .string "It's full of cardboard boxes with\n"
+    .string "electrical appliances in them.\p"
+    .string "Oh? Rotom would like to investigate the\n"
+    .string "motors of the electrical appliances…\p"
+    .string "Is that OK?$"
+
+LittlerootTown_ProfessorBirchsLab_Text_RotomBoxConfirmed::
+    .string "Which appliance's motor will you\n"
+    .string "allow {STR_VAR_1} to enter?$"
+
+LittlerootTown_ProfessorBirchsLab_Text_RotomAlreadyEntered::
+    .string "{STR_VAR_1} has already entered\n"
+    .string "that appliance motor.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_RotomEnterMotor::
+    .string "{STR_VAR_1} entered the motor.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_RotomLearnedMove::
+    .string "{STR_VAR_1} learned {STR_VAR_2}!$"
+
+LittlerootTown_ProfessorBirchsLab_Text_RotomForgotMove::
+    .string "One…{PAUSE 20}two…{PAUSE 20}and…{PAUSE 38}{PLAY_SE SE_BALL_BOUNCE_1}ta-da!\p"
+    .string "{STR_VAR_1} forgot how to\n"
+    .string "use {STR_VAR_2}.\p"
+    .string "And…$"
+
+LittlerootTown_ProfessorBirchsLab_Text_RotomForgotMove2::
+    .string "{STR_VAR_1} forgot {STR_VAR_2}…$"
+
+LittlerootTown_ProfessorBirchsLab_Text_RotomTryLearnMove::
+    .string "{STR_VAR_1} wants to learn the\n"
+    .string "move {STR_VAR_2}.\p"
+    .string "However, {STR_VAR_1} already\n"
+    .string "knows four moves.\p"
+    .string "Should a move be deleted and\n"
+    .string "replaced with {STR_VAR_2}?$"
+
+LittlerootTown_ProfessorBirchsLab_Text_RotomHasntEntered::
+    .string "{STR_VAR_1} hasn't entered a\n"
+    .string "motor.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_RotomEmerged::
+    .string "{STR_VAR_1} emerged from the\n"
+    .string "motor.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_RotomGaveUp::
+    .string "{STR_VAR_1} reluctantly gave up\n"
+    .string "on entering a motor…$"
