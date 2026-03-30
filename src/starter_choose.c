@@ -713,6 +713,39 @@ static void CreateStarterPokemonLabel(u8 selection)
     case SPECIES_FLOETTE_ETERNAL_FLOWER:
         prefix = gText_PrefixEternalFlower;
         break;
+    case SPECIES_MEOWSTIC:
+    case SPECIES_MEOWSTIC_MEGA:
+    case SPECIES_INDEEDEE:
+    case SPECIES_BASCULEGION:
+    case SPECIES_OINKOLOGNE:
+        suffix = gText_SuffixMale;
+        break;
+    case SPECIES_MEOWSTIC_FEMALE:
+    case SPECIES_MEOWSTIC_FEMALE_MEGA:
+    case SPECIES_INDEEDEE_FEMALE:
+    case SPECIES_BASCULEGION_FEMALE:
+    case SPECIES_OINKOLOGNE_FEMALE:
+        suffix = gText_SuffixFemale;
+        break;
+    case SPECIES_AEGISLASH_BLADE:
+        prefix = gText_PrefixBlade;
+        break;
+    case SPECIES_PUMPKABOO_SMALL:
+    case SPECIES_GOURGEIST_SMALL:
+        prefix = gText_PrefixSmall;
+        break;
+    case SPECIES_PUMPKABOO:
+    case SPECIES_GOURGEIST:
+        prefix = gText_PrefixMedium;
+        break;
+    case SPECIES_PUMPKABOO_LARGE:
+    case SPECIES_GOURGEIST_LARGE:
+        prefix = gText_PrefixLarge;
+        break;
+    case SPECIES_PUMPKABOO_SUPER:
+    case SPECIES_GOURGEIST_SUPER:
+        prefix = gText_PrefixJumbo;
+        break;
     case SPECIES_ZYGARDE_10:
         prefix = gText_Prefix10Percent;
         break;
@@ -752,6 +785,12 @@ static void CreateStarterPokemonLabel(u8 selection)
     case SPECIES_NECROZMA_ULTRA:
         prefix = gText_PrefixUltra;
         break;
+    case SPECIES_TOXTRICITY_LOW_KEY:
+        prefix = gText_PrefixLowKey;
+        break;
+    case SPECIES_EISCUE_NOICE_FACE:
+        prefix = gText_PrefixNoiceFace;
+        break;
     case SPECIES_ZACIAN_CROWNED_SWORD:
     case SPECIES_ZAMAZENTA_CROWNED_SHIELD:
         prefix = gText_PrefixCrowned;
@@ -774,6 +813,9 @@ static void CreateStarterPokemonLabel(u8 selection)
     case SPECIES_PALAFIN_HERO:
         prefix = gText_PrefixHero;
         break;
+    case SPECIES_GIMMIGHOUL_ROAMING:
+        prefix = gText_PrefixRoaming;
+        break;
     case SPECIES_OGERPON_WELLSPRING:
         prefix = gText_PrefixWellspringMask;
         break;
@@ -789,19 +831,25 @@ static void CreateStarterPokemonLabel(u8 selection)
     case SPECIES_TERAPAGOS_STELLAR:
         prefix = gText_PrefixStellar;
         break;
+    case SPECIES_GRENINJA_BATTLE_BOND:
+        prefix = gText_PrefixBattleBond;
+        break;
+    case SPECIES_SQUAWKABILLY:
+        prefix = gText_PrefixGreenBlue;
+        break;
+    case SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE:
+        prefix = gText_PrefixYellowWhite;
+        break;
     }
 
     if (prefix != NULL)
-    {
         StringCopy(displayName, prefix);
-        StringAppend(displayName, speciesName);
-        if (suffix != NULL)
-            StringAppend(displayName, suffix);
-    }
     else
-    {
-        StringCopy(displayName, speciesName);
-    }
+        displayName[0] = EOS;
+
+    StringAppend(displayName, speciesName);
+    if (suffix != NULL)
+        StringAppend(displayName, suffix);
 
     winTemplate = sWindowTemplate_StarterLabel;
     winTemplate.tilemapLeft = sStarterLabelCoords[selection][0];
@@ -817,12 +865,14 @@ static void CreateStarterPokemonLabel(u8 selection)
     case SPECIES_DARMANITAN_ZEN_MODE_GALARIAN:
     case SPECIES_OGERPON_HEARTHFLAME:
     case SPECIES_OGERPON_CORNERSTONE:
+    case SPECIES_SQUAWKABILLY_YELLOW_PLUMAGE:
         nameFont = FONT_NARROWER;
         break;
     case SPECIES_BASCULIN_WHITE_STRIPED:
     case SPECIES_BASCULIN_BLUE_STRIPED:
     case SPECIES_FLOETTE_ETERNAL_FLOWER:
     case SPECIES_OGERPON_WELLSPRING:
+    case SPECIES_SQUAWKABILLY:
         nameFont = FONT_NARROW;
         break;
     default:

@@ -452,6 +452,17 @@ extern const u8 gText_PrefixHearthflameMask[];
 extern const u8 gText_PrefixCornerstoneMask[];
 extern const u8 gText_PrefixTerastal[];
 extern const u8 gText_PrefixStellar[];
+extern const u8 gText_PrefixBlade[];
+extern const u8 gText_PrefixSmall[];
+extern const u8 gText_PrefixMedium[];
+extern const u8 gText_PrefixLarge[];
+extern const u8 gText_PrefixJumbo[];
+extern const u8 gText_PrefixLowKey[];
+extern const u8 gText_PrefixNoiceFace[];
+extern const u8 gText_PrefixRoaming[];
+extern const u8 gText_PrefixGreenBlue[];
+extern const u8 gText_PrefixYellowWhite[];
+extern const u8 gText_PrefixBattleBond[];
 extern const u8 gText_SuffixX[];
 extern const u8 gText_SuffixY[];
 extern const u8 gText_SuffixZ[];
@@ -459,6 +470,8 @@ extern const u8 gText_SuffixZenMode[];
 extern const u8 gText_SuffixBlazeBreed[];
 extern const u8 gText_SuffixAquaBreed[];
 extern const u8 gText_SuffixUnbound[];
+extern const u8 gText_SuffixMale[];
+extern const u8 gText_SuffixFemale[];
 
 // mystery event menu text
 extern const u8 gText_EventSafelyLoaded[];
