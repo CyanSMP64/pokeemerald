@@ -2684,7 +2684,7 @@ static void DebugAction_Give_Item_SelectQuantity(u8 taskId)
         FreeSpriteOamMatrix(&gSprites[gTasks[taskId].data[6]]); //Destroy item icon
         DestroySprite(&gSprites[gTasks[taskId].data[6]]);       //Destroy item icon
 
-        PlaySE(MUS_OBTAIN_ITEM);
+        PlaySE(SE_SUCCESS);
         AddBagItem(gTasks[taskId].data[5], gTasks[taskId].data[3]);
         DebugAction_DestroyExtraWindow(taskId);
     }
@@ -2704,7 +2704,7 @@ static void DebugAction_Give_Item_SelectQuantity(u8 taskId)
 static void DebugAction_Give_AllTMs(u8 taskId)
 {
     u16 i;
-    PlayFanfare(MUS_OBTAIN_TMHM);
+    PlaySE(SE_SUCCESS);
     for (i = ITEM_TM01; i <= ITEM_TM50; i++)
         if (!CheckBagHasItem(i, 1))
             AddBagItem(i, 1);
@@ -2917,7 +2917,7 @@ static void DebugAction_Give_Pokemon_SelectLevel(u8 taskId)
         FreeAndDestroyMonIconSprite(&gSprites[gTasks[taskId].data[6]]); //Destroy pokemon sprite
         if (gTasks[taskId].data[5] == 0)
         {
-            PlaySE(MUS_LEVEL_UP);
+            PlaySE(SE_SUCCESS);
             ScriptGiveMon(sDebugMonData->mon_speciesId, gTasks[taskId].data[3], ITEM_NONE, 0,0,0);
             Free(sDebugMonData); //Frees EWRAM of MonData Struct
             DebugAction_DestroyExtraWindow(taskId);
@@ -3354,7 +3354,7 @@ static void DebugAction_Give_Pokemon_Move(u8 taskId)
             gTasks[taskId].data[3] = 0;
             gTasks[taskId].data[4] = 0;
 
-            PlaySE(MUS_LEVEL_UP);
+            PlaySE(SE_SUCCESS);
             gTasks[taskId].func = DebugAction_Give_Pokemon_ComplexCreateMon;
         }
     }
