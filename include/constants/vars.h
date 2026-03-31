@@ -271,7 +271,7 @@
 #define VAR_ROXANNE_CALL_STEP_COUNTER                    0x40FC
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40FD
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40FE
-#define VAR_UNUSED_0x40F7                                0x40FF // Unused Var
+#define VAR_FUN                                          0x40FF // number randomly generated between 0 and 99 when starter is selected
 
 #define VARS_END                                         0x40FF
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)

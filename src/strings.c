@@ -176,6 +176,7 @@ const u8 gText_Level[] = _("Lv. ");
 const u8 gText_IdNumberSlash[] = _("IDNo. /"); // Unused
 const u8 gText_Name[] = _("Name");
 const u8 gText_IDNumber[] = _("IDNo.");
+const u8 gText_YoureWinner[] = _("YOU'RE WINNER !");
 const u8 gText_BirchInTrouble[] = _("Prof. Birch is in trouble!\nRelease a Pokémon and rescue him!");
 const u8 gText_ConfirmStarterChoice[] = _("Do you choose this Pokémon?");
 const u8 gText_PrefixMega[] = _("Mega ");

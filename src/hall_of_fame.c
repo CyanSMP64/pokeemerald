@@ -1136,9 +1136,12 @@ static void Task_HofPC_ExitOnButtonPress(u8 taskId)
 
 static void HallOfFame_PrintWelcomeText(u8 unusedPossiblyWindowId, u8 unused2)
 {
+    // FUN event: "YOU'RE WINNER !" -- i chose 3 because big rigs came out in 2003
+    const u8 *welcomeText = VarGet(VAR_FUN) == 3 ? gText_YoureWinner : gText_WelcomeToHOF;
+
     FillWindowPixelBuffer(0, PIXEL_FILL(0));
     PutWindowTilemap(0);
-    AddTextPrinterParameterized3(0, FONT_NORMAL, GetStringCenterAlignXOffset(FONT_NORMAL, gText_WelcomeToHOF, 0xD0), 1, sMonInfoTextColors, 0, gText_WelcomeToHOF);
+    AddTextPrinterParameterized3(0, FONT_NORMAL, GetStringCenterAlignXOffset(FONT_NORMAL, welcomeText, 0xD0), 1, sMonInfoTextColors, 0, welcomeText);
     CopyWindowToVram(0, COPYWIN_FULL);
 }
 
