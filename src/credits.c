@@ -165,11 +165,11 @@ static const u8 sTheEnd_LetterMap_D[] =
 
 static const u8 sTheEnd_LetterMap_Q[] =
 {
-    0xFF, 0xFF, 0xFF,
-    0xFF, 0xFF, 0xFF,
-    0xFF, 0xFF, 0xFF,
-    11, 0xFF, 0xFF,
-    10, 0xFF, 0xFF,
+    0x47, 1, 7,
+    0x4d, 10, 12,
+    0xFF, 0x47, 0x87,
+    0xFF, 11, 0xFF,
+    0xFF, 1, 0xFF,
 };
 
 #include "data/credits.h"
@@ -1343,13 +1343,13 @@ static void DrawTheEnd(u16 offset, u16 palette)
     for (pos = 0; pos < 32 * 32; pos++)
         ((u16 *) (VRAM + offset))[pos] = baseTile + 1;
 
-    DrawLetterMapTiles(sTheEnd_LetterMap_T, 3, 7, offset, palette);
-    DrawLetterMapTiles(sTheEnd_LetterMap_H, 7, 7, offset, palette);
-    DrawLetterMapTiles(sTheEnd_LetterMap_E, 11, 7, offset, palette);
-    DrawLetterMapTiles(sTheEnd_LetterMap_E, 16, 7, offset, palette);
-    DrawLetterMapTiles(sTheEnd_LetterMap_N, 20, 7, offset, palette);
-    DrawLetterMapTiles(sTheEnd_LetterMap_D, 24, 7, offset, palette);
-    DrawLetterMapTiles(sTheEnd_LetterMap_Q, 27, 7, offset, palette);
+    DrawLetterMapTiles(sTheEnd_LetterMap_T, 1, 7, offset, palette);
+    DrawLetterMapTiles(sTheEnd_LetterMap_H, 5, 7, offset, palette);
+    DrawLetterMapTiles(sTheEnd_LetterMap_E, 9, 7, offset, palette);
+    DrawLetterMapTiles(sTheEnd_LetterMap_E, 14, 7, offset, palette);
+    DrawLetterMapTiles(sTheEnd_LetterMap_N, 18, 7, offset, palette);
+    DrawLetterMapTiles(sTheEnd_LetterMap_D, 22, 7, offset, palette);
+    DrawLetterMapTiles(sTheEnd_LetterMap_Q, 26, 7, offset, palette);
 }
 
 #define sState data[0]
