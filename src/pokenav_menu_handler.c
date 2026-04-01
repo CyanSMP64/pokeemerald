@@ -100,12 +100,18 @@ static u8 GetPokenavMainMenuType(void)
 bool32 PokenavCallback_Init_MainMenuCursorOnMap(void)
 {
     struct Pokenav_Menu *menu = AllocSubstruct(POKENAV_SUBSTRUCT_MAIN_MENU_HANDLER, sizeof(struct Pokenav_Menu));
+    u8 initCursorPos;
     if (!menu)
         return FALSE;
+    if (VarGet(VAR_RUSTBORO_CITY_STATE) == 6
+     && FlagGet(FLAG_ADDED_MATCH_CALL_TO_POKENAV))
+        initCursorPos = POKENAV_MENUITEM_MATCH_CALL;
+    else
+        initCursorPos = POKENAV_MENUITEM_MAP;
 
     menu->menuType = GetPokenavMainMenuType();
-    menu->cursorPos = POKENAV_MENUITEM_MAP;
-    menu->currMenuItem = POKENAV_MENUITEM_MAP;
+    menu->cursorPos = initCursorPos;
+    menu->currMenuItem = initCursorPos;
     menu->helpBarIndex = HELPBAR_NONE;
     SetMenuInputHandler(menu);
     return TRUE;
