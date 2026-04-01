@@ -1253,7 +1253,7 @@ static const union AnimCmd *const sAnimTable_SmallSparkle[] =
 
 const struct SpriteTemplate gFieldEffectObjectTemplate_SmallSparkle = {
     .tileTag = TAG_NONE,
-    .paletteTag = FLDEFF_PAL_TAG_SMALL_SPARKLE,
+    .paletteTag = TAG_NONE,
     .oam = &gObjectEventBaseOam_16x16,
     .anims = sAnimTable_SmallSparkle,
     .images = sPicTable_SmallSparkle,

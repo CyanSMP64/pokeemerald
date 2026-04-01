@@ -292,7 +292,7 @@ gFieldEffectScript_Bubbles::
 	field_eff_end
 
 gFieldEffectScript_Sparkle::
-	field_eff_loadfadedpal_callnative gSpritePalette_SmallSparkle, FldEff_Sparkle
+	field_eff_callnative FldEff_Sparkle
 	field_eff_end
 
 gFieldEffectScript_ShowSecretPowerCave::

@@ -1426,6 +1426,7 @@ u32 FldEff_Sparkle(void)
     if (spriteId != MAX_SPRITES)
     {
         gSprites[spriteId].oam.priority = gFieldEffectArguments[2];
+        gSprites[spriteId].oam.paletteNum = PALSLOT_NPC_1_REFLECTION;
         gSprites[spriteId].coordOffsetEnabled = TRUE;
         gSprites[spriteId].sDelay = 1;
         gSprites[spriteId].invisible = TRUE;
