@@ -49,8 +49,13 @@ bool8 CheckObjectGraphicsInFrontOfPlayer(u16 graphicsId)
 
 u8 CreateFieldMoveTask(void)
 {
+    u8 taskId;
+
     GetXYCoordsOneStepInFrontOfPlayer(&gPlayerFacingPosition.x, &gPlayerFacingPosition.y);
-    return CreateTask(Task_DoFieldMove_Init, 8);
+    taskId = CreateTask(Task_DoFieldMove_Init, 8);
+    // fix decamark/egg sprite glitch by storing arg 0 into a task slot
+    gTasks[taskId].data[15] = gFieldEffectArguments[0];
+    return taskId;
 }
 
 static void Task_DoFieldMove_Init(u8 taskId)
@@ -66,6 +71,7 @@ static void Task_DoFieldMove_Init(u8 taskId)
         if (gMapHeader.mapType == MAP_TYPE_UNDERWATER)
         {
             // Skip field move pose underwater
+            gFieldEffectArguments[0] = gTasks[taskId].data[15];
             FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
             gTasks[taskId].func = Task_DoFieldMove_WaitForMon;
         }
@@ -84,7 +90,10 @@ static void Task_DoFieldMove_ShowMonAfterPose(u8 taskId)
     if (ObjectEventCheckHeldMovementStatus(&gObjectEvents[gPlayerAvatar.objectEventId]) == TRUE)
     {
         if (!gSaveBlock2Ptr->optionsHM)
+    {
+            gFieldEffectArguments[0] = gTasks[taskId].data[15];
             FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
+    }
         gTasks[taskId].func = Task_DoFieldMove_WaitForMon;
     }
 }
