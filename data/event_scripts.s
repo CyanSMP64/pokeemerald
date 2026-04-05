@@ -884,7 +884,7 @@ gText_PlayerWhitedOut::
 	.string "Pokémon!\pBack to the truck!$"
 
 gText_RegisteredTrainerinPokeNav::
-	.string "Registered {STR_VAR_1} {STR_VAR_2}\n"
+	.string "Registered {STR_VAR_1}{ENG} {STR_VAR_2}{ENG}\n"
 	.string "in the PokéNav.$"
 
 gText_ComeBackWithSecretPower::
