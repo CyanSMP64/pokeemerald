@@ -1325,3 +1325,6 @@ $(MID_SUBDIR)/mus_bw_vs_zekrom.s: %.s: %.mid
 
 $(MID_SUBDIR)/se_vineboom.s: %.s: %.mid
 	$(MID) $< $@ -E -G128 -V127 -p5
+
+$(MID_SUBDIR)/mus_hg_vs_wild_kanto.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G215 -V103 -X -S

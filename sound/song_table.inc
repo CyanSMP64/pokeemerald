@@ -330,7 +330,7 @@ gSongTable::
 	song dummy_song_header, 0, 64, 1024
 	song se_utvanish, 1, 64, 1024
 	song mus_smwend, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
+	song mus_hg_vs_wild_kanto, 0, 64, 1024
 	song dummy_song_header, 0, 64, 1024
 	song dummy_song_header, 0, 64, 1024
 	song dummy_song_header, 0, 64, 1024

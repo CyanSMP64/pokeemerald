@@ -1360,6 +1360,7 @@ SECTIONS {
         sound/songs/midi/mus_b2_victory_pwt.o(.rodata);
         sound/songs/midi/se_utvanish.o(.rodata);
         sound/songs/midi/mus_smwend.o(.rodata);
+        sound/songs/midi/mus_hg_vs_wild_kanto.o(.rodata);
     } =0
 
     multiboot_data :

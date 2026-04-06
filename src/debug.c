@@ -3930,7 +3930,7 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(326, "empty") \
     X(SE_UTVANISH, "SE-UTVANISH") \
     X(MUS_SMWEND, "MUS-SMWEND") \
-    X(329, "empty") \
+    X(MUS_HG_VS_WILD_KANTO, "MUS-HG-VS-WILD-KANTO") \
     X(330, "empty") \
     X(331, "empty") \
     X(332, "empty") \

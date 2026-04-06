@@ -302,6 +302,7 @@
 #define MUS_B2_VICTORY_PWT              313
 #define SE_UTVANISH                     327
 #define MUS_SMWEND                      328
+#define MUS_HG_VS_WILD_KANTO            329
 
 // Music
 #define MUS_LITTLEROOT_TEST         350 // MUS_TETSUJI          // Unused, likely a test track.
