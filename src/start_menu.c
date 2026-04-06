@@ -304,6 +304,8 @@ static void BuildNormalStartMenu(void)
     {
         AddStartMenuAction(MENU_ACTION_POKEMON);
     }
+    AddStartMenuAction(MENU_ACTION_BAG);
+
     if ((FlagGet(FLAG_RECEIVED_HM01)
      || FlagGet(FLAG_RECEIVED_HM02)
      || FlagGet(FLAG_RECEIVED_HM03)
@@ -315,8 +317,6 @@ static void BuildNormalStartMenu(void)
      && gSaveBlock2Ptr->optionsHM == TRUE) {
         AddStartMenuAction(MENU_ACTION_HM);
     }
-
-    AddStartMenuAction(MENU_ACTION_BAG);
 
     if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
     {
