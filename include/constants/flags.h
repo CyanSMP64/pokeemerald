@@ -1383,7 +1383,7 @@
 #define FLAG_SYS_DEBUG_MODE                         (SYSTEM_FLAGS + 0x21)
 #define FLAG_SYS_DEBUG_SAVE                         (SYSTEM_FLAGS + 0x22)
 #define FLAG_MODERN_EXP_SCALE                       (SYSTEM_FLAGS + 0x23)
-#define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
+#define FLAG_EVO_EVERY_LEVEL                        (SYSTEM_FLAGS + 0x24)
 #define FLAG_UNUSED_0x885                           (SYSTEM_FLAGS + 0x25) // Unused Flag
 #define FLAG_UNUSED_0x886                           (SYSTEM_FLAGS + 0x26) // Unused Flag
 #define FLAG_UNUSED_0x887                           (SYSTEM_FLAGS + 0x27) // Unused Flag

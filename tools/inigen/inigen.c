@@ -709,6 +709,7 @@ int main(int argc, char ** argv)
     print("MainGameShops=[0, 4, 17, 18]\n"); // hardcoded
     config_sym("HiddenItemSparkleFlagScript", "EventScript_SetHiddenItemSparkleFlag");
     config_sym("ModernExpFlagScript", "EventScript_SetModernExpFlag");
+    config_sym("EvoEveryLevelFlagScript", "EventScript_SetEvoEveryLevelFlag");
     print("CRC32=1F1C08FB\n"); // CRC32 of an official Emerald ROM. Unless you change it the rando will tell you that it's unofficial, but it doesn't matter,
 
     DestroyResources();

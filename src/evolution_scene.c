@@ -5,6 +5,7 @@
 #include "bg.h"
 #include "data.h"
 #include "decompress.h"
+#include "event_data.h"
 #include "evolution_scene.h"
 #include "evolution_graphics.h"
 #include "gpu_regs.h"
@@ -33,6 +34,7 @@
 #include "constants/songs.h"
 #include "constants/rgb.h"
 #include "constants/items.h"
+#include "constants/flags.h"
 
 extern struct Evolution gEvolutionTable[][EVOS_PER_MON];
 
@@ -637,7 +639,8 @@ void Task_EvolutionScene(u8 taskId)
     if (gMain.heldKeys == B_BUTTON
         && gTasks[taskId].tState == EVOSTATE_WAIT_CYCLE_MON_SPRITE
         && gTasks[sEvoGraphicsTaskId].isActive
-        && gTasks[taskId].tBits & TASK_BIT_CAN_STOP)
+        && gTasks[taskId].tBits & TASK_BIT_CAN_STOP
+        && !FlagGet(FLAG_EVO_EVERY_LEVEL))
     {
         gTasks[taskId].tState = EVOSTATE_CANCEL;
         gTasks[sEvoGraphicsTaskId].tEvoStopped = TRUE;
