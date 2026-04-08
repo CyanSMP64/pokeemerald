@@ -392,8 +392,14 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_TERA_SHELL] = _("Tera Shell"),
     [ABILITY_TERAFORM_ZERO] = _("Teraform Zero"),
     [ABILITY_POISON_PUPPETEER] = _("Poison Puppeteer"),
+    [ABILITY_PIERCING_DRILL] = _("Piercing Drill"),
     [ABILITY_DRAGONIZE] = _("Dragonize"),
+    [ABILITY_314] = _("314"),
+    [ABILITY_315] = _("315"),
     [ABILITY_MEGA_SOL] = _("Mega Sol"),
+    [ABILITY_317] = _("317"),
+    [ABILITY_318] = _("318"),
+    [ABILITY_SPICY_SPRAY] = _("Spicy Spray"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
@@ -710,6 +716,12 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_TERA_SHELL] = sPlaceholderDescription,
     [ABILITY_TERAFORM_ZERO] = sPlaceholderDescription,
     [ABILITY_POISON_PUPPETEER] = sPlaceholderDescription,
+    [ABILITY_PIERCING_DRILL] = sPlaceholderDescription,
     [ABILITY_DRAGONIZE] = sPlaceholderDescription,
+    [ABILITY_314] = sPlaceholderDescription,
+    [ABILITY_315] = sPlaceholderDescription,
     [ABILITY_MEGA_SOL] = sPlaceholderDescription,
+    [ABILITY_317] = sPlaceholderDescription,
+    [ABILITY_318] = sPlaceholderDescription,
+    [ABILITY_SPICY_SPRAY] = sPlaceholderDescription,
 };
