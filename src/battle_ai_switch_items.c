@@ -36,7 +36,7 @@ static bool8 ShouldSwitchIfWonderGuard(void)
 {
     u8 opposingPosition;
     u8 opposingBattler;
-    u8 moveFlags;
+    u16 moveFlags;
     s32 i, j;
     s32 firstId;
     s32 lastId; // + 1
@@ -260,7 +260,7 @@ static bool8 HasSuperEffectiveMoveAgainstOpponents(bool8 noRng)
     u8 opposingPosition;
     u8 opposingBattler;
     s32 i;
-    u8 moveFlags;
+    u16 moveFlags;
     u16 move;
 
     opposingPosition = BATTLE_OPPOSITE(GetBattlerPosition(gActiveBattler));
@@ -333,7 +333,7 @@ static bool8 FindMonWithFlagsAndSuperEffective(u8 flags, u8 moduloPercent)
     struct Pokemon *party;
     s32 i, j;
     u16 move;
-    u8 moveFlags;
+    u16 moveFlags;
 
     if (gLastLandedMoves[gActiveBattler] == MOVE_NONE)
         return FALSE;

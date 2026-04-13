@@ -122,7 +122,7 @@ struct GFRomHeader
     const u8 * header_gBattlerTarget;                                                           // 0x234
     const u8 * const * header_gBattlescriptCurrInstr;                                           // 0x238
     const u16 * header_gLockedMoves;                                                            // 0x23c
-    const u8 * header_gMoveResultFlags;                                                         // 0x240
+    const u16 * header_gMoveResultFlags;                                                        // 0x240
     const u32 * header_gHitMarker;                                                              // 0x244
     const u16 * header_gSideStatuses;                                                           // 0x248
     const struct SideTimer * header_gSideTimers;                                                // 0x24c

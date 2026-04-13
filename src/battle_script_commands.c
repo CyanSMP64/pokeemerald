@@ -1569,7 +1569,12 @@ static void ModulateDmgByType(u8 multiplier)
             if (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE)
                 gMoveResultFlags &= ~MOVE_RESULT_SUPER_EFFECTIVE;
             else
-                gMoveResultFlags |= MOVE_RESULT_NOT_VERY_EFFECTIVE;
+            {
+                if (gMoveResultFlags & MOVE_RESULT_NOT_VERY_EFFECTIVE)
+                    gMoveResultFlags |= MOVE_RESULT_DOUBLE_EFFECTIVENESS;
+                else
+                    gMoveResultFlags |= MOVE_RESULT_NOT_VERY_EFFECTIVE;
+            }
         }
         break;
     case TYPE_MUL_SUPER_EFFECTIVE:
@@ -1578,7 +1583,12 @@ static void ModulateDmgByType(u8 multiplier)
             if (gMoveResultFlags & MOVE_RESULT_NOT_VERY_EFFECTIVE)
                 gMoveResultFlags &= ~MOVE_RESULT_NOT_VERY_EFFECTIVE;
             else
-                gMoveResultFlags |= MOVE_RESULT_SUPER_EFFECTIVE;
+            {
+                if (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE)
+                    gMoveResultFlags |= MOVE_RESULT_DOUBLE_EFFECTIVENESS;
+                else
+                    gMoveResultFlags |= MOVE_RESULT_SUPER_EFFECTIVE;
+            }
         }
         break;
     }
@@ -1731,7 +1741,7 @@ static void CheckWonderGuardAndLevitate(void)
 }
 
 // Same as ModulateDmgByType except different arguments
-static void ModulateDmgByType2(u8 multiplier, u16 move, u8 *flags)
+static void ModulateDmgByType2(u8 multiplier, u16 move, u16 *flags)
 {
     gBattleMoveDamage = gBattleMoveDamage * multiplier / 10;
     if (gBattleMoveDamage == 0 && multiplier != 0)
@@ -1750,7 +1760,12 @@ static void ModulateDmgByType2(u8 multiplier, u16 move, u8 *flags)
             if (*flags & MOVE_RESULT_SUPER_EFFECTIVE)
                 *flags &= ~MOVE_RESULT_SUPER_EFFECTIVE;
             else
-                *flags |= MOVE_RESULT_NOT_VERY_EFFECTIVE;
+            {
+                if (*flags & MOVE_RESULT_NOT_VERY_EFFECTIVE)
+                    *flags |= MOVE_RESULT_DOUBLE_EFFECTIVENESS;
+                else
+                    *flags |= MOVE_RESULT_NOT_VERY_EFFECTIVE;
+            }
         }
         break;
     case TYPE_MUL_SUPER_EFFECTIVE:
@@ -1759,16 +1774,21 @@ static void ModulateDmgByType2(u8 multiplier, u16 move, u8 *flags)
             if (*flags & MOVE_RESULT_NOT_VERY_EFFECTIVE)
                 *flags &= ~MOVE_RESULT_NOT_VERY_EFFECTIVE;
             else
-                *flags |= MOVE_RESULT_SUPER_EFFECTIVE;
+            {
+                if (*flags & MOVE_RESULT_SUPER_EFFECTIVE)
+                    *flags |= MOVE_RESULT_DOUBLE_EFFECTIVENESS;
+                else
+                    *flags |= MOVE_RESULT_SUPER_EFFECTIVE;
+            }
         }
         break;
     }
 }
 
-u8 TypeCalc(u16 move, u8 attacker, u8 defender)
+u16 TypeCalc(u16 move, u8 attacker, u8 defender)
 {
     s32 i = 0;
-    u8 flags = 0;
+    u16 flags = 0;
     u8 moveType;
 
     if (move == MOVE_STRUGGLE)
@@ -1823,10 +1843,10 @@ u8 TypeCalc(u16 move, u8 attacker, u8 defender)
     return flags;
 }
 
-u8 AI_TypeCalc(u16 move, u16 targetSpecies, u16 targetAbility)
+u16 AI_TypeCalc(u16 move, u16 targetSpecies, u16 targetAbility)
 {
     s32 i = 0;
-    u8 flags = 0;
+    u16 flags = 0;
     u8 type1 = gSpeciesInfo[targetSpecies].types[0], type2 = gSpeciesInfo[targetSpecies].types[1];
     u8 moveType;
 
@@ -2280,10 +2300,16 @@ static void Cmd_resultmessage(void)
         switch (gMoveResultFlags & (u8)(~MOVE_RESULT_MISSED))
         {
         case MOVE_RESULT_SUPER_EFFECTIVE:
-            stringId = STRINGID_SUPEREFFECTIVE;
+            if (gMoveResultFlags & MOVE_RESULT_DOUBLE_EFFECTIVENESS)
+                stringId = STRINGID_EXTREMELYEFFECTIVE;
+            else
+                stringId = STRINGID_SUPEREFFECTIVE;
             break;
         case MOVE_RESULT_NOT_VERY_EFFECTIVE:
-            stringId = STRINGID_NOTVERYEFFECTIVE;
+            if (gMoveResultFlags & MOVE_RESULT_DOUBLE_EFFECTIVENESS)
+                stringId = STRINGID_MOSTLYINEFFECTIVE;
+            else
+                stringId = STRINGID_NOTVERYEFFECTIVE;
             break;
         case MOVE_RESULT_ONE_HIT_KO:
             stringId = STRINGID_ONEHITKO;

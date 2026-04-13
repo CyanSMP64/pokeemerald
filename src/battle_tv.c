@@ -592,11 +592,13 @@ void BattleTv_SetDataBasedOnString(u16 stringId)
             TrySetBattleSeminarShow();
         break;
     case STRINGID_NOTVERYEFFECTIVE:
+    case STRINGID_MOSTLYINEFFECTIVE:
         AddMovePoints(PTS_EFFECTIVENESS, moveSlot, 1, 0);
         if (!(gBattleTypeFlags & BATTLE_TYPE_LINK) && GetMonData(defMon, MON_DATA_HP, NULL) != 0)
             TrySetBattleSeminarShow();
         break;
     case STRINGID_SUPEREFFECTIVE:
+    case STRINGID_EXTREMELYEFFECTIVE:
         AddMovePoints(PTS_EFFECTIVENESS, moveSlot, 0, 0);
         break;
     case STRINGID_PKMNFORESAWATTACK:
@@ -1458,7 +1460,7 @@ static void TrySetBattleSeminarShow(void)
         powerOverride = 0;
         if (ShouldCalculateDamage(gCurrentMove, &dmgByMove[i], &powerOverride))
         {
-            u8 moveResultFlags;
+            u16 moveResultFlags;
             u16 sideStatus = gSideStatuses[GET_BATTLER_SIDE(gBattlerTarget)];
             gBattleMoveDamage = CalculateBaseDamage(&gBattleMons[gBattlerAttacker], &gBattleMons[gBattlerTarget], gCurrentMove,
                                                     sideStatus, powerOverride,

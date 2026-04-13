@@ -259,9 +259,9 @@ BattleScript_HitFromAtkAnimation::
 	waitstate
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
-	critmessage
-	waitmessage B_WAIT_TIME_LONG
 	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	critmessage
 	waitmessage B_WAIT_TIME_LONG
 	seteffectwithchance
 	tryfaintmon BS_TARGET
@@ -338,9 +338,9 @@ BattleScript_EffectAbsorb::
 	waitstate
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
-	critmessage
-	waitmessage B_WAIT_TIME_LONG
 	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	critmessage
 	waitmessage B_WAIT_TIME_LONG
 	negativedamage
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
@@ -401,9 +401,9 @@ BattleScript_ExplosionLoop:
 	waitstate
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
-	critmessage
-	waitmessage B_WAIT_TIME_LONG
 	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	critmessage
 	waitmessage B_WAIT_TIME_LONG
 	tryfaintmon BS_TARGET
 	moveendto MOVEEND_NEXT_TARGET
@@ -450,9 +450,9 @@ BattleScript_DreamEaterWorked:
 	waitstate
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
-	critmessage
-	waitmessage B_WAIT_TIME_LONG
 	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	critmessage
 	waitmessage B_WAIT_TIME_LONG
 	negativedamage
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
@@ -1885,9 +1885,9 @@ BattleScript_DoHitAllWithUndergroundBonus::
 	waitstate
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
-	critmessage
-	waitmessage B_WAIT_TIME_LONG
 	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	critmessage
 	waitmessage B_WAIT_TIME_LONG
 	printstring STRINGID_EMPTYSTRING3
 	waitmessage 1
@@ -1985,9 +1985,9 @@ BattleScript_BeatUpAttack::
 	waitstate
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
-	critmessage
-	waitmessage B_WAIT_TIME_LONG
 	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	critmessage
 	waitmessage B_WAIT_TIME_LONG
 	tryfaintmon BS_TARGET
 	moveendto MOVEEND_NEXT_TARGET
@@ -2470,9 +2470,9 @@ BattleScript_BrickBreakAnim::
 	waitstate
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
-	critmessage
-	waitmessage B_WAIT_TIME_LONG
 	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	critmessage
 	waitmessage B_WAIT_TIME_LONG
 	jumpifbyte CMP_LESS_THAN, sB_ANIM_TURN, 2, BattleScript_BrickBreakDoHit
 	jumpifbyte CMP_EQUAL, sB_ANIM_TURN, 2, BattleScript_BrickBreakPrintLightScreen
@@ -3188,9 +3188,9 @@ BattleScript_PursuitDmgOnSwitchOut::
 	waitstate
 	healthbarupdate BS_TARGET
 	datahpupdate BS_TARGET
-	critmessage
-	waitmessage B_WAIT_TIME_LONG
 	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	critmessage
 	waitmessage B_WAIT_TIME_LONG
 	tryfaintmon BS_TARGET
 	moveendfromto MOVEEND_ON_DAMAGE_ABILITIES, MOVEEND_CHOICE_MOVE

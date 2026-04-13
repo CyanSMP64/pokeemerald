@@ -11,8 +11,8 @@
 #define YESNOBOX_X_Y 24, 8, 29, 13
 
 void AI_CalcDmg(u8 battlerIdAtk, u8 battlerIdDef);
-u8 TypeCalc(u16 move, u8 battlerIdAtk, u8 battlerIdDef);
-u8 AI_TypeCalc(u16 move, u16 targetSpecies, u16 targetAbility);
+u16 TypeCalc(u16 move, u8 battlerIdAtk, u8 battlerIdDef);
+u16 AI_TypeCalc(u16 move, u16 targetSpecies, u16 targetAbility);
 u8 GetBattlerTurnOrderNum(u8 battlerId);
 void SetMoveEffect(bool8 primary, u8 certain);
 void BattleDestroyYesNoCursorAt(u8 cursorPosition);

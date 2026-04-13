@@ -320,6 +320,8 @@ static const u8 sText_AndEllipsis[] = _("And…\p");
 static const u8 sText_HMMovesCantBeForgotten[] = _("HM moves can't be forgotten now.\p");
 static const u8 sText_NotVeryEffective[] = _("It's not very effective…");
 static const u8 sText_SuperEffective[] = _("It's super effective!");
+static const u8 sText_MostlyIneffective[] = _("It's mostly ineffective…");
+static const u8 sText_ExtremelyEffective[] = _("It's extremely effective!");
 static const u8 sText_GotAwaySafely[] = _("{PLAY_SE SE_FLEE}You got away safely!\p");
 static const u8 sText_PkmnFledUsingIts[] = _("{PLAY_SE SE_FLEE}{B_ATK_NAME_WITH_PREFIX} fled using its {B_LAST_ITEM}!\p");
 static const u8 sText_Dummy339[] = _(""); // dummied
@@ -904,6 +906,8 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_S
     [STRINGID_STATDRASTICALLY - BATTLESTRINGS_TABLE_START] = sText_StatDrastically,
     [STRINGID_STATSEVERELY - BATTLESTRINGS_TABLE_START] = sText_StatSeverely,
     [STRINGID_SPACE1 - BATTLESTRINGS_TABLE_START] = sText_Space1,
+    [STRINGID_EXTREMELYEFFECTIVE - BATTLESTRINGS_TABLE_START]            = sText_ExtremelyEffective,
+    [STRINGID_MOSTLYINEFFECTIVE - BATTLESTRINGS_TABLE_START]             = sText_MostlyIneffective,
 };
 
 const u16 gMissStringIds[] =
