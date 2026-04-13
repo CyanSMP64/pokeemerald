@@ -94,18 +94,6 @@ OldaleTown_Mart_EventScript_HoopaClerk::
 	msgbox OldaleTown_Mart_Text_HoopaStory1, MSGBOX_DEFAULT
 	closemessage
 	delay 16
-	msgbox OldaleTown_Mart_Text_HoopaStory2, MSGBOX_DEFAULT
-	closemessage
-	delay 16
-	msgbox OldaleTown_Mart_Text_HoopaStory3, MSGBOX_DEFAULT
-	closemessage
-	delay 16
-	msgbox OldaleTown_Mart_Text_HoopaStory4, MSGBOX_DEFAULT
-	closemessage
-	delay 16
-	msgbox OldaleTown_Mart_Text_HoopaStory5, MSGBOX_DEFAULT
-	closemessage
-	delay 16
 	msgbox OldaleTown_Mart_Text_HoopaStory6, MSGBOX_DEFAULT
 	giveitem ITEM_PRISON_BOTTLE
 	setflag FLAG_RECEIVED_PRISON_BOTTLE
@@ -120,76 +108,68 @@ OldaleTown_Mart_Text_HoopaStory1:
 	.string "This is something that happened when I\n"
 	.string "was watching the store one time…$"
 
-OldaleTown_Mart_Text_HoopaStory2:
-	.string "It was, like, a totally dark night.\n"
-	.string "Moonless. And I was all, “No way!\l"
-	.string "This is so-o-o-o creepy!”\l"
-	.string "Then, suddenly--whoosh!\p"
-	.string "Out of nowhere, the automatic sliding\n"
-	.string "door… slides open.\p"
-	.string "And then this super-duper scary old guy\n"
-	.string "comes in, kinda unsteady, you know?\l"
-	.string "Kinda shambling…$"
-
-OldaleTown_Mart_Text_HoopaStory3:
-	.string "So I'm thinking how terrible and scary\n"
-	.string "is this, and then the old guy\l"
-	.string "shuffles over to me…\p"
-	.string "He has a package, like, clutched in his\n"
-	.string "hands… He's mumbling that he has to\l"
-	.string "show it to me…\p"
-	.string "Then he asks, “Do you know what this is\n"
-	.string "worth?”\p"
-	.string "He keeps staring right at me and not\n"
-	.string "even blinking. I was so freaked out.\l"
-	.string "I was, like…\p"
-	.string "“Oh yes. It's, uh, really something,\n"
-	.string "isn't it?”$"
-
-OldaleTown_Mart_Text_HoopaStory4:
-	.string "So the old guy grins at me, and he says…\p"
-	.string "“Then I'll just give you this instead of\n"
-	.string "money. Now give me everything you've\l"
-	.string "got in this store!”\l"
-	.string "That's what he said! Really!\p"
-	.string "I was like, “What is this? Too weird, my\n"
-	.string "dude!” But I was scared, so I started\l"
-	.string "shoveling over Potions and, like,\l"
-	.string "whatever I could reach.\l"
-	.string "I gave the dude everything for his\l"
-	.string "stupid package.\p"
-	.string "And out he goes, like, with a wicked grin\n"
-	.string "on his face…$"
-
-OldaleTown_Mart_Text_HoopaStory5:
-	.string "As he's walking out, he says, “Three\n"
-	.string "days… For a mere three days will Hoopa\l"
-	.string "be unbound…” Really!\p"
-	.string "I was all, “Stop freaking me out with\n"
-	.string "this nonsense!” I was, like, sweating.\l"
-	.string "The back of my shirt was soaked.\p"
-	.string "Anyway, nothing I could do, so I open the\n"
-	.string "package. It's just a dirty old bottle.\l"
-	.string "Li-i-i-i-ike, really.\p"
-	.string "So I go, “Weirdness. Wonder what's in it.”\n"
-	.string "I grab the stopper and carefully pull\l"
-	.string "it loose.\p"
-	.string "Blapt! It popped open, but there was\n"
-	.string "nothing inside! So I figure I totally\l"
-	.string "got fooled.$"
+@OldaleTown_Mart_Text_HoopaStory2:
+@	.string "It was, like, a totally dark night.\n"
+@	.string "Moonless. And I was all, “No way!\l"
+@	.string "This is so-o-o-o creepy!”\l"
+@	.string "Then, suddenly--whoosh!\p"
+@	.string "Out of nowhere, the automatic sliding\n"
+@	.string "door… slides open.\p"
+@	.string "And then this super-duper scary old guy\n"
+@	.string "comes in, kinda unsteady, you know?\l"
+@	.string "Kinda shambling…$"
+@
+@OldaleTown_Mart_Text_HoopaStory3:
+@	.string "So I'm thinking how terrible and scary\n"
+@	.string "is this, and then the old guy\l"
+@	.string "shuffles over to me…\p"
+@	.string "He has a package, like, clutched in his\n"
+@	.string "hands… He's mumbling that he has to\l"
+@	.string "show it to me…\p"
+@	.string "Then he asks, “Do you know what this is\n"
+@	.string "worth?”\p"
+@	.string "He keeps staring right at me and not\n"
+@	.string "even blinking. I was so freaked out.\l"
+@	.string "I was, like…\p"
+@	.string "“Oh yes. It's, uh, really something,\n"
+@	.string "isn't it?”$"
+@
+@OldaleTown_Mart_Text_HoopaStory4:
+@	.string "So the old guy grins at me, and he says…\p"
+@	.string "“Then I'll just give you this instead of\n"
+@	.string "money. Now give me everything you've\l"
+@	.string "got in this store!”\l"
+@	.string "That's what he said! Really!\p"
+@	.string "I was like, “What is this? Too weird, my\n"
+@	.string "dude!” But I was scared, so I started\l"
+@	.string "shoveling over Potions and, like,\l"
+@	.string "whatever I could reach.\l"
+@	.string "I gave the dude everything for his\l"
+@	.string "stupid package.\p"
+@	.string "And out he goes, like, with a wicked grin\n"
+@	.string "on his face…$"
+@
+@OldaleTown_Mart_Text_HoopaStory5:
+@	.string "As he's walking out, he says, “Three\n"
+@	.string "days… For a mere three days will Hoopa\l"
+@	.string "be unbound…” Really!\p"
+@	.string "I was all, “Stop freaking me out with\n"
+@	.string "this nonsense!” I was, like, sweating.\l"
+@	.string "The back of my shirt was soaked.\p"
+@	.string "Anyway, nothing I could do, so I open the\n"
+@	.string "package. It's just a dirty old bottle.\l"
+@	.string "Li-i-i-i-ike, really.\p"
+@	.string "So I go, “Weirdness. Wonder what's in it.”\n"
+@	.string "I grab the stopper and carefully pull\l"
+@	.string "it loose.\p"
+@	.string "Blapt! It popped open, but there was\n"
+@	.string "nothing inside! So I figure I totally\l"
+@	.string "got fooled.$"
 
 OldaleTown_Mart_Text_HoopaStory6:
-	.string "…Thanks for listening to my story.\p"
-	.string "Know what? I'm gonna give you the bottle\n"
-	.string "from that night 'cause you're so nice.\p"
-	.string "It's not doing me any good anyway.\n"
-	.string "Really.$"
+	.string "Gah, whatever! You probably\n"
+	.string "already know how this story goes.\p"
+	.string "You can have that bottle.$"
 
 OldaleTown_Mart_Text_HoopaStoryPost:
-	.string "Sometimes I wonder if it really is only a\n"
-	.string "dirty old bottle.\p"
-	.string "Those last words that the old guy said\n"
-	.string "as he left… “For a mere three days\l"
-	.string "will Hoopa be unbound…”\l"
-	.string "Just can't seem to get that out of my\l"
-	.string "head…$"
+	.string "It's a strange bottle, isn't it?$"
