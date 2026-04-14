@@ -109,3 +109,8 @@ keysplit slowstrings, 0
     split 2, 76
     split 3, 89
     split 4, 120
+
+keysplit wb_choirs_male, 0
+    split 0, 64
+    split 1, 71
+    split 2, 128
