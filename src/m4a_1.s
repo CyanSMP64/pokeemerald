@@ -1636,11 +1636,11 @@ ply_port_done:
 
 	thumb_func_start m4aSoundVSync
 m4aSoundVSync:
-	ldr r0, lt2_SOUND_INFO_PTR
+	ldr r0, lt3_SOUND_INFO_PTR
 	ldr r0, [r0]
 
 	@ Exit the function if ident is not ID_NUMBER or ID_NUMBER+1.
-	ldr r2, lt2_ID_NUMBER
+	ldr r2, lt3_ID_NUMBER
 	ldr r3, [r0, o_SoundInfo_ident]
 	subs r3, r2
 	cmp r3, 1
@@ -1689,6 +1689,10 @@ m4aSoundVSync_SkipDMA2:
 
 m4aSoundVSync_Done:
 	bx lr
+
+	.align 2, 0
+lt3_SOUND_INFO_PTR: .word SOUND_INFO_PTR
+lt3_ID_NUMBER:      .word ID_NUMBER
 
 	.pool
 	thumb_func_end m4aSoundVSync
@@ -1868,6 +1872,10 @@ _081DD938:
 	ldrb r2, [r5, o_MusicPlayerTrack_mod]
 	orrs r0, r2
 	beq _081DD994
+	ldrb r0, [r5, o_MusicPlayerTrack_modT]
+	movs r3, 0x40
+	tst r0, r3
+	bne _081DD994
 	ldrb r0, [r5, o_MusicPlayerTrack_lfoDelayC]
 	cmp r0, 0
 	beq _081DD95A
@@ -1928,6 +1936,8 @@ _081DD988:
 	strb r1, [r5, o_MusicPlayerTrack_modM + 1]
 	ldrb r0, [r5]
 	ldrb r1, [r5, o_MusicPlayerTrack_modT]
+	movs r3, 0x3
+	ands r1, r3
 	cmp r1, 0
 	bne _081DD98E
 	movs r1, MPT_FLG_PITCHG
@@ -1938,50 +1948,6 @@ _081DD990:
 	orrs r0, r1
 	strb r0, [r5, o_MusicPlayerTrack_flags]
 _081DD994:
-	ldr r4, [r5, o_MusicPlayerTrack_chan]
-	movs r2, 0
-_081DD994_chan_loop:
-	cmp r4, 0
-	beq _081DD994_check_flag
-	ldrb r0, [r4, o_SoundChannel_statusFlags]
-	movs r1, SOUND_CHANNEL_SF_ON
-	tst r1, r0
-	beq _081DD994_next_chan
-	ldrb r0, [r4, o_SoundChannel_portaActive]
-	cmp r0, 0
-	beq _081DD994_next_chan
-	ldrh r0, [r4, o_SoundChannel_portaCurrent]
-	ldrh r1, [r4, o_SoundChannel_portaStep]
-	lsls r0, 16
-	asrs r0, 16
-	cmp r0, 0
-	beq _081DD994_ch_reach_zero
-	bgt _081DD994_ch_positive
-	adds r0, r1
-	cmp r0, 0
-	blt _081DD994_ch_store
-	b _081DD994_ch_reach_zero
-_081DD994_ch_positive:
-	subs r0, r1
-	cmp r0, 0
-	bgt _081DD994_ch_store
-_081DD994_ch_reach_zero:
-	movs r0, 0
-	strb r0, [r4, o_SoundChannel_portaActive]
-_081DD994_ch_store:
-	strh r0, [r4, o_SoundChannel_portaCurrent]
-	movs r2, 1
-_081DD994_next_chan:
-	ldr r4, [r4, o_SoundChannel_nextChannelPointer]
-	b _081DD994_chan_loop
-_081DD994_check_flag:
-	cmp r2, 0
-	beq _081DD994_done
-	ldrb r0, [r5, o_MusicPlayerTrack_flags]
-	movs r1, MPT_FLG_PITCHG
-	orrs r0, r1
-	strb r0, [r5, o_MusicPlayerTrack_flags]
-_081DD994_done:
 	mov r3, r10
 	mov r4, r11
 _081DD998:
@@ -2017,10 +1983,153 @@ _081DD9C8:
 	ldrb r0, [r5, o_MusicPlayerTrack_flags]
 	movs r1, 0x80
 	tst r1, r0
-	beq _081DDA62
+	bne _081DD9C8_track_exists
+	b _081DDA62
+_081DD9C8_track_exists:
+	ldrb r1, [r5, o_MusicPlayerTrack_modT]
+	movs r3, 0x40
+	tst r1, r3
+	beq _081DD9C8_check_flags
+	ldrb r1, [r5, o_MusicPlayerTrack_lfoSpeed]
+	cmp r1, 0
+	beq _081DD9C8_check_flags
+	ldrb r0, [r5, o_MusicPlayerTrack_mod + 1]
+	ldrb r3, [r5, o_MusicPlayerTrack_mod]
+	orrs r0, r3
+	beq _081DD9C8_check_flags
+	ldrb r0, [r5, o_MusicPlayerTrack_lfoDelayC]
+	cmp r0, 0
+	beq _081DD9C8_lfo_advance
+	subs r0, 0x1
+	strb r0, [r5, o_MusicPlayerTrack_lfoDelayC]
+	b _081DD9C8_check_flags
+_081DD9C8_lfo_advance:
+	@ frame-mode LFOS runs ~1.4x faster than raw value
+	movs r3, #45
+	muls r1, r3
+	adds r1, #16
+	lsrs r1, #5
+	cmp r1, 0
+	bne _081DD9C8_lfo_speed_ready
+	movs r1, #1
+_081DD9C8_lfo_speed_ready:
+	ldrb r0, [r5, o_MusicPlayerTrack_lfoSpeedC]
+	adds r0, r1
+	strb r0, [r5, o_MusicPlayerTrack_lfoSpeedC]
+	adds r1, r0, 0
+	subs r0, 0x40
+	lsls r0, 24
+	bpl _081DD9C8_lfo_nonneg
+	lsls r3, r1, 24
+	asrs r3, 24
+	b _081DD9C8_lfo_have_phase
+_081DD9C8_lfo_nonneg:
+	movs r0, 0x80
+	subs r3, r0, r1
+_081DD9C8_lfo_have_phase:
+	ldrb r0, [r5, o_MusicPlayerTrack_mod + 1]
+	lsls r0, 7
+	ldrb r1, [r5, o_MusicPlayerTrack_mod]
+	adds r0, r1
+	muls r0, r3
+	asrs r3, r0, 6
+	movs r0, 0x80
+	lsls r0, 8
+	subs r1, r0, 1
+	cmp r3, r1
+	ble _081DD9C8_lfo_clamp_lo
+	adds r3, r1, 0
+	b _081DD9C8_lfo_clamped
+_081DD9C8_lfo_clamp_lo:
+	negs r0, r0
+	cmp r3, r0
+	bge _081DD9C8_lfo_clamped
+	adds r3, r0, 0
+_081DD9C8_lfo_clamped:
+	ldrb r0, [r5, o_MusicPlayerTrack_modM]
+	adds r1, r3, 0
+	lsls r1, 24
+	lsrs r1, 24
+	eors r0, r1
+	lsls r0, 24
+	bne _081DD9C8_store_mod
+	ldrb r1, [r5, o_MusicPlayerTrack_modM + 1]
+	asrs r0, r3, 8
+	lsls r0, 24
+	lsrs r0, 24
+	eors r0, r1
+	lsls r0, 24
+	beq _081DD9C8_check_flags
+_081DD9C8_store_mod:
+	strb r3, [r5, o_MusicPlayerTrack_modM]
+	asrs r1, r3, 8
+	strb r1, [r5, o_MusicPlayerTrack_modM + 1]
+	ldrb r0, [r5, o_MusicPlayerTrack_flags]
+	ldrb r1, [r5, o_MusicPlayerTrack_modT]
+	movs r3, 0x3
+	ands r1, r3
+	cmp r1, 0
+	bne _081DD9C8_set_vol
+	movs r1, MPT_FLG_PITCHG
+	b _081DD9C8_set_flag
+_081DD9C8_set_vol:
+	movs r1, MPT_FLG_VOLCHG
+_081DD9C8_set_flag:
+	orrs r0, r1
+	strb r0, [r5, o_MusicPlayerTrack_flags]
+_081DD9C8_check_flags:
+	@ per-frame portamento advancement
+	ldr r4, [r5, o_MusicPlayerTrack_chan]
+	movs r6, 0
+_porta_frame_loop:
+	cmp r4, 0
+	beq _porta_frame_done
+	ldrb r0, [r4, o_SoundChannel_statusFlags]
+	movs r1, SOUND_CHANNEL_SF_ON
+	tst r1, r0
+	beq _porta_frame_next
+	ldrb r0, [r4, o_SoundChannel_portaActive]
+	cmp r0, 0
+	beq _porta_frame_next
+	ldrh r0, [r4, o_SoundChannel_portaCurrent]
+	ldrh r1, [r4, o_SoundChannel_portaStep]
+	lsls r0, 16
+	asrs r0, 16
+	cmp r0, 0
+	beq _porta_frame_clamp
+	bgt _porta_frame_pos
+	adds r0, r1
+	cmp r0, 0
+	blt _porta_frame_store
+	b _porta_frame_clamp
+_porta_frame_pos:
+	subs r0, r1
+	cmp r0, 0
+	bgt _porta_frame_store
+_porta_frame_clamp:
+	movs r0, 0
+	movs r1, 0
+	strb r1, [r4, o_SoundChannel_portaActive]
+_porta_frame_store:
+	strh r0, [r4, o_SoundChannel_portaCurrent]
+	movs r6, 1
+_porta_frame_next:
+	ldr r4, [r4, o_SoundChannel_nextChannelPointer]
+	b _porta_frame_loop
+_porta_frame_done:
+	cmp r6, 0
+	beq _porta_frame_flag_skip
+	ldrb r0, [r5, o_MusicPlayerTrack_flags]
+	movs r1, MPT_FLG_PITCHG
+	orrs r0, r1
+	strb r0, [r5, o_MusicPlayerTrack_flags]
+_porta_frame_flag_skip:
+	ldrb r0, [r5, o_MusicPlayerTrack_flags]
 	movs r1, MPT_FLG_VOLCHG | MPT_FLG_PITCHG
 	tst r1, r0
-	beq _081DDA62
+	bne _081DD9C8_vol_pit_set
+	b _081DDA62
+_081DD9C8_vol_pit_set:
 	mov r9, r2
 	adds r0, r7, 0
 	adds r1, r5, 0
@@ -2157,7 +2266,7 @@ _081DDA62:
 	ble _081DDA6C
 	movs r0, MusicPlayerTrack_size
 	adds r5, r0
-	bgt _081DD9C8
+	b _081DD9C8
 _081DDA6C:
 	ldr r0, lt2_ID_NUMBER
 	str r0, [r7, o_MusicPlayerInfo_ident]
@@ -2443,6 +2552,19 @@ _081DDC54:
 	str r4, [r5, o_MusicPlayerTrack_chan]
 	str r5, [r4, o_SoundChannel_track]
 	ldrb r0, [r5, o_MusicPlayerTrack_lfoDelay]
+	ldrb r2, [r5, o_MusicPlayerTrack_modT]
+	movs r3, 0x40
+	tst r2, r3
+	beq _081DDC5E
+	cmp r0, 0
+	beq _081DDC5E
+	movs r2, 5
+	muls r0, r2
+	lsrs r0, 4
+	cmp r0, 0
+	bne _081DDC5E
+	movs r0, 1
+_081DDC5E:
 	strb r0, [r5, o_MusicPlayerTrack_lfoDelayC]
 	cmp r0, r1
 	beq _081DDC66
@@ -2471,7 +2593,7 @@ _081DDC66:
 	strh r0, [r2, o_SoundChannel_portaCurrent]
 	ldrb r1, [r3, o_MusicPlayerTrack_portaTime - o_MusicPlayerTrack_portaFlag]
 	muls r1, r1
-	movs r0, 0x6B
+	movs r0, 0x60
 	lsls r0, 8
 	bl __divsi3
 	adds r2, r4, 0
@@ -2691,6 +2813,8 @@ clear_modM:
 	strh r2, [r1, o_MusicPlayerTrack_modM]
 	strb r2, [r1, o_MusicPlayerTrack_lfoSpeedC]
 	ldrb r2, [r1, o_MusicPlayerTrack_modT]
+	movs r3, 0x3
+	ands r2, r3
 	cmp r2, 0
 	bne _081DDD54
 	movs r2, MPT_FLG_PITCHG

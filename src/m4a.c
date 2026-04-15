@@ -756,6 +756,7 @@ void FadeOutBody(struct MusicPlayerInfo *mplayInfo)
 
 void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *track)
 {
+    u8 modType = track->modT & 0x3;
     s32 modPitch = track->modM;
     s32 mod8 = modPitch;
     if (mod8 < -128)
@@ -771,12 +772,12 @@ void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *tr
         x = (u32)((track->vol * track->vol2 + 63) / 127);
         x = (u32)(x * track->volX) >> 5;
 
-        if (track->modT == 1)
+        if (modType == 1)
             x = (u32)(x * (mod8 + 128)) >> 7;
 
         y = 2 * track->pan + track->panX;
 
-        if (track->modT == 2)
+        if (modType == 2)
             y += mod8;
 
         if (y < -128)
@@ -797,7 +798,7 @@ void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *tr
               + ((s32)track->keyShiftX << 8)
               + track->pitX;
 
-        if (track->modT == 0)
+        if (modType == 0)
             x += 16 * modPitch;
 
         track->keyM = x >> 8;
@@ -1350,7 +1351,7 @@ void ClearModM(struct MusicPlayerTrack *track)
     track->lfoSpeedC = 0;
     track->modM = 0;
 
-    if (track->modT == 0)
+    if ((track->modT & 0x3) == 0)
         track->flags |= MPT_FLG_PITCHG;
     else
         track->flags |= MPT_FLG_VOLCHG;
