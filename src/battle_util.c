@@ -2420,29 +2420,29 @@ u8 CastformDataTypeChange(u8 battler)
     return formChange;
 }
 
-const u8 gShedSkinString_Poison1[] = _(" was cured\n");
-const u8 gShedSkinString_Poison2[] = _("of its poisoning");
-const u8 gShedSkinString_Sleep1[] = _(" woke up");
-const u8 gShedSkinString_Sleep2[] = _("");
-const u8 gShedSkinString_Paralysis1[] = _(" was cured\n");
-const u8 gShedSkinString_Paralysis2[] = _("of paralysis");
-const u8 gShedSkinString_Burn1[] = _("'s burn was\n");
-const u8 gShedSkinString_Burn2[] = _("cured");
-const u8 gShedSkinString_Freeze1[] = _(" thawed out");
-const u8 gShedSkinString_Freeze2[] = _("");
+const u8 gShedSkinString_Poison1[] = _(" was cured");
+const u8 gShedSkinString_Poison2[] = _("of its poisoning!");
+const u8 gShedSkinString_Sleep1[] = _(" woke");
+const u8 gShedSkinString_Sleep2[] = _("up!");
+const u8 gShedSkinString_Paralysis1[] = _(" was cured");
+const u8 gShedSkinString_Paralysis2[] = _("of paralysis!");
+const u8 gShedSkinString_Burn1[] = _("'s");
+const u8 gShedSkinString_Burn2[] = _("burn was cured!");
+const u8 gShedSkinString_Freeze1[] = _(" thawed");
+const u8 gShedSkinString_Freeze2[] = _("out!");
 
-static const u8 gLumBerryString_Poison1[] = _("cured its poison");
-static const u8 gLumBerryString_Poison2[] = _("");
-static const u8 gLumBerryString_Sleep1[] = _("woke it up");
-static const u8 gLumBerryString_Sleep2[] = _("");
-static const u8 gLumBerryString_Paralysis1[] = _("cured its ");
-static const u8 gLumBerryString_Paralysis2[] = _("paralysis");
-static const u8 gLumBerryString_Burn1[] = _("cured its burn");
-static const u8 gLumBerryString_Burn2[] = _("");
-static const u8 gLumBerryString_Freeze1[] = _("defrosted it");
-static const u8 gLumBerryString_Freeze2[] = _("");
-static const u8 gLumBerryString_Confusion1[] = _("snapped it out ");
-static const u8 gLumBerryString_Confusion2[] = _("of its\lconfusion");
+static const u8 gLumBerryString_Poison1[] = _("cured");
+static const u8 gLumBerryString_Poison2[] = _("its poison!");
+static const u8 gLumBerryString_Sleep1[] = _("woke");
+static const u8 gLumBerryString_Sleep2[] = _("it up!");
+static const u8 gLumBerryString_Paralysis1[] = _("cured");
+static const u8 gLumBerryString_Paralysis2[] = _("its paralysis!");
+static const u8 gLumBerryString_Burn1[] = _("cured");
+static const u8 gLumBerryString_Burn2[] = _("its burn!");
+static const u8 gLumBerryString_Freeze1[] = _("defrosted");
+static const u8 gLumBerryString_Freeze2[] = _("it!");
+static const u8 gLumBerryString_Confusion1[] = _("snapped it out");
+static const u8 gLumBerryString_Confusion2[] = _("of its confusion!");
 
 u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 moveArg)
 {

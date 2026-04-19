@@ -4022,9 +4022,9 @@ BattleScript_DrizzleActivates::
 	call BattleScript_WeatherFormChanges
 	end3
 
-BattleScript_AbilityPopUpTarget:
+BattleScript_AbilityPopUpTarget::
 	copybyte gBattlerAbility, gBattlerTarget
-BattleScript_AbilityPopUp:
+BattleScript_AbilityPopUp::
 	showabilitypopup BS_ABILITY_BATTLER
 	pause B_WAIT_TIME_SHORT
 	recordlastability BS_ABILITY_BATTLER

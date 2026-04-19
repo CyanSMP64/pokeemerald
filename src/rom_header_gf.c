@@ -341,6 +341,8 @@ struct GFRomHeader
     u16 sizeofTrainerMonCustomMove;                                                             // 0x4b6
     // misc data
     u16 itemCount;                                                                              // 0x4b8
+    // ability pop up script
+    const u8 * header_BattleScript_AbilityPopUp;                                                // 0x4bc
 };
 
 // This seems to need to be in the text section for some reason.
@@ -657,4 +659,6 @@ static const struct GFRomHeader sGFRomHeader = {
     .sizeofTrainerMonCustomMove =                           sizeof(gTrainerMonItemCustomMoves->moves[0]),
     // misc data
     .itemCount =                                            ITEMS_COUNT,
+    // ability pop up script
+    .header_BattleScript_AbilityPopUp =                     BattleScript_AbilityPopUp,
 };
