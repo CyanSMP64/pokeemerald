@@ -230,7 +230,7 @@ static const u8 sText_PkmnReadyToHelp[] = _("{B_ATK_NAME_WITH_PREFIX} is ready t
 static const u8 sText_PkmnSwitchedItems[] = _("{B_ATK_NAME_WITH_PREFIX} switched items with its target!");
 static const u8 sText_PkmnObtainedX[] = _("{B_ATK_NAME_WITH_PREFIX} obtained {B_BUFF1}.");
 static const u8 sText_PkmnObtainedX2[] = _("{B_DEF_NAME_WITH_PREFIX} obtained {B_BUFF2}.");
-static const u8 sText_PkmnObtainedXYObtainedZ[] = _("{B_ATK_NAME_WITH_PREFIX} obtained {B_BUFF1}. {B_DEF_NAME_WITH_PREFIX} obtained {B_BUFF2}.");
+static const u8 sText_PkmnObtainedXYObtainedZ[] = _("{B_ATK_NAME_WITH_PREFIX} obtained {B_BUFF1}.\p{B_DEF_NAME_WITH_PREFIX} obtained {B_BUFF2}.");
 static const u8 sText_PkmnCopiedFoe[] = _("{B_ATK_NAME_WITH_PREFIX} copied {B_DEF_NAME_WITH_PREFIX_LOWER}'s {B_DEF_ABILITY} Ability!");
 static const u8 sText_TeamLightScreenWoreOff[] = _("{B_DEF_PREFIX2} team's Light Screen wore off!");
 static const u8 sText_PkmnWishCameTrue[] = _("{B_BUFF1}'s wish came true!");
@@ -2523,6 +2523,7 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
     u8 fontId = FONT_NORMAL;
     s16 letterSpacing = 0;
     u32 lineNum = 1;
+    u32 paraStartLine = 1;
     s32 i;
 
     if (gBattleTypeFlags & BATTLE_TYPE_RECORDED_LINK)
@@ -2974,7 +2975,7 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
 
                 if (dstWidth + toCpyWidth > BATTLE_MSG_MAX_WIDTH)
                 {
-                    dst[lastValidSkip] = lineNum == 1 ? CHAR_NEWLINE : CHAR_PROMPT_SCROLL;
+                    dst[lastValidSkip] = lineNum == paraStartLine ? CHAR_NEWLINE : CHAR_PROMPT_SCROLL;
                     dstWidth = GetBattleStringLineWidth(fontId, dst, letterSpacing, lineNum, dstSize);
                     lineNum++;
                 }
@@ -3002,18 +3003,23 @@ u32 BattleStringExpandPlaceholders(const u8 *src, u8 *dst, u32 dstSize)
                 toCpyWidth = GetGlyphWidth(dst[dstID + 1], FALSE, fontId);
             dst[dstID] = *src;
             if (dstWidth + toCpyWidth > BATTLE_MSG_MAX_WIDTH) {
-                dst[lastValidSkip] = lineNum == 1 ? CHAR_NEWLINE : CHAR_PROMPT_SCROLL;
+                dst[lastValidSkip] = lineNum == paraStartLine ? CHAR_NEWLINE : CHAR_PROMPT_SCROLL;
                 lineNum++;
                 dstWidth = 0;
             }
             switch (*src) {
                 case CHAR_NEWLINE:
                 case CHAR_PROMPT_SCROLL:
-                case CHAR_PROMPT_CLEAR:
                     lineNum++;
                     dstWidth = 0;
                     //fallthrough
                 case CHAR_SPACE:
+                    lastValidSkip = dstID;
+                    break;
+                case CHAR_PROMPT_CLEAR:
+                    lineNum++;
+                    paraStartLine = lineNum;
+                    dstWidth = 0;
                     lastValidSkip = dstID;
                     break;
             }
