@@ -109,7 +109,6 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_PORYGON_Z] = 9,
     [SPECIES_PROBOPASS] = 5,
     [SPECIES_DUSKNOIR] = 7,
-    [SPECIES_FROSLASS] = 2,
     [SPECIES_ROTOM] = 10,
     [SPECIES_UXIE] = 12,
     [SPECIES_MESPRIT] = 10,
@@ -279,4 +278,5 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_FLOETTE_MEGA] = 2,
     [SPECIES_CLEFABLE_MEGA] = 6,
     [SPECIES_DRAGONITE_MEGA] = 7,
+    [SPECIES_EELEKTROSS_MEGA] = 4,
 };

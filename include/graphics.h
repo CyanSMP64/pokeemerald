@@ -6364,7 +6364,7 @@ extern const u8 gMonIcon_RaichuMegaX[];
 extern const u8 gMonIcon_RaichuMegaY[];
 extern const u8 gMonIcon_ChimechoMega[];
 extern const u8 gMonIcon_AbsolMegaZ[];
-//extern const u8 gMonIcon_StaraptorMega[];
+extern const u8 gMonIcon_StaraptorMega[];
 extern const u8 gMonIcon_GarchompMegaZ[];
 extern const u8 gMonIcon_LucarioMegaZ[];
 extern const u8 gMonIcon_HeatranMega[];
