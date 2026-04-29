@@ -2466,17 +2466,29 @@ static void DebugAction_FlagsVars_ToggleBadgeFlags(u8 taskId)
 {
     // Sound effect
     if (FlagGet(FLAG_BADGE08_GET))
+    {
         PlaySE(SE_PC_OFF);
+        FlagClear(FLAG_BADGE01_GET);
+        FlagClear(FLAG_BADGE02_GET);
+        FlagClear(FLAG_BADGE03_GET);
+        FlagClear(FLAG_BADGE04_GET);
+        FlagClear(FLAG_BADGE05_GET);
+        FlagClear(FLAG_BADGE06_GET);
+        FlagClear(FLAG_BADGE07_GET);
+        FlagClear(FLAG_BADGE08_GET);
+    }
     else
+    {
         PlaySE(SE_PC_LOGIN);
-    FlagToggle(FLAG_BADGE01_GET);
-    FlagToggle(FLAG_BADGE02_GET);
-    FlagToggle(FLAG_BADGE03_GET);
-    FlagToggle(FLAG_BADGE04_GET);
-    FlagToggle(FLAG_BADGE05_GET);
-    FlagToggle(FLAG_BADGE06_GET);
-    FlagToggle(FLAG_BADGE07_GET);
-    FlagToggle(FLAG_BADGE08_GET);
+        FlagSet(FLAG_BADGE01_GET);
+        FlagSet(FLAG_BADGE02_GET);
+        FlagSet(FLAG_BADGE03_GET);
+        FlagSet(FLAG_BADGE04_GET);
+        FlagSet(FLAG_BADGE05_GET);
+        FlagSet(FLAG_BADGE06_GET);
+        FlagSet(FLAG_BADGE07_GET);
+        FlagSet(FLAG_BADGE08_GET);
+    }
 }
 //static void DebugAction_FlagsVars_ToggleFrontierPass(u8 taskId)
 //{
