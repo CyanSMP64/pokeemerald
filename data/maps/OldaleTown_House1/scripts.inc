@@ -25,8 +25,8 @@ OldaleTown_House1_EventScript_Woman::
 	special DaisyMassageServices
 	fadescreen FADE_FROM_BLACK
 	msgbox OldaleTown_House1_Text_AllDone, MSGBOX_DEFAULT
-	random 25
-	call_if_eq VAR_RESULT, 0, OldaleTown_House1_EventScript_ActivateAccuser
+@	random 25
+@	call_if_eq VAR_RESULT, 0, OldaleTown_House1_EventScript_ActivateAccuser
 	release
 	end
 
