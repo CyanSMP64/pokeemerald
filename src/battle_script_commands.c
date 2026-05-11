@@ -678,8 +678,8 @@ static const struct WindowTemplate sUnusedWinTemplate =
     .baseBlock = 0x3F
 };
 
-static const u16 sLevelUpBanner_Pal[] = INCBIN_U16("graphics/battle_interface/level_up_banner.gbapal");
-static const u32 sLevelUpBanner_Gfx[] = INCBIN_U32("graphics/battle_interface/level_up_banner.4bpp.lz");
+static const u16 sLevelUpBanner_Pal[] = INCGFX_U16("graphics/battle_interface/level_up_banner.png", ".gbapal");
+static const u32 sLevelUpBanner_Gfx[] = INCGFX_U32("graphics/battle_interface/level_up_banner.png", ".4bpp.lz");
 
 // unused
 static const u8 sRubyLevelUpStatBoxStats[] =
@@ -946,12 +946,12 @@ static void Cmd_attackcanceler(void)
         i = IsMonDisobedient(); // why use the 'i' variable...?
         switch (i)
         {
-        case 0:
+        case DISOBEDIENCE_OBEDIENT:
             break;
-        case 2:
+        case DISOBEDIENCE_OTHER:
             gHitMarker |= HITMARKER_OBEYS;
             return;
-        default:
+        default: // DISOBEDIENCE_IGNORED
             gMoveResultFlags |= MOVE_RESULT_MISSED;
             return;
         }

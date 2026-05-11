@@ -14,7 +14,10 @@
 
 void AllocateBattleResources(void)
 {
-    gBattleResources = gBattleResources; // something dumb needed to match
+    if (gBattleResources != NULL) {
+        // There was an assert here.
+        // But it didn't compile. 
+    }
 
     if (gBattleTypeFlags & BATTLE_TYPE_TRAINER_HILL)
         InitTrainerHillBattleStruct();
