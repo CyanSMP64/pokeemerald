@@ -623,7 +623,7 @@ gSongTable::
 	song mus_test_5, MUSIC_PLAYER_BGM, 64, 992
 	song mus_test_6, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_test_7, MUSIC_PLAYER_BGM, 64, 1024
-	song mus_ut_story, MUSIC_PLAYER_BGM, 64, 931
+	song mus_ut_story, MUSIC_PLAYER_BGM, 64, 932
 	song mus_ut_menu0, MUSIC_PLAYER_BGM, 40, 1024
 	song mus_ut_menu1, MUSIC_PLAYER_BGM, 40, 1024
 	song mus_ut_menu2, MUSIC_PLAYER_BGM, 40, 1024
@@ -631,9 +631,9 @@ gSongTable::
 	song mus_ut_menu4, MUSIC_PLAYER_BGM, 40, 1024
 	song mus_ut_menu5, MUSIC_PLAYER_BGM, 40, 1024
 	song mus_ut_menu6, MUSIC_PLAYER_BGM, 40, 1024
-	song mus_ut_menu0_10, MUSIC_PLAYER_BGM, 10, 103
+	song mus_ut_menu0_10, MUSIC_PLAYER_BGM, 10, 102
 	song mus_ut_intronoise, MUSIC_PLAYER_BGM, 64, 1024
-	song mus_ut_intronoise_loop, MUSIC_PLAYER_BGM, 26, 308
+	song mus_ut_intronoise_loop, MUSIC_PLAYER_BGM, 26, 307
 	song mus_ut_cymbal, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_ut_cymbal, MUSIC_PLAYER_BGM, 58, 973
 	song mus_ut_cymbal, MUSIC_PLAYER_BGM, 52, 973
