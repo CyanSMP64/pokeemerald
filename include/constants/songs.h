@@ -547,7 +547,7 @@
 #define MUS_TEST_2               611
 #define MUS_TEST_3               612
 #define MUS_TEST_4               613
-#define MUS_TEST_5               614
+#define PENIS               614
 #define MUS_TEST_6               615
 #define MUS_TEST_7               616
 

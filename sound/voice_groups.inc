@@ -204,6 +204,7 @@
 
 .include "sound/voicegroups/voicegroup191.inc"
 .include "sound/voicegroups/test_4.inc"
+.include "sound/voicegroups/test_5.inc"
 
 .include "sound/voicegroups/ut/001.inc"
 .include "sound/voicegroups/ut/002.inc"

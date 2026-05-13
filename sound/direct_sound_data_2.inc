@@ -1048,9 +1048,9 @@ DirectSoundWaveData_piano1f_d2::
 DirectSoundWaveData_piano1f_d7::
 	.incbin "sound/direct_sound_samples/new/piano1f_d7.bin"
 
-	.align 2
-DirectSoundWaveData_piano1f_f1::
-	.incbin "sound/direct_sound_samples/new/piano1f_f1.bin"
+@	.align 2
+@DirectSoundWaveData_piano1f_f1::
+@	.incbin "sound/direct_sound_samples/new/piano1f_f1.bin"
 
 	.align 2
 DirectSoundWaveData_piano1f_f4::
@@ -1084,9 +1084,9 @@ DirectSoundWaveData_piano1p_d2::
 DirectSoundWaveData_piano1p_d7::
 	.incbin "sound/direct_sound_samples/new/piano1p_d7.bin"
 
-	.align 2
-DirectSoundWaveData_piano1p_f1::
-	.incbin "sound/direct_sound_samples/new/piano1p_f1.bin"
+@	.align 2
+@DirectSoundWaveData_piano1p_f1::
+@	.incbin "sound/direct_sound_samples/new/piano1p_f1.bin"
 
 	.align 2
 DirectSoundWaveData_piano1p_f4::
@@ -1294,3 +1294,54 @@ DirectSoundWaveData_wb_trombone_g2_22::
 	.align 2
 DirectSoundWaveData_wb_w_noise_32::
 	.incbin "sound/direct_sound_samples/wb/w_noise_32.bin"
+
+
+@ funny song
+
+	.align 2
+DirectSoundWaveData_penis_chh::
+	.incbin "sound/direct_sound_samples/new/penis_chh.bin"
+
+	.align 2
+DirectSoundWaveData_penis_crash::
+	.incbin "sound/direct_sound_samples/new/penis_crash.bin"
+
+	.align 2
+DirectSoundWaveData_penis_kick::
+	.incbin "sound/direct_sound_samples/new/penis_kick.bin"
+
+	.align 2
+DirectSoundWaveData_penis_ohh::
+	.incbin "sound/direct_sound_samples/new/penis_ohh.bin"
+
+	.align 2
+DirectSoundWaveData_penis_saw::
+	.incbin "sound/direct_sound_samples/new/penis_saw.bin"
+
+	.align 2
+DirectSoundWaveData_penis_screm::
+	.incbin "sound/direct_sound_samples/new/penis_screm.bin"
+
+	.align 2
+DirectSoundWaveData_penis_snare::
+	.incbin "sound/direct_sound_samples/new/penis_snare.bin"
+
+	.align 2
+DirectSoundWaveData_penis_square::
+	.incbin "sound/direct_sound_samples/new/penis_square.bin"
+
+	.align 2
+DirectSoundWaveData_penis_bass::
+	.incbin "sound/direct_sound_samples/new/penis_bass.bin"
+
+	.align 2
+DirectSoundWaveData_penis_string::
+	.incbin "sound/direct_sound_samples/new/penis_string.bin"
+
+	.align 2
+DirectSoundWaveData_penis_tom::
+	.incbin "sound/direct_sound_samples/new/penis_tom.bin"
+
+	.align 2
+DirectSoundWaveData_penis_tri::
+	.incbin "sound/direct_sound_samples/new/penis_tri.bin"

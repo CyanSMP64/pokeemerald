@@ -620,7 +620,7 @@ gSongTable::
 	song mus_test_2, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_test_3, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_test_4, MUSIC_PLAYER_BGM, 64, 1024
-	song mus_test_5, MUSIC_PLAYER_BGM, 64, 992
+	song mus_test_5, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_test_6, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_test_7, MUSIC_PLAYER_BGM, 64, 1024
 	song mus_ut_story, MUSIC_PLAYER_BGM, 64, 932

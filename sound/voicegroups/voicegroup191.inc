@@ -129,7 +129,7 @@ voice_group voicegroup191
 	voice_keysplit_all voicegroup_STANDARD_1____
 
 voice_group piano1f @ piano1
-	voice_directsound 29, 0, DirectSoundWaveData_piano1f_f1, 255, 255, 0, 220
+@	voice_directsound 29, 0, DirectSoundWaveData_piano1f_f1, 255, 255, 0, 220
 	voice_directsound 38, 0, DirectSoundWaveData_piano1f_d2, 255, 255, 0, 220
 	voice_directsound 47, 0, DirectSoundWaveData_piano1f_b2, 255, 254, 0, 220
 	voice_directsound 56, 0, DirectSoundWaveData_piano1f_gs3, 255, 254, 0, 220
@@ -140,7 +140,7 @@ voice_group piano1f @ piano1
 	voice_directsound 98, 0, DirectSoundWaveData_piano1f_d7, 255, 253, 0, 220
 
 voice_group piano1p @ piano1
-	voice_directsound 29, 0, DirectSoundWaveData_piano1p_f1, 255, 255, 0, 220
+@	voice_directsound 29, 0, DirectSoundWaveData_piano1p_f1, 255, 255, 0, 220
 	voice_directsound 38, 0, DirectSoundWaveData_piano1p_d2, 255, 255, 0, 220
 	voice_directsound 47, 0, DirectSoundWaveData_piano1p_b2, 255, 254, 0, 220
 	voice_directsound 56, 0, DirectSoundWaveData_piano1p_gs3, 255, 254, 0, 220

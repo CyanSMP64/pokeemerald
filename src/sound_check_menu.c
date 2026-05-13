@@ -152,6 +152,7 @@ static void Task_ExitToTitleScreen(u8);
 static void HighlightSelectedWindow(u8);
 static void PrintSoundNumber(u16, u8);
 static void PrintPaddedString(const u8 *const, u8);
+static u8 ConvertAsciiToTextChar(u8);
 static void Task_DrawSubmenu(u8);
 static void Task_ProcessDriverTestInput(u8);
 static void AdjustSelectedDriverParam(s8);
@@ -285,17 +286,17 @@ static void Task_InitSoundCheckMenu_CreateWindows(u8 taskId) // SanitizeDayCareM
     }
 }
 
-//static const u8 *const gBGMNames[];
-//static const u8 *const gSENames[];
+static const u8 *const gBGMNames[];
+static const u8 *const gSENames[];
 
 static void Task_HandleDrawingSoundCheckMenuText(u8 taskId) // sub_080E85F4
 {
     FillWindowPixelRect(WIN_MUS, PIXEL_FILL(1), 0, 14, 224, 12);
     PrintSoundNumber(gTasks[taskId].tBgmIndex + (MUS_LITTLEROOT_TEST - 1), WIN_MUS); // print by BGM index
-//    PrintPaddedString(gBGMNames[gTasks[taskId].tBgmIndex], WIN_MUS);
+    PrintPaddedString(gBGMNames[gTasks[taskId].tBgmIndex], WIN_MUS);
     FillWindowPixelRect(WIN_SE, PIXEL_FILL(1), 0, 14, 224, 12);
     PrintSoundNumber(gTasks[taskId].tSeIndex, WIN_SE);
-//    PrintPaddedString(gSENames[gTasks[taskId].tSeIndex], WIN_SE);
+    PrintPaddedString(gSENames[gTasks[taskId].tSeIndex], WIN_SE);
     gTasks[taskId].func = Task_ProcessSoundCheckMenuInputAndRedraw;
 }
 
@@ -476,11 +477,25 @@ static void PrintPaddedString(const u8 *const string, u8 windowId) // sub_080E89
 
     str[31] = EOS;
 
-    for (i = 0; string[i] != EOS && i < 31; i++)
-        str[i] = string[i];
+    for (i = 0; i < 31 && string[i] != EOS && string[i] != '\0'; i++)
+        str[i] = ConvertAsciiToTextChar(string[i]);
 
     AddTextPrinterParameterized(windowId, 2, str, 32, 14, TEXT_SKIP_DRAW, NULL);
     PutWindowTilemapAndCopyWindowToVram(windowId);
+}
+
+static u8 ConvertAsciiToTextChar(u8 c)
+{
+    if (c >= 'A' && c <= 'Z')
+        return (u8)(0xBB + (c - 'A'));
+
+    if (c >= '0' && c <= '9')
+        return (u8)(0xA1 + (c - '0'));
+
+    if (c == ' ' || c == '_')
+        return CHAR_HYPHEN;
+
+    return c;
 }
 
 static void Task_DrawSubmenu(u8 taskId) // sub_080E89EC
@@ -1012,7 +1027,7 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     CopyWindowToVram(windowId, 2);
     RemoveWindow(windowId);
 }
-/*
+
 #define SOUND_LIST_BGM \
     X(MUS_STOP) \
     X(MUS_LITTLEROOT_TEST) \
@@ -1279,7 +1294,7 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(MUS_TEST_2) \
     X(MUS_TEST_3) \
     X(MUS_TEST_4) \
-    X(MUS_TEST_5) \
+    X(PENIS) \
     X(MUS_TEST_6) \
     X(MUS_TEST_7) \
     X(MUS_UT_STORY) \
@@ -1579,7 +1594,7 @@ static void DestroyWindow(u8 windowId) // sub_080E9750
     X(SE_SUDOWOODO_SHAKE) \
 
 // Create BGM list
-#define X(songId) static const u8 sBGMName_##songId[] = _(#songId);
+#define X(songId) static const u8 sBGMName_##songId[] = #songId;
 SOUND_LIST_BGM
 #undef X
 
@@ -1591,7 +1606,7 @@ SOUND_LIST_BGM
 #undef X
 
 // Create SE list
-#define X(songId) static const u8 sSEName_##songId[] = _(#songId);
+#define X(songId) static const u8 sSEName_##songId[] = #songId;
 SOUND_LIST_SE
 #undef X
 
@@ -1601,7 +1616,7 @@ static const u8 *const gSENames[] =
 SOUND_LIST_SE
 };
 #undef X
-*/
+
 #undef tWindowSelected
 #undef tBgmIndex
 #undef tSeIndex
