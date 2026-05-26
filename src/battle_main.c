@@ -1994,6 +1994,38 @@ static void SpriteCB_UnusedBattleInit_Main(struct Sprite *sprite)
     }
 }
 
+static u16 BallIdToItemId(u8 ballId)
+{
+    switch (ballId)
+    {
+    case BALL_MASTER:
+        return ITEM_MASTER_BALL;
+    case BALL_ULTRA:
+        return ITEM_ULTRA_BALL;
+    case BALL_GREAT:
+        return ITEM_GREAT_BALL;
+    case BALL_SAFARI:
+        return ITEM_SAFARI_BALL;
+    case BALL_NET:
+        return ITEM_NET_BALL;
+    case BALL_DIVE:
+        return ITEM_DIVE_BALL;
+    case BALL_NEST:
+        return ITEM_NEST_BALL;
+    case BALL_REPEAT:
+        return ITEM_REPEAT_BALL;
+    case BALL_TIMER:
+        return ITEM_TIMER_BALL;
+    case BALL_LUXURY:
+        return ITEM_LUXURY_BALL;
+    case BALL_PREMIER:
+        return ITEM_PREMIER_BALL;
+    case BALL_POKE:
+    default:
+        return ITEM_POKE_BALL;
+    }
+}
+
 static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 firstTrainer)
 {
     u32 nameHash = 0;
@@ -2003,6 +2035,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     u8 monsCount;
     u8 otIdType;
     u32 fixedOtId;
+    u16 ballItem;
 
     if (trainerNum == TRAINER_SECRET_BASE)
         return 0;
@@ -2070,6 +2103,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 }
                 
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, otIdType, fixedOtId);
+                ballItem = BallIdToItemId(partyData[i].pokeBallId);
+                SetMonData(&party[i], MON_DATA_POKEBALL, &ballItem);
                 break;
             }
             case F_TRAINER_PARTY_CUSTOM_MOVESET:
@@ -2098,6 +2133,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 }
 
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, otIdType, fixedOtId);
+                ballItem = BallIdToItemId(partyData[i].pokeBallId);
+                SetMonData(&party[i], MON_DATA_POKEBALL, &ballItem);
 
                 for (j = 0; j < MAX_MON_MOVES; j++)
                 {
@@ -2132,6 +2169,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 }
 
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, otIdType, fixedOtId);
+                ballItem = BallIdToItemId(partyData[i].pokeBallId);
+                SetMonData(&party[i], MON_DATA_POKEBALL, &ballItem);
 
                 SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
                 break;
@@ -2162,6 +2201,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 }
 
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, otIdType, fixedOtId);
+                ballItem = BallIdToItemId(partyData[i].pokeBallId);
+                SetMonData(&party[i], MON_DATA_POKEBALL, &ballItem);
 
                 SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
 
