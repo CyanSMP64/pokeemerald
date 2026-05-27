@@ -4442,10 +4442,9 @@ void GetRotomState (void)
 // Returns TRUE if the move was forgotten, false if not
 bool8 RotomForgetSpecialMove (void)
 {
-    u8 i;
+    u8 i, j;
     bool8 forgotSpecialMove = FALSE;
     u16 currentMove;
-    u16 moveNone = MOVE_NONE;
     u8 moveCount = 0;
 
     currentMove = RotomFormToMove(gSpecialVar_0x8007);
@@ -4454,8 +4453,10 @@ bool8 RotomForgetSpecialMove (void)
     {
         if (GetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_MOVE1 + i, NULL) == currentMove)
         {
-            RemoveMonPPBonus (&gPlayerParty[gSpecialVar_0x8004], i);
-            SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_MOVE1 + i, &moveNone);
+            SetMonMoveSlot(&gPlayerParty[gSpecialVar_0x8004], MOVE_NONE, i);
+            RemoveMonPPBonus(&gPlayerParty[gSpecialVar_0x8004], i);
+            for (j = i; j < MAX_MON_MOVES - 1; j++)
+                ShiftMoveSlot(&gPlayerParty[gSpecialVar_0x8004], j, j + 1);
             forgotSpecialMove = TRUE;
             break;
         }
@@ -4498,9 +4499,5 @@ void TeachRotomMove (void)
 // Checks if Rotom knows its special move
 bool8 DoesRotomKnowSpecialMove (void)
 {
-    u16 initialMove, initialSpecies;
-
-    initialSpecies = gSpecialVar_0x8007;
-    initialMove = RotomFormToMove(initialSpecies);
-    return MonKnowsMove(&gPlayerParty[gSpecialVar_0x8004], initialMove);
+    return MonKnowsMove(&gPlayerParty[gSpecialVar_0x8004], gSpecialVar_0x8006);
 }

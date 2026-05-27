@@ -1054,6 +1054,8 @@ LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_CheckMove::
 	playmoncry VAR_0x8005, CRY_MODE_NORMAL
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_RotomEnterMotor, MSGBOX_DEFAULT
 	specialvar VAR_RESULT, DoesRotomKnowSpecialMove
+	goto_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_ReleaseAllEnd
+	specialvar VAR_RESULT, RotomForgetSpecialMove
 	goto_if_eq VAR_RESULT, TRUE, LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_DeleteMove
 	special GetNumMovesSelectedMonHas
 	goto_if_eq VAR_RESULT, MAX_MON_MOVES, LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_ChooseMoveToForget
@@ -1068,7 +1070,6 @@ LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_LearnMove::
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_DeleteMove::
-	special RotomForgetSpecialMove
 	bufferpartymonnick 0, VAR_0x8004
 	buffermovename 1, VAR_0x8008
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_RotomForgotMove2, MSGBOX_DEFAULT
@@ -1111,6 +1112,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_AlreadyEntered::
 LittlerootTown_ProfessorBirchsLab_EventScript_RotomFormChange_GaveUp::
 	copyvar VAR_0x8005, VAR_0x8007
 	special ChangeMonSpecies
+	bufferpartymonnick 0, VAR_0x8004
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_RotomGaveUp, MSGBOX_DEFAULT
 	releaseall
 	end

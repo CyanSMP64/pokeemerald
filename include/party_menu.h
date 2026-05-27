@@ -94,5 +94,6 @@ void MoveDeleterForgetMove(void);
 void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
+void ShiftMoveSlot(struct Pokemon *, u8, u8);
 
 #endif // GUARD_PARTY_MENU_H
