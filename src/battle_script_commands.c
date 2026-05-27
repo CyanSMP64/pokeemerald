@@ -2238,7 +2238,12 @@ static void Cmd_effectivenesssound(void)
     if (gBattleControllerExecFlags)
         return;
 
-    gActiveBattler = gBattlerTarget;
+    if ((gHitMarker & HITMARKER_PASSIVE_DAMAGE)
+     && (gBattleWeather & (B_WEATHER_SANDSTORM | B_WEATHER_HAIL)))
+        gActiveBattler = gBattlerAttacker;
+    else
+        gActiveBattler = gBattlerTarget;
+
     if (!(gMoveResultFlags & MOVE_RESULT_MISSED))
     {
         switch (gMoveResultFlags & (u8)(~MOVE_RESULT_MISSED))
