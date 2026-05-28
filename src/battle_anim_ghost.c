@@ -785,7 +785,33 @@ void AnimTask_DestinyBondWhiteShadow(u8 taskId)
 
     baseX = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2);
     baseY = GetBattlerSpriteCoordAttr(gBattleAnimAttacker, BATTLER_COORD_ATTR_BOTTOM);
-    if (!IsContest())
+
+    // single target (shadow sneak)
+    if (gBattleAnimArgs[2] == 1)
+    {
+        battler = gBattleAnimTarget;
+        if (IsBattlerSpriteVisible(battler))
+        {
+            spriteId = CreateSprite(&gDestinyBondWhiteShadowSpriteTemplate, baseX, baseY, 55);
+            if (spriteId != MAX_SPRITES)
+            {
+                x = GetBattlerSpriteCoord(battler, BATTLER_COORD_X_2);
+                y = GetBattlerSpriteCoordAttr(battler, BATTLER_COORD_ATTR_BOTTOM);
+                gSprites[spriteId].data[0] = baseX << 4;
+                gSprites[spriteId].data[1] = baseY << 4;
+                gSprites[spriteId].data[2] = ((x - baseX) << 4) / gBattleAnimArgs[1];
+                gSprites[spriteId].data[3] = ((y - baseY) << 4) / gBattleAnimArgs[1];
+                gSprites[spriteId].data[4] = gBattleAnimArgs[1];
+                gSprites[spriteId].data[5] = x;
+                gSprites[spriteId].data[6] = y;
+                gSprites[spriteId].callback = AnimDestinyBondWhiteShadow_Step;
+
+                task->data[13] = spriteId;
+                task->data[12] = 1;
+            }
+        }
+    }
+    else if (!IsContest())
     {
         for (battler = 0; battler < MAX_BATTLERS_COUNT; battler++)
         {

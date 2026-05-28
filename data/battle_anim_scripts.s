@@ -11098,7 +11098,7 @@ Move_SHADOW_SNEAK::
 	clearmonbg ANIM_ATTACKER
 	invisible ANIM_ATTACKER
 	delay 0x1
-	createvisualtask AnimTask_DestinyBondWhiteShadow, 0x5, 0x0, 0x30
+	createvisualtask AnimTask_DestinyBondWhiteShadow, 0x5, 0x0, 0x30, 1
 	delay 0x30
 	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_TARGET, 2, 2, 0, 15, RGB_BLACK
 	createsprite gShadowSneakImpactSpriteTemplate, ANIM_TARGET, 2, 0xfff6, 0xfff6, 0x0
