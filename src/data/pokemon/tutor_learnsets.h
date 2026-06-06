@@ -3711,9 +3711,9 @@ static const u32 sTutorLearnsets[] =
                                              TUTOR(MOVE_PSYCH_UP)),
 
     [SPECIES_MANAPHY_EGG]                 = (0),
-    [SPECIES_OLD_UNOWN_C]                 = (0),
-    [SPECIES_OLD_UNOWN_D]                 = (0),
-    [SPECIES_OLD_UNOWN_E]                 = (0),
+    [SPECIES_CHALKBOARD_1]                 = (0),
+    [SPECIES_CHALKBOARD_2]                 = (0),
+    [SPECIES_CHALKBOARD_3]                 = (0),
     [SPECIES_OLD_UNOWN_F]                 = (0),
     [SPECIES_OLD_UNOWN_G]                 = (0),
     [SPECIES_OLD_UNOWN_H]                 = (0),

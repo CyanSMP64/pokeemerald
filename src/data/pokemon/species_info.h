@@ -5924,7 +5924,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .formChangeTable = NULL,
     },
 
-    [SPECIES_OLD_UNOWN_C] = 
+    [SPECIES_CHALKBOARD_1] = 
     {                                                                       \
         .baseHP = 50,                                                       \
         .baseAttack = 150,                                                  \
@@ -5955,7 +5955,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .formChangeTable = NULL,
     },
 
-    [SPECIES_OLD_UNOWN_D] = 
+    [SPECIES_CHALKBOARD_2] = 
     {                                                                       \
         .baseHP = 50,                                                       \
         .baseAttack = 150,                                                  \
@@ -5986,7 +5986,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .formChangeTable = NULL,
     },
 
-    [SPECIES_OLD_UNOWN_E] = 
+    [SPECIES_CHALKBOARD_3] = 
     {                                                                       \
         .baseHP = 50,                                                       \
         .baseAttack = 150,                                                  \
