@@ -23,7 +23,9 @@ CaveOfOrigin_UnusedRubySapphireMap3_EventScript_StartEndScreen::
 	end
 
 CaveOfOrigin_UnusedRubySapphireMap3_EventScript_LoopEndScreen::
-	delay 255
+	delay 14600
+	fadescreenspeed FADE_TO_WHITE, 4
+	special DoSoftReset
 	end
 
 CaveOfOrigin_UnusedRubySapphireMap3_EventScript_ForRealOn::
