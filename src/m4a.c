@@ -51,6 +51,32 @@ void UnusedDummyFunc(void)
 {
 }
 
+static void PrimeTempoCounter(struct MusicPlayerInfo *mplayInfo)
+{
+    u32 scaledTempoStep = mplayInfo->tempoI * mplayInfo->songSpeed;
+    u16 scaledTempoStepInt = scaledTempoStep >> 10;
+    u8 scaledTempoStepFrac = (scaledTempoStep >> 2) & 0xFF;
+
+    if (scaledTempoStepInt < 150)
+    {
+        if (scaledTempoStepFrac != 0)
+        {
+            mplayInfo->tempoC = 149 - scaledTempoStepInt;
+            mplayInfo->tempoScaleFrac = 0x100 - scaledTempoStepFrac;
+        }
+        else
+        {
+            mplayInfo->tempoC = 150 - scaledTempoStepInt;
+            mplayInfo->tempoScaleFrac = 0;
+        }
+    }
+    else
+    {
+        mplayInfo->tempoC = 0;
+        mplayInfo->tempoScaleFrac = 0;
+    }
+}
+
 void MPlayContinue(struct MusicPlayerInfo *mplayInfo)
 {
     if (mplayInfo->ident == ID_NUMBER)
@@ -626,7 +652,7 @@ void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader
         mplayInfo->tempoD = 150;
         mplayInfo->tempoI = 150;
         mplayInfo->tempoU = 0x100;
-        mplayInfo->tempoC = 0;
+        PrimeTempoCounter(mplayInfo);
         mplayInfo->fadeOI = 0;
 
         i = 0;
@@ -1238,7 +1264,8 @@ void m4aMPlayTempoControl(struct MusicPlayerInfo *mplayInfo, u16 tempo)
     {
         mplayInfo->ident++;
         mplayInfo->tempoU = tempo;
-        mplayInfo->tempoI = (mplayInfo->tempoD * mplayInfo->tempoU * mplayInfo->songSpeed) >> 18;
+        mplayInfo->tempoI = ((mplayInfo->tempoD * mplayInfo->tempoU) >> 8);
+        PrimeTempoCounter(mplayInfo);
         mplayInfo->ident = ID_NUMBER;
     }
 }

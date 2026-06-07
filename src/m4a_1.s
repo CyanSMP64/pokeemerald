@@ -1455,9 +1455,8 @@ ply_tempo:
 	ldrh r2, [r0, o_MusicPlayerInfo_tempoU]
 	muls r3, r2
 	lsrs r3, 8
-	ldrh r2, [r0, o_MusicPlayerInfo_songSpeed]
-	muls r3, r2
-	lsrs r3, 10
+	movs r2, 0
+	strb r2, [r0, o_MusicPlayerInfo_tempoScaleFrac]
 	strh r3, [r0, o_MusicPlayerInfo_tempoI]
 	bx r12
 	thumb_func_end ply_tempo
@@ -1699,7 +1698,11 @@ lt3_ID_NUMBER:      .word ID_NUMBER
 
 	thumb_func_start MPlayMain
 MPlayMain:
-	ldr r2, lt2_ID_NUMBER
+	ldr r2, lt4_ID_NUMBER
+	b _081DD826
+	.align 2, 0
+lt4_ID_NUMBER:      .word ID_NUMBER
+_081DD826:
 	ldr r3, [r0, o_MusicPlayerInfo_ident]
 	cmp r2, r3
 	beq _081DD82E
@@ -1739,9 +1742,20 @@ _081DD858:
 _081DD86C:
 	ldrh r0, [r7, o_MusicPlayerInfo_tempoC]
 	ldrh r1, [r7, o_MusicPlayerInfo_tempoI]
-@	ldrh r2, [r7, o_MusicPlayerInfo_songSpeed]
-@	muls r1, r2
-@	lsrs r1, 10
+	ldrh r2, [r7, o_MusicPlayerInfo_songSpeed]
+	muls r1, r2
+	adds r2, r1, 0
+	lsrs r1, 10
+	lsrs r2, 2
+	movs r3, 0xFF
+	ands r2, r3
+	ldrb r3, [r7, o_MusicPlayerInfo_tempoScaleFrac]
+	adds r3, r2
+	lsrs r2, r3, 8
+	adds r1, r2
+	lsls r3, 24
+	lsrs r3, 24
+	strb r3, [r7, o_MusicPlayerInfo_tempoScaleFrac]
 	adds r0, r1
 	b _081DD9BC
 _081DD874:
