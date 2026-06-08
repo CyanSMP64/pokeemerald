@@ -814,6 +814,8 @@ void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *tr
     {
         s32 x;
         s32 y;
+        u32 volR;
+        u32 volL;
 
         // VOL2 is a second multiplicative volume stage; VOL2 defaults to 127.
         x = (u32)((track->vol * track->vol2 + 63) / 127);
@@ -835,8 +837,14 @@ void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *tr
         else if (y > 127)
             y = 127;
 
-        track->volMR = (u32)((y + 128) * x) >> 8;
-        track->volML = (u32)((127 - y) * x) >> 8;
+        volR = (u32)((y + 128) * x) >> 8;
+        volL = (u32)((127 - y) * x) >> 8;
+        if (volR > 255)
+            volR = 255;
+        if (volL > 255)
+            volL = 255;
+        track->volMR = volR;
+        track->volML = volL;
     }
 
     if (track->flags & MPT_FLG_PITSET)

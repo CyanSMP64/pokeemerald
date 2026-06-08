@@ -1145,6 +1145,22 @@ DirectSoundWaveData_strings_g6::
 	.incbin "sound/direct_sound_samples/new/strings_g6.bin"
 
 	.align 2
+DirectSoundWaveData_synstr1_ch_maj7::
+	.incbin "sound/direct_sound_samples/new/synstr1_ch_maj7.bin"
+
+	.align 2
+DirectSoundWaveData_synstr1_ch_maji1::
+	.incbin "sound/direct_sound_samples/new/synstr1_ch_maji1.bin"
+
+	.align 2
+DirectSoundWaveData_synstr1_ch_min7::
+	.incbin "sound/direct_sound_samples/new/synstr1_ch_min7.bin"
+
+	.align 2
+DirectSoundWaveData_synstr1_ch_mini1::
+	.incbin "sound/direct_sound_samples/new/synstr1_ch_mini1.bin"
+
+	.align 2
 DirectSoundWaveData_tubularbell_a4::
 	.incbin "sound/direct_sound_samples/new/tubularbell_a4.bin"
 
