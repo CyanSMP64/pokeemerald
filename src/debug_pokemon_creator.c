@@ -84,7 +84,7 @@ static const u8 Str_SpD[] = _("SpD");
 static const u8 Str_HP_IV_EV[] = _("HP IV/EV/Now/Max");
 static const u8 Str_Atk_IV_EV[] = _("Atk IV/EV/Res");
 static const u8 Str_Def_IV_EV[] = _("Def IV/EV/Res");
-static const u8 Str_Spe_IV_EV[] = _("Spd IV/EV/Res");
+static const u8 Str_Spe_IV_EV[] = _("Speed IV/EV/Res");
 static const u8 Str_SpA_IV_EV[] = _("Sp. Atk IV/EV/Res");
 static const u8 Str_SpD_IV_EV[] = _("Sp. Def IV/EV/Res");
 static const u8 Str_EV[] = _("EV");
@@ -294,7 +294,7 @@ static const struct EditPokemonStruct DebugPkmCreator_Options[] =
         [VAL_ABILITY]              = {Str_Ability, EDIT_NORMAL, 0, 2, 0, MON_DATA_ABILITY_NUM, 1},
         [VAL_FRIENDSHIP]           = {Str_Friendship, EDIT_NORMAL, 0, 255, 0, MON_DATA_FRIENDSHIP, 3},
         [VAL_METLVL]               = {Str_MetLevel, EDIT_NORMAL, 0, 100, 10, MON_DATA_MET_LEVEL, 3}, // 0 instead of 1 because 0 means hatched from an Egg
-        [VAL_METLOCATATION]        = {Str_MetLocation, EDIT_NORMAL, 0, 65535, MAPSEC_LITTLEROOT_TOWN, MON_DATA_MET_LOCATION, 5},
+        [VAL_METLOCATATION]        = {Str_MetLocation, EDIT_NORMAL, 0, MAPSEC_TRAINER_HILL, MAPSEC_LITTLEROOT_TOWN, MON_DATA_MET_LOCATION, 5},
         [VAL_BALL]                 = {Str_Ball, EDIT_NORMAL, 0, LAST_BALL, ITEM_POKE_BALL, MON_DATA_POKEBALL, 2},
         [VAL_PKRUS_STRAIN]         = {Str_PKrus, EDIT_NORMAL, 0, 3, 0, MON_DATA_POKERUS, 1}, // 4 different "strains"
         [VAL_PKRUS_DAYS_DEF]       = {Str_PKrus, EDIT_NORMAL, 1, 4, 1, MON_DATA_POKERUS, 1}, // "default" days until cured
@@ -315,12 +315,12 @@ static const struct EditPokemonStruct DebugPkmCreator_Options[] =
         [VAL_SPATK_IV]             = {Str_SpA_IV_EV, EDIT_NORMAL, 0, 31, 0, MON_DATA_SPATK_IV, 2},
         [VAL_SPDEF_IV]             = {Str_SpD_IV_EV, EDIT_NORMAL, 0, 31, 0, MON_DATA_SPDEF_IV, 2},
         // EVs
-        [VAL_HP_EV]                = {Str_HP_IV_EV, EDIT_NORMAL, 0, 255, 0, MON_DATA_HP_EV, 3},
-        [VAL_ATK_EV]               = {Str_Atk_IV_EV, EDIT_NORMAL, 0, 255, 0, MON_DATA_ATK_EV, 3},
-        [VAL_DEF_EV]               = {Str_Def_IV_EV, EDIT_NORMAL, 0, 255, 0, MON_DATA_DEF_EV, 3},
-        [VAL_SPEED_EV]             = {Str_Spe_IV_EV, EDIT_NORMAL, 0, 255, 0, MON_DATA_SPEED_EV, 3},
-        [VAL_SPATK_EV]             = {Str_SpA_IV_EV, EDIT_NORMAL, 0, 255, 0, MON_DATA_SPATK_EV, 3},
-        [VAL_SPDEF_EV]             = {Str_SpD_IV_EV, EDIT_NORMAL, 0, 255, 0, MON_DATA_SPDEF_EV, 3},
+        [VAL_HP_EV]                = {Str_HP_IV_EV, EDIT_NORMAL, 0, 252, 0, MON_DATA_HP_EV, 3},
+        [VAL_ATK_EV]               = {Str_Atk_IV_EV, EDIT_NORMAL, 0, 252, 0, MON_DATA_ATK_EV, 3},
+        [VAL_DEF_EV]               = {Str_Def_IV_EV, EDIT_NORMAL, 0, 252, 0, MON_DATA_DEF_EV, 3},
+        [VAL_SPEED_EV]             = {Str_Spe_IV_EV, EDIT_NORMAL, 0, 252, 0, MON_DATA_SPEED_EV, 3},
+        [VAL_SPATK_EV]             = {Str_SpA_IV_EV, EDIT_NORMAL, 0, 252, 0, MON_DATA_SPATK_EV, 3},
+        [VAL_SPDEF_EV]             = {Str_SpD_IV_EV, EDIT_NORMAL, 0, 252, 0, MON_DATA_SPDEF_EV, 3},
         // Contest Stats
         [VAL_COOL]                 = {Str_Cool, EDIT_NORMAL, 0, 255, 0, MON_DATA_COOL, 3},
         [VAL_CUTE]                 = {Str_Cute, EDIT_NORMAL, 0, 255, 0, MON_DATA_CUTE, 3},
@@ -368,7 +368,7 @@ static const u8 DebugPkmCreator_Pages[PAGE_COUNT + 1][7] =
     {VAL_SPECIES, VAL_LEVEL, VAL_TID, VAL_PID, VAL_NICK, VAL_OT, 0xFF},
     {VAL_STATUS, VAL_FRIENDSHIP, VAL_PKRUS_STRAIN, VAL_EGG, VAL_EGG2, VAL_HASSPECIES, 0xFF},
     {VAL_MOVE_1, VAL_MOVE_2, VAL_MOVE_3, VAL_MOVE_4, VAL_ITEM, VAL_ABILITY, 0xFF},
-    {VAL_HP_IV, VAL_ATK_IV, VAL_DEF_IV, VAL_SPEED_IV, VAL_SPATK_IV, VAL_SPDEF_IV, 0xFF},
+    {VAL_HP_IV, VAL_ATK_IV, VAL_DEF_IV, VAL_SPATK_IV, VAL_SPDEF_IV, VAL_SPEED_IV, 0xFF},
     {VAL_COOL, VAL_CUTE, VAL_BEAUTY, VAL_SMART, VAL_TOUGH, VAL_SHEEN, 0xFF},
     {VAL_RIBBON_COOLRIBBON, VAL_RIBBON_CUTERIBBON, VAL_RIBBON_BEAUTYRIBBON, VAL_RIBBON_SMARTRIBBON, VAL_RIBBON_TOUGHRIBBON, VAL_RIBBON_ARTISTRIBBON, 0xFF},
     {VAL_RIBBON_CHAMPRIBBON, VAL_RIBBON_WINRIBBON, VAL_RIBBON_VICTORYRIBBON, VAL_RIBBON_EFFORTRIBBON, VAL_RIBBON_GIFTRIBBON, VAL_RIBBON_FATEFUL, 0xFF},
@@ -405,9 +405,9 @@ static const u8 DebugPkmCreator_AltIndexes[PAGE_COUNT + 1][6][3] =
         {VAL_HP_EV, VAL_HP_CURRENT, VAL_HP_MAX},
         {VAL_ATK_EV, VAL_ATK, 0xFF},
         {VAL_DEF_EV, VAL_DEF, 0xFF},
-        {VAL_SPEED_EV, VAL_SPEED, 0xFF},
         {VAL_SPATK_EV, VAL_SPATK, 0xFF},
         {VAL_SPDEF_EV, VAL_SPDEF, 0xFF},
+        {VAL_SPEED_EV, VAL_SPEED, 0xFF},
     },
     {
         {0xFF, 0xFF, 0xFF},
@@ -617,11 +617,21 @@ static void DebugPkmCreator_Init_SetNewMonData(bool8 setMoves)
 {
     struct Pokemon* mons = &sDebugPkmCreatorData.mon;
     u32 data, i, j, k;
-    // Buffer the OT name
-    StringCopyN(DebugPkmCreator_NameBuffer, mons->box.otName, PLAYER_NAME_LENGTH);
+    u8 oldOtName[PLAYER_NAME_LENGTH + 1];
+    u8 oldNickname[POKEMON_NAME_LENGTH + 1];
+    // Buffer names
+    StringCopyN(oldOtName, mons->box.otName, PLAYER_NAME_LENGTH);
+    oldOtName[PLAYER_NAME_LENGTH] = EOS;
+    if (!setMoves)
+    {
+        StringCopyN(oldNickname, mons->box.nickname, POKEMON_NAME_LENGTH);
+        oldNickname[POKEMON_NAME_LENGTH] = EOS;
+    }
     data = (sDebugPkmCreatorData.data[3] << 16) | sDebugPkmCreatorData.data[2];
     CreateMon(mons, sDebugPkmCreatorData.data[0], sDebugPkmCreatorData.data[15], 32, 1, sDebugPkmCreatorData.data[1], OT_ID_PRESET, data);
-    SetMonData(mons, MON_DATA_OT_NAME, DebugPkmCreator_NameBuffer);
+    SetMonData(mons, MON_DATA_OT_NAME, oldOtName);
+    if (!setMoves)
+        SetMonData(mons, MON_DATA_NICKNAME, oldNickname);
     data = ((sDebugPkmCreatorData.data[23] - 1) & 3) << 6;
     data |= (sDebugPkmCreatorData.data[22] & 3) << 4;
     data |= (sDebugPkmCreatorData.data[24] & 0xf);
