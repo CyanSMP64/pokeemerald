@@ -1877,6 +1877,9 @@ bool8 ScrCmd_setwildbattle(struct ScriptContext *ctx)
     u8 level = ScriptReadByte(ctx);
     u16 item = ScriptReadHalfword(ctx);
 
+    if (species >= 0x4000)
+        species = VarGet(species);
+
     CreateScriptedWildMon(species, level, item);
     return FALSE;
 }

@@ -57,33 +57,33 @@ FallarborTown_PokemonCenter_1F_EventScript_LanetteExited::
 	end
 
 FallarborTown_PokemonCenter_1F_Movement_LanetteExitNorth:
-	walk_faster_right
-	walk_faster_down
-	walk_faster_down
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
+	walk_fast_right
+	walk_fast_down
+	walk_fast_down
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
 	step_end
 
 FallarborTown_PokemonCenter_1F_Movement_LanetteExitWest:
-	walk_faster_down
-	walk_faster_down
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
 	step_end
 
 FallarborTown_PokemonCenter_1F_Text_LanetteGreeting:
-	.string "Aaaaaaah!\n"
+	.string "Aaaaaaah! You distracted me!\n"
 	.string "A creeper blew up my house!$"
 
 FallarborTown_PokemonCenter_1F_Text_FossilManiacEdgeOfTown:
