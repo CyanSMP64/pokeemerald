@@ -731,7 +731,7 @@ int main(int argc, char ** argv)
  *         gEnemyParty                         - 0x02024744 (random statics)
  * 
  * gflib/text.o(.text)
- *         RunTextPrinters                     - 0x08004778 (instant text) // intentional crash, moved
+ *         RunTextPrinters                     - 0x08004778 (instant text) // option removed from randomizer
  * 
  * src/battle_controllers.o(.text)
  *         SetUpBattleVarsAndBirchZigzagoon    - 0x0803269c (random statics)
@@ -744,7 +744,7 @@ int main(int argc, char ** argv)
  *         BattleSetup_StartLegendaryBattle    - 0x080b0934 (fix music) // option removed from randomizer
  * 
  * src/menu.o(.rodata)
- *         sTextSpeedFrameDelays               - 0x0860f094 (instant text) // intentional crash, moved
+ *         sTextSpeedFrameDelays               - 0x0860f094 (instant text) // option removed from randomizer
  * 
  * Also please make sure no data is written to the following addresses:
  * 

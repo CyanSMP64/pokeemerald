@@ -37,7 +37,6 @@ prefabs.json
 .fuse_hidden*
 *.sna
 *.diff
-*.sym
 *.js
 *.ini
 *.toml
