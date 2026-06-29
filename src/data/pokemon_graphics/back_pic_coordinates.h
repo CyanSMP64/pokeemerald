@@ -1211,7 +1211,7 @@ const struct MonCoords gMonBackPicCoords[] =
     [SPECIES_CHIMECHO_MEGA]                = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_ABSOL_MEGA_Z]                 = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_STARAPTOR_MEGA]               = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
-    [SPECIES_GARCHOMP_MEGA_Z]              = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  3 },
+    [SPECIES_GARCHOMP_MEGA_Z]              = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_LUCARIO_MEGA_Z]               = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_HEATRAN_MEGA]                 = { .size = MON_COORDS_SIZE(64, 64), .y_offset = 15 },
     [SPECIES_DARKRAI_MEGA]                 = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  3 },
