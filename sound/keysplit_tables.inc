@@ -74,13 +74,13 @@ keysplit 7oct, 0
     split 6, 132
 
 keysplit piano1, 12
-    split 0, 43
-    split 1, 53
-    split 2, 62
-    split 3, 68
-    split 4, 76
-    split 5, 84
-    split 6, 94
+    split 0, 38
+    split 1, 48
+    split 2, 58
+    split 3, 65
+    split 4, 72
+    split 5, 80
+    split 6, 89
     split 7, 120
 
 keysplit glocken, 24

@@ -1033,76 +1033,68 @@ DirectSoundWaveData_mus_intronoise_r::
 	.incbin "sound/direct_sound_samples/new/mus_intronoise_r.bin"
 
 	.align 2
-DirectSoundWaveData_piano1f_b2::
-	.incbin "sound/direct_sound_samples/new/piano1f_b2.bin"
+DirectSoundWaveData_piano1f_a1::
+	.incbin "sound/direct_sound_samples/new/piano1f_a1.bin"
 
 	.align 2
-DirectSoundWaveData_piano1f_b4::
-	.incbin "sound/direct_sound_samples/new/piano1f_b4.bin"
+DirectSoundWaveData_piano1f_a6::
+	.incbin "sound/direct_sound_samples/new/piano1f_a6.bin"
 
 	.align 2
-DirectSoundWaveData_piano1f_d2::
-	.incbin "sound/direct_sound_samples/new/piano1f_d2.bin"
+DirectSoundWaveData_piano1f_c6::
+	.incbin "sound/direct_sound_samples/new/piano1f_c6.bin"
 
 	.align 2
-DirectSoundWaveData_piano1f_d7::
-	.incbin "sound/direct_sound_samples/new/piano1f_d7.bin"
-
-@	.align 2
-@DirectSoundWaveData_piano1f_f1::
-@	.incbin "sound/direct_sound_samples/new/piano1f_f1.bin"
+DirectSoundWaveData_piano1f_cs4::
+	.incbin "sound/direct_sound_samples/new/piano1f_cs4.bin"
 
 	.align 2
-DirectSoundWaveData_piano1f_f4::
-	.incbin "sound/direct_sound_samples/new/piano1f_f4.bin"
+DirectSoundWaveData_piano1f_ds5::
+	.incbin "sound/direct_sound_samples/new/piano1f_ds5.bin"
 
 	.align 2
-DirectSoundWaveData_piano1f_f6::
-	.incbin "sound/direct_sound_samples/new/piano1f_f6.bin"
+DirectSoundWaveData_piano1f_e3::
+	.incbin "sound/direct_sound_samples/new/piano1f_e3.bin"
 
 	.align 2
-DirectSoundWaveData_piano1f_gs3::
-	.incbin "sound/direct_sound_samples/new/piano1f_gs3.bin"
+DirectSoundWaveData_piano1f_fs2::
+	.incbin "sound/direct_sound_samples/new/piano1f_fs2.bin"
 
 	.align 2
-DirectSoundWaveData_piano1f_gs5::
-	.incbin "sound/direct_sound_samples/new/piano1f_gs5.bin"
+DirectSoundWaveData_piano1f_gs4::
+	.incbin "sound/direct_sound_samples/new/piano1f_gs4.bin"
 
 	.align 2
-DirectSoundWaveData_piano1p_b2::
-	.incbin "sound/direct_sound_samples/new/piano1p_b2.bin"
+DirectSoundWaveData_piano1p_a1::
+	.incbin "sound/direct_sound_samples/new/piano1p_a1.bin"
 
 	.align 2
-DirectSoundWaveData_piano1p_b4::
-	.incbin "sound/direct_sound_samples/new/piano1p_b4.bin"
+DirectSoundWaveData_piano1p_a6::
+	.incbin "sound/direct_sound_samples/new/piano1p_a6.bin"
 
 	.align 2
-DirectSoundWaveData_piano1p_d2::
-	.incbin "sound/direct_sound_samples/new/piano1p_d2.bin"
+DirectSoundWaveData_piano1p_c6::
+	.incbin "sound/direct_sound_samples/new/piano1p_c6.bin"
 
 	.align 2
-DirectSoundWaveData_piano1p_d7::
-	.incbin "sound/direct_sound_samples/new/piano1p_d7.bin"
-
-@	.align 2
-@DirectSoundWaveData_piano1p_f1::
-@	.incbin "sound/direct_sound_samples/new/piano1p_f1.bin"
+DirectSoundWaveData_piano1p_cs4::
+	.incbin "sound/direct_sound_samples/new/piano1p_cs4.bin"
 
 	.align 2
-DirectSoundWaveData_piano1p_f4::
-	.incbin "sound/direct_sound_samples/new/piano1p_f4.bin"
+DirectSoundWaveData_piano1p_ds5::
+	.incbin "sound/direct_sound_samples/new/piano1p_ds5.bin"
 
 	.align 2
-DirectSoundWaveData_piano1p_f6::
-	.incbin "sound/direct_sound_samples/new/piano1p_f6.bin"
+DirectSoundWaveData_piano1p_e3::
+	.incbin "sound/direct_sound_samples/new/piano1p_e3.bin"
 
 	.align 2
-DirectSoundWaveData_piano1p_gs3::
-	.incbin "sound/direct_sound_samples/new/piano1p_gs3.bin"
+DirectSoundWaveData_piano1p_fs2::
+	.incbin "sound/direct_sound_samples/new/piano1p_fs2.bin"
 
 	.align 2
-DirectSoundWaveData_piano1p_gs5::
-	.incbin "sound/direct_sound_samples/new/piano1p_gs5.bin"
+DirectSoundWaveData_piano1p_gs4::
+	.incbin "sound/direct_sound_samples/new/piano1p_gs4.bin"
 
 	.align 2
 DirectSoundWaveData_roomkick::

@@ -129,26 +129,24 @@ voice_group voicegroup191
 	voice_keysplit_all voicegroup_STANDARD_1____
 
 voice_group piano1f @ piano1
-@	voice_directsound 29, 0, DirectSoundWaveData_piano1f_f1, 255, 255, 0, 220
-	voice_directsound 38, 0, DirectSoundWaveData_piano1f_d2, 255, 255, 0, 220
-	voice_directsound 47, 0, DirectSoundWaveData_piano1f_b2, 255, 254, 0, 220
-	voice_directsound 56, 0, DirectSoundWaveData_piano1f_gs3, 255, 254, 0, 220
-	voice_directsound 65, 0, DirectSoundWaveData_piano1f_f4, 255, 254, 0, 220
-	voice_directsound 71, 0, DirectSoundWaveData_piano1f_b4, 255, 253, 0, 220
-	voice_directsound 80, 0, DirectSoundWaveData_piano1f_gs5, 255, 253, 0, 220
-	voice_directsound 89, 0, DirectSoundWaveData_piano1f_f6, 255, 253, 0, 220
-	voice_directsound 98, 0, DirectSoundWaveData_piano1f_d7, 255, 253, 0, 220
+	voice_directsound 33, 0, DirectSoundWaveData_piano1f_a1, 255, 254, 0, 220
+	voice_directsound 42, 0, DirectSoundWaveData_piano1f_fs2, 255, 253, 0, 220
+	voice_directsound 52, 0, DirectSoundWaveData_piano1f_e3, 255, 253, 0, 220
+	voice_directsound 61, 0, DirectSoundWaveData_piano1f_cs4, 255, 252, 0, 220
+	voice_directsound 68, 0, DirectSoundWaveData_piano1f_gs4, 255, 251, 0, 220
+	voice_directsound 75, 0, DirectSoundWaveData_piano1f_ds5, 255, 250, 0, 220
+	voice_directsound 84, 0, DirectSoundWaveData_piano1f_c6, 255, 249, 0, 220
+	voice_directsound 93, 0, DirectSoundWaveData_piano1f_a6, 255, 247, 0, 220
 
 voice_group piano1p @ piano1
-@	voice_directsound 29, 0, DirectSoundWaveData_piano1p_f1, 255, 255, 0, 220
-	voice_directsound 38, 0, DirectSoundWaveData_piano1p_d2, 255, 255, 0, 220
-	voice_directsound 47, 0, DirectSoundWaveData_piano1p_b2, 255, 254, 0, 220
-	voice_directsound 56, 0, DirectSoundWaveData_piano1p_gs3, 255, 254, 0, 220
-	voice_directsound 65, 0, DirectSoundWaveData_piano1p_f4, 255, 253, 0, 220
-	voice_directsound 71, 0, DirectSoundWaveData_piano1p_b4, 255, 253, 0, 220
-	voice_directsound 80, 0, DirectSoundWaveData_piano1p_gs5, 255, 252, 0, 220
-	voice_directsound 89, 0, DirectSoundWaveData_piano1p_f6, 255, 252, 0, 220
-	voice_directsound 98, 0, DirectSoundWaveData_piano1p_d7, 255, 251, 0, 220
+	voice_directsound 33, 0, DirectSoundWaveData_piano1p_a1, 255, 254, 0, 220
+	voice_directsound 42, 0, DirectSoundWaveData_piano1p_fs2, 255, 253, 0, 220
+	voice_directsound 52, 0, DirectSoundWaveData_piano1p_e3, 255, 253, 0, 220
+	voice_directsound 61, 0, DirectSoundWaveData_piano1p_cs4, 255, 252, 0, 220
+	voice_directsound 68, 0, DirectSoundWaveData_piano1p_gs4, 255, 251, 0, 220
+	voice_directsound 75, 0, DirectSoundWaveData_piano1p_ds5, 255, 250, 0, 220
+	voice_directsound 84, 0, DirectSoundWaveData_piano1p_c6, 255, 249, 0, 220
+	voice_directsound 93, 0, DirectSoundWaveData_piano1p_a6, 255, 247, 0, 220
 
 voice_group Piano_2_______ @ 4oct - 8
 	voice_directsound 60, 0, DirectSoundWaveData_Piano_2_______1, 255, 252, 0, 212

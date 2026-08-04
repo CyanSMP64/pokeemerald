@@ -2178,6 +2178,10 @@ _081DD9F6:
 	movs r0, MPT_FLG_VOLCHG
 	tst r0, r3
 	beq _081DDA14
+	ldrb r0, [r4, o_SoundChannel_statusFlags]
+	movs r1, SOUND_CHANNEL_SF_STOP
+	tst r0, r1
+	bne _081DDA14
 	bl ChnVolSetAsm
 	cmp r6, 0
 	beq _081DDA14
