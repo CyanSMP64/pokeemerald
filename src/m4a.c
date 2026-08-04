@@ -5,7 +5,7 @@ extern const u8 gCgb3Vol[];
 
 #define BSS_CODE __attribute__((section(".bss.code")))
 
-BSS_CODE ALIGNED(4) char SoundMainRAM_Buffer[0xa84] = {0};
+BSS_CODE ALIGNED(4) char SoundMainRAM_Buffer[0xa90] = {0};
 BSS_CODE ALIGNED(4) u32 hq_buffer_ptr[0x160] = {0};
 
 COMMON_DATA struct SoundInfo gSoundInfo = {0};
@@ -75,6 +75,81 @@ static void PrimeTempoCounter(struct MusicPlayerInfo *mplayInfo)
         mplayInfo->tempoC = 0;
         mplayInfo->tempoScaleFrac = 0;
     }
+}
+
+static void PrimeAdsrCounter(struct MusicPlayerInfo *mplayInfo)
+{
+    u16 num;
+    u16 den;
+    u16 counter;
+    u16 songSpeed = mplayInfo->songSpeed;
+
+    if (songSpeed >= 1024)
+    {
+        num = 1024;
+        den = songSpeed;
+    }
+    else
+    {
+        num = songSpeed;
+        den = 1024;
+    }
+
+    if (num >= den)
+    {
+        counter = 0;
+        mplayInfo->gap[2] = 1;
+    }
+    else
+    {
+        counter = den - num;
+        mplayInfo->gap[2] = 1;
+    }
+
+    mplayInfo->gap[0] = counter & 0xFF;
+    mplayInfo->gap[1] = counter >> 8;
+    mplayInfo->gap[3] = 0;
+}
+
+void AdvanceAdsrCounter(struct MusicPlayerInfo *mplayInfo)
+{
+    u16 num;
+    u16 den;
+    u16 counter;
+    u16 songSpeed = mplayInfo->songSpeed;
+
+    if (songSpeed >= 1024)
+    {
+        num = 1024;
+        den = songSpeed;
+    }
+    else
+    {
+        num = songSpeed;
+        den = 1024;
+    }
+
+    if (num >= den)
+    {
+        mplayInfo->gap[2] = 1;
+        return;
+    }
+
+    counter = (u16)mplayInfo->gap[0] | ((u16)mplayInfo->gap[1] << 8);
+    counter += num;
+
+    if (counter >= den)
+    {
+        counter -= den;
+        mplayInfo->gap[2] = 1;
+    }
+    else
+    {
+        mplayInfo->gap[2] = 0;
+    }
+
+    mplayInfo->gap[0] = counter & 0xFF;
+    mplayInfo->gap[1] = counter >> 8;
 }
 
 void MPlayContinue(struct MusicPlayerInfo *mplayInfo)
@@ -673,6 +748,7 @@ void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader
         mplayInfo->tempoI = 150;
         mplayInfo->tempoU = 0x100;
         PrimeTempoCounter(mplayInfo);
+        PrimeAdsrCounter(mplayInfo);
         mplayInfo->fadeOI = 0;
 
         i = 0;

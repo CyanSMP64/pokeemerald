@@ -161,7 +161,7 @@ struct SoundChannel
     struct MusicPlayerTrack *track;
     void *prevChannelPointer;
     void *nextChannelPointer;
-    u32 dummy4;
+    struct MusicPlayerInfo *mplayInfo;
     u16 portaCurrent;
     u16 xpc;
 };
@@ -437,6 +437,7 @@ void SoundInit(struct SoundInfo *soundInfo);
 void MPlayExtender(struct CgbChannel *cgbChans);
 void m4aSoundMode(u32 mode);
 void MPlayOpen(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *tracks, u8 trackCount);
+void AdvanceAdsrCounter(struct MusicPlayerInfo *mplayInfo);
 void CgbSound(void);
 void CgbOscOff(u8);
 void CgbModVol(struct CgbChannel *chan);

@@ -133,7 +133,7 @@
 	struct_field o_SoundChannel_track, 4
 	struct_field o_SoundChannel_prevChannelPointer, 4
 	struct_field o_SoundChannel_nextChannelPointer, 4
-	struct_field o_SoundChannel_dummy4, 4
+	struct_field o_SoundChannel_mplayInfo, 4
 	struct_field o_SoundChannel_portaCurrent, 2
 	struct_field o_SoundChannel_xpc, 2
 	struct_field SoundChannel_size, 0
