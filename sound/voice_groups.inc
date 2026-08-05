@@ -203,6 +203,7 @@
 .include "sound/voicegroups/drumsets/rg_credits.inc"
 
 .include "sound/voicegroups/voicegroup191.inc"
+.include "sound/voicegroups/test_3.inc"
 .include "sound/voicegroups/test_4.inc"
 .include "sound/voicegroups/test_5.inc"
 

@@ -42,6 +42,7 @@ int g_clocksPerBeat = 1;
 bool g_exactGateTime = false;
 bool g_compressionEnabled = true;
 bool g_naturalVolumeEnabled = false;
+bool g_eventReorderEnabled = true;
 
 [[noreturn]] static void PrintUsage()
 {
@@ -58,6 +59,7 @@ bool g_naturalVolumeEnabled = false;
         "         -R???  reverb (default:off)\n"
         "            -X  48 clocks/beat (default:24 clocks/beat)\n"
         "            -E  exact gate-time\n"
+        "            -A  keep original order for events on the same tick\n"
         "            -N  no compression\n"
         "            -S  apply natural volume scale (linear by default)\n"
     );
@@ -144,6 +146,9 @@ int main(int argc, char** argv)
 
             switch (std::toupper(option[1]))
             {
+            case 'A':
+                g_eventReorderEnabled = false;
+                break;
             case 'E':
                 g_exactGateTime = true;
                 break;

@@ -113,3 +113,20 @@ keysplit wb_choirs_male, 0
     split 0, 64
     split 1, 71
     split 2, 128
+
+keysplit gs_clean_guitar, 0
+    split 0, 53
+    split 1, 61
+    split 2, 70
+    split 3, 128
+
+keysplit gs_strings, 0
+    split 0, 66
+    split 1, 75
+    split 2, 84
+    split 3, 128
+
+keysplit gs_bassoon, 0
+    split 0, 46
+    split 1, 54
+    split 2, 128

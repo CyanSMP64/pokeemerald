@@ -36,5 +36,6 @@ extern int g_clocksPerBeat;
 extern bool g_exactGateTime;
 extern bool g_compressionEnabled;
 extern bool g_naturalVolumeEnabled;
+extern bool g_eventReorderEnabled;
 
 #endif // MAIN_H
