@@ -541,6 +541,12 @@ void PrintControllerOp(const Event& event)
             PrintWait(event.time);
         }
         break;
+    case 0x1B:
+        PrintOp(event.time, "PWMC  ", "%u", event.param2);
+        break;
+    case 0x1C:
+        PrintOp(event.time, "PWMS  ", "%u", event.param2);
+        break;
     case 0x1D:
     case 0x1F:
         PrintExtendedOp(event);

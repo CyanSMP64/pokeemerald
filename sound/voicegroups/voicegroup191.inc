@@ -100,7 +100,7 @@ voice_group voicegroup191
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
 	voice_directsound 60, 0, DirectSoundWaveData_Atmosphere__551, 255, 245, 114, 235
 	voice_directsound 60, 0, DirectSoundWaveData_Brightness__551, 255, 251, 31, 242
-	voice_keysplit voicegroup_piano1f, keysplit_piano1
+	voice_square_2 60, 0, 1, 0, 2, 5, 0
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
 	voice_keysplit voicegroup_piano1f, keysplit_piano1
 	voice_keysplit voicegroup_piano1f, keysplit_piano1

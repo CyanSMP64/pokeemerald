@@ -942,6 +942,144 @@ void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *tr
     track->flags &= ~(MPT_FLG_PITSET | MPT_FLG_VOLSET);
 }
 
+void ply_pwmc(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *track)
+{
+    u8 pattern = *track->cmdPtr;
+    track->cmdPtr++;
+
+    if (pattern >= gNumPulseWidthModPatterns)
+        pattern = 0;
+
+    track->pwmPattern = pattern;
+    track->pwmStep = 0;
+    track->pwmSpeedCounter = track->pwmSpeed;
+}
+
+void ply_pwms(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *track)
+{
+    u32 cgbType;
+    u8 speed = *track->cmdPtr;
+    track->cmdPtr++;
+
+    if (speed > 0)
+    {
+        // Only restart the pattern when the effect turns off->on. This allows
+        // the speed to be smoothly modulated smoothly while the effect is running.
+        if (track->pwmSpeed == 0)
+        {
+            track->pwmStep = 0;
+            track->pwmSpeedCounter = speed;
+        }
+        else if (track->pwmSpeedCounter > speed)
+        {
+            track->pwmSpeedCounter = speed;
+        }
+
+        track->pwmSpeed = speed;
+        mplayInfo->pwmActiveFlag = TRUE;
+    }
+    else
+    {
+        // Disable the effect.
+        track->pwmSpeed = 0;
+        track->pwmSpeedCounter = 0;
+        track->pwmStep = 0;
+
+        // Attempt to restore the original duty cycle for the currently-played voice.
+        cgbType = track->tone.type & TONEDATA_TYPE_CGB;
+        if ((cgbType == 1 || cgbType == 2) && track->chan != NULL)
+        {
+            struct CgbChannel *chan = (struct CgbChannel *)track->chan;
+            if ((chan->statusFlags & SOUND_CHANNEL_SF_ON)
+             && cgbType == (chan->type & TONEDATA_TYPE_CGB)
+             && chan->wavePointer != (u32 *)track->tone.wav)
+            {
+                // wavePointer is actually the duty cycle.
+                chan->wavePointer = (u32 *)track->tone.wav;
+                chan->modify |= CGB_CHANNEL_MO_DUTY;
+            }
+        }
+    }
+}
+
+// Advances the pulse-width modulation duty cycle pattern for each track. Called
+// from MPlayMain on every invocation (~60 Hz--every Vblank) so the modulation
+// rate is tempo-independent. It only affects CGB square channels 1 and 2.
+void MPlayProcessPulseWidthMod(struct MusicPlayerInfo *mplayInfo)
+{
+    struct MusicPlayerTrack *track;
+    int trackCount;
+    u32 anyActive;
+
+    if (!mplayInfo->pwmActiveFlag)
+        return;
+
+    anyActive = FALSE;
+    track = mplayInfo->tracks;
+
+    for (trackCount = mplayInfo->trackCount; trackCount > 0; trackCount--, track++)
+    {
+        struct CgbChannel *chan;
+        const struct PulseWidthModPattern *pattern;
+        u32 cgbType;
+        u32 step;
+        u32 duty;
+
+        if (track->pwmSpeed == 0 || track->pwmPattern == 0)
+            continue;
+        if (!(track->flags & MPT_FLG_EXIST))
+            continue;
+
+        anyActive = TRUE;
+
+        chan = (struct CgbChannel *)track->chan;
+        if (chan == NULL)
+            continue;
+
+        cgbType = chan->type & TONEDATA_TYPE_CGB;
+        if (cgbType != 1 && cgbType != 2)
+            continue;
+        if (!(chan->statusFlags & SOUND_CHANNEL_SF_ON))
+            continue;
+
+        pattern = &gPulseWidthModPatterns[track->pwmPattern];
+        if (pattern->numSteps == 0)
+            continue;
+
+        if (chan->statusFlags & SOUND_CHANNEL_SF_START)
+        {
+            // A new note was just triggered, so start the effect.
+            // The note will start on the first duty cycle in the pattern,
+            // rather than whatever the voice is actually configured to be.
+            track->pwmStep = 0;
+            track->pwmSpeedCounter = track->pwmSpeed;
+            chan->wavePointer = (u32 *)(uintptr_t)pattern->duty[0];
+            continue;
+        }
+
+        // A previously-triggered note is still playing, so we advance
+        // through the duty-cycle pattern.
+        if (--track->pwmSpeedCounter > 0)
+            continue;
+
+        // Move to the next step in the pattern.
+        track->pwmSpeedCounter = track->pwmSpeed;
+        step = track->pwmStep + 1;
+        if (step >= pattern->numSteps)
+            step = 0;
+        track->pwmStep = step;
+
+        duty = pattern->duty[step];
+        if ((uintptr_t)chan->wavePointer != duty)
+        {
+            chan->wavePointer = (u32 *)(uintptr_t)duty;
+            chan->modify |= CGB_CHANNEL_MO_DUTY;
+        }
+    }
+
+    mplayInfo->pwmActiveFlag = anyActive;
+}
+
 u32 MidiKeyToCgbFreq(u8 chanNum, u8 key, u8 fineAdjust)
 {
     if (chanNum == 4)
@@ -1336,6 +1474,10 @@ void CgbSound(void)
             channels->n4 = (channels->n4 & 0xC0) + (*((u8 *)(&channels->frequency) + 1));
             *nrx4ptr = (s8)(channels->n4 & mask);
         }
+
+        // Apply duty cycle to HW registers (square channels 1-2 only)
+        if ((channels->modify & CGB_CHANNEL_MO_DUTY) && (ch == 1 || ch == 2))
+            *nrx1ptr = ((u32)channels->wavePointer << 6) + channels->length;
 
         /* 4. apply envelope & volume to HW registers */
         if (channels->modify & CGB_CHANNEL_MO_VOL)

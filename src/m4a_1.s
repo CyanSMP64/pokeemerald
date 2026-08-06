@@ -2300,10 +2300,13 @@ _081DDA58:
 	mov r2, r9
 _081DDA62:
 	subs r2, 0x1
-	ble _081DDA6C
+	ble MPlayMain_PWM
 	movs r0, MusicPlayerTrack_size
 	adds r5, r0
 	b _081DD9C8
+MPlayMain_PWM:
+	adds r0, r7, 0
+	bl MPlayProcessPulseWidthMod
 _081DDA6C:
 	ldr r0, lt2_ID_NUMBER
 	str r0, [r7, o_MusicPlayerInfo_ident]

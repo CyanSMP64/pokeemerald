@@ -69,6 +69,8 @@
 	.equ	VOL2,	0xc6		@ expression volume
 	.equ	MODM,	0xc7		@ modulation depth MSB (effective depth = MOD + MODM*128)
 	.equ	TUNE,	0xc8		@ micro tuning (c_v+??)
+	.equ	PWMC,	0xc9		@ pulse-width mod duty cycle pattern id (0 = disable)
+	.equ	PWMS, 	0xca 		@ pulse-width mod speed, vblank frames per step (0 = disable)
 	.equ	PORT,	0xcc		@ portamento
 
 	.equ	XCMD,	0xcd		@ extend command  ***lib
