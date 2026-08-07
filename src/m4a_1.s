@@ -277,6 +277,15 @@ C_channel_init_check_loop_no_fine_pos:
 C_adsr_echo_check:
 	/* this is the normal ADSR procedure without init */
 	ldrb r5, [r4, #o_SoundChannel_envelopeVolume]
+	/* songSpeed adsr clock (directsound only) - skip envelope tick when flag is 0 */
+	ldr r1, [r4, #o_SoundChannel_mplayInfo]
+	cmp r1, #0
+	beq C_adsr_tick_ok
+	ldrb r0, [r1, #(o_MusicPlayerInfo_gap + 2)]
+	cmp r0, #0
+	bne C_adsr_tick_ok
+	b C_channel_vol_calc
+C_adsr_tick_ok:
 	lsl r0, r6, #29                     @ SOUND_CHANNEL_SF_IEC --> bit 31 (sign bit)
 	bpl C_adsr_release_check
 	/* pseudo echo handler */
@@ -1730,6 +1739,8 @@ _081DD840:
 	bge _081DD858
 	b _081DDA6C
 _081DD858:
+	adds r0, r7, 0
+	bl AdvanceAdsrCounter
 	ldr r0, lt2_SOUND_INFO_PTR
 	ldr r0, [r0]
 	mov r8, r0
@@ -2167,6 +2178,10 @@ _081DD9F6:
 	movs r0, MPT_FLG_VOLCHG
 	tst r0, r3
 	beq _081DDA14
+	ldrb r0, [r4, o_SoundChannel_statusFlags]
+	movs r1, SOUND_CHANNEL_SF_STOP
+	tst r0, r1
+	bne _081DDA14
 	bl ChnVolSetAsm
 	cmp r6, 0
 	beq _081DDA14
@@ -2226,6 +2241,14 @@ _081DDA28:
 		 */
 	lsls r0, r0, #10
 	bl __divsi3  @ signed divide
+		/* clamp cgb 1-3 frequency to -2048 if song is slowed by songSpeed */
+	movs r3, #0x80
+	lsls r3, r3, #4
+	negs r3, r3
+	cmp r0, r3
+	bge _081DDA46_clamp_done
+	adds r0, r3, #0
+_081DDA46_clamp_done:
 		/* Mask to 11-bit range for GBC hardware compatibility */
 	ldr r1, =0x7FF
 	ands r0, r1
@@ -2254,7 +2277,7 @@ _081DDA46:
 		 * scale by songSpeed for consistent mixer stepping
 		 * first try to use cached mplayInfo, fallback to loading r7 (always valid in MPlayMain context)
 		 */
-	ldr r1, [r4, o_SoundChannel_dummy4]
+	ldr r1, [r4, o_SoundChannel_mplayInfo]
 	cmp r1, #0
 	bne 1f
 	adds r1, r7, #0
@@ -2264,7 +2287,7 @@ _081DDA46:
 	lsrs r0, r0, #10
 	str r0, [r4, o_SoundChannel_frequency]
 		/* Cache mplayInfo pointer */
-	str r7, [r4, o_SoundChannel_dummy4]
+	str r7, [r4, o_SoundChannel_mplayInfo]
 _081DDA52:
 	ldr r4, [r4, o_SoundChannel_nextChannelPointer]
 	cmp r4, 0
@@ -2277,10 +2300,13 @@ _081DDA58:
 	mov r2, r9
 _081DDA62:
 	subs r2, 0x1
-	ble _081DDA6C
+	ble MPlayMain_PWM
 	movs r0, MusicPlayerTrack_size
 	adds r5, r0
 	b _081DD9C8
+MPlayMain_PWM:
+	adds r0, r7, 0
+	bl MPlayProcessPulseWidthMod
 _081DDA6C:
 	ldr r0, lt2_ID_NUMBER
 	str r0, [r7, o_MusicPlayerInfo_ident]
@@ -2698,6 +2724,14 @@ _081DDCBC:
 		 */
 	lsls r0, r0, #10
 	bl __divsi3  @ signed divide
+		/* clamp cgb 1-3 frequency to -2048 if song is slowed by songSpeed */
+	movs r3, #0x80
+	lsls r3, r3, #4
+	negs r3, r3
+	cmp r0, r3
+	bge _081DDCBC_clamp_done
+	adds r0, r3, #0
+_081DDCBC_clamp_done:
 		/* Mask to 11-bit range for GBC hardware compatibility */
 	ldr r1, =0x7FF
 	ands r0, r1
@@ -2769,7 +2803,7 @@ _081DDCE4:
 	lsrs r0, r0, #10
 	str r0, [r4, o_SoundChannel_frequency]
 		/* cache mplayInfo pointer */
-	str r2, [r4, o_SoundChannel_dummy4]
+	str r2, [r4, o_SoundChannel_mplayInfo]
 	movs r0, SOUND_CHANNEL_SF_START
 	strb r0, [r4, o_SoundChannel_statusFlags]
 	ldrb r1, [r5, o_MusicPlayerTrack_flags]

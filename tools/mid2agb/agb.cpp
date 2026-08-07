@@ -504,16 +504,22 @@ void PrintControllerOp(const Event& event)
         }
         break;
     case 0x16:
-        if (event.param2 != s_lastModtValue)
+    {
+        int modtValue = event.param2;
+        if (g_modtAdd64Enabled && modtValue < 64)
+            modtValue += 64;
+
+        if (modtValue != s_lastModtValue)
         {
-            PrintOp(event.time, "MODT  ", "%u", event.param2);
-            s_lastModtValue = event.param2;
+            PrintOp(event.time, "MODT  ", "%u", modtValue);
+            s_lastModtValue = modtValue;
         }
         else
         {
             PrintWait(event.time);
         }
         break;
+    }
     case 0x18:
         if (event.param2 != s_lastTuneValue)
         {
@@ -535,6 +541,12 @@ void PrintControllerOp(const Event& event)
         {
             PrintWait(event.time);
         }
+        break;
+    case 0x1B:
+        PrintOp(event.time, "PWMC  ", "%u", event.param2);
+        break;
+    case 0x1C:
+        PrintOp(event.time, "PWMS  ", "%u", event.param2);
         break;
     case 0x1D:
     case 0x1F:
@@ -585,6 +597,7 @@ void PrintAgbTrack(std::vector<Event>& events)
     s_lastVoiceValue = -1;
 
     bool foundVolBeforeNote = false;
+    bool foundModt = false;
 
     for (const Event& event : events)
     {
@@ -594,8 +607,13 @@ void PrintAgbTrack(std::vector<Event>& events)
         if (event.type == EventType::Controller && event.param1 == 0x07)
         {
             foundVolBeforeNote = true;
-            break;
         }
+
+        if (event.type == EventType::Controller && event.param1 == 0x16)
+            foundModt = true;
+
+        if (foundVolBeforeNote && foundModt)
+            break;
     }
 
     if (!foundVolBeforeNote)
@@ -607,6 +625,12 @@ void PrintAgbTrack(std::vector<Event>& events)
 
     PrintWait(g_initialWait);
     PrintByte("KEYSH , %s_key%+d", g_asmLabel.c_str(), 0);
+
+    if (g_modtAdd64Enabled && !foundModt)
+    {
+        PrintByte("MODT  , %u", 64);
+        s_lastModtValue = 64;
+    }
 
     for (unsigned i = 0; events[i].type != EventType::EndOfTrack; i++)
     {

@@ -29,6 +29,7 @@
 
 	.equiv CGB_CHANNEL_MO_PIT, 0x02
 	.equiv CGB_CHANNEL_MO_VOL, 0x01
+	.equiv CGB_CHANNEL_MO_DUTY, 0x04
 
 	.equiv WAVE_DATA_FLAG_LOOP, 0xC0
 
@@ -130,7 +131,7 @@
 	struct_field o_SoundChannel_track, 4
 	struct_field o_SoundChannel_prevChannelPointer, 4
 	struct_field o_SoundChannel_nextChannelPointer, 4
-	struct_field o_SoundChannel_dummy4, 4
+	struct_field o_SoundChannel_mplayInfo, 4
 	struct_field o_SoundChannel_portaCurrent, 2
 	struct_field o_SoundChannel_xpc, 2
 	struct_field SoundChannel_size, 0
@@ -182,7 +183,10 @@
 	struct_field o_MusicPlayerTrack_portaTime, 1
 	struct_field o_MusicPlayerTrack_portaPrevKey, 1
 	struct_field o_MusicPlayerTrack_vol2, 1
-	struct_field o_MusicPlayerTrack_gap, 4
+	struct_field o_MusicPlayerTrack_pwmPattern, 1
+	struct_field o_MusicPlayerTrack_pwmSpeed, 1
+	struct_field o_MusicPlayerTrack_pwmSpeedCounter, 1
+	struct_field o_MusicPlayerTrack_pwmStep, 1
 	struct_field o_MusicPlayerTrack_unk_3A, 2
 	struct_field o_MusicPlayerTrack_unk_3C, 4
 	struct_field o_MusicPlayerTrack_cmdPtr, 4
@@ -202,7 +206,8 @@
 	struct_field o_MusicPlayerInfo_songSpeed, 2
 	struct_field o_MusicPlayerInfo_songVol, 1
 	struct_field o_MusicPlayerInfo_tempoScaleFrac, 1
-	struct_field o_MusicPlayerInfo_gap, 4
+	struct_field o_MusicPlayerInfo_pwmActiveFlag, 1
+	struct_field o_MusicPlayerInfo_gap, 3
 	struct_field o_MusicPlayerInfo_memAccArea, 4
 	struct_field o_MusicPlayerInfo_tempoD, 2
 	struct_field o_MusicPlayerInfo_tempoU, 2

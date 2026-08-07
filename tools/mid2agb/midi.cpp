@@ -978,7 +978,13 @@ void ReadMidiTracks()
                 ConvertTimes(*events);
                 events = InsertTimingEvents(*events);
                 events = CreateTies(*events);
-                std::stable_sort(events->begin(), events->end(), EventCompare);
+                if (g_eventReorderEnabled)
+                    std::stable_sort(events->begin(), events->end(), EventCompare);
+                else
+                    std::stable_sort(events->begin(), events->end(), [](const Event& event1, const Event& event2)
+                    {
+                        return event1.time < event2.time;
+                    });
                 events = SplitTime(*events);
                 CalculateWaits(*events);
 

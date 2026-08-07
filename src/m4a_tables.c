@@ -29,8 +29,8 @@ void * const gMPlayJumpTableTemplate[] =
     ply_vol2,
     ply_modm,
     ply_tune,
-    ply_fine,
-    ply_fine,
+    ply_pwmc,
+    ply_pwms,
     ply_fine,
     ply_port,
     ply_fine,
@@ -42,6 +42,13 @@ void * const gMPlayJumpTableTemplate[] =
     RealClearChain,
     SoundMainBTM,
 };
+
+const struct PulseWidthModPattern gPulseWidthModPatterns[] =
+{
+    { 0, {0} }, // none
+};
+
+const u8 gNumPulseWidthModPatterns = sizeof(gPulseWidthModPatterns) / sizeof(gPulseWidthModPatterns[0]);
 
 const s16 gScaleTable[] =
 {

@@ -68,6 +68,17 @@ struct ToneData
     u8 release;
 };
 
+#define MAX_PWM_PATTERN_STEPS 7
+
+struct PulseWidthModPattern
+{
+    u8 numSteps;
+    u8 duty[MAX_PWM_PATTERN_STEPS];
+};
+
+extern const struct PulseWidthModPattern gPulseWidthModPatterns[];
+extern const u8 gNumPulseWidthModPatterns;
+
 #define SOUND_CHANNEL_SF_START       0x80
 #define SOUND_CHANNEL_SF_STOP        0x40
 #define SOUND_CHANNEL_SF_LOOP        0x10
@@ -81,6 +92,7 @@ struct ToneData
 
 #define CGB_CHANNEL_MO_PIT  0x02
 #define CGB_CHANNEL_MO_VOL  0x01
+#define CGB_CHANNEL_MO_DUTY  0x04
 
 #define CGB_NRx2_ENV_DIR_DEC 0x00
 #define CGB_NRx2_ENV_DIR_INC 0x08
@@ -161,7 +173,7 @@ struct SoundChannel
     struct MusicPlayerTrack *track;
     void *prevChannelPointer;
     void *nextChannelPointer;
-    u32 dummy4;
+    struct MusicPlayerInfo *mplayInfo;
     u16 portaCurrent;
     u16 xpc;
 };
@@ -306,7 +318,10 @@ struct MusicPlayerTrack
     u8 portaTime;
     u8 portaPrevKey;
     u8 vol2;
-    u8 gap[4];
+    u8 pwmPattern;
+    u8 pwmSpeed;
+    u8 pwmSpeedCounter;
+    u8 pwmStep;
     u16 unk_3A;
     u32 unk_3C;
     u8 *cmdPtr;
@@ -337,7 +352,8 @@ struct MusicPlayerInfo
     u16 songSpeed;
     u8 songVol;
     u8 tempoScaleFrac;
-    u8 gap[4];
+    u8 pwmActiveFlag;
+    u8 gap[3];
     u8 *memAccArea;
     u16 tempoD;
     u16 tempoU;
@@ -433,6 +449,7 @@ void SoundInit(struct SoundInfo *soundInfo);
 void MPlayExtender(struct CgbChannel *cgbChans);
 void m4aSoundMode(u32 mode);
 void MPlayOpen(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *tracks, u8 trackCount);
+void AdvanceAdsrCounter(struct MusicPlayerInfo *mplayInfo);
 void CgbSound(void);
 void CgbOscOff(u8);
 void CgbModVol(struct CgbChannel *chan);
@@ -485,7 +502,10 @@ void ply_mod(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_modm(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_modt(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_tune(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
+void ply_pwmc(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
+void ply_pwms(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_port(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
+void MPlayProcessPulseWidthMod(struct MusicPlayerInfo *);
 void ply_xcmd(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_endtie(struct MusicPlayerInfo *, struct MusicPlayerTrack *);
 void ply_note(u32 note_cmd, struct MusicPlayerInfo *, struct MusicPlayerTrack *);
