@@ -53,7 +53,7 @@ voicegroup191::
 	voice_directsound 59, 0, DirectSoundWaveData_dp_ps51_french_horns_59,  A(127), D(120), S(127), R(110)
 	voice_keysplit voicegroup205, KeySplitTable18	@ sd90 timpani 2
 	voice_directsound 60, 0, DirectSoundSynthData_squ50,  A(127), D(70), S(0), R(110)
-	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_square_wave, A(127), D(70), S(0), R(120)
+	voice_directsound 48, 0, DirectSoundWaveData_sc88pro_square_wave, A(127), D(70), S(0), R(120)
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_bubbles, A(125), D(127), S(127), R(127)
 	voice_directsound 48, 0, DirectSoundWaveData_dp_trinity_pop_u_wit_dis, A(127), D(120), S(127), R(112)
 	voice_keysplit voicegroup192, KeySplitTable6	@ ew pop brass 3tp sus

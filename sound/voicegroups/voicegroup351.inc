@@ -51,7 +51,7 @@ voicegroup351::
 	voice_keysplit voicegroup352, KeySplitTable92	@ plugsound pro flute sus
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 37, 0, DirectSoundWaveData_bw_independence_pro_khso_trombones_stc, 255, 64, 227, 178	@ 127/125/120/120/ 64
+	voice_directsound 36, 0, DirectSoundWaveData_bw_independence_pro_khso_trombones_stc, 255, 64, 227, 178	@ 127/125/120/120/ 64
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0

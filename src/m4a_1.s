@@ -1741,7 +1741,11 @@ _081DD840:
 _081DD858:
 	adds r0, r7, 0
 	bl AdvanceAdsrCounter
-	ldr r0, lt2_SOUND_INFO_PTR
+	ldr r0, lt4_SOUND_INFO_PTR_NEAR
+	b _081DD85E
+	.align 2, 0
+lt4_SOUND_INFO_PTR_NEAR: .word SOUND_INFO_PTR
+_081DD85E:
 	ldr r0, [r0]
 	mov r8, r0
 	adds r0, r7, 0
@@ -1798,6 +1802,13 @@ _081DD892:
 	subs r0, 0x1
 	strb r0, [r4, o_SoundChannel_gateTime]
 	bne _081DD8B4
+	movs r0, SOUND_CHANNEL_SF_START
+	tst r0, r1
+	beq _081DD8B4_set_stop
+	movs r0, 1
+	strb r0, [r4, o_SoundChannel_gateTime]
+	b _081DD8B4
+_081DD8B4_set_stop:
 	movs r0, SOUND_CHANNEL_SF_STOP
 	orrs r1, r0
 	strb r1, [r4, o_SoundChannel_statusFlags]
@@ -2838,6 +2849,9 @@ _081DDD22:
 	tst r2, r4
 	beq _081DDD3A
 	tst r2, r5
+	bne _081DDD3A
+	movs r0, SOUND_CHANNEL_SF_START
+	tst r2, r0
 	bne _081DDD3A
 	ldrb r0, [r1, o_SoundChannel_midiKey]
 	cmp r0, r3
