@@ -150,3 +150,9 @@
 	.4byte \sample
 	.byte 0xff, 0, 0xff, 0
 	.endm
+
+	.macro voice_none
+	.byte 5, 0, 0, 0
+	.4byte 0
+	.4byte 0
+	.endm

@@ -2511,6 +2511,10 @@ _081DDBAC:
 	ands r6, r0
 	str r6, [sp, 0xC]
 	beq _081DDBEC
+	cmp r6, #4
+	bls _081DDBEC_type_ok
+	b _081DDCEA
+_081DDBEC_type_ok:
 	ldr r0, [sp, 0x4]
 	ldr r4, [r0, o_SoundInfo_cgbChans]
 	cmp r4, 0
