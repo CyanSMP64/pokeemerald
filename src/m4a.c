@@ -5,7 +5,8 @@ extern const u8 gCgb3Vol[];
 
 #define BSS_CODE __attribute__((section(".bss.code")))
 
-BSS_CODE ALIGNED(4) char SoundMainRAM_Buffer[0x800] = {0};
+BSS_CODE ALIGNED(4) char SoundMainRAM_Buffer[0xaf0] = {0};
+BSS_CODE ALIGNED(4) u32 hq_buffer_ptr[0xe0] = {0};
 
 COMMON_DATA struct SoundInfo gSoundInfo = {0};
 COMMON_DATA struct PokemonCrySong gPokemonCrySongs[MAX_POKEMON_CRIES] = {0};
@@ -20,7 +21,7 @@ COMMON_DATA struct PokemonCrySong gPokemonCrySong = {0};
 COMMON_DATA u8 gMPlayMemAccArea[0x10] = {0};
 COMMON_DATA struct MusicPlayerInfo gMPlayInfo_SE3 = {0};
 
-u32 MidiKeyToFreq(struct WaveData *wav, u8 key, u8 fineAdjust)
+u32 MidiKeyToFreq(struct WaveData *wav, s16 key, u8 fineAdjust)
 {
     u32 val1;
     u32 val2;
@@ -31,18 +32,117 @@ u32 MidiKeyToFreq(struct WaveData *wav, u8 key, u8 fineAdjust)
         key = 178;
         fineAdjustShifted = 255 << 24;
     }
+    else if (key < -60)
+    {
+        key = -60;
+        fineAdjustShifted = 0;
+    }
 
-    val1 = gScaleTable[key];
+    val1 = gScaleTable[key + 60];
     val1 = gFreqTable[val1 & 0xF] >> (val1 >> 4);
 
-    val2 = gScaleTable[key + 1];
+    val2 = gScaleTable[key + 61];
     val2 = gFreqTable[val2 & 0xF] >> (val2 >> 4);
 
     return umul3232H32(wav->freq, val1 + umul3232H32(val2 - val1, fineAdjustShifted));
 }
 
-static void UNUSED UnusedDummyFunc(void)
+static void PrimeTempoCounter(struct MusicPlayerInfo *mplayInfo)
 {
+    u32 scaledTempoStep = mplayInfo->tempoI * mplayInfo->songSpeed;
+    u16 scaledTempoStepInt = scaledTempoStep >> 10;
+    u8 scaledTempoStepFrac = (scaledTempoStep >> 2) & 0xFF;
+
+    if (scaledTempoStepInt < 150)
+    {
+        if (scaledTempoStepFrac != 0)
+        {
+            mplayInfo->tempoC = 149 - scaledTempoStepInt;
+            mplayInfo->tempoScaleFrac = 0x100 - scaledTempoStepFrac;
+        }
+        else
+        {
+            mplayInfo->tempoC = 150 - scaledTempoStepInt;
+            mplayInfo->tempoScaleFrac = 0;
+        }
+    }
+    else
+    {
+        mplayInfo->tempoC = 0;
+        mplayInfo->tempoScaleFrac = 0;
+    }
+}
+
+static void PrimeAdsrCounter(struct MusicPlayerInfo *mplayInfo)
+{
+    u16 num;
+    u16 den;
+    u16 counter;
+    u16 songSpeed = mplayInfo->songSpeed;
+
+    if (songSpeed >= 1024)
+    {
+        num = 1024;
+        den = songSpeed;
+    }
+    else
+    {
+        num = songSpeed;
+        den = 1024;
+    }
+
+    if (num >= den)
+    {
+        counter = 0;
+        mplayInfo->adsrTick = 1;
+    }
+    else
+    {
+        counter = den - num;
+        mplayInfo->adsrTick = 1;
+    }
+
+    mplayInfo->adsrCounter = counter;
+}
+
+void AdvanceAdsrCounter(struct MusicPlayerInfo *mplayInfo)
+{
+    u16 num;
+    u16 den;
+    u16 counter;
+    u16 songSpeed = mplayInfo->songSpeed;
+
+    if (songSpeed >= 1024)
+    {
+        num = 1024;
+        den = songSpeed;
+    }
+    else
+    {
+        num = songSpeed;
+        den = 1024;
+    }
+
+    if (num >= den)
+    {
+        mplayInfo->adsrTick = 1;
+        return;
+    }
+
+    counter = mplayInfo->adsrCounter;
+    counter += num;
+
+    if (counter >= den)
+    {
+        counter -= den;
+        mplayInfo->adsrTick = 1;
+    }
+    else
+    {
+        mplayInfo->adsrTick = 0;
+    }
+
+    mplayInfo->adsrCounter = counter;
 }
 
 void MPlayContinue(struct MusicPlayerInfo *mplayInfo)
@@ -111,7 +211,7 @@ void m4aSongNumStart(u16 n)
     const struct Song *song = &songTable[n];
     const struct MusicPlayer *mplay = &mplayTable[song->ms];
 
-    MPlayStart(mplay->info, song->header);
+    MPlayStart(mplay->info, song->header, song->volume, song->speed);
 }
 
 void m4aSongNumStartOrChange(u16 n)
@@ -123,14 +223,14 @@ void m4aSongNumStartOrChange(u16 n)
 
     if (mplay->info->songHeader != song->header)
     {
-        MPlayStart(mplay->info, song->header);
+        MPlayStart(mplay->info, song->header, song->volume, song->speed);
     }
     else
     {
         if ((mplay->info->status & MUSICPLAYER_STATUS_TRACK) == 0
          || (mplay->info->status & MUSICPLAYER_STATUS_PAUSE))
         {
-            MPlayStart(mplay->info, song->header);
+            MPlayStart(mplay->info, song->header, song->volume, song->speed);
         }
     }
 }
@@ -143,9 +243,9 @@ static void UNUSED m4aSongNumStartOrContinue(u16 n)
     const struct MusicPlayer *mplay = &mplayTable[song->ms];
 
     if (mplay->info->songHeader != song->header)
-        MPlayStart(mplay->info, song->header);
+        MPlayStart(mplay->info, song->header, song->volume, song->speed);
     else if ((mplay->info->status & MUSICPLAYER_STATUS_TRACK) == 0)
-        MPlayStart(mplay->info, song->header);
+        MPlayStart(mplay->info, song->header, song->volume, song->speed);
     else if (mplay->info->status & MUSICPLAYER_STATUS_PAUSE)
         MPlayContinue(mplay->info);
 }
@@ -244,8 +344,12 @@ void m4aMPlayImmInit(struct MusicPlayerInfo *mplayInfo)
                 track->flags = MPT_FLG_EXIST;
                 track->bendRange = 2;
                 track->volX = 64;
+                track->vol2 = 127;
                 track->lfoSpeed = 22;
                 track->tone.type = 1;
+                track->portaFlag = 0;
+                track->portaTime = 0;
+                track->portaPrevKey = 60;
             }
         }
 
@@ -608,7 +712,7 @@ void MPlayOpen(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *track
     mplayInfo->ident = ID_NUMBER;
 }
 
-void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader)
+void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader, u8 volume, u16 speed)
 {
     s32 i;
     u8 unk_B;
@@ -634,8 +738,11 @@ void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader
         mplayInfo->tempoD = 150;
         mplayInfo->tempoI = 150;
         mplayInfo->tempoU = 0x100;
-        mplayInfo->tempoC = 0;
+        PrimeTempoCounter(mplayInfo);
+        PrimeAdsrCounter(mplayInfo);
         mplayInfo->fadeOI = 0;
+        mplayInfo->songVol = volume;
+        mplayInfo->songSpeed = speed;
 
         i = 0;
         track = mplayInfo->tracks;
@@ -764,47 +871,206 @@ void FadeOutBody(struct MusicPlayerInfo *mplayInfo)
 
 void TrkVolPitSet(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *track)
 {
+    u8 modType = track->modT & 0x3;
+    s32 modPitch = track->modM;
+    s32 mod8 = modPitch;
+    if (mod8 < -128)
+        mod8 = -128;
+    else if (mod8 > 127)
+        mod8 = 127;
+
     if (track->flags & MPT_FLG_VOLSET)
     {
         s32 x;
         s32 y;
+        u32 volR;
+        u32 volL;
 
-        x = (u32)(track->vol * track->volX) >> 5;
+        // VOL2 is a second multiplicative volume stage; VOL2 defaults to 127.
+        x = (u32)((track->vol * track->vol2 + 63) / 127);
+        x = (u32)(x * track->volX) >> 5;
 
-        if (track->modT == 1)
-            x = (u32)(x * (track->modM + 128)) >> 7;
+        if (modType == 1)
+            x = (u32)(x * (mod8 + 128)) >> 7;
+
+        // Apply song volume scaling (64 = normal volume)
+        x = (u32)(x * mplayInfo->songVol) >> 6;
 
         y = 2 * track->pan + track->panX;
 
-        if (track->modT == 2)
-            y += track->modM;
+        if (modType == 2)
+            y += mod8;
 
         if (y < -128)
             y = -128;
         else if (y > 127)
             y = 127;
 
-        track->volMR = (u32)((y + 128) * x) >> 8;
-        track->volML = (u32)((127 - y) * x) >> 8;
+        volR = (u32)((y + 128) * x) >> 8;
+        volL = (u32)((127 - y) * x) >> 8;
+        if (volR > 255)
+            volR = 255;
+        if (volL > 255)
+            volL = 255;
+        track->volMR = volR;
+        track->volML = volL;
     }
 
     if (track->flags & MPT_FLG_PITSET)
     {
         s32 bend = track->bend * track->bendRange;
-        s32 x = (track->tune + bend)
-              * 4
-              + (track->keyShift << 8)
-              + (track->keyShiftX << 8)
+        s32 x = ((s32)track->tune << 2)
+              + (bend << 1)
+              + ((s32)track->keyShift << 8)
+              + ((s32)track->keyShiftX << 8)
               + track->pitX;
 
-        if (track->modT == 0)
-            x += 16 * track->modM;
+        if (modType == 0)
+            x += 16 * modPitch;
 
         track->keyM = x >> 8;
         track->pitM = x;
     }
 
     track->flags &= ~(MPT_FLG_PITSET | MPT_FLG_VOLSET);
+}
+
+void ply_pwmc(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *track)
+{
+    u8 pattern = *track->cmdPtr;
+    track->cmdPtr++;
+
+    if (pattern >= gNumPulseWidthModPatterns)
+        pattern = 0;
+
+    track->pwmPattern = pattern;
+    track->pwmStep = 0;
+    track->pwmSpeedCounter = track->pwmSpeed;
+}
+
+void ply_pwms(struct MusicPlayerInfo *mplayInfo, struct MusicPlayerTrack *track)
+{
+    u32 cgbType;
+    u8 speed = *track->cmdPtr;
+    track->cmdPtr++;
+
+    if (speed > 0)
+    {
+        // Only restart the pattern when the effect turns off->on. This allows
+        // the speed to be smoothly modulated smoothly while the effect is running.
+        if (track->pwmSpeed == 0)
+        {
+            track->pwmStep = 0;
+            track->pwmSpeedCounter = speed;
+        }
+        else if (track->pwmSpeedCounter > speed)
+        {
+            track->pwmSpeedCounter = speed;
+        }
+
+        track->pwmSpeed = speed;
+        mplayInfo->pwmActiveFlag = TRUE;
+    }
+    else
+    {
+        // Disable the effect.
+        track->pwmSpeed = 0;
+        track->pwmSpeedCounter = 0;
+        track->pwmStep = 0;
+
+        // Attempt to restore the original duty cycle for the currently-played voice.
+        cgbType = track->tone.type & TONEDATA_TYPE_CGB;
+        if ((cgbType == 1 || cgbType == 2) && track->chan != NULL)
+        {
+            struct CgbChannel *chan = (struct CgbChannel *)track->chan;
+            if ((chan->statusFlags & SOUND_CHANNEL_SF_ON)
+             && cgbType == (chan->type & TONEDATA_TYPE_CGB)
+             && chan->wavePointer != (u32 *)track->tone.wav)
+            {
+                // wavePointer is actually the duty cycle.
+                chan->wavePointer = (u32 *)track->tone.wav;
+                chan->modify |= CGB_CHANNEL_MO_DUTY;
+            }
+        }
+    }
+}
+
+// Advances the pulse-width modulation duty cycle pattern for each track. Called
+// from MPlayMain on every invocation (~60 Hz--every Vblank) so the modulation
+// rate is tempo-independent. It only affects CGB square channels 1 and 2.
+void MPlayProcessPulseWidthMod(struct MusicPlayerInfo *mplayInfo)
+{
+    struct MusicPlayerTrack *track;
+    int trackCount;
+    u32 anyActive;
+
+    if (!mplayInfo->pwmActiveFlag)
+        return;
+
+    anyActive = FALSE;
+    track = mplayInfo->tracks;
+
+    for (trackCount = mplayInfo->trackCount; trackCount > 0; trackCount--, track++)
+    {
+        struct CgbChannel *chan;
+        const struct PulseWidthModPattern *pattern;
+        u32 cgbType;
+        u32 step;
+        u32 duty;
+
+        if (track->pwmSpeed == 0 || track->pwmPattern == 0)
+            continue;
+        if (!(track->flags & MPT_FLG_EXIST))
+            continue;
+
+        anyActive = TRUE;
+
+        chan = (struct CgbChannel *)track->chan;
+        if (chan == NULL)
+            continue;
+
+        cgbType = chan->type & TONEDATA_TYPE_CGB;
+        if (cgbType != 1 && cgbType != 2)
+            continue;
+        if (!(chan->statusFlags & SOUND_CHANNEL_SF_ON))
+            continue;
+
+        pattern = &gPulseWidthModPatterns[track->pwmPattern];
+        if (pattern->numSteps == 0)
+            continue;
+
+        if (chan->statusFlags & SOUND_CHANNEL_SF_START)
+        {
+            // A new note was just triggered, so start the effect.
+            // The note will start on the first duty cycle in the pattern,
+            // rather than whatever the voice is actually configured to be.
+            track->pwmStep = 0;
+            track->pwmSpeedCounter = track->pwmSpeed;
+            chan->wavePointer = (u32 *)(uintptr_t)pattern->duty[0];
+            continue;
+        }
+
+        // A previously-triggered note is still playing, so we advance
+        // through the duty-cycle pattern.
+        if (--track->pwmSpeedCounter > 0)
+            continue;
+
+        // Move to the next step in the pattern.
+        track->pwmSpeedCounter = track->pwmSpeed;
+        step = track->pwmStep + 1;
+        if (step >= pattern->numSteps)
+            step = 0;
+        track->pwmStep = step;
+
+        duty = pattern->duty[step];
+        if ((uintptr_t)chan->wavePointer != duty)
+        {
+            chan->wavePointer = (u32 *)(uintptr_t)duty;
+            chan->modify |= CGB_CHANNEL_MO_DUTY;
+        }
+    }
+
+    mplayInfo->pwmActiveFlag = anyActive;
 }
 
 u32 MidiKeyToCgbFreq(u8 chanNum, u8 key, u8 fineAdjust)
@@ -850,7 +1116,7 @@ u32 MidiKeyToCgbFreq(u8 chanNum, u8 key, u8 fineAdjust)
         val2 = gCgbScaleTable[key + 1];
         val2 = gCgbFreqTable[val2 & 0xF] >> (val2 >> 4);
 
-        return val1 + ((fineAdjust * (val2 - val1)) >> 8) + 2048;
+        return val1 + ((fineAdjust * (val2 - val1)) >> 8);
     }
 }
 
@@ -1202,6 +1468,10 @@ void CgbSound(void)
             *nrx4ptr = (s8)(channels->n4 & mask);
         }
 
+        // Apply duty cycle to HW registers (square channels 1-2 only)
+        if ((channels->modify & CGB_CHANNEL_MO_DUTY) && (ch == 1 || ch == 2))
+            *nrx1ptr = ((u32)channels->wavePointer << 6) + channels->length;
+
         /* 4. apply envelope & volume to HW registers */
         if (channels->modify & CGB_CHANNEL_MO_VOL)
         {
@@ -1350,7 +1620,7 @@ void ClearModM(struct MusicPlayerTrack *track)
     track->lfoSpeedC = 0;
     track->modM = 0;
 
-    if (track->modT == 0)
+    if ((track->modT & 0x3) == 0)
         track->flags |= MPT_FLG_PITCHG;
     else
         track->flags |= MPT_FLG_VOLCHG;
@@ -1693,7 +1963,7 @@ start_song:
 
     mplayInfo->ident = ID_NUMBER;
 
-    MPlayStart(mplayInfo, (struct SongHeader *)(&gPokemonCrySongs[i]));
+    MPlayStart(mplayInfo, (struct SongHeader *)(&gPokemonCrySongs[i]), 64, 1024);
 
     return mplayInfo;
 }

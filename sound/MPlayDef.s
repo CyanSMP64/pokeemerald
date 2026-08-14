@@ -60,13 +60,18 @@
 	.equ	VOICE,	0xbd		@ voice #
 	.equ	VOL,	0xbe		@ volume
 	.equ	PAN,	0xbf		@ panpot (c_v+??)
-	.equ	BEND,	0xc0		@ pitch bend (c_v+??)
+	.equ	BEND,	0xc0		@ pitch bend (c_b+??)
 	.equ	BENDR,	0xc1		@ bend range
 	.equ	LFOS,	0xc2		@ LFO speed
 	.equ	LFODL,	0xc3		@ LFO delay
 	.equ	MOD,	0xc4		@ modulation depth
 	.equ	MODT,	0xc5		@ modulation type
+	.equ	VOL2,	0xc6		@ expression
+	.equ	MODM,	0xc7		@ modulation depth MSB (effective depth = MOD + MODM*128)
 	.equ	TUNE,	0xc8		@ micro tuning (c_v+??)
+	.equ	PWMC,	0xc9		@ PWM duty cycle pattern id (0 = disable)
+	.equ	PWMS,	0xca		@ PWM speed, vblank frames per step (0 = disable)
+	.equ	PORT,	0xcc		@ portamento
 
 	.equ	XCMD,	0xcd		@ extend command  ***lib
 	 .equ	xIECV,	0x08		@  imi.echo vol   ***lib
@@ -127,9 +132,13 @@
 
 	.equ	mxv,	0x7F		@
 
-@ center value of PAN, BEND, TUNE
+@ center value of PAN, TUNE
 
 	.equ	c_v,	0x40		@ -64 ~ +63
+
+@ center value of BEND
+
+	.equ	c_b,	0x80		@ -128 ~ +127
 
 @ note for N??, TIE, EOT
 

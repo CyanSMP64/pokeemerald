@@ -42,6 +42,55 @@ static int s_extendedCommand;
 static int s_memaccOp;
 static int s_memaccParam1;
 static int s_memaccParam2;
+static int s_cc5Value;
+static bool s_cc65Enabled;
+static int s_lastPortValue;
+static int s_lastModValue;
+static int s_lastModMValue;
+static int s_lastPanValue;
+static int s_lastBendrValue;
+static int s_lastLfosValue;
+static int s_lastModtValue;
+static int s_lastTuneValue;
+static int s_lastLfodlValue;
+static int s_lastVolumeValue;
+static int s_lastVolume2Value;
+static int s_lastPitchBendValue;
+static int s_lastVoiceValue;
+
+void PrintWait(int wait);
+void PrintByte(const char *format, ...);
+void PrintOp(int wait, std::string name, const char *format, ...);
+
+static void EmitPortIfChanged(int wait, int value)
+{
+    if (value != s_lastPortValue)
+    {
+        PrintOp(wait, "PORT  ", "%u", value);
+        s_lastPortValue = value;
+    }
+    else
+    {
+        PrintWait(wait);
+    }
+}
+
+static void InvalidateDedupeState()
+{
+    s_lastPortValue = -1;
+    s_lastModValue = -1;
+    s_lastModMValue = -1;
+    s_lastPanValue = -1;
+    s_lastBendrValue = -1;
+    s_lastLfosValue = -1;
+    s_lastModtValue = -1;
+    s_lastTuneValue = -1;
+    s_lastLfodlValue = -1;
+    s_lastVolumeValue = -1;
+    s_lastVolume2Value = -1;
+    s_lastPitchBendValue = -1;
+    s_lastVoiceValue = -1;
+}
 
 void PrintAgbHeader()
 {
@@ -75,6 +124,7 @@ void ResetTrackVars()
     s_keepLastOpName = false;
     s_lastOpName = "";
     s_inPattern = false;
+    InvalidateDedupeState();
 }
 
 void PrintWait(int wait)
@@ -146,7 +196,7 @@ void PrintWord(const char *format, ...)
 void PrintNote(const Event& event)
 {
     int note = event.note;
-    int velocity = g_noteVelocityLUT[event.param1];
+    int velocity = event.param1; 
     int duration = -1;
 
     if (event.param2 != -1)
@@ -351,13 +401,63 @@ void PrintControllerOp(const Event& event)
     switch (event.param1)
     {
     case 0x01:
-        PrintOp(event.time, "MOD   ", "%u", event.param2);
+        if (event.param2 != s_lastModValue)
+        {
+            PrintOp(event.time, "MOD   ", "%u", event.param2);
+            s_lastModValue = event.param2;
+        }
+        else
+        {
+            PrintWait(event.time);
+        }
         break;
-    case 0x07:
-        PrintOp(event.time, "VOL   ", "%u*%s_mvl/mxv", event.param2, g_asmLabel.c_str());
+    case 0x03:
+        if (event.param2 != s_lastModMValue)
+        {
+            PrintOp(event.time, "MODM  ", "%u", event.param2);
+            s_lastModMValue = event.param2;
+        }
+        else
+        {
+            PrintWait(event.time);
+        }
+        break;
+    case 0x05:
+        s_cc5Value = event.param2;
+        EmitPortIfChanged(event.time, s_cc65Enabled ? s_cc5Value : 0);
+        break;
+    case 0x07: // Volume
+        if (event.param2 != s_lastVolumeValue)
+        {
+            PrintOp(event.time, "VOL   ", "%u*%s_mvl/mxv", event.param2, g_asmLabel.c_str());
+            s_lastVolumeValue = event.param2;
+        }
+        else
+        {
+            PrintWait(event.time);
+        }
         break;
     case 0x0A:
-        PrintOp(event.time, "PAN   ", "c_v%+d", event.param2 - 64);
+        if (event.param2 != s_lastPanValue)
+        {
+            PrintOp(event.time, "PAN   ", "c_v%+d", event.param2 - 64);
+            s_lastPanValue = event.param2;
+        }
+        else
+        {
+            PrintWait(event.time);
+        }
+        break;
+    case 0x0B: // Expression
+        if (event.param2 != s_lastVolume2Value)
+        {
+            PrintOp(event.time, "VOL2  ", "%u", event.param2);
+            s_lastVolume2Value = event.param2;
+        }
+        else
+        {
+            PrintWait(event.time);
+        }
         break;
     case 0x0C:
     case 0x10:
@@ -381,19 +481,71 @@ void PrintControllerOp(const Event& event)
         ResetTrackVars();
         break;
     case 0x14:
-        PrintOp(event.time, "BENDR ", "%u", event.param2);
+        if (event.param2 != s_lastBendrValue)
+        {
+            PrintOp(event.time, "BENDR ", "%u", event.param2);
+            s_lastBendrValue = event.param2;
+        }
+        else
+        {
+            PrintWait(event.time);
+        }
         break;
     case 0x15:
-        PrintOp(event.time, "LFOS  ", "%u", event.param2);
+        if (event.param2 != s_lastLfosValue)
+        {
+            PrintOp(event.time, "LFOS  ", "%u", event.param2);
+            s_lastLfosValue = event.param2;
+        }
+        else
+        {
+            PrintWait(event.time);
+        }
         break;
     case 0x16:
-        PrintOp(event.time, "MODT  ", "%u", event.param2);
+    {
+        int modtValue = event.param2;
+        if (g_modtAdd64Enabled && modtValue < 64)
+            modtValue += 64;
+
+        if (modtValue != s_lastModtValue)
+        {
+            PrintOp(event.time, "MODT  ", "%u", modtValue);
+            s_lastModtValue = modtValue;
+        }
+        else
+        {
+            PrintWait(event.time);
+        }
         break;
+    }
     case 0x18:
-        PrintOp(event.time, "TUNE  ", "c_v%+d", event.param2 - 64);
+        if (event.param2 != s_lastTuneValue)
+        {
+            PrintOp(event.time, "TUNE  ", "c_v%+d", event.param2 - 64);
+            s_lastTuneValue = event.param2;
+        }
+        else
+        {
+            PrintWait(event.time);
+        }
         break;
     case 0x1A:
-        PrintOp(event.time, "LFODL ", "%u", event.param2);
+        if (event.param2 != s_lastLfodlValue)
+        {
+            PrintOp(event.time, "LFODL ", "%u", event.param2);
+            s_lastLfodlValue = event.param2;
+        }
+        else
+        {
+            PrintWait(event.time);
+        }
+        break;
+    case 0x1B:
+        PrintOp(event.time, "PWMC  ", "%u", event.param2);
+        break;
+    case 0x1C:
+        PrintOp(event.time, "PWMS  ", "%u", event.param2);
         break;
     case 0x1D:
     case 0x1F:
@@ -407,6 +559,10 @@ void PrintControllerOp(const Event& event)
     case 0x27:
         PrintByte("PRIO  , %u", event.param2);
         PrintWait(event.time);
+        break;
+    case 0x41:
+        s_cc65Enabled = (event.param2 >= 64);
+        EmitPortIfChanged(event.time, s_cc65Enabled ? s_cc5Value : 0);
         break;
     default:
         PrintWait(event.time);
@@ -423,8 +579,24 @@ void PrintAgbTrack(std::vector<Event>& events)
     int loopEndBlockNum = 0;
 
     ResetTrackVars();
+    s_cc5Value = 0;
+    s_cc65Enabled = false;
+    s_lastPortValue = 0;
+    s_lastModValue = 0;
+    s_lastModMValue = 0;
+    s_lastPanValue = 64;
+    s_lastBendrValue = 2;
+    s_lastLfosValue = 22;
+    s_lastModtValue = 0;
+    s_lastTuneValue = 64;
+    s_lastLfodlValue = 0;
+    s_lastVolumeValue = -1;
+    s_lastVolume2Value = -1;
+    s_lastPitchBendValue = 128;
+    s_lastVoiceValue = -1;
 
     bool foundVolBeforeNote = false;
+    bool foundModt = false;
 
     for (const Event& event : events)
     {
@@ -434,15 +606,30 @@ void PrintAgbTrack(std::vector<Event>& events)
         if (event.type == EventType::Controller && event.param1 == 0x07)
         {
             foundVolBeforeNote = true;
-            break;
         }
+
+        if (event.type == EventType::Controller && event.param1 == 0x16)
+            foundModt = true;
+
+        if (foundVolBeforeNote && foundModt)
+            break;
     }
 
     if (!foundVolBeforeNote)
+    {
         PrintByte("\tVOL   , 127*%s_mvl/mxv", g_asmLabel.c_str());
+        s_lastVolumeValue = 127;
+        s_lastVolume2Value = 127;
+    }
 
     PrintWait(g_initialWait);
     PrintByte("KEYSH , %s_key%+d", g_asmLabel.c_str(), 0);
+
+    if (g_modtAdd64Enabled && !foundModt)
+    {
+        PrintByte("MODT  , %u", 64);
+        s_lastModtValue = 64;
+    }
 
     for (unsigned i = 0; events[i].type != EventType::EndOfTrack; i++)
     {
@@ -503,15 +690,41 @@ void PrintAgbTrack(std::vector<Event>& events)
             ResetTrackVars();
             break;
         case EventType::Tempo:
-            PrintByte("TEMPO , %u*%s_tbs/2", static_cast<int>(round(60000000.0f / static_cast<float>(event.param2))), g_asmLabel.c_str());
+            if (g_clocksPerBeat > 1)
+                PrintByte("TEMPO , %u*%s_tbs/2", static_cast<int>(round(60000000.0f / static_cast<float>(event.param2))), g_asmLabel.c_str());
+            else
+                PrintByte("TEMPO , (%u*%s_tbs+1)/2", static_cast<int>(round(60000000.0f / static_cast<float>(event.param2))), g_asmLabel.c_str());
             PrintWait(event.time);
             break;
         case EventType::InstrumentChange:
-            PrintOp(event.time, "VOICE ", "%u", event.param1);
+            if (event.param1 != s_lastVoiceValue)
+            {
+                PrintOp(event.time, "VOICE ", "%u", event.param1);
+                s_lastVoiceValue = event.param1;
+            }
+            else
+            {
+                PrintWait(event.time);
+            }
             break;
         case EventType::PitchBend:
-            PrintOp(event.time, "BEND  ", "c_v%+d", event.param2 - 64);
+        {
+            int bendValue = ((event.param1 >> 6) | (event.param2 << 1));
+            if (bendValue != s_lastPitchBendValue)
+            {
+                // Running-status shorthand only works for data bytes < 0x80.
+                // With c_b centered at 0x80, high bend values must keep explicit BEND.
+                if (bendValue >= 0x80)
+                    s_lastOpName = "";
+                PrintOp(event.time, "BEND  ", "c_b%+d", bendValue - 128);
+                s_lastPitchBendValue = bendValue;
+            }
+            else
+            {
+                PrintWait(event.time);
+            }
             break;
+        }
         case EventType::Controller:
             PrintControllerOp(event);
             break;

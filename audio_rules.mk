@@ -1,9 +1,12 @@
 # This file contains rules for making assemblies for most music in the game.
 
 CRY_SUBDIR := sound/direct_sound_samples/cries
+# todo: MUX sample quality configs
+MUX_SAMPLE_SUBDIR := sound/direct_sound_samples/music_expansion_q3
 
 MID_ASM_DIR := $(MID_SUBDIR)
 CRY_BIN_DIR := $(CRY_SUBDIR)
+MUX_SAMPLE_DIR := $(MUX_SAMPLE_SUBDIR)
 SOUND_BIN_DIR := sound
 
 SPECIAL_OUTDIRS := $(MID_ASM_DIR) $(CRY_BIN_DIR) 
@@ -19,7 +22,15 @@ $(MID_BUILDDIR)/%.o: $(MID_ASM_DIR)/%.s
 # Compressed cries
 $(CRY_BIN_DIR)/%.bin: $(CRY_SUBDIR)/%.wav
 # NOTE: If using ipatix's High Quality Audio Mixer, remove "--no-pad" below.
-	$(WAV2AGB) -b -c -l 1 --no-pad $< $@
+	$(WAV2AGB) -b -c -l 1 $< $@
+
+# MUX compressed samples
+$(MUX_SAMPLE_DIR)/%.bin: $(MUX_SAMPLE_SUBDIR)/%.wav
+	$(WAV2AGB) -b -c -l 1 $< $@
+
+# MUX uncompressed samples
+$(MUX_SAMPLE_DIR)/%.bin: $(MUX_SAMPLE_SUBDIR)/%.wav
+	$(WAV2AGB) -b $< $@
 
 # Uncompressed sounds
 $(SOUND_BIN_DIR)/%.bin: sound/%.wav 

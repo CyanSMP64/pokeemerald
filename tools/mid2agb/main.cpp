@@ -41,6 +41,9 @@ int g_reverb = -1;
 int g_clocksPerBeat = 1;
 bool g_exactGateTime = false;
 bool g_compressionEnabled = true;
+bool g_naturalVolumeEnabled = false;
+bool g_eventReorderEnabled = true;
+bool g_modtAdd64Enabled = false;
 
 [[noreturn]] static void PrintUsage()
 {
@@ -57,7 +60,10 @@ bool g_compressionEnabled = true;
         "         -R???  reverb (default:off)\n"
         "            -X  48 clocks/beat (default:24 clocks/beat)\n"
         "            -E  exact gate-time\n"
+        "            -A  keep original order for events on the same tick\n"
         "            -N  no compression\n"
+        "            -M  make modulation speed frame-based instead of tempo-based\n"
+        "            -S  apply natural volume scale (linear by default)\n"
     );
     std::exit(1);
 }
@@ -142,6 +148,9 @@ int main(int argc, char** argv)
 
             switch (std::toupper(option[1]))
             {
+            case 'A':
+                g_eventReorderEnabled = false;
+                break;
             case 'E':
                 g_exactGateTime = true;
                 break;
@@ -157,6 +166,9 @@ int main(int argc, char** argv)
                     PrintUsage();
                 g_asmLabel = arg;
                 break;
+            case 'M':
+                g_modtAdd64Enabled = true;
+                break;
             case 'N':
                 g_compressionEnabled = false;
                 break;
@@ -171,6 +183,9 @@ int main(int argc, char** argv)
                 if (arg == nullptr)
                     PrintUsage();
                 g_reverb = std::stoi(arg);
+                break;
+            case 'S':
+                g_naturalVolumeEnabled = true;
                 break;
             case 'V':
                 arg = GetArgument(argc, argv, i);
