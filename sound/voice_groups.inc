@@ -206,6 +206,8 @@
 .include "sound/voicegroups/test_3.inc"
 .include "sound/voicegroups/test_4.inc"
 .include "sound/voicegroups/test_5.inc"
+.include "sound/voicegroups/test_6.inc"
+.include "sound/voicegroups/test_7.inc"
 
 .include "sound/voicegroups/ut/001.inc"
 .include "sound/voicegroups/ut/002.inc"

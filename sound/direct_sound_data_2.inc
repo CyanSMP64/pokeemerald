@@ -1176,6 +1176,14 @@ DirectSoundWaveData_windchime_c4::
 @ wb samples for testing only
 
 	.align 2
+DirectSoundWaveData_purenoise::
+	.incbin "sound/direct_sound_samples/purenoise.bin"
+
+	.align 2
+DirectSoundWaveData_wb_a_bass_ps_c2_32::
+	.incbin "sound/direct_sound_samples/wb/a_bass_ps_c2_32.bin"
+
+	.align 2
 DirectSoundWaveData_wb_ac_bass_c2_22::
 	.incbin "sound/direct_sound_samples/wb/ac_bass_c2_22.bin"
 
@@ -1228,6 +1236,10 @@ DirectSoundWaveData_wb_chinese_cym_22::
 	.incbin "sound/direct_sound_samples/wb/chinese_cym_22.bin"
 
 	.align 2
+DirectSoundWaveData_wb_chinese_cym_32::
+	.incbin "sound/direct_sound_samples/wb/chinese_cym_32.bin"
+
+	.align 2
 DirectSoundWaveData_wb_choirs_male_a3_32::
 	.incbin "sound/direct_sound_samples/wb/choirs_male_a3_32.bin"
 
@@ -1268,12 +1280,24 @@ DirectSoundWaveData_wb_cool3_basE0_22::
 	.incbin "sound/direct_sound_samples/wb/cool3_basE0_22.bin"
 
 	.align 2
+DirectSoundWaveData_wb_cool_basE0_22::
+	.incbin "sound/direct_sound_samples/wb/cool_basE0_22.bin"
+
+	.align 2
 DirectSoundWaveData_wb_cool_snare2_22::
 	.incbin "sound/direct_sound_samples/wb/cool_snare2_22.bin"
 
 	.align 2
+DirectSoundWaveData_wb_cool_snare3_22::
+	.incbin "sound/direct_sound_samples/wb/cool_snare3_22.bin"
+
+	.align 2
 DirectSoundWaveData_wb_cowbell_22::
 	.incbin "sound/direct_sound_samples/wb/cowbell_22.bin"
+
+	.align 2
+DirectSoundWaveData_wb_cowbell_max32::
+	.incbin "sound/direct_sound_samples/wb/cowbell_max32.bin"
 
 	.align 2
 DirectSoundWaveData_wb_crash_cym_22::
@@ -1296,6 +1320,14 @@ DirectSoundWaveData_wb_dance_open_hat_32::
 	.incbin "sound/direct_sound_samples/wb/dance_open_hat_32.bin"
 
 	.align 2
+DirectSoundWaveData_wb_dis_gtl_c3_32::
+	.incbin "sound/direct_sound_samples/wb/dis_gtl_c3_32.bin"
+
+	.align 2
+DirectSoundWaveData_wb_dis_gtl_c4_32::
+	.incbin "sound/direct_sound_samples/wb/dis_gtl_c4_32.bin"
+
+	.align 2
 DirectSoundWaveData_wb_e_bass_a2_22::
 	.incbin "sound/direct_sound_samples/wb/e_bass_a2_22.bin"
 
@@ -1314,6 +1346,14 @@ DirectSoundWaveData_wb_electric_piano_c5_22::
 	.align 2
 DirectSoundWaveData_wb_europat_c3_16::
 	.incbin "sound/direct_sound_samples/wb/europat_c3_16.bin"
+
+	.align 2
+DirectSoundWaveData_wb_europat_max_wb_c4_32::
+	.incbin "sound/direct_sound_samples/wb/europat_max_wb_c4_32.bin"
+
+	.align 2
+DirectSoundWaveData_wb_europat_max_wb_c5_32::
+	.incbin "sound/direct_sound_samples/wb/europat_max_wb_c5_32.bin"
 
 	.align 2
 DirectSoundWaveData_wb_eurosne_16::
@@ -1348,8 +1388,20 @@ DirectSoundWaveData_wb_handclap_2_16::
 	.incbin "sound/direct_sound_samples/wb/handclap_2_16.bin"
 
 	.align 2
+DirectSoundWaveData_wb_harpsichord_a3_32::
+	.incbin "sound/direct_sound_samples/wb/harpsichord_a3_32.bin"
+
+	.align 2
 DirectSoundWaveData_wb_harpsichord_c3_32::
 	.incbin "sound/direct_sound_samples/wb/harpsichord_c3_32.bin"
+
+	.align 2
+DirectSoundWaveData_wb_harpsichord_d5_32::
+	.incbin "sound/direct_sound_samples/wb/harpsichord_d5_32.bin"
+
+	.align 2
+DirectSoundWaveData_wb_harpsichord_f4_32::
+	.incbin "sound/direct_sound_samples/wb/harpsichord_f4_32.bin"
 
 	.align 2
 DirectSoundWaveData_wb_high_conga_16::
@@ -1428,6 +1480,10 @@ DirectSoundWaveData_wb_pbrasslop_c4_max32::
 	.incbin "sound/direct_sound_samples/wb/pbrasslop_c4_max32.bin"
 
 	.align 2
+DirectSoundWaveData_wb_pbrasslop_c5_max32::
+	.incbin "sound/direct_sound_samples/wb/pbrasslop_c5_max32.bin"
+
+	.align 2
 DirectSoundWaveData_wb_perc_organ_c3_22::
 	.incbin "sound/direct_sound_samples/wb/perc_organ_c3_22.bin"
 
@@ -1438,6 +1494,50 @@ DirectSoundWaveData_wb_perc_organ_c4_22::
 	.align 2
 DirectSoundWaveData_wb_perc_organ_c5_22::
 	.incbin "sound/direct_sound_samples/wb/perc_organ_c5_22.bin"
+
+	.align 2
+DirectSoundWaveData_wb_pl_orgloop_c4_32::
+	.incbin "sound/direct_sound_samples/wb/pl_orgloop_c4_32.bin"
+
+	.align 2
+DirectSoundWaveData_wb_pl_orgloop_c5_32::
+	.incbin "sound/direct_sound_samples/wb/pl_orgloop_c5_32.bin"
+
+	.align 2
+DirectSoundWaveData_wb_pla_gtl_c3_32::
+	.incbin "sound/direct_sound_samples/wb/pla_gtl_c3_32.bin"
+
+	.align 2
+DirectSoundWaveData_wb_pla_gtl_g3_32::
+	.incbin "sound/direct_sound_samples/wb/pla_gtl_g3_32.bin"
+
+	.align 2
+DirectSoundWaveData_wb_plasma_gt2_c2_32::
+	.incbin "sound/direct_sound_samples/wb/plasma_gt2_c2_32.bin"
+
+	.align 2
+DirectSoundWaveData_wb_plasma_gt_c3_32::
+	.incbin "sound/direct_sound_samples/wb/plasma_gt_c3_32.bin"
+
+	.align 2
+DirectSoundWaveData_wb_plasma_gt_c4_32::
+	.incbin "sound/direct_sound_samples/wb/plasma_gt_c4_32.bin"
+
+	.align 2
+DirectSoundWaveData_wb_plasma_gtrif3_22::
+	.incbin "sound/direct_sound_samples/wb/plasma_gtrif3_22.bin"
+
+	.align 2
+DirectSoundWaveData_wb_plasma_noise_22::
+	.incbin "sound/direct_sound_samples/wb/plasma_noise_22.bin"
+
+	.align 2
+DirectSoundWaveData_wb_plasma_strings2_22::
+	.incbin "sound/direct_sound_samples/wb/plasma_strings2_22.bin"
+
+	.align 2
+DirectSoundWaveData_wb_plasma_wave_22::
+	.incbin "sound/direct_sound_samples/wb/plasma_wave_22.bin"
 
 	.align 2
 DirectSoundWaveData_wb_reverse_cym_16::
@@ -1480,6 +1580,10 @@ DirectSoundWaveData_wb_splash_cym_22::
 	.incbin "sound/direct_sound_samples/wb/splash_cym_22.bin"
 
 	.align 2
+DirectSoundWaveData_wb_splash_cym_32::
+	.incbin "sound/direct_sound_samples/wb/splash_cym_32.bin"
+
+	.align 2
 DirectSoundWaveData_wb_steel_dr_wb_g4_22::
 	.incbin "sound/direct_sound_samples/wb/steel_dr_wb_g4_22.bin"
 
@@ -1488,8 +1592,16 @@ DirectSoundWaveData_wb_strings_a4_22::
 	.incbin "sound/direct_sound_samples/wb/strings_a4_22.bin"
 
 	.align 2
+DirectSoundWaveData_wb_strings_a4_32::
+	.incbin "sound/direct_sound_samples/wb/strings_a4_32.bin"
+
+	.align 2
 DirectSoundWaveData_wb_strings_c4_22::
 	.incbin "sound/direct_sound_samples/wb/strings_c4_22.bin"
+
+	.align 2
+DirectSoundWaveData_wb_strings_c4_32::
+	.incbin "sound/direct_sound_samples/wb/strings_c4_32.bin"
 
 	.align 2
 DirectSoundWaveData_wb_strings_c6_22::
@@ -1510,6 +1622,10 @@ DirectSoundWaveData_wb_synbass_fs0_32::
 	.align 2
 DirectSoundWaveData_wb_synth_bass_c2_32::
 	.incbin "sound/direct_sound_samples/wb/synth_bass_c2_32.bin"
+
+	.align 2
+DirectSoundWaveData_wb_synth_snaer02_32::
+	.incbin "sound/direct_sound_samples/wb/synth_snaer02_32.bin"
 
 	.align 2
 DirectSoundWaveData_wb_tambourine_16::
@@ -1558,6 +1674,14 @@ DirectSoundWaveData_wb_vibraphone_c4_22::
 	.align 2
 DirectSoundWaveData_wb_vibraphone_c5_22::
 	.incbin "sound/direct_sound_samples/wb/vibraphone_c5_22.bin"
+
+	.align 2
+DirectSoundWaveData_wb_vocoder_stop_22::
+	.incbin "sound/direct_sound_samples/wb/vocoder_stop_22.bin"
+
+	.align 2
+DirectSoundWaveData_wb_vocoder_you_22::
+	.incbin "sound/direct_sound_samples/wb/vocoder_you_22.bin"
 
 	.align 2
 DirectSoundWaveData_wb_w_noise_32::

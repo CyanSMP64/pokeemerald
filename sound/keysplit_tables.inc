@@ -130,3 +130,8 @@ keysplit gs_bassoon, 0
     split 0, 46
     split 1, 54
     split 2, 128
+
+keysplit test7_harpsichord, 0
+    split 0, 63
+    split 1, 73
+    split 2, 128

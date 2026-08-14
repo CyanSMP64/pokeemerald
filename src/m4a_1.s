@@ -281,7 +281,7 @@ C_adsr_echo_check:
 	ldr r1, [r4, #o_SoundChannel_mplayInfo]
 	cmp r1, #0
 	beq C_adsr_tick_ok
-	ldrb r0, [r1, #(o_MusicPlayerInfo_gap + 2)]
+	ldrb r0, [r1, #o_MusicPlayerInfo_adsrTick]
 	cmp r0, #0
 	bne C_adsr_tick_ok
 	b C_channel_vol_calc
