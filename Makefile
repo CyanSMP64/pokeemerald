@@ -207,7 +207,11 @@ ASM_OBJS := $(patsubst $(ASM_SUBDIR)/%.s,$(ASM_BUILDDIR)/%.o,$(ASM_SRCS))
 DATA_ASM_SRCS := $(wildcard $(DATA_ASM_SUBDIR)/*.s)
 DATA_ASM_OBJS := $(patsubst $(DATA_ASM_SUBDIR)/%.s,$(DATA_ASM_BUILDDIR)/%.o,$(DATA_ASM_SRCS))
 
-MID_SRCS := $(wildcard $(MID_SUBDIR)/*.mid)
+MUX_ENABLED_MID_NAMES := $(shell awk '/^#define MUX_(SE|MUS)_[A-Za-z0-9_]+[[:space:]]+TRUE([[:space:]]|$$)/ { name = $$2; sub(/^MUX_/, "", name); if (name == "MUS_DESERT") name = "MUS_ROUTE111"; print tolower(name) }' include/config/music_expansion_v3.h)
+ifeq ($(shell grep -Eq '^#define MUX_ENABLE_BARD_PHONEMES[[:space:]]+TRUE([[:space:]]|$$)' include/config/music_expansion_v3.h && echo 1),1)
+	MUX_ENABLED_MID_NAMES += ph_trap_blend ph_trap_held ph_trap_solo ph_face_blend ph_face_held ph_face_solo ph_cloth_blend ph_cloth_held ph_cloth_solo ph_dress_blend ph_dress_held ph_dress_solo ph_fleece_blend ph_fleece_held ph_fleece_solo ph_kit_blend ph_kit_held ph_kit_solo ph_price_blend ph_price_held ph_price_solo ph_lot_blend ph_lot_held ph_lot_solo ph_goat_blend ph_goat_held ph_goat_solo ph_thought_blend ph_thought_held ph_thought_solo ph_choice_blend ph_choice_held ph_choice_solo ph_mouth_blend ph_mouth_held ph_mouth_solo ph_foot_blend ph_foot_held ph_foot_solo ph_goose_blend ph_goose_held ph_goose_solo ph_strut_blend ph_strut_held ph_strut_solo ph_cure_blend ph_cure_held ph_cure_solo ph_nurse_blend ph_nurse_held ph_nurse_solo
+endif
+MID_SRCS := $(filter $(addprefix $(MID_SUBDIR)/,$(addsuffix .mid,$(MUX_ENABLED_MID_NAMES) mus_dummy)),$(wildcard $(MID_SUBDIR)/*.mid))
 MID_OBJS := $(patsubst $(MID_SUBDIR)/%.mid,$(MID_BUILDDIR)/%.o,$(MID_SRCS))
 
 OBJS     := $(C_OBJS) $(C_ASM_OBJS) $(ASM_OBJS) $(DATA_ASM_OBJS) $(MID_OBJS)
@@ -360,8 +364,8 @@ $(OBJ_DIR)/sym_ewram.ld: sym_ewram.txt
 
 # Linker script
 ifeq ($(MODERN),0)
-LD_SCRIPT := ld_script.ld
-LD_SCRIPT_DEPS := $(OBJ_DIR)/sym_bss.ld $(OBJ_DIR)/sym_common.ld $(OBJ_DIR)/sym_ewram.ld
+LD_SCRIPT := $(OBJ_DIR)/ld_script.ld
+LD_SCRIPT_DEPS := $(OBJ_DIR)/sym_bss.ld $(OBJ_DIR)/sym_common.ld $(OBJ_DIR)/sym_ewram.ld $(OBJ_DIR)/song_data.ld
 else
 LD_SCRIPT := ld_script_modern.ld
 LD_SCRIPT_DEPS :=
@@ -374,6 +378,20 @@ libagbsyscall:
 
 # Elf from object files
 LDFLAGS = -Map ../../$(MAP)
+$(OBJ_DIR)/song_data.ld: include/config/music_expansion_v3.h Makefile
+	@{ \
+	echo 'sound/songs/midi/mus_dummy.o(.rodata);'; \
+		awk '/^#define MUX_(SE|MUS)_[A-Za-z0-9_]+[[:space:]]+TRUE([[:space:]]|$$)/ { name = $$2; sub(/^MUX_/, "", name); if (name == "MUS_DESERT") name = "MUS_ROUTE111"; print "sound/songs/midi/" tolower(name) ".o(.rodata);" }' $<; \
+	if grep -Eq '^#define MUX_ENABLE_BARD_PHONEMES[[:space:]]+TRUE([[:space:]]|$$)' $<; then \
+		for name in trap_blend trap_held trap_solo face_blend face_held face_solo cloth_blend cloth_held cloth_solo dress_blend dress_held dress_solo fleece_blend fleece_held fleece_solo kit_blend kit_held kit_solo price_blend price_held price_solo lot_blend lot_held lot_solo goat_blend goat_held goat_solo thought_blend thought_held thought_solo choice_blend choice_held choice_solo mouth_blend mouth_held mouth_solo foot_blend foot_held foot_solo goose_blend goose_held goose_solo strut_blend strut_held strut_solo cure_blend cure_held cure_solo nurse_blend nurse_held nurse_solo; do \
+			echo "sound/songs/midi/ph_$$name.o(.rodata);"; \
+		done; \
+	fi; \
+	} > $@
+
+$(OBJ_DIR)/ld_script.ld: ld_script.ld $(OBJ_DIR)/song_data.ld
+	awk '/sound\/songs\/midi\/mus_dummy\.o\(\.rodata\)/ { print; print "        INCLUDE \"song_data.ld\";"; in_songs = 1; next } /sound\/songs\/midi\/ph_nurse_solo\.o\(\.rodata\)/ { in_songs = 0; next } !in_songs { print }' $< > $@
+
 $(ELF): $(LD_SCRIPT) $(LD_SCRIPT_DEPS) $(OBJS) libagbsyscall
 	@cd $(OBJ_DIR) && $(LD) $(LDFLAGS) -T ../../$< --print-memory-usage -o ../../$@ $(OBJS_REL) $(LIB) | cat
 	@echo "cd $(OBJ_DIR) && $(LD) $(LDFLAGS) -T ../../$< --print-memory-usage -o ../../$@ <objs> <libs> | cat"
