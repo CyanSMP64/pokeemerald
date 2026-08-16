@@ -735,14 +735,14 @@ void MPlayStart(struct MusicPlayerInfo *mplayInfo, struct SongHeader *songHeader
         mplayInfo->tone = songHeader->tone;
         mplayInfo->priority = songHeader->priority;
         mplayInfo->clock = 0;
+        mplayInfo->songSpeed = speed;
+        mplayInfo->songVol = volume;
         mplayInfo->tempoD = 150;
         mplayInfo->tempoI = 150;
         mplayInfo->tempoU = 0x100;
         PrimeTempoCounter(mplayInfo);
         PrimeAdsrCounter(mplayInfo);
         mplayInfo->fadeOI = 0;
-        mplayInfo->songVol = volume;
-        mplayInfo->songSpeed = speed;
 
         i = 0;
         track = mplayInfo->tracks;
@@ -1507,7 +1507,8 @@ void m4aMPlayTempoControl(struct MusicPlayerInfo *mplayInfo, u16 tempo)
     {
         mplayInfo->ident++;
         mplayInfo->tempoU = tempo;
-        mplayInfo->tempoI = (mplayInfo->tempoD * mplayInfo->tempoU) >> 8;
+        mplayInfo->tempoI = ((mplayInfo->tempoD * mplayInfo->tempoU) >> 8);
+        PrimeTempoCounter(mplayInfo);
         mplayInfo->ident = ID_NUMBER;
     }
 }
