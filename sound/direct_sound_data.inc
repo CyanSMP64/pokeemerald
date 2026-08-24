@@ -1,390 +1,699 @@
+	.macro camelot_synth_sound type:req offset:req step:req depth:req init:req
+	.4byte 0x40000000, 0x01058920, 0, 0
+	.byte 0x80
+	.byte \type
+	.if \type == 0
+	.byte \offset
+	.byte \step
+	.byte \depth
+	.byte \init
+	.byte 0
+	.elseif \type == 3
+	.byte \offset
+	.else
+	.byte 0
+	.endif
+	.byte 0
+	.endm
+
 	.align 2
 DirectSoundWaveData_sc88pro_glockenspiel::
+.if MUX_SMP_SC88PRO_GLOCKENSPIEL == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_glockenspiel.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_organ2::
+.if MUX_SMP_SC88PRO_ORGAN2 == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_organ2.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_fretless_bass::
+.if MUX_SMP_SC88PRO_FRETLESS_BASS == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_fretless_bass.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_slap_bass::
+.if MUX_SMP_SC88PRO_SLAP_BASS == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_slap_bass.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_synth_bass::
+.if MUX_SMP_SC88PRO_SYNTH_BASS == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_synth_bass.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_timpani::
+.if MUX_SMP_SC88PRO_TIMPANI == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_timpani.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_classical_choir_voice_ahhs::
+.if MUX_SMP_CLASSICAL_CHOIR_VOICE_AHHS == TRUE
 	.incbin "sound/direct_sound_samples/classical_choir_voice_ahhs.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sd90_classical_oboe::
+.if MUX_SMP_SD90_CLASSICAL_OBOE == TRUE
 	.incbin "sound/direct_sound_samples/sd90_classical_oboe.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unused_sd90_oboe::
+.if MUX_SMP_UNUSED_SD90_OBOE == TRUE
 	.incbin "sound/direct_sound_samples/unused_sd90_oboe.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unused_guitar_separates_power_chord::
+.if MUX_SMP_UNUSED_GUITAR_SEPARATES_POWER_CHORD == TRUE
 	.incbin "sound/direct_sound_samples/unused_guitar_separates_power_chord.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unused_sc88pro_unison_slap::
+.if MUX_SMP_UNUSED_SC88PRO_UNISON_SLAP == TRUE
 	.incbin "sound/direct_sound_samples/unused_sc88pro_unison_slap.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_snare::
+.if MUX_SMP_UNKNOWN_SNARE == TRUE
 	.incbin "sound/direct_sound_samples/unknown_snare.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_ethnic_flavours_ohtsuzumi::
+.if MUX_SMP_ETHNIC_FLAVOURS_OHTSUZUMI == TRUE
 	.incbin "sound/direct_sound_samples/ethnic_flavours_ohtsuzumi.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_ethnic_flavours_hyoushigi::
+.if MUX_SMP_ETHNIC_FLAVOURS_HYOUSHIGI == TRUE
 	.incbin "sound/direct_sound_samples/ethnic_flavours_hyoushigi.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_rnd_kick::
+.if MUX_SMP_SC88PRO_RND_KICK == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_rnd_kick.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_rnd_snare::
+.if MUX_SMP_SC88PRO_RND_SNARE == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_rnd_snare.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_tr909_hand_clap::
+.if MUX_SMP_SC88PRO_TR909_HAND_CLAP == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_tr909_hand_clap.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_orchestra_snare::
+.if MUX_SMP_SC88PRO_ORCHESTRA_SNARE == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_orchestra_snare.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unused_sc55_tom::
+.if MUX_SMP_UNUSED_SC55_TOM == TRUE
 	.incbin "sound/direct_sound_samples/unused_sc55_tom.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_close_hihat::
+.if MUX_SMP_UNKNOWN_CLOSE_HIHAT == TRUE
 	.incbin "sound/direct_sound_samples/unknown_close_hihat.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_open_hihat::
+.if MUX_SMP_UNKNOWN_OPEN_HIHAT == TRUE
 	.incbin "sound/direct_sound_samples/unknown_open_hihat.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_bell::
+.if MUX_SMP_UNKNOWN_BELL == TRUE
 	.incbin "sound/direct_sound_samples/unknown_bell.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_tambourine::
+.if MUX_SMP_SC88PRO_TAMBOURINE == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_tambourine.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_trinity_cymbal_crash::
+.if MUX_SMP_TRINITY_CYMBAL_CRASH == TRUE
 	.incbin "sound/direct_sound_samples/trinity_cymbal_crash.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_orchestra_cymbal_crash::
+.if MUX_SMP_SC88PRO_ORCHESTRA_CYMBAL_CRASH == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_orchestra_cymbal_crash.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_mute_high_conga::
+.if MUX_SMP_SC88PRO_MUTE_HIGH_CONGA == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_mute_high_conga.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_open_low_conga::
+.if MUX_SMP_SC88PRO_OPEN_LOW_CONGA == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_open_low_conga.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_drum_and_percussion_kick::
+.if MUX_SMP_DRUM_AND_PERCUSSION_KICK == TRUE
 	.incbin "sound/direct_sound_samples/drum_and_percussion_kick.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sd90_solo_snare::
+.if MUX_SMP_SD90_SOLO_SNARE == TRUE
 	.incbin "sound/direct_sound_samples/sd90_solo_snare.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sd90_ambient_tom::
+.if MUX_SMP_SD90_AMBIENT_TOM == TRUE
 	.incbin "sound/direct_sound_samples/sd90_ambient_tom.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_dance_drums_ride_bell::
+.if MUX_SMP_DANCE_DRUMS_RIDE_BELL == TRUE
 	.incbin "sound/direct_sound_samples/dance_drums_ride_bell.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sd90_cowbell::
+.if MUX_SMP_SD90_COWBELL == TRUE
 	.incbin "sound/direct_sound_samples/sd90_cowbell.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unused_heart_of_asia_indian_drum::
+.if MUX_SMP_UNUSED_HEART_OF_ASIA_INDIAN_DRUM == TRUE
 	.incbin "sound/direct_sound_samples/unused_heart_of_asia_indian_drum.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sd90_open_triangle::
+.if MUX_SMP_SD90_OPEN_TRIANGLE == TRUE
 	.incbin "sound/direct_sound_samples/sd90_open_triangle.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_jingle_bell::
+.if MUX_SMP_SC88PRO_JINGLE_BELL == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_jingle_bell.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_ethnic_flavours_atarigane::
+.if MUX_SMP_ETHNIC_FLAVOURS_ATARIGANE == TRUE
 	.incbin "sound/direct_sound_samples/ethnic_flavours_atarigane.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_taiko::
+.if MUX_SMP_SC88PRO_TAIKO == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_taiko.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_ethnic_flavours_kotsuzumi::
+.if MUX_SMP_ETHNIC_FLAVOURS_KOTSUZUMI == TRUE
 	.incbin "sound/direct_sound_samples/ethnic_flavours_kotsuzumi.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_piano1_48::
+.if MUX_SMP_SC88PRO_PIANO1_48 == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_piano1_48.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_piano1_60::
+.if MUX_SMP_SC88PRO_PIANO1_60 == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_piano1_60.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_piano1_72::
+.if MUX_SMP_SC88PRO_PIANO1_72 == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_piano1_72.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_piano1_84::
+.if MUX_SMP_SC88PRO_PIANO1_84 == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_piano1_84.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_string_ensemble_60::
+.if MUX_SMP_SC88PRO_STRING_ENSEMBLE_60 == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_string_ensemble_60.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_string_ensemble_72::
+.if MUX_SMP_SC88PRO_STRING_ENSEMBLE_72 == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_string_ensemble_72.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_string_ensemble_84::
+.if MUX_SMP_SC88PRO_STRING_ENSEMBLE_84 == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_string_ensemble_84.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_trumpet_60::
+.if MUX_SMP_SC88PRO_TRUMPET_60 == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_trumpet_60.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_trumpet_72::
+.if MUX_SMP_SC88PRO_TRUMPET_72 == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_trumpet_72.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_trumpet_84::
+.if MUX_SMP_SC88PRO_TRUMPET_84 == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_trumpet_84.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_tuba_39:: @N.B.: These tuba samples are actually sampled at 36 and 48, then pitched up
+.if MUX_SMP_SC88PRO_TUBA_39 == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_tuba_39.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_tuba_51::
+.if MUX_SMP_SC88PRO_TUBA_51 == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_tuba_51.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_french_horn_60::
+.if MUX_SMP_SC88PRO_FRENCH_HORN_60 == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_french_horn_60.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_french_horn_72::
+.if MUX_SMP_SC88PRO_FRENCH_HORN_72 == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_french_horn_72.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_flute::
+.if MUX_SMP_SC88PRO_FLUTE == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_flute.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_fingered_bass::
+.if MUX_SMP_SC88PRO_FINGERED_BASS == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_fingered_bass.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_koto_high::
+.if MUX_SMP_UNKNOWN_KOTO_HIGH == TRUE
 	.incbin "sound/direct_sound_samples/unknown_koto_high.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sd90_classical_shakuhachi::
+.if MUX_SMP_SD90_CLASSICAL_SHAKUHACHI == TRUE
 	.incbin "sound/direct_sound_samples/sd90_classical_shakuhachi.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_koto_low::
+.if MUX_SMP_UNKNOWN_KOTO_LOW == TRUE
 	.incbin "sound/direct_sound_samples/unknown_koto_low.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sd90_classical_overdrive_guitar::
+.if MUX_SMP_SD90_CLASSICAL_OVERDRIVE_GUITAR == TRUE
 	.incbin "sound/direct_sound_samples/sd90_classical_overdrive_guitar.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sd90_classical_distortion_guitar_high::
+.if MUX_SMP_SD90_CLASSICAL_DISTORTION_GUITAR_HIGH == TRUE
 	.incbin "sound/direct_sound_samples/sd90_classical_distortion_guitar_high.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sd90_classical_distortion_guitar_low::
+.if MUX_SMP_SD90_CLASSICAL_DISTORTION_GUITAR_LOW == TRUE
 	.incbin "sound/direct_sound_samples/sd90_classical_distortion_guitar_low.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_heart_of_asia_gamelan::
+.if MUX_SMP_HEART_OF_ASIA_GAMELAN == TRUE
 	.incbin "sound/direct_sound_samples/heart_of_asia_gamelan.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_church_organ3_low::
+.if MUX_SMP_SC88PRO_CHURCH_ORGAN3_LOW == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_church_organ3_low.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_church_organ3_high::
+.if MUX_SMP_SC88PRO_CHURCH_ORGAN3_HIGH == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_church_organ3_high.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_female_voice::
+.if MUX_SMP_UNKNOWN_FEMALE_VOICE == TRUE
 	.incbin "sound/direct_sound_samples/unknown_female_voice.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unused_unknown_male_voice::
+.if MUX_SMP_UNUSED_UNKNOWN_MALE_VOICE == TRUE
 	.incbin "sound/direct_sound_samples/unused_unknown_male_voice.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sd90_classical_detuned_ep1_low::
+.if MUX_SMP_SD90_CLASSICAL_DETUNED_EP1_LOW == TRUE
 	.incbin "sound/direct_sound_samples/sd90_classical_detuned_ep1_low.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sd90_classical_detuned_ep1_high::
+.if MUX_SMP_SD90_CLASSICAL_DETUNED_EP1_HIGH == TRUE
 	.incbin "sound/direct_sound_samples/sd90_classical_detuned_ep1_high.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_timpani_with_snare::
+.if MUX_SMP_SC88PRO_TIMPANI_WITH_SNARE == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_timpani_with_snare.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_synth_snare::
+.if MUX_SMP_UNKNOWN_SYNTH_SNARE == TRUE
 	.incbin "sound/direct_sound_samples/unknown_synth_snare.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_square_wave::
+.if MUX_SMP_SC88PRO_SQUARE_WAVE == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_square_wave.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_bicycle_bell::
+.if MUX_SMP_BICYCLE_BELL == TRUE
 	.incbin "sound/direct_sound_samples/bicycle_bell.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_1::
+.if MUX_SMP_UNKNOWN_1 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_01.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_pizzicato_strings::
+.if MUX_SMP_SC88PRO_PIZZICATO_STRINGS == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_pizzicato_strings.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_2::
+.if MUX_SMP_UNKNOWN_2 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_02.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_3::
+.if MUX_SMP_UNKNOWN_3 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_03.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_4::
+.if MUX_SMP_UNKNOWN_4 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_04.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_wind::
+.if MUX_SMP_SC88PRO_WIND == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_wind.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_bubbles::
+.if MUX_SMP_SC88PRO_BUBBLES == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_bubbles.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_5::
+.if MUX_SMP_UNKNOWN_5 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_05.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_6::
+.if MUX_SMP_UNKNOWN_6 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_06.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_trinity_30303_mega_bass::
+.if MUX_SMP_TRINITY_30303_MEGA_BASS == TRUE
 	.incbin "sound/direct_sound_samples/trinity_30303_mega_bass.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_7::
+.if MUX_SMP_UNKNOWN_7 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_07.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_8::
+.if MUX_SMP_UNKNOWN_8 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_08.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_tubular_bell::
+.if MUX_SMP_SC88PRO_TUBULAR_BELL == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_tubular_bell.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_9::
+.if MUX_SMP_UNKNOWN_9 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_09.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_trinity_big_boned::
+.if MUX_SMP_TRINITY_BIG_BONED == TRUE
 	.incbin "sound/direct_sound_samples/trinity_big_boned.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_harp::
+.if MUX_SMP_SC88PRO_HARP == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_harp.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_xylophone::
+.if MUX_SMP_SC88PRO_XYLOPHONE == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_xylophone.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_10::
+.if MUX_SMP_UNKNOWN_10 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_10.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_11::
+.if MUX_SMP_UNKNOWN_11 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_11.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_accordion::
+.if MUX_SMP_SC88PRO_ACCORDION == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_accordion.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_12::
+.if MUX_SMP_UNKNOWN_12 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_12.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_13::
+.if MUX_SMP_UNKNOWN_13 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_13.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_14::
+.if MUX_SMP_UNKNOWN_14 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_14.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_15::
+.if MUX_SMP_UNKNOWN_15 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_15.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_16::
+.if MUX_SMP_UNKNOWN_16 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_16.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_17::
+.if MUX_SMP_UNKNOWN_17 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_17.bin"
+.else
+.endif
 
 	.align 2
 Cry_Bulbasaur::
@@ -1940,236 +2249,417 @@ Cry_Chimecho::
 
 	.align 2
 DirectSoundWaveData_register_noise::
+.if MUX_SMP_REGISTER_NOISE == TRUE
 	.incbin "sound/direct_sound_samples/register_noise.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_unknown_18::
+.if MUX_SMP_UNKNOWN_18 == TRUE
 	.incbin "sound/direct_sound_samples/unknown_18.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_nylon_str_guitar::
+.if MUX_SMP_SC88PRO_NYLON_STR_GUITAR == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_nylon_str_guitar.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sd90_special_scream_drive::
+.if MUX_SMP_SD90_SPECIAL_SCREAM_DRIVE == TRUE
 	.incbin "sound/direct_sound_samples/sd90_special_scream_drive.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_1::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/01.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_2::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/02.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_3::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/03.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_4::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/04.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_5::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/05.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_6::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/06.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_7::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/07.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_8::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/08.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_9::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/09.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_10::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/10.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_11::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/11.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_12::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/12.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_13::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/13.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_14::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/14.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_15::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/15.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_16::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/16.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_17::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/17.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_18::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/18.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_19::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/19.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_20::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/20.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_21::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/21.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_22::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/22.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_23::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/23.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_24::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/24.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_25::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/25.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_26::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/26.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_27::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/27.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_28::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/28.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_29::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/29.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_30::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/30.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_31::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/31.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_32::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/32.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_33::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/33.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_34::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/34.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_35::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/35.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_36::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/36.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_37::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/37.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_38::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/38.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_39::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/39.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_40::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/40.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_41::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/41.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_42::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/42.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_43::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/43.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_44::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/44.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_45::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/45.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_46::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/46.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_47::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/47.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_48::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/48.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_49::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/49.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_50::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/50.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_Phoneme_51::
+.if MUX_SMP_PHONEMES == TRUE
 	.incbin "sound/direct_sound_samples/phonemes/51.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sc88pro_accordion_duplicate::
+.if MUX_SMP_SC88PRO_ACCORDION_DUPLICATE == TRUE
 	.incbin "sound/direct_sound_samples/sc88pro_accordion_duplicate.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_steinway_b_piano::
+.if MUX_SMP_STEINWAY_B_PIANO == TRUE
 	.incbin "sound/direct_sound_samples/steinway_b_piano.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sd90_classical_whistle::
+.if MUX_SMP_SD90_CLASSICAL_WHISTLE == TRUE
 	.incbin "sound/direct_sound_samples/sd90_classical_whistle.bin"
+.else
+.endif
 
 	.align 2
 DirectSoundWaveData_sd90_enhanced_delay_shaku::
+.if MUX_SMP_SD90_ENHANCED_DELAY_SHAKU == TRUE
 	.incbin "sound/direct_sound_samples/sd90_enhanced_delay_shaku.bin"
+.else
+.endif
+
+	.align 2
+DirectSoundSynthData_dummy::
+	camelot_synth_sound 3, 128, 0, 0, 0
