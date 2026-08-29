@@ -1144,7 +1144,7 @@ static void Task_OrbEffect(u8 taskId)
     case 1:
         BgDmaFill(0, PIXEL_FILL(1), 0, 1);
         LoadOrbEffectPalette(tBlueOrb);
-        StartUpdateOrbFlashEffect(tCenterX, tCenterY, 1, 160, 1, 2);
+        StartUpdateOrbFlashEffect(tCenterX, tCenterY, 1, 160, 1, FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 1 : 2);
         tState = 2;
         break;
     case 2:
@@ -1158,14 +1158,14 @@ static void Task_OrbEffect(u8 taskId)
         InstallCameraPanAheadCallback();
         SetCameraPanningCallback(NULL);
         tShakeDir = 0;
-        tShakeDelay = 4;
+        tShakeDelay = FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 8 : 4;
         tState = 4;
         break;
     case 4:
         if (--tShakeDelay == 0)
         {
             s32 panning;
-            tShakeDelay = 4;
+            tShakeDelay = FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 8 : 4;
             tShakeDir ^= 1;
             if (tShakeDir)
                 panning = 4;
@@ -1176,13 +1176,13 @@ static void Task_OrbEffect(u8 taskId)
         break;
     case 6:
         InstallCameraPanAheadCallback();
-        tShakeDelay = 8;
+        tShakeDelay = FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 16 : 8;
         tState = 7;
         break;
     case 7:
         if (--tShakeDelay == 0)
         {
-            tShakeDelay = 8;
+            tShakeDelay = FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 16 : 8;
             tShakeDir ^= 1;
             if (UpdateOrbEffectBlend(tShakeDir) == TRUE)
             {

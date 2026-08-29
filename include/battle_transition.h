@@ -7,6 +7,7 @@ bool8 IsBattleTransitionDone(void);
 bool8 FldEff_PokeballTrail(void);
 void Task_BattleTransition_Intro(u8 taskId);
 void GetBg0TilesDst(u16 **tilemap, u16 **tileset);
+bool8 IsBattleTransitionTaskActive(void);
 
 extern const struct SpritePalette gSpritePalette_Pokeball;
 

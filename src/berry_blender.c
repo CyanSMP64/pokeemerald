@@ -3910,3 +3910,15 @@ static bool32 PrintMessage(s16 *textState, const u8 *string, s32 textSpeed)
 
     return FALSE;
 }
+
+bool8 IsBerryBlenderActive(void)
+{
+    return gMain.callback2 == DoBerryBlending
+        || gMain.callback2 == CB2_LoadBerryBlender
+        || gMain.callback2 == CB2_StartBlenderLink
+        || gMain.callback2 == CB2_StartBlenderLocal
+        || gMain.callback2 == CB2_PlayBlender
+        || gMain.callback2 == CB2_EndBlenderGame
+        || gMain.callback2 == CB2_CheckPlayAgainLocal
+        || gMain.callback2 == CB2_CheckPlayAgainLink;
+}

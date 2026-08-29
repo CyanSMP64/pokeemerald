@@ -5,6 +5,7 @@
 #include "battle_interface.h"
 #include "decompress.h"
 #include "dma3.h"
+#include "event_data.h"
 #include "gpu_regs.h"
 #include "graphics.h"
 #include "m4a.h"
@@ -17,6 +18,7 @@
 #include "trig.h"
 #include "util.h"
 #include "data.h"
+#include "constants/flags.h"
 #include "constants/items.h"
 #include "constants/moves.h"
 #include "constants/songs.h"
@@ -1324,7 +1326,7 @@ static void SpriteCB_Ball_Capture_Step(struct Sprite *sprite)
         if (gSaveBlock2Ptr->optionsBGM == TRUE)
             PlaySE(MUS_RG_CAUGHT_INTRO);
     }
-    else if (sprite->sTimer == 315)
+    else if (sprite->sTimer == (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 500 : 315))
     {
         FreeOamMatrix(gSprites[gBattlerSpriteIds[*battler]].oam.matrixNum);
         DestroySprite(&gSprites[gBattlerSpriteIds[*battler]]);

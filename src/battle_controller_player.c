@@ -958,8 +958,19 @@ static void Intro_TryShinyAnimShowHealthbox(void)
         gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].healthboxSlideInStarted = TRUE;
     }
 
-    // Restore bgm after cry has played and healthbox anim is started
-    if (!gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].waitForCry
+    if (!(gBattleTypeFlags & BATTLE_TYPE_TRAINER))
+    {
+        if (!gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].waitForCry
+            && gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].healthboxSlideInStarted
+            && !gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(gActiveBattler)].waitForCry)
+        {
+            if (!gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].bgmRestored)
+                CreateTask(Task_PlayerController_RestoreBgmAfterCry, 10);
+            gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].bgmRestored = TRUE;
+            bgmRestored = TRUE;
+        }
+    }
+    else if (!gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].waitForCry
         && gBattleSpritesDataPtr->healthBoxesData[gActiveBattler].healthboxSlideInStarted
         && !gBattleSpritesDataPtr->healthBoxesData[BATTLE_PARTNER(gActiveBattler)].waitForCry
         && !IsCryPlayingOrClearCrySongs())

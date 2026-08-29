@@ -9,5 +9,6 @@
 void CB2_InitCopyrightScreenAfterBootup(void);
 void CB2_InitCopyrightScreenAfterTitleScreen(void);
 void PanFadeAndZoomScreen(u16, u16, u16, u16);
+bool8 IsOpeningMovieOrIntroActive(void);
 
 #endif // GUARD_INTRO_H

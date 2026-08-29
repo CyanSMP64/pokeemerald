@@ -3187,3 +3187,9 @@ static void Task_ChasesAway_AnimateRing(u8 taskId)
         break;
     }
 }
+
+bool8 IsRayquazaSceneActive(void)
+{
+    return gMain.callback2 == CB2_InitRayquazaScene
+        || gMain.callback2 == CB2_RayquazaScene;
+}

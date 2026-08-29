@@ -2414,7 +2414,7 @@ static void Cmd_waitmessage(void)
         }
         else
         {
-            u16 toWait = T2_READ_16(gBattlescriptCurrInstr + 1);
+            u16 toWait = T2_READ_16(gBattlescriptCurrInstr + 1) * (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1);
             if (++gPauseCounterBattle >= toWait)
             {
                 gPauseCounterBattle = 0;
@@ -4187,7 +4187,7 @@ static void Cmd_pause(void)
 {
     if (gBattleControllerExecFlags == 0)
     {
-        u16 value = T2_READ_16(gBattlescriptCurrInstr + 1);
+        u16 value = T2_READ_16(gBattlescriptCurrInstr + 1) * (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1);
         if (++gPauseCounterBattle >= value)
         {
             gPauseCounterBattle = 0;

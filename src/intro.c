@@ -3511,3 +3511,11 @@ static void SpriteCB_RayquazaOrb(struct Sprite *sprite)
         break;
     }
 }
+
+bool8 IsOpeningMovieOrIntroActive(void)
+{
+    return gMain.callback2 == CB2_InitCopyrightScreenAfterBootup
+        || gMain.callback2 == CB2_InitCopyrightScreenAfterTitleScreen
+        || gMain.callback2 == MainCB2_Intro
+        || gMain.callback2 == MainCB2_EndIntro;
+}

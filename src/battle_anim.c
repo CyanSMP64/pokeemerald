@@ -1839,3 +1839,8 @@ static void Cmd_stopsound(void)
     m4aMPlayStop(&gMPlayInfo_SE2);
     sBattleAnimScriptPtr++;
 }
+
+bool8 IsBattleBackgroundFadeActive(void)
+{
+    return sAnimBackgroundFadeState != 0;
+}

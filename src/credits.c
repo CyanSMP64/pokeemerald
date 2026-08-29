@@ -16,6 +16,7 @@
 #include "starter_choose.h"
 #include "decompress.h"
 #include "intro_credits_graphics.h"
+#include "credits.h"
 #include "sound.h"
 #include "trig.h"
 #include "graphics.h"
@@ -1640,4 +1641,10 @@ static void DeterminePokemonToShow(void)
         }
     }
     sCreditsData->numMonToShow = NUM_MON_SLIDES;
+}
+
+bool8 IsEndCreditsActive(void)
+{
+    return gMain.callback2 == CB2_StartCreditsSequence
+        || gMain.callback2 == CB2_Credits;
 }

@@ -22,6 +22,7 @@ MagmaHideout_4F_EventScript_Maxie::
 	setvar VAR_RESULT, 1
 	playfanfare MUS_AWAKEN_LEGEND
 	playse SE_ORB
+	goto_if_set FLAG_DOUBLE_SPEED, MagmaHideout_4F_EventScript_MaxieOrbSceneDoubleSpeed
 	special DoOrbEffect
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -50,6 +51,7 @@ MagmaHideout_4F_EventScript_Maxie::
 	setvar VAR_0x8007, 5  @ shake delay
 	special ShakeCamera
 	waitstate
+MagmaHideout_4F_EventScript_MaxieReturn::
 	delay 30
 	applymovement LOCALID_MAXIE, MagmaHideout_4F_Movement_MaxieLookAround
 	waitmovement 0
@@ -81,6 +83,37 @@ MagmaHideout_4F_EventScript_Maxie::
 	releaseall
 	end
 
+MagmaHideout_4F_EventScript_MaxieOrbSceneDoubleSpeed::
+	special DoOrbEffect
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	delay 300
+	removeobject LOCALID_GROUDON_SLEEPING
+	addobject LOCALID_GROUDON
+	waitstate
+	delay 120
+	applymovement LOCALID_GROUDON, MagmaHideout_4F_Movement_GroudonApproachSlow
+	waitmovement 0
+	special FadeOutOrbEffect
+	waitstate
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 10  @ shake delay
+	special ShakeCamera
+	waitstate
+	applymovement LOCALID_GROUDON, MagmaHideout_4F_Movement_GroudonExit
+	waitmovement 0
+	removeobject LOCALID_GROUDON
+	delay 8
+	setvar VAR_0x8004, 2  @ vertical pan
+	setvar VAR_0x8005, 2  @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 10  @ shake delay
+	special ShakeCamera
+	waitstate
+	goto MagmaHideout_4F_EventScript_MaxieReturn
+
 MagmaHideout_4F_Movement_GroudonApproach:
 	delay_16
 	delay_16
@@ -89,6 +122,29 @@ MagmaHideout_4F_Movement_GroudonApproach:
 	delay_16
 	delay_16
 	walk_slow_down
+	delay_16
+	delay_16
+	delay_16
+	step_end
+
+MagmaHideout_4F_Movement_GroudonApproachSlow:
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	walk_slow_down
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	walk_slow_down
+	delay_16
+	delay_16
+	delay_16
+	delay_16
 	delay_16
 	delay_16
 	delay_16

@@ -1577,3 +1577,10 @@ static void Task_DoDomeConfetti(u8 taskId)
         break;
     }
 }
+
+bool8 IsHallOfFameScreenActive(void)
+{
+    return gMain.callback2 == CB2_DoHallOfFameScreen
+        || gMain.callback2 == CB2_DoHallOfFameScreenDontSaveData
+        || gMain.callback2 == CB2_HallOfFame;
+}

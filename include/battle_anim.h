@@ -301,5 +301,6 @@ void SpriteCB_RandomCentredHits(struct Sprite *sprite);
 
 extern const union AffineAnimCmd *const gSwiftStarAffineAnimTable[];
 void AnimTranslateLinearSingleSineWave(struct Sprite *);
+bool8 IsBattleBackgroundFadeActive(void);
 
 #endif // GUARD_BATTLE_ANIM_H

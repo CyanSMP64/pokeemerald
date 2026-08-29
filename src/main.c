@@ -19,11 +19,15 @@
 #include "sound.h"
 #include "battle.h"
 #include "battle_controllers.h"
+#include "battle_transition.h"
 #include "text.h"
 #include "intro.h"
 #include "main.h"
 #include "trainer_hill.h"
+#include "palette.h"
+#include "event_data.h"
 #include "constants/rgb.h"
+#include "constants/flags.h"
 
 static void VBlankIntr(void);
 static void HBlankIntr(void);
@@ -103,9 +107,7 @@ void AgbMain()
     CheckForFlashMemory();
     InitMainCallbacks();
     InitMapMusic();
-#ifdef BUGFIX
     SeedRngWithRtc(); // see comment at SeedRngWithRtc definition below
-#endif
     ClearDma3Requests();
     ResetBgs();
     SetDefaultFontsPointer();
@@ -157,6 +159,15 @@ void AgbMain()
                 gLinkTransferringData = TRUE;
                 UpdateLinkAndCallCallbacks();
                 gLinkTransferringData = FALSE;
+            }
+            else if (FlagGet(FLAG_DOUBLE_SPEED) == TRUE
+                  && IsBattleTransitionTaskActive() == FALSE
+                  && IsDoubleSpeedBlockedContext() == FALSE)
+            {
+                gMain.newKeys = 0;
+                gMain.newKeysRaw = 0;
+                gMain.newAndRepeatedKeys = 0;
+                UpdateLinkAndCallCallbacks();
             }
         }
 
@@ -223,15 +234,12 @@ void EnableVCountIntrAtLine150(void)
     EnableInterrupts(INTR_FLAG_VCOUNT);
 }
 
-// FRLG commented this out to remove RTC, however Emerald didn't undo this!
-#ifdef BUGFIX
 static void SeedRngWithRtc(void)
 {
     u32 seed = RtcGetMinuteCount();
     seed = (seed >> 16) ^ (seed & 0xFFFF);
     SeedRng(seed);
 }
-#endif
 
 void InitKeys(void)
 {

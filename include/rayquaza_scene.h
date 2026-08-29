@@ -2,5 +2,6 @@
 #define GUARD_RAYQUAZA_SCENE_H
 
 void DoRayquazaScene(u8 animId, bool8 endEarly, void (*callback)(void));
+bool8 IsRayquazaSceneActive(void);
 
 #endif // GUARD_RAYQUAZA_SCENE_H

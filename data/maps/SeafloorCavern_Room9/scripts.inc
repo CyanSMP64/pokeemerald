@@ -50,6 +50,7 @@ SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre::
 	setvar VAR_RESULT, 0
 	playfanfare MUS_AWAKEN_LEGEND
 	playse SE_ORB
+	goto_if_set FLAG_DOUBLE_SPEED, SeafloorCavern_Room9_EventScript_ArchieOrbSceneDoubleSpeed
 	special DoOrbEffect
 	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterUp
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
@@ -79,6 +80,7 @@ SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre::
 	setvar VAR_0x8007, 5  @ shake delay
 	special ShakeCamera
 	waitstate
+SeafloorCavern_Room9_EventScript_ArchieReturn::
 	delay 30
 	setvar VAR_0x8004, LOCALID_ARCHIE
 	setvar VAR_0x8005, LOCALID_MAXIE
@@ -149,6 +151,38 @@ SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre::
 	waitstate
 	releaseall
 	end
+
+SeafloorCavern_Room9_EventScript_ArchieOrbSceneDoubleSpeed::
+	special DoOrbEffect
+	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	delay 300
+	removeobject LOCALID_KYOGRE_SLEEPING
+	addobject LOCALID_KYOGRE
+	waitstate
+	delay 120
+	applymovement LOCALID_KYOGRE, MagmaHideout_4F_Movement_GroudonApproachSlow
+	waitmovement 0
+	special FadeOutOrbEffect
+	waitstate
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 10  @ shake delay
+	special ShakeCamera
+	waitstate
+	applymovement LOCALID_KYOGRE, SeafloorCavern_Room9_Movement_KyogreExit
+	waitmovement 0
+	removeobject LOCALID_KYOGRE
+	delay 8
+	setvar VAR_0x8004, 2  @ vertical pan
+	setvar VAR_0x8005, 2  @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 10  @ shake delay
+	special ShakeCamera
+	waitstate
+	goto SeafloorCavern_Room9_EventScript_ArchieReturn
 
 SeafloorCavern_Room9_Movement_ArchieApproachPlayer:
 	walk_right

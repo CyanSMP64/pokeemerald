@@ -797,3 +797,13 @@ static void UpdateLegendaryMarkingColor(u8 frameNum)
         LoadPalette(&color, BG_PLTT_ID(14) + 15, sizeof(color));
    }
 }
+
+bool8 IsTitleScreenActive(void)
+{
+    return gMain.callback2 == CB2_InitTitleScreen
+        || gMain.callback2 == MainCB2
+        || gMain.callback2 == CB2_GoToMainMenu
+        || gMain.callback2 == CB2_GoToClearSaveDataScreen
+        || gMain.callback2 == CB2_GoToResetRtcScreen
+        || gMain.callback2 == CB2_GoToCopyrightScreen;
+}

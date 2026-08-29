@@ -4,6 +4,7 @@
 void CB2_DoHallOfFameScreen(void);
 void CB2_DoHallOfFameScreenDontSaveData(void);
 void CB2_DoHallOfFamePC(void);
+bool8 IsHallOfFameScreenActive(void);
 
 // hof_pc.c
 void ReturnFromHallOfFamePC(void);
