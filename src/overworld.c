@@ -1288,6 +1288,8 @@ enum {
 void UpdateAmbientCry(s16 *state, u16 *delayCounter)
 {
     u8 i, monsCount, divBy;
+    u16 cryDelay1200 = FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2400 : 1200;
+    u16 cryDelay2400 = FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 4800 : 2400;
 
     switch (*state)
     {
@@ -1300,7 +1302,7 @@ void UpdateAmbientCry(s16 *state, u16 *delayCounter)
         break;
     case AMB_CRY_FIRST:
         // It takes between 1200-3599 frames (~20-60 seconds) to play the first ambient cry after entering a map
-        *delayCounter = (Random() % 2400) + 1200;
+        *delayCounter = (Random() % cryDelay2400) + cryDelay1200;
         *state = AMB_CRY_WAIT;
         break;
     case AMB_CRY_RESET:
@@ -1317,7 +1319,7 @@ void UpdateAmbientCry(s16 *state, u16 *delayCounter)
         }
         // Ambient cries after the first one take between 1200-2399 frames (~20-40 seconds)
         // If the player has a pokemon with the ability Swarm in their party, the time is halved to 600-1199 frames (~10-20 seconds)
-        *delayCounter = ((Random() % 1200) + 1200) / divBy;
+        *delayCounter = ((Random() % cryDelay1200) + cryDelay1200) / divBy;
         *state = AMB_CRY_WAIT;
         break;
     case AMB_CRY_WAIT:

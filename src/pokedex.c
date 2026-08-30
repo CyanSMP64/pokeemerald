@@ -3341,7 +3341,7 @@ static void Task_LoadInfoScreen(u8 taskId)
             if (!gTasks[taskId].tSkipCry)
             {
                 StopCryAndClearCrySongs();
-                PlayCry_NormalNoDucking(NationalPokedexNumToSpecies(sPokedexListItem->dexNum), 0, CRY_VOLUME_RS, CRY_PRIORITY_NORMAL);
+                //PlayCry_NormalNoDucking(NationalPokedexNumToSpecies(sPokedexListItem->dexNum), 0, CRY_VOLUME_RS, CRY_PRIORITY_NORMAL);
             }
             else
             {
@@ -3350,8 +3350,9 @@ static void Task_LoadInfoScreen(u8 taskId)
         }
         break;
     case 9:
-        if (!IsCryPlayingOrClearCrySongs())
-            gMain.state++;
+        if (!gTasks[taskId].tSkipCry)
+            PlayCry_NormalNoDucking(NationalPokedexNumToSpecies(sPokedexListItem->dexNum), 0, CRY_VOLUME_RS, CRY_PRIORITY_NORMAL);
+        gMain.state++;
         break;
     case 10:
         gTasks[taskId].tScrolling = FALSE;
