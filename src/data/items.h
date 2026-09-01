@@ -4615,4 +4615,17 @@ const struct Item gItems[] =
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_FormChange,
     },
+
+    [ITEM_ACCELERATOR] =
+    {
+        .name = _("Accelerator"),
+        .itemId = ITEM_ACCELERATOR,
+        .price = 0,
+        .description = sAcceleratorDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Accelerator,
+        .grammarAn = TRUE,
+    },
 };

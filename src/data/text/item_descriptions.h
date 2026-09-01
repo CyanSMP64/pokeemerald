@@ -1574,3 +1574,8 @@ static const u8 sPrisonBottleDesc[] = _(
     "A bottle used to\n"
     "seal a certain\n"
     "Pokémon long ago.");
+
+static const u8 sAcceleratorDesc[] = _(
+    "A device capable\n"
+    "of warping the\n"
+    "passage of time.");

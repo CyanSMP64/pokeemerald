@@ -1922,3 +1922,6 @@ const u8 gText_Refrigerator[] = _("Refrigerator");
 const u8 gText_ElectricFan[] = _("Electric fan");
 const u8 gText_Lawnmower[] = _("Lawnmower");
 const u8 gText_Recall[] = _("Recall");
+
+const u8 gText_AcceleratorActivated[] = _("The game will now run at double\nspeed.\p");
+const u8 gText_AcceleratorDeactivated[] = _("The game will now run at normal\nspeed.\p");

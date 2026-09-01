@@ -38,6 +38,7 @@
 #include "text.h"
 #include "constants/event_bg.h"
 #include "constants/event_objects.h"
+#include "constants/flags.h"
 #include "constants/item_effects.h"
 #include "constants/items.h"
 #include "constants/songs.h"
@@ -1142,6 +1143,28 @@ void ItemUseOutOfBattle_FormChange_ConsumedOnUse(u8 taskId)
 void ItemUseOutOfBattle_CannotUse(u8 taskId)
 {
     DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
+}
+
+void ItemUseOutOfBattle_Accelerator(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+
+    if (tUsingRegisteredKeyItem == TRUE)
+    {
+        DisplayDadsAdviceCannotUseItemMessage(taskId, TRUE);
+        return;
+    }
+
+    if (FlagGet(FLAG_DOUBLE_SPEED) == TRUE)
+    {
+        FlagClear(FLAG_DOUBLE_SPEED);
+        DisplayItemMessage(taskId, FONT_NORMAL, gText_AcceleratorDeactivated, CloseItemMessage);
+    }
+    else
+    {
+        FlagSet(FLAG_DOUBLE_SPEED);
+        DisplayItemMessage(taskId, FONT_NORMAL, gText_AcceleratorActivated, CloseItemMessage);
+    }
 }
 
 #undef tUsingRegisteredKeyItem

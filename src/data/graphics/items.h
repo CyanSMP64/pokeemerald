@@ -774,3 +774,5 @@ const u32 gItemIcon_PrisonBottle[] = INCBIN_U32("graphics/items/icons/prison_bot
 const u32 gItemIconPalette_PrisonBottle[] = INCBIN_U32("graphics/items/icon_palettes/prison_bottle.gbapal.lz");
 
 const u32 gItemIconPalette_RegionalMineral[] = INCBIN_U32("graphics/items/icon_palettes/regional_mineral.gbapal.lz");
+
+const u32 gItemIcon_Accelerator[] = INCBIN_U32("graphics/items/icons/accelerator.4bpp.lz");

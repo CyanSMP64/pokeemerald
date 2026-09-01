@@ -9131,6 +9131,7 @@ extern const u32 gItemIconPalette_Gracidea[];
 extern const u32 gItemIcon_PrisonBottle[];
 extern const u32 gItemIconPalette_PrisonBottle[];
 extern const u32 gItemIconPalette_RegionalMineral[];
+extern const u32 gItemIcon_Accelerator[];
 
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u32 gItemIconPalette_ReturnToFieldArrow[];

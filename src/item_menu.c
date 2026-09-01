@@ -2066,6 +2066,15 @@ bool8 UseRegisteredKeyItemOnField(void)
     {
         if (CheckBagHasItem(gSaveBlock1Ptr->registeredItem, 1) == TRUE)
         {
+            if (gSaveBlock1Ptr->registeredItem == ITEM_ACCELERATOR)
+            {
+                LockPlayerFieldControls();
+                FreezeObjectEvents();
+                PlayerFreeze();
+                StopPlayerAvatar();
+                CreateTask(Task_ShowRegisteredPartyItemError, 8);
+                return TRUE;
+            }
             if (IsPartyMenuKeyItem(gSaveBlock1Ptr->registeredItem) == TRUE)
             {
                 LockPlayerFieldControls();

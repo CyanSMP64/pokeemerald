@@ -402,6 +402,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     // nat dex key items
     [ITEM_GRACIDEA] = {gItemIcon_Gracidea, gItemIconPalette_Gracidea},
     [ITEM_PRISON_BOTTLE] = {gItemIcon_PrisonBottle, gItemIconPalette_PrisonBottle},
+    [ITEM_ACCELERATOR] = {gItemIcon_Accelerator, gItemIconPalette_Itemfinder},
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };
