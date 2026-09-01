@@ -8,6 +8,8 @@
 #include "trig.h"
 #include "bg.h"
 #include "gpu_regs.h"
+#include "event_data.h"
+#include "constants/flags.h"
 #include "constants/rgb.h"
 
 /*
@@ -251,8 +253,8 @@ static u8 CreateSlidingLogoCircleSprite(s16 x, s16 y, u8 delayX, u8 delayY, s8 s
         break;
     }
 
-    gSprites[spriteId].sSpeedX = speedX;
-    gSprites[spriteId].sSpeedY = speedY;
+    gSprites[spriteId].sSpeedX = speedX * (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1);
+    gSprites[spriteId].sSpeedY = speedY * (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1);
     gSprites[spriteId].sDelayX = delayX;
     gSprites[spriteId].sDelayY = delayY;
     gSprites[spriteId].sTimerX = 0;
@@ -318,10 +320,10 @@ static u8 CreateSpiralingLogoCircleSprite(s16 x, s16 y, s16 angle, s16 rotateSpe
     }
 
     gSprites[spriteId].sAngle = angle;
-    gSprites[spriteId].sRotateSpeed = rotateSpeed;
+    gSprites[spriteId].sRotateSpeed = rotateSpeed * (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1);
     gSprites[spriteId].sRadius = radiusStart;
     gSprites[spriteId].sTargetRadius = radiusEnd;
-    gSprites[spriteId].sRadiusDelta = radiusDelta;
+    gSprites[spriteId].sRadiusDelta = radiusDelta * (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1);
 
     StartSpriteAnim(&gSprites[spriteId], spriteAnimNum);
     gSprites[spriteId].callback = SpriteCB_LogoCircleSpiral;
@@ -395,7 +397,7 @@ static bool8 FadeInCenterLogoCircle(struct Task *task)
 
     if (task->tBlend == 16)
     {
-        if (task->tFadeTimer == 31)
+        if (task->tFadeTimer == (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 15 : 31))
         {
             BeginNormalPaletteFade(PALETTES_ALL, -1, 0, 0x10, RGB_BLACK);
             task->tState++;
@@ -409,7 +411,7 @@ static bool8 FadeInCenterLogoCircle(struct Task *task)
     {
         u16 blnd;
 
-        task->tBlend++;
+        task->tBlend += (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1);
         blnd = task->tBlend;
         SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(blnd, 16 - blnd));
     }
@@ -459,8 +461,8 @@ void Task_FrontierCirclesCross(u8 taskId)
 static bool8 CirclesCross_CreateSprites(struct Task *task)
 {
     task->tCircle1SpriteId = CreateSlidingLogoCircleSprite(120, 197, 0, 0, 0, -4, 0);
-    task->tCircle2SpriteId = CreateSlidingLogoCircleSprite(241, 59,  0, 1, -4, 2, 1);
-    task->tCircle3SpriteId = CreateSlidingLogoCircleSprite(-1,  59,  0, 1, 4,  2, 2);
+    task->tCircle2SpriteId = CreateSlidingLogoCircleSprite(241, FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 61 : 59,  0, 1, -4, 2, 1);
+    task->tCircle3SpriteId = CreateSlidingLogoCircleSprite(-1,  FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 61 : 59,  0, 1, 4,  2, 2);
 
     task->tState++;
     return FALSE;
@@ -540,11 +542,11 @@ static bool8 CirclesMeetInSeq_CreateSprites(struct Task *task)
     {
         task->tCircle1SpriteId = CreateSlidingLogoCircleSprite(120, -51, 0, 0, 0, 4,  0);
     }
-    else if (task->tTimer == 16)
+    else if (task->tTimer == (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 8 : 16))
     {
         task->tCircle2SpriteId = CreateSlidingLogoCircleSprite(-7,  193, 0, 0, 4, -4, 1);
     }
-    else if (task->tTimer == 32)
+    else if (task->tTimer == (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 16 : 32))
     {
         task->tCircle3SpriteId = CreateSlidingLogoCircleSprite(247, 193, 0, 0, -4, -4, 2);
         task->tState++;
@@ -574,15 +576,15 @@ static bool8 CirclesCrossInSeq_CreateSprites(struct Task *task)
 {
     if (task->tTimer == 0)
     {
-        task->tCircle1SpriteId = CreateSlidingLogoCircleSprite(120, 197, 0, 0, 0, -8,  0);
+        task->tCircle1SpriteId = CreateSlidingLogoCircleSprite(120, FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 205 : 197, 0, 0, 0, -8,  0);
     }
-    else if (task->tTimer == 16)
+    else if (task->tTimer == (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 8 : 16))
     {
-        task->tCircle2SpriteId = CreateSlidingLogoCircleSprite(241, 78,  0, 0, -8, 1,  1);
+        task->tCircle2SpriteId = CreateSlidingLogoCircleSprite(FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 249 : 241, FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 77 : 78,  0, 0, -8, 1,  1);
     }
-    else if (task->tTimer == 32)
+    else if (task->tTimer == (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 16 : 32))
     {
-        task->tCircle3SpriteId = CreateSlidingLogoCircleSprite(-1,  78,  0, 0, 8,  1,  2);
+        task->tCircle3SpriteId = CreateSlidingLogoCircleSprite(FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? -9 : -1,  FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 77 : 78,  0, 0, 8,  1,  2);
         task->tState++;
     }
 
@@ -612,11 +614,11 @@ static bool8 CirclesAsymmetricSpiralInSeq_CreateSprites(struct Task *task)
     {
         task->tCircle1SpriteId = CreateSpiralingLogoCircleSprite(120, 45, 12,  4, 128, 0, -4, 0);
     }
-    else if (task->tTimer == 16)
+    else if (task->tTimer == (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 8 : 16))
     {
         task->tCircle2SpriteId = CreateSpiralingLogoCircleSprite(89,  97, 252, 4, 128, 0, -4, 1);
     }
-    else if (task->tTimer == 32)
+    else if (task->tTimer == (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 16 : 32))
     {
         task->tCircle3SpriteId = CreateSpiralingLogoCircleSprite(151, 97, 132, 4, 128, 0, -4, 2);
         task->tState++;
@@ -648,11 +650,11 @@ static bool8 CirclesSymmetricSpiralInSeq_CreateSprites(struct Task *task)
     {
         task->tCircle1SpriteId = CreateSpiralingLogoCircleSprite(120, 80, 284, 8, 131, 35, -3, 0);
     }
-    else if (task->tTimer == 16)
+    else if (task->tTimer == (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 8 : 16))
     {
         task->tCircle2SpriteId = CreateSpiralingLogoCircleSprite(120, 80, 44,  8, 131, 35, -3, 1);
     }
-    else if (task->tTimer == 32)
+    else if (task->tTimer == (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 16 : 32))
     {
         task->tCircle3SpriteId = CreateSpiralingLogoCircleSprite(121, 80, 164, 8, 131, 35, -3, 2);
         task->tState++;

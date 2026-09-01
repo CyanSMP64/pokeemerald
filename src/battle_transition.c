@@ -4309,7 +4309,7 @@ static bool8 FrontierLogoWave_Init(struct Task *task)
     task->tSinVal = 0x7FFF;
     task->tBlendTarget2 = 0;
     task->tBlendTarget1 = 16;
-    task->tSinDecrement = 2560;
+    task->tSinDecrement = FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 5120 : 2560;
     sTransitionData->BLDCNT = BLDCNT_TGT1_BG0 | BLDCNT_EFFECT_BLEND | BLDCNT_TGT2_ALL;
     sTransitionData->BLDALPHA = BLDALPHA_BLEND(task->tBlendTarget2, task->tBlendTarget1);
     REG_BLDCNT = sTransitionData->BLDCNT;
@@ -4359,21 +4359,21 @@ static bool8 FrontierLogoWave_Main(struct Task *task)
 
     amplitude = task->tAmplitudeVal >> 8;
     sinVal = task->tSinVal;
-    sinSpread = 384;
+    sinSpread = FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 768 : 384;
 
     task->tSinVal -= task->tSinDecrement;
 
-    if (task->tTimer >= 70)
+    if (task->tTimer >= (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 35 : 70))
     {
         // Decrease amount of logo movement and distortion
         // until it rests normally in the middle of the screen.
-        if (task->tAmplitudeVal - 384 >= 0)
-            task->tAmplitudeVal -= 384;
+        if (task->tAmplitudeVal - (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 768 : 384) >= 0)
+            task->tAmplitudeVal -= (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 768 : 384);
         else
             task->tAmplitudeVal = 0;
     }
 
-    if (task->tTimer >= 0 && task->tTimer % 3 == 0)
+    if (task->tTimer >= 0 && task->tTimer % (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 3) == 0)
     {
         // Blend logo into view
         if (task->tBlendTarget2 < 16)
@@ -4391,7 +4391,7 @@ static bool8 FrontierLogoWave_Main(struct Task *task)
         gScanlineEffectRegBuffers[0][i] = sTransitionData->cameraY + Sin(index & 0xff, amplitude);
     }
 
-    if (++task->tTimer == 101)
+    if (++task->tTimer == (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 51 : 101))
     {
         task->tStartedFade++;
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
@@ -4400,7 +4400,7 @@ static bool8 FrontierLogoWave_Main(struct Task *task)
     if (task->tStartedFade && !gPaletteFade.active)
         DestroyTask(FindTaskIdByFunc(Task_FrontierLogoWave));
 
-    task->tSinDecrement -= 17;
+    task->tSinDecrement -= FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 34 : 17;
     sTransitionData->VBlank_DMA++;
     return FALSE;
 }
@@ -4472,7 +4472,7 @@ static bool8 FrontierSquares_Init(struct Task *task)
     task->tPosX = MARGIN_SIZE;
     task->tPosY = 0;
     task->tRowPos = 0;
-    task->tShrinkDelay = 10;
+    task->tShrinkDelay = FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 5 : 10;
 
     task->tState++;
     return FALSE;
@@ -4575,18 +4575,33 @@ static bool8 FrontierSquaresSpiral_Init(struct Task *task)
 
 static bool8 FrontierSquaresSpiral_Outward(struct Task *task)
 {
-    u8 pos = sFrontierSquaresSpiral_Positions[task->tSquareNum];
-    u8 x = pos % NUM_SQUARES_PER_ROW;
-    u8 y = pos / NUM_SQUARES_PER_ROW;
-    CopyRectToBgTilemapBufferRect(0, sFrontierSquares_Tilemap, 0, 0,
-                                  SQUARE_SIZE, SQUARE_SIZE,
-                                  SQUARE_SIZE * x + MARGIN_SIZE, SQUARE_SIZE * y,
-                                  SQUARE_SIZE, SQUARE_SIZE,
-                                  15, 0, 0);
-    CopyBgTilemapBufferToVram(0);
+    u8 i;
+    u8 iterations = FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1;
+    u8 pos, x, y;
 
-    if (--task->tSquareNum < 0)
-        task->tState++;
+    for (i = 0; i < iterations; i++)
+    {
+        if (task->tSquareNum < 0)
+        {
+            task->tState++;
+            return FALSE;
+        }
+        pos = sFrontierSquaresSpiral_Positions[task->tSquareNum];
+        x = pos % NUM_SQUARES_PER_ROW;
+        y = pos / NUM_SQUARES_PER_ROW;
+        CopyRectToBgTilemapBufferRect(0, sFrontierSquares_Tilemap, 0, 0,
+                                      SQUARE_SIZE, SQUARE_SIZE,
+                                      SQUARE_SIZE * x + MARGIN_SIZE, SQUARE_SIZE * y,
+                                      SQUARE_SIZE, SQUARE_SIZE,
+                                      15, 0, 0);
+        CopyBgTilemapBufferToVram(0);
+
+        if (--task->tSquareNum < 0)
+        {
+            task->tState++;
+            break;
+        }
+    }
     return FALSE;
 }
 
@@ -4607,33 +4622,42 @@ static bool8 FrontierSquaresSpiral_SetBlack(struct Task *task)
 // Spiral inward erasing the squares
 static bool8 FrontierSquaresSpiral_Inward(struct Task *task)
 {
-    // Each square is faded first, then the one that was faded last move is erased.
-    if (task->tFadeFlag ^= 1)
-    {
-        // Shade square
-        CopyRectToBgTilemapBufferRect(0, sFrontierSquares_Tilemap, 0, 0,
-                                      SQUARE_SIZE, SQUARE_SIZE,
-                                      SQUARE_SIZE * (sFrontierSquaresSpiral_Positions[task->tSquareNum] % NUM_SQUARES_PER_ROW) + MARGIN_SIZE,
-                                      SQUARE_SIZE * (sFrontierSquaresSpiral_Positions[task->tSquareNum] / NUM_SQUARES_PER_ROW),
-                                      SQUARE_SIZE, SQUARE_SIZE,
-                                      14, 0, 0);
-    }
-    else
-    {
-        if (task->tSquareNum > 0)
-        {
-            // Erase square
-            FillBgTilemapBufferRect(0, 1,
-                                    SQUARE_SIZE * (sFrontierSquaresSpiral_Positions[task->tSquareNum - 1] % NUM_SQUARES_PER_ROW) + MARGIN_SIZE,
-                                    SQUARE_SIZE * (sFrontierSquaresSpiral_Positions[task->tSquareNum - 1] / NUM_SQUARES_PER_ROW),
-                                    SQUARE_SIZE, SQUARE_SIZE,
-                                    15);
-        }
-        task->tSquareNum++;
-    }
+    u8 i;
+    u8 iterations = FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1;
 
-    if (task->tSquareNum >= NUM_SQUARES)
-        task->tState++;
+    for (i = 0; i < iterations; i++)
+    {
+        // Each square is faded first, then the one that was faded last move is erased.
+        if (task->tFadeFlag ^= 1)
+        {
+            // Shade square
+            CopyRectToBgTilemapBufferRect(0, sFrontierSquares_Tilemap, 0, 0,
+                                          SQUARE_SIZE, SQUARE_SIZE,
+                                          SQUARE_SIZE * (sFrontierSquaresSpiral_Positions[task->tSquareNum] % NUM_SQUARES_PER_ROW) + MARGIN_SIZE,
+                                          SQUARE_SIZE * (sFrontierSquaresSpiral_Positions[task->tSquareNum] / NUM_SQUARES_PER_ROW),
+                                          SQUARE_SIZE, SQUARE_SIZE,
+                                          14, 0, 0);
+        }
+        else
+        {
+            if (task->tSquareNum > 0)
+            {
+                // Erase square
+                FillBgTilemapBufferRect(0, 1,
+                                        SQUARE_SIZE * (sFrontierSquaresSpiral_Positions[task->tSquareNum - 1] % NUM_SQUARES_PER_ROW) + MARGIN_SIZE,
+                                        SQUARE_SIZE * (sFrontierSquaresSpiral_Positions[task->tSquareNum - 1] / NUM_SQUARES_PER_ROW),
+                                        SQUARE_SIZE, SQUARE_SIZE,
+                                        15);
+            }
+            task->tSquareNum++;
+        }
+
+        if (task->tSquareNum >= NUM_SQUARES)
+        {
+            task->tState++;
+            break;
+        }
+    }
 
     CopyBgTilemapBufferToVram(0);
     return FALSE;
@@ -4663,8 +4687,8 @@ static void Task_ScrollBg(u8 taskId)
     {
         SetGpuReg(REG_OFFSET_BG0VOFS, gBattle_BG0_X);
         SetGpuReg(REG_OFFSET_BG0HOFS, gBattle_BG0_Y);
-        gBattle_BG0_X += gTasks[taskId].tScrollXDir;
-        gBattle_BG0_Y += gTasks[taskId].tScrollYDir;
+        gBattle_BG0_X += gTasks[taskId].tScrollXDir * (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1);
+        gBattle_BG0_Y += gTasks[taskId].tScrollYDir * (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1);
     }
 }
 
@@ -4714,19 +4738,29 @@ static bool8 FrontierSquaresScroll_Init(struct Task *task)
 
 static bool8 FrontierSquaresScroll_Draw(struct Task *task)
 {
-    u8 pos = sFrontierSquaresScroll_Positions[task->tSquareNum];
-    u8 x = pos / (NUM_SQUARES_PER_ROW + 1); // +1 because during scroll an additional column covers the margin.
-    u8 y = pos % (NUM_SQUARES_PER_ROW + 1);
+    u8 i;
+    u8 iterations = FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1;
+    u8 pos, x, y;
+    
+    for (i = 0; i < iterations; i++)
+    {
+        pos = sFrontierSquaresScroll_Positions[task->tSquareNum];
+        x = pos / (NUM_SQUARES_PER_ROW + 1); // +1 because during scroll an additional column covers the margin.
+        y = pos % (NUM_SQUARES_PER_ROW + 1);
 
-    CopyRectToBgTilemapBufferRect(0, &sFrontierSquares_Tilemap, 0, 0,
-                                  SQUARE_SIZE, SQUARE_SIZE,
-                                  SQUARE_SIZE * x + MARGIN_SIZE, SQUARE_SIZE * y,
-                                  SQUARE_SIZE, SQUARE_SIZE,
-                                  15, 0, 0);
-    CopyBgTilemapBufferToVram(0);
+        CopyRectToBgTilemapBufferRect(0, &sFrontierSquares_Tilemap, 0, 0,
+                                      SQUARE_SIZE, SQUARE_SIZE,
+                                      SQUARE_SIZE * x + MARGIN_SIZE, SQUARE_SIZE * y,
+                                      SQUARE_SIZE, SQUARE_SIZE,
+                                      15, 0, 0);
+        CopyBgTilemapBufferToVram(0);
 
-    if (++task->tSquareNum >= (int)ARRAY_COUNT(sFrontierSquaresScroll_Positions))
-        task->tState++;
+        if (++task->tSquareNum >= (int)ARRAY_COUNT(sFrontierSquaresScroll_Positions))
+        {
+            task->tState++;
+            break;
+        }
+    }
     return 0;
 }
 
@@ -4744,20 +4778,28 @@ static bool8 FrontierSquaresScroll_SetBlack(struct Task *task)
 
 static bool8 FrontierSquaresScroll_Erase(struct Task *task)
 {
-    u8 pos = sFrontierSquaresScroll_Positions[task->tSquareNum];
-    u8 x = pos / (NUM_SQUARES_PER_ROW + 1);
-    u8 y = pos % (NUM_SQUARES_PER_ROW + 1);
+    u8 i;
+    u8 iterations = FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1;
+    u8 pos, x, y;
 
-    FillBgTilemapBufferRect(0, 1,
-                            SQUARE_SIZE * x + MARGIN_SIZE, SQUARE_SIZE * y,
-                            SQUARE_SIZE, SQUARE_SIZE,
-                            15);
-    CopyBgTilemapBufferToVram(0);
-
-    if (++task->tSquareNum >= (int)ARRAY_COUNT(sFrontierSquaresScroll_Positions))
+    for (i = 0; i < iterations; i++)
     {
-        DestroyTask(FindTaskIdByFunc(Task_ScrollBg));
-        task->tState++;
+        pos = sFrontierSquaresScroll_Positions[task->tSquareNum];
+        x = pos / (NUM_SQUARES_PER_ROW + 1);
+        y = pos % (NUM_SQUARES_PER_ROW + 1);
+
+        FillBgTilemapBufferRect(0, 1,
+                                SQUARE_SIZE * x + MARGIN_SIZE, SQUARE_SIZE * y,
+                                SQUARE_SIZE, SQUARE_SIZE,
+                                15);
+        CopyBgTilemapBufferToVram(0);
+
+        if (++task->tSquareNum >= (int)ARRAY_COUNT(sFrontierSquaresScroll_Positions))
+        {
+            DestroyTask(FindTaskIdByFunc(Task_ScrollBg));
+            task->tState++;
+            break;
+        }
     }
 
     return FALSE;
