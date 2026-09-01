@@ -27,6 +27,7 @@
 #define tSound data[5]
 #define tButtonMode data[6]
 #define tWindowFrameType data[7]
+#define tScrollOffset data[8]
 
 enum
 {
@@ -73,6 +74,7 @@ static void DrawLeftSideOptionText(u8 menuItem, int y);
 static void DrawChoices(u8 taskId, u8 menuItem, int y);
 static void ScrollMenu(u8 taskId, int direction);
 static void ScrollAll(u8 taskId, int direction);
+static void UpdateScrollOffset(u8 taskId);
 static void DrawBgWindowFrames(void);
 
 EWRAM_DATA static bool8 sArrowPressed = FALSE;
@@ -184,7 +186,7 @@ void CB2_InitOptionMenu(void)
         SetGpuReg(REG_OFFSET_WIN0H, 0);
         SetGpuReg(REG_OFFSET_WIN0V, 0);
         SetGpuReg(REG_OFFSET_WININ, WININ_WIN0_BG0);
-        SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG0 | WINOUT_WIN01_BG1 | WINOUT_WIN01_CLR);
+        SetGpuReg(REG_OFFSET_WINOUT, WINOUT_WIN01_BG0 | WINOUT_WIN01_BG1 | WINOUT_WIN01_OBJ | WINOUT_WIN01_CLR);
         SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG0 | BLDCNT_EFFECT_DARKEN);
         SetGpuReg(REG_OFFSET_BLDALPHA, 0);
         SetGpuReg(REG_OFFSET_BLDY, 4);
@@ -237,6 +239,7 @@ void CB2_InitOptionMenu(void)
 
         gTasks[taskId].tMenuSelection = 0;
         gTasks[taskId].tVisibleCursor = 0;
+        gTasks[taskId].tScrollOffset = 0;
         gTasks[taskId].tTextSpeed = gSaveBlock2Ptr->optionsTextSpeed;
         gTasks[taskId].tBattleSceneOff = gSaveBlock2Ptr->optionsBattleSceneOff;
         gTasks[taskId].tBattleStyle = gSaveBlock2Ptr->optionsBattleStyle;
@@ -250,7 +253,7 @@ void CB2_InitOptionMenu(void)
         HighlightOptionMenuItem(gTasks[taskId].tVisibleCursor);
 
         if (MENUITEM_COUNT > OPTIONS_ON_SCREEN)
-            sOptionMenuArrowTaskId = AddScrollIndicatorArrowPairParameterized(SCROLL_ARROW_UP, 200, 32, 40 + OPTIONS_ON_SCREEN * Y_DIFF, MENUITEM_COUNT - 1, 110, 110, (u16 *)&gTasks[taskId].tMenuSelection);
+            sOptionMenuArrowTaskId = AddScrollIndicatorArrowPairParameterized(SCROLL_ARROW_UP, 200, 32, 40 + OPTIONS_ON_SCREEN * Y_DIFF, MENUITEM_COUNT - OPTIONS_ON_SCREEN, 110, 110, (u16 *)&gTasks[taskId].tScrollOffset);
         else
             sOptionMenuArrowTaskId = TASK_NONE;
 
@@ -308,6 +311,7 @@ static void Task_OptionMenuProcessInput(u8 taskId)
                 gTasks[taskId].tVisibleCursor--;
             }
         }
+        UpdateScrollOffset(taskId);
         HighlightOptionMenuItem(gTasks[taskId].tVisibleCursor);
     }
     else if (JOY_NEW(DPAD_DOWN))
@@ -335,6 +339,7 @@ static void Task_OptionMenuProcessInput(u8 taskId)
                 gTasks[taskId].tVisibleCursor++;
             }
         }
+        UpdateScrollOffset(taskId);
         HighlightOptionMenuItem(gTasks[taskId].tVisibleCursor);
     }
     else
@@ -429,6 +434,11 @@ static void HighlightOptionMenuItem(u8 visibleCursor)
 {
     SetGpuReg(REG_OFFSET_WIN0H, WIN_RANGE(16, DISPLAY_WIDTH - 16));
     SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(visibleCursor * Y_DIFF + 40, visibleCursor * Y_DIFF + 56));
+}
+
+static void UpdateScrollOffset(u8 taskId)
+{
+    gTasks[taskId].tScrollOffset = gTasks[taskId].tMenuSelection - gTasks[taskId].tVisibleCursor;
 }
 
 static void DrawOptionMenuChoice(const u8 *text, u8 x, u8 y, u8 style)
