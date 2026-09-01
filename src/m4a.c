@@ -101,17 +101,15 @@ static void PrimeAdsrCounter(struct MusicPlayerInfo *mplayInfo)
     if (num >= den)
     {
         counter = 0;
-        mplayInfo->gap[2] = 1;
+        mplayInfo->adsrTick = 1;
     }
     else
     {
         counter = den - num;
-        mplayInfo->gap[2] = 1;
+        mplayInfo->adsrTick = 1;
     }
 
-    mplayInfo->gap[0] = counter & 0xFF;
-    mplayInfo->gap[1] = counter >> 8;
-    mplayInfo->gap[3] = 0;
+    mplayInfo->adsrCounter = counter;
 }
 
 void AdvanceAdsrCounter(struct MusicPlayerInfo *mplayInfo)
@@ -134,25 +132,24 @@ void AdvanceAdsrCounter(struct MusicPlayerInfo *mplayInfo)
 
     if (num >= den)
     {
-        mplayInfo->gap[2] = 1;
+        mplayInfo->adsrTick = 1;
         return;
     }
 
-    counter = (u16)mplayInfo->gap[0] | ((u16)mplayInfo->gap[1] << 8);
+    counter = mplayInfo->adsrCounter;
     counter += num;
 
     if (counter >= den)
     {
         counter -= den;
-        mplayInfo->gap[2] = 1;
+        mplayInfo->adsrTick = 1;
     }
     else
     {
-        mplayInfo->gap[2] = 0;
+        mplayInfo->adsrTick = 0;
     }
 
-    mplayInfo->gap[0] = counter & 0xFF;
-    mplayInfo->gap[1] = counter >> 8;
+    mplayInfo->adsrCounter = counter;
 }
 
 void MPlayContinue(struct MusicPlayerInfo *mplayInfo)

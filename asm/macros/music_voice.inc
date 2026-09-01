@@ -160,3 +160,9 @@
 	.byte 0x30
 	_voice_directsound \base_midi_key, \pan, \sample_data_pointer, \attack, \decay, \sustain, \release
 	.endm
+
+	.macro voice_none
+	.byte 5, 0, 0, 0
+	.4byte 0
+	.4byte 0
+	.endm

@@ -281,7 +281,7 @@ C_adsr_echo_check:
 	ldr r1, [r4, #o_SoundChannel_mplayInfo]
 	cmp r1, #0
 	beq C_adsr_tick_ok
-	ldrb r0, [r1, #(o_MusicPlayerInfo_gap + 2)]
+	ldrb r0, [r1, #o_MusicPlayerInfo_adsrTick]
 	cmp r0, #0
 	bne C_adsr_tick_ok
 	b C_channel_vol_calc
@@ -2511,6 +2511,10 @@ _081DDBAC:
 	ands r6, r0
 	str r6, [sp, 0xC]
 	beq _081DDBEC
+	cmp r6, #4
+	bls _081DDBEC_type_ok
+	b _081DDCEA
+_081DDBEC_type_ok:
 	ldr r0, [sp, 0x4]
 	ldr r4, [r0, o_SoundInfo_cgbChans]
 	cmp r4, 0

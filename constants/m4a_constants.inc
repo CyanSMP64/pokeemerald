@@ -207,7 +207,8 @@
 	struct_field o_MusicPlayerInfo_songVol, 1
 	struct_field o_MusicPlayerInfo_tempoScaleFrac, 1
 	struct_field o_MusicPlayerInfo_pwmActiveFlag, 1
-	struct_field o_MusicPlayerInfo_gap, 3
+	struct_field o_MusicPlayerInfo_adsrTick, 1
+	struct_field o_MusicPlayerInfo_adsrCounter, 2
 	struct_field o_MusicPlayerInfo_memAccArea, 4
 	struct_field o_MusicPlayerInfo_tempoD, 2
 	struct_field o_MusicPlayerInfo_tempoU, 2

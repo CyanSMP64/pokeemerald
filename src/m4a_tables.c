@@ -239,6 +239,8 @@ const u8 gClockTable[] =
 #define VOL2   0xc6
 #define MODM   0xc7
 #define TUNE   0xc8
+#define PWMC   0xc9
+#define PWMS   0xca
 #define PORT   0xcc
 
 #define XCMD   0xcd

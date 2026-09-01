@@ -353,7 +353,8 @@ struct MusicPlayerInfo
     u8 songVol;
     u8 tempoScaleFrac;
     u8 pwmActiveFlag;
-    u8 gap[3];
+    u8 adsrTick;
+    u16 adsrCounter;
     u8 *memAccArea;
     u16 tempoD;
     u16 tempoU;
