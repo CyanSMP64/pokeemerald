@@ -3915,8 +3915,8 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
 
 #define SOUND_LIST_BGM \
     X(SE_VINEBOOM, "SE-VINEBOOM") \
-    X(271, "empty") \
-    X(272, "empty") \
+    X(MUS_B2_VS_CHAMPION_KANTO, "MUS-B2-VS-CHAMPION-KANTO") \
+    X(MUS_BW_VS_WORLD_CHAMPIONSHIPS, "MUS-BW-VS-WORLD-CHAMPIONSHIPS") \
     X(273, "empty") \
     X(274, "empty") \
     X(MUS_DP_VS_DIALGA_PALKIA, "MUS-DP-VS-DIALGA-PALKIA") \

@@ -272,8 +272,8 @@ gSongTable::
 	song se_pike_curtain_open, 1, 64, 1024
 	song se_sudowoodo_shake, 1, 64, 1024
 	song se_vineboom, 1, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
+	song mus_b2_vs_champion_kanto, 0, 64, 1024
+	song mus_bw_vs_world_championships, 0, 64, 1024
 	song dummy_song_header, 0, 64, 1024
 	song dummy_song_header, 0, 64, 1024
 	song mus_dp_vs_dialga_palkia, 0, 64, 1024

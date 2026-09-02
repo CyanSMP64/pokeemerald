@@ -33,7 +33,7 @@
 #define NATDEX_VERSION_MINOR 2
 #define NATDEX_VERSION_PATCH 1
 // revision number: git describe --tags
-#define NATDEX_VERSION_BUILD 11
+#define NATDEX_VERSION_BUILD 12
 
 // party sizes
 #define PARTY_SIZE 6
@@ -139,6 +139,10 @@
 
 #define OPTIONS_BATTLE_STYLE_SHIFT 0
 #define OPTIONS_BATTLE_STYLE_SET 1
+
+#define OPTIONS_BATTLE_BGM_DEFAULT 0
+#define OPTIONS_BATTLE_BGM_CONTEXTUAL_RANDOM 1
+#define OPTIONS_BATTLE_BGM_PURE_RANDOM 2
 
 #define DIR_NONE        0
 #define DIR_SOUTH       1

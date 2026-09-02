@@ -9700,6 +9700,140 @@ void ClearBattleMonForms(void)
         gBattleMonForms[i] = 0;
 }
 
+static const u16 sAllBattleBGM[] =
+{
+    MUS_VS_WILD,
+    MUS_VS_AQUA_MAGMA,
+    MUS_VS_TRAINER,
+    MUS_VS_GYM_LEADER,
+    MUS_VS_CHAMPION,
+    MUS_VS_REGI,
+    MUS_VS_KYOGRE_GROUDON,
+    MUS_VS_RIVAL,
+    MUS_VS_ELITE_FOUR,
+    MUS_VS_AQUA_MAGMA_LEADER,
+    MUS_RG_VS_GYM_LEADER,
+    MUS_RG_VS_TRAINER,
+    MUS_RG_VS_WILD,
+    MUS_RG_VS_CHAMPION,
+    MUS_RG_VS_DEOXYS,
+    MUS_RG_VS_MEWTWO,
+    MUS_RG_VS_LEGEND,
+    MUS_VS_FRONTIER_BRAIN,
+    MUS_VS_MEW,
+    MUS_DP_VS_UXIE_MESPRIT_AZELF,
+    MUS_DP_VS_DIALGA_PALKIA,
+    MUS_DP_VS_ARCEUS,
+    MUS_DP_VS_LEGEND,
+    MUS_PL_VS_GIRATINA,
+    MUS_HG_VS_SUICUNE,
+    MUS_HG_VS_ENTEI,
+    MUS_HG_VS_RAIKOU,
+    MUS_HG_VS_WILD_KANTO,
+    MUS_HG_VS_HO_OH,
+    MUS_HG_VS_LUGIA,
+    MUS_BW_VS_RESHIRAM,
+    MUS_BW_VS_ZEKROM,
+    MUS_BW_VS_KYUREM,
+    MUS_BW_VS_LEGEND,
+    MUS_BW_VS_WORLD_CHAMPIONSHIPS,
+    MUS_B2_VS_CHAMPION_KANTO,
+    MUS_B2_VS_CHAMPION_HOENN,
+    MUS_B2_VS_BLACK_WHITE_KYUREM,
+};
+
+static const u16 sFinalBattleBGM[] =
+{
+    MUS_VS_CHAMPION,
+    MUS_RG_VS_CHAMPION,
+    MUS_BW_VS_WORLD_CHAMPIONSHIPS,
+    MUS_B2_VS_CHAMPION_KANTO,
+    MUS_B2_VS_CHAMPION_HOENN,
+};
+
+static const u16 sBossBattleBGM[] =
+{
+    MUS_VS_GYM_LEADER,
+    MUS_VS_REGI,
+    MUS_VS_KYOGRE_GROUDON,
+    MUS_VS_ELITE_FOUR,
+    MUS_VS_AQUA_MAGMA_LEADER,
+    MUS_RG_VS_GYM_LEADER,
+    MUS_RG_VS_DEOXYS,
+    MUS_VS_FRONTIER_BRAIN,
+    MUS_DP_VS_UXIE_MESPRIT_AZELF,
+    MUS_DP_VS_DIALGA_PALKIA,
+    MUS_DP_VS_ARCEUS,
+    MUS_DP_VS_LEGEND,
+    MUS_PL_VS_GIRATINA,
+    MUS_HG_VS_SUICUNE,
+    MUS_HG_VS_ENTEI,
+    MUS_HG_VS_RAIKOU,
+    MUS_HG_VS_HO_OH,
+    MUS_HG_VS_LUGIA,
+    MUS_BW_VS_RESHIRAM,
+    MUS_BW_VS_ZEKROM,
+    MUS_BW_VS_KYUREM,
+    MUS_BW_VS_LEGEND,
+    MUS_B2_VS_BLACK_WHITE_KYUREM,
+};
+
+static const u16 sTrainerBattleBGM[] =
+{
+    MUS_VS_AQUA_MAGMA,
+    MUS_VS_TRAINER,
+    MUS_VS_RIVAL,
+    MUS_RG_VS_TRAINER,
+};
+
+static const u16 sWildBattleBGM[] =
+{
+    MUS_VS_WILD,
+    MUS_RG_VS_WILD,
+    MUS_HG_VS_WILD_KANTO,
+};
+
+static u16 SelectContextualRandomFinalBattleBGM(void)
+{
+    return sFinalBattleBGM[Random() % ARRAY_COUNT(sFinalBattleBGM)];
+}
+
+static u16 SelectContextualRandomBossBattleBGM(void)
+{
+    return sBossBattleBGM[Random() % ARRAY_COUNT(sBossBattleBGM)];
+}
+
+static u16 SelectContextualRandomBossOrFinalBattleBGM(void)
+{
+    {
+        u16 rand = Random() % (ARRAY_COUNT(sFinalBattleBGM) + ARRAY_COUNT(sBossBattleBGM));
+        if (rand < ARRAY_COUNT(sFinalBattleBGM))
+            return sFinalBattleBGM[rand];
+        else
+            return sBossBattleBGM[rand - ARRAY_COUNT(sFinalBattleBGM)];
+    }
+}
+
+static u16 SelectContextualRandomTrainerBattleBGM(void)
+{
+    return sTrainerBattleBGM[Random() % ARRAY_COUNT(sTrainerBattleBGM)];
+}
+
+static u16 SelectPureRandomBattleBGM(void)
+{
+    return sAllBattleBGM[(Random() % ARRAY_COUNT(sAllBattleBGM))];
+}
+
+static u16 SelectContextualRandomWildBattleBGM(void)
+{
+    return sWildBattleBGM[VarGet(VAR_RANDOM_WILD_BGM) % ARRAY_COUNT(sWildBattleBGM)];
+}
+
+static u16 SelectPureRandomWildBattleBGM(void)
+{
+    return sAllBattleBGM[(VarGet(VAR_RANDOM_WILD_BGM) / ARRAY_COUNT(sWildBattleBGM)) % ARRAY_COUNT(sAllBattleBGM)];
+}
+
 u16 GetBattleBGM(void)
 {
     if (gBattleTypeFlags & BATTLE_TYPE_KYOGRE_GROUDON)
@@ -9723,24 +9857,78 @@ u16 GetBattleBGM(void)
         {
         case TRAINER_CLASS_AQUA_LEADER:
         case TRAINER_CLASS_MAGMA_LEADER:
-            return MUS_VS_AQUA_MAGMA_LEADER;
+            switch (gSaveBlock2Ptr->optionsBattleBGM)
+            {
+            case OPTIONS_BATTLE_BGM_CONTEXTUAL_RANDOM:
+                return SelectContextualRandomBossBattleBGM();
+            case OPTIONS_BATTLE_BGM_PURE_RANDOM:
+                return SelectPureRandomBattleBGM();
+            default:
+                return MUS_VS_AQUA_MAGMA_LEADER;
+            }
         case TRAINER_CLASS_TEAM_AQUA:
         case TRAINER_CLASS_TEAM_MAGMA:
         case TRAINER_CLASS_AQUA_ADMIN:
         case TRAINER_CLASS_MAGMA_ADMIN:
-            return MUS_VS_AQUA_MAGMA;
+            switch (gSaveBlock2Ptr->optionsBattleBGM)
+            {
+            case OPTIONS_BATTLE_BGM_CONTEXTUAL_RANDOM:
+                return SelectContextualRandomTrainerBattleBGM();
+            case OPTIONS_BATTLE_BGM_PURE_RANDOM:
+                return SelectPureRandomBattleBGM();
+            default:
+                return MUS_VS_AQUA_MAGMA;
+            }
         case TRAINER_CLASS_LEADER:
-            return MUS_VS_GYM_LEADER;
+            switch (gSaveBlock2Ptr->optionsBattleBGM)
+            {
+            case OPTIONS_BATTLE_BGM_CONTEXTUAL_RANDOM:
+                return SelectContextualRandomBossBattleBGM();
+            case OPTIONS_BATTLE_BGM_PURE_RANDOM:
+                return SelectPureRandomBattleBGM();
+            default:
+                return MUS_VS_GYM_LEADER;
+            }
         case TRAINER_CLASS_CHAMPION:
-            return MUS_VS_CHAMPION;
+            switch (gSaveBlock2Ptr->optionsBattleBGM)
+            {
+            case OPTIONS_BATTLE_BGM_CONTEXTUAL_RANDOM:
+                return SelectContextualRandomFinalBattleBGM();
+            case OPTIONS_BATTLE_BGM_PURE_RANDOM:
+                return SelectPureRandomBattleBGM();
+            default:
+                return MUS_VS_CHAMPION;
+            }
         case TRAINER_CLASS_PKMN_TRAINER_2:
-            return MUS_B2_VS_CHAMPION_HOENN;
+            switch (gSaveBlock2Ptr->optionsBattleBGM)
+            {
+            case OPTIONS_BATTLE_BGM_CONTEXTUAL_RANDOM:
+                return SelectContextualRandomFinalBattleBGM();
+            case OPTIONS_BATTLE_BGM_PURE_RANDOM:
+                return SelectPureRandomBattleBGM();
+            default:
+                return MUS_B2_VS_CHAMPION_HOENN;
+            }
         case TRAINER_CLASS_RIVAL:
-            if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
+            switch (gSaveBlock2Ptr->optionsBattleBGM)
+            {
+            case OPTIONS_BATTLE_BGM_CONTEXTUAL_RANDOM:
+                return SelectContextualRandomTrainerBattleBGM();
+            case OPTIONS_BATTLE_BGM_PURE_RANDOM:
+                return SelectPureRandomBattleBGM();
+            default:
                 return MUS_VS_RIVAL;
-            return MUS_VS_RIVAL;
+            }
         case TRAINER_CLASS_ELITE_FOUR:
-            return MUS_VS_ELITE_FOUR;
+            switch (gSaveBlock2Ptr->optionsBattleBGM)
+            {
+            case OPTIONS_BATTLE_BGM_CONTEXTUAL_RANDOM:
+                return SelectContextualRandomBossBattleBGM();
+            case OPTIONS_BATTLE_BGM_PURE_RANDOM:
+                return SelectPureRandomBattleBGM();
+            default:
+                return MUS_VS_ELITE_FOUR;
+            }
         case TRAINER_CLASS_SALON_MAIDEN:
         case TRAINER_CLASS_DOME_ACE:
         case TRAINER_CLASS_PALACE_MAVEN:
@@ -9748,9 +9936,25 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_FACTORY_HEAD:
         case TRAINER_CLASS_PIKE_QUEEN:
         case TRAINER_CLASS_PYRAMID_KING:
-            return MUS_VS_FRONTIER_BRAIN;
+            switch (gSaveBlock2Ptr->optionsBattleBGM)
+            {
+            case OPTIONS_BATTLE_BGM_CONTEXTUAL_RANDOM:
+                return SelectContextualRandomBossOrFinalBattleBGM();
+            case OPTIONS_BATTLE_BGM_PURE_RANDOM:
+                return SelectPureRandomBattleBGM();
+            default:
+                return MUS_VS_FRONTIER_BRAIN;
+            }
         default:
-            return MUS_VS_TRAINER;
+            switch (gSaveBlock2Ptr->optionsBattleBGM)
+            {
+            case OPTIONS_BATTLE_BGM_CONTEXTUAL_RANDOM:
+                return SelectContextualRandomTrainerBattleBGM();
+            case OPTIONS_BATTLE_BGM_PURE_RANDOM:
+                return SelectPureRandomBattleBGM();
+            default:
+                return MUS_VS_TRAINER;
+            }
         }
     }
     else
@@ -9846,7 +10050,15 @@ u16 GetBattleBGM(void)
         case SPECIES_KYUREM_BLACK:
             return MUS_B2_VS_BLACK_WHITE_KYUREM;
         default:
-            return MUS_VS_WILD;
+            switch (gSaveBlock2Ptr->optionsBattleBGM)
+            {
+            case OPTIONS_BATTLE_BGM_CONTEXTUAL_RANDOM:
+                return SelectContextualRandomWildBattleBGM();
+            case OPTIONS_BATTLE_BGM_PURE_RANDOM:
+                return SelectPureRandomWildBattleBGM();
+            default:
+                return MUS_VS_WILD;
+            }
         }
     }
 }

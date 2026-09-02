@@ -26,8 +26,9 @@
 #define tBattleStyle data[4]
 #define tSound data[5]
 #define tButtonMode data[6]
-#define tWindowFrameType data[7]
-#define tScrollOffset data[8]
+#define tBattleBGM data[7]
+#define tWindowFrameType data[8]
+#define tScrollOffset data[9]
 
 enum
 {
@@ -35,6 +36,7 @@ enum
     MENUITEM_BATTLESCENE,
     MENUITEM_BATTLESTYLE,
     MENUITEM_SOUND,
+    MENUITEM_BATTLEBGM,
     MENUITEM_BUTTONMODE,
     MENUITEM_FRAMETYPE,
     MENUITEM_CANCEL,
@@ -64,6 +66,8 @@ static u8 BattleStyle_ProcessInput(u8 selection);
 static void BattleStyle_DrawChoices(u8 selection, int y);
 static u8 Sound_ProcessInput(u8 selection);
 static void Sound_DrawChoices(u8 selection, int y);
+static u8 BattleBGM_ProcessInput(u8 selection);
+static void BattleBGM_DrawChoices(u8 selection, int y);
 static u8 FrameType_ProcessInput(u8 selection);
 static void FrameType_DrawChoices(u8 selection, int y);
 static u8 ButtonMode_ProcessInput(u8 selection);
@@ -90,6 +94,7 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
     [MENUITEM_BATTLESCENE] = gText_BattleScene,
     [MENUITEM_BATTLESTYLE] = gText_BattleStyle,
     [MENUITEM_SOUND]       = gText_Sound,
+    [MENUITEM_BATTLEBGM]   = gText_BattleBGM,
     [MENUITEM_BUTTONMODE]  = gText_ButtonMode,
     [MENUITEM_FRAMETYPE]   = gText_Frame,
     [MENUITEM_CANCEL]      = gText_OptionMenuCancel,
@@ -245,6 +250,7 @@ void CB2_InitOptionMenu(void)
         gTasks[taskId].tBattleStyle = gSaveBlock2Ptr->optionsBattleStyle;
         gTasks[taskId].tSound = gSaveBlock2Ptr->optionsBGM;
         gTasks[taskId].tButtonMode = gSaveBlock2Ptr->optionsHM;
+        gTasks[taskId].tBattleBGM = gSaveBlock2Ptr->optionsBattleBGM;
         gTasks[taskId].tWindowFrameType = gSaveBlock2Ptr->optionsWindowFrameType;
 
         for (i = 0; i < optionsToDraw; i++)
@@ -376,6 +382,13 @@ static void Task_OptionMenuProcessInput(u8 taskId)
             if (previousOption != gTasks[taskId].tSound)
                 Sound_DrawChoices(gTasks[taskId].tSound, gTasks[taskId].tVisibleCursor * Y_DIFF);
             break;
+        case MENUITEM_BATTLEBGM:
+            previousOption = gTasks[taskId].tBattleBGM;
+            gTasks[taskId].tBattleBGM = BattleBGM_ProcessInput(gTasks[taskId].tBattleBGM);
+
+            if (previousOption != gTasks[taskId].tBattleBGM)
+                BattleBGM_DrawChoices(gTasks[taskId].tBattleBGM, gTasks[taskId].tVisibleCursor * Y_DIFF);
+            break;
         case MENUITEM_BUTTONMODE:
             previousOption = gTasks[taskId].tButtonMode;
             gTasks[taskId].tButtonMode = ButtonMode_ProcessInput(gTasks[taskId].tButtonMode);
@@ -409,6 +422,7 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsBattleStyle = gTasks[taskId].tBattleStyle;
     gSaveBlock2Ptr->optionsBGM = gTasks[taskId].tSound;
     gSaveBlock2Ptr->optionsHM = gTasks[taskId].tButtonMode;
+    gSaveBlock2Ptr->optionsBattleBGM = gTasks[taskId].tBattleBGM;
     gSaveBlock2Ptr->optionsWindowFrameType = gTasks[taskId].tWindowFrameType;
 
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
@@ -443,7 +457,7 @@ static void UpdateScrollOffset(u8 taskId)
 
 static void DrawOptionMenuChoice(const u8 *text, u8 x, u8 y, u8 style)
 {
-    u8 dst[16];
+    u8 dst[25];
     u16 i;
 
     for (i = 0; *text != EOS && i < ARRAY_COUNT(dst) - 1; i++)
@@ -583,6 +597,50 @@ static void Sound_DrawChoices(u8 selection, int y)
     DrawOptionMenuChoice(gText_SoundStereo, GetStringRightAlignXOffset(FONT_NORMAL, gText_SoundStereo, 198), y, styles[1]);
 }
 
+static u8 BattleBGM_ProcessInput(u8 selection)
+{
+    if (JOY_NEW(DPAD_RIGHT))
+    {
+        if (selection < OPTIONS_BATTLE_BGM_PURE_RANDOM)
+            selection++;
+        else
+            selection = OPTIONS_BATTLE_BGM_DEFAULT;
+
+        sArrowPressed = TRUE;
+    }
+    if (JOY_NEW(DPAD_LEFT))
+    {
+        if (selection != OPTIONS_BATTLE_BGM_DEFAULT)
+            selection--;
+        else
+            selection = OPTIONS_BATTLE_BGM_PURE_RANDOM;
+
+        sArrowPressed = TRUE;
+    }
+    return selection;
+}
+
+static void BattleBGM_DrawChoices(u8 selection, int y)
+{
+    const u8 *text;
+
+    switch (selection)
+    {
+    case OPTIONS_BATTLE_BGM_DEFAULT:
+        text = gText_BattleBGMDefault;
+        break;
+    case OPTIONS_BATTLE_BGM_CONTEXTUAL_RANDOM:
+        text = gText_BattleBGMContextualRandom;
+        break;
+    default:
+        text = gText_BattleBGMPureRandom;
+        break;
+    }
+
+    FillWindowPixelRect(WIN_OPTIONS, PIXEL_FILL(1), 104, y + 1, 97, 15);
+    DrawOptionMenuChoice(text, 104, y, 1);
+}
+
 static u8 FrameType_ProcessInput(u8 selection)
 {
     if (JOY_NEW(DPAD_RIGHT))
@@ -701,6 +759,9 @@ static void DrawChoices(u8 taskId, u8 menuItem, int y)
         break;
     case MENUITEM_SOUND:
         Sound_DrawChoices(gTasks[taskId].tSound, y);
+        break;
+    case MENUITEM_BATTLEBGM:
+        BattleBGM_DrawChoices(gTasks[taskId].tBattleBGM, y);
         break;
     case MENUITEM_BUTTONMODE:
         ButtonMode_DrawChoices(gTasks[taskId].tButtonMode, y);

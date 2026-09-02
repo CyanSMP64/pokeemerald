@@ -1269,6 +1269,62 @@ DirectSoundWaveData_b2_ewso_3_snares::
 	.incbin "sound/direct_sound_samples/b2_ewso_3_snares.bin"
 
 	.align 2
+DirectSoundWaveData_bw_ewsc_full_chorus_ah_43::
+	.incbin "sound/direct_sound_samples/wb/choir_male_g2_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_ewsc_full_chorus_ah_52::
+	.incbin "sound/direct_sound_samples/wb/choir_male_e3_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_ewsc_full_chorus_ah_60::
+	.incbin "sound/direct_sound_samples/wb/choir_male_c4_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_zg_cb_guitar_squeal::
+	.incbin "sound/direct_sound_samples/wb/plasma_gtrif3_22.bin"
+
+	.align 2
+DirectSoundWaveData_bw_unknown_suspended_cymbal_40::
+	.incbin "sound/direct_sound_samples/wb/crushroll_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_zg_total_drum_bass_160_leonora::
+	.incbin "sound/direct_sound_samples/wb/drum_loop_wcs_01_22.bin"
+
+	.align 2
+DirectSoundWaveData_bw_zg_dpt_orch_snare_16_18_02::
+	.incbin "sound/direct_sound_samples/wb/snare3_trinity_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_unknown_synth_kick_wcs::
+	.incbin "sound/direct_sound_samples/wb/kick_groove_02_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_plugsound_pro_analog_snare_e2::
+	.incbin "sound/direct_sound_samples/wb/snare2_analog_kit_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_zg_of_tutti_hit_minor_60::
+	.incbin "sound/direct_sound_samples/wb/oche_hit_minor_c4_32.bin"
+
+	.align 2
+DirectSoundWaveData_b2_halionone_t9_analog_hihat_closed::
+	.incbin "sound/direct_sound_samples/b2_halionone_t9_analog_hihat_closed.bin"
+
+	.align 2
+DirectSoundWaveData_b2_halionone_t9_analog_hihat_open::
+	.incbin "sound/direct_sound_samples/b2_halionone_t9_analog_hihat_open.bin"
+
+	.align 2
+DirectSoundWaveData_bw_plugsound_pro_analog_hihat_closed::
+	.incbin "sound/direct_sound_samples/wb/hihat_closed_analog_kit_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_plugsound_pro_analog_hihat_open::
+	.incbin "sound/direct_sound_samples/wb/hihat_open_analog_kit_32.bin"
+
+	.align 2
 DirectSoundWaveData_undertale_vanish::
 	.incbin "sound/direct_sound_samples/undertale_vanish.bin"
 

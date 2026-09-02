@@ -503,7 +503,7 @@ struct SaveBlock2
              u16 regionMapZoom:1; // whether the map is zoomed in
              u16 optionsBGM:1; // BGM toggle
              u16 optionsHM:1; // HM Mode [Classic/Modern]
-             //u16 padding1:2;
+             u16 optionsBattleBGM:2; // Battle BGM [Default/Contextual Random/Pure Random]
              //u16 padding2;
     /*0x18*/ struct Pokedex pokedex;
     /*0x154*/ struct Time localTimeOffset;

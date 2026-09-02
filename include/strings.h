@@ -314,9 +314,13 @@ extern const u8 gText_TextSpeed[];
 extern const u8 gText_BattleScene[];
 extern const u8 gText_BattleStyle[];
 extern const u8 gText_Sound[];
+extern const u8 gText_BattleBGM[];
 extern const u8 gText_Frame[];
 extern const u8 gText_OptionMenuCancel[];
 extern const u8 gText_ButtonMode[];
+extern const u8 gText_BattleBGMDefault[];
+extern const u8 gText_BattleBGMContextualRandom[];
+extern const u8 gText_BattleBGMPureRandom[];
 
 extern const u8 gText_MaleSymbol[];
 extern const u8 gText_FemaleSymbol[];

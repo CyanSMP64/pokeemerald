@@ -282,6 +282,8 @@
 #define START_MUS (END_SE + 1)
 // Custom music
 #define SE_VINEBOOM                     270
+#define MUS_B2_VS_CHAMPION_KANTO        271
+#define MUS_BW_VS_WORLD_CHAMPIONSHIPS   272
 #define MUS_DP_VS_DIALGA_PALKIA         275
 #define MUS_HG_VS_RAIKOU                283
 #define MUS_HG_VS_ENTEI                 284

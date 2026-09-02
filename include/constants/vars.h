@@ -253,7 +253,7 @@
 #define VAR_GIFT_UNUSED_5                                0x40EA // Var is written to, but never read
 #define VAR_GIFT_UNUSED_6                                0x40EB // Var is written to, but never read
 #define VAR_GIFT_UNUSED_7                                0x40EC // var is written to, but never read
-#define VAR_UNUSED_0x40E5                                0x40ED // Unused Var
+#define VAR_RANDOM_WILD_BGM                              0x40ED // number randomly generated between 0 and 65534 when starter is selected
 #define VAR_DAILY_SLOTS                                  0x40EE
 #define VAR_DAILY_WILDS                                  0x40EF
 #define VAR_DAILY_BLENDER                                0x40F0

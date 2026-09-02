@@ -97,6 +97,7 @@ static void SetDefaultOptions(void)
     gSaveBlock2Ptr->optionsButtonMode = OPTIONS_BUTTON_MODE_LR;
     gSaveBlock2Ptr->regionMapZoom = FALSE;
     gSaveBlock2Ptr->optionsBGM = TRUE;
+    gSaveBlock2Ptr->optionsBattleBGM = OPTIONS_BATTLE_BGM_CONTEXTUAL_RANDOM;
     gSaveBlock2Ptr->optionsHM = TRUE;
 }
 
