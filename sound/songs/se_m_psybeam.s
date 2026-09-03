@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_psybeam_grp, voicegroup128
-	.equ	se_m_psybeam_pri, 4
+	.equ	se_m_psybeam_pri, 5
 	.equ	se_m_psybeam_rev, 0
 	.equ	se_m_psybeam_mvl, 127
 	.equ	se_m_psybeam_key, 0

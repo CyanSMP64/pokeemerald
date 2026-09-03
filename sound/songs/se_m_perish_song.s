@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_perish_song_grp, voicegroup128
-	.equ	se_m_perish_song_pri, 4
+	.equ	se_m_perish_song_pri, 5
 	.equ	se_m_perish_song_rev, 0
 	.equ	se_m_perish_song_mvl, 127
 	.equ	se_m_perish_song_key, 0

@@ -1334,3 +1334,33 @@ $(MID_SUBDIR)/mus_b2_vs_champion_kanto.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_bw_vs_world_championships.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G340 -V082 -X -S -A -M
+
+$(MID_SUBDIR)/mus_dp_vs_wild.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V078 -X -S -A -M
+
+$(MID_SUBDIR)/mus_dp_vs_gym_leader.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V088 -X -S -A -M
+
+$(MID_SUBDIR)/mus_dp_vs_trainer.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V088 -X -S -A -M
+
+$(MID_SUBDIR)/mus_dp_vs_galactic_leader.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V090 -X -S -A -M
+
+$(MID_SUBDIR)/mus_dp_vs_galactic.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V090 -X -S -A -M
+
+$(MID_SUBDIR)/mus_dp_vs_rival.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V088 -X -S -A -M
+
+$(MID_SUBDIR)/mus_dp_vs_galactic_admin.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V090 -X -S -A -M
+
+$(MID_SUBDIR)/mus_dp_vs_elite_four.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V094 -X -S -A -M
+
+$(MID_SUBDIR)/mus_dp_vs_frontier_brain.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V120 -X -S -A -M
+
+$(MID_SUBDIR)/mus_hg_vs_wild_johto.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G215 -V110 -X -S -A -M

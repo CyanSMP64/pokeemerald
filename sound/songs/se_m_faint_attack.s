@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_faint_attack_grp, voicegroup128
-	.equ	se_m_faint_attack_pri, 4
+	.equ	se_m_faint_attack_pri, 5
 	.equ	se_m_faint_attack_rev, 0
 	.equ	se_m_faint_attack_mvl, 127
 	.equ	se_m_faint_attack_key, 0

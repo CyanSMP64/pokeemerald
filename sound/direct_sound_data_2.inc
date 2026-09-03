@@ -549,6 +549,34 @@ DirectSoundWaveData_dp_sy77_clarinet_60::
 	.incbin "sound/direct_sound_samples/pl/sy_clarinet_c3_16.bin"
 
 	.align 2
+DirectSoundWaveData_dp_closehight::
+	.incbin "sound/direct_sound_samples/pl/closehight_16.bin"
+	
+	.align 2
+DirectSoundWaveData_dp_sne1_roop::
+	.incbin "sound/direct_sound_samples/pl/sne1_roop.bin"
+	
+	.align 2
+DirectSoundWaveData_dp_rim1_roop::
+	.incbin "sound/direct_sound_samples/pl/rim1_roop.bin"
+	
+	.align 2
+DirectSoundWaveData_dp_dis_gt_c1_16::
+	.incbin "sound/direct_sound_samples/pl/dis_gt_c1_16.bin"
+	
+	.align 2
+DirectSoundWaveData_dp_dis_gt_c2_16::
+	.incbin "sound/direct_sound_samples/pl/dis_gt_c2_16.bin"
+	
+	.align 2
+DirectSoundWaveData_dp_dis_gt_c3_16::
+	.incbin "sound/direct_sound_samples/pl/dis_gt_c3_16.bin"
+	
+	.align 2
+DirectSoundWaveData_dp_dis_gt_c4_16::
+	.incbin "sound/direct_sound_samples/pl/dis_gt_c4_16.bin"
+
+	.align 2
 DirectSoundWaveData_hg_sampletank_string_orchestra_60::
 	.incbin "sound/direct_sound_samples/wb/strings_c4_22.bin"
 

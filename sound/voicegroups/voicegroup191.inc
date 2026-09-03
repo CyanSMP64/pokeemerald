@@ -23,7 +23,7 @@ voicegroup191::
 	voice_directsound 60, 0, DirectSoundWaveData_dp_qy70_doublsaw, A(127), D(120), S(127), R(120)
 	voice_keysplit voicegroup194, KeySplitTable8	@ sd90 french accordion
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sd90_harmonica2, A(116), D(90), S(110), R(120)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_none
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -61,7 +61,7 @@ voicegroup191::
 	voice_keysplit voicegroup206, KeySplitTable19	@ sd90 tuba 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroup200, KeySplitTable13	@ sd90 french horns 2
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_keysplit voicegroup_merodisgt, KeySplitTable42	@ mero disgt
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 36, 0, DirectSoundWaveData_dp_sc88pro_p5_bass, A(127), D(125), S(127), R(114)
@@ -82,3 +82,9 @@ voicegroup191::
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_dp_zg_of_tutti_hit_major, A(127), D(120), S(127), R(120)
 	voice_directsound 60, 0, DirectSoundWaveData_dp_zg_of_tutti_hit_minor, A(127), D(120), S(127), R(120)
+
+voicegroup_merodisgt::
+	voice_directsound 36, 0, DirectSoundWaveData_dp_dis_gt_c1_16, A(127), D(90), S(127), R(120)
+	voice_directsound 48, 0, DirectSoundWaveData_dp_dis_gt_c2_16, A(127), D(90), S(127), R(120)
+	voice_directsound 60, 0, DirectSoundWaveData_dp_dis_gt_c3_16, A(127), D(90), S(127), R(120)
+	voice_directsound 72, 0, DirectSoundWaveData_dp_dis_gt_c4_16, A(127), D(90), S(127), R(120)

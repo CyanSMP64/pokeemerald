@@ -284,6 +284,7 @@
 #define SE_VINEBOOM                     270
 #define MUS_B2_VS_CHAMPION_KANTO        271
 #define MUS_BW_VS_WORLD_CHAMPIONSHIPS   272
+#define MUS_HG_VS_WILD_JOHTO            273
 #define MUS_DP_VS_DIALGA_PALKIA         275
 #define MUS_HG_VS_RAIKOU                283
 #define MUS_HG_VS_ENTEI                 284
@@ -299,6 +300,15 @@
 #define MUS_BW_VS_KYUREM                294
 #define MUS_B2_VS_BLACK_WHITE_KYUREM    295
 #define MUS_BW_VS_ZEKROM                296
+#define MUS_DP_VS_WILD                  297
+#define MUS_DP_VS_GYM_LEADER            298
+#define MUS_DP_VS_TRAINER               299
+#define MUS_DP_VS_GALACTIC_LEADER       300
+#define MUS_DP_VS_GALACTIC              301
+#define MUS_DP_VS_RIVAL                 302
+#define MUS_DP_VS_GALACTIC_ADMIN        303
+#define MUS_DP_VS_ELITE_FOUR            304
+#define MUS_DP_VS_FRONTIER_BRAIN        305
 #define SE_DINKDONK                     306
 #define MUS_B2_VS_CHAMPION_HOENN        312
 #define MUS_B2_VICTORY_PWT              313

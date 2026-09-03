@@ -274,7 +274,7 @@ gSongTable::
 	song se_vineboom, 1, 64, 1024
 	song mus_b2_vs_champion_kanto, 0, 64, 1024
 	song mus_bw_vs_world_championships, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
+	song mus_hg_vs_wild_johto, 0, 64, 1024
 	song dummy_song_header, 0, 64, 1024
 	song mus_dp_vs_dialga_palkia, 0, 64, 1024
 	song dummy_song_header, 0, 64, 1024
@@ -298,15 +298,15 @@ gSongTable::
 	song mus_bw_vs_kyurem, 0, 64, 1024
 	song mus_b2_vs_black_white_kyurem, 0, 64, 1024
 	song mus_bw_vs_zekrom, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
+	song mus_dp_vs_wild, 0, 64, 1024
+	song mus_dp_vs_gym_leader, 0, 64, 1024
+	song mus_dp_vs_trainer, 0, 64, 1024
+	song mus_dp_vs_galactic_leader, 0, 64, 1024
+	song mus_dp_vs_galactic, 0, 64, 1024
+	song mus_dp_vs_rival, 0, 64, 1024
+	song mus_dp_vs_galactic_admin, 0, 64, 1024
+	song mus_dp_vs_elite_four, 0, 64, 1024
+	song mus_dp_vs_frontier_brain, 0, 64, 1024
 	song se_dinkdonk, 1, 64, 1024
 	song dummy_song_header, 0, 64, 1024
 	song dummy_song_header, 0, 64, 1024

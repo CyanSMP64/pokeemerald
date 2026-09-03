@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_detect_grp, voicegroup128
-	.equ	se_m_detect_pri, 4
+	.equ	se_m_detect_pri, 5
 	.equ	se_m_detect_rev, 0
 	.equ	se_m_detect_mvl, 127
 	.equ	se_m_detect_key, 0

@@ -3917,7 +3917,7 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(SE_VINEBOOM, "SE-VINEBOOM") \
     X(MUS_B2_VS_CHAMPION_KANTO, "MUS-B2-VS-CHAMPION-KANTO") \
     X(MUS_BW_VS_WORLD_CHAMPIONSHIPS, "MUS-BW-VS-WORLD-CHAMPIONSHIPS") \
-    X(273, "empty") \
+    X(MUS_HG_VS_WILD_JOHTO, "MUS-HG-VS-WILD-JOHTO") \
     X(274, "empty") \
     X(MUS_DP_VS_DIALGA_PALKIA, "MUS-DP-VS-DIALGA-PALKIA") \
     X(276, "empty") \
@@ -3941,15 +3941,15 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(MUS_BW_VS_KYUREM, "MUS-BW-VS-KYUREM") \
     X(MUS_B2_VS_BLACK_WHITE_KYUREM, "MUS-B2-VS-BLACK-WHITE-KYUREM") \
     X(MUS_BW_VS_ZEKROM, "MUS-BW-VS-ZEKROM") \
-    X(297, "empty") \
-    X(298, "empty") \
-    X(299, "empty") \
-    X(300, "empty") \
-    X(301, "empty") \
-    X(302, "empty") \
-    X(303, "empty") \
-    X(304, "empty") \
-    X(305, "empty") \
+    X(MUS_DP_VS_WILD, "MUS-DP-VS-WILD") \
+    X(MUS_DP_VS_GYM_LEADER, "MUS-DP-VS-GYM-LEADER") \
+    X(MUS_DP_VS_TRAINER, "MUS-DP-VS-TRAINER") \
+    X(MUS_DP_VS_GALACTIC_LEADER, "MUS-DP-VS-GALACTIC-LEADER") \
+    X(MUS_DP_VS_GALACTIC, "MUS-DP-VS-GALACTIC") \
+    X(MUS_DP_VS_RIVAL, "MUS-DP-VS-RIVAL") \
+    X(MUS_DP_VS_GALACTIC_ADMIN, "MUS-DP-VS-GALACTIC-ADMIN") \
+    X(MUS_DP_VS_ELITE_FOUR, "MUS-DP-VS-ELITE-FOUR") \
+    X(MUS_DP_VS_FRONTIER_BRAIN, "MUS-DP-VS-FRONTIER-BRAIN") \
     X(SE_DINKDONK, "SE-DINKDONK") \
     X(307, "empty") \
     X(308, "empty") \

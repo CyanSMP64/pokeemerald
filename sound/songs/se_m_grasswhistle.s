@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_grasswhistle_grp, voicegroup128
-	.equ	se_m_grasswhistle_pri, 4
+	.equ	se_m_grasswhistle_pri, 5
 	.equ	se_m_grasswhistle_rev, 0
 	.equ	se_m_grasswhistle_mvl, 127
 	.equ	se_m_grasswhistle_key, 0

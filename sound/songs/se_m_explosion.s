@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_explosion_grp, voicegroup128
-	.equ	se_m_explosion_pri, 4
+	.equ	se_m_explosion_pri, 5
 	.equ	se_m_explosion_rev, 0
 	.equ	se_m_explosion_mvl, 127
 	.equ	se_m_explosion_key, 0

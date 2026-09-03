@@ -1,7 +1,7 @@
 	.include "MPlayDef.s"
 
 	.equ	se_m_charm_grp, voicegroup128
-	.equ	se_m_charm_pri, 4
+	.equ	se_m_charm_pri, 5
 	.equ	se_m_charm_rev, 0
 	.equ	se_m_charm_mvl, 127
 	.equ	se_m_charm_key, 0

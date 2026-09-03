@@ -1363,6 +1363,16 @@ SECTIONS {
         sound/songs/midi/mus_hg_vs_wild_kanto.o(.rodata);
         sound/songs/midi/mus_b2_vs_champion_kanto.o(.rodata);
         sound/songs/midi/mus_bw_vs_world_championships.o(.rodata);
+        sound/songs/midi/mus_dp_vs_wild.o(.rodata);
+        sound/songs/midi/mus_dp_vs_gym_leader.o(.rodata);
+        sound/songs/midi/mus_dp_vs_trainer.o(.rodata);
+        sound/songs/midi/mus_dp_vs_galactic_leader.o(.rodata);
+        sound/songs/midi/mus_dp_vs_galactic.o(.rodata);
+        sound/songs/midi/mus_dp_vs_rival.o(.rodata);
+        sound/songs/midi/mus_dp_vs_galactic_admin.o(.rodata);
+        sound/songs/midi/mus_dp_vs_elite_four.o(.rodata);
+        sound/songs/midi/mus_dp_vs_frontier_brain.o(.rodata);
+        sound/songs/midi/mus_hg_vs_wild_johto.o(.rodata);
     } =0
 
     multiboot_data :
