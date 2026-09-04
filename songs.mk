@@ -1364,3 +1364,39 @@ $(MID_SUBDIR)/mus_dp_vs_frontier_brain.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_hg_vs_wild_johto.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G215 -V110 -X -S -A -M
+
+$(MID_SUBDIR)/mus_dp_vs_champion.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V090 -X -S -A -M
+
+$(MID_SUBDIR)/mus_dp_battle_arcade.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V110 -X -S -A -M
+
+$(MID_SUBDIR)/mus_dp_vs_regi.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G191 -V105 -X -S -A -M
+
+$(MID_SUBDIR)/mus_hg_vs_trainer_johto.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G215 -V111 -X -S -A -M
+
+$(MID_SUBDIR)/mus_hg_vs_gym_leader_johto.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G215 -V108 -X -S -A -M
+
+$(MID_SUBDIR)/mus_hg_vs_rival.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G215 -V084 -X -S -A -M
+
+$(MID_SUBDIR)/mus_hg_vs_rocket.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G215 -V102 -X -S -A -M
+
+$(MID_SUBDIR)/mus_hg_vs_champion.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G215 -V113 -X -S -A -M
+
+$(MID_SUBDIR)/mus_hg_vs_trainer_kanto.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G215 -V119 -X -S -A -M
+
+$(MID_SUBDIR)/mus_hg_vs_gym_leader_kanto.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G215 -V075 -X -S -A -M
+
+$(MID_SUBDIR)/mus_hg_pokeathlon_finals.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G215 -V097 -X -S -A -M
+
+$(MID_SUBDIR)/mus_hg_vs_kyogre_groudon.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G215 -V110 -X -S -A -M

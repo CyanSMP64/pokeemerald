@@ -21,7 +21,7 @@ voicegroup215::
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroup220, KeySplitTable29	@ plugsound pro jazz double bass hard
 	voice_keysplit voicegroup244, KeySplitTable45	@ plugsound pro ampeg ac. bass -full
-	voice_directsound 36, 0, DirectSoundWaveData_dp_sd90_slap_bass1, 255, 0, 255, 197	@ 127/127/127/118/ 64
+	voice_directsound 36, 0, DirectSoundWaveData_dp_sd90_slap_bass1, A(127), D(127), S(127), R(118)
 	voice_keysplit voicegroup224, KeySplitTable33	@ plugsound pro elastik
 	voice_keysplit voicegroup216, KeySplitTable25	@ sampletank 2.5 xl string orchestra
 	voice_keysplit voicegroup226, KeySplitTable34	@ plugsound pro violin sus
@@ -46,34 +46,37 @@ voicegroup215::
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 48, 0, DirectSoundWaveData_sc88pro_square_wave, 255, 250, 0, 178	@ 127/ 70/  0/120/ 64
-	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_bubbles, 255, 0, 255, 0	@ 125/127/127/127/ 64
+	voice_directsound 48, 0, DirectSoundWaveData_sc88pro_square_wave, A(127), D(70), S(0), R(120)
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_bubbles, A(125), D(127), S(127), R(127)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundSynthData_squ50, 255, 242, 101, 178	@ 124/100/ 80/120/ 64
+	voice_directsound 60, 0, DirectSoundSynthData_squ50, A(124), D(100), S(80), R(120)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 84, 0, DirectSoundWaveData_dp_sd90_whistle2, 255, 246, 78, 197	@ 127/ 90/ 70/118/ 64
+	voice_directsound 84, 0, DirectSoundWaveData_dp_sd90_whistle2, A(127), D(90), S(70), R(118)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_dp_zg_of_tutti_hit_minor, 255, 197, 255, 178	@ 127/120/127/120/ 64
+	voice_directsound 60, 0, DirectSoundWaveData_dp_zg_of_tutti_hit_major, A(127), D(120), S(127), R(120)
+	voice_directsound 60, 0, DirectSoundWaveData_dp_zg_of_tutti_hit_minor, A(127), D(120), S(127), R(120)
 	voice_keysplit_all voicegroup241				@ qy70 dance kit
 	voice_keysplit voicegroup208, KeySplitTable18	@ classic orchestra timpani
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_dp_qy70_doublsaw, 255, 197, 255, 178	@ 127/120/127/120/ 64
+	voice_directsound 36, 0, DirectSoundWaveData_dp_zg_bass_filter_slaps, A(127), D(125), S(127), R(118)
+	voice_directsound 36, 0, DirectSoundWaveData_dp_sd90_mg303_bass, A(127), D(127), S(127), R(112)
+	voice_directsound 60, 0, DirectSoundWaveData_dp_qy70_doublsaw, A(127), D(120), S(127), R(120)
 	voice_keysplit voicegroup245, KeySplitTable46	@ machfive 2 shamisen 1
-	voice_directsound 60, 0, DirectSoundWaveData_hg_kaeru_cafe_hyoshigi, 255, 0, 255, 178	@ 127/127/127/120/ 64
-	voice_directsound 60, 0, DirectSoundWaveData_hg_kaeru_cafe_kodaiko2, 255, 0, 255, 178	@ 127/127/127/120/ 64
-	voice_directsound 60, 0, DirectSoundWaveData_hg_kaeru_cafe_kotsu, 255, 0, 255, 178	@ 127/127/127/120/ 64
-	voice_directsound 60, 0, DirectSoundWaveData_hg_discovery_japan_suzu, 255, 0, 255, 178	@ 127/127/127/120/ 64
-	voice_directsound 60, 0, DirectSoundWaveData_hg_machfive2_taiko, 255, 0, 255, 16	@ 127/127/127/126/ 64
-	voice_directsound 48, 0, DirectSoundWaveData_dp_ps13_classic_choir_ahh_48, 255, 197, 255, 178	@ 127/120/127/120/ 64
+	voice_directsound 60, 0, DirectSoundWaveData_hg_kaeru_cafe_hyoshigi, A(127), D(127), S(127), R(120)
+	voice_directsound 60, 0, DirectSoundWaveData_hg_kaeru_cafe_kodaiko2, A(127), D(127), S(127), R(120)
+	voice_directsound 60, 0, DirectSoundWaveData_hg_kaeru_cafe_kotsu, A(127), D(127), S(127), R(120)
+	voice_directsound 60, 0, DirectSoundWaveData_hg_discovery_japan_suzu, A(127), D(127), S(127), R(120)
+	voice_directsound 60, 0, DirectSoundWaveData_hg_machfive2_taiko, A(127), D(127), S(127), R(126)
+	voice_directsound 48, 0, DirectSoundWaveData_dp_ps13_classic_choir_ahh_48, A(127), D(120), S(127), R(120)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_hg_ps13_classic_choir_ahh_60, 255, 197, 255, 178	@ 127/120/127/120/ 64
-	voice_directsound 60, 0, DirectSoundWaveData_dp_sd90_reverse_cymbal, 255, 197, 255, 178	@ 127/120/127/120/ 64
+	voice_directsound 60, 0, DirectSoundWaveData_hg_ps13_classic_choir_ahh_60, A(127), D(120), S(127), R(120)
+	voice_directsound 60, 0, DirectSoundWaveData_dp_sd90_reverse_cymbal, A(127), D(120), S(127), R(120)
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_dp_qy70_dance_snare, A(127), D(127), S(127), R(120)

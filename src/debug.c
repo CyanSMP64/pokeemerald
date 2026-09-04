@@ -3918,10 +3918,10 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(MUS_B2_VS_CHAMPION_KANTO, "MUS-B2-VS-CHAMPION-KANTO") \
     X(MUS_BW_VS_WORLD_CHAMPIONSHIPS, "MUS-BW-VS-WORLD-CHAMPIONSHIPS") \
     X(MUS_HG_VS_WILD_JOHTO, "MUS-HG-VS-WILD-JOHTO") \
-    X(274, "empty") \
+    X(MUS_DP_VS_CHAMPION, "MUS-DP-VS-CHAMPION") \
     X(MUS_DP_VS_DIALGA_PALKIA, "MUS-DP-VS-DIALGA-PALKIA") \
-    X(276, "empty") \
-    X(277, "empty") \
+    X(MUS_DP_BATTLE_ARCADE, "MUS-DP-BATTLE-ARCADE") \
+    X(MUS_DP_VS_REGI, "MUS-DP-VS-REGI") \
     X(278, "empty") \
     X(279, "empty") \
     X(280, "empty") \
@@ -3958,15 +3958,15 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(311, "empty") \
     X(MUS_B2_VS_CHAMPION_HOENN, "MUS-B2-VS-CHAMPION-HOENN") \
     X(MUS_B2_VICTORY_PWT, "MUS-B2-VICTORY-PWT") \
-    X(314, "empty") \
-    X(315, "empty") \
-    X(316, "empty") \
-    X(317, "empty") \
-    X(318, "empty") \
-    X(319, "empty") \
-    X(320, "empty") \
-    X(321, "empty") \
-    X(322, "empty") \
+    X(MUS_HG_VS_TRAINER_JOHTO, "MUS-HG-VS-TRAINER-JOHTO") \
+    X(MUS_HG_VS_GYM_LEADER_JOHTO, "MUS-HG-VS-GYM-LEADER-JOHTO") \
+    X(MUS_HG_VS_RIVAL, "MUS-HG-VS-RIVAL") \
+    X(MUS_HG_VS_ROCKET, "MUS-HG-VS-ROCKET") \
+    X(MUS_HG_VS_CHAMPION, "MUS-HG-VS-CHAMPION") \
+    X(MUS_HG_VS_TRAINER_KANTO, "MUS-HG-VS-TRAINER-KANTO") \
+    X(MUS_HG_VS_GYM_LEADER_KANTO, "MUS-HG-VS-GYM-LEADER-KANTO") \
+    X(MUS_HG_POKEATHLON_FINALS, "MUS-HG-POKEATHLON-FINALS") \
+    X(MUS_HG_VS_KYOGRE_GROUDON, "MUS-HG-VS-KYOGRE-GROUDON") \
     X(323, "empty") \
     X(324, "empty") \
     X(325, "empty") \

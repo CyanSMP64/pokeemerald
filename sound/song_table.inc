@@ -275,10 +275,10 @@ gSongTable::
 	song mus_b2_vs_champion_kanto, 0, 64, 1024
 	song mus_bw_vs_world_championships, 0, 64, 1024
 	song mus_hg_vs_wild_johto, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
+	song mus_dp_vs_champion, 0, 64, 1024
 	song mus_dp_vs_dialga_palkia, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
+	song mus_dp_battle_arcade, 0, 64, 1024
+	song mus_dp_vs_regi, 0, 64, 1024
 	song dummy_song_header, 0, 64, 1024
 	song dummy_song_header, 0, 64, 1024
 	song dummy_song_header, 0, 64, 1024
@@ -315,15 +315,15 @@ gSongTable::
 	song dummy_song_header, 0, 64, 1024
 	song mus_b2_vs_champion_hoenn, 0, 64, 1024
 	song mus_b2_victory_pwt, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
-	song dummy_song_header, 0, 64, 1024
+	song mus_hg_vs_trainer_johto, 0, 64, 1024
+	song mus_hg_vs_gym_leader_johto, 0, 64, 1024
+	song mus_hg_vs_rival, 0, 64, 1024
+	song mus_hg_vs_rocket, 0, 64, 1024
+	song mus_hg_vs_champion, 0, 64, 1024
+	song mus_hg_vs_trainer_kanto, 0, 64, 1024
+	song mus_hg_vs_gym_leader_kanto, 0, 64, 1024
+	song mus_hg_pokeathlon_finals, 0, 64, 1024
+	song mus_hg_vs_kyogre_groudon, 0, 64, 1024
 	song dummy_song_header, 0, 64, 1024
 	song dummy_song_header, 0, 64, 1024
 	song dummy_song_header, 0, 64, 1024

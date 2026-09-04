@@ -28,7 +28,7 @@ voicegroup191::
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_dp_tengan_wind, A(127), D(127), S(127), R(125)
 	voice_keysplit voicegroup203, KeySplitTable16	@ prosamples 16 dist gtr
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundSynthData_squ50, A(126), D(100), S(40), R(127)
@@ -36,7 +36,7 @@ voicegroup191::
 	voice_directsound 28, 0, DirectSoundWaveData_dp_ps16_stingray_bass_hard, A(127), D(60), S(1), R(116)
 	voice_directsound 28, 0, DirectSoundWaveData_dp_zg_pick_bass, A(127), D(60), S(1), R(116)
 	voice_directsound 38, 0, DirectSoundWaveData_dp_zg_woody_bass_38, A(127), D(127), S(127), R(118)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 31, 0, DirectSoundWaveData_dp_slapbass_g1_16, A(127), D(127), S(127), R(112)
 	voice_directsound 36, 0, DirectSoundWaveData_dp_sd90_slap_bass1, A(127), D(127), S(127), R(114)
 	voice_directsound 36, 0, DirectSoundWaveData_dp_zg_bass_filter_slaps, A(127), D(125), S(127), R(118)
 	voice_directsound 36, 0, DirectSoundWaveData_dp_sd90_mg303_bass, A(127), D(127), S(127), R(112)
@@ -63,9 +63,9 @@ voicegroup191::
 	voice_keysplit voicegroup200, KeySplitTable13	@ sd90 french horns 2
 	voice_keysplit voicegroup_merodisgt, KeySplitTable42	@ mero disgt
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundSynthData_squ12, A(124), D(100), S(80), R(110)
 	voice_directsound 36, 0, DirectSoundWaveData_dp_sc88pro_p5_bass, A(127), D(125), S(127), R(114)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_dp_altosax_c3_16, A(127), D(117), S(126), R(118)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundSynthData_squ50, A(124), D(100), S(80), R(110)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -76,9 +76,9 @@ voicegroup191::
 	voice_keysplit voicegroup207, KeySplitTable20	@ sd90 flute 2
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 48, 0, DirectSoundWaveData_dp_ps13_classic_choir_ahh_48, A(127), D(120), S(127), R(120)
 	voice_directsound 60, 0, DirectSoundWaveData_dp_ps13_classic_choir_ahh_60, A(127), D(120), S(127), R(120)
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 84, 0, DirectSoundWaveData_dp_sd90_whistle2, A(127), D(90), S(70), R(118)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_dp_zg_of_tutti_hit_major, A(127), D(120), S(127), R(120)
 	voice_directsound 60, 0, DirectSoundWaveData_dp_zg_of_tutti_hit_minor, A(127), D(120), S(127), R(120)

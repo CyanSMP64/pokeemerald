@@ -285,7 +285,10 @@
 #define MUS_B2_VS_CHAMPION_KANTO        271
 #define MUS_BW_VS_WORLD_CHAMPIONSHIPS   272
 #define MUS_HG_VS_WILD_JOHTO            273
+#define MUS_DP_VS_CHAMPION              274
 #define MUS_DP_VS_DIALGA_PALKIA         275
+#define MUS_DP_BATTLE_ARCADE            276
+#define MUS_DP_VS_REGI                  277
 #define MUS_HG_VS_RAIKOU                283
 #define MUS_HG_VS_ENTEI                 284
 #define MUS_HG_VS_SUICUNE               285
@@ -312,6 +315,15 @@
 #define SE_DINKDONK                     306
 #define MUS_B2_VS_CHAMPION_HOENN        312
 #define MUS_B2_VICTORY_PWT              313
+#define MUS_HG_VS_TRAINER_JOHTO         314
+#define MUS_HG_VS_GYM_LEADER_JOHTO      315
+#define MUS_HG_VS_RIVAL                 316
+#define MUS_HG_VS_ROCKET                317
+#define MUS_HG_VS_CHAMPION              318
+#define MUS_HG_VS_TRAINER_KANTO         319
+#define MUS_HG_VS_GYM_LEADER_KANTO      320
+#define MUS_HG_POKEATHLON_FINALS        321
+#define MUS_HG_VS_KYOGRE_GROUDON        322
 #define SE_UTVANISH                     327
 #define MUS_SMWEND                      328
 #define MUS_HG_VS_WILD_KANTO            329
