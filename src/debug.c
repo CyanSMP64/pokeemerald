@@ -3968,32 +3968,32 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(MUS_HG_POKEATHLON_FINALS, "MUS-HG-POKEATHLON-FINALS") \
     X(MUS_HG_VS_KYOGRE_GROUDON, "MUS-HG-VS-KYOGRE-GROUDON") \
     X(323, "empty") \
-    X(324, "empty") \
-    X(325, "empty") \
-    X(326, "empty") \
+    X(MUS_B2_VS_WILD, "MUS-B2-VS-WILD") \
+    X(MUS_BW_VS_STRONG_WILD, "MUS-BW-VS-STRONG-WILD") \
+    X(MUS_B2_VS_TRAINER, "MUS-B2-VS-TRAINER") \
     X(SE_UTVANISH, "SE-UTVANISH") \
     X(MUS_SMWEND, "MUS-SMWEND") \
     X(MUS_HG_VS_WILD_KANTO, "MUS-HG-VS-WILD-KANTO") \
-    X(330, "empty") \
-    X(331, "empty") \
-    X(332, "empty") \
-    X(333, "empty") \
-    X(334, "empty") \
-    X(335, "empty") \
-    X(336, "empty") \
-    X(337, "empty") \
-    X(338, "empty") \
-    X(339, "empty") \
-    X(340, "empty") \
-    X(341, "empty") \
-    X(342, "empty") \
-    X(343, "empty") \
-    X(344, "empty") \
-    X(345, "empty") \
-    X(346, "empty") \
-    X(347, "empty") \
-    X(348, "empty") \
-    X(349, "empty") \
+    X(MUS_BW_VS_SUBWAY_TRAINER, "MUS-BW-VS-SUBWAY-TRAINER") \
+    X(MUS_B2_VS_GYM_LEADER, "MUS-B2-VS-GYM-LEADER") \
+    X(MUS_BW_VS_RIVAL, "MUS-BW-VS-RIVAL") \
+    X(MUS_BW_VS_ELITE_FOUR, "MUS-BW-VS-ELITE-FOUR") \
+    X(MUS_BW_VS_CHAMPION, "MUS-BW-VS-CHAMPION") \
+    X(MUS_B2_VS_N, "MUS-B2-VS-N") \
+    X(MUS_B2_VS_REGI, "MUS-B2-VS-REGI") \
+    X(MUS_BW_VS_CYNTHIA, "MUS-BW-VS-CYNTHIA") \
+    X(MUS_B2_VS_GYM_LEADER_KANTO, "MUS-B2-VS-GYM-LEADER-KANTO") \
+    X(MUS_B2_VS_GYM_LEADER_JOHTO, "MUS-B2-VS-GYM-LEADER-JOHTO") \
+    X(MUS_B2_VS_CHAMPION_JOHTO, "MUS-B2-VS-CHAMPION-JOHTO") \
+    X(MUS_B2_VS_GYM_LEADER_HOENN, "MUS-B2-VS-GYM-LEADER-HOENN") \
+    X(MUS_B2_VS_GYM_LEADER_SINNOH, "MUS-B2-VS-GYM-LEADER-SINNOH") \
+    X(MUS_B2_VS_CHAMPION_SINNOH, "MUS-B2-VS-CHAMPION-SINNOH") \
+    X(MUS_B2_VS_PWT_FINALS, "MUS-B2-VS-PWT-FINALS") \
+    X(MUS_B2_VS_PLASMA, "MUS-B2-VS-PLASMA") \
+    X(MUS_B2_VS_COLRESS, "MUS-B2-VS-COLRESS") \
+    X(MUS_B2_VS_GHETSIS, "MUS-B2-VS-GHETSIS") \
+    X(MUS_B2_VS_IRIS, "MUS-B2-VS-IRIS") \
+    X(MUS_B2_VS_HUGH, "MUS-B2-VS-HUGH") \
     X(MUS_LITTLEROOT_TEST, "MUS-LITTLEROOT-TEST") \
     X(MUS_GSC_ROUTE38, "MUS-GSC-ROUTE38") \
     X(MUS_CAUGHT, "MUS-CAUGHT") \

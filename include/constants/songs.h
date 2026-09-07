@@ -324,9 +324,32 @@
 #define MUS_HG_VS_GYM_LEADER_KANTO      320
 #define MUS_HG_POKEATHLON_FINALS        321
 #define MUS_HG_VS_KYOGRE_GROUDON        322
+#define MUS_B2_VS_WILD                  324
+#define MUS_BW_VS_STRONG_WILD           325
+#define MUS_B2_VS_TRAINER               326
 #define SE_UTVANISH                     327
 #define MUS_SMWEND                      328
 #define MUS_HG_VS_WILD_KANTO            329
+#define MUS_BW_VS_SUBWAY_TRAINER        330
+#define MUS_B2_VS_GYM_LEADER            331
+#define MUS_BW_VS_RIVAL                 332
+#define MUS_BW_VS_ELITE_FOUR            333
+#define MUS_BW_VS_CHAMPION              334
+#define MUS_B2_VS_N                     335
+#define MUS_B2_VS_REGI                  336
+#define MUS_BW_VS_CYNTHIA               337
+#define MUS_B2_VS_GYM_LEADER_KANTO      338
+#define MUS_B2_VS_GYM_LEADER_JOHTO      339
+#define MUS_B2_VS_CHAMPION_JOHTO        340
+#define MUS_B2_VS_GYM_LEADER_HOENN      341
+#define MUS_B2_VS_GYM_LEADER_SINNOH     342
+#define MUS_B2_VS_CHAMPION_SINNOH       343
+#define MUS_B2_VS_PWT_FINALS            344
+#define MUS_B2_VS_PLASMA                345
+#define MUS_B2_VS_COLRESS               346
+#define MUS_B2_VS_GHETSIS               347
+#define MUS_B2_VS_IRIS                  348
+#define MUS_B2_VS_HUGH                  349
 
 // Music
 #define MUS_LITTLEROOT_TEST         350 // MUS_TETSUJI          // Unused, likely a test track.
