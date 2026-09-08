@@ -395,6 +395,7 @@
 .set KeySplitTable_DPgrandpianolow, . + 16		@ -|-
 .set KeySplitTable_DPtuba, . + 15		@ -|-
 .set KeySplitTable_GSsynbass, . + 3		@ -|-
+.set KeySplitTable_BWsynbass, . + 2		@ -|-
 .set KeySplitTable_GSacbass, . + 1		@ -|-
 .set KeySplitTable_DPtimpani1, . - 2		@ -|-
 .set KeySplitTable_DPtimpani2, . - 2		@ -|-
@@ -408,6 +409,8 @@
 .set KeySplitTable_GSglocken, . - 21		@ -|-
 .set KeySplitTable_DPpizz, . - 25		@ -|-
 .set KeySplitTable_GStubbell, . - 25		@ -|-
+.set KeySplitTable_BWpizz_34, . - 28		@ -|-
+.set KeySplitTable_BWflute2_23, . - 29		@ -|-
 	@     C # D # E F # G # A # B
 	.byte                 0,0,0,0
 	.byte 0,0,0,0,0,0,0,0,0,0,0,0
@@ -475,6 +478,7 @@
 .set KeySplitTable_GSjazzorg, . - 12		@ -|12|-
 .set KeySplitTable_GSharp, . - 12		@ -|12|-
 .set KeySplitTable_GStimpani, . - 12		@ -|12|-
+.set KeySplitTable_BWdrawbarorg, . - 13		@ -|12|-
 .set KeySplitTable_GSmarimba, . - 24		@ -|12|-
 .set KeySplitTable_GSmusbox, . - 24		@ -|12|-
 .set KeySplitTable_DPmarimba, . - 28		@ -|12|-
@@ -535,8 +539,17 @@
 	.byte 1,1,1,1,1,2,2,2,2,2,2,3
 	.byte 3,3,3,3
 
-.set KeySplitTable_GSflute, . - 48		@ -|9|7|-
+.set KeySplitTable_BWflute, . - 56		@ -|7|9|-
 	@     C # D # E F # G # A # B
+	.byte                 0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 1,1,1,1,1,1,1,2,2,2,2,2
+	.byte 2,2,2,2,3,3,3,3
+
+.set KeySplitTable_GSflute, . - 48		@ -|9|7|-
+.set KeySplitTable_BWstrings, . - 45		@ -|9|7|-
+	@     C # D # E F # G # A # B
+	.byte                 0,0,0,0
 	.byte 0,0,0,0,0,0,0,0,0,0,0,0
 	.byte 0,0,0,0,0,0,1,1,1,1,1,1
 	.byte 1,1,1,2,2,2,2,2,2,2,3,3

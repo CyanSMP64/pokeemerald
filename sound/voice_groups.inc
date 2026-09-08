@@ -193,3 +193,6 @@
 .include "sound/voicegroups/voicegroup191.inc" @ dpp songs
 .include "sound/voicegroups/voicegroup192.inc" @ hgss songs
 .include "sound/voicegroups/voicegroup193.inc" @ smw songs
+
+.include "sound/voicegroups/voicegroup200.inc" @ BW vs wild (beta 15815)
+.include "sound/voicegroups/voicegroup201.inc" @ BW vs wild

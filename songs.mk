@@ -1469,3 +1469,30 @@ $(MID_SUBDIR)/mus_b2_vs_iris.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_b2_vs_hugh.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G192 -V115 -X -S -A -M
+
+$(MID_SUBDIR)/mus_bw_vs_wild_15815.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G200 -V065 -X -S -A -M
+
+$(MID_SUBDIR)/mus_bw_vs_wild.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G201 -V094 -X -S -A -M
+
+$(MID_SUBDIR)/mus_bw_vs_trainer.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G192 -V090 -X -S -A -M
+
+$(MID_SUBDIR)/mus_bw_vs_gym_leader.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G192 -V106 -X -S -A -M
+
+$(MID_SUBDIR)/mus_bw_vs_plasma.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G192 -V120 -X -S -A -M
+
+$(MID_SUBDIR)/mus_bw_vs_n.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G192 -V126 -X -S -A -M
+
+$(MID_SUBDIR)/mus_bw_vs_n_final.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G192 -V105 -X -S -A -M
+
+$(MID_SUBDIR)/mus_bw_vs_ghetsis.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G192 -V126 -X -S -A -M
+
+$(MID_SUBDIR)/mus_bw_vs_final_mon.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G192 -V090 -X -S -A -M

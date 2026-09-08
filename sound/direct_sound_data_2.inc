@@ -1122,7 +1122,7 @@ DirectSoundWaveData_bw_plugsound_pro_acoustic_grand_piano_84::
 
 	.align 2
 DirectSoundWaveData_bw_plugsound_pro_glockenspiel_72::
-	.incbin "sound/direct_sound_samples/wb/glocken_c5_22.bin"
+	.incbin "sound/direct_sound_samples/wb/glocken_c5_32.bin"
 
 	.align 2
 DirectSoundWaveData_bw_halionone_hard_sync_solo_35::
@@ -1151,6 +1151,14 @@ DirectSoundWaveData_bw_ps15_kick66::
 	.align 2
 DirectSoundWaveData_bw_ps15_kick120::
 	.incbin "sound/direct_sound_samples/wb/bass_hit01_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_ps55_flute_65_22::
+	.incbin "sound/direct_sound_samples/wb/flute_akai_wb_f4_22.bin"
+
+	.align 2
+DirectSoundWaveData_bw_ps55_flute_72_22::
+	.incbin "sound/direct_sound_samples/wb/flute_akai_wb_c5_22.bin"
 
 	.align 2
 DirectSoundWaveData_bw_ps55_flute_81_22::
@@ -1241,8 +1249,68 @@ DirectSoundWaveData_bw_sd90_analog_snare_reverb::
 	.incbin "sound/direct_sound_samples/wb/shiten_snare_max2_32.bin"
 
 	.align 2
+DirectSoundWaveData_bw_kfl_mark_i_classic_60::
+	.incbin "sound/direct_sound_samples/wb/e_piano_wb_c4_22.bin"
+
+	.align 2
 DirectSoundWaveData_bw_kfl_mark_i_classic_72::
 	.incbin "sound/direct_sound_samples/wb/e_piano_wb_c5_22.bin"
+
+@	.align 2
+@DirectSoundWaveData_bw_vibraphone_wb_c4_22::
+@	.incbin "sound/direct_sound_samples/wb/vibraphone_wb_c4_22.bin"
+
+	.align 2
+DirectSoundWaveData_bw_vibraphone_wb_c5_22::
+	.incbin "sound/direct_sound_samples/wb/vibraphone_wb_c5_22.bin"
+
+@	.align 2
+@DirectSoundWaveData_bw_marimba_wb_c3_22::
+@	.incbin "sound/direct_sound_samples/wb/marimba_wb_c3_22.bin"
+
+	.align 2
+DirectSoundWaveData_bw_marimba_wb_c4_22::
+	.incbin "sound/direct_sound_samples/wb/marimba_wb_c4_22.bin"
+
+	.align 2
+DirectSoundWaveData_bw_marimba_wb_c5_22::
+	.incbin "sound/direct_sound_samples/wb/marimba_wb_c5_22.bin"
+
+	.align 2
+DirectSoundWaveData_bw_synth_bass_wb_c2_22::
+	.incbin "sound/direct_sound_samples/wb/synth_bass_wb_c2_22.bin"
+
+	.align 2
+DirectSoundWaveData_bw_synth_bass_wb_c3_22::
+	.incbin "sound/direct_sound_samples/wb/synth_bass_wb_c3_22.bin"
+
+	.align 2
+DirectSoundWaveData_bw_bassdr1_32::
+	.incbin "sound/direct_sound_samples/wb/bassdr1_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_crashcym1_popkit_32::
+	.incbin "sound/direct_sound_samples/wb/crashcym1_popkit_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_crashcym2_popkit_32::
+	.incbin "sound/direct_sound_samples/wb/crashcym2_popkit_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_atc_pet_sect_c4_32::
+	.incbin "sound/direct_sound_samples/wb/atc_pet_sect_c4_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_atc_pet_sect_a4_32::
+	.incbin "sound/direct_sound_samples/wb/atc_pet_sect_a4_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_atc_pet_sect_g5_32::
+	.incbin "sound/direct_sound_samples/wb/atc_pet_sect_g5_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_kick_power_32::
+	.incbin "sound/direct_sound_samples/wb/kick_power_32.bin"
 
 	.align 2
 DirectSoundWaveData_b2_halion_t9_analog_kick::
