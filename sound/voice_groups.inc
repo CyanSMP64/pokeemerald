@@ -196,3 +196,13 @@
 
 .include "sound/voicegroups/voicegroup200.inc" @ BW vs wild (beta 15815)
 .include "sound/voicegroups/voicegroup201.inc" @ BW vs wild
+.include "sound/voicegroups/voicegroup202.inc" @ BW vs strong wild
+.include "sound/voicegroups/voicegroup203.inc" @ BW vs trainer
+.include "sound/voicegroups/voicegroup204.inc" @ BW vs subway trainer
+.include "sound/voicegroups/voicegroup205.inc" @ BW vs gym leader
+.include "sound/voicegroups/voicegroup206.inc" @ BW vs rival
+.include "sound/voicegroups/voicegroup207.inc" @ BW vs plasma
+.include "sound/voicegroups/voicegroup208.inc" @ BW vs elite four
+.include "sound/voicegroups/voicegroup209.inc" @ BW vs champion
+.include "sound/voicegroups/voicegroup210.inc" @ BW vs n
+.include "sound/voicegroups/voicegroup211.inc" @ BW vs final n

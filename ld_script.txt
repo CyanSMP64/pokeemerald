@@ -86,6 +86,7 @@ SECTIONS {
         src/pokemon_jump.o(.text);
         src/minigame_countdown.o(.text);
         src/rtc.o(.text);
+        src/battle_gfx_sfx_util.o(.text);
     } =0
 
     .text_2 0x08032654 :
@@ -98,15 +99,15 @@ SECTIONS {
         src/battle_util.o(.text);
         src/battle_script_commands.o(.text);
         src/battle_controller_player.o(.text);
-        src/battle_gfx_sfx_util.o(.text);
         src/battle_controller_link_opponent.o(.text);
+        src/overworld.o(.text);
+        src/digit_obj_util.o(.text);
     } =0
 
     .text_4 0x08067a74 :
     ALIGN(4)
     {
         src/pokemon.o(.text);
-        src/overworld.o(.text);
         src/battle_bg.o(.text);
         src/berry_powder.o(.text);
         src/field_screen_effect.o(.text);
@@ -117,7 +118,6 @@ SECTIONS {
         src/battle_util2.o(.text);
         src/battle_controller_opponent.o(.text);
         src/battle_ai_switch_items.o(.text);
-        src/digit_obj_util.o(.text);
         src/trig.o(.text);
         src/daycare.o(.text);
         src/egg_hatch.o(.text);
@@ -460,6 +460,9 @@ SECTIONS {
         src/pokemon_jump.o(.rodata);
         src/minigame_countdown.o(.rodata);
         src/trade.o(.rodata);
+        gflib/text.o(.rodata);
+        src/union_room.o(.rodata);
+        src/mystery_gift_view.o(.rodata);
     } =0
 
     .rodata_pokemon 0x0831c898 : /* moved gBattleMoves to vanilla address for now */
@@ -467,7 +470,6 @@ SECTIONS {
     {
         src/pokemon.o(.rodata);
         src/data.o(.rodata);
-        gflib/text.o(.rodata);
         src/link.o(.rodata);
         src/link.o(.rodata.str1.4);
         src/AgbRfu_LinkManager.o(.rodata);
@@ -488,9 +490,7 @@ SECTIONS {
         gflib/sprite.o(.rodata);
         src/link_rfu_2.o(.rodata);
         src/link_rfu_2.o(.rodata.str1.4);
-        src/union_room.o(.rodata);
         src/wireless_communication_status_screen.o(.rodata);
-        src/mystery_gift_view.o(.rodata);
         src/mystery_gift_scripts.o(.rodata);
         src/wonder_news.o(.rodata);
         src/union_room_chat.o(.rodata);
@@ -786,19 +786,6 @@ SECTIONS {
     ALIGN(4)
     {
         src/graphics.o(.rodata);
-    } =0
-
-    new_sound :
-    ALIGN(4)
-    {
-        data/sound_data_2.o(.rodata);
-    } =0
-
-    new_sound_2 0x08fe0000 :
-    ALIGN(4)
-    {
-        data/dummy_data.o(.rodata);
-        data/sound_data_3.o(.rodata);
     } =0
 
     song_data :
@@ -1334,6 +1321,14 @@ SECTIONS {
         sound/songs/midi/ph_nurse_blend.o(.rodata);
         sound/songs/midi/ph_nurse_held.o(.rodata);
         sound/songs/midi/ph_nurse_solo.o(.rodata);
+    } =0
+
+    new_sound 0x08fe0000 :
+    ALIGN(4)
+    {
+        data/dummy_data.o(.rodata);
+        data/sound_data_2.o(.rodata);
+        data/sound_data_3.o(.rodata);
     } =0
 
     new_songs :
