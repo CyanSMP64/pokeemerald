@@ -1550,6 +1550,46 @@ DirectSoundWaveData_bw_plugsound_pro_analog_hihat_open::
 	.incbin "sound/direct_sound_samples/wb/hihat_open_analog_kit_32.bin"
 
 	.align 2
+DirectSoundWaveData_bw_breth_noiselopp_cs4_32::
+	.incbin "sound/direct_sound_samples/wb/breth_noiselopp_cs4_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_g_cis_musboxl_cs4_32::
+	.incbin "sound/direct_sound_samples/wb/g_cis_musboxl_cs4_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_g_cis_l_taiko_g3_32::
+	.incbin "sound/direct_sound_samples/wb/g_cis_l_taiko_g3_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_ge_cs1_loop1_32::
+	.incbin "sound/direct_sound_samples/wb/ge_cs1_loop1_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_ei_cs1_big_32::
+	.incbin "sound/direct_sound_samples/wb/ei_cs1_big_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_chiss_shot_32::
+	.incbin "sound/direct_sound_samples/wb/chiss_shot_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_gee_sop_cs4_22::
+	.incbin "sound/direct_sound_samples/wb/gee_sop_cs4_22.bin"
+
+	.align 2
+DirectSoundWaveData_bw_dora_loop_22::
+	.incbin "sound/direct_sound_samples/wb/dora_loop_22.bin"
+
+	.align 2
+DirectSoundWaveData_bw_wadaiko_g::
+	.incbin "sound/direct_sound_samples/wb/wadaiko_g.bin"
+
+	.align 2
+DirectSoundWaveData_bw_wadaiko_g_lop::
+	.incbin "sound/direct_sound_samples/wb/wadaiko_g_lop.bin"
+
+	.align 2
 DirectSoundWaveData_b2_halion_t9_analog_kick::
 	.incbin "sound/direct_sound_samples/b2_halion_t9_analog_kick.bin"
 

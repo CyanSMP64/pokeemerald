@@ -1309,19 +1309,19 @@ $(MID_SUBDIR)/mus_pl_vs_giratina.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V105 -X -S -A -M
 
 $(MID_SUBDIR)/mus_bw_vs_legend.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V116 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G216 -V116 -X -S -A -M
 
 $(MID_SUBDIR)/mus_bw_vs_reshiram.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V091 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G213 -V091 -X -S -A -M
 
 $(MID_SUBDIR)/mus_bw_vs_kyurem.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V091 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G215 -V091 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_black_white_kyurem.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G192 -V125 -X -S -A -M
 
 $(MID_SUBDIR)/mus_bw_vs_zekrom.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V091 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G214 -V091 -X -S -A -M
 
 $(MID_SUBDIR)/se_vineboom.s: %.s: %.mid
 	$(MID) $< $@ -E -G128 -V127 -p5
@@ -1492,7 +1492,7 @@ $(MID_SUBDIR)/mus_bw_vs_n_final.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G211 -V105 -X -S -A -M
 
 $(MID_SUBDIR)/mus_bw_vs_ghetsis.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V126 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G212 -V126 -X -S -A -M
 
 $(MID_SUBDIR)/mus_bw_vs_final_mon.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G192 -V090 -X -S -A -M

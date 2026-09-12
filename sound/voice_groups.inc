@@ -206,3 +206,8 @@
 .include "sound/voicegroups/voicegroup209.inc" @ BW vs champion
 .include "sound/voicegroups/voicegroup210.inc" @ BW vs n
 .include "sound/voicegroups/voicegroup211.inc" @ BW vs final n
+.include "sound/voicegroups/voicegroup212.inc" @ BW vs ghetsis
+.include "sound/voicegroups/voicegroup213.inc" @ BW vs reshiram
+.include "sound/voicegroups/voicegroup214.inc" @ BW vs zekrom
+.include "sound/voicegroups/voicegroup215.inc" @ BW vs kyurem
+.include "sound/voicegroups/voicegroup216.inc" @ BW vs legendary
