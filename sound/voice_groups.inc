@@ -211,3 +211,17 @@
 .include "sound/voicegroups/voicegroup214.inc" @ BW vs zekrom
 .include "sound/voicegroups/voicegroup215.inc" @ BW vs kyurem
 .include "sound/voicegroups/voicegroup216.inc" @ BW vs legendary
+.include "sound/voicegroups/voicegroup217.inc" @ BW vs cynthia
+.include "sound/voicegroups/voicegroup218.inc" @ BW victory lies before you
+.include "sound/voicegroups/voicegroup219.inc" @ BW vs world championships
+
+.include "sound/voicegroups/voicegroup220.inc" @ SW vs wild
+.include "sound/voicegroups/voicegroup221.inc" @ SW vs trainer
+.include "sound/voicegroups/voicegroup222.inc" @ SW vs gym leader
+.include "sound/voicegroups/voicegroup223.inc" @ SW vs n
+.include "sound/voicegroups/voicegroup224.inc" @ SW vs regi
+.include "sound/voicegroups/voicegroup225.inc" @ SW vs kanto gym leader
+.include "sound/voicegroups/voicegroup226.inc" @ SW vs kanto champion
+.include "sound/voicegroups/voicegroup227.inc" @ SW vs johto gym leader
+.include "sound/voicegroups/voicegroup228.inc" @ SW vs johto champion
+.include "sound/voicegroups/voicegroup229.inc" @ SW vs hoenn gym leader

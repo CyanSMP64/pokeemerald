@@ -1330,10 +1330,10 @@ $(MID_SUBDIR)/mus_hg_vs_wild_kanto.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G192 -V103 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_champion_kanto.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V111 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G226 -V111 -X -S -A -M
 
 $(MID_SUBDIR)/mus_bw_vs_world_championships.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V092 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G219 -V092 -X -S -A -M
 
 $(MID_SUBDIR)/mus_dp_vs_wild.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G191 -V078 -X -S -A -M
@@ -1402,19 +1402,19 @@ $(MID_SUBDIR)/mus_hg_vs_kyogre_groudon.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G192 -V110 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_wild.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V094 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G220 -V094 -X -S -A -M
 
 $(MID_SUBDIR)/mus_bw_vs_strong_wild.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G202 -V096 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_trainer.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V090 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G221 -V090 -X -S -A -M
 
 $(MID_SUBDIR)/mus_bw_vs_subway_trainer.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G204 -V112 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_gym_leader.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V106 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G222 -V106 -X -S -A -M
 
 $(MID_SUBDIR)/mus_bw_vs_rival.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G206 -V079 -X -S -A -M
@@ -1426,25 +1426,25 @@ $(MID_SUBDIR)/mus_bw_vs_champion.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G209 -V094 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_n.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V127 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G223 -V127 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_regi.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V100 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G224 -V100 -X -S -A -M
 
 $(MID_SUBDIR)/mus_bw_vs_cynthia.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V068 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G217 -V068 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_gym_leader_kanto.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V127 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G225 -V127 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_gym_leader_johto.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V113 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G227 -V113 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_champion_johto.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V110 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G228 -V110 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_gym_leader_hoenn.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V086 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G229 -V086 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_gym_leader_sinnoh.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G192 -V127 -X -S -A -M
@@ -1495,4 +1495,4 @@ $(MID_SUBDIR)/mus_bw_vs_ghetsis.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G212 -V126 -X -S -A -M
 
 $(MID_SUBDIR)/mus_bw_vs_final_mon.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V090 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G218 -V090 -X -S -A -M
