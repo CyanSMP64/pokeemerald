@@ -630,19 +630,19 @@ DirectSoundWaveData_hg_kfl_french_horn_71::
 
 	.align 2
 DirectSoundWaveData_bw_kfl_french_horn_ensemble_48::
-	.incbin "sound/direct_sound_samples/wb/french_horn_c3_b_32.bin"
+	.incbin "sound/direct_sound_samples/wb/french_horn_c3_b_22.bin"
 	
 	.align 2
 DirectSoundWaveData_hg_kfl_french_horn_ensemble_53::
-	.incbin "sound/direct_sound_samples/wb/french_horn_f3_b_32.bin"
+	.incbin "sound/direct_sound_samples/wb/french_horn_f3_b_22.bin"
 	
 	.align 2
 DirectSoundWaveData_hg_kfl_french_horn_ensemble_62::
-	.incbin "sound/direct_sound_samples/wb/french_horn_d4_b_32.bin"
+	.incbin "sound/direct_sound_samples/wb/french_horn_d4_b_22.bin"
 	
 	.align 2
 DirectSoundWaveData_hg_kfl_french_horn_ensemble_71::
-	.incbin "sound/direct_sound_samples/wb/french_horn_b4_b_32.bin"
+	.incbin "sound/direct_sound_samples/wb/french_horn_b4_b_22.bin"
 
 	.align 2
 DirectSoundWaveData_hg_kfl_trumpet_ensemble_60::
@@ -1615,6 +1615,22 @@ DirectSoundWaveData_bw_wadaiko_g_lop::
 	.incbin "sound/direct_sound_samples/wb/wadaiko_g_lop.bin"
 
 	.align 2
+DirectSoundWaveData_bw_sitar_c3_32::
+	.incbin "sound/direct_sound_samples/wb/sitar_c3_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_sitar_a3_32::
+	.incbin "sound/direct_sound_samples/wb/sitar_a3_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_sitar_f4_32::
+	.incbin "sound/direct_sound_samples/wb/sitar_f4_32.bin"
+
+	.align 2
+DirectSoundWaveData_bw_sitar_d5_32::
+	.incbin "sound/direct_sound_samples/wb/sitar_d5_32.bin"
+
+	.align 2
 DirectSoundWaveData_b2_halion_t9_analog_kick::
 	.incbin "sound/direct_sound_samples/b2_halion_t9_analog_kick.bin"
 
@@ -1727,6 +1743,10 @@ DirectSoundWaveData_b2_doublsaw_c5::
 	.incbin "sound/direct_sound_samples/doublsaw_c5_22.bin"
 
 	.align 2
+DirectSoundWaveData_b2_slap_bass_louder::
+	.incbin "sound/direct_sound_samples/b2_slap_bass_louder.bin"
+
+	.align 2
 DirectSoundWaveData_b2_bluescrunch_e2::
 	.incbin "sound/direct_sound_samples/bluescrunch_e2.bin"
 
@@ -1765,6 +1785,30 @@ DirectSoundWaveData_b2_absynth_square_d5::
 	.align 2
 DirectSoundWaveData_b2_absynth_square_d6::
 	.incbin "sound/direct_sound_samples/absynth_square_d6.bin"
+
+	.align 2
+DirectSoundWaveData_b2_absynth_808_kick::
+	.incbin "sound/direct_sound_samples/absynth_808_kick.bin"
+
+	.align 2
+DirectSoundWaveData_b2_dj_handy_d2::
+	.incbin "sound/direct_sound_samples/dj_handy_d2_22.bin"
+
+	.align 2
+DirectSoundWaveData_b2_dj_handy_d3::
+	.incbin "sound/direct_sound_samples/dj_handy_d3_22.bin"
+
+	.align 2
+DirectSoundWaveData_b2_dj_handy_d4::
+	.incbin "sound/direct_sound_samples/dj_handy_d4_22.bin"
+
+	.align 2
+DirectSoundWaveData_b2_dj_handy_d5::
+	.incbin "sound/direct_sound_samples/dj_handy_d5_22.bin"
+
+	.align 2
+DirectSoundWaveData_b2_dj_handy_d6::
+	.incbin "sound/direct_sound_samples/dj_handy_d6_22.bin"
 
 	.align 2
 DirectSoundWaveData_b2_unknown_kick_rs_leader::
@@ -1828,6 +1872,11 @@ DirectSoundWaveData_b2_drumloop_rs_leader2_l::
 	.align 2
 DirectSoundWaveData_b2_drumloop_rs_leader2_r::
 	.incbin "sound/direct_sound_samples/drumloop_rs_leader2_r.bin"
+
+@ drum loops have their sample rate reduced by (59.7275/60)x
+	.align 2
+DirectSoundWaveData_b2_drumloop_dp_leader::
+	.incbin "sound/direct_sound_samples/drumloop_dp_leader.bin"
 
 	.align 2
 DirectSoundWaveData_undertale_vanish::

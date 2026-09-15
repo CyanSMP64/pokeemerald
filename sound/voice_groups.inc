@@ -225,3 +225,6 @@
 .include "sound/voicegroups/voicegroup227.inc" @ SW vs johto gym leader
 .include "sound/voicegroups/voicegroup228.inc" @ SW vs johto champion
 .include "sound/voicegroups/voicegroup229.inc" @ SW vs hoenn gym leader
+.include "sound/voicegroups/voicegroup230.inc" @ SW vs hoenn champion
+.include "sound/voicegroups/voicegroup231.inc" @ SW vs sinnoh gym leader
+.include "sound/voicegroups/voicegroup232.inc" @ SW vs sinnoh champion

@@ -1285,7 +1285,7 @@ $(MID_SUBDIR)/se_dinkdonk.s: %.s: %.mid
 	$(MID) $< $@ -E -G128 -V127 -p5
 
 $(MID_SUBDIR)/mus_b2_vs_champion_hoenn.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V111 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G230 -V111 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_victory_pwt.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G192 -V127 -X -S -A -M
@@ -1447,10 +1447,10 @@ $(MID_SUBDIR)/mus_b2_vs_gym_leader_hoenn.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G229 -V086 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_gym_leader_sinnoh.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V127 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G231 -V127 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_champion_sinnoh.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V090 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G232 -V090 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_pwt_finals.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G192 -V090 -X -S -A -M
