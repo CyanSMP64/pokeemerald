@@ -9787,13 +9787,13 @@ static const u16 sAllBattleBGM[] =
     MUS_B2_VS_CHAMPION_HOENN,
     MUS_B2_VS_GYM_LEADER_SINNOH,
     MUS_B2_VS_CHAMPION_SINNOH,
-//    MUS_B2_VS_PWT_FINALS,
-//    MUS_B2_VS_BLACK_WHITE_KYUREM,
-//    MUS_B2_VS_PLASMA,
-//    MUS_B2_VS_COLRESS,
-//    MUS_B2_VS_GHETSIS,
-//    MUS_B2_VS_IRIS,
-//    MUS_B2_VS_HUGH,
+    MUS_B2_VS_PWT_FINALS,
+    MUS_B2_VS_BLACK_WHITE_KYUREM,
+    MUS_B2_VS_PLASMA,
+    MUS_B2_VS_COLRESS,
+    MUS_B2_VS_GHETSIS,
+    MUS_B2_VS_IRIS,
+    MUS_B2_VS_HUGH,
 };
 
 static const u16 sFinalBattleBGM[] =
@@ -9811,8 +9811,8 @@ static const u16 sFinalBattleBGM[] =
     MUS_B2_VS_CHAMPION_JOHTO,
     MUS_B2_VS_CHAMPION_HOENN,
     MUS_B2_VS_CHAMPION_SINNOH,
-//    MUS_B2_VS_PWT_FINALS,
-//    MUS_B2_VS_IRIS,
+    MUS_B2_VS_PWT_FINALS,
+    MUS_B2_VS_IRIS,
 };
 
 static const u16 sBossBattleBGM[] =
@@ -9856,9 +9856,9 @@ static const u16 sBossBattleBGM[] =
     MUS_B2_VS_GYM_LEADER_JOHTO,
     MUS_B2_VS_GYM_LEADER_HOENN,
     MUS_B2_VS_GYM_LEADER_SINNOH,
-//    MUS_B2_VS_BLACK_WHITE_KYUREM,
-//    MUS_B2_VS_COLRESS,
-//    MUS_B2_VS_GHETSIS,
+    MUS_B2_VS_BLACK_WHITE_KYUREM,
+    MUS_B2_VS_COLRESS,
+    MUS_B2_VS_GHETSIS,
 };
 
 static const u16 sTrainerBattleBGM[] =
@@ -9880,8 +9880,8 @@ static const u16 sTrainerBattleBGM[] =
     MUS_BW_VS_PLASMA,
     MUS_BW_VS_N,
     MUS_B2_VS_TRAINER,
-//    MUS_B2_VS_PLASMA,
-//    MUS_B2_VS_HUGH,
+    MUS_B2_VS_PLASMA,
+    MUS_B2_VS_HUGH,
 };
 
 static const u16 sWildBattleBGM[] =

@@ -411,6 +411,7 @@
 .set KeySplitTable_BWdrawbarorg_01, . - 10		@ -|-
 .set KeySplitTable_BWtimpani_01, . - 12		@ -|-
 .set KeySplitTable_DPhammondorg, . - 13		@ -|-
+.set KeySplitTable_60, . - 14		@ -|-
 .set KeySplitTable_62, . - 16		@ -|-
 .set KeySplitTable_BWtrumpet_01, . - 19		@ -|-
 .set KeySplitTable_BWstrings_01, . - 20		@ -|-
@@ -419,6 +420,7 @@
 .set KeySplitTable_BWfhorns_23, . - 23		@ -|-
 .set KeySplitTable_DPpizz, . - 25		@ -|-
 .set KeySplitTable_GStubbell, . - 25		@ -|-
+.set KeySplitTable_72, . - 26		@ -|-
 .set KeySplitTable_BWpizz_34, . - 28		@ -|-
 .set KeySplitTable_BWflute2_23, . - 29		@ -|-
 .set KeySplitTable_BWe4lead, . - 31		@ -|-
@@ -448,11 +450,11 @@
 	.byte 0,1,1,1,1,1,2,2,2,2,2,2
 	.byte 2,2,2,2,2,2,2,2,2,2,2,2
 
-.set KeySplitTable_BWchoir_123, . - 34		@ -|7|-
-.set KeySplitTable_GSoboe, . - 40		@ -|7|-
-.set KeySplitTable_BWstrings_123, . - 46		@ -|7|-
+.set KeySplitTable_BWchoir_123, . - 30		@ -|7|-
+.set KeySplitTable_GSoboe, . - 36		@ -|7|-
+.set KeySplitTable_BWstrings_123, . - 42		@ -|7|-
 	@     C # D # E F # G # A # B
-	.byte         0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0
 	.byte 0,0,0,0,0,0,0,0,0,0,0,0
 	.byte 0,0,0,0,0,0,0,0,0,0,1,1
 	.byte 1,1,1,1,1,2,2,2,2,2,2,2
@@ -500,6 +502,7 @@
 	.byte 2,2,2,2,2,2,2,2,2,2,2,2
 
 .set KeySplitTable_BWghetsistimpani, . + 3		@ -|12|-
+.set KeySplitTable_42_54, . + 1		@ -|12|-
 .set KeySplitTable_GSdrawbarorg, . - 12		@ -|12|-
 .set KeySplitTable_GSjazzorg, . - 12		@ -|12|-
 .set KeySplitTable_GSharp, . - 12		@ -|12|-
@@ -659,9 +662,9 @@
 	.byte 3,3,3,3,3,3,3,3,3,3,3,3
 	.byte 3,3,3,3,3,3,3,3
 
-.set KeySplitTable_42_54_68, . - 32		@ -|12|14|-
+.set KeySplitTable_42_54_68, . - 28		@ -|12|14|-
 	@     C # D # E F # G # A # B
-	.byte                 0,0,0,0
+	.byte         0,0,0,0,0,0,0,0
 	.byte 0,0,0,0,0,0,0,1,1,1,1,1
 	.byte 1,1,1,1,1,1,1,2,2,2,2,2
 	.byte 2,2,2,2,2,2,2,2,2,3,3,3
@@ -717,6 +720,15 @@
 	.byte 4,4,4,4,4,4,4,4,4,4,4,4
 	.byte 4,4,4,4
 
+.set KeySplitTable_35_46_58_70, . - 28		@ -|11|12|12|-
+	@     C # D # E F # G # A # B
+	.byte         0,0,0,0,0,0,0,0
+	.byte 1,1,1,1,1,1,1,1,1,1,1,2
+	.byte 2,2,2,2,2,2,2,2,2,2,2,3
+	.byte 3,3,3,3,3,3,3,3,3,3,3,4
+	.byte 4,4,4,4,4,4,4,4
+
+.set KeySplitTable_36_48_60_72, . - 17		@ -|12|12|12|-
 .set KeySplitTable_GSgrandpiano, . - 24		@ -|12|12|12|-
 .set KeySplitTable_48_60_72_84, . - 29		@ -|12|12|12|-
 	@     C # D # E F # G # A # B
@@ -727,6 +739,15 @@
 	.byte 3,3,3,3,3,3,3,3,4,4,4,4
 	.byte 4,4,4,4,4,4,4,4,4,4,4,4
 	.byte 4,4,4,4,4,4,4,4,4,4,4,4
+
+.set KeySplitTable_42_54_68_80, . - 32		@ -|12|14|12|-
+	@     C # D # E F # G # A # B
+	.byte                 0,0,0,0
+	.byte 0,0,0,0,0,0,0,1,1,1,1,1
+	.byte 1,1,1,1,1,1,1,2,2,2,2,2
+	.byte 2,2,2,2,2,2,2,2,2,3,3,3
+	.byte 3,3,3,3,3,3,3,3,3,4,4,4
+	.byte 4,4,4,4,4,4,4,4
 
 .set KeySplitTable_DPvibes, . - 44		@ -|12|12|12|12|-
 	@     C # D # E F # G # A # B

@@ -1288,7 +1288,7 @@ $(MID_SUBDIR)/mus_b2_vs_champion_hoenn.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G230 -V111 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_victory_pwt.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V127 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G240 -V127 -X -S -A -M
 
 $(MID_SUBDIR)/se_utvanish.s: %.s: %.mid
 	$(MID) $< $@ -E -G128 -V127 -p5
@@ -1318,7 +1318,7 @@ $(MID_SUBDIR)/mus_bw_vs_kyurem.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G215 -V091 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_black_white_kyurem.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V125 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G234 -V125 -X -S -A -M
 
 $(MID_SUBDIR)/mus_bw_vs_zekrom.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G214 -V091 -X -S -A -M
@@ -1453,22 +1453,22 @@ $(MID_SUBDIR)/mus_b2_vs_champion_sinnoh.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G232 -V090 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_pwt_finals.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V090 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G233 -V090 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_plasma.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V080 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G235 -V080 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_colress.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V125 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G236 -V125 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_ghetsis.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V090 -S -A -M
+	$(MID) $< $@ -E -R0 -G237 -V090 -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_iris.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V127 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G238 -V127 -X -S -A -M
 
 $(MID_SUBDIR)/mus_b2_vs_hugh.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G192 -V115 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G239 -V115 -X -S -A -M
 
 $(MID_SUBDIR)/mus_bw_vs_wild_15815.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G200 -V065 -X -S -A -M

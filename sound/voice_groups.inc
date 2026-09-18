@@ -228,3 +228,11 @@
 .include "sound/voicegroups/voicegroup230.inc" @ SW vs hoenn champion
 .include "sound/voicegroups/voicegroup231.inc" @ SW vs sinnoh gym leader
 .include "sound/voicegroups/voicegroup232.inc" @ SW vs sinnoh champion
+.include "sound/voicegroups/voicegroup233.inc" @ SW vs pwt finals
+.include "sound/voicegroups/voicegroup234.inc" @ SW vs black/white kyurem
+.include "sound/voicegroups/voicegroup235.inc" @ SW vs plasma
+.include "sound/voicegroups/voicegroup236.inc" @ SW vs colress
+.include "sound/voicegroups/voicegroup237.inc" @ SW vs ghetsis
+.include "sound/voicegroups/voicegroup238.inc" @ SW vs iris
+.include "sound/voicegroups/voicegroup239.inc" @ SW vs hugh
+.include "sound/voicegroups/voicegroup240.inc" @ SW victory pwt

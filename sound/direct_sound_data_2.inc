@@ -646,15 +646,16 @@ DirectSoundWaveData_hg_kfl_french_horn_ensemble_71::
 
 	.align 2
 DirectSoundWaveData_hg_kfl_trumpet_ensemble_60::
-	.incbin "sound/direct_sound_samples/wb/trumpet_section_c4_22.bin"
+	.incbin "sound/direct_sound_samples/wb/trumpet_section_c4_32.bin"
 	
 	.align 2
 DirectSoundWaveData_hg_kfl_trumpet_ensemble_69::
-	.incbin "sound/direct_sound_samples/wb/trumpet_section_a4_22.bin"
+	.incbin "sound/direct_sound_samples/wb/trumpet_section_a4_32.bin"
 	
 	.align 2
 DirectSoundWaveData_hg_kfl_trumpet_ensemble_79::
-	.incbin "sound/direct_sound_samples/wb/trumpet_section_g5_22.bin"
+DirectSoundWaveData_bw_atc_pet_sect_g5_32::
+	.incbin "sound/direct_sound_samples/wb/trumpet_section_g5_32.bin"
 	
 	.align 2
 DirectSoundWaveData_hg_plugsound_pro_jazz_double_bass_hard_36::
@@ -706,11 +707,11 @@ DirectSoundWaveData_hg_plugsound_pro_cello_sus_60::
 	
 	.align 2
 DirectSoundWaveData_hg_plugsound_pro_elastik_36::
-	.incbin "sound/direct_sound_samples/wb/synth_bass_c2_22.bin"
+	.incbin "sound/direct_sound_samples/wb/synth_bass_c2_32.bin"
 	
 	.align 2
 DirectSoundWaveData_hg_plugsound_pro_elastik_48::
-	.incbin "sound/direct_sound_samples/wb/synth_bass_c3_22.bin"
+	.incbin "sound/direct_sound_samples/wb/synth_bass_c3_32.bin"
 	
 	.align 2
 DirectSoundWaveData_hg_kfl_trombone_ensemble_43::
@@ -807,7 +808,11 @@ DirectSoundWaveData_hg_plugsound_pro_vibraphone1_60::
 	.align 2
 DirectSoundWaveData_hg_plugsound_pro_vibraphone1_72::
 	.incbin "sound/direct_sound_samples/wb/vibraphone_c5_22.bin"
-	
+
+	.align 2
+DirectSoundWaveData_hg_plugsound_pro_vibraphone1_84::
+	.incbin "sound/direct_sound_samples/wb/vibraphone_c6_22.bin"
+
 	.align 2
 DirectSoundWaveData_hg_kfl_glockenspiel_60::
 	.incbin "sound/direct_sound_samples/wb/glockenspiel_c4_22.bin"
@@ -1190,6 +1195,7 @@ DirectSoundWaveData_bw_sfx_zekrom_zap::
 
 	.align 2
 DirectSoundWaveData_bw_plugsound_pro_fend_slap1_pull_36::
+DirectSoundWaveData_b2_slap_bass_louder::
 	.incbin "sound/direct_sound_samples/wb/slapbass_c2_32.bin"
 
 	.align 2
@@ -1323,10 +1329,6 @@ DirectSoundWaveData_bw_atc_pet_sect_c4_32::
 	.align 2
 DirectSoundWaveData_bw_atc_pet_sect_a4_32::
 	.incbin "sound/direct_sound_samples/wb/atc_pet_sect_a4_32.bin"
-
-	.align 2
-DirectSoundWaveData_bw_atc_pet_sect_g5_32::
-	.incbin "sound/direct_sound_samples/wb/atc_pet_sect_g5_32.bin"
 
 	.align 2
 DirectSoundWaveData_bw_power_bass_16::
@@ -1603,6 +1605,14 @@ DirectSoundWaveData_bw_gee_sop_cs4_22::
 	.incbin "sound/direct_sound_samples/wb/gee_sop_cs4_22.bin"
 
 	.align 2
+DirectSoundWaveData_bw_ichiss_sop_c4_22::
+	.incbin "sound/direct_sound_samples/wb/ichiss_sop_c4_22.bin"
+
+	.align 2
+DirectSoundWaveData_bw_dora2_32::
+	.incbin "sound/direct_sound_samples/wb/dora2_32.bin"
+
+	.align 2
 DirectSoundWaveData_bw_dora_loop_22::
 	.incbin "sound/direct_sound_samples/wb/dora_loop_22.bin"
 
@@ -1743,10 +1753,6 @@ DirectSoundWaveData_b2_doublsaw_c5::
 	.incbin "sound/direct_sound_samples/doublsaw_c5_22.bin"
 
 	.align 2
-DirectSoundWaveData_b2_slap_bass_louder::
-	.incbin "sound/direct_sound_samples/b2_slap_bass_louder.bin"
-
-	.align 2
 DirectSoundWaveData_b2_bluescrunch_e2::
 	.incbin "sound/direct_sound_samples/bluescrunch_e2.bin"
 
@@ -1811,6 +1817,50 @@ DirectSoundWaveData_b2_dj_handy_d6::
 	.incbin "sound/direct_sound_samples/dj_handy_d6_22.bin"
 
 	.align 2
+DirectSoundWaveData_b2_gamelan_c2_22::
+@	.incbin "sound/direct_sound_samples/gamelan_c2_22.bin"
+
+	.align 2
+DirectSoundWaveData_b2_gamelan_g2_22::
+@	.incbin "sound/direct_sound_samples/gamelan_g2_22.bin"
+
+	.align 2
+DirectSoundWaveData_b2_gamelan_c3_22::
+@	.incbin "sound/direct_sound_samples/gamelan_c3_22.bin"
+
+	.align 2
+DirectSoundWaveData_b2_gamelan_g3_22::
+	.incbin "sound/direct_sound_samples/gamelan_g3_22.bin"
+
+	.align 2
+DirectSoundWaveData_b2_gamelan_c4_22::
+	.incbin "sound/direct_sound_samples/gamelan_c4_22.bin"
+
+	.align 2
+DirectSoundWaveData_b2_piano_f1::
+	.incbin "sound/direct_sound_samples/swan_piano_f1_22.bin"
+
+	.align 2
+DirectSoundWaveData_b2_piano_f2::
+	.incbin "sound/direct_sound_samples/swan_piano_f2_22.bin"
+
+	.align 2
+DirectSoundWaveData_b2_piano_f3::
+	.incbin "sound/direct_sound_samples/swan_piano_f3_22.bin"
+
+	.align 2
+DirectSoundWaveData_b2_piano_f4::
+	.incbin "sound/direct_sound_samples/swan_piano_f4_22.bin"
+
+	.align 2
+DirectSoundWaveData_b2_piano_f5::
+	.incbin "sound/direct_sound_samples/swan_piano_f5_22.bin"
+
+	.align 2
+DirectSoundWaveData_b2_unknown_sine_g5::
+	.incbin "sound/direct_sound_samples/b2_unknown_sine_g5.bin"
+
+	.align 2
 DirectSoundWaveData_b2_unknown_kick_rs_leader::
 	.incbin "sound/direct_sound_samples/b2_unknown_kick_rs_leader.bin"
 
@@ -1831,12 +1881,60 @@ DirectSoundWaveData_b2_addictive_drums_snare3::
 	.incbin "sound/direct_sound_samples/addictive_drums_snare3.bin"
 
 	.align 2
+DirectSoundWaveData_b2_addictive_drums_snare4::
+	.incbin "sound/direct_sound_samples/addictive_drums_snare4.bin"
+
+	.align 2
 DirectSoundWaveData_b2_addictive_drums_floortom::
 	.incbin "sound/direct_sound_samples/addictive_drums_floortom.bin"
 
 	.align 2
 DirectSoundWaveData_b2_addictive_drums_racktom::
 	.incbin "sound/direct_sound_samples/addictive_drums_racktom.bin"
+
+	.align 2
+DirectSoundWaveData_b2_unknown_vocal_plasma_1::
+	.incbin "sound/direct_sound_samples/b2_unknown_vocal_plasma_1.bin"
+
+	.align 2
+DirectSoundWaveData_b2_unknown_vocal_plasma_2::
+	.incbin "sound/direct_sound_samples/b2_unknown_vocal_plasma_2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_distorted_kick_plasma::
+	.incbin "sound/direct_sound_samples/b2_distorted_kick_plasma.bin"
+
+	.align 2
+DirectSoundWaveData_b2_ghetsis_unknown_drum::
+	.incbin "sound/direct_sound_samples/b2_ghetsis_unknown_drum.bin"
+
+	.align 2
+DirectSoundWaveData_b2_colress_hit::
+	.incbin "sound/direct_sound_samples/b2_colress_hit.bin"
+
+	.align 2
+DirectSoundWaveData_b2_colress_fx::
+	.incbin "sound/direct_sound_samples/b2_colress_fx.bin"
+
+	.align 2
+DirectSoundWaveData_b2_colress_voice1::
+	.incbin "sound/direct_sound_samples/b2_colress_voice1.bin"
+
+	.align 2
+DirectSoundWaveData_b2_colress_voice2::
+	.incbin "sound/direct_sound_samples/b2_colress_voice2.bin"
+
+	.align 2
+DirectSoundWaveData_b2_colress_voice3::
+	.incbin "sound/direct_sound_samples/b2_colress_voice3.bin"
+
+	.align 2
+DirectSoundWaveData_b2_colress_voice4::
+	.incbin "sound/direct_sound_samples/b2_colress_voice4.bin"
+
+	.align 2
+DirectSoundWaveData_b2_colress_voice5::
+	.incbin "sound/direct_sound_samples/b2_colress_voice5.bin"
 
 @ drum loops have their sample rate reduced by (59.7275/60)x
 	.align 2
@@ -1877,6 +1975,16 @@ DirectSoundWaveData_b2_drumloop_rs_leader2_r::
 	.align 2
 DirectSoundWaveData_b2_drumloop_dp_leader::
 	.incbin "sound/direct_sound_samples/drumloop_dp_leader.bin"
+
+@ drum loops have their sample rate reduced by (59.7275/60)x
+	.align 2
+DirectSoundWaveData_b2_drumloop_colress::
+	.incbin "sound/direct_sound_samples/drumloop_colress.bin"
+
+@ drum loops have their sample rate reduced by (59.7275/60)x
+	.align 2
+DirectSoundWaveData_b2_drumloop_iris::
+	.incbin "sound/direct_sound_samples/drumloop_iris.bin"
 
 	.align 2
 DirectSoundWaveData_undertale_vanish::
