@@ -1507,6 +1507,7 @@ DirectSoundWaveData_bw_unknown_suspended_cymbal_40::
 	.incbin "sound/direct_sound_samples/wb/crushroll_32.bin"
 
 @ drum loops have their sample rate reduced by (59.7275/60)x
+@ this specific drum loop also has its sample rate set (174/173)x
 	.align 2
 DirectSoundWaveData_bw_zg_total_drum_bass_160_leonora::
 	.incbin "sound/direct_sound_samples/wb/drum_loop_wcs_01_22.bin"
