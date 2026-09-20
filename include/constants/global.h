@@ -33,7 +33,7 @@
 #define NATDEX_VERSION_MINOR 2
 #define NATDEX_VERSION_PATCH 1
 // revision number: git describe --tags
-#define NATDEX_VERSION_BUILD 23
+#define NATDEX_VERSION_BUILD 24
 
 // party sizes
 #define PARTY_SIZE 6

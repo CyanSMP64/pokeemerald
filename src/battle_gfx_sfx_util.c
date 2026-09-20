@@ -22,7 +22,9 @@
 #include "data.h"
 #include "palette.h"
 #include "contest.h"
+#include "event_data.h"
 #include "constants/songs.h"
+#include "constants/flags.h"
 #include "constants/rgb.h"
 #include "constants/battle_palace.h"
 
@@ -359,7 +361,7 @@ void SpriteCB_TrainerSlideIn(struct Sprite *sprite)
 {
     if (!(gIntroSlideFlags & 1))
     {
-        sprite->x2 += sprite->sSpeedX * 2;
+        sprite->x2 += sprite->sSpeedX * (FlagGet(FLAG_DOUBLE_SPEED) ? 4 : 2);
         if (sprite->x2 == 0)
         {
             if (sprite->y2 != 0)

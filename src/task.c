@@ -7,28 +7,6 @@ struct Task gTasks[NUM_TASKS];
 static void InsertTask(u8 newTaskId);
 static u8 FindFirstActiveTask(void);
 
-extern void BattleIntroSlide2(u8);
-extern void BattleIntroSlide1(u8);
-extern void BattleIntroSlide3(u8);
-extern void BattleIntroSlideLink(u8);
-
-// SPEEDCHOICE
-bool8 IsTaskFuncInList(u8 taskId)
-{
-	TaskFunc func = gTasks[taskId].func;
-
-	if(func == BattleIntroSlide2)
-		return TRUE;
-	else if(func == BattleIntroSlide1)
-		return TRUE;
-	else if(func == BattleIntroSlide3)
-		return TRUE;
-	else if(func == BattleIntroSlideLink)
-		return TRUE;
-	else
-		return FALSE;
-}
-
 void ResetTasks(void)
 {
     u8 i;
@@ -138,14 +116,7 @@ void RunTasks(void)
     {
         do
         {
-            if(IsTaskFuncInList(taskId) == TRUE && (gMain.vblankCounter1 % 2 == 0))
-            {
-                gTasks[taskId].func(taskId);
-                gTasks[taskId].func(taskId);
-                gTasks[taskId].func(taskId);
-            }
-            else
-                gTasks[taskId].func(taskId);
+            gTasks[taskId].func(taskId);
             taskId = gTasks[taskId].next;
         } while (taskId != TAIL_SENTINEL);
     }
