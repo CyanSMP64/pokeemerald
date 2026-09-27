@@ -2,6 +2,7 @@
 #include "battle.h"
 #include "battle_anim.h"
 #include "battle_arena.h"
+#include "battle_main.h"
 #include "battle_pyramid.h"
 #include "battle_util.h"
 #include "pokemon.h"
@@ -147,6 +148,7 @@ void HandleAction_UseMove(void)
         else
             gBattleResults.lastUsedMoveOpponent = gCurrentMove;
     }
+    gBattleResultsMoveJustUpdated = TRUE;
 
     // choose target
     side = BATTLE_OPPOSITE(GetBattlerSide(gBattlerAttacker));
@@ -3883,8 +3885,7 @@ void ClearFuryCutterDestinyBondGrudge(u8 battlerId)
 
 void HandleAction_RunBattleScript(void) // identical to RunBattleScriptCommands
 {
-    if (gBattleControllerExecFlags == 0)
-        gBattleScriptingCommandsTable[*gBattlescriptCurrInstr]();
+    RunBattleScriptCommands();
 }
 
 u8 GetMoveTarget(u16 move, u8 setTarget)

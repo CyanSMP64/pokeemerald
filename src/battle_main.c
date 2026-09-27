@@ -53,6 +53,7 @@
 #include "window.h"
 #include "constants/abilities.h"
 #include "constants/battle_move_effects.h"
+#include "constants/battle_script_commands.h"
 #include "constants/battle_string_ids.h"
 #include "constants/flags.h"
 #include "constants/hold_effects.h"
@@ -119,6 +120,7 @@ static void HandleEndTurn_MonFled(void);
 static void HandleEndTurn_FinishBattle(void);
 static void SpriteCB_UnusedBattleInit(struct Sprite *sprite);
 static void SpriteCB_UnusedBattleInit_Main(struct Sprite *sprite);
+static bool8 ShouldBypassDoubleSpeedBattleScriptDelay(u8 cmdId);
 
 EWRAM_DATA u16 gBattle_BG0_X = 0;
 EWRAM_DATA u16 gBattle_BG0_Y = 0;
@@ -204,6 +206,7 @@ EWRAM_DATA struct SideTimer gSideTimers[NUM_BATTLE_SIDES] = {0};
 EWRAM_DATA u32 gStatuses3[MAX_BATTLERS_COUNT] = {0};
 EWRAM_DATA struct DisableStruct gDisableStructs[MAX_BATTLERS_COUNT] = {0};
 EWRAM_DATA u16 gPauseCounterBattle = 0;
+EWRAM_DATA bool8 gBattleScriptCommandDelay = FALSE;
 EWRAM_DATA u16 gPaydayMoney = 0;
 EWRAM_DATA u16 gRandomTurnNumber = 0;
 EWRAM_DATA u8 gBattleCommunication[BATTLE_COMMUNICATION_ENTRIES_COUNT] = {0};
@@ -240,6 +243,7 @@ EWRAM_DATA u8 gBattleMonForms[MAX_BATTLERS_COUNT] = {0};
 void (*gPreBattleCallback1)(void);
 void (*gBattleMainFunc)(void);
 struct BattleResults gBattleResults;
+EWRAM_DATA bool8 gBattleResultsMoveJustUpdated = FALSE;
 u8 gLeveledUpInBattle;
 void (*gBattlerControllerFuncs[MAX_BATTLERS_COUNT])(void);
 u8 gHealthboxSpriteIds[MAX_BATTLERS_COUNT];
@@ -3246,6 +3250,7 @@ static void BattleStartClearSetData(void)
         gBattleCommunication[i] = 0;
 
     gPauseCounterBattle = 0;
+    gBattleScriptCommandDelay = FALSE;
     gBattleMoveDamage = 0;
     gIntroSlideFlags = 0;
     gBattleScripting.animTurn = 0;
@@ -5398,6 +5403,21 @@ void RunBattleScriptCommands_PopCallbacksStack(void)
 
 void RunBattleScriptCommands(void)
 {
-    if (gBattleControllerExecFlags == 0)
-        gBattleScriptingCommandsTable[gBattlescriptCurrInstr[0]]();
+    u8 cmdId;
+
+    if (gBattleControllerExecFlags != 0)
+        return;
+
+    cmdId = gBattlescriptCurrInstr[0];
+
+    if (FlagGet(FLAG_DOUBLE_SPEED)
+     && gBattleScriptCommandDelay
+     && cmdId != 0xf3) // Cmd_trygivecaughtmonnick
+    {
+        gBattleScriptCommandDelay = FALSE;
+        return;
+    }
+
+    gBattleScriptingCommandsTable[cmdId]();
+    gBattleScriptCommandDelay = (FlagGet(FLAG_DOUBLE_SPEED) && cmdId != 0xf3); // Cmd_trygivecaughtmonnick
 }

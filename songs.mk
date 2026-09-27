@@ -1471,7 +1471,7 @@ $(MID_SUBDIR)/mus_b2_vs_hugh.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G239 -V115 -S -A -M
 
 $(MID_SUBDIR)/mus_bw_vs_wild_15815.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G200 -V065 -S -A -M
+	$(MID) $< $@ -E -R0 -G200 -V095 -S -A -M
 
 $(MID_SUBDIR)/mus_bw_vs_wild.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G201 -V094 -S -A -M

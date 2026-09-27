@@ -223,6 +223,10 @@ Route101_EventScript_BirchsBag::
 	setobjectxy OBJ_EVENT_ID_PLAYER, 6, 13
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
+	random 100		@ set fun value
+	copyvar VAR_FUN, VAR_RESULT
+	random 65535	@ set wild bgm
+	copyvar VAR_RANDOM_WILD_BGM, VAR_RESULT
 	special ChooseStarter
 	waitstate
 	special HealPlayerParty
@@ -242,10 +246,6 @@ Route101_EventScript_BirchsBag::
 	waitmessage
 	playfanfare MUS_LEVEL_UP
 	waitfanfare
-	random 100		@ set fun value
-	copyvar VAR_FUN, VAR_RESULT
-	random 65535	@ set wild bgm
-	copyvar VAR_RANDOM_WILD_BGM, VAR_RESULT
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_WhyNotGiveNicknameToMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, LittlerootTown_ProfessorBirchsLab_EventScript_NicknameStarter
 	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival
