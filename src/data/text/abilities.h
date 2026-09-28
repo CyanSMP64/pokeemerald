@@ -400,6 +400,7 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_FIRE_MANE] = _("Fire Mane"),
     [ABILITY_318] = _("318"),
     [ABILITY_SPICY_SPRAY] = _("Spicy Spray"),
+    [ABILITY_AURA_GUARD] = _("Aura Guard"),
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
@@ -724,4 +725,5 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_FIRE_MANE] = sPlaceholderDescription,
     [ABILITY_318] = sPlaceholderDescription,
     [ABILITY_SPICY_SPRAY] = sPlaceholderDescription,
+    [ABILITY_AURA_GUARD] = sPlaceholderDescription,
 };
