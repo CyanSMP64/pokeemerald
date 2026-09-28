@@ -148,7 +148,6 @@ void HandleAction_UseMove(void)
         else
             gBattleResults.lastUsedMoveOpponent = gCurrentMove;
     }
-    gBattleResultsMoveJustUpdated = TRUE;
 
     // choose target
     side = BATTLE_OPPOSITE(GetBattlerSide(gBattlerAttacker));

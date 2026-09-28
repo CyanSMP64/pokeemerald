@@ -131,7 +131,6 @@ void AgbMain()
     for (;;)
     {
         ReadKeys();
-        gBattleResultsMoveJustUpdated = FALSE;
 
         if (gSoftResetDisabled == FALSE
          && JOY_HELD_RAW(A_BUTTON)

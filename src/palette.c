@@ -85,9 +85,6 @@ bool8 IsDoubleSpeedBlockedContext(void)
         return TRUE;
     if (IsRayquazaSceneActive())
         return TRUE;
-    // potential tracker failsafe
-    if (gBattleResultsMoveJustUpdated)
-        return TRUE;
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP3)
      && gSaveBlock1Ptr->location.mapNum == MAP_NUM(CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP3))
         return TRUE;
