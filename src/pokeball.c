@@ -729,6 +729,11 @@ static void Task_PlayCryWhenReleasedFromBall(u8 taskId)
     case 31:
         if (!IsCryPlayingOrClearCrySongs())
         {
+            if (wantedCry == 2 && gBattleSpritesDataPtr->animationData->introAnimActive)
+            {
+                gTasks[taskId].tCryTaskState = 32;
+                break;
+            }
             StopCryAndClearCrySongs();
             gTasks[taskId].tCryTaskFrames = 3;
             gTasks[taskId].tCryTaskState++;

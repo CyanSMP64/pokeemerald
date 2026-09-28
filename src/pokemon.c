@@ -9862,8 +9862,8 @@ static const u16 sBossBattleBGM[] =
 
 static const u16 sTrainerBattleBGM[] =
 {
-    MUS_VS_AQUA_MAGMA,
     MUS_VS_TRAINER,
+    MUS_VS_AQUA_MAGMA,
     MUS_VS_RIVAL,
     MUS_RG_VS_TRAINER,
     MUS_DP_VS_TRAINER,
