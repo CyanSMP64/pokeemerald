@@ -244,6 +244,9 @@ static void MainMenu_FormatSavegamePokedex(void);
 static void MainMenu_FormatSavegameTime(void);
 static void MainMenu_FormatSavegameBadges(void);
 static void NewGameBirchSpeech_CreateDialogueWindowBorder(u8, u8, u8, u8, u8, u8);
+static u16 MainMenu_CalculateChecksum(const void *data, u16 size);
+static bool8 MainMenu_IsVersionHigher(const struct SaveSector *candidate, const struct SaveSector *currentBest);
+static bool8 MainMenu_LoadHighestVersionSector(void);
 
 // .rodata
 
@@ -606,6 +609,64 @@ static u32 InitMainMenu(bool8 returningFromOptionsMenu)
 
 #define tArrowTaskIsScrolled data[15]   // For scroll indicator arrow task
 
+static u16 MainMenu_CalculateChecksum(const void *data, u16 size)
+{
+    u16 i;
+    u32 checksum = 0;
+    const u8 *bytes = data;
+
+    for (i = 0; i < (size / 4); i++)
+    {
+        checksum += *((const u32 *)bytes);
+        bytes += sizeof(u32);
+    }
+
+    return ((checksum >> 16) + checksum);
+}
+
+static bool8 MainMenu_IsVersionHigher(const struct SaveSector *candidate, const struct SaveSector *currentBest)
+{
+    if (candidate->saveVersionMajor != currentBest->saveVersionMajor)
+        return candidate->saveVersionMajor > currentBest->saveVersionMajor;
+    if (candidate->saveVersionMinor != currentBest->saveVersionMinor)
+        return candidate->saveVersionMinor > currentBest->saveVersionMinor;
+    if (candidate->saveVersionPatch != currentBest->saveVersionPatch)
+        return candidate->saveVersionPatch > currentBest->saveVersionPatch;
+    return candidate->saveVersionBuild > currentBest->saveVersionBuild;
+}
+
+static bool8 MainMenu_LoadHighestVersionSector(void)
+{
+    u16 i;
+    u16 checksum;
+    bool8 found = FALSE;
+    struct SaveSector bestSector;
+
+    for (i = 0; i < NUM_SECTORS_PER_SLOT * NUM_SAVE_SLOTS; i++)
+    {
+        ReadFlash(i, 0, (u8 *)gReadWriteSector, SECTOR_SIZE);
+        if (gReadWriteSector->signature != SECTOR_SIGNATURE)
+            continue;
+        if (gReadWriteSector->id >= NUM_SECTORS_PER_SLOT)
+            continue;
+
+        checksum = MainMenu_CalculateChecksum(gReadWriteSector->data, gRamSaveSectorLocations[gReadWriteSector->id].size);
+        if (gReadWriteSector->checksum != checksum)
+            continue;
+
+        if (!found || MainMenu_IsVersionHigher(gReadWriteSector, &bestSector))
+        {
+            bestSector = *gReadWriteSector;
+            found = TRUE;
+        }
+    }
+
+    if (found)
+        *gReadWriteSector = bestSector;
+
+    return found;
+}
+
 static void Task_MainMenuCheckSaveFile(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
@@ -638,10 +699,11 @@ static void Task_MainMenuCheckSaveFile(u8 taskId)
             case SAVE_STATUS_VERSION_MISMATCH:
                 {
                     u8 *ptr = gStringVar1;
-                    // Read the first sector to get version info
                     if (gReadWriteSector == NULL)
                         gReadWriteSector = &gSaveDataBuffer;
-                    ReadFlash(0, 0, (u8 *)gReadWriteSector, SECTOR_SIZE);
+                    // use the highest version found in either save slot
+                    if (!MainMenu_LoadHighestVersionSector())
+                        ReadFlash(0, 0, (u8 *)gReadWriteSector, SECTOR_SIZE);
                     *ptr++ = CHAR_v;
                     ptr = ConvertIntToDecimalStringN(ptr, gReadWriteSector->saveVersionMajor, STR_CONV_MODE_LEFT_ALIGN, 1);
                     *ptr++ = CHAR_PERIOD;
