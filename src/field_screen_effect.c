@@ -843,27 +843,39 @@ static void SetOrbFlashScanlineEffectWindowBoundaries(u16 *dest, s32 centerX, s3
 #define tDestFlashRadius     data[4]
 #define tFlashRadiusDelta    data[5]
 #define tClearScanlineEffect data[6]
+#define tFlashBuffersUpdated data[7]
 
 static void UpdateFlashLevelEffect(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
+    if (tState < 3)
+        SetFlashScanlineEffectWindowBoundaries(gScanlineEffectRegBuffers[gScanlineEffect.srcBuffer], tFlashCenterX, tFlashCenterY, tCurFlashRadius);
+
     switch (tState)
     {
     case 0:
-        SetFlashScanlineEffectWindowBoundaries(gScanlineEffectRegBuffers[gScanlineEffect.srcBuffer], tFlashCenterX, tFlashCenterY, tCurFlashRadius);
         tState = 1;
         break;
     case 1:
-        SetFlashScanlineEffectWindowBoundaries(gScanlineEffectRegBuffers[gScanlineEffect.srcBuffer], tFlashCenterX, tFlashCenterY, tCurFlashRadius);
         tState = 0;
         tCurFlashRadius += tFlashRadiusDelta;
-        if (tCurFlashRadius > tDestFlashRadius)
+        if ((tFlashRadiusDelta > 0 && tCurFlashRadius > tDestFlashRadius)
+         || (tFlashRadiusDelta < 0 && tCurFlashRadius < tDestFlashRadius))
+        {
+            tCurFlashRadius = tDestFlashRadius;
+            tFlashBuffersUpdated = 0;
+            tState = 2;
+        }
+        break;
+    case 2:
+        tFlashBuffersUpdated |= 1 << gScanlineEffect.srcBuffer;
+        if (tFlashBuffersUpdated == 3)
         {
             if (tClearScanlineEffect == 1)
             {
                 ScanlineEffect_Stop();
-                tState = 2;
+                tState = 3;
             }
             else
             {
@@ -871,7 +883,7 @@ static void UpdateFlashLevelEffect(u8 taskId)
             }
         }
         break;
-    case 2:
+    case 3:
         ScanlineEffect_Clear();
         DestroyTask(taskId);
         break;
@@ -969,6 +981,7 @@ static u8 StartUpdateOrbFlashEffect(s32 centerX, s32 centerY, s32 initialFlashRa
 #undef tDestFlashRadius
 #undef tFlashRadiusDelta
 #undef tClearScanlineEffect
+#undef tFlashBuffersUpdated
 
 // A higher flash level is a smaller flash radius (more darkness). 0 is full brightness
 void AnimateFlash(u8 newFlashLevel)
