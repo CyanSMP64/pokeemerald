@@ -1307,6 +1307,11 @@ static void OpenPartyMenuToChooseMon(void)
     {
         u8 caseId;
 
+        if (IsCryPlayingOrClearCrySongs())
+        {
+            StopCryAndClearCrySongs();
+            m4aMPlayVolumeControl(&gMPlayInfo_BGM, TRACKS_ALL, 0x100);
+        }
         gBattlerControllerFuncs[gActiveBattler] = WaitForMonSelection;
         caseId = gTasks[gBattleControllerData[gActiveBattler]].data[0];
         DestroyTask(gBattleControllerData[gActiveBattler]);
@@ -1335,6 +1340,11 @@ static void OpenBagAndChooseItem(void)
 {
     if (!gPaletteFade.active)
     {
+        if (IsCryPlayingOrClearCrySongs())
+        {
+            StopCryAndClearCrySongs();
+            m4aMPlayVolumeControl(&gMPlayInfo_BGM, TRACKS_ALL, 0x100);
+        }
         gBattlerControllerFuncs[gActiveBattler] = CompleteWhenChoseItem;
         ReshowBattleScreenDummy();
         FreeAllWindowBuffers();
