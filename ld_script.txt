@@ -87,11 +87,6 @@ SECTIONS {
         src/minigame_countdown.o(.text);
         src/rtc.o(.text);
         src/battle_gfx_sfx_util.o(.text);
-    } =0
-
-    .text_2 0x08032654 :
-    ALIGN(4)
-    {
         src/battle_controllers.o(.text);
         src/main_menu.o(.text);
         src/decompress.o(.text);
@@ -102,11 +97,6 @@ SECTIONS {
         src/battle_controller_link_opponent.o(.text);
         src/overworld.o(.text);
         src/digit_obj_util.o(.text);
-    } =0
-
-    .text_4 0x08067a74 :
-    ALIGN(4)
-    {
         src/pokemon.o(.text);
         src/battle_bg.o(.text);
         src/berry_powder.o(.text);
@@ -1323,10 +1313,9 @@ SECTIONS {
         sound/songs/midi/ph_nurse_solo.o(.rodata);
     } =0
 
-    new_sound 0x08fe0000 :
+    new_sound :
     ALIGN(4)
     {
-        data/dummy_data.o(.rodata);
         data/sound_data_2.o(.rodata);
         data/sound_data_3.o(.rodata);
     } =0

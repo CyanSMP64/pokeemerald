@@ -19,6 +19,10 @@ static EWRAM_DATA u8 sUnused = 0; // Debug? Never read
 EWRAM_DATA struct UnusedControllerStruct gUnusedControllerStruct = {}; // Debug? Unused code that writes to it, never read
 EWRAM_DATA u8 sBattleBuffersTransferData[0x100] = {};
 
+// Exported so inigen can write the build-specific ROM offsets to the Randomizer INI.
+const u16 gFirstBattleSpecies = SPECIES_ZIGZAGOON;
+const u8 gFirstBattleLevel = 2;
+
 static void CreateTasksForSendRecvLinkBuffers(void);
 static void InitLinkBtlControllers(void);
 static void InitSinglePlayerBtlControllers(void);
@@ -62,7 +66,10 @@ void SetUpBattleVarsAndBirchZigzagoon(void)
     if (gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE)
     {
         ZeroEnemyPartyMons();
-        CreateMon(&gEnemyParty[0], SPECIES_ZIGZAGOON, 2, USE_RANDOM_IVS, 0, 0, OT_ID_PLAYER_ID, 0);
+        // Keep these as ROM reads; agbcc otherwise folds the const values into immediates.
+        CreateMon(&gEnemyParty[0], *(volatile const u16 *)&gFirstBattleSpecies,
+                  *(volatile const u8 *)&gFirstBattleLevel,
+                  USE_RANDOM_IVS, 0, 0, OT_ID_PLAYER_ID, 0);
         i = 0;
         SetMonData(&gEnemyParty[0], MON_DATA_HELD_ITEM, &i);
     }
