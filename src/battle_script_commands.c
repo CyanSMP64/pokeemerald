@@ -9863,6 +9863,7 @@ static void Cmd_trygetintimidatetarget(void)
     u8 side;
 
     gBattleScripting.battler = gBattleStruct->intimidateBattler;
+    gBattlerAbility = gBattleScripting.battler;
     side = GetBattlerSide(gBattleScripting.battler);
 
     PREPARE_ABILITY_BUFFER(gBattleTextBuff1, gBattleMons[gBattleScripting.battler].ability)
