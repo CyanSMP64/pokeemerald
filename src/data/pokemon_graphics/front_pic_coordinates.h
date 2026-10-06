@@ -305,7 +305,7 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_LUDICOLO]                     = { .size = MON_COORDS_SIZE(56, 64), .y_offset =  0 },
     [SPECIES_SEEDOT]                       = { .size = MON_COORDS_SIZE(32, 40), .y_offset = 12 },
     [SPECIES_NUZLEAF]                      = { .size = MON_COORDS_SIZE(40, 56), .y_offset =  7 },
-    [SPECIES_SHIFTRY]                      = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  7 },
+    [SPECIES_SHIFTRY]                      = { .size = MON_COORDS_SIZE(64, 64), .y_offset =  0 },
     [SPECIES_NINCADA]                      = { .size = MON_COORDS_SIZE(56, 32), .y_offset = 16 },
     [SPECIES_NINJASK]                      = { .size = MON_COORDS_SIZE(64, 48), .y_offset = 11 },
     [SPECIES_SHEDINJA]                     = { .size = MON_COORDS_SIZE(48, 48), .y_offset = 10 },
