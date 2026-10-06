@@ -168,6 +168,18 @@ const struct SpriteTemplate gNightmareDevilSpriteTemplate =
     .callback = AnimGhostStatusSprite,
 };
 
+//moonblast
+const struct SpriteTemplate gMoonblastSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_FLASH_CANNON_BALL,
+    .paletteTag = ANIM_TAG_FLASH_CANNON_BALL,
+    .oam = &gOamData_AffineNormal_ObjNormal_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = sAffineAnims_ShadowBall,
+    .callback = AnimShadowBall
+};
+
 static const union AnimCmd sAnim_GrudgeFlame[] =
 {
     ANIMCMD_FRAME(0, 4),
