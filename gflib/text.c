@@ -1052,7 +1052,7 @@ static u16 RenderText(struct TextPrinter *textPrinter)
 				repeats = 3;
 				break;
 			case OPTIONS_TEXT_SPEED_FAST:
-				repeats = 255;
+				repeats = 100;
 				break;
 		}
 		
