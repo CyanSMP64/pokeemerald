@@ -10,6 +10,7 @@
 #include "berry_blender.h"
 #include "hall_of_fame.h"
 #include "rayquaza_scene.h"
+#include "cable_car.h"
 #include "event_data.h"
 #include "main.h"
 #include "battle.h"
@@ -84,6 +85,8 @@ bool8 IsDoubleSpeedBlockedContext(void)
     if (IsHallOfFameScreenActive())
         return TRUE;
     if (IsRayquazaSceneActive())
+        return TRUE;
+    if (IsCableCarSceneActive())
         return TRUE;
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP3)
      && gSaveBlock1Ptr->location.mapNum == MAP_NUM(CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP3))

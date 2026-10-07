@@ -1059,3 +1059,9 @@ static void InitGroundTilemapData(bool8 goingDown)
     sCableCar->groundTimer = 0;
 }
 
+bool8 IsCableCarSceneActive(void)
+{
+    return gMain.callback2 == CB2_LoadCableCar
+        || gMain.callback2 == CB2_CableCar
+        || gMain.callback2 == CB2_EndCableCar;
+}
