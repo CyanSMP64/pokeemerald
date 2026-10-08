@@ -1,6 +1,7 @@
 #include <string.h>
 #include "global.h"
 #include "event_data.h"
+#include "palette.h"
 #include "constants/flags.h"
 #include "gba/m4a_internal.h"
 
@@ -167,8 +168,8 @@ void MPlayFadeOut(struct MusicPlayerInfo *mplayInfo, u16 speed)
     if (mplayInfo->ident == ID_NUMBER)
     {
         mplayInfo->ident++;
-        mplayInfo->fadeOC = (speed + (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 1 : 0)) / (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1);
-        mplayInfo->fadeOI = (speed + (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 1 : 0)) / (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1);
+        mplayInfo->fadeOC = (speed + (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 1 : 0)) / ((FlagGet(FLAG_DOUBLE_SPEED) == TRUE && !IsDoubleSpeedBlockedContext()) ? 2 : 1);
+        mplayInfo->fadeOI = (speed + (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 1 : 0)) / ((FlagGet(FLAG_DOUBLE_SPEED) == TRUE && !IsDoubleSpeedBlockedContext()) ? 2 : 1);
         mplayInfo->fadeOV = (64 << FADE_VOL_SHIFT);
         mplayInfo->ident = ID_NUMBER;
     }
@@ -316,8 +317,8 @@ void m4aMPlayFadeOutTemporarily(struct MusicPlayerInfo *mplayInfo, u16 speed)
     if (mplayInfo->ident == ID_NUMBER)
     {
         mplayInfo->ident++;
-        mplayInfo->fadeOC = (speed + (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 1 : 0)) / (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1);
-        mplayInfo->fadeOI = (speed + (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 1 : 0)) / (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1);
+        mplayInfo->fadeOC = (speed + (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 1 : 0)) / ((FlagGet(FLAG_DOUBLE_SPEED) == TRUE && !IsDoubleSpeedBlockedContext()) ? 2 : 1);
+        mplayInfo->fadeOI = (speed + (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 1 : 0)) / ((FlagGet(FLAG_DOUBLE_SPEED) == TRUE && !IsDoubleSpeedBlockedContext()) ? 2 : 1);
         mplayInfo->fadeOV = (64 << FADE_VOL_SHIFT) | TEMPORARY_FADE;
         mplayInfo->ident = ID_NUMBER;
     }
@@ -328,8 +329,8 @@ void m4aMPlayFadeIn(struct MusicPlayerInfo *mplayInfo, u16 speed)
     if (mplayInfo->ident == ID_NUMBER)
     {
         mplayInfo->ident++;
-        mplayInfo->fadeOC = (speed + (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 1 : 0)) / (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1);
-        mplayInfo->fadeOI = (speed + (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 1 : 0)) / (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 2 : 1);
+        mplayInfo->fadeOC = (speed + (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 1 : 0)) / ((FlagGet(FLAG_DOUBLE_SPEED) == TRUE && !IsDoubleSpeedBlockedContext()) ? 2 : 1);
+        mplayInfo->fadeOI = (speed + (FlagGet(FLAG_DOUBLE_SPEED) == TRUE ? 1 : 0)) / ((FlagGet(FLAG_DOUBLE_SPEED) == TRUE && !IsDoubleSpeedBlockedContext()) ? 2 : 1);
         mplayInfo->fadeOV = (0 << FADE_VOL_SHIFT) | FADE_IN;
         mplayInfo->status &= ~MUSICPLAYER_STATUS_PAUSE;
         mplayInfo->ident = ID_NUMBER;
