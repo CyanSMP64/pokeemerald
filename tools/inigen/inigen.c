@@ -49,6 +49,23 @@ struct StaticPokemon {
 
 static csh sCapstone;
 
+static uint32_t CalculateCrc32(FILE *file)
+{
+    uint32_t crc = 0xFFFFFFFF;
+    int byte;
+
+    rewind(file);
+    while ((byte = fgetc(file)) != EOF) {
+        crc ^= (uint8_t)byte;
+        for (int bit = 0; bit < 8; bit++)
+            crc = (crc >> 1) ^ ((crc & 1) ? 0xEDB88320 : 0);
+    }
+    if (ferror(file))
+        FATAL_ERROR("failed reading ROM for CRC32\n");
+
+    return crc ^ 0xFFFFFFFF;
+}
+
 /*
  * ---------------------------------------------------------
  * Data
@@ -485,6 +502,7 @@ int main(int argc, char ** argv)
     const char * romCode = "BPEE";
     FILE * elfFile = NULL;
     FILE * outFile = NULL;
+    FILE * romFile = NULL;
 
     // Argument parser
     for (int i = 1; i < argc; i++) {
@@ -501,6 +519,15 @@ int main(int argc, char ** argv)
                 FATAL_ERROR("missing argument to --code\n");
             }
             romCode = argv[i];
+        } else if (strcmp(arg, "--rom") == 0) {
+            i++;
+            if (i == argc) {
+                FATAL_ERROR("missing argument to --rom\n");
+            }
+            romFile = fopen(argv[i], "rb");
+            if (romFile == NULL) {
+                FATAL_ERROR("unable to open ROM \"%s\" for reading\n", argv[i]);
+            }
         } else if (arg[0] == '-') {
             FATAL_ERROR("unrecognized option: \"%s\"\n", arg);
         } else if (elfFile == NULL) {
@@ -514,12 +541,12 @@ int main(int argc, char ** argv)
                 FATAL_ERROR("unable to open file \"%s\" for writing\n", arg);
             }
         } else {
-            FATAL_ERROR("usage: %s ELF OUTPUT [--name NAME] [--code CODE]\n", argv[0]);
+            FATAL_ERROR("usage: %s ELF OUTPUT --rom ROM [--name NAME] [--code CODE]\n", argv[0]);
         }
     }
 
-    if (outFile == NULL) {
-        FATAL_ERROR("usage: %s ELF OUTPUT [--name NAME] [--code CODE]\n", argv[0]);
+    if (outFile == NULL || romFile == NULL) {
+        FATAL_ERROR("usage: %s ELF OUTPUT --rom ROM [--name NAME] [--code CODE]\n", argv[0]);
     }
 
     // Load the ELF metadata
@@ -710,11 +737,12 @@ int main(int argc, char ** argv)
     config_sym("HiddenItemSparkleFlagScript", "EventScript_SetHiddenItemSparkleFlag");
     config_sym("ModernExpFlagScript", "EventScript_SetModernExpFlag");
     config_sym("EvoEveryLevelFlagScript", "EventScript_SetEvoEveryLevelFlag");
-    print("CRC32=1F1C08FB\n"); // CRC32 of an official Emerald ROM. Unless you change it the rando will tell you that it's unofficial, but it doesn't matter,
+    print("CRC32=%08X\n", CalculateCrc32(romFile));
 
     DestroyResources();
     fclose(outFile);
     fclose(elfFile);
+    fclose(romFile);
     return 0;
 }
 

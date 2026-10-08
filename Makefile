@@ -439,7 +439,7 @@ libagbsyscall:
 	@$(MAKE) -C libagbsyscall TOOLCHAIN=$(TOOLCHAIN) MODERN=$(MODERN)
 
 $(INI): $(ROM)
-	$(INIGEN) $(ELF) $@ --name "Emerald (U)" --code $(GAME_CODE)
+	$(INIGEN) $(ELF) $@ --rom $(ROM) --name "Emerald (U)" --code $(GAME_CODE)
 
 ###################
 ### Symbol file ###
