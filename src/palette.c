@@ -14,6 +14,7 @@
 #include "event_data.h"
 #include "main.h"
 #include "battle.h"
+#include "pokenav.h"
 #include "constants/maps.h"
 #include "constants/rgb.h"
 #include "constants/flags.h"
@@ -72,21 +73,15 @@ extern bool8 IsBattleIntroSlideTaskActive(void);
 
 bool8 IsDoubleSpeedBlockedContext(void)
 {
-    if (IsOpeningMovieOrIntroActive())
-        return TRUE;
-    if (IsBattleIntroSlideTaskActive())
-        return TRUE;
-    if (IsTitleScreenActive())
-        return TRUE;
-    if (IsEndCreditsActive())
-        return TRUE;
-    if (IsBerryBlenderActive())
-        return TRUE;
-    if (IsHallOfFameScreenActive())
-        return TRUE;
-    if (IsRayquazaSceneActive())
-        return TRUE;
-    if (IsCableCarSceneActive())
+    if (IsOpeningMovieOrIntroActive()
+     || IsBattleIntroSlideTaskActive()
+     || IsTitleScreenActive()
+     || IsEndCreditsActive()
+     || IsBerryBlenderActive()
+     || IsHallOfFameScreenActive()
+     || IsRayquazaSceneActive()
+     || IsCableCarSceneActive()
+     || IsPokenavRegionMapActive())
         return TRUE;
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP3)
      && gSaveBlock1Ptr->location.mapNum == MAP_NUM(CAVE_OF_ORIGIN_UNUSED_RUBY_SAPPHIRE_MAP3))

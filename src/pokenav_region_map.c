@@ -22,6 +22,8 @@
 
 #define NUM_CITY_MAPS 22
 
+static bool8 sHoennMapOpeningState;
+
 struct Pokenav_RegionMapMenu
 {
     u8 unused[12];
@@ -250,6 +252,7 @@ bool32 OpenPokenavRegionMap(void)
 
     state->loopTaskId = CreateLoopedTask(LoopedTask_OpenRegionMap, 1);
     state->isTaskActiveCB = GetCurrentLoopedTaskActive;
+    sHoennMapOpeningState = TRUE;
     return TRUE;
 }
 
@@ -258,6 +261,7 @@ void CreateRegionMapLoopedTask(s32 index)
     struct Pokenav_RegionMapGfx *state = GetSubstructPtr(POKENAV_SUBSTRUCT_REGION_MAP_ZOOM);
     state->loopTaskId = CreateLoopedTask(sRegionMapLoopTaskFuncs[index], 1);
     state->isTaskActiveCB = GetCurrentLoopedTaskActive;
+    sHoennMapOpeningState = FALSE;
 }
 
 bool32 IsRegionMapLoopedTaskActive(void)
@@ -739,4 +743,9 @@ static void SetCityZoomTextInvisibility(bool32 invisible)
     struct Pokenav_RegionMapGfx *state = GetSubstructPtr(POKENAV_SUBSTRUCT_REGION_MAP_ZOOM);
     for (i = 0; i < (int)ARRAY_COUNT(state->cityZoomTextSprites); i++)
         state->cityZoomTextSprites[i]->invisible = invisible;
+}
+
+bool8 IsPokenavRegionMapActive(void)
+{
+    return sHoennMapOpeningState;
 }
