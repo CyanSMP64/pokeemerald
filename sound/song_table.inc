@@ -611,6 +611,13 @@ gSongTable::
 	song ph_nurse_blend, 2, 64, 1024
 	song ph_nurse_held, 2, 64, 1024
 	song ph_nurse_solo, 2, 64, 1024
+	song mus_colo_vs_first, 0, 64, 1024
+	song mus_colo_vs_cipher_admin, 0, 64, 1024
+	song mus_colo_vs_final, 0, 64, 1024
+	song mus_colo_vs_normal, 0, 64, 1024
+	song mus_colo_vs_cipher_peon, 0, 64, 1024
+	song mus_colo_vs_miror_b, 0, 64, 1024
+	song mus_colo_vs_semifinal, 0, 64, 1024
 
 	.align 2
 dummy_song_header:

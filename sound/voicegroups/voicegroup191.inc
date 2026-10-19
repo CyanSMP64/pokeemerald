@@ -15,7 +15,7 @@ voicegroup191::
 	voice_keysplit voicegroup_DPmarimba, KeySplitTable_DPmarimba
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroup_DPtubbell, KeySplitTable_DPtubbell
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_keysplit voicegroup_DPmidipiano, KeySplitTable_36_52_67
 	voice_keysplit_all voicegroup_DPdancekit - 0xc * 36
 	voice_keysplit voicegroup_DProtaryorg, KeySplitTable_DProtaryorg
 	voice_keysplit voicegroup_DPhammondorg, KeySplitTable_DPhammondorg
@@ -254,6 +254,12 @@ voicegroup_DPtubbell::
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sd90_tubular_bell2_60, A(127), D(80), S(0), R(110)
 	voice_directsound 72, 0, DirectSoundWaveData_dp_sd90_tubular_bell2_72, A(127), D(80), S(0), R(110)
 	voice_directsound 84, 0, DirectSoundWaveData_dp_sd90_tubular_bell2_84, A(127), D(80), S(0), R(110)
+
+voicegroup_DPmidipiano::
+	voice_directsound 36, 0, DirectSoundWaveData_dp_midipi_c2_16, A(127), D(75), S(1), R(110)
+	voice_directsound 48, 0, DirectSoundWaveData_dp_midipi_c3_16, A(127), D(75), S(1), R(116)
+	voice_directsound 60, 0, DirectSoundWaveData_dp_midipi_c4_16, A(127), D(80), S(1), R(116)
+	voice_directsound 72, 0, DirectSoundWaveData_dp_midipi_c5_16, A(127), D(85), S(1), R(116)
 
 voicegroup_DPdancekit::
 	voice_directsound 60, 64, DirectSoundWaveData_dp_qy70_dance_kick, A(127), D(127), S(127), R(120)

@@ -236,3 +236,11 @@
 .include "sound/voicegroups/voicegroup238.inc" @ SW vs iris
 .include "sound/voicegroups/voicegroup239.inc" @ SW vs hugh
 .include "sound/voicegroups/voicegroup240.inc" @ SW victory pwt
+
+.include "sound/voicegroups/voicegroup241.inc" @ COLO first battle
+.include "sound/voicegroups/voicegroup242.inc" @ COLO cipher admin battle
+.include "sound/voicegroups/voicegroup243.inc" @ COLO final battle
+.include "sound/voicegroups/voicegroup244.inc" @ COLO normal battle
+.include "sound/voicegroups/voicegroup245.inc" @ COLO cipher peon battle
+.include "sound/voicegroups/voicegroup246.inc" @ COLO miror b battle
+.include "sound/voicegroups/voicegroup247.inc" @ COLO semifinal battle

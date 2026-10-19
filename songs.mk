@@ -1496,3 +1496,24 @@ $(MID_SUBDIR)/mus_b2_vs_hugh.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_b2_victory_pwt.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G240 -V114 -X -S -A -M     # original volume: 127
+
+$(MID_SUBDIR)/mus_colo_vs_first.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G241 -V076 -S
+
+$(MID_SUBDIR)/mus_colo_vs_cipher_admin.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G242 -V064 -S
+
+$(MID_SUBDIR)/mus_colo_vs_final.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G243 -V064 -S
+
+$(MID_SUBDIR)/mus_colo_vs_normal.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G244 -V064 -S
+
+$(MID_SUBDIR)/mus_colo_vs_cipher_peon.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G245 -V064 -S
+
+$(MID_SUBDIR)/mus_colo_vs_miror_b.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G246 -V064 -S
+
+$(MID_SUBDIR)/mus_colo_vs_semifinal.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G247 -V064 -S

@@ -1401,6 +1401,13 @@ SECTIONS {
         sound/songs/midi/mus_bw_vs_n_final.o(.rodata);
         sound/songs/midi/mus_bw_vs_ghetsis.o(.rodata);
         sound/songs/midi/mus_bw_vs_final_mon.o(.rodata);
+        sound/songs/midi/mus_colo_vs_first.o(.rodata);
+        sound/songs/midi/mus_colo_vs_cipher_admin.o(.rodata);
+        sound/songs/midi/mus_colo_vs_final.o(.rodata);
+        sound/songs/midi/mus_colo_vs_normal.o(.rodata);
+        sound/songs/midi/mus_colo_vs_cipher_peon.o(.rodata);
+        sound/songs/midi/mus_colo_vs_miror_b.o(.rodata);
+        sound/songs/midi/mus_colo_vs_semifinal.o(.rodata);
     } =0
 
     extra :

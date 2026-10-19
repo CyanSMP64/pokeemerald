@@ -624,7 +624,16 @@
 #define PH_NURSE_HELD               608
 #define PH_NURSE_SOLO               609
 
-#define END_MUS PH_NURSE_SOLO
+// more custom music
+#define MUS_COLO_VS_FIRST              610
+#define MUS_COLO_VS_CIPHER_ADMIN       611
+#define MUS_COLO_VS_FINAL              612
+#define MUS_COLO_VS_NORMAL             613
+#define MUS_COLO_VS_CIPHER_PEON        614
+#define MUS_COLO_VS_MIROR_B            615
+#define MUS_COLO_VS_SEMIFINAL          616
+
+#define END_MUS MUS_COLO_VS_SEMIFINAL
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
