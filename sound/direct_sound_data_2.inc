@@ -617,6 +617,10 @@ DirectSoundWaveData_dp_midipi_c5_16::
 	.incbin "sound/direct_sound_samples/pl/midipi_c5_16.bin"
 
 	.align 2
+DirectSoundWaveData_dp_bluesgt_a2_16::
+	.incbin "sound/direct_sound_samples/pl/bluesgt_a2_16.bin"
+
+	.align 2
 DirectSoundWaveData_hg_sampletank_string_orchestra_60::
 	.incbin "sound/direct_sound_samples/wb/strings_c4_32.bin"
 
@@ -2002,6 +2006,11 @@ DirectSoundWaveData_b2_drumloop_colress::
 	.align 2
 DirectSoundWaveData_b2_drumloop_iris::
 	.incbin "sound/direct_sound_samples/drumloop_iris.bin"
+
+@ drum loops have their sample rate reduced by (59.7275/60)x
+	.align 2
+DirectSoundWaveData_colo_loop::
+	.incbin "sound/direct_sound_samples/cries/notcries/colo_loop.bin"
 
 	.align 2
 DirectSoundWaveData_undertale_vanish::

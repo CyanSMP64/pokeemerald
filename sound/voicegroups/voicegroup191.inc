@@ -25,7 +25,7 @@ voicegroup191::
 	voice_directsound 60, 0, DirectSoundWaveData_dp_sd90_harmonica2, A(116), D(90), S(110), R(120)
 	voice_none
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 57, 0, DirectSoundWaveData_dp_bluesgt_a2_16, A(127), D(10), S(120), R(116)
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_dp_tengan_wind, A(127), D(127), S(127), R(125)

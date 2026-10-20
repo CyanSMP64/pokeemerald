@@ -9794,8 +9794,8 @@ static const u16 sAllBattleBGM[] =
     MUS_B2_VS_IRIS,
     MUS_B2_VS_HUGH,
     MUS_COLO_VS_FIRST,
-//    MUS_COLO_VS_NORMAL,
-//    MUS_COLO_VS_CIPHER_PEON,
+    MUS_COLO_VS_NORMAL,
+    MUS_COLO_VS_CIPHER_PEON,
 //    MUS_COLO_VS_SEMIFINAL,
 //    MUS_COLO_VS_CIPHER_ADMIN,
 //    MUS_COLO_VS_MIROR_B,
@@ -9893,8 +9893,8 @@ static const u16 sTrainerBattleBGM[] =
     MUS_B2_VS_PLASMA,
     MUS_B2_VS_HUGH,
     MUS_COLO_VS_FIRST,
-//    MUS_COLO_VS_NORMAL,
-//    MUS_COLO_VS_CIPHER_PEON,
+    MUS_COLO_VS_NORMAL,
+    MUS_COLO_VS_CIPHER_PEON,
 };
 
 static const u16 sWildBattleBGM[] =
