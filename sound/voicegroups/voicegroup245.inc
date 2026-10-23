@@ -14,6 +14,7 @@ voicegroup245::
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_harp, 255, 246, 0, 235
 	voice_square_2 60, 0, 1, 1, 7, 15, 2	@ psg voice for high arps
 	voice_directsound 60, 0, DirectSoundWaveData_dp_qy70_doublsaw, A(127), D(120), S(127), R(120)
+	voice_keysplit voicegroup245_slapbass_alt, KeySplitTable_40_46
 
 voicegroup245_kit::
 	voice_directsound 60, 64, DirectSoundWaveData_dp_dance_drums_kick, A(127), D(127), S(127), R(120)
@@ -34,3 +35,8 @@ voicegroup245_kit::
 	voice_directsound 60, 32, DirectSoundWaveData_dp_dance_drums_ride, A(127), D(70), S(0), R(114)
 	voice_directsound 61, 32, DirectSoundWaveData_dp_dance_drums_ride, A(127), D(70), S(0), R(114)
 	voice_directsound 60, 30, DirectSoundWaveData_dp_dance_drums_ride_bell, A(127), D(70), S(0), R(115)
+
+voicegroup245_slapbass_alt::
+	voice_directsound 36, 0, DirectSoundWaveData_bw_plugsound_pro_fend_slap1_pull_36, A(127), D(125), S(120), R(123)
+	voice_directsound 43, 0, DirectSoundWaveData_bw_plugsound_pro_fend_slap1_pull_43, A(127), D(125), S(120), R(123)
+	voice_directsound 48, 0, DirectSoundWaveData_bw_plugsound_pro_fend_slap1_pull_48, A(127), D(125), S(120), R(123)

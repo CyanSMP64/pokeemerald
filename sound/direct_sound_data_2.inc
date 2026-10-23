@@ -2013,6 +2013,30 @@ DirectSoundWaveData_colo_loop::
 	.incbin "sound/direct_sound_samples/cries/notcries/colo_loop.bin"
 
 	.align 2
+DirectSoundWaveData_colo_kick1::
+	.incbin "sound/direct_sound_samples/cries/notcries/colo_kick1.bin"
+
+	.align 2
+DirectSoundWaveData_colo_kick2::
+	.incbin "sound/direct_sound_samples/cries/notcries/colo_kick2.bin"
+
+	.align 2
+DirectSoundWaveData_colo_kick3::
+	.incbin "sound/direct_sound_samples/cries/notcries/colo_kick3.bin"
+
+	.align 2
+DirectSoundWaveData_colo_kick4::
+	.incbin "sound/direct_sound_samples/cries/notcries/colo_kick4.bin"
+
+	.align 2
+DirectSoundWaveData_colo_kick5::
+	.incbin "sound/direct_sound_samples/cries/notcries/colo_kick5.bin"
+
+	.align 2
+DirectSoundWaveData_colo_kick6::
+	.incbin "sound/direct_sound_samples/cries/notcries/colo_kick6.bin"
+
+	.align 2
 DirectSoundWaveData_undertale_vanish::
 	.incbin "sound/direct_sound_samples/undertale_vanish.bin"
 

@@ -8,7 +8,7 @@ voicegroup241::
 	voice_keysplit voicegroup_GSsteelstrgt, KeySplitTable_GSsteelstrgt
 	voice_directsound 84, 0, DirectSoundWaveData_pmd1_synstring_c6, 255, 220, 220, 210
 	voice_keysplit voicegroup_DPstrings, KeySplitTable_DPstrings
-	voice_keysplit voicegroup205_pad, KeySplitTable_GSmarimba
+	voice_keysplit voicegroup247_pad, KeySplitTable_GSmarimba
 	voice_keysplit voicegroup231_trumpet, KeySplitTable_GStrumpet
 	voice_directsound 60, 0, DirectSoundWaveData_dp_qy70_doublsaw, A(127), D(120), S(127), R(120)
 

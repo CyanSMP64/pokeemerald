@@ -392,45 +392,45 @@
 	.byte 1  @ 106
 	.byte 1  @ 107
 
-.set KeySplitTable_DPgrandpianolow, . + 16		@ -|-
-.set KeySplitTable_DPtuba, . + 15		@ -|-
-.set KeySplitTable_36, . + 10		@ -|-
-.set KeySplitTable_BWghetsistimpani_01, . + 6		@ -|-
-.set KeySplitTable_GSsynbass, . + 3		@ -|-
-.set KeySplitTable_BWsynbass, . + 2		@ -|-
-.set KeySplitTable_GSacbass, . + 1		@ -|-
-.set KeySplitTable_47, . - 1		@ -|-
-.set KeySplitTable_DPtimpani1, . - 2		@ -|-
-.set KeySplitTable_DPtimpani2, . - 2		@ -|-
-.set KeySplitTable_BWghetsistimpani_12, . - 6		@ -|-
-.set KeySplitTable_GSfretlessbs, . - 7		@ -|-
-.set KeySplitTable_DPrhodes, . - 8		@ -|-
-.set KeySplitTable_DPfmep, . - 9		@ -|-
-.set KeySplitTable_DPfhorns, . - 9		@ -|-
-.set KeySplitTable_GSrhodes2, . - 9		@ -|-
-.set KeySplitTable_BWdrawbarorg_01, . - 10		@ -|-
-.set KeySplitTable_BWtimpani_01, . - 12		@ -|-
-.set KeySplitTable_DPhammondorg, . - 13		@ -|-
-.set KeySplitTable_60, . - 14		@ -|-
-.set KeySplitTable_62, . - 16		@ -|-
-.set KeySplitTable_BWtrumpet_01, . - 19		@ -|-
-.set KeySplitTable_BWstrings_01, . - 20		@ -|-
-.set KeySplitTable_GSvibes, . - 21		@ -|-
-.set KeySplitTable_GSglocken, . - 21		@ -|-
-.set KeySplitTable_BWfhorns_23, . - 23		@ -|-
-.set KeySplitTable_DPpizz, . - 25		@ -|-
-.set KeySplitTable_GStubbell, . - 25		@ -|-
-.set KeySplitTable_72, . - 26		@ -|-
-.set KeySplitTable_BWpizz_34, . - 28		@ -|-
-.set KeySplitTable_BWflute2_23, . - 29		@ -|-
-.set KeySplitTable_BWe4lead, . - 31		@ -|-
-.set KeySplitTable_BWflute2_12, . - 32		@ -|-
-.set KeySplitTable_BWeuropad_23, . - 33		@ -|-
-.set KeySplitTable_81, . - 35		@ -|-
-.set KeySplitTable_critterstrings, . - 37		@ -|-
-.set KeySplitTable_BWflute3_23, . - 41		@ -|-
+.set KeySplitTable_DPgrandpianolow, . + 24		@ -|-
+.set KeySplitTable_DPtuba, . + 23		@ -|-
+.set KeySplitTable_36, . + 18		@ -|-
+.set KeySplitTable_BWghetsistimpani_01, . + 14		@ -|-
+.set KeySplitTable_GSsynbass, . + 11		@ -|-
+.set KeySplitTable_BWsynbass, . + 10		@ -|-
+.set KeySplitTable_GSacbass, . + 9		@ -|-
+.set KeySplitTable_47, . + 7		@ -|-
+.set KeySplitTable_DPtimpani1, . + 6		@ -|-
+.set KeySplitTable_DPtimpani2, . + 6		@ -|-
+.set KeySplitTable_BWghetsistimpani_12, . + 2		@ -|-
+.set KeySplitTable_GSfretlessbs, . + 1		@ -|-
+.set KeySplitTable_DPrhodes, . - 0		@ -|-
+.set KeySplitTable_DPfmep, . - 1		@ -|-
+.set KeySplitTable_DPfhorns, . - 1		@ -|-
+.set KeySplitTable_GSrhodes2, . - 1		@ -|-
+.set KeySplitTable_BWdrawbarorg_01, . - 2		@ -|-
+.set KeySplitTable_BWtimpani_01, . - 4		@ -|-
+.set KeySplitTable_DPhammondorg, . - 5		@ -|-
+.set KeySplitTable_60, . - 6		@ -|-
+.set KeySplitTable_62, . - 8		@ -|-
+.set KeySplitTable_BWtrumpet_01, . - 11		@ -|-
+.set KeySplitTable_BWstrings_01, . - 12		@ -|-
+.set KeySplitTable_GSvibes, . - 13		@ -|-
+.set KeySplitTable_GSglocken, . - 13		@ -|-
+.set KeySplitTable_BWfhorns_23, . - 15		@ -|-
+.set KeySplitTable_DPpizz, . - 17		@ -|-
+.set KeySplitTable_GStubbell, . - 17		@ -|-
+.set KeySplitTable_72, . - 18		@ -|-
+.set KeySplitTable_BWpizz_34, . - 20		@ -|-
+.set KeySplitTable_BWflute2_23, . - 21		@ -|-
+.set KeySplitTable_BWe4lead, . - 23		@ -|-
+.set KeySplitTable_BWflute2_12, . - 24		@ -|-
+.set KeySplitTable_BWeuropad_23, . - 25		@ -|-
+.set KeySplitTable_81, . - 27		@ -|-
+.set KeySplitTable_critterstrings, . - 29		@ -|-
+.set KeySplitTable_BWflute3_23, . - 33		@ -|-
 	@     C # D # E F # G # A # B
-	.byte                 0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0
 	.byte 0,0,0,0,0,0,0,0,0,0,0,0
 	.byte 0,0,0,0,0,0,0,0,0,0,0,0
 	.byte 0,0,0,0,0,0,0,0,0,0,0,0
@@ -449,6 +449,14 @@
 	.byte 0,0,0,0,0,0,0,0,0,0,0,0
 	.byte 0,1,1,1,1,1,2,2,2,2,2,2
 	.byte 2,2,2,2,2,2,2,2,2,2,2,2
+
+.set KeySplitTable_40_46, . - 20		@ -|6|-
+	@     C # D # E F # G # A # B
+	.byte                 0,0,0,0
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0
+	.byte 0,0,0,0,0,1,1,1,1,1,1,2
+	.byte 2,2,2,2,2,2,2,2,2,2,2,2
+	.byte 2,2,2,2,2,2,2,2
 
 .set KeySplitTable_BWchoir_123, . - 30		@ -|7|-
 .set KeySplitTable_GSoboe, . - 36		@ -|7|-
@@ -508,6 +516,7 @@
 .set KeySplitTable_GSharp, . - 12		@ -|12|-
 .set KeySplitTable_GStimpani, . - 12		@ -|12|-
 .set KeySplitTable_BWdrawbarorg, . - 13		@ -|12|-
+.set KeySplitTable_57_69, . - 14		@ -|12|-
 .set KeySplitTable_60_72, . - 17		@ -|12|-
 .set KeySplitTable_GSmarimba, . - 24		@ -|12|-
 .set KeySplitTable_GSmusbox, . - 24		@ -|12|-
