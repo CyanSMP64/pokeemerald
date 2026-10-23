@@ -55,6 +55,7 @@ void UnusedDummyFunc(void)
 {
 }
 
+// i used ai for these sorry
 static void PrimeTempoCounter(struct MusicPlayerInfo *mplayInfo)
 {
     u32 scaledTempoStep = mplayInfo->tempoI * mplayInfo->songSpeed;
@@ -339,8 +340,15 @@ void m4aMPlayFadeIn(struct MusicPlayerInfo *mplayInfo, u16 speed)
 
 void m4aMPlayImmInit(struct MusicPlayerInfo *mplayInfo)
 {
-    s32 trackCount = mplayInfo->trackCount;
-    struct MusicPlayerTrack *track = mplayInfo->tracks;
+    s32 trackCount;
+    struct MusicPlayerTrack *track;
+
+    if (mplayInfo->ident != ID_NUMBER)
+        return;
+
+    mplayInfo->ident++;
+    trackCount = mplayInfo->trackCount;
+    track = mplayInfo->tracks;
 
     while (trackCount > 0)
     {
@@ -364,6 +372,8 @@ void m4aMPlayImmInit(struct MusicPlayerInfo *mplayInfo)
         trackCount--;
         track++;
     }
+
+    mplayInfo->ident = ID_NUMBER;
 }
 
 void MPlayExtender(struct CgbChannel *cgbChans)
