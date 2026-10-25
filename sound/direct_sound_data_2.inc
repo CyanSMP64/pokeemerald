@@ -2037,6 +2037,38 @@ DirectSoundWaveData_colo_kick6::
 	.incbin "sound/direct_sound_samples/cries/notcries/colo_kick6.bin"
 
 	.align 2
+DirectSoundWaveData_colo_brasshit1::
+	.incbin "sound/direct_sound_samples/cries/notcries/colo_brasshit1.bin"
+
+	.align 2
+DirectSoundWaveData_colo_brasshit2::
+	.incbin "sound/direct_sound_samples/cries/notcries/colo_brasshit2.bin"
+
+	.align 2
+DirectSoundWaveData_colo_voice_agozar::
+	.incbin "sound/direct_sound_samples/cries/notcries/colo_voice_agozar.bin"
+
+	.align 2
+DirectSoundWaveData_colo_voice_cumbia::
+	.incbin "sound/direct_sound_samples/cries/notcries/colo_voice_cumbia.bin"
+
+	.align 2
+DirectSoundWaveData_colo_voice_jaja::
+	.incbin "sound/direct_sound_samples/cries/notcries/colo_voice_jaja.bin"
+
+	.align 2
+DirectSoundWaveData_colo_voice_querico::
+	.incbin "sound/direct_sound_samples/cries/notcries/colo_voice_querico.bin"
+
+	.align 2
+DirectSoundWaveData_colo_voice_rrr::
+	.incbin "sound/direct_sound_samples/cries/notcries/colo_voice_rrr.bin"
+
+	.align 2
+DirectSoundWaveData_colo_voice_salsa::
+	.incbin "sound/direct_sound_samples/cries/notcries/colo_voice_salsa.bin"
+
+	.align 2
 DirectSoundWaveData_undertale_vanish::
 	.incbin "sound/direct_sound_samples/undertale_vanish.bin"
 
