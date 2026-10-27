@@ -687,7 +687,7 @@ extern struct SideTimer gSideTimers[NUM_BATTLE_SIDES];
 extern u32 gStatuses3[MAX_BATTLERS_COUNT];
 extern struct DisableStruct gDisableStructs[MAX_BATTLERS_COUNT];
 extern u16 gPauseCounterBattle;
-extern bool8 gBattleScriptCommandDelay;
+//extern bool8 gBattleScriptCommandDelay;
 extern u16 gPaydayMoney;
 extern u16 gRandomTurnNumber;
 extern u8 gBattleCommunication[BATTLE_COMMUNICATION_ENTRIES_COUNT];
