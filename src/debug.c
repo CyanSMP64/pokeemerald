@@ -1350,7 +1350,13 @@ static void DebugTask_HandleMenuInput_FlagsVars(u8 taskId)
     {        
         PlaySE(SE_SELECT);
         if ((func = sDebugMenu_Actions_Flags[input]) != NULL)
+        {
             func(taskId);
+
+            if (input >= DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_POKEDEX
+             && input <= DEBUG_FLAGVAR_MENU_ITEM_TOGGLE_TRAINER_SEE)
+                Debug_RedrawListMenu(taskId);
+        }
     }
     else if (JOY_NEW(B_BUTTON))
     {

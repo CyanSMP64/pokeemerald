@@ -965,6 +965,12 @@ static bool8 HandleMainMenuInput(u8 taskId)
         }
         else {
             PlaySE(SE_SELECT);
+            FlagClear(FLAG_SYS_DEBUG_MODE);
+            FlagClear(FLAG_SYS_NO_COLLISION);
+            FlagClear(FLAG_SYS_NO_ENCOUNTER);
+            FlagClear(FLAG_SYS_NO_TRAINER_SEE);
+            FlagClear(FLAG_SYS_PC_FROM_DEBUG_MENU);
+            FlagClear(FLAG_SYS_NO_BATTLE_DMG);
         }
         IsWirelessAdapterConnected();   // why bother calling this here? debug? Task_HandleMainMenuAPressed will check too
         BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);

@@ -84,11 +84,11 @@
 #define FLAG_SYS_NO_TRAINER_SEE          0x48 // Unused Flag
 #define FLAG_SYS_PC_FROM_DEBUG_MENU      0x49 // Unused Flag
 #define FLAG_SYS_NO_BATTLE_DMG           0x4A // Unused Flag
-#define FLAG_SYS_SAVE_NO_COLLISION       0x4B // Unused Flag
-#define FLAG_SYS_SAVE_NO_ENCOUNTER       0x4C // Unused Flag
-#define FLAG_SYS_SAVE_NO_TRAINER_SEE     0x4D // Unused Flag
-#define FLAG_SYS_SAVE_PC_FROM_DEBUG_MENU 0x4E // Unused Flag
-#define FLAG_SYS_SAVE_NO_BATTLE_DMG      0x4F // Unused Flag
+#define FLAG_UNUSED_0x04B                0x4B // Unused Flag
+#define FLAG_UNUSED_0x04C                0x4C // Unused Flag
+#define FLAG_UNUSED_0x04D                0x4D // Unused Flag
+#define FLAG_UNUSED_0x04E                0x4E // Unused Flag
+#define FLAG_UNUSED_0x04F                0x4F // Unused Flag
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
@@ -1381,7 +1381,7 @@
 #define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)
 
 #define FLAG_SYS_DEBUG_MODE                         (SYSTEM_FLAGS + 0x21)
-#define FLAG_SYS_DEBUG_SAVE                         (SYSTEM_FLAGS + 0x22)
+#define FLAG_UNUSED_0x882                           (SYSTEM_FLAGS + 0x22)
 #define FLAG_MODERN_EXP_SCALE                       (SYSTEM_FLAGS + 0x23)
 #define FLAG_EVO_EVERY_LEVEL                        (SYSTEM_FLAGS + 0x24)
 #define FLAG_DOUBLE_SPEED                           (SYSTEM_FLAGS + 0x25)
