@@ -13,7 +13,7 @@ voicegroup247::
 	voice_square_2_alt 60, 0, 0, 0, 2, 10, 1		@ psg voices for brass
 	voice_square_1_alt 60, 0, 0, 0, 0, 2, 10, 1		@ psg voices for brass
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_organ2, 255, 0, 255, 210
-	voice_keysplit voicegroup_GSfhorns, KeySplitTable_GSfhorns
+	voice_keysplit voicegroup242_horn, KeySplitTable_52_53_62
 	voice_keysplit voicegroup235_guitar, KeySplitTable_42_54_68_80
 
 voicegroup247_kit::

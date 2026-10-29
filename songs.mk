@@ -1498,22 +1498,22 @@ $(MID_SUBDIR)/mus_b2_victory_pwt.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G240 -V114 -X -S -A -M     # original volume: 127
 
 $(MID_SUBDIR)/mus_colo_vs_first.s: %.s: %.mid
-	$(MID) $< $@ -E -R25 -G241 -V081 -S
+	$(MID) $< $@ -E -R25 -G241 -V086 -S
 
 $(MID_SUBDIR)/mus_colo_vs_cipher_admin.s: %.s: %.mid
-	$(MID) $< $@ -E -R25 -G242 -V064 -S
+	$(MID) $< $@ -E -R25 -G242 -V127 -S
 
 $(MID_SUBDIR)/mus_colo_vs_final.s: %.s: %.mid
 	$(MID) $< $@ -E -R25 -G243 -V064 -S
 
 $(MID_SUBDIR)/mus_colo_vs_normal.s: %.s: %.mid
-	$(MID) $< $@ -E -R25 -G244 -V086 -S
+	$(MID) $< $@ -E -R25 -G244 -V091 -S
 
 $(MID_SUBDIR)/mus_colo_vs_cipher_peon.s: %.s: %.mid
-	$(MID) $< $@ -E -R25 -G245 -V098 -S
+	$(MID) $< $@ -E -R25 -G245 -V103 -S
 
 $(MID_SUBDIR)/mus_colo_vs_miror_b.s: %.s: %.mid
-	$(MID) $< $@ -E -R25 -G246 -V106 -S
+	$(MID) $< $@ -E -R25 -G246 -V111 -S
 
 $(MID_SUBDIR)/mus_colo_vs_semifinal.s: %.s: %.mid
 	$(MID) $< $@ -E -R25 -G247 -V080 -S
