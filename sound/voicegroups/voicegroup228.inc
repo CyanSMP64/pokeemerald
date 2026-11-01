@@ -8,8 +8,8 @@ voicegroup228::
 	voice_keysplit voicegroup228_trombone, KeySplitTable_GStrombone
 	voice_keysplit_all voicegroup228_drumset - 0xc * 26
 	voice_directsound 40, 0, DirectSoundWaveData_bw_independence_pro_khso_all_strings_spc_up, A(127), D(127), S(127), R(120)
-	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_gs_champ, A(127), D(127), S(127), R(127)
-	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_gs_champ_flange, A(127), D(127), S(127), R(127)
+	voice_directsound_comp 60, 0, DirectSoundWaveData_b2_drumloop_gs_champ, A(127), D(127), S(127), R(127)
+	voice_directsound_comp 60, 0, DirectSoundWaveData_b2_drumloop_gs_champ_flange, A(127), D(127), S(127), R(127)
 
 voicegroup228_organ::
 	voice_directsound 48, 0, DirectSoundWaveData_hg_plugsound_pro_full_organ_slow_48, A(127), D(120), S(120), R(116)

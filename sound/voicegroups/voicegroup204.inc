@@ -9,7 +9,7 @@ voicegroup204::
 	voice_keysplit voicegroup204_strings, KeySplitTable_BWstrings_012
 	voice_keysplit voicegroup204_trumpet, KeySplitTable_GStrumpet
 	voice_keysplit voicegroup204_synth, KeySplitTable_BWdrawbarorg_01
-	voice_directsound 60, 0, DirectSoundWaveData_bw_drum_loop_subway01_22, A(127), D(127), S(127), R(124)
+	voice_directsound_comp 60, 0, DirectSoundWaveData_bw_drum_loop_subway01_22, A(127), D(127), S(127), R(124)
 	voice_directsound 60, 0, DirectSoundWaveData_bw_zg_of_tutti_hit_major, A(127), D(127), S(127), R(116)
 	voice_keysplit_all voicegroup204_drumset - 0xc * 36
 

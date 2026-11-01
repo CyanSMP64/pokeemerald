@@ -12,7 +12,7 @@ voicegroup219::
 	voice_keysplit_all voicegroup219_drumset1 - 0xc * 31
 	voice_keysplit_all voicegroup219_drumset2 - 0xc * 36
 	voice_directsound 60, 0, DirectSoundWaveData_bw_unknown_suspended_cymbal_40, A(127), D(127), S(127), R(100)
-	voice_directsound 60, 0, DirectSoundWaveData_bw_zg_total_drum_bass_160_leonora, A(127), D(127), S(127), R(124)
+	voice_directsound_comp 60, 0, DirectSoundWaveData_bw_zg_total_drum_bass_160_leonora, A(127), D(127), S(127), R(124)
 
 voicegroup219_strings::
 	voice_directsound 60, 0, DirectSoundWaveData_hg_sampletank_string_orchestra_60, A(127), D(100), S(110), R(116)

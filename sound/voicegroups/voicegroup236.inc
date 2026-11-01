@@ -8,7 +8,7 @@ voicegroup236::
 	voice_directsound 67, 0, DirectSoundWaveData_b2_colress_hit, A(127), D(80), S(1), R(116)
 	voice_keysplit_all voicegroup236_drumset - 0xc * 32
 	voice_directsound 79, 0, DirectSoundWaveData_b2_unknown_sine_g5, A(127), D(125), S(120), R(122)
-	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_colress, A(127), D(127), S(127), R(127)
+	voice_directsound_comp 60, 0, DirectSoundWaveData_b2_drumloop_colress, A(127), D(127), S(127), R(127)
 	voice_directsound 60, 0, DirectSoundWaveData_dp_qy70_doublsaw, A(127), D(120), S(127), R(126)
 	voice_directsound 60, 0, DirectSoundWaveData_dp_qy70_doublsaw, A(127), D(120), S(127), R(120)
 	voice_directsound 60, 0, DirectSoundWaveData_b2_doublsaw_c4, A(127), D(120), S(127), R(120)

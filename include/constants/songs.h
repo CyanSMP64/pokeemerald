@@ -633,7 +633,14 @@
 #define MUS_COLO_VS_MIROR_B            615
 #define MUS_COLO_VS_SEMIFINAL          616
 
-#define END_MUS MUS_COLO_VS_SEMIFINAL
+#define MUS_PMD2_VS_BOSS               617
+#define MUS_PMD2_MONSTER_HOUSE         618
+#define MUS_PMD2_VS_DUSKNOIR           619
+#define MUS_PMD2_VS_DIALGA             620
+#define MUS_PMD2_VS_RAYQUAZA           621
+#define MUS_PMD2_VS_PALKIA             622
+
+#define END_MUS MUS_PMD2_VS_PALKIA
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

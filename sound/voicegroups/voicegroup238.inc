@@ -7,7 +7,7 @@ voicegroup238::
 	voice_keysplit_all voicegroup238_drumset - 0xc * 26
 	voice_keysplit voicegroup238_gamelan, KeySplitTable_72
 	voice_keysplit voicegroup238_guitar, KeySplitTable_42_54_68
-	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_iris, A(127), D(127), S(127), R(127)
+	voice_directsound_comp 60, 0, DirectSoundWaveData_b2_drumloop_iris, A(127), D(127), S(127), R(127)
 	voice_keysplit voicegroup238_square, KeySplitTable_60_72_84
 	voice_directsound 72, 0, DirectSoundWaveData_b2_doublsaw_c5, A(127), D(120), S(127), R(120)
 	voice_keysplit voicegroup238_synth, KeySplitTable_60_72_84

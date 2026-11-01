@@ -1517,3 +1517,21 @@ $(MID_SUBDIR)/mus_colo_vs_miror_b.s: %.s: %.mid
 
 $(MID_SUBDIR)/mus_colo_vs_semifinal.s: %.s: %.mid
 	$(MID) $< $@ -E -R35 -G247 -V080 -S
+
+$(MID_SUBDIR)/mus_pmd2_vs_boss.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G248 -V124 -X -S -A -M
+
+$(MID_SUBDIR)/mus_pmd2_monster_house.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G249 -V127 -X -S -A -M
+
+$(MID_SUBDIR)/mus_pmd2_vs_dusknoir.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G250 -V127 -X -S -A -M
+
+$(MID_SUBDIR)/mus_pmd2_vs_dialga.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G251 -V127 -X -S -A -M
+
+$(MID_SUBDIR)/mus_pmd2_vs_rayquaza.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G252 -V127 -X -S -A -M
+
+$(MID_SUBDIR)/mus_pmd2_vs_palkia.s: %.s: %.mid
+	$(MID) $< $@ -E -R0 -G253 -V127 -X -S -A -M

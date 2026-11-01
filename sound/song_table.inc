@@ -618,6 +618,12 @@ gSongTable::
 	song mus_colo_vs_cipher_peon, 0, 64, 1024
 	song mus_colo_vs_miror_b, 0, 64, 1024
 	song mus_colo_vs_semifinal, 0, 64, 1024
+	song mus_pmd2_vs_boss, 0, 64, 1024
+	song mus_pmd2_monster_house, 0, 64, 1024
+	song mus_pmd2_vs_dusknoir, 0, 64, 1024
+	song mus_pmd2_vs_dialga, 0, 64, 1024
+	song mus_pmd2_vs_rayquaza, 0, 64, 1024
+	song mus_pmd2_vs_palkia, 0, 64, 1024
 
 	.align 2
 dummy_song_header:

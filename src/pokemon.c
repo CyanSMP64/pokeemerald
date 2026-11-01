@@ -9800,6 +9800,12 @@ static const u16 sAllBattleBGM[] =
     MUS_COLO_VS_CIPHER_ADMIN,
     MUS_COLO_VS_MIROR_B,
     MUS_COLO_VS_FINAL,
+    MUS_PMD2_VS_BOSS,
+    MUS_PMD2_MONSTER_HOUSE,
+//    MUS_PMD2_VS_DUSKNOIR,
+//    MUS_PMD2_VS_DIALGA,
+//    MUS_PMD2_VS_RAYQUAZA,
+//    MUS_PMD2_VS_PALKIA,
 };
 
 static const u16 sFinalBattleBGM[] =
@@ -9822,6 +9828,7 @@ static const u16 sFinalBattleBGM[] =
     MUS_B2_VS_PWT_FINALS,
     MUS_B2_VS_IRIS,
     MUS_COLO_VS_FINAL,
+//    MUS_PMD2_VS_DIALGA,
 };
 
 static const u16 sBossBattleBGM[] =
@@ -9869,6 +9876,11 @@ static const u16 sBossBattleBGM[] =
     MUS_COLO_VS_SEMIFINAL,
     MUS_COLO_VS_CIPHER_ADMIN,
     MUS_COLO_VS_MIROR_B,
+    MUS_PMD2_VS_BOSS,
+    MUS_PMD2_MONSTER_HOUSE,
+//    MUS_PMD2_VS_DUSKNOIR,
+//    MUS_PMD2_VS_RAYQUAZA,
+//    MUS_PMD2_VS_PALKIA,
 };
 
 static const u16 sTrainerBattleBGM[] =

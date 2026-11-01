@@ -244,3 +244,10 @@
 .include "sound/voicegroups/voicegroup245.inc" @ COLO cipher peon battle
 .include "sound/voicegroups/voicegroup246.inc" @ COLO miror b battle
 .include "sound/voicegroups/voicegroup247.inc" @ COLO semifinal battle
+
+.include "sound/voicegroups/voicegroup248.inc" @ PMD2 boss battle
+.include "sound/voicegroups/voicegroup249.inc" @ PMD2 monster house
+.include "sound/voicegroups/voicegroup250.inc" @ PMD2 battle against dusknoir
+.include "sound/voicegroups/voicegroup251.inc" @ PMD2 dialga's fight to the finish
+.include "sound/voicegroups/voicegroup252.inc" @ PMD2 defy the legends
+.include "sound/voicegroups/voicegroup253.inc" @ PMD2 palkia's onslaught

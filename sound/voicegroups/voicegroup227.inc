@@ -6,7 +6,7 @@ voicegroup227::
 	voice_keysplit voicegroup227_strings, KeySplitTable_BWstrings
 	voice_keysplit_all voicegroup227_drumset - 0xc * 31
 	voice_directsound 40, 0, DirectSoundWaveData_bw_independence_pro_khso_all_strings_spc_up, A(127), D(127), S(127), R(120)
-	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_gs_leader_22, A(127), D(127), S(127), R(127)
+	voice_directsound_comp 60, 0, DirectSoundWaveData_b2_drumloop_gs_leader_22, A(127), D(127), S(127), R(127)
 	voice_keysplit voicegroup227_square, KeySplitTable_60_72_84
 	voice_directsound 60, 0, DirectSoundWaveData_dp_qy70_doublsaw, A(127), D(120), S(127), R(120)
 

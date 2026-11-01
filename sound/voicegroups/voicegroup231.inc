@@ -12,7 +12,7 @@ voicegroup231::
 	voice_directsound 40, 0, DirectSoundWaveData_bw_independence_pro_khso_all_strings_spc_up, A(127), D(127), S(127), R(120)
 	voice_directsound 60, 0, DirectSoundWaveData_dp_qy70_doublsaw, A(127), D(120), S(127), R(120)
 	voice_keysplit voicegroup231_synth, KeySplitTable_48_60_72_84
-	voice_directsound 60, 0, DirectSoundWaveData_b2_drumloop_dp_leader, A(127), D(127), S(127), R(127)
+	voice_directsound_comp 60, 0, DirectSoundWaveData_b2_drumloop_dp_leader, A(127), D(127), S(127), R(127)
 
 voicegroup231_drumset::
 	voice_directsound 60, 64, DirectSoundWaveData_dp_zg_wet_crossfade_snare2, A(127), D(0), S(110), R(120)

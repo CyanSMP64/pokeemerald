@@ -75,8 +75,8 @@ voicegroup229_drumset::
 	voice_directsound 60, 36, DirectSoundWaveData_hg_battery3_rock_crash_cymbal2, A(127), D(80), S(0), R(114)
 
 voicegroup229_drumloops::
-	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_rs_leader1_r, A(127), D(127), S(127), R(127)
-	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_rs_leader1_l, A(127), D(127), S(127), R(127)
-	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_rs_leader2_r, A(127), D(127), S(127), R(127)
-	voice_directsound 60, 64, DirectSoundWaveData_b2_drumloop_rs_leader2_l, A(127), D(127), S(127), R(127)
+	voice_directsound_comp 60, 64, DirectSoundWaveData_b2_drumloop_rs_leader1_r, A(127), D(127), S(127), R(127)
+	voice_directsound_comp 60, 64, DirectSoundWaveData_b2_drumloop_rs_leader1_l, A(127), D(127), S(127), R(127)
+	voice_directsound_comp 60, 64, DirectSoundWaveData_b2_drumloop_rs_leader2_r, A(127), D(127), S(127), R(127)
+	voice_directsound_comp 60, 64, DirectSoundWaveData_b2_drumloop_rs_leader2_l, A(127), D(127), S(127), R(127)
 	voice_directsound 60, 64, DirectSoundWaveData_b2_unknown_kick_rs_leader, A(127), D(127), S(127), R(126)
