@@ -429,6 +429,7 @@
 .set KeySplitTable_81, . - 27		@ -|-
 .set KeySplitTable_critterstrings, . - 29		@ -|-
 .set KeySplitTable_BWflute3_23, . - 33		@ -|-
+.set KeySplitTable_90, . - 36		@ -|-
 	@     C # D # E F # G # A # B
 	.byte 0,0,0,0,0,0,0,0,0,0,0,0
 	.byte 0,0,0,0,0,0,0,0,0,0,0,0
@@ -533,10 +534,11 @@
 	.byte 2,2,2,2,2,2,2,2,2,2,2,2
 	.byte 2,2,2,2,2,2,2,2,2,2,2,2
 
-.set KeySplitTable_DPwoodbass, . - 20		@ -|13|-
-.set KeySplitTable_DPdistgt1_012, . - 33		@ -|13|-
+.set KeySplitTable_DPwoodbass, . - 16		@ -|13|-
+.set KeySplitTable_DPdistgt1_012, . - 29		@ -|13|-
+.set KeySplitTable_63_76, . - 45		@ -|13|-
 	@     C # D # E F # G # A # B
-	.byte                 0,0,0,0
+	.byte         0,0,0,0,0,0,0,0
 	.byte 0,0,0,0,0,0,0,0,0,0,0,1
 	.byte 1,1,1,1,1,1,1,1,1,1,1,1
 	.byte 2,2,2,2,2,2,2,2,2,2,2,2

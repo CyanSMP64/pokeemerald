@@ -2209,8 +2209,48 @@ DirectSoundWaveData_pmd1_tambourine::
 	.incbin "sound/direct_sound_samples/pmd1/tambourine.bin"
 
 	.align 2
+DirectSoundWaveData_pmd1_triclosed::
+	.incbin "sound/direct_sound_samples/pmd1/triclosed.bin"
+
+	.align 2
+DirectSoundWaveData_pmd1_triopen::
+	.incbin "sound/direct_sound_samples/pmd1/triopen.bin"
+
+	.align 2
+DirectSoundWaveData_pmd1_choiraah_g4::
+	.incbin "sound/direct_sound_samples/pmd1/choiraah_g4.bin"
+
+	.align 2
+DirectSoundWaveData_pmd1_pizz_c4::
+	.incbin "sound/direct_sound_samples/pmd1/pizz_c4.bin"
+
+	.align 2
+DirectSoundWaveData_pmd1_bongo::
+	.incbin "sound/direct_sound_samples/pmd1/bongo.bin"
+
+	.align 2
+DirectSoundWaveData_pmd1_congahi::
+	.incbin "sound/direct_sound_samples/pmd1/congahi.bin"
+
+	.align 2
+DirectSoundWaveData_pmd1_congalo::
+	.incbin "sound/direct_sound_samples/pmd1/congalo.bin"
+
+	.align 2
+DirectSoundWaveData_pmd1_congamute::
+	.incbin "sound/direct_sound_samples/pmd1/congamute.bin"
+
+	.align 2
+DirectSoundWaveData_pmd1_sidestick2::
+	.incbin "sound/direct_sound_samples/pmd1/sidestick2.bin"
+
+	.align 2
 DirectSoundWaveData_pmd1_crashcym2::
 	.incbin "sound/direct_sound_samples/pmd1_ds/30.bin"
+
+	.align 2
+DirectSoundWaveData_pmd1_cabasa::
+	.incbin "sound/direct_sound_samples/pmd1_ds/142.bin"
 
 	.align 2
 DirectSoundWaveData_pmd1_hihat_closed::
@@ -2233,8 +2273,40 @@ DirectSoundWaveData_pmd1_panflute2_c6::
 	.incbin "sound/direct_sound_samples/pmd1_ds/67.bin"
 
 	.align 2
+DirectSoundWaveData_pmd2_timpani_a2::
+	.incbin "sound/direct_sound_samples/pmd2/0124_adpcm.bin"
+
+	.align 2
+DirectSoundWaveData_pmd2_stringbass_f1::
+	.incbin "sound/direct_sound_samples/pmd2/0125_adpcm.bin"
+
+	.align 2
 DirectSoundWaveData_pmd2_slapbass_c2::
 	.incbin "sound/direct_sound_samples/pmd2/0138_adpcm.bin"
+
+	.align 2
+DirectSoundWaveData_pmd2_0140::
+	.incbin "sound/direct_sound_samples/pmd2/0140_adpcm.bin"
+
+	.align 2
+DirectSoundWaveData_pmd2_shaker::
+	.incbin "sound/direct_sound_samples/pmd2/0150_adpcm.bin"
+
+	.align 2
+DirectSoundWaveData_pmd2_trombone_e3::
+	.incbin "sound/direct_sound_samples/pmd2/0152_adpcm.bin"
+
+	.align 2
+DirectSoundWaveData_pmd2_trombone_f4::
+	.incbin "sound/direct_sound_samples/pmd2/0153_adpcm.bin"
+
+	.align 2
+DirectSoundWaveData_pmd2_trombone_g2::
+	.incbin "sound/direct_sound_samples/pmd2/0154_adpcm.bin"
+
+	.align 2
+DirectSoundWaveData_pmd2_mandolin_d4::
+	.incbin "sound/direct_sound_samples/pmd2/0181_adpcm.bin"
 
 	.align 2
 DirectSoundWaveData_pmd2_square::
@@ -2249,8 +2321,24 @@ DirectSoundWaveData_pmd2_sine::
 	.incbin "sound/direct_sound_samples/pmd2/0184_pcm16.bin"
 
 	.align 2
+DirectSoundWaveData_pmd2_triangle::
+	.incbin "sound/direct_sound_samples/pmd2/0185_pcm16.bin"
+
+	.align 2
+DirectSoundWaveData_pmd2_brass_c5::
+	.incbin "sound/direct_sound_samples/pmd2/0352_adpcm.bin"
+
+	.align 2
 DirectSoundWaveData_pmd2_brassoctave_g4::
 	.incbin "sound/direct_sound_samples/pmd2/0610_adpcm.bin"
+
+	.align 2
+DirectSoundWaveData_pmd2_sinelead_a5::
+	.incbin "sound/direct_sound_samples/pmd2/0620_adpcm.bin"
+
+	.align 2
+DirectSoundWaveData_pmd2_frenchhorns_c4::
+	.incbin "sound/direct_sound_samples/pmd2/0630_adpcm.bin"
 
 	.align 2
 DirectSoundWaveData_pmd2_cymbal_loop::

@@ -1528,7 +1528,7 @@ $(MID_SUBDIR)/mus_pmd2_vs_dusknoir.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G250 -V127 -X -S -A -M
 
 $(MID_SUBDIR)/mus_pmd2_vs_dialga.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G251 -V127 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G251 -V123 -X -S -A -M
 
 $(MID_SUBDIR)/mus_pmd2_vs_rayquaza.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G252 -V127 -X -S -A -M
