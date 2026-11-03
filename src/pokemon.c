@@ -9804,8 +9804,8 @@ static const u16 sAllBattleBGM[] =
     MUS_PMD2_MONSTER_HOUSE,
     MUS_PMD2_VS_DUSKNOIR,
     MUS_PMD2_VS_DIALGA,
-//    MUS_PMD2_VS_RAYQUAZA,
-//    MUS_PMD2_VS_PALKIA,
+    MUS_PMD2_VS_RAYQUAZA,
+    MUS_PMD2_VS_PALKIA,
 };
 
 static const u16 sFinalBattleBGM[] =
@@ -9879,8 +9879,8 @@ static const u16 sBossBattleBGM[] =
     MUS_PMD2_VS_BOSS,
     MUS_PMD2_MONSTER_HOUSE,
     MUS_PMD2_VS_DUSKNOIR,
-//    MUS_PMD2_VS_RAYQUAZA,
-//    MUS_PMD2_VS_PALKIA,
+    MUS_PMD2_VS_RAYQUAZA,
+    MUS_PMD2_VS_PALKIA,
 };
 
 static const u16 sTrainerBattleBGM[] =
