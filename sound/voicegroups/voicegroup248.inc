@@ -30,7 +30,7 @@ voicegroup248_kit::
 	voice_none
 	voice_none
 	voice_none
-	voice_directsound 63, 64, DirectSoundWaveData_pmd1_shaker, 255, 0, 255, 80
+	voice_directsound 71, 64, DirectSoundWaveData_pmd1_shaker, 255, 0, 255, 80
 	voice_none
 	voice_none
 	voice_directsound 66, 64, DirectSoundWaveData_pmd1_tambourine, 255, 0, 255, 80

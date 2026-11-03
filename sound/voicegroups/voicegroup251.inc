@@ -44,7 +44,7 @@ voicegroup251_kit::
 	voice_none
 	voice_none
 	voice_directsound 56, 34, DirectSoundWaveData_pmd1_bongo, 255, 0, 255, 80
-	voice_directsound 62, 114, DirectSoundWaveData_pmd1_congamute, 255, 0, 255, 80
+	voice_directsound 61, 114, DirectSoundWaveData_pmd1_congamute, 255, 0, 255, 80
 	voice_directsound 58, 114, DirectSoundWaveData_pmd1_congahi, 255, 0, 255, 80
 	voice_directsound 61, 14, DirectSoundWaveData_pmd1_congalo, 255, 0, 255, 80
 	voice_none

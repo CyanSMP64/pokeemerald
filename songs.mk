@@ -1534,4 +1534,4 @@ $(MID_SUBDIR)/mus_pmd2_vs_rayquaza.s: %.s: %.mid
 	$(MID) $< $@ -E -R0 -G252 -V127 -X -S -A -M
 
 $(MID_SUBDIR)/mus_pmd2_vs_palkia.s: %.s: %.mid
-	$(MID) $< $@ -E -R0 -G253 -V127 -X -S -A -M
+	$(MID) $< $@ -E -R0 -G253 -V110 -S -A -M
