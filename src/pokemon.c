@@ -9753,7 +9753,7 @@ static const u16 sAllBattleBGM[] =
     MUS_HG_VS_HO_OH,
     MUS_HG_VS_LUGIA,
     MUS_HG_VS_KYOGRE_GROUDON,
-    MUS_BW_VS_WILD_15815,
+//    MUS_BW_VS_WILD_15815,
     MUS_BW_VS_WILD,
     MUS_BW_VS_STRONG_WILD,
     MUS_BW_VS_TRAINER,
@@ -9916,7 +9916,7 @@ static const u16 sWildBattleBGM[] =
     MUS_DP_VS_WILD,
     MUS_HG_VS_WILD_JOHTO,
     MUS_HG_VS_WILD_KANTO,
-    MUS_BW_VS_WILD_15815,
+//    MUS_BW_VS_WILD_15815,
     MUS_BW_VS_WILD,
     MUS_B2_VS_WILD,
 };
