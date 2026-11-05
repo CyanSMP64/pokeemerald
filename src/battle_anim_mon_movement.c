@@ -1009,12 +1009,22 @@ void SetupShakeBattlerBasedOnMovePowerOrDmg(u8 taskId, u8 animBattlerId)
 
 void AnimTask_ShakeTargetPartnerBasedOnMovePowerOrDmg(u8 taskId)
 {
+    if (GetAnimBattlerSpriteId(ANIM_DEF_PARTNER) == SPRITE_NONE)
+    {
+        DestroyAnimVisualTask(taskId);
+        return;
+    }
     SetupShakeBattlerBasedOnMovePowerOrDmg(taskId, ANIM_DEF_PARTNER);
     gTasks[taskId].func = AnimTask_ShakeTargetBasedOnMovePowerOrDmg_Step;
 }
 
 void AnimTask_ShakeTargetBasedOnMovePowerOrDmg(u8 taskId)
 {
+    if (GetAnimBattlerSpriteId(ANIM_TARGET) == SPRITE_NONE)
+    {
+        DestroyAnimVisualTask(taskId);
+        return;
+    }
     SetupShakeBattlerBasedOnMovePowerOrDmg(taskId, ANIM_TARGET);
     gTasks[taskId].func = AnimTask_ShakeTargetBasedOnMovePowerOrDmg_Step;
 }
