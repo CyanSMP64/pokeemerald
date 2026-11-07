@@ -4937,8 +4937,11 @@ void UpdateObjectEventCurrentMovement(struct ObjectEvent *objectEvent, struct Sp
     DoGroundEffects_OnBeginStep(objectEvent, sprite);
     DoGroundEffects_OnFinishStep(objectEvent, sprite);
     UpdateObjectEventSpriteAnimPause(objectEvent, sprite);
-    UpdateObjectEventVisibility(objectEvent, sprite);
-    ObjectEventUpdateSubpriority(objectEvent, sprite);
+    if (!gOverworldSkipRender)
+    {
+        UpdateObjectEventVisibility(objectEvent, sprite);
+        ObjectEventUpdateSubpriority(objectEvent, sprite);
+    }
 }
 
 #define dirn_to_anim(name, table)\
@@ -7354,7 +7357,11 @@ static void UpdateObjectEventOffscreen(struct ObjectEvent *objectEvent, struct S
 
     objectEvent->offScreen = FALSE;
 
-    graphicsInfo = GetObjectEventGraphicsInfo(objectEvent->graphicsId);
+    if (objectEvent->graphicsId != OBJ_EVENT_GFX_BARD
+     && objectEvent->graphicsId < NUM_OBJ_EVENT_GFX)
+        graphicsInfo = gObjectEventGraphicsInfoPointers[objectEvent->graphicsId];
+    else
+        graphicsInfo = GetObjectEventGraphicsInfo(objectEvent->graphicsId);
     if (sprite->coordOffsetEnabled)
     {
         x = sprite->x + sprite->x2 + sprite->centerToCornerVecX + gSpriteCoordOffsetX;

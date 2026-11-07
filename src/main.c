@@ -130,6 +130,7 @@ void AgbMain()
 #endif
     for (;;)
     {
+        bool8 doubleSpeed;
         ReadKeys();
 
         if (gSoftResetDisabled == FALSE
@@ -150,7 +151,13 @@ void AgbMain()
         else
         {
             gLinkTransferringData = FALSE;
+            doubleSpeed = FlagGet(FLAG_DOUBLE_SPEED) == TRUE
+                       && Overworld_RecvKeysFromLinkIsRunning() == FALSE
+                       && IsBattleTransitionTaskActive() == FALSE
+                       && IsDoubleSpeedBlockedContext() == FALSE;
+            gOverworldSkipRender = doubleSpeed;
             UpdateLinkAndCallCallbacks();
+            gOverworldSkipRender = FALSE;
 
             if (Overworld_RecvKeysFromLinkIsRunning() == TRUE)
             {
@@ -160,15 +167,17 @@ void AgbMain()
                 UpdateLinkAndCallCallbacks();
                 gLinkTransferringData = FALSE;
             }
-            else if (FlagGet(FLAG_DOUBLE_SPEED) == TRUE
-                  && IsBattleTransitionTaskActive() == FALSE
-                  && IsDoubleSpeedBlockedContext() == FALSE)
+            else if (doubleSpeed == TRUE
+                  && IsBattleTransitionTaskActive() == FALSE)
             {
                 gMain.newKeys = 0;
                 gMain.newKeysRaw = 0;
                 gMain.newAndRepeatedKeys = 0;
                 UpdateLinkAndCallCallbacks();
             }
+
+            if (gOverworldRenderSkipped == TRUE)
+                OverworldRenderCatchUp();
         }
 
         PlayTimeCounter_Update();

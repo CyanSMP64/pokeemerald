@@ -1483,6 +1483,17 @@ void CB1_Overworld(void)
         DoCB1_Overworld(gMain.newKeys, gMain.heldKeys);
 }
 
+EWRAM_DATA bool8 gOverworldSkipRender = FALSE;
+EWRAM_DATA bool8 gOverworldRenderSkipped = FALSE;
+
+void OverworldRenderCatchUp(void)
+{
+    BuildOamBuffer();
+    DoScheduledBgTilemapCopiesToVram();
+    TryStartVisibleHiddenItemSparkles();
+    gOverworldRenderSkipped = FALSE;
+}
+
 static void OverworldBasic(void)
 {
     ScriptContext_RunScript();
@@ -1490,11 +1501,19 @@ static void OverworldBasic(void)
     AnimateSprites();
     CameraUpdate();
     UpdateCameraPanning();
+    if (gOverworldSkipRender)
+    {
+        gOverworldRenderSkipped = TRUE;
+        UpdatePaletteFade();
+        UpdateTilesetAnimations();
+        return;
+    }
     BuildOamBuffer();
     UpdatePaletteFade();
     UpdateTilesetAnimations();
     DoScheduledBgTilemapCopiesToVram();
     TryStartVisibleHiddenItemSparkles();
+    gOverworldRenderSkipped = FALSE;
 }
 
 // This CB2 is used when starting
@@ -3306,6 +3325,6 @@ static void TryStartVisibleHiddenItemSparkles(void)
         gFieldEffectArguments[1] = bgEvents[i].y;
         gFieldEffectArguments[2] = 0;
         FieldEffectStart(FLDEFF_SPARKLE);
-        sHiddenItemSparkleCooldown[i] = 16;
+        sHiddenItemSparkleCooldown[i] = (FlagGet(FLAG_DOUBLE_SPEED) ? 8 : 16);
     }
 }
