@@ -1070,7 +1070,7 @@ static u16 RenderText(struct TextPrinter *textPrinter)
                     return RENDER_PRINT;
                 }
                 return RENDER_REPEAT;
-            case EXT_CTRL_CODE_SKIP:
+            case EXT_CTRL_CODE_SKIP_TO:
                 textPrinter->printerTemplate.currentX = *textPrinter->printerTemplate.currentChar + textPrinter->printerTemplate.x;
                 textPrinter->printerTemplate.currentChar++;
                 return RENDER_REPEAT;
@@ -1272,7 +1272,7 @@ static u32 UNUSED GetStringWidthFixedWidthFont(const u8 *str, u8 fontId, u8 lett
             case EXT_CTRL_CODE_SHIFT_RIGHT:
             case EXT_CTRL_CODE_SHIFT_DOWN:
             case EXT_CTRL_CODE_CLEAR:
-            case EXT_CTRL_CODE_SKIP:
+            case EXT_CTRL_CODE_SKIP_TO:
             case EXT_CTRL_CODE_CLEAR_TO:
             case EXT_CTRL_CODE_MIN_LETTER_SPACING:
                 ++strPos;
@@ -1426,7 +1426,7 @@ s32 GetStringWidth(u8 fontId, const u8 *str, s16 letterSpacing)
                 glyphWidth = *++str;
                 lineWidth += glyphWidth;
                 break;
-            case EXT_CTRL_CODE_SKIP:
+            case EXT_CTRL_CODE_SKIP_TO:
                 lineWidth = *++str;
                 break;
             case EXT_CTRL_CODE_CLEAR_TO:
@@ -1557,7 +1557,7 @@ u8 RenderTextHandleBold(u8 *pixels, u8 fontId, u8 *str)
             case EXT_CTRL_CODE_SHIFT_RIGHT:
             case EXT_CTRL_CODE_SHIFT_DOWN:
             case EXT_CTRL_CODE_CLEAR:
-            case EXT_CTRL_CODE_SKIP:
+            case EXT_CTRL_CODE_SKIP_TO:
             case EXT_CTRL_CODE_CLEAR_TO:
             case EXT_CTRL_CODE_MIN_LETTER_SPACING:
                 ++strPos;

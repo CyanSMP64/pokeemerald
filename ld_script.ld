@@ -3,12 +3,7 @@ ENTRY(Start)
 gNumMusicPlayers = 4;
 gMaxLines = 0;
 
-MEMORY
-{
-    EWRAM (rwx) : ORIGIN = 0x2000000, LENGTH = 256K
-    IWRAM (rwx) : ORIGIN = 0x3000000, LENGTH = 32K
-    ROM    (rx) : ORIGIN = 0x8000000, LENGTH = 32M
-}
+INCLUDE "memory.ld"
 
 /* Modify the following load addresses as needed to make more room. Alternately, delete both the
    declarations below and their references further down to get rid of the gaps.                  */
@@ -125,6 +120,7 @@ SECTIONS {
         src/field_message_box.o(.text);
         src/event_object_lock.o(.text);
         src/text_window.o(.text);
+        src/script_vm.o(.text);
         src/script.o(.text);
         src/scrcmd.o(.text);
         src/field_control_avatar.o(.text);
@@ -509,6 +505,7 @@ SECTIONS {
         src/field_player_avatar.o(.rodata);
         src/event_object_movement.o(.rodata);
         src/text_window.o(.rodata);
+        src/script_vm.o(.rodata);
         src/scrcmd.o(.rodata);
         src/field_control_avatar.o(.rodata);
         src/coord_event_weather.o(.rodata);
