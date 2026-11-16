@@ -1,7 +1,7 @@
 voice_group ut_005
 	voice_keysplit voicegroup_piano1f, keysplit_piano1 + 4
 	voice_keysplit voicegroup_piano1p, keysplit_piano1 + 4
-	voice_keysplit voicegroup_glocken, keysplit_glocken + 4
+	voice_keysplit voicegroup_glocken, keysplit_glocken
 	voice_directsound 48, 0, DirectSoundWaveData_fretlessbass_c3, 255, 235, 200, 100
 	voice_keysplit voicegroup_strings, keysplit_strings_new + 4
 	voice_directsound 72, 0, DirectSoundWaveData_sinewave_c5, 80, 0, 255, 100

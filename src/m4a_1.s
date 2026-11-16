@@ -199,6 +199,12 @@ C_channel_state_loop:
 	movs r0, #0xC7                       @ check if any of the channel status flags is set
 	tst r0, r6                          @ check if none of the flags is set
 	beq C_skip_channel
+	movs r7, #1
+	ldr r1, [r4, #o_SoundChannel_mplayInfo]
+	cmp r1, #0
+	beq C_channel_tick_count_ready
+	ldrb r7, [r1, #o_MusicPlayerInfo_adsrTick]
+C_channel_tick_count_ready:
 	/* check channel flags */
 	lsl r0, r6, #25                     @ shift over the SOUND_CHANNEL_SF_START to CARRY
 	bcc C_adsr_echo_check               @ continue with normal channel procedure
@@ -266,6 +272,10 @@ C_channel_init_check_loop_no_fine_pos:
 	strb r5, [r4, #o_SoundChannel_envelopeVolume]
 	mov r2, #CHN_SAMPLE_STOR            @ offset is too large to be used in one instruction
 	strb r5, [r4, r2]
+	cmp r7, #0
+	bne C_channel_init_tick_ready
+	movs r7, #1
+C_channel_init_tick_ready:
 	/* enabled loop if required */
 	ldrb r2, [r3, #o_WaveData_flags]
 	lsr r0, r2, #6
@@ -277,12 +287,7 @@ C_channel_init_check_loop_no_fine_pos:
 C_adsr_echo_check:
 	/* this is the normal ADSR procedure without init */
 	ldrb r5, [r4, #o_SoundChannel_envelopeVolume]
-	/* songSpeed adsr clock (directsound only) - skip envelope tick when flag is 0 */
-	ldr r1, [r4, #o_SoundChannel_mplayInfo]
-	cmp r1, #0
-	beq C_adsr_tick_ok
-	ldrb r0, [r1, #o_MusicPlayerInfo_adsrTick]
-	cmp r0, #0
+	cmp r7, #0
 	bne C_adsr_tick_ok
 	b C_channel_vol_calc
 C_adsr_tick_ok:
@@ -292,7 +297,7 @@ C_adsr_tick_ok:
 	ldrb r0, [r4, #o_SoundChannel_pseudoEchoLength]
 	sub r0, #1
 	strb r0, [r4, #o_SoundChannel_pseudoEchoLength]
-	bhi C_channel_vol_calc              @ continue normal if channel is still on
+	bhi C_adsr_step_done                @ continue normal if channel is still on
 
 C_stop_channel:
 	movs r0, #0
@@ -313,7 +318,7 @@ C_adsr_release_check:
 	/* pseudo echo init handler */
 	ldrb r0, [r4, #o_SoundChannel_pseudoEchoVolume]
 	cmp r5, r0
-	bhi C_channel_vol_calc
+	bhi C_adsr_step_done
 
 C_adsr_released:
 	/* if volume released to #0 */
@@ -337,7 +342,7 @@ C_adsr_decay_check:
 	lsr r5, r5, #8
 	ldrb r0, [r4, #o_SoundChannel_sustain]
 	cmp r5, r0
-	bhi C_channel_vol_calc              @ sample didn't decay yet
+	bhi C_adsr_step_done                @ sample didn't decay yet
 	/* sustain handler */
 	movs r5, r0                          @ current level = sustain level
 	beq C_adsr_released                 @ sustain level #0 --> branch
@@ -347,7 +352,7 @@ C_adsr_decay_check:
 C_adsr_attack_check:
 	/* attack handler */
 	cmp r2, #SOUND_CHANNEL_SF_ENV_ATTACK
-	bne C_channel_vol_calc              @ if it isn't in attack attack phase, it has to be in sustain (keep vol) --> branch
+	bne C_channel_vol_calc              @ sustain remains unchanged
 
 C_adsr_attack:
 	/* apply attack summand */
@@ -365,6 +370,10 @@ C_adsr_next_state:
 C_adsr_save_and_finalize:
 	/* store channel status */
 	strb r6, [r4, #o_SoundChannel_statusFlags]
+
+C_adsr_step_done:
+	sub r7, #1
+	bne C_adsr_tick_ok
 
 C_channel_vol_calc:
 	/* store the calculated ADSR level */
