@@ -676,7 +676,7 @@ u8 GetExtCtrlCodeLength(u8 code)
         [EXT_CTRL_CODE_FILL_WINDOW]            = 1,
         [EXT_CTRL_CODE_PLAY_SE]                = 3,
         [EXT_CTRL_CODE_CLEAR]                  = 2,
-        [EXT_CTRL_CODE_SKIP]                   = 2,
+        [EXT_CTRL_CODE_SKIP_TO]                = 2,
         [EXT_CTRL_CODE_CLEAR_TO]               = 2,
         [EXT_CTRL_CODE_MIN_LETTER_SPACING]     = 2,
         [EXT_CTRL_CODE_JPN]                    = 1,

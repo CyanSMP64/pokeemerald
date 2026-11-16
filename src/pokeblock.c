@@ -740,7 +740,7 @@ static void PutPokeblockListMenuString(u8 *dst, u16 pkblId)
     u8 *txtPtr = StringCopy(dst, gPokeblockNames[pkblock->color]);
 
     *(txtPtr++) = EXT_CTRL_CODE_BEGIN;
-    *(txtPtr++) = EXT_CTRL_CODE_SKIP;
+    *(txtPtr++) = EXT_CTRL_CODE_SKIP_TO;
     *(txtPtr++) = CHAR_BLOCK_1;
 
     ConvertIntToDecimalStringN(gStringVar1, GetHighestPokeblocksFlavorLevel(pkblock), STR_CONV_MODE_LEFT_ALIGN, 3);

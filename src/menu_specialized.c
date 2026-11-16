@@ -940,7 +940,7 @@ static u8 *GetConditionMenuMonString(u8 *dst, u16 boxId, u16 monId)
         ;
 
     *(str++) = EXT_CTRL_CODE_BEGIN;
-    *(str++) = EXT_CTRL_CODE_SKIP;
+    *(str++) = EXT_CTRL_CODE_SKIP_TO;
     *(str++) = 60;
 
     switch (gender)

@@ -7,7 +7,8 @@
 // loaded at once but not copied to vram yet.
 #define TEXT_SKIP_DRAW 0xFF
 
-enum {
+enum
+{
     FONT_SMALL,
     FONT_NORMAL,
     FONT_SHORT,
@@ -21,7 +22,8 @@ enum {
 };
 
 // Return values for font functions
-enum {
+enum
+{
     RENDER_PRINT,
     RENDER_FINISH,
     RENDER_REPEAT, // Run render function again, if e.g. a control code is encountered.
@@ -29,7 +31,8 @@ enum {
 };
 
 // Text printer states read by RenderText / FontFunc_Braille
-enum {
+enum
+{
     RENDER_STATE_HANDLE_CHAR,
     RENDER_STATE_WAIT,
     RENDER_STATE_CLEAR,
@@ -39,7 +42,8 @@ enum {
     RENDER_STATE_PAUSE,
 };
 
-enum {
+enum
+{
     FONTATTR_MAX_LETTER_WIDTH,
     FONTATTR_MAX_LETTER_HEIGHT,
     FONTATTR_LETTER_SPACING,
