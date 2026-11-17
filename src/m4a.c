@@ -9,7 +9,7 @@ extern const u8 gCgb3Vol[];
 
 #define BSS_CODE __attribute__((section(".bss.code")))
 
-BSS_CODE ALIGNED(4) char SoundMainRAM_Buffer[0xaf0] = {0};
+BSS_CODE ALIGNED(4) char SoundMainRAM_Buffer[0xafc] = {0};
 BSS_CODE ALIGNED(4) u32 hq_buffer_ptr[0x160] = {0};
 
 struct SoundInfo gSoundInfo;
@@ -55,7 +55,6 @@ void UnusedDummyFunc(void)
 {
 }
 
-// i used ai for these sorry
 static void PrimeTempoCounter(struct MusicPlayerInfo *mplayInfo)
 {
     u32 scaledTempoStep = mplayInfo->tempoI * mplayInfo->songSpeed;
@@ -84,74 +83,21 @@ static void PrimeTempoCounter(struct MusicPlayerInfo *mplayInfo)
 
 static void PrimeAdsrCounter(struct MusicPlayerInfo *mplayInfo)
 {
-    u16 num;
-    u16 den;
-    u16 counter;
     u16 songSpeed = mplayInfo->songSpeed;
 
-    if (songSpeed >= 1024)
-    {
-        num = 1024;
-        den = songSpeed;
-    }
+    if (songSpeed > 0 && songSpeed < 1024)
+        mplayInfo->adsrCounter = 1024 - songSpeed;
     else
-    {
-        num = songSpeed;
-        den = 1024;
-    }
-
-    if (num >= den)
-    {
-        counter = 0;
-        mplayInfo->adsrTick = 1;
-    }
-    else
-    {
-        counter = den - num;
-        mplayInfo->adsrTick = 1;
-    }
-
-    mplayInfo->adsrCounter = counter;
+        mplayInfo->adsrCounter = 0;
+    mplayInfo->adsrTick = 1;
 }
 
 void AdvanceAdsrCounter(struct MusicPlayerInfo *mplayInfo)
 {
-    u16 num;
-    u16 den;
-    u16 counter;
-    u16 songSpeed = mplayInfo->songSpeed;
+    u32 counter = mplayInfo->adsrCounter + mplayInfo->songSpeed;
 
-    if (songSpeed >= 1024)
-    {
-        num = 1024;
-        den = songSpeed;
-    }
-    else
-    {
-        num = songSpeed;
-        den = 1024;
-    }
-
-    if (num >= den)
-    {
-        mplayInfo->adsrTick = 1;
-        return;
-    }
-
-    counter = mplayInfo->adsrCounter;
-    counter += num;
-
-    if (counter >= den)
-    {
-        counter -= den;
-        mplayInfo->adsrTick = 1;
-    }
-    else
-    {
-        mplayInfo->adsrTick = 0;
-    }
-
-    mplayInfo->adsrCounter = counter;
+    mplayInfo->adsrTick = counter >> 10;
+    mplayInfo->adsrCounter = counter & 1023;
 }
 
 void MPlayContinue(struct MusicPlayerInfo *mplayInfo)
