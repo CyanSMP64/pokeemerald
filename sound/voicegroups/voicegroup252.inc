@@ -62,4 +62,4 @@ voicegroup252_kit::
 	voice_none
 	voice_none
 	voice_directsound 68, 30, DirectSoundWaveData_pmd1_triclosed, 255, 0, 255, 127
-	voice_directsound 68, 30, DirectSoundWaveData_pmd1_triopen, 255, 180, 60, 127 @ adjusted pitch from 93 so it mixes better on gba (this can be sample rate dependent)
+	voice_directsound 93, 30, DirectSoundWaveData_pmd2_triopen33, 255, 180, 60, 127

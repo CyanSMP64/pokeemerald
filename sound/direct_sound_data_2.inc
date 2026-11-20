@@ -2212,9 +2212,9 @@ DirectSoundWaveData_pmd1_tambourine::
 DirectSoundWaveData_pmd1_triclosed::
 	.incbin "sound/direct_sound_samples/pmd1/triclosed.bin"
 
-	.align 2
-DirectSoundWaveData_pmd1_triopen::
-	.incbin "sound/direct_sound_samples/pmd1/triopen.bin"
+@	.align 2
+@DirectSoundWaveData_pmd1_triopen::
+@	.incbin "sound/direct_sound_samples/pmd1/triopen.bin"
 
 	.align 2
 DirectSoundWaveData_pmd1_choiraah_g4::
@@ -2283,6 +2283,10 @@ DirectSoundWaveData_pmd1_synthbass1_c2::
 	.align 2
 DirectSoundWaveData_pmd1_panflute2_c6::
 	.incbin "sound/direct_sound_samples/pmd1_ds/67.bin"
+
+	.align 2
+DirectSoundWaveData_pmd2_triopen33::
+	.incbin "sound/direct_sound_samples/pmd2/0101_adpcm_plus33semi.bin"
 
 	.align 2
 DirectSoundWaveData_pmd2_timpani_a2::
