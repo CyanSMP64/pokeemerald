@@ -2284,6 +2284,9 @@ DirectSoundWaveData_pmd1_synthbass1_c2::
 DirectSoundWaveData_pmd1_panflute2_c6::
 	.incbin "sound/direct_sound_samples/pmd1_ds/67.bin"
 
+@ the open triangle in this game plays back at an absurdly high sample rate such
+@ that it will sound inaccurate when played back at any mixing rate != 32728 hz.
+@ as such, i rendered these myself to avoid conflicts.
 	.align 2
 DirectSoundWaveData_pmd2_triopen33::
 	.incbin "sound/direct_sound_samples/pmd2/0101_adpcm_plus33semi.bin"
