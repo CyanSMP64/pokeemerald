@@ -174,6 +174,10 @@ static void KeepMoveSelectorVisible(u8);
 static void SummaryScreen_DestroyAnimDelayTask(void);
 static void BufferStat(u8 *dst, s8 natureMod, u32 stat, u32 strId, u32 n);
 
+static void DisplayCategory(u16);
+static const u16 sCategoryIcon_Pal[] = INCBIN_U16("graphics/summary_screen/split_icons_summary.gbapal");
+static const u8 sCategoryIcon_Gfx[] = INCBIN_U8("graphics/summary_screen/split_icons_summary.4bpp");
+
 // const rom data
 #include "data/text/move_descriptions.h"
 #include "data/text/nature_names.h"
@@ -311,13 +315,13 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .paletteNum = 7,
         .baseBlock = 121,
     },
-    [PSS_LABEL_WINDOW_UNUSED1] = {
+    [PSS_LABEL_WINDOW_CATEGORY] = {
         .bg = 0,
-        .tilemapLeft = 11,
-        .tilemapTop = 4,
-        .width = 0,
+        .tilemapLeft = 37,
+        .tilemapTop = 15,
+        .width = 2,
         .height = 2,
-        .paletteNum = 6,
+        .paletteNum = 10,
         .baseBlock = 137,
     },
     [PSS_LABEL_WINDOW_POKEMON_INFO_RENTAL] = {
@@ -327,7 +331,7 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .width = 18,
         .height = 2,
         .paletteNum = 6,
-        .baseBlock = 137,
+        .baseBlock = 141,
     },
     [PSS_LABEL_WINDOW_POKEMON_INFO_TYPE] = {
         .bg = 0,
@@ -336,7 +340,7 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .width = 18,
         .height = 2,
         .paletteNum = 6,
-        .baseBlock = 173,
+        .baseBlock = 177,
     },
     [PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_LEFT] = {
         .bg = 0,
@@ -345,7 +349,7 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .width = 6,
         .height = 6,
         .paletteNum = 6,
-        .baseBlock = 209,
+        .baseBlock = 213,
     },
     [PSS_LABEL_WINDOW_POKEMON_SKILLS_STATS_RIGHT] = {
         .bg = 0,
@@ -354,7 +358,7 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .width = 5,
         .height = 6,
         .paletteNum = 6,
-        .baseBlock = 245,
+        .baseBlock = 249,
     },
     [PSS_LABEL_WINDOW_POKEMON_SKILLS_EXP] = {
         .bg = 0,
@@ -363,7 +367,7 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .width = 11,
         .height = 4,
         .paletteNum = 6,
-        .baseBlock = 275,
+        .baseBlock = 279,
     },
     [PSS_LABEL_WINDOW_POKEMON_SKILLS_STATUS] = {
         .bg = 0,
@@ -372,7 +376,7 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .width = 6,
         .height = 2,
         .paletteNum = 6,
-        .baseBlock = 319,
+        .baseBlock = 323,
     },
     [PSS_LABEL_WINDOW_MOVES_POWER_ACC] = {
         .bg = 0,
@@ -381,7 +385,7 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .width = 9,
         .height = 4,
         .paletteNum = 6,
-        .baseBlock = 331,
+        .baseBlock = 335,
     },
     [PSS_LABEL_WINDOW_MOVES_APPEAL_JAM] = {
         .bg = 0,
@@ -390,7 +394,7 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .width = 5,
         .height = 4,
         .paletteNum = 6,
-        .baseBlock = 367,
+        .baseBlock = 371,
     },
     [PSS_LABEL_WINDOW_UNUSED2] = {
         .bg = 0,
@@ -399,7 +403,7 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .width = 0,
         .height = 2,
         .paletteNum = 6,
-        .baseBlock = 387,
+        .baseBlock = 391,
     },
     [PSS_LABEL_WINDOW_PORTRAIT_DEX_NUMBER] = {
         .bg = 0,
@@ -408,7 +412,7 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .width = 5,
         .height = 2,
         .paletteNum = 7,
-        .baseBlock = 387,
+        .baseBlock = 391,
     },
     [PSS_LABEL_WINDOW_PORTRAIT_NICKNAME] = {
         .bg = 0,
@@ -417,7 +421,7 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .width = 9,
         .height = 2,
         .paletteNum = 6,
-        .baseBlock = 397,
+        .baseBlock = 401,
     },
     [PSS_LABEL_WINDOW_PORTRAIT_SPECIES] = {
         .bg = 0,
@@ -426,7 +430,7 @@ static const struct WindowTemplate sSummaryTemplate[] =
         .width = 9,
         .height = 4,
         .paletteNum = 6,
-        .baseBlock = 415,
+        .baseBlock = 419,
     },
     [PSS_LABEL_WINDOW_END] = DUMMY_WIN_TEMPLATE
 };
@@ -439,7 +443,7 @@ static const struct WindowTemplate sPageInfoTemplate[] =
         .width = 11,
         .height = 2,
         .paletteNum = 6,
-        .baseBlock = 451,
+        .baseBlock = 455,
     },
     [PSS_DATA_WINDOW_INFO_ID] = {
         .bg = 0,
@@ -448,7 +452,7 @@ static const struct WindowTemplate sPageInfoTemplate[] =
         .width = 7,
         .height = 2,
         .paletteNum = 6,
-        .baseBlock = 473,
+        .baseBlock = 477,
     },
     [PSS_DATA_WINDOW_INFO_ABILITY] = {
         .bg = 0,
@@ -457,7 +461,7 @@ static const struct WindowTemplate sPageInfoTemplate[] =
         .width = 18,
         .height = 4,
         .paletteNum = 6,
-        .baseBlock = 487,
+        .baseBlock = 491,
     },
     [PSS_DATA_WINDOW_INFO_MEMO] = {
         .bg = 0,
@@ -466,7 +470,7 @@ static const struct WindowTemplate sPageInfoTemplate[] =
         .width = 18,
         .height = 6,
         .paletteNum = 6,
-        .baseBlock = 559,
+        .baseBlock = 563,
     },
 };
 static const struct WindowTemplate sPageSkillsTemplate[] =
@@ -478,7 +482,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 10,
         .height = 2,
         .paletteNum = 6,
-        .baseBlock = 451,
+        .baseBlock = 455,
     },
     [PSS_DATA_WINDOW_SKILLS_RIBBON_COUNT] = {
         .bg = 0,
@@ -487,7 +491,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 10,
         .height = 2,
         .paletteNum = 6,
-        .baseBlock = 471,
+        .baseBlock = 475,
     },
     [PSS_DATA_WINDOW_SKILLS_STATS_LEFT] = {
         .bg = 0,
@@ -496,7 +500,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 6,
         .height = 6,
         .paletteNum = 6,
-        .baseBlock = 491,
+        .baseBlock = 495,
     },
     [PSS_DATA_WINDOW_SKILLS_STATS_RIGHT] = {
         .bg = 0,
@@ -505,7 +509,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 3,
         .height = 6,
         .paletteNum = 6,
-        .baseBlock = 527,
+        .baseBlock = 531,
     },
     [PSS_DATA_WINDOW_EXP] = {
         .bg = 0,
@@ -514,7 +518,7 @@ static const struct WindowTemplate sPageSkillsTemplate[] =
         .width = 6,
         .height = 4,
         .paletteNum = 6,
-        .baseBlock = 545,
+        .baseBlock = 549,
     },
 };
 static const struct WindowTemplate sPageMovesTemplate[] = // This is used for both battle and contest moves
@@ -526,7 +530,7 @@ static const struct WindowTemplate sPageMovesTemplate[] = // This is used for bo
         .width = 10,
         .height = 10,
         .paletteNum = 6,
-        .baseBlock = 451,
+        .baseBlock = 455,
     },
     [PSS_DATA_WINDOW_MOVE_PP] = {
         .bg = 0,
@@ -535,7 +539,7 @@ static const struct WindowTemplate sPageMovesTemplate[] = // This is used for bo
         .width = 5,
         .height = 10,
         .paletteNum = 8,
-        .baseBlock = 551,
+        .baseBlock = 555,
     },
     [PSS_DATA_WINDOW_MOVE_DESCRIPTION] = {
         .bg = 0,
@@ -544,7 +548,7 @@ static const struct WindowTemplate sPageMovesTemplate[] = // This is used for bo
         .width = 20,
         .height = 4,
         .paletteNum = 6,
-        .baseBlock = 601,
+        .baseBlock = 605,
     },
 };
 static const u8 sTextColors[][3] =
@@ -2303,8 +2307,10 @@ static void Task_ShowPowerAccWindow(u8 taskId)
     {
         if (data[0] < 0)
         {
-            if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES)
+            if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES) {
                 PutWindowTilemap(PSS_LABEL_WINDOW_MOVES_POWER_ACC);
+                DisplayCategory(sMonSummaryScreen->summary.moves[sMonSummaryScreen->firstMoveIndex]);
+            }
         }
         else
         {
@@ -3507,6 +3513,7 @@ static void PrintMoveDetails(u16 move)
         {
             PrintMovePowerAndAccuracy(move);
             PrintTextOnWindowWithFont(windowId, gMoveDescriptionPointers[move - 1], 6, 1, 0, 0, FONT_NORMAL);
+            DisplayCategory(move);
         }
         else
         {
@@ -4048,4 +4055,12 @@ static void KeepMoveSelectorVisible(u8 firstSpriteId)
         gSprites[spriteIds[i]].data[1] = 0;
         gSprites[spriteIds[i]].invisible = FALSE;
     }
+}
+
+static void DisplayCategory(u16 move)
+{
+    LoadPalette(sCategoryIcon_Pal, 10 * 0x10, 0x20);
+    BlitBitmapToWindow(PSS_LABEL_WINDOW_CATEGORY, sCategoryIcon_Gfx + 0x80 * (gBattleMoves[move].category - 1), 0, 0, 16, 16);
+    PutWindowTilemap(PSS_LABEL_WINDOW_CATEGORY);
+    CopyWindowToVram(PSS_LABEL_WINDOW_CATEGORY, 3);
 }
