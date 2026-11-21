@@ -242,10 +242,6 @@ BattleScript_EffectHit::
 BattleScript_HitFromAtkCanceler::
 	attackcanceler
 BattleScript_HitFromAccCheck::
-	jumpifnotmove MOVE_STRUGGLE, BattleScript_HitFromAccCheckAccuracy
-	accuracycheck BattleScript_PrintMoveMissed, NO_ACC_CALC_CHECK_LOCK_ON
-	goto BattleScript_HitFromAtkString
-BattleScript_HitFromAccCheckAccuracy::
 	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 BattleScript_HitFromAtkString::
 	attackstring
@@ -607,7 +603,7 @@ BattleScript_EffectRoar::
 	jumpifability BS_TARGET, ABILITY_SUCTION_CUPS, BattleScript_AbilityPreventsPhasingOut
 	jumpifstatus3 BS_TARGET, STATUS3_ROOTED, BattleScript_PrintMonIsRooted
 	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
-@	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
+	accuracycheck BattleScript_MoveMissedPause, ACC_CURR_MOVE
 	jumpifbattletype BATTLE_TYPE_ARENA, BattleScript_ButItFailed
 	forcerandomswitch BattleScript_ButItFailed
 
@@ -1312,7 +1308,7 @@ BattleScript_EffectLockOn::
 	attackstring
 	ppreduce
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
-	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
+	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
 	setalwayshitflag
 	attackanimation
 	waitanimation
@@ -1495,7 +1491,6 @@ BattleScript_EffectNightmare::
 	jumpifstatus BS_TARGET, STATUS1_SLEEP, BattleScript_NightmareWorked
 	goto BattleScript_ButItFailed
 BattleScript_NightmareWorked::
-	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackanimation
 	waitanimation
 	setmoveeffect MOVE_EFFECT_NIGHTMARE
@@ -1585,7 +1580,7 @@ BattleScript_EffectSpikes::
 
 BattleScript_EffectForesight::
 	attackcanceler
-	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
+	accuracycheck BattleScript_PrintMoveMissed, ACC_CURR_MOVE
 	attackstring
 	ppreduce
 	setforesight
@@ -2234,7 +2229,6 @@ BattleScript_AlreadyBurned::
 BattleScript_EffectMemento::
 	attackcanceler
 	jumpifbyte CMP_EQUAL, cMISS_TYPE, B_MSG_PROTECTED, BattleScript_MementoTargetProtect
-	accuracycheck BattleScript_MementoMissed, ACC_CURR_MOVE
 	attackstring
 	ppreduce
 	trymemento BattleScript_ButItFailed
@@ -2274,15 +2268,6 @@ BattleScript_MementoTargetProtect:
 BattleScript_MementoTargetProtectEnd:
 	setatkhptozero
 	pause B_WAIT_TIME_LONG
-	effectivenesssound
-	resultmessage
-	waitmessage B_WAIT_TIME_LONG
-	tryfaintmon BS_ATTACKER
-	goto BattleScript_MoveEnd
-BattleScript_MementoMissed:
-	attackstring
-	ppreduce
-	setatkhptozero
 	effectivenesssound
 	resultmessage
 	waitmessage B_WAIT_TIME_LONG
@@ -3366,7 +3351,7 @@ BattleScript_BideAttack::
 	clearstatusfromeffect BS_ATTACKER
 	printstring STRINGID_PKMNUNLEASHEDENERGY
 	waitmessage B_WAIT_TIME_LONG
-@	accuracycheck BattleScript_MoveMissed, ACC_CURR_MOVE
+	accuracycheck BattleScript_MoveMissed, ACC_CURR_MOVE
 	typecalc
 	bicbyte gMoveResultFlags, MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE
 	copyword gBattleMoveDamage, sBIDE_DMG
