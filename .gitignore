@@ -42,3 +42,4 @@ prefabs.json
 *.toml
 *:Zone.Identifier
 *.bak
+*.sym
