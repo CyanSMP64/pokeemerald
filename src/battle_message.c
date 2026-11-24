@@ -223,6 +223,7 @@ static const u8 sText_PkmnCenterAttention[] = _("{B_ATK_NAME_WITH_PREFIX} became
 static const u8 sText_PkmnChargingPower[] = _("{B_ATK_NAME_WITH_PREFIX} began charging power!");
 static const u8 sText_NaturePowerTurnedInto[] = _("Nature Power turned into {B_BUFF2}");
 static const u8 sText_PkmnStatusNormal[] = _("{B_ATK_NAME_WITH_PREFIX}{B_BUFF1} {B_BUFF2}");
+static const u8 sText_PartyMonStatusCured[] = _("{B_BUFF1}{B_BUFF2} {B_BUFF3}");
 static const u8 sText_PkmnSubjectedToTorment[] = _("{B_DEF_NAME_WITH_PREFIX} was subjected to torment!");
 static const u8 sText_PkmnTighteningFocus[] = _("{B_ATK_NAME_WITH_PREFIX} is tightening its focus!");
 static const u8 sText_PkmnFellForTaunt[] = _("{B_DEF_NAME_WITH_PREFIX} fell for the taunt!");
@@ -282,7 +283,7 @@ static const u8 sText_PkmnHurtsWith[] = _("{B_ATK_NAME_WITH_PREFIX} was hurt!");
 static const u8 sText_PkmnTraced[] = _("It traced {B_BUFF1}'s {B_BUFF2}!");
 static const u8 sText_PkmnsXPreventsBurns[] = _("{B_EFF_NAME_WITH_PREFIX}'s {B_EFF_ABILITY} prevents burns!");
 static const u8 sText_PkmnsXBlocksY[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY} blocks {B_CURRENT_MOVE}!");
-static const u8 sText_PkmnsXBlocksY2[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY} blocks {B_CURRENT_MOVE}!");
+static const u8 sText_ItDoesntAffect2[] = _("It doesn't affect {B_SCR_ACTIVE_NAME_WITH_PREFIX_LOWER}…");
 static const u8 sText_PkmnsXRestoredHPALittle2[] = _("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY} restored its HP a little!");
 static const u8 sText_PkmnsAttackWasNotLowered[] = _("{B_DEF_NAME_WITH_PREFIX}'s Attack was not lowered!");
 static const u8 sText_PkmnSuckedUpLiquidOoze[] = _("{B_DEF_NAME_WITH_PREFIX} sucked up the liquid ooze!");
@@ -868,7 +869,7 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_S
     [STRINGID_PKMNSXPREVENTSFLINCHING - BATTLESTRINGS_TABLE_START] = sText_PkmnsXPreventsFlinching,
     [STRINGID_PKMNALREADYHASBURN - BATTLESTRINGS_TABLE_START] = sText_PkmnAlreadyHasBurn,
     [STRINGID_STATSWONTDECREASE2 - BATTLESTRINGS_TABLE_START] = sText_StatsWontDecrease2,
-    [STRINGID_PKMNSXBLOCKSY2 - BATTLESTRINGS_TABLE_START] = sText_PkmnsXBlocksY2,
+    [STRINGID_ITDOESNTAFFECT2 - BATTLESTRINGS_TABLE_START] = sText_ItDoesntAffect2,
     [STRINGID_PKMNSXWOREOFF - BATTLESTRINGS_TABLE_START] = sText_PkmnsXWoreOff,
     [STRINGID_PKMNTRAPPEDINFIERYVORTEX - BATTLESTRINGS_TABLE_START] = sText_PkmnTrappedInFieryVortex,
     [STRINGID_BOOSTED - BATTLESTRINGS_TABLE_START] = sText_Boosted,
@@ -908,6 +909,7 @@ const u8 * const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_S
     [STRINGID_SPACE1 - BATTLESTRINGS_TABLE_START] = sText_Space1,
     [STRINGID_EXTREMELYEFFECTIVE - BATTLESTRINGS_TABLE_START]            = sText_ExtremelyEffective,
     [STRINGID_MOSTLYINEFFECTIVE - BATTLESTRINGS_TABLE_START]             = sText_MostlyIneffective,
+    [STRINGID_PARTYMONSTATUSCURED - BATTLESTRINGS_TABLE_START]           = sText_PartyMonStatusCured,
 };
 
 const u16 gMissStringIds[] =

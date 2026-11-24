@@ -7103,7 +7103,7 @@ bool8 UproarWakeUpCheck(u8 battlerId)
 
     for (i = 0; i < gBattlersCount; i++)
     {
-        if (!(gBattleMons[i].status2 & STATUS2_UPROAR) || gBattleMons[battlerId].ability == ABILITY_SOUNDPROOF)
+        if (!(gBattleMons[i].status2 & STATUS2_UPROAR) || (gBattleMons[battlerId].ability == ABILITY_SOUNDPROOF && battlerId != i))
             continue;
 
         gBattleScripting.battler = i;
@@ -8665,70 +8665,75 @@ static void Cmd_healpartystatus(void)
 {
     u32 zero = 0;
     u8 toHeal = 0;
+    bool8 partnerBehindSubstitute;
+    struct Pokemon *party;
+    s32 i;
+
+    gActiveBattler = GetBattlerAtPosition(BATTLE_PARTNER(GetBattlerPosition(gBattlerAttacker)));
+    partnerBehindSubstitute = (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
+                          && !(gAbsentBattlerFlags & gBitTable[gActiveBattler])
+                          && (gBattleMons[gActiveBattler].status2 & STATUS2_SUBSTITUTE);
+
+    if (GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER)
+        party = gPlayerParty;
+    else
+        party = gEnemyParty;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        u16 species = GetMonData(&party[i], MON_DATA_SPECIES_OR_EGG);
+        u32 status = 0;
+
+        if (species != SPECIES_NONE && species != SPECIES_EGG)
+        {
+            if (gBattlerPartyIndexes[gBattlerAttacker] == i)
+                status = gBattleMons[gBattlerAttacker].status1;
+            else if ((gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
+                  && !(gAbsentBattlerFlags & gBitTable[gActiveBattler])
+                  && gBattlerPartyIndexes[gActiveBattler] == i)
+                status = gBattleMons[gActiveBattler].status1;
+            else
+                status = GetMonData(&party[i], MON_DATA_STATUS);
+        }
+        gBattleStruct->partyHealStatuses[i] = status & STATUS1_ANY;
+    }
+    gBattleStruct->partyHealIndex = 0;
 
     if (gCurrentMove == MOVE_HEAL_BELL)
     {
-        struct Pokemon *party;
-        s32 i;
-
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_BELL;
 
-        if (GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER)
-            party = gPlayerParty;
-        else
-            party = gEnemyParty;
+        gBattleMons[gBattlerAttacker].status1 = 0;
+        gBattleMons[gBattlerAttacker].status2 &= ~STATUS2_NIGHTMARE;
 
-        if (gBattleMons[gBattlerAttacker].ability != ABILITY_SOUNDPROOF)
-        {
-            gBattleMons[gBattlerAttacker].status1 = 0;
-            gBattleMons[gBattlerAttacker].status2 &= ~STATUS2_NIGHTMARE;
-        }
-        else
-        {
-            RecordAbilityBattle(gBattlerAttacker, gBattleMons[gBattlerAttacker].ability);
-            gBattleCommunication[MULTISTRING_CHOOSER] |= B_MSG_BELL_SOUNDPROOF_ATTACKER;
-        }
-
-        gActiveBattler = gBattleScripting.battler = GetBattlerAtPosition(BATTLE_PARTNER(GetBattlerPosition(gBattlerAttacker)));
+        gBattleScripting.battler = gActiveBattler;
 
         if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE
             && !(gAbsentBattlerFlags & gBitTable[gActiveBattler]))
         {
-            if (gBattleMons[gActiveBattler].ability != ABILITY_SOUNDPROOF)
+            if (gBattleMons[gActiveBattler].ability != ABILITY_SOUNDPROOF && !partnerBehindSubstitute)
             {
                 gBattleMons[gActiveBattler].status1 = 0;
                 gBattleMons[gActiveBattler].status2 &= ~STATUS2_NIGHTMARE;
             }
-            else
+            else if (gBattleMons[gActiveBattler].ability == ABILITY_SOUNDPROOF)
             {
                 RecordAbilityBattle(gActiveBattler, gBattleMons[gActiveBattler].ability);
                 gBattleCommunication[MULTISTRING_CHOOSER] |= B_MSG_BELL_SOUNDPROOF_PARTNER;
             }
         }
 
-        // Because the above MULTISTRING_CHOOSER are ORd, if both are set then it will be B_MSG_BELL_BOTH_SOUNDPROOF
-
+        // nat dex: heal bell works on inactive party members regardless of abilities
         for (i = 0; i < PARTY_SIZE; i++)
         {
             u16 species = GetMonData(&party[i], MON_DATA_SPECIES_OR_EGG);
-            u8 abilityNum = GetMonData(&party[i], MON_DATA_ABILITY_NUM);
 
-            if (species != SPECIES_NONE && species != SPECIES_EGG)
-            {
-                u16 ability;
-
-                if (gBattlerPartyIndexes[gBattlerAttacker] == i)
-                    ability = gBattleMons[gBattlerAttacker].ability;
-                else if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE
-                         && gBattlerPartyIndexes[gActiveBattler] == i
-                         && !(gAbsentBattlerFlags & gBitTable[gActiveBattler]))
-                    ability = gBattleMons[gActiveBattler].ability;
-                else
-                    ability = GetAbilityBySpecies(species, abilityNum);
-
-                if (ability != ABILITY_SOUNDPROOF)
-                    toHeal |= (1 << i);
-            }
+            if (species != SPECIES_NONE && species != SPECIES_EGG
+                && (gBattlerPartyIndexes[gBattlerAttacker] == i
+                    || ((!partnerBehindSubstitute
+                         && !(gBattleCommunication[MULTISTRING_CHOOSER] & B_MSG_BELL_SOUNDPROOF_PARTNER))
+                        || gBattlerPartyIndexes[gActiveBattler] != i)))
+                toHeal |= (1 << i);
         }
     }
     else // Aromatherapy
@@ -8739,14 +8744,27 @@ static void Cmd_healpartystatus(void)
         gBattleMons[gBattlerAttacker].status1 = 0;
         gBattleMons[gBattlerAttacker].status2 &= ~STATUS2_NIGHTMARE;
 
-        gActiveBattler = GetBattlerAtPosition(BATTLE_PARTNER(GetBattlerPosition(gBattlerAttacker)));
         if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE
             && !(gAbsentBattlerFlags & gBitTable[gActiveBattler]))
         {
-            gBattleMons[gActiveBattler].status1 = 0;
-            gBattleMons[gActiveBattler].status2 &= ~STATUS2_NIGHTMARE;
+            if (partnerBehindSubstitute)
+            {
+                if (gBattlerPartyIndexes[gActiveBattler] != gBattlerPartyIndexes[gBattlerAttacker])
+                    toHeal &= ~(1 << gBattlerPartyIndexes[gActiveBattler]);
+            }
+            else
+            {
+                gBattleMons[gActiveBattler].status1 = 0;
+                gBattleMons[gActiveBattler].status2 &= ~STATUS2_NIGHTMARE;
+            }
         }
 
+    }
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (!(toHeal & (1 << i)))
+            gBattleStruct->partyHealStatuses[i] = 0;
     }
 
     if (toHeal)
@@ -8757,6 +8775,69 @@ static void Cmd_healpartystatus(void)
     }
 
     gBattlescriptCurrInstr++;
+}
+
+void BS_PartyHealHasCures(void)
+{
+    s32 i;
+
+    gBattleCommunication[0] = FALSE;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (gBattleStruct->partyHealStatuses[i])
+        {
+            gBattleCommunication[0] = TRUE;
+            break;
+        }
+    }
+    gBattlescriptCurrInstr += 5;
+}
+
+void BS_PreparePartyHealMessage(void)
+{
+    u8 status;
+    u8 i = gBattleStruct->partyHealIndex;
+    const u8 *first;
+    const u8 *second;
+
+    while (i < PARTY_SIZE && !gBattleStruct->partyHealStatuses[i])
+        i++;
+
+    gBattleCommunication[0] = (i < PARTY_SIZE);
+    if (i < PARTY_SIZE)
+    {
+        status = gBattleStruct->partyHealStatuses[i];
+        if (status & STATUS1_SLEEP)
+        {
+            first = gShedSkinString_Sleep1;
+            second = gShedSkinString_Sleep2;
+        }
+        else if (status & (STATUS1_POISON | STATUS1_TOXIC_POISON))
+        {
+            first = gShedSkinString_Poison1;
+            second = gShedSkinString_Poison2;
+        }
+        else if (status & STATUS1_BURN)
+        {
+            first = gShedSkinString_Burn1;
+            second = gShedSkinString_Burn2;
+        }
+        else if (status & STATUS1_FREEZE)
+        {
+            first = gShedSkinString_Freeze1;
+            second = gShedSkinString_Freeze2;
+        }
+        else
+        {
+            first = gShedSkinString_Paralysis1;
+            second = gShedSkinString_Paralysis2;
+        }
+        PREPARE_MON_NICK_WITH_PREFIX_BUFFER(gBattleTextBuff1, gBattlerAttacker, i)
+        StringCopy(gBattleTextBuff2, first);
+        StringCopy(gBattleTextBuff3, second);
+        gBattleStruct->partyHealIndex = i + 1;
+    }
+    gBattlescriptCurrInstr += 5;
 }
 
 static void Cmd_cursetarget(void)
@@ -8807,7 +8888,7 @@ static void Cmd_trysetperishsong(void)
     for (i = 0; i < gBattlersCount; i++)
     {
         if (gStatuses3[i] & STATUS3_PERISH_SONG
-            || gBattleMons[i].ability == ABILITY_SOUNDPROOF)
+            || (gBattleMons[i].ability == ABILITY_SOUNDPROOF && i != gBattlerAttacker))
         {
             notAffectedCount++;
         }

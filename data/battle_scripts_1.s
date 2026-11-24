@@ -1391,16 +1391,30 @@ BattleScript_EffectHealBell::
 	waitstate
 	printfromtable gPartyStatusHealStringIds
 	waitmessage B_WAIT_TIME_LONG
+	callnative BS_PartyHealHasCures
+	jumpifbyte CMP_EQUAL, gBattleCommunication, FALSE, BattleScript_PartyHealCheckSoundproof
 	attackanimation
 	waitanimation
-	jumpifnotmove MOVE_HEAL_BELL, BattleScript_PartyHealEnd
+BattleScript_PartyHealCheckSoundproof::
+	jumpifnotmove MOVE_HEAL_BELL, BattleScript_PartyHealCheckSuccess
 	jumpifbyte CMP_NO_COMMON_BITS, cMULTISTRING_CHOOSER, B_MSG_BELL_SOUNDPROOF_ATTACKER, BattleScript_CheckHealBellMon2Unaffected
-	printstring STRINGID_PKMNSXBLOCKSY
+	printstring STRINGID_ITDOESNTAFFECT
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_CheckHealBellMon2Unaffected::
-	jumpifbyte CMP_NO_COMMON_BITS, cMULTISTRING_CHOOSER, B_MSG_BELL_SOUNDPROOF_PARTNER, BattleScript_PartyHealEnd
-	printstring STRINGID_PKMNSXBLOCKSY2
+	jumpifbyte CMP_NO_COMMON_BITS, cMULTISTRING_CHOOSER, B_MSG_BELL_SOUNDPROOF_PARTNER, BattleScript_PartyHealCheckSuccess
+	copybyte gBattlerAbility, sBATTLER
+	call BattleScript_AbilityPopUp
+	printstring STRINGID_ITDOESNTAFFECT2
 	waitmessage B_WAIT_TIME_LONG
+BattleScript_PartyHealCheckSuccess::
+	callnative BS_PartyHealHasCures
+	jumpifbyte CMP_EQUAL, gBattleCommunication, FALSE, BattleScript_ButItFailed
+BattleScript_PartyHealPrintCures::
+	callnative BS_PreparePartyHealMessage
+	jumpifbyte CMP_EQUAL, gBattleCommunication, FALSE, BattleScript_PartyHealEnd
+	printstring STRINGID_PARTYMONSTATUSCURED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_PartyHealPrintCures
 BattleScript_PartyHealEnd::
 	updatestatusicon BS_ATTACKER_WITH_PARTNER
 	waitstate
@@ -1606,6 +1620,7 @@ BattleScript_EffectPerishSong::
 	waitmessage B_WAIT_TIME_LONG
 	setbyte sBATTLER, 0
 BattleScript_PerishSongLoop::
+	jumpifbyteequal sBATTLER, gBattlerAttacker, BattleScript_PerishSongLoopIncrement
 	jumpifability BS_SCRIPTING, ABILITY_SOUNDPROOF, BattleScript_PerishSongNotAffected
 BattleScript_PerishSongLoopIncrement::
 	addbyte sBATTLER, 1
@@ -1614,7 +1629,7 @@ BattleScript_PerishSongLoopIncrement::
 
 BattleScript_PerishSongNotAffected::
 	call BattleScript_AbilityPopUp
-	printstring STRINGID_PKMNSXBLOCKSY2
+	printstring STRINGID_ITDOESNTAFFECT2
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_PerishSongLoopIncrement
 

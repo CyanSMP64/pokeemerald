@@ -1632,7 +1632,8 @@ u8 DoBattlerEndTurnEffects(void)
                     for (gBattlerAttacker = 0; gBattlerAttacker < gBattlersCount; gBattlerAttacker++)
                     {
                         if ((gBattleMons[gBattlerAttacker].status1 & STATUS1_SLEEP)
-                         && gBattleMons[gBattlerAttacker].ability != ABILITY_SOUNDPROOF)
+                         && (gBattleMons[gBattlerAttacker].ability != ABILITY_SOUNDPROOF
+                          || gBattlerAttacker == gActiveBattler))
                         {
                             gBattleMons[gBattlerAttacker].status1 &= ~STATUS1_SLEEP;
                             gBattleMons[gBattlerAttacker].status2 &= ~STATUS2_NIGHTMARE;
@@ -2698,7 +2699,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             break;
         case ABILITYEFFECT_MOVES_BLOCK: // 2
             gBattlerTarget = gBattlerAbility = battler;
-            if (gLastUsedAbility == ABILITY_SOUNDPROOF)
+            if (gLastUsedAbility == ABILITY_SOUNDPROOF && battler != gBattlerAttacker)
             {
                 for (i = 0; sSoundMovesTable[i] != SOUND_MOVES_END; i++)
                 {
