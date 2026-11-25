@@ -180,59 +180,59 @@ struct GFRomHeader
     const struct Trainer * header_gTrainers;                                                    // 0x314
     const u16 * header_sTMHMMoves;                                                              // 0x318
     // battle scripts
-    const u8 * header_BattleScript_RanAwayUsingMonAbility;                                      // 0x31c
+    const u8 * header_BattleScript_RanAwayUsingMonAbility_tr;                                   // 0x31c
     const u8 * header_BattleScript_TryLearnMoveLoop;                                            // 0x320
     const u8 * header_BattleScript_LearnMoveReturn;                                             // 0x324
-    const u8 * header_BattleScript_SnatchedMove;                                                // 0x328
-    const u8 * header_BattleScript_FocusPunchSetUp;                                             // 0x32c
-    const u8 * header_BattleScript_MoveUsedWokeUp;                                              // 0x330
-    const u8 * header_BattleScript_MoveUsedIsFrozen;                                            // 0x334
-    const u8 * header_BattleScript_MoveUsedUnfroze;                                             // 0x338
-    const u8 * header_BattleScript_MoveUsedIsConfused;                                          // 0x33c
-    const u8 * header_BattleScript_MoveUsedIsConfusedNoMore;                                    // 0x340
-    const u8 * header_BattleScript_MoveUsedIsInLove;                                            // 0x344
+    const u8 * header_BattleScript_SnatchedMove_tr;                                             // 0x328
+    const u8 * header_BattleScript_FocusPunchSetUp_tr;                                          // 0x32c
+    const u8 * header_BattleScript_MoveUsedWokeUp_tr;                                           // 0x330
+    const u8 * header_BattleScript_MoveUsedIsFrozen_tr1;                                        // 0x334
+    const u8 * header_BattleScript_MoveUsedUnfroze_tr1;                                         // 0x338
+    const u8 * header_BattleScript_MoveUsedIsConfused_tr1;                                      // 0x33c
+    const u8 * header_BattleScript_MoveUsedIsConfusedNoMore_tr;                                 // 0x340
+    const u8 * header_BattleScript_MoveUsedIsInLove_tr1;                                        // 0x344
     // ability battle scripts
-    const u8 * header_BattleScript_CantMakeAsleep;                                              // 0x348
-    const u8 * header_BattleScript_AbsorbUpdateHp;                                              // 0x34c
-    const u8 * header_BattleScript_RestCantSleep;                                               // 0x350
-    const u8 * header_BattleScript_EffectHealBell;                                              // 0x354
-    const u8 * header_BattleScript_PerishSongNotAffected;                                       // 0x358
-    const u8 * header_BattleScript_PrintAbilityMadeIneffective;                                 // 0x35c
-    const u8 * header_BattleScript_LeechSeedTurnPrintAndUpdateHp;                               // 0x360
-    const u8 * header_BattleScript_MoveEffectSleep;                                             // 0x364
-    const u8 * header_BattleScript_MoveEffectPoison;                                            // 0x368
-    const u8 * header_BattleScript_MoveEffectBurn;                                              // 0x36c
-    const u8 * header_BattleScript_MoveEffectParalysis;                                         // 0x370
-    const u8 * header_BattleScript_DrizzleActivates;                                            // 0x374
-    const u8 * header_BattleScript_SpeedBoostActivates;                                         // 0x378
-    const u8 * header_BattleScript_TraceActivates;                                              // 0x37c
-    const u8 * header_BattleScript_RainDishActivates;                                           // 0x380
-    const u8 * header_BattleScript_SandstreamActivates;                                         // 0x384
-    const u8 * header_BattleScript_ShedSkinActivates;                                           // 0x388
-    const u8 * header_BattleScript_IntimidateActivatesLoop;                                     // 0x38c
+    const u8 * header_BattleScript_CantMakeAsleep_tr;                                           // 0x348
+    const u8 * header_BattleScript_AbsorbUpdateHp_tr;                                           // 0x34c
+    const u8 * header_BattleScript_RestCantSleep_tr;                                            // 0x350
+    const u8 * header_BattleScript_EffectHealBell_tr;                                           // 0x354
+    const u8 * header_BattleScript_PerishSongNotAffected_tr;                                    // 0x358
+    const u8 * header_BattleScript_PrintAbilityMadeIneffective_tr;                              // 0x35c
+    const u8 * header_BattleScript_LeechSeedTurnPrintAndUpdateHp_tr;                            // 0x360
+    const u8 * header_BattleScript_MoveEffectSleep_tr;                                          // 0x364
+    const u8 * header_BattleScript_MoveEffectPoison_tr;                                         // 0x368
+    const u8 * header_BattleScript_MoveEffectBurn_tr;                                           // 0x36c
+    const u8 * header_BattleScript_MoveEffectParalysis_tr;                                      // 0x370
+    const u8 * header_BattleScript_DrizzleActivates_tr;                                         // 0x374
+    const u8 * header_BattleScript_SpeedBoostActivates_tr;                                      // 0x378
+    const u8 * header_BattleScript_TraceActivates_tr;                                           // 0x37c
+    const u8 * header_BattleScript_RainDishActivates_tr;                                        // 0x380
+    const u8 * header_BattleScript_SandstreamActivates_tr;                                      // 0x384
+    const u8 * header_BattleScript_ShedSkinActivates_tr;                                        // 0x388
+    const u8 * header_BattleScript_IntimidateActivatesLoop_tr;                                  // 0x38c
     const u8 * header_BattleScript_IntimidatePrevented_End;                                     // 0x390
-    const u8 * header_BattleScript_DroughtActivates;                                            // 0x394
-    const u8 * header_BattleScript_TookAttack;                                                  // 0x398
-    const u8 * header_BattleScript_SturdyPreventsOHKO;                                          // 0x39c
-    const u8 * header_BattleScript_DampStopsExplosion;                                          // 0x3a0
-    const u8 * header_BattleScript_MoveHPDrain;                                                 // 0x3a4
-    const u8 * header_BattleScript_MonMadeMoveUseless;                                          // 0x3a8
-    const u8 * header_BattleScript_FlashFireBoost;                                              // 0x3ac
-    const u8 * header_BattleScript_AbilityPreventsPhasingOut;                                   // 0x3b0
-    const u8 * header_BattleScript_AbilityNoStatLoss;                                           // 0x3b4
-    const u8 * header_BattleScript_BRNPrevention;                                               // 0x3b8
-    const u8 * header_BattleScript_PRLZPrevention;                                              // 0x3bc
-    const u8 * header_BattleScript_PSNPrevention;                                               // 0x3c0
-    const u8 * header_BattleScript_ObliviousPreventsAttraction;                                 // 0x3c4
-    const u8 * header_BattleScript_FlinchPrevention;                                            // 0x3c8
-    const u8 * header_BattleScript_OwnTempoPrevents;                                            // 0x3cc
-    const u8 * header_BattleScript_SoundproofProtected;                                         // 0x3d0
-    const u8 * header_BattleScript_AbilityNoSpecificStatLoss;                                   // 0x3d4
-    const u8 * header_BattleScript_StickyHoldActivates;                                         // 0x3d8
-    const u8 * header_BattleScript_ColorChangeActivates;                                        // 0x3dc
-    const u8 * header_BattleScript_RoughSkinActivates;                                          // 0x3e0
-    const u8 * header_BattleScript_CuteCharmActivates;                                          // 0x3e4
-    const u8 * header_BattleScript_MoveUsedLoafingAroundMsg;                                    // 0x3e8
+    const u8 * header_BattleScript_DroughtActivates_tr;                                         // 0x394
+    const u8 * header_BattleScript_TookAttack_tr;                                               // 0x398
+    const u8 * header_BattleScript_SturdyPreventsOHKO_tr;                                       // 0x39c
+    const u8 * header_BattleScript_DampStopsExplosion_tr;                                       // 0x3a0
+    const u8 * header_BattleScript_MoveHPDrain_tr;                                              // 0x3a4
+    const u8 * header_BattleScript_MonMadeMoveUseless_tr;                                       // 0x3a8
+    const u8 * header_BattleScript_FlashFireBoost_tr;                                           // 0x3ac
+    const u8 * header_BattleScript_AbilityPreventsPhasingOut_tr;                                // 0x3b0
+    const u8 * header_BattleScript_AbilityNoStatLoss_tr;                                        // 0x3b4
+    const u8 * header_BattleScript_BRNPrevention_tr;                                            // 0x3b8
+    const u8 * header_BattleScript_PRLZPrevention_tr;                                           // 0x3bc
+    const u8 * header_BattleScript_PSNPrevention_tr;                                            // 0x3c0
+    const u8 * header_BattleScript_ObliviousPreventsAttraction_tr;                              // 0x3c4
+    const u8 * header_BattleScript_FlinchPrevention_tr;                                         // 0x3c8
+    const u8 * header_BattleScript_OwnTempoPrevents_tr;                                         // 0x3cc
+    const u8 * header_BattleScript_SoundproofProtected_tr;                                      // 0x3d0
+    const u8 * header_BattleScript_AbilityNoSpecificStatLoss_tr;                                // 0x3d4
+    const u8 * header_BattleScript_StickyHoldActivates_tr;                                      // 0x3d8
+    const u8 * header_BattleScript_ColorChangeActivates_tr;                                     // 0x3dc
+    const u8 * header_BattleScript_RoughSkinActivates_tr;                                       // 0x3e0
+    const u8 * header_BattleScript_CuteCharmActivates_tr;                                       // 0x3e4
+    const u8 * header_BattleScript_MoveUsedLoafingAroundMsg_tr;                                 // 0x3e8
     // program addresses
     u16 offsetStarterMonChoice;                                                                 // 0x3ec
     u16 offsetRepelStepCount;                                                                   // 0x3ee
@@ -341,8 +341,13 @@ struct GFRomHeader
     u16 sizeofTrainerMonCustomMove;                                                             // 0x4b6
     // misc data
     u16 itemCount;                                                                              // 0x4b8
-    // ability pop up script
+    // battle scripts 2
     const u8 * header_BattleScript_AbilityPopUp;                                                // 0x4bc
+    const u8 * header_BattleScript_MoveUsedIsFrozen_tr2;                                        // 0x4c0
+    const u8 * header_BattleScript_MoveUsedIsFrozen_tr3;                                        // 0x4c4
+    const u8 * header_BattleScript_MoveUsedUnfroze_tr2;                                         // 0x4c8
+    const u8 * header_BattleScript_MoveUsedIsConfused_tr2;                                      // 0x4cc
+    const u8 * header_BattleScript_MoveUsedIsInLove_tr2;                                        // 0x4d0
 };
 
 // This seems to need to be in the text section for some reason.
@@ -498,59 +503,59 @@ static const struct GFRomHeader sGFRomHeader = {
     .header_gTrainers =                                     gTrainers,
     .header_sTMHMMoves =                                    sTMHMMoves,
     // battle scripts
-    .header_BattleScript_RanAwayUsingMonAbility =           BattleScript_RanAwayUsingMonAbility,
+    .header_BattleScript_RanAwayUsingMonAbility_tr =        BattleScript_RanAwayUsingMonAbility_tr,
     .header_BattleScript_TryLearnMoveLoop =                 BattleScript_TryLearnMoveLoop,
     .header_BattleScript_LearnMoveReturn =                  BattleScript_LearnMoveReturn,
-    .header_BattleScript_SnatchedMove =                     BattleScript_SnatchedMove,
-    .header_BattleScript_FocusPunchSetUp =                  BattleScript_FocusPunchSetUp,
-    .header_BattleScript_MoveUsedWokeUp =                   BattleScript_MoveUsedWokeUp,
-    .header_BattleScript_MoveUsedIsFrozen =                 BattleScript_MoveUsedIsFrozen,
-    .header_BattleScript_MoveUsedUnfroze =                  BattleScript_MoveUsedUnfroze,
-    .header_BattleScript_MoveUsedIsConfused =               BattleScript_MoveUsedIsConfused,
-    .header_BattleScript_MoveUsedIsConfusedNoMore =         BattleScript_MoveUsedIsConfusedNoMore,
-    .header_BattleScript_MoveUsedIsInLove =                 BattleScript_MoveUsedIsInLove,
+    .header_BattleScript_SnatchedMove_tr =                  BattleScript_SnatchedMove_tr,
+    .header_BattleScript_FocusPunchSetUp_tr =               BattleScript_FocusPunchSetUp_tr,
+    .header_BattleScript_MoveUsedWokeUp_tr =                BattleScript_MoveUsedWokeUp_tr,
+    .header_BattleScript_MoveUsedIsFrozen_tr1 =             BattleScript_MoveUsedIsFrozen_tr1,
+    .header_BattleScript_MoveUsedUnfroze_tr1 =              BattleScript_MoveUsedUnfroze_tr1,
+    .header_BattleScript_MoveUsedIsConfused_tr1 =           BattleScript_MoveUsedIsConfused_tr1,
+    .header_BattleScript_MoveUsedIsConfusedNoMore_tr =      BattleScript_MoveUsedIsConfusedNoMore_tr,
+    .header_BattleScript_MoveUsedIsInLove_tr1 =             BattleScript_MoveUsedIsInLove_tr1,
     // ability battle scripts
-    .header_BattleScript_CantMakeAsleep =                   BattleScript_CantMakeAsleep,
-    .header_BattleScript_AbsorbUpdateHp =                   BattleScript_AbsorbUpdateHp,
-    .header_BattleScript_RestCantSleep =                    BattleScript_RestCantSleep,
-    .header_BattleScript_EffectHealBell =                   BattleScript_EffectHealBell,
-    .header_BattleScript_PerishSongNotAffected =            BattleScript_PerishSongNotAffected,
-    .header_BattleScript_PrintAbilityMadeIneffective =      BattleScript_PrintAbilityMadeIneffective,
-    .header_BattleScript_LeechSeedTurnPrintAndUpdateHp =    BattleScript_LeechSeedTurnPrintAndUpdateHp,
-    .header_BattleScript_MoveEffectSleep =                  BattleScript_MoveEffectSleep,
-    .header_BattleScript_MoveEffectPoison =                 BattleScript_MoveEffectPoison,
-    .header_BattleScript_MoveEffectBurn =                   BattleScript_MoveEffectBurn,
-    .header_BattleScript_MoveEffectParalysis =              BattleScript_MoveEffectParalysis,
-    .header_BattleScript_DrizzleActivates =                 BattleScript_DrizzleActivates,
-    .header_BattleScript_SpeedBoostActivates =              BattleScript_SpeedBoostActivates,
-    .header_BattleScript_TraceActivates =                   BattleScript_TraceActivates,
-    .header_BattleScript_RainDishActivates =                BattleScript_RainDishActivates,
-    .header_BattleScript_SandstreamActivates =              BattleScript_SandstreamActivates,
-    .header_BattleScript_ShedSkinActivates =                BattleScript_ShedSkinActivates,
-    .header_BattleScript_IntimidateActivatesLoop =          BattleScript_IntimidateActivatesLoop,
+    .header_BattleScript_CantMakeAsleep_tr =                BattleScript_CantMakeAsleep_tr,
+    .header_BattleScript_AbsorbUpdateHp_tr =                BattleScript_AbsorbUpdateHp_tr,
+    .header_BattleScript_RestCantSleep_tr =                 BattleScript_RestCantSleep_tr,
+    .header_BattleScript_EffectHealBell_tr =                BattleScript_EffectHealBell_tr,
+    .header_BattleScript_PerishSongNotAffected_tr =         BattleScript_PerishSongNotAffected_tr,
+    .header_BattleScript_PrintAbilityMadeIneffective_tr =   BattleScript_PrintAbilityMadeIneffective_tr,
+    .header_BattleScript_LeechSeedTurnPrintAndUpdateHp_tr = BattleScript_LeechSeedTurnPrintAndUpdateHp_tr,
+    .header_BattleScript_MoveEffectSleep_tr =               BattleScript_MoveEffectSleep_tr,
+    .header_BattleScript_MoveEffectPoison_tr =              BattleScript_MoveEffectPoison_tr,
+    .header_BattleScript_MoveEffectBurn_tr =                BattleScript_MoveEffectBurn_tr,
+    .header_BattleScript_MoveEffectParalysis_tr =           BattleScript_MoveEffectParalysis_tr,
+    .header_BattleScript_DrizzleActivates_tr =              BattleScript_DrizzleActivates_tr,
+    .header_BattleScript_SpeedBoostActivates_tr =           BattleScript_SpeedBoostActivates_tr,
+    .header_BattleScript_TraceActivates_tr =                BattleScript_TraceActivates_tr,
+    .header_BattleScript_RainDishActivates_tr =             BattleScript_RainDishActivates_tr,
+    .header_BattleScript_SandstreamActivates_tr =           BattleScript_SandstreamActivates_tr,
+    .header_BattleScript_ShedSkinActivates_tr =             BattleScript_ShedSkinActivates_tr,
+    .header_BattleScript_IntimidateActivatesLoop_tr =       BattleScript_IntimidateActivatesLoop_tr,
     .header_BattleScript_IntimidatePrevented_End =          BattleScript_IntimidatePrevented_End,
-    .header_BattleScript_DroughtActivates =                 BattleScript_DroughtActivates,
-    .header_BattleScript_TookAttack =                       BattleScript_TookAttack,
-    .header_BattleScript_SturdyPreventsOHKO =               BattleScript_SturdyPreventsOHKO,
-    .header_BattleScript_DampStopsExplosion =               BattleScript_DampStopsExplosion,
-    .header_BattleScript_MoveHPDrain =                      BattleScript_MoveHPDrain,
-    .header_BattleScript_MonMadeMoveUseless =               BattleScript_MonMadeMoveUseless,
-    .header_BattleScript_FlashFireBoost =                   BattleScript_FlashFireBoost,
-    .header_BattleScript_AbilityPreventsPhasingOut =        BattleScript_AbilityPreventsPhasingOut,
-    .header_BattleScript_AbilityNoStatLoss =                BattleScript_AbilityNoStatLoss,
-    .header_BattleScript_BRNPrevention =                    BattleScript_BRNPrevention,
-    .header_BattleScript_PRLZPrevention =                   BattleScript_PRLZPrevention,
-    .header_BattleScript_PSNPrevention =                    BattleScript_PSNPrevention,
-    .header_BattleScript_ObliviousPreventsAttraction =      BattleScript_ObliviousPreventsAttraction,
-    .header_BattleScript_FlinchPrevention =                 BattleScript_FlinchPrevention,
-    .header_BattleScript_OwnTempoPrevents =                 BattleScript_OwnTempoPrevents,
-    .header_BattleScript_SoundproofProtected =              BattleScript_SoundproofProtected,
-    .header_BattleScript_AbilityNoSpecificStatLoss =        BattleScript_AbilityNoSpecificStatLoss,
-    .header_BattleScript_StickyHoldActivates =              BattleScript_StickyHoldActivates,
-    .header_BattleScript_ColorChangeActivates =             BattleScript_ColorChangeActivates,
-    .header_BattleScript_RoughSkinActivates =               BattleScript_RoughSkinActivates,
-    .header_BattleScript_CuteCharmActivates =               BattleScript_CuteCharmActivates,
-    .header_BattleScript_MoveUsedLoafingAroundMsg =         BattleScript_MoveUsedLoafingAroundMsg,
+    .header_BattleScript_DroughtActivates_tr =              BattleScript_DroughtActivates_tr,
+    .header_BattleScript_TookAttack_tr =                    BattleScript_TookAttack_tr,
+    .header_BattleScript_SturdyPreventsOHKO_tr =            BattleScript_SturdyPreventsOHKO_tr,
+    .header_BattleScript_DampStopsExplosion_tr =            BattleScript_DampStopsExplosion_tr,
+    .header_BattleScript_MoveHPDrain_tr =                   BattleScript_MoveHPDrain_tr,
+    .header_BattleScript_MonMadeMoveUseless_tr =            BattleScript_MonMadeMoveUseless_tr,
+    .header_BattleScript_FlashFireBoost_tr =                BattleScript_FlashFireBoost_tr,
+    .header_BattleScript_AbilityPreventsPhasingOut_tr =     BattleScript_AbilityPreventsPhasingOut_tr,
+    .header_BattleScript_AbilityNoStatLoss_tr =             BattleScript_AbilityNoStatLoss_tr,
+    .header_BattleScript_BRNPrevention_tr =                 BattleScript_BRNPrevention_tr,
+    .header_BattleScript_PRLZPrevention_tr =                BattleScript_PRLZPrevention_tr,
+    .header_BattleScript_PSNPrevention_tr =                 BattleScript_PSNPrevention_tr,
+    .header_BattleScript_ObliviousPreventsAttraction_tr =   BattleScript_ObliviousPreventsAttraction_tr,
+    .header_BattleScript_FlinchPrevention_tr =              BattleScript_FlinchPrevention_tr,
+    .header_BattleScript_OwnTempoPrevents_tr =              BattleScript_OwnTempoPrevents_tr,
+    .header_BattleScript_SoundproofProtected_tr =           BattleScript_SoundproofProtected_tr,
+    .header_BattleScript_AbilityNoSpecificStatLoss_tr =     BattleScript_AbilityNoSpecificStatLoss_tr,
+    .header_BattleScript_StickyHoldActivates_tr =           BattleScript_StickyHoldActivates_tr,
+    .header_BattleScript_ColorChangeActivates_tr =          BattleScript_ColorChangeActivates_tr,
+    .header_BattleScript_RoughSkinActivates_tr =            BattleScript_RoughSkinActivates_tr,
+    .header_BattleScript_CuteCharmActivates_tr =            BattleScript_CuteCharmActivates_tr,
+    .header_BattleScript_MoveUsedLoafingAroundMsg_tr =      BattleScript_MoveUsedLoafingAroundMsg_tr,
     // program addresses
     .offsetStarterMonChoice =                               (VAR_STARTER_MON - VARS_START) * 2,
     .offsetRepelStepCount =                                 (VAR_REPEL_STEP_COUNT - VARS_START) * 2,
@@ -659,6 +664,11 @@ static const struct GFRomHeader sGFRomHeader = {
     .sizeofTrainerMonCustomMove =                           sizeof(gTrainerMonItemCustomMoves->moves[0]),
     // misc data
     .itemCount =                                            ITEMS_COUNT,
-    // ability pop up script
+    // battle scripts 2
     .header_BattleScript_AbilityPopUp =                     BattleScript_AbilityPopUp,
+    .header_BattleScript_MoveUsedIsFrozen_tr2 =             BattleScript_MoveUsedIsFrozen_tr2,
+    .header_BattleScript_MoveUsedIsFrozen_tr3 =             BattleScript_MoveUsedIsFrozen_tr3,
+    .header_BattleScript_MoveUsedUnfroze_tr2 =              BattleScript_MoveUsedUnfroze_tr2,
+    .header_BattleScript_MoveUsedIsConfused_tr2 =           BattleScript_MoveUsedIsConfused_tr2,
+    .header_BattleScript_MoveUsedIsInLove_tr2 =             BattleScript_MoveUsedIsInLove_tr2,
 };
