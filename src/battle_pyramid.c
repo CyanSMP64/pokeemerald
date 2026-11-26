@@ -1397,12 +1397,7 @@ void GenerateBattlePyramidWildMon(void)
     for (i = 0; i < MAX_MON_MOVES; i++)
         SetMonMoveSlot(&gEnemyParty[0], wildMons[id].moves[i], i);
 
-    // UB: Reading outside the array as lvl was used for mon level instead of frontier lvl mode.
-    #ifndef UBFIX
-    if (gSaveBlock2Ptr->frontier.pyramidWinStreaks[lvl] >= 140)
-    #else
     if (gSaveBlock2Ptr->frontier.pyramidWinStreaks[gSaveBlock2Ptr->frontier.lvlMode] >= 140)
-    #endif
     {
         id = (Random() % 17) + 15;
         for (i = 0; i < NUM_STATS; i++)
@@ -1759,9 +1754,7 @@ static bool8 SetPyramidObjectPositionsInAndNearSquare(u8 objType, u8 squareId)
 
         r7 &= 1;
     }
-    #ifdef BUGFIX
     Free(floorLayoutOffsets);
-    #endif
 
     return (numObjects / 2) > numPlacedObjects;
 }
@@ -1813,9 +1806,7 @@ static bool8 SetPyramidObjectPositionsNearSquare(u8 objType, u8 squareId)
         if (r8 == 4)
             break;
     }
-    #ifdef BUGFIX
     Free(floorLayoutOffsets);
-    #endif
 
     return (numObjects / 2) > numPlacedObjects;
 }

@@ -90,7 +90,7 @@ static void Task_TryFieldPoisonWhiteOut(u8 taskId)
         if (AllMonsFainted())
         {
             // Battle facilities have their own white out script to handle the challenge loss
-            if (InBattlePyramid() | InBattlePike() || InTrainerHillChallenge())
+            if (InBattlePyramid() || InBattlePike() || InTrainerHillChallenge())
                 gSpecialVar_Result = FLDPSN_FRONTIER_WHITEOUT;
             else
                 gSpecialVar_Result = FLDPSN_WHITEOUT;

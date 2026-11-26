@@ -1504,6 +1504,8 @@ static bool8 IsFloorOrBoardAndHole(u16 behaviorAt, const struct Decoration *deco
     return FALSE;
 }
 
+#define GetLayerType(tileId) UNPACK_LAYER_TYPE(GetMetatileAttributesById(tileId))
+
 static bool8 CanPlaceDecoration(u8 taskId, const struct Decoration *decoration)
 {
     u8 i;
@@ -1528,7 +1530,7 @@ static bool8 CanPlaceDecoration(u8 taskId, const struct Decoration *decoration)
             {
                 curX = gTasks[taskId].tCursorX + j;
                 behaviorAt = MapGridGetMetatileBehaviorAt(curX, curY);
-                layerType = GetMetatileAttributesById(NUM_TILES_IN_PRIMARY + decoration->tiles[(mapY - 1 - i) * mapX + j]) & METATILE_ATTR_LAYER_MASK;
+                layerType = GetLayerType(NUM_TILES_IN_PRIMARY + decoration->tiles[(mapY - 1 - i) * mapX + j]);
                 if (!IsFloorOrBoardAndHole(behaviorAt, decoration))
                     return FALSE;
 
@@ -1549,7 +1551,7 @@ static bool8 CanPlaceDecoration(u8 taskId, const struct Decoration *decoration)
             {
                 curX = gTasks[taskId].tCursorX + j;
                 behaviorAt = MapGridGetMetatileBehaviorAt(curX, curY);
-                layerType = GetMetatileAttributesById(NUM_TILES_IN_PRIMARY + decoration->tiles[(mapY - 1 - i) * mapX + j]) & METATILE_ATTR_LAYER_MASK;
+                layerType = GetLayerType(NUM_TILES_IN_PRIMARY + decoration->tiles[(mapY - 1 - i) * mapX + j]);
                 if (!MetatileBehavior_IsNormal(behaviorAt) && !IsSecretBaseTrainerSpot(behaviorAt, layerType))
                     return FALSE;
 
@@ -1566,7 +1568,7 @@ static bool8 CanPlaceDecoration(u8 taskId, const struct Decoration *decoration)
         {
             curX = gTasks[taskId].tCursorX + j;
             behaviorAt = MapGridGetMetatileBehaviorAt(curX, curY);
-            layerType = GetMetatileAttributesById(NUM_TILES_IN_PRIMARY + decoration->tiles[j]) & METATILE_ATTR_LAYER_MASK;
+            layerType = GetLayerType(NUM_TILES_IN_PRIMARY + decoration->tiles[j]);
             if (!MetatileBehavior_IsNormal(behaviorAt) && !MetatileBehavior_IsSecretBaseNorthWall(behaviorAt))
                 return FALSE;
 

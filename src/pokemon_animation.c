@@ -897,16 +897,7 @@ u8 GetSpeciesBackAnimSet(u16 species)
 #define tBattlerId data[4]
 #define tSpeciesId data[5]
 
-// BUG: In vanilla, tPtrLo is read as an s16, so if bit 15 of the
-// address were to be set it would cause the pointer to be read
-// as 0xFFFFXXXX instead of the desired 0x02YYXXXX.
-// By dumb luck, this is not an issue in vanilla. However,
-// changing the link order revealed this bug.
-#if MODERN || defined(BUGFIX)
 #define ANIM_SPRITE(taskId)   ((struct Sprite *)((gTasks[taskId].tPtrHi << 16) | ((u16)gTasks[taskId].tPtrLo)))
-#else
-#define ANIM_SPRITE(taskId)   ((struct Sprite *)((gTasks[taskId].tPtrHi << 16) | (gTasks[taskId].tPtrLo)))
-#endif //MODERN || BUGFIX
 
 static void Task_HandleMonAnimation(u8 taskId)
 {
@@ -1074,14 +1065,10 @@ static void ResetSpriteAfterAnim(struct Sprite *sprite)
         sprite->oam.matrixNum |= (sprite->hFlip << 3);
         sprite->oam.affineMode = ST_OAM_AFFINE_OFF;
     }
-#ifdef BUGFIX
     else
     {
-        // FIX: Reset these back to normal after they were changed so Poké Ball catch/release
-        // animations without a screen transition in between don't break
         sprite->affineAnims = gAffineAnims_BattleSpriteOpponentSide;
     }
-#endif // BUGFIX
 }
 
 static void Anim_CircularStretchTwice(struct Sprite *sprite)

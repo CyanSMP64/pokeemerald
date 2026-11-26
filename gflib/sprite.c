@@ -420,15 +420,9 @@ void SortSprites(void)
             sSpriteOrder[j] = sSpriteOrder[j - 1];
             sSpriteOrder[j - 1] = temp;
 
-            // UB: If j equals 1, then j-- makes j equal 0.
-            // Then, sSpriteOrder[-1] gets accessed below.
-            // Although this doesn't result in a bug in the ROM,
-            // the behavior is undefined.
             j--;
-#ifdef UBFIX
             if (j == 0)
                 break;
-#endif
 
             sprite1 = &gSprites[sSpriteOrder[j - 1]];
             sprite2 = &gSprites[sSpriteOrder[j]];
@@ -862,11 +856,8 @@ void ResetAllSprites(void)
 
 void FreeSpriteTiles(struct Sprite *sprite)
 {
-// UB: template pointer may point to freed temporary storage
-#ifdef UBFIX
     if (!sprite || !sprite->template)
         return;
-#endif
 
     if (sprite->template->tileTag != TAG_NONE)
         FreeSpriteTilesByTag(sprite->template->tileTag);
@@ -874,11 +865,8 @@ void FreeSpriteTiles(struct Sprite *sprite)
 
 void FreeSpritePalette(struct Sprite *sprite)
 {
-// UB: template pointer may point to freed temporary storage
-#ifdef UBFIX
     if (!sprite || !sprite->template)
         return;
-#endif
 
     FreeSpritePaletteByTag(sprite->template->paletteTag);
 }

@@ -5375,7 +5375,8 @@ void ReturnFromBattleToOverworld(void)
     {
         UpdateRoamerHPStatus(&gEnemyParty[0]);
 
-        if ((gBattleOutcome & B_OUTCOME_WON) || gBattleOutcome == B_OUTCOME_CAUGHT)
+        if ((gBattleOutcome == B_OUTCOME_WON) || gBattleOutcome == B_OUTCOME_CAUGHT ||
+            gBattleOutcome == B_OUTCOME_DREW)
             SetRoamerInactive();
     }
 

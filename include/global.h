@@ -80,11 +80,7 @@
 
 // Used in cases where division by 0 can occur in the retail version.
 // Avoids invalid opcodes on some emulators, and the otherwise UB.
-#ifdef UBFIX
 #define SAFE_DIV(a, b) ((b) ? (a) / (b) : 0)
-#else
-#define SAFE_DIV(a, b) ((a) / (b))
-#endif
 
 // Extracts the upper 16 bits of a 32-bit number
 #define HIHALF(n) (((n) & 0xFFFF0000) >> 16)
@@ -109,6 +105,9 @@
 #define T2_READ_16(ptr) ((ptr)[0] + ((ptr)[1] << 8))
 #define T2_READ_32(ptr) ((ptr)[0] + ((ptr)[1] << 8) + ((ptr)[2] << 16) + ((ptr)[3] << 24))
 #define T2_READ_PTR(ptr) (void *) T2_READ_32(ptr)
+
+#define PACK(data, shift, mask)   ( ((data) << (shift)) & (mask) )
+#define UNPACK(data, shift, mask) ( ((data) & (mask)) >> (shift) )
 
 // Macros for checking the joypad
 #define TEST_BUTTON(field, button) ((field) & (button))

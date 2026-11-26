@@ -624,6 +624,7 @@ static void CreateApprenticeMenu(u8 menu)
     default:
         left = 0;
         top = 0;
+        return;
         break;
     }
 

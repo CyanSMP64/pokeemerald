@@ -620,8 +620,9 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
         }
         else
         {
-            u8 adjustedCollision = collision - COLLISION_STOP_SURFING;
-            if (adjustedCollision > 3)
+            if (collision != COLLISION_STOP_SURFING
+             && collision != COLLISION_LEDGE_JUMP
+             && collision != COLLISION_PUSHED_BOULDER)
                 PlayerNotOnBikeCollide(direction);
             return;
         }
@@ -1663,6 +1664,7 @@ static void Task_WaitStopSurfing(u8 taskId)
         gPlayerAvatar.preventStep = FALSE;
         UnlockPlayerFieldControls();
         DestroySprite(&gSprites[playerObjEvent->fieldEffectSpriteId]);
+        playerObjEvent->triggerGroundEffectsOnMove = TRUE;
         DestroyTask(taskId);
     }
 }

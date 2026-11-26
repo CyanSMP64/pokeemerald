@@ -81,7 +81,7 @@ static bool16 DecompressPic(u16 species, u32 personality, bool8 isFrontPic, u8 *
         if (isFrontPic)
             DecompressPicFromTable(&gTrainerFrontPicTable[species], dest, species);
         else
-            DecompressPicFromTable(&gTrainerBackPicTable[species], dest, species);
+            CpuCopy32(gTrainerBackPicTable[species].data, dest, gTrainerBackPicTable[species].size);
     }
     return FALSE;
 }

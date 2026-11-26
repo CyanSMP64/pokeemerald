@@ -498,12 +498,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Lugia,                 OBJ_EVENT_PAL_TAG_LUGIA},
     {gObjectEventPal_RubySapphireBrendan,   OBJ_EVENT_PAL_TAG_RS_BRENDAN},
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
-#ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE}, 
-#else
-    {}, // BUG: FindObjectEventPaletteIndexByTag looks for OBJ_EVENT_PAL_TAG_NONE and not 0x0.
-        // If it's looking for a tag that isn't in this table, the game locks in an infinite loop.
-#endif
 };
 
 static const u16 sReflectionPaletteTags_Brendan[] = {
@@ -1999,12 +1994,7 @@ static void LoadObjectEventPalette(u16 paletteTag)
 {
     u16 i = FindObjectEventPaletteIndexByTag(paletteTag);
 
-// FindObjectEventPaletteIndexByTag returns 0xFF on failure, not OBJ_EVENT_PAL_TAG_NONE.
-#ifdef BUGFIX
     if (i != 0xFF)
-#else
-    if (i != OBJ_EVENT_PAL_TAG_NONE)
-#endif
         LoadSpritePaletteIfTagExists(&sObjectEventSpritePalettes[i]);
 }
 
@@ -2305,14 +2295,9 @@ static u8 CameraObjectGetFollowedSpriteId(void)
 
 void CameraObjectReset2(void)
 {
-    // UB: Possible null dereference
-#ifdef UBFIX
     struct Sprite *camera = FindCameraSprite();
     if (camera)
         camera->sState = 2;
-#else
-    FindCameraSprite()->sState = 2;
-#endif // UBFIX
 }
 
 u8 CopySprite(struct Sprite *sprite, s16 x, s16 y, u8 subpriority)
@@ -2376,11 +2361,8 @@ const u8 *GetObjectEventScriptPointerByObjectEventId(u8 objectEventId)
 static u16 GetObjectEventFlagIdByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup)
 {
     const struct ObjectEventTemplate *obj = GetObjectEventTemplateByLocalIdAndMap(localId, mapNum, mapGroup);
-#ifdef UBFIX
-    // BUG: The function may return NULL, and attempting to read from NULL may freeze the game using modern compilers.
     if (obj == NULL)
         return 0;
-#endif // UBFIX
     return obj->flagId;
 }
 
@@ -8086,7 +8068,7 @@ static void DoGroundEffects_OnSpawn(struct ObjectEvent *objEvent, struct Sprite 
 {
     u32 flags;
 
-    if (objEvent->triggerGroundEffectsOnMove)
+    if (objEvent->triggerGroundEffectsOnMove && objEvent->localId != OBJ_EVENT_ID_CAMERA)
     {
         flags = 0;
         UpdateObjectEventElevationAndPriority(objEvent, sprite);
@@ -8102,7 +8084,7 @@ static void DoGroundEffects_OnBeginStep(struct ObjectEvent *objEvent, struct Spr
 {
     u32 flags;
 
-    if (objEvent->triggerGroundEffectsOnMove)
+    if (objEvent->triggerGroundEffectsOnMove && objEvent->localId != OBJ_EVENT_ID_CAMERA)
     {
         flags = 0;
         UpdateObjectEventElevationAndPriority(objEvent, sprite);
@@ -8119,7 +8101,7 @@ static void DoGroundEffects_OnFinishStep(struct ObjectEvent *objEvent, struct Sp
 {
     u32 flags;
 
-    if (objEvent->triggerGroundEffectsOnStop)
+    if (objEvent->triggerGroundEffectsOnStop && objEvent->localId != OBJ_EVENT_ID_CAMERA)
     {
         flags = 0;
         UpdateObjectEventElevationAndPriority(objEvent, sprite);

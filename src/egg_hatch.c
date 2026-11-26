@@ -876,15 +876,8 @@ static void SpriteCB_Egg_Shake3(struct Sprite *sprite)
             sprite->x2 = Sin(sprite->sSinIdx, 2);
             if (sprite->sTimer == 15)
             {
-                // Third egg crack
-                // This ineffectually sets the animation to the frame it's already using.
-                // They likely meant to use the 3rd and final cracked frame of the egg, which goes unused as a result.
                 PlaySE(SE_BALL);
-            #ifdef BUGFIX
                 StartSpriteAnim(sprite, EGG_ANIM_CRACKED_3);
-            #else
-                StartSpriteAnim(sprite, EGG_ANIM_CRACKED_2);
-            #endif
                 CreateRandomEggShardSprite();
                 CreateRandomEggShardSprite();
             }

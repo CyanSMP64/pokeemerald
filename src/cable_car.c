@@ -880,8 +880,7 @@ static void CreateCableCarSprites(void)
     // 1/64 chance for an NPC to appear hiking on the ground below the Cable Car
     if ((rval % 64) == 0)
     {
-        // Unclear if this was intentional, but the - 1 in the below ARRAY_COUNT means the Zigzagoon is never used
-        spriteId = CreateObjectGraphicsSprite(hikerGraphicsIds[rval % (ARRAY_COUNT(hikerGraphicsIds) - 1)], hikerCallbacks[GOING_DOWN], hikerCoords[GOING_DOWN][0], hikerCoords[GOING_DOWN][1], 106);
+        spriteId = CreateObjectGraphicsSprite(hikerGraphicsIds[rval % ARRAY_COUNT(hikerGraphicsIds)], hikerCallbacks[GOING_DOWN], hikerCoords[GOING_DOWN][0], hikerCoords[GOING_DOWN][1], 106);
         if (spriteId != MAX_SPRITES)
         {
             gSprites[spriteId].oam.priority = 2;

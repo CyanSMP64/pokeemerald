@@ -1336,15 +1336,7 @@ bool8 DoesLinkPlayerCountMatchSaved(void)
 void ClearSavedLinkPlayers(void)
 {
     int i;
-    // The CpuSet loop below is incorrectly writing to NULL
-    // instead of sSavedLinkPlayers.
-    // Additionally it's using the wrong array size.
-#ifdef UBFIX
     memset(sSavedLinkPlayers, 0, sizeof(sSavedLinkPlayers));
-#else
-    for (i = 0; i < MAX_LINK_PLAYERS; i++)
-        CpuSet(&sSavedLinkPlayers[i], NULL, sizeof(struct LinkPlayer));
-#endif
 }
 
 void CheckLinkPlayersMatchSaved(void)
@@ -2190,6 +2182,7 @@ static bool8 DoHandshake(void)
     u8 i;
     u8 playerCount;
     u16 minRecv;
+    u64 recvSiomlt;
 
     playerCount = 0;
     minRecv = 0xFFFF;
@@ -2201,7 +2194,8 @@ static bool8 DoHandshake(void)
     {
         REG_SIOMLT_SEND = SLAVE_HANDSHAKE;
     }
-    *(u64 *)gLink.handshakeBuffer = REG_SIOMLT_RECV;
+    recvSiomlt = REG_SIOMLT_RECV;
+    memcpy(gLink.handshakeBuffer, &recvSiomlt, sizeof(gLink.handshakeBuffer));
     REG_SIOMLT_RECV = 0;
     gLink.handshakeAsMaster = FALSE;
     for (i = 0; i < MAX_LINK_PLAYERS; i++)
@@ -2241,8 +2235,9 @@ static void DoRecv(void)
     u16 recv[4];
     u8 i;
     u8 index;
+    u64 recvSiomlt = REG_SIOMLT_RECV;
 
-    *(u64 *)recv = REG_SIOMLT_RECV;
+    memcpy(recv, &recvSiomlt, sizeof(recv));
     if (gLink.sendCmdIndex == 0)
     {
         for (i = 0; i < gLink.playerCount; i++)

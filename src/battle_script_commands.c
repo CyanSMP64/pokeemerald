@@ -3742,8 +3742,6 @@ static void Cmd_getexp(void)
                     gBattleMons[0].maxHP = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_MAX_HP);
                     gBattleMons[0].attack = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_ATK);
                     gBattleMons[0].defense = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_DEF);
-                    // Speed is duplicated, likely due to a copy-paste error.
-                    gBattleMons[0].speed = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_SPEED);
                     gBattleMons[0].speed = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_SPEED);
                     gBattleMons[0].spAttack = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_SPATK);
                     gBattleMons[0].spDefense = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_SPDEF);
@@ -3757,13 +3755,8 @@ static void Cmd_getexp(void)
                     gBattleMons[2].attack = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_ATK);
                     gBattleMons[2].defense = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_DEF);
                     gBattleMons[2].speed = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_SPEED);
-                    // Speed is duplicated again, but Special Defense is missing.
-#ifdef BUGFIX
-                    gBattleMons[2].spDefense = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_SPDEF);
-#else
-                    gBattleMons[2].speed = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_SPEED);
-#endif
                     gBattleMons[2].spAttack = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_SPATK);
+                    gBattleMons[2].spDefense = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_SPDEF);
                 }
                 gBattleScripting.getexpState = 5;
             }
@@ -7555,12 +7548,12 @@ static void Cmd_forcerandomswitch(void)
             if ((gBattlerTarget & BIT_FLANK) != B_FLANK_LEFT)
             {
                 firstMonId = PARTY_SIZE / 2;
-                lastMonId = PARTY_SIZE;
+                lastMonId = PARTY_SIZE - 1;
             }
             else
             {
                 firstMonId = 0;
-                lastMonId = PARTY_SIZE / 2;
+                lastMonId = PARTY_SIZE / 2 - 1;
             }
             monsCount = PARTY_SIZE / 2;
             minNeeded = 1;
@@ -7573,12 +7566,12 @@ static void Cmd_forcerandomswitch(void)
             if (GetLinkTrainerFlankId(GetBattlerMultiplayerId(gBattlerTarget)) == B_FLANK_RIGHT)
             {
                 firstMonId = PARTY_SIZE / 2;
-                lastMonId = PARTY_SIZE;
+                lastMonId = PARTY_SIZE - 1;
             }
             else
             {
                 firstMonId = 0;
-                lastMonId = PARTY_SIZE / 2;
+                lastMonId = PARTY_SIZE / 2 - 1;
             }
             monsCount = PARTY_SIZE / 2;
             minNeeded = 1;
@@ -7590,7 +7583,7 @@ static void Cmd_forcerandomswitch(void)
             if (GetBattlerSide(gBattlerTarget) == B_SIDE_PLAYER)
             {
                 firstMonId = 0;
-                lastMonId = PARTY_SIZE;
+                lastMonId = PARTY_SIZE - 1;
                 monsCount = PARTY_SIZE;
                 minNeeded = 2; // since there are two opponents, it has to be a double battle
             }
@@ -7599,12 +7592,12 @@ static void Cmd_forcerandomswitch(void)
                 if ((gBattlerTarget & BIT_FLANK) != B_FLANK_LEFT)
                 {
                     firstMonId = PARTY_SIZE / 2;
-                    lastMonId = PARTY_SIZE;
+                    lastMonId = PARTY_SIZE - 1;
                 }
                 else
                 {
                     firstMonId = 0;
-                    lastMonId = PARTY_SIZE / 2;
+                    lastMonId = PARTY_SIZE / 2 - 1;
                 }
                 monsCount = PARTY_SIZE / 2;
                 minNeeded = 1;
@@ -7615,7 +7608,7 @@ static void Cmd_forcerandomswitch(void)
         else if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
         {
             firstMonId = 0;
-            lastMonId = PARTY_SIZE;
+            lastMonId = PARTY_SIZE - 1;
             monsCount = PARTY_SIZE;
             minNeeded = 2;
             battler2PartyId = gBattlerPartyIndexes[gBattlerTarget];
@@ -7624,7 +7617,7 @@ static void Cmd_forcerandomswitch(void)
         else
         {
             firstMonId = 0;
-            lastMonId = PARTY_SIZE;
+            lastMonId = PARTY_SIZE - 1;
             monsCount = PARTY_SIZE;
             minNeeded = 1;
             battler2PartyId = gBattlerPartyIndexes[gBattlerTarget]; // there is only one pokemon out in single battles
@@ -7660,7 +7653,6 @@ static void Cmd_forcerandomswitch(void)
                 } while (GetMonData(&party[i], MON_DATA_SPECIES) == SPECIES_NONE
                        || GetMonData(&party[i], MON_DATA_IS_EGG) == TRUE
                        || GetMonData(&party[i], MON_DATA_HP) == 0); //should be one while loop, but that doesn't match.
-            }
             *(gBattleStruct->monToSwitchIntoId + gBattlerTarget) = i;
 
             if (!IsMultiBattle())
@@ -7677,6 +7669,7 @@ static void Cmd_forcerandomswitch(void)
 
             if (gBattleTypeFlags & BATTLE_TYPE_INGAME_PARTNER)
                 SwitchPartyOrderInGameMulti(gBattlerTarget, i);
+            }
         }
     }
     else

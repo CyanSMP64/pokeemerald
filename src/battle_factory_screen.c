@@ -634,7 +634,7 @@ static const struct SpriteSheet sSwap_SpriteSheets[] =
     {sMenuHighlightRight_Gfx,    sizeof(sMenuHighlightRight_Gfx),    GFXTAG_MENU_HIGHLIGHT_RIGHT},
     {sActionBoxLeft_Gfx,         sizeof(sActionBoxLeft_Gfx),         GFXTAG_ACTION_BOX_LEFT},
     {sActionBoxRight_Gfx,        sizeof(sActionBoxRight_Gfx),        GFXTAG_ACTION_BOX_RIGHT},
-    {sActionHighlightLeft_Gfx,   0x100,                              GFXTAG_ACTION_HIGHLIGHT_LEFT},
+    {sActionHighlightLeft_Gfx,   sizeof(sActionHighlightLeft_Gfx),   GFXTAG_ACTION_HIGHLIGHT_LEFT},
     {sActionHighlightMiddle_Gfx, sizeof(sActionHighlightMiddle_Gfx), GFXTAG_ACTION_HIGHLIGHT_MIDDLE},
     {sActionHighlightRight_Gfx,  sizeof(sActionHighlightRight_Gfx),  GFXTAG_ACTION_HIGHLIGHT_RIGHT},
     {sMonPicBgAnim_Gfx,          sizeof(sMonPicBgAnim_Gfx),          GFXTAG_MON_PIC_BG_ANIM},
@@ -1143,7 +1143,7 @@ static void CB2_InitSelectScreen(void)
         break;
     case 1:
         sSelectMenuTilesetBuffer = Alloc(0x440);
-        sSelectMonPicBgTilesetBuffer = AllocZeroed(0x440);
+        sSelectMonPicBgTilesetBuffer = AllocZeroed(sizeof(sMonPicBg_Gfx));
         sSelectMenuTilemapBuffer = Alloc(BG_SCREEN_SIZE);
         sSelectMonPicBgTilemapBuffer = AllocZeroed(BG_SCREEN_SIZE);
         ChangeBgX(0, 0, BG_COORD_SET);
@@ -1178,11 +1178,7 @@ static void CB2_InitSelectScreen(void)
         LoadPalette(gFrontierFactorySelectMenu_Pal, 0, 2 * PLTT_SIZE_4BPP);
         LoadPalette(sSelectText_Pal, BG_PLTT_ID(15), PLTT_SIZEOF(4));
         LoadPalette(sSelectText_Pal, BG_PLTT_ID(14), PLTT_SIZEOF(5));
-#ifdef UBFIX
         if (sFactorySelectScreen && sFactorySelectScreen->fromSummaryScreen)
-#else
-        if (sFactorySelectScreen->fromSummaryScreen == TRUE)
-#endif
             gPlttBufferUnfaded[BG_PLTT_ID(14) + 4] = sFactorySelectScreen->speciesNameColorBackup;
         LoadPalette(sMonPicBg_Pal, BG_PLTT_ID(2), PLTT_SIZEOF(2));
         gMain.state++;
@@ -1204,11 +1200,7 @@ static void CB2_InitSelectScreen(void)
         SetVBlankCallback(VBlankCB_SelectScreen);
         BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_BG0_ON | DISPCNT_BG1_ON | DISPCNT_OBJ_1D_MAP);
-#ifdef UBFIX
         if (sFactorySelectScreen && sFactorySelectScreen->fromSummaryScreen)
-#else
-        if (sFactorySelectScreen->fromSummaryScreen == TRUE)
-#endif
         {
             Select_SetWinRegs(88, 152, 32, 96);
             ShowBg(3);
@@ -1222,11 +1214,7 @@ static void CB2_InitSelectScreen(void)
         gMain.state++;
         break;
     case 5:
-#ifdef UBFIX
         if (sFactorySelectScreen && sFactorySelectScreen->fromSummaryScreen)
-#else
-        if (sFactorySelectScreen->fromSummaryScreen == TRUE)
-#endif
             sFactorySelectScreen->cursorPos = gLastViewedMonIndex;
         Select_InitMonsData();
         Select_InitAllSprites();
@@ -2106,11 +2094,7 @@ static void SpriteCB_CloseChosenMonPics(struct Sprite *sprite)
 
 // Task data for Select_Task_OpenChosenMonPics, Select_Task_CloseChosenMonPics, Task_CloseMonPic, and Task_OpenMonPic
 #define tWinLeft      data[3]
-#ifndef UBFIX
-#define tWinRight     data[24] // UB: Typo? Likely meant data[4], 24 is out of bounds
-#else
 #define tWinRight     data[4]
-#endif
 #define tWinTop       data[5]
 #define tWinBottom    data[8]
 #define tSpriteId     data[6] // TODO: Clarify, what sprite
@@ -3276,7 +3260,7 @@ static void CB2_InitSwapScreen(void)
         break;
     case 1:
         sSwapMenuTilesetBuffer = Alloc(0x440);
-        sSwapMonPicBgTilesetBuffer = AllocZeroed(0x440);
+        sSwapMonPicBgTilesetBuffer = AllocZeroed(sizeof(sMonPicBg_Gfx));
         sSwapMenuTilemapBuffer = Alloc(BG_SCREEN_SIZE);
         sSwapMonPicBgTilemapBuffer = AllocZeroed(BG_SCREEN_SIZE);
         ChangeBgX(0, 0, BG_COORD_SET);
@@ -3329,11 +3313,7 @@ static void CB2_InitSwapScreen(void)
         gMain.state++;
         break;
     case 5:
-#ifdef UBFIX
         if (sFactorySwapScreen && sFactorySwapScreen->fromSummaryScreen)
-#else
-        if (sFactorySwapScreen->fromSummaryScreen == TRUE)
-#endif
             sFactorySwapScreen->cursorPos = gLastViewedMonIndex;
         gMain.state++;
         break;
@@ -4070,11 +4050,7 @@ static void Swap_ShowSummaryMonSprite(void)
     personality = GetMonData(mon, MON_DATA_PERSONALITY, NULL);
     otId = GetMonData(mon, MON_DATA_OT_ID, NULL);
 
-#ifdef BUGFIX
     sFactorySwapScreen->monPic.monSpriteId = CreateMonPicSprite_HandleDeoxys(species, otId, personality, TRUE, 88, 32, 15, TAG_NONE);
-#else
-    sFactorySwapScreen->monPic.monSpriteId = CreateMonPicSprite_HandleDeoxys(species, personality, otId, TRUE, 88, 32, 15, TAG_NONE);
-#endif
     gSprites[sFactorySwapScreen->monPic.monSpriteId].centerToCornerVecX = 0;
     gSprites[sFactorySwapScreen->monPic.monSpriteId].centerToCornerVecY = 0;
 

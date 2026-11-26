@@ -1857,11 +1857,6 @@ static void Task_HandleOpponent1(u8 taskId)
                         gRecvCmds[1][BLENDER_COMM_SCORE] = LINKCMD_BLENDER_SCORE_BEST;
                     else
                         gRecvCmds[1][BLENDER_COMM_SCORE] = LINKCMD_BLENDER_SCORE_GOOD;
-
-                    // BUG: Overrwrote above assignment. Opponent 1 can't get Best at low speed
-                    #ifndef BUGFIX
-                    gRecvCmds[1][BLENDER_COMM_SCORE] = LINKCMD_BLENDER_SCORE_GOOD;
-                    #endif
                 }
                 else if (sBerryBlender->speed < 1500)
                 {
@@ -2140,17 +2135,9 @@ static void UpdateOpponentScores(void)
                     sBerryBlender->scores[i][SCORE_MISS]++;
             }
 
-            // BUG: Should be [i][BLENDER_COMM_SCORE] below, not [BLENDER_COMM_SCORE][i]
-            // As a result the music tempo updates if any player misses, but only if 1 specific player hits
-            #ifdef BUGFIX
             if (gRecvCmds[i][BLENDER_COMM_SCORE] == LINKCMD_BLENDER_SCORE_MISS
              || gRecvCmds[i][BLENDER_COMM_SCORE] == LINKCMD_BLENDER_SCORE_BEST
              || gRecvCmds[i][BLENDER_COMM_SCORE] == LINKCMD_BLENDER_SCORE_GOOD)
-            #else
-            if (gRecvCmds[i][BLENDER_COMM_SCORE] == LINKCMD_BLENDER_SCORE_MISS
-             || gRecvCmds[BLENDER_COMM_SCORE][i] == LINKCMD_BLENDER_SCORE_BEST
-             || gRecvCmds[BLENDER_COMM_SCORE][i] == LINKCMD_BLENDER_SCORE_GOOD)
-            #endif
             {
                 if (sBerryBlender->speed > 1500)
                     m4aMPlayTempoControl(&gMPlayInfo_BGM, ((sBerryBlender->speed - 750) / 20) + 256);
@@ -3866,6 +3853,7 @@ static void Blender_AddTextPrinter(u8 windowId, const u8 *string, u8 x, u8 y, s3
     {
     case 0:
     case 3:
+    default:
         txtColor[0] = TEXT_COLOR_WHITE;
         txtColor[1] = TEXT_COLOR_DARK_GRAY;
         txtColor[2] = TEXT_COLOR_LIGHT_GRAY;

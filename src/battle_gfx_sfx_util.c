@@ -187,11 +187,11 @@ u16 ChooseMoveAndTargetInBattlePalace(void)
             }
 
             // Count the move groups the pokemon has
-            if ((validMoveFlags & 0xF) > 1)
+            if ((validMoveFlags & 0xF) >= 2)
                 numValidMoveGroups++;
-            if ((validMoveFlags & 0xF0) > 0x1F)
+            if ((validMoveFlags & (0xF << 4)) >= (2 << 4))
                 numValidMoveGroups++;
-            if ((validMoveFlags & 0xF0) > 0x1FF)
+            if ((validMoveFlags & (0xF << 8)) >= (2 << 8))
                 numValidMoveGroups++;
 
 
@@ -209,12 +209,12 @@ u16 ChooseMoveAndTargetInBattlePalace(void)
             // Otherwise randomly choose move of only available move group
             else
             {
-                if ((validMoveFlags & 0xF) > 1)
-                    validMoveGroup = PALACE_MOVE_GROUP_ATTACK;
-                if ((validMoveFlags & 0xF0) > 0x1F)
-                    validMoveGroup = PALACE_MOVE_GROUP_DEFENSE;
-                if ((validMoveFlags & 0xF0) > 0x1FF)
-                    validMoveGroup = PALACE_MOVE_GROUP_SUPPORT;
+                if ((validMoveFlags & 0xF) >= 2)
+                    numValidMoveGroups = PALACE_MOVE_GROUP_ATTACK;
+                if ((validMoveFlags & (0xF << 4)) >= (2 << 4))
+                    numValidMoveGroups = PALACE_MOVE_GROUP_DEFENSE;
+                if ((validMoveFlags & (0xF << 8)) >= (2 << 8))
+                    numValidMoveGroups = PALACE_MOVE_GROUP_SUPPORT;
 
                 do
                 {
@@ -677,9 +677,7 @@ void DecompressTrainerFrontPic(u16 frontPicId, u8 battlerId)
 void DecompressTrainerBackPic(u16 backPicId, u8 battlerId)
 {
     u8 position = GetBattlerPosition(battlerId);
-    DecompressPicFromTable_2(&gTrainerBackPicTable[backPicId],
-                             gMonSpritesGfxPtr->sprites.ptr[position],
-                             SPECIES_NONE);
+    CpuCopy32(gTrainerBackPicTable[backPicId].data, gMonSpritesGfxPtr->sprites.ptr[position], gTrainerBackPicTable[backPicId].size);
     LoadCompressedPalette(gTrainerBackPicPaletteTable[backPicId].data,
                           OBJ_PLTT_ID(battlerId), PLTT_SIZE_4BPP);
 }
