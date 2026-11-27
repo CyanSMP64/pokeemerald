@@ -687,6 +687,17 @@ static const u16 sSoundMovesTable[] =
     SOUND_MOVES_END
 };
 
+bool8 IsSoundMove(u16 move)
+{
+    s32 i;
+    for (i = 0; sSoundMovesTable[i] != SOUND_MOVES_END; i++)
+    {
+        if (sSoundMovesTable[i] == move)
+            return TRUE;
+    }
+    return FALSE;
+}
+
 u8 GetBattlerForBattleScript(u8 caseId)
 {
     u8 ret = 0;

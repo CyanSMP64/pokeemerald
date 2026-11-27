@@ -1190,6 +1190,10 @@ static void Cmd_attackcanceler(void)
 
     gHitMarker |= HITMARKER_OBEYS;
 
+    // nat dex: sound based moves ignore substitute
+    if (IsSoundMove(gCurrentMove))
+        gHitMarker |= HITMARKER_IGNORE_SUBSTITUTE;
+
     if (gProtectStructs[gBattlerTarget].bounceMove && gBattleMoves[gCurrentMove].flags & FLAG_MAGIC_COAT_AFFECTED)
     {
         PressurePPLose(gBattlerAttacker, gBattlerTarget, MOVE_MAGIC_COAT);
@@ -2511,7 +2515,8 @@ void SetMoveEffect(bool8 primary, u8 certain)
         && gBattleCommunication[MOVE_EFFECT_BYTE] != MOVE_EFFECT_STEAL_ITEM)
         INCREMENT_RESET_RETURN
 
-    if (gBattleMons[gEffectBattler].status2 & STATUS2_SUBSTITUTE && affectsUser != MOVE_EFFECT_AFFECTS_USER)
+    if (gBattleMons[gEffectBattler].status2 & STATUS2_SUBSTITUTE && affectsUser != MOVE_EFFECT_AFFECTS_USER
+                    && !IsSoundMove(gCurrentMove)) // nat dex: sound moves ignore substitute
         INCREMENT_RESET_RETURN
 
     if (gBattleCommunication[MOVE_EFFECT_BYTE] <= PRIMARY_STATUS_MOVE_EFFECT)
@@ -3344,7 +3349,8 @@ static void Cmd_jumpifstatus2(void)
     u32 flags = T2_READ_32(gBattlescriptCurrInstr + 2);
     const u8 *jumpPtr = T2_READ_PTR(gBattlescriptCurrInstr + 6);
 
-    if (gBattleMons[battlerId].status2 & flags && gBattleMons[battlerId].hp != 0)
+    if (gBattleMons[battlerId].status2 & flags && gBattleMons[battlerId].hp != 0
+     && !(battlerId == gBattlerTarget && flags == STATUS2_SUBSTITUTE && IsSoundMove(gCurrentMove))) // nat dex: sound moves ignore substitute
         gBattlescriptCurrInstr = jumpPtr;
     else
         gBattlescriptCurrInstr += 10;
@@ -8665,6 +8671,7 @@ static void Cmd_healpartystatus(void)
     gActiveBattler = GetBattlerAtPosition(BATTLE_PARTNER(GetBattlerPosition(gBattlerAttacker)));
     partnerBehindSubstitute = (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
                           && !(gAbsentBattlerFlags & gBitTable[gActiveBattler])
+                          && !IsSoundMove(gCurrentMove)
                           && (gBattleMons[gActiveBattler].status2 & STATUS2_SUBSTITUTE);
 
     if (GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER)
