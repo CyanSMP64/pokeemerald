@@ -290,6 +290,8 @@ BattleScript_EffectSleep::
 	attackcanceler
 	attackstring
 	ppreduce
+    callnative BS_CheckSapSipperGrassTarget
+    jumpifbyte CMP_EQUAL, gBattleCommunication, TRUE, BattleScript_SapSipperStatusAccuracy
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	jumpifstatus BS_TARGET, STATUS1_SLEEP, BattleScript_AlreadyAsleep
 	jumpifcantmakeasleep BattleScript_CantMakeAsleep
@@ -1034,6 +1036,8 @@ BattleScript_EffectParalyze::
 	attackcanceler
 	attackstring
 	ppreduce
+    callnative BS_CheckSapSipperGrassTarget
+    jumpifbyte CMP_EQUAL, gBattleCommunication, TRUE, BattleScript_SapSipperStatusAccuracy
 	jumpifability BS_TARGET, ABILITY_LIMBER, BattleScript_LimberProtected
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	typecalc
@@ -1184,8 +1188,9 @@ BattleScript_EffectMetronome::
 BattleScript_EffectLeechSeed::
 	attackcanceler
 	attackstring
-	pause B_WAIT_TIME_SHORT
 	ppreduce
+    callnative BS_CheckSapSipperGrassTarget
+    jumpifbyte CMP_EQUAL, gBattleCommunication, TRUE, BattleScript_SapSipperStatusAccuracy
 	jumpifstatus2 BS_TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	accuracycheck BattleScript_DoLeechSeed, ACC_CURR_MOVE
 BattleScript_DoLeechSeed::
@@ -1411,7 +1416,7 @@ BattleScript_CheckHealBellMon2Unaffected::
 	printstring STRINGID_ITDOESNTAFFECT2
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_PartyHealCheckSuccess::
-	callnative BS_PartyHealHasCures
+	callnative BS_PartyHealHasEffect
 	jumpifbyte CMP_EQUAL, gBattleCommunication, FALSE, BattleScript_ButItFailed
 BattleScript_PartyHealPrintCures::
 	callnative BS_PreparePartyHealMessage
@@ -1420,9 +1425,14 @@ BattleScript_PartyHealPrintCures::
 	waitmessage B_WAIT_TIME_LONG
 	goto BattleScript_PartyHealPrintCures
 BattleScript_PartyHealEnd::
-	updatestatusicon BS_ATTACKER_WITH_PARTNER
-	waitstate
-	goto BattleScript_MoveEnd
+    callnative BS_BeginPartyHealSapSipper
+    jumpifbyte CMP_EQUAL, gBattleCommunication, FALSE, BattleScript_PartyHealFinish
+    call BattleScript_SapSipperEffect
+    callnative BS_EndPartyHealSapSipper
+BattleScript_PartyHealFinish:
+    updatestatusicon BS_ATTACKER_WITH_PARTNER
+    waitstate
+    goto BattleScript_MoveEnd
 
 BattleScript_EffectTripleKick::
 	attackcanceler
@@ -4774,3 +4784,36 @@ BattleScript_PrintPlayerForfeitedLinkBattle::
 	endlinkbattle
 	waitmessage B_WAIT_TIME_LONG
 	end2
+
+
+@ nat dex scripts
+
+BattleScript_SapSipper_PPLoss::
+	ppreduce
+BattleScript_SapSipper::
+	attackstring
+	call BattleScript_SapSipperEffect
+	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
+	goto BattleScript_MoveEnd
+BattleScript_SapSipperEffect:
+	call BattleScript_AbilityPopUp
+	setstatchanger STAT_ATK, 1, FALSE
+	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_SapSipperEnd
+	jumpifbyte CMP_EQUAL, cMULTISTRING_CHOOSER, B_MSG_STAT_WONT_INCREASE, BattleScript_SapSipperMaxAttack
+	setgraphicalstatchangevalues
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printfromtable gStatUpStringIds
+BattleScript_SapSipper_tr1::
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_SapSipperEnd
+BattleScript_SapSipperMaxAttack:
+	bicbyte gMoveResultFlags, MOVE_RESULT_MISSED
+	printstring STRINGID_STATSWONTINCREASEDEF
+BattleScript_SapSipper_tr2::
+	waitmessage B_WAIT_TIME_LONG
+BattleScript_SapSipperEnd:
+	return
+
+BattleScript_SapSipperStatusAccuracy:
+    accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
+    goto BattleScript_ButItFailed

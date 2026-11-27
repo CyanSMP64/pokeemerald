@@ -8698,6 +8698,7 @@ static void Cmd_healpartystatus(void)
         gBattleStruct->partyHealStatuses[i] = status & STATUS1_ANY;
     }
     gBattleStruct->partyHealIndex = 0;
+    gBattleStruct->partyHealSapSipper = FALSE;
 
     if (gCurrentMove == MOVE_HEAL_BELL)
     {
@@ -8747,8 +8748,10 @@ static void Cmd_healpartystatus(void)
         if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE
             && !(gAbsentBattlerFlags & gBitTable[gActiveBattler]))
         {
-            if (partnerBehindSubstitute)
+            if (partnerBehindSubstitute
+             || (gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability == ABILITY_SAP_SIPPER))
             {
+                gBattleStruct->partyHealSapSipper = TRUE;
                 if (gBattlerPartyIndexes[gActiveBattler] != gBattlerPartyIndexes[gBattlerAttacker])
                     toHeal &= ~(1 << gBattlerPartyIndexes[gActiveBattler]);
             }
@@ -8837,6 +8840,34 @@ void BS_PreparePartyHealMessage(void)
         StringCopy(gBattleTextBuff3, second);
         gBattleStruct->partyHealIndex = i + 1;
     }
+    gBattlescriptCurrInstr += 5;
+}
+
+void BS_PartyHealHasEffect(void)
+{
+    BS_PartyHealHasCures();
+    if (gBattleStruct->partyHealSapSipper)
+        gBattleCommunication[0] = TRUE;
+}
+
+void BS_BeginPartyHealSapSipper(void)
+{
+    gBattleCommunication[0] = gBattleStruct->partyHealSapSipper;
+
+    if (gBattleStruct->partyHealSapSipper) {
+        u8 partner = GetBattlerAtPosition(BATTLE_PARTNER(GetBattlerPosition(gBattlerAttacker)));
+
+        gBattleStruct->partyHealSavedTarget = gBattlerTarget;
+        gBattlerTarget = partner;
+        gBattlerAbility = partner;
+        gLastUsedAbility = ABILITY_SAP_SIPPER;
+    }
+    gBattlescriptCurrInstr += 5;
+}
+
+void BS_EndPartyHealSapSipper(void)
+{
+    gBattlerTarget = gBattleStruct->partyHealSavedTarget;
     gBattlescriptCurrInstr += 5;
 }
 
@@ -10746,4 +10777,15 @@ void BS_HandleFormChange(void)
         UpdateHealthboxAttribute(gHealthboxSpriteIds[battler], mon, HEALTHBOX_ALL);
     }
     gBattlescriptCurrInstr += 7;
+}
+
+void BS_CheckSapSipperGrassTarget(void)
+{
+    u8 moveType;
+
+    GET_MOVE_TYPE(gCurrentMove, moveType);
+    gBattleCommunication[0] =
+        moveType == TYPE_GRASS && gBattleMons[gBattlerTarget].ability == ABILITY_SAP_SIPPER;
+
+    gBattlescriptCurrInstr += 5;
 }

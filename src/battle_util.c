@@ -2763,6 +2763,17 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
                         }
                     }
                     break;
+                case ABILITY_SAP_SIPPER:
+                    if (moveType == TYPE_GRASS)
+                    {
+                        if (gProtectStructs[gBattlerAttacker].notFirstStrike)
+                            gBattlescriptCurrInstr = BattleScript_SapSipper;
+                        else
+                            gBattlescriptCurrInstr = BattleScript_SapSipper_PPLoss;
+
+                        effect = 2;
+                    }
+                    break;
                 }
                 if (effect == 1)
                 {

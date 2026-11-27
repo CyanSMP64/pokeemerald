@@ -77,6 +77,7 @@ static const u8 sPurePowerDescription[] = _("Raises Attack.");
 static const u8 sShellArmorDescription[] = _("Blocks critical hits.");
 static const u8 sCacophonyDescription[] = _("Avoids sound-based moves.");
 static const u8 sAirLockDescription[] = _("Negates weather effects.");
+static const u8 sSapSipperDescription[] = _("Ups Attack if hit by Grass.");
 
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
 {
@@ -563,7 +564,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_JUSTIFIED] = sPlaceholderDescription,
     [ABILITY_RATTLED] = sPlaceholderDescription,
     [ABILITY_MAGIC_BOUNCE] = sPlaceholderDescription,
-    [ABILITY_SAP_SIPPER] = sPlaceholderDescription,
+    [ABILITY_SAP_SIPPER] = sSapSipperDescription,
     [ABILITY_PRANKSTER] = sPlaceholderDescription,
     [ABILITY_SAND_FORCE] = sPlaceholderDescription,
     [ABILITY_IRON_BARBS] = sPlaceholderDescription,

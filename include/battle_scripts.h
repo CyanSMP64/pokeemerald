@@ -285,5 +285,9 @@ extern const u8 BattleScript_ActionGetNear[];
 extern const u8 BattleScript_ActionThrowPokeblock[];
 extern const u8 BattleScript_TargetFormChangeWithStringNoPopup[];
 extern const u8 BattleScript_AbilityPopUp[];
+extern const u8 BattleScript_SapSipper[];
+extern const u8 BattleScript_SapSipper_tr1[];
+extern const u8 BattleScript_SapSipper_tr2[];
+extern const u8 BattleScript_SapSipper_PPLoss[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

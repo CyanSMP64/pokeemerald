@@ -450,6 +450,8 @@ struct BattleStruct
     u8 alreadyStatusedMoveAttempt; // As bits for battlers; For example when using Thunder Wave on an already paralyzed pokemon.
     u8 partyHealStatuses[PARTY_SIZE];
     u8 partyHealIndex;
+    bool8 partyHealSapSipper;
+    u8 partyHealSavedTarget;
 };
 
 #define F_DYNAMIC_TYPE_1 (1 << 6)

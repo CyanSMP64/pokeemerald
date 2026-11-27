@@ -348,6 +348,8 @@ struct GFRomHeader
     const u8 * header_BattleScript_MoveUsedUnfroze_tr2;                                         // 0x4c8
     const u8 * header_BattleScript_MoveUsedIsConfused_tr2;                                      // 0x4cc
     const u8 * header_BattleScript_MoveUsedIsInLove_tr2;                                        // 0x4d0
+    const u8 * header_BattleScript_SapSipper_tr1;                                               // 0x4d4
+    const u8 * header_BattleScript_SapSipper_tr2;                                               // 0x4d8
 };
 
 // This seems to need to be in the text section for some reason.
@@ -671,4 +673,6 @@ static const struct GFRomHeader sGFRomHeader = {
     .header_BattleScript_MoveUsedUnfroze_tr2 =              BattleScript_MoveUsedUnfroze_tr2,
     .header_BattleScript_MoveUsedIsConfused_tr2 =           BattleScript_MoveUsedIsConfused_tr2,
     .header_BattleScript_MoveUsedIsInLove_tr2 =             BattleScript_MoveUsedIsInLove_tr2,
+    .header_BattleScript_SapSipper_tr1 =                    BattleScript_SapSipper_tr1,
+    .header_BattleScript_SapSipper_tr2 =                    BattleScript_SapSipper_tr2,
 };
